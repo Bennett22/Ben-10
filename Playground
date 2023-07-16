@@ -1,0 +1,3141 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Bennett Scripts | Marvellous Playground", "GrapeTheme")
+
+local Bennett = Window:NewTab("Insta Kills")
+local BennettSection = Bennett:NewSection("Batman")
+
+BennettSection:NewToggle("Grappe Kick", "Keybind (Q)", function()
+
+    clicktpon = true                 
+        plr = game.Players.LocalPlayer
+        hum = plr.Character.HumanoidRootPart
+        mouse = plr:GetMouse()
+        mouse.KeyDown:connect(function(key)
+        if key == 'q' then
+        if mouse.Target then
+        if clicktpon then
+
+local args = {
+    [1] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 5, mouse.Hit.z)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Moonknight"):WaitForChild("Remotes"):WaitForChild("GrappleKick"):FireServer(unpack(args))
+
+local args = {
+    [1] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 5, mouse.Hit.z)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Moonknight"):WaitForChild("Remotes"):WaitForChild("GrappleKick"):FireServer(unpack(args))
+local args = {
+    [1] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 5, mouse.Hit.z)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Moonknight"):WaitForChild("Remotes"):WaitForChild("GrappleKick"):FireServer(unpack(args))
+local args = {
+    [1] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 5, mouse.Hit.z)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Moonknight"):WaitForChild("Remotes"):WaitForChild("GrappleKick"):FireServer(unpack(args))
+local args = {
+    [1] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 5, mouse.Hit.z)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Moonknight"):WaitForChild("Remotes"):WaitForChild("GrappleKick"):FireServer(unpack(args))
+local args = {
+    [1] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 5, mouse.Hit.z)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Moonknight"):WaitForChild("Remotes"):WaitForChild("GrappleKick"):FireServer(unpack(args))
+local args = {
+    [1] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 5, mouse.Hit.z)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Moonknight"):WaitForChild("Remotes"):WaitForChild("GrappleKick"):FireServer(unpack(args))
+local args = {
+    [1] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 5, mouse.Hit.z)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Moonknight"):WaitForChild("Remotes"):WaitForChild("GrappleKick"):FireServer(unpack(args))
+local args = {
+    [1] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 5, mouse.Hit.z)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Moonknight"):WaitForChild("Remotes"):WaitForChild("GrappleKick"):FireServer(unpack(args))
+local args = {
+    [1] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 5, mouse.Hit.z)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Moonknight"):WaitForChild("Remotes"):WaitForChild("GrappleKick"):FireServer(unpack(args))
+local args = {
+    [1] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 5, mouse.Hit.z)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Moonknight"):WaitForChild("Remotes"):WaitForChild("GrappleKick"):FireServer(unpack(args))
+local args = {
+    [1] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 5, mouse.Hit.z)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Moonknight"):WaitForChild("Remotes"):WaitForChild("GrappleKick"):FireServer(unpack(args))
+local args = {
+    [1] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 5, mouse.Hit.z)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Moonknight"):WaitForChild("Remotes"):WaitForChild("GrappleKick"):FireServer(unpack(args))
+local args = {
+    [1] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 5, mouse.Hit.z)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Moonknight"):WaitForChild("Remotes"):WaitForChild("GrappleKick"):FireServer(unpack(args))
+local args = {
+    [1] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 5, mouse.Hit.z)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Moonknight"):WaitForChild("Remotes"):WaitForChild("GrappleKick"):FireServer(unpack(args))
+local args = {
+    [1] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 5, mouse.Hit.z)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Moonknight"):WaitForChild("Remotes"):WaitForChild("GrappleKick"):FireServer(unpack(args))
+local args = {
+    [1] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 5, mouse.Hit.z)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Moonknight"):WaitForChild("Remotes"):WaitForChild("GrappleKick"):FireServer(unpack(args))
+local args = {
+    [1] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 5, mouse.Hit.z)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Moonknight"):WaitForChild("Remotes"):WaitForChild("GrappleKick"):FireServer(unpack(args))
+local args = {
+    [1] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 5, mouse.Hit.z)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Moonknight"):WaitForChild("Remotes"):WaitForChild("GrappleKick"):FireServer(unpack(args))
+local args = {
+    [1] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 5, mouse.Hit.z)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Moonknight"):WaitForChild("Remotes"):WaitForChild("GrappleKick"):FireServer(unpack(args))
+local args = {
+    [1] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 5, mouse.Hit.z)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Moonknight"):WaitForChild("Remotes"):WaitForChild("GrappleKick"):FireServer(unpack(args))
+local args = {
+    [1] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 5, mouse.Hit.z)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Moonknight"):WaitForChild("Remotes"):WaitForChild("GrappleKick"):FireServer(unpack(args))
+local args = {
+    [1] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 5, mouse.Hit.z)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Moonknight"):WaitForChild("Remotes"):WaitForChild("GrappleKick"):FireServer(unpack(args))
+local args = {
+    [1] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 5, mouse.Hit.z)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Moonknight"):WaitForChild("Remotes"):WaitForChild("GrappleKick"):FireServer(unpack(args))
+local args = {
+    [1] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 5, mouse.Hit.z)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Moonknight"):WaitForChild("Remotes"):WaitForChild("GrappleKick"):FireServer(unpack(args))
+local args = {
+    [1] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 5, mouse.Hit.z)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Moonknight"):WaitForChild("Remotes"):WaitForChild("GrappleKick"):FireServer(unpack(args))
+local args = {
+    [1] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 5, mouse.Hit.z)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Moonknight"):WaitForChild("Remotes"):WaitForChild("GrappleKick"):FireServer(unpack(args))
+local args = {
+    [1] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 5, mouse.Hit.z)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Moonknight"):WaitForChild("Remotes"):WaitForChild("GrappleKick"):FireServer(unpack(args))
+local args = {
+    [1] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 5, mouse.Hit.z)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Moonknight"):WaitForChild("Remotes"):WaitForChild("GrappleKick"):FireServer(unpack(args))
+local args = {
+    [1] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 5, mouse.Hit.z)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Moonknight"):WaitForChild("Remotes"):WaitForChild("GrappleKick"):FireServer(unpack(args))
+local args = {
+    [1] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 5, mouse.Hit.z)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Moonknight"):WaitForChild("Remotes"):WaitForChild("GrappleKick"):FireServer(unpack(args))
+local args = {
+    [1] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 5, mouse.Hit.z)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Moonknight"):WaitForChild("Remotes"):WaitForChild("GrappleKick"):FireServer(unpack(args))
+local args = {
+    [1] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 5, mouse.Hit.z)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Moonknight"):WaitForChild("Remotes"):WaitForChild("GrappleKick"):FireServer(unpack(args))
+local args = {
+    [1] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 5, mouse.Hit.z)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Moonknight"):WaitForChild("Remotes"):WaitForChild("GrappleKick"):FireServer(unpack(args))
+local args = {
+    [1] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 5, mouse.Hit.z)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Moonknight"):WaitForChild("Remotes"):WaitForChild("GrappleKick"):FireServer(unpack(args))
+local args = {
+    [1] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 5, mouse.Hit.z)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Moonknight"):WaitForChild("Remotes"):WaitForChild("GrappleKick"):FireServer(unpack(args))
+local args = {
+    [1] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 5, mouse.Hit.z)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Moonknight"):WaitForChild("Remotes"):WaitForChild("GrappleKick"):FireServer(unpack(args))
+local args = {
+    [1] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 5, mouse.Hit.z)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Moonknight"):WaitForChild("Remotes"):WaitForChild("GrappleKick"):FireServer(unpack(args))
+local args = {
+    [1] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 5, mouse.Hit.z)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Moonknight"):WaitForChild("Remotes"):WaitForChild("GrappleKick"):FireServer(unpack(args))
+local args = {
+    [1] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 5, mouse.Hit.z)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Moonknight"):WaitForChild("Remotes"):WaitForChild("GrappleKick"):FireServer(unpack(args))
+local args = {
+    [1] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 5, mouse.Hit.z)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Moonknight"):WaitForChild("Remotes"):WaitForChild("GrappleKick"):FireServer(unpack(args))
+local args = {
+    [1] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 5, mouse.Hit.z)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Moonknight"):WaitForChild("Remotes"):WaitForChild("GrappleKick"):FireServer(unpack(args))
+local args = {
+    [1] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 5, mouse.Hit.z)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Moonknight"):WaitForChild("Remotes"):WaitForChild("GrappleKick"):FireServer(unpack(args))
+local args = {
+    [1] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 5, mouse.Hit.z)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Moonknight"):WaitForChild("Remotes"):WaitForChild("GrappleKick"):FireServer(unpack(args))
+local args = {
+    [1] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 5, mouse.Hit.z)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Moonknight"):WaitForChild("Remotes"):WaitForChild("GrappleKick"):FireServer(unpack(args))
+local args = {
+    [1] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 5, mouse.Hit.z)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Moonknight"):WaitForChild("Remotes"):WaitForChild("GrappleKick"):FireServer(unpack(args))
+local args = {
+    [1] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 5, mouse.Hit.z)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Moonknight"):WaitForChild("Remotes"):WaitForChild("GrappleKick"):FireServer(unpack(args))
+local args = {
+    [1] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 5, mouse.Hit.z)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Moonknight"):WaitForChild("Remotes"):WaitForChild("GrappleKick"):FireServer(unpack(args))
+local args = {
+    [1] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 5, mouse.Hit.z)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Moonknight"):WaitForChild("Remotes"):WaitForChild("GrappleKick"):FireServer(unpack(args))
+local args = {
+    [1] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 5, mouse.Hit.z)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Moonknight"):WaitForChild("Remotes"):WaitForChild("GrappleKick"):FireServer(unpack(args))
+local args = {
+    [1] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 5, mouse.Hit.z)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Moonknight"):WaitForChild("Remotes"):WaitForChild("GrappleKick"):FireServer(unpack(args))
+local args = {
+    [1] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 5, mouse.Hit.z)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Moonknight"):WaitForChild("Remotes"):WaitForChild("GrappleKick"):FireServer(unpack(args))
+local args = {
+    [1] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 5, mouse.Hit.z)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Moonknight"):WaitForChild("Remotes"):WaitForChild("GrappleKick"):FireServer(unpack(args))
+local args = {
+    [1] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 5, mouse.Hit.z)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Moonknight"):WaitForChild("Remotes"):WaitForChild("GrappleKick"):FireServer(unpack(args))
+local args = {
+    [1] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 5, mouse.Hit.z)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Moonknight"):WaitForChild("Remotes"):WaitForChild("GrappleKick"):FireServer(unpack(args))
+local args = {
+    [1] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 5, mouse.Hit.z)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Moonknight"):WaitForChild("Remotes"):WaitForChild("GrappleKick"):FireServer(unpack(args))
+local args = {
+    [1] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 5, mouse.Hit.z)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Moonknight"):WaitForChild("Remotes"):WaitForChild("GrappleKick"):FireServer(unpack(args))
+local args = {
+    [1] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 5, mouse.Hit.z)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Moonknight"):WaitForChild("Remotes"):WaitForChild("GrappleKick"):FireServer(unpack(args))
+
+end
+end
+end
+end)
+end)
+
+local BennettSection = Bennett:NewSection("Peacemaker")
+
+BennettSection:NewToggle("Exploding Compression Bullets", "Keybind (E)", function()
+    print("You just clicked the bind")
+
+    local function getPlayer()
+        local userInput = game:GetService("UserInputService")
+        local cam = workspace.CurrentCamera
+        local mousePos = userInput:GetMouseLocation()
+        local mouseRay = cam:ViewportPointToRay(mousePos.X, mousePos.Y)
+        players = {}
+        for _, x in next, game:GetService('Players'):GetPlayers() do
+            players[#players + 1] = x.Character
+        end
+        local raycastParams = RaycastParams.new()
+        raycastParams.FilterType = Enum.RaycastFilterType.Whitelist
+        raycastParams.FilterDescendantsInstances = players
+        raycastParams.IgnoreWater = true
+        local raycastResult = workspace:Raycast(mouseRay.Origin, mouseRay.Direction * 1000, raycastParams)
+        if raycastResult then
+            for _, x in next, game:GetService('Players'):GetPlayers() do
+                if not raycastResult.Instance:IsDescendantOf(x.Character) then
+                    continue
+                end
+                return x
+            end
+        end
+        return false
+    end
+
+    local function Set(list)
+        local set = {}
+        for _, l in ipairs(list) do
+            if l then
+                set[l] = true
+            end
+        end
+        return set
+    end
+
+    game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
+        if key == "e" then
+            local player = getPlayer()
+            if player then
+	    
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Peacemaker"):WaitForChild("Remotes"):WaitForChild("HitGun"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Peacemaker"):WaitForChild("Remotes"):WaitForChild("HitGun"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Peacemaker"):WaitForChild("Remotes"):WaitForChild("HitGun"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Peacemaker"):WaitForChild("Remotes"):WaitForChild("HitGun"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Peacemaker"):WaitForChild("Remotes"):WaitForChild("HitGun"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Peacemaker"):WaitForChild("Remotes"):WaitForChild("HitGun"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Peacemaker"):WaitForChild("Remotes"):WaitForChild("HitGun"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Peacemaker"):WaitForChild("Remotes"):WaitForChild("HitGun"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Peacemaker"):WaitForChild("Remotes"):WaitForChild("HitGun"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Peacemaker"):WaitForChild("Remotes"):WaitForChild("HitGun"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Peacemaker"):WaitForChild("Remotes"):WaitForChild("HitGun"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Peacemaker"):WaitForChild("Remotes"):WaitForChild("HitGun"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Peacemaker"):WaitForChild("Remotes"):WaitForChild("HitGun"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Peacemaker"):WaitForChild("Remotes"):WaitForChild("HitGun"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Peacemaker"):WaitForChild("Remotes"):WaitForChild("HitGun"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Peacemaker"):WaitForChild("Remotes"):WaitForChild("HitGun"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Peacemaker"):WaitForChild("Remotes"):WaitForChild("HitGun"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Peacemaker"):WaitForChild("Remotes"):WaitForChild("HitGun"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Peacemaker"):WaitForChild("Remotes"):WaitForChild("HitGun"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Peacemaker"):WaitForChild("Remotes"):WaitForChild("HitGun"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Peacemaker"):WaitForChild("Remotes"):WaitForChild("HitGun"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Peacemaker"):WaitForChild("Remotes"):WaitForChild("HitGun"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Peacemaker"):WaitForChild("Remotes"):WaitForChild("HitGun"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Peacemaker"):WaitForChild("Remotes"):WaitForChild("HitGun"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Peacemaker"):WaitForChild("Remotes"):WaitForChild("HitGun"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Peacemaker"):WaitForChild("Remotes"):WaitForChild("HitGun"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Peacemaker"):WaitForChild("Remotes"):WaitForChild("HitGun"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Peacemaker"):WaitForChild("Remotes"):WaitForChild("HitGun"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Peacemaker"):WaitForChild("Remotes"):WaitForChild("HitGun"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Peacemaker"):WaitForChild("Remotes"):WaitForChild("HitGun"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Peacemaker"):WaitForChild("Remotes"):WaitForChild("HitGun"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Peacemaker"):WaitForChild("Remotes"):WaitForChild("HitGun"):FireServer(unpack(args))
+
+            end
+        end
+    end)
+end)
+
+local BennettSection = Bennett:NewSection("Eleven")
+
+BennettSection:NewToggle("Break", "Keybind (R)", function()
+
+    clicktpon = true                 
+        plr = game.Players.LocalPlayer
+        hum = plr.Character.HumanoidRootPart
+        mouse = plr:GetMouse()
+        mouse.KeyDown:connect(function(key)
+        if key == 'r' then
+        if mouse.Target then
+        if clicktpon then
+
+local args = {
+    [1] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Vecna"):WaitForChild("Remotes"):WaitForChild("ArmBreak"):FireServer(unpack(args))
+local args = {
+    [1] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Vecna"):WaitForChild("Remotes"):WaitForChild("ArmBreak"):FireServer(unpack(args))
+local args = {
+    [1] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Vecna"):WaitForChild("Remotes"):WaitForChild("ArmBreak"):FireServer(unpack(args))
+local args = {
+    [1] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Vecna"):WaitForChild("Remotes"):WaitForChild("ArmBreak"):FireServer(unpack(args))
+local args = {
+    [1] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Vecna"):WaitForChild("Remotes"):WaitForChild("ArmBreak"):FireServer(unpack(args))
+local args = {
+    [1] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Vecna"):WaitForChild("Remotes"):WaitForChild("ArmBreak"):FireServer(unpack(args))
+local args = {
+    [1] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Vecna"):WaitForChild("Remotes"):WaitForChild("ArmBreak"):FireServer(unpack(args))
+local args = {
+    [1] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Vecna"):WaitForChild("Remotes"):WaitForChild("ArmBreak"):FireServer(unpack(args))
+local args = {
+    [1] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Vecna"):WaitForChild("Remotes"):WaitForChild("ArmBreak"):FireServer(unpack(args))
+local args = {
+    [1] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Vecna"):WaitForChild("Remotes"):WaitForChild("ArmBreak"):FireServer(unpack(args))
+local args = {
+    [1] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Vecna"):WaitForChild("Remotes"):WaitForChild("ArmBreak"):FireServer(unpack(args))
+local args = {
+    [1] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Vecna"):WaitForChild("Remotes"):WaitForChild("ArmBreak"):FireServer(unpack(args))
+local args = {
+    [1] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Vecna"):WaitForChild("Remotes"):WaitForChild("ArmBreak"):FireServer(unpack(args))
+local args = {
+    [1] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Vecna"):WaitForChild("Remotes"):WaitForChild("ArmBreak"):FireServer(unpack(args))
+local args = {
+    [1] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Vecna"):WaitForChild("Remotes"):WaitForChild("ArmBreak"):FireServer(unpack(args))
+local args = {
+    [1] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Vecna"):WaitForChild("Remotes"):WaitForChild("ArmBreak"):FireServer(unpack(args))
+local args = {
+    [1] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Vecna"):WaitForChild("Remotes"):WaitForChild("ArmBreak"):FireServer(unpack(args))
+local args = {
+    [1] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Vecna"):WaitForChild("Remotes"):WaitForChild("ArmBreak"):FireServer(unpack(args))
+local args = {
+    [1] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Vecna"):WaitForChild("Remotes"):WaitForChild("ArmBreak"):FireServer(unpack(args))
+local args = {
+    [1] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Vecna"):WaitForChild("Remotes"):WaitForChild("ArmBreak"):FireServer(unpack(args))
+local args = {
+    [1] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Vecna"):WaitForChild("Remotes"):WaitForChild("ArmBreak"):FireServer(unpack(args))
+local args = {
+    [1] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Vecna"):WaitForChild("Remotes"):WaitForChild("ArmBreak"):FireServer(unpack(args))
+local args = {
+    [1] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Vecna"):WaitForChild("Remotes"):WaitForChild("ArmBreak"):FireServer(unpack(args))
+local args = {
+    [1] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Vecna"):WaitForChild("Remotes"):WaitForChild("ArmBreak"):FireServer(unpack(args))
+local args = {
+    [1] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Vecna"):WaitForChild("Remotes"):WaitForChild("ArmBreak"):FireServer(unpack(args))
+local args = {
+    [1] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Vecna"):WaitForChild("Remotes"):WaitForChild("ArmBreak"):FireServer(unpack(args))
+local args = {
+    [1] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Vecna"):WaitForChild("Remotes"):WaitForChild("ArmBreak"):FireServer(unpack(args))
+local args = {
+    [1] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Vecna"):WaitForChild("Remotes"):WaitForChild("ArmBreak"):FireServer(unpack(args))
+local args = {
+    [1] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Vecna"):WaitForChild("Remotes"):WaitForChild("ArmBreak"):FireServer(unpack(args))
+local args = {
+    [1] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Vecna"):WaitForChild("Remotes"):WaitForChild("ArmBreak"):FireServer(unpack(args))
+local args = {
+    [1] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Vecna"):WaitForChild("Remotes"):WaitForChild("ArmBreak"):FireServer(unpack(args))
+local args = {
+    [1] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Vecna"):WaitForChild("Remotes"):WaitForChild("ArmBreak"):FireServer(unpack(args))
+local args = {
+    [1] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Vecna"):WaitForChild("Remotes"):WaitForChild("ArmBreak"):FireServer(unpack(args))
+local args = {
+    [1] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Vecna"):WaitForChild("Remotes"):WaitForChild("ArmBreak"):FireServer(unpack(args))
+local args = {
+    [1] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Vecna"):WaitForChild("Remotes"):WaitForChild("ArmBreak"):FireServer(unpack(args))
+local args = {
+    [1] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Vecna"):WaitForChild("Remotes"):WaitForChild("ArmBreak"):FireServer(unpack(args))
+local args = {
+    [1] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Vecna"):WaitForChild("Remotes"):WaitForChild("ArmBreak"):FireServer(unpack(args))
+local args = {
+    [1] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Vecna"):WaitForChild("Remotes"):WaitForChild("ArmBreak"):FireServer(unpack(args))
+local args = {
+    [1] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Vecna"):WaitForChild("Remotes"):WaitForChild("ArmBreak"):FireServer(unpack(args))
+local args = {
+    [1] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Vecna"):WaitForChild("Remotes"):WaitForChild("ArmBreak"):FireServer(unpack(args))
+local args = {
+    [1] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Vecna"):WaitForChild("Remotes"):WaitForChild("ArmBreak"):FireServer(unpack(args))
+local args = {
+    [1] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Vecna"):WaitForChild("Remotes"):WaitForChild("ArmBreak"):FireServer(unpack(args))
+local args = {
+    [1] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Vecna"):WaitForChild("Remotes"):WaitForChild("ArmBreak"):FireServer(unpack(args))
+local args = {
+    [1] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Vecna"):WaitForChild("Remotes"):WaitForChild("ArmBreak"):FireServer(unpack(args))
+local args = {
+    [1] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Vecna"):WaitForChild("Remotes"):WaitForChild("ArmBreak"):FireServer(unpack(args))
+local args = {
+    [1] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Vecna"):WaitForChild("Remotes"):WaitForChild("ArmBreak"):FireServer(unpack(args))
+local args = {
+    [1] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Vecna"):WaitForChild("Remotes"):WaitForChild("ArmBreak"):FireServer(unpack(args))
+local args = {
+    [1] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Vecna"):WaitForChild("Remotes"):WaitForChild("ArmBreak"):FireServer(unpack(args))
+local args = {
+    [1] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Vecna"):WaitForChild("Remotes"):WaitForChild("ArmBreak"):FireServer(unpack(args))
+local args = {
+    [1] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Vecna"):WaitForChild("Remotes"):WaitForChild("ArmBreak"):FireServer(unpack(args))
+local args = {
+    [1] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Vecna"):WaitForChild("Remotes"):WaitForChild("ArmBreak"):FireServer(unpack(args))
+local args = {
+    [1] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Vecna"):WaitForChild("Remotes"):WaitForChild("ArmBreak"):FireServer(unpack(args))
+
+end
+end
+end
+end)
+end)
+
+BennettSection:NewToggle("Air Missile", "Keybind (T)", function()
+
+    clicktpon = true                 
+        plr = game.Players.LocalPlayer
+        hum = plr.Character.HumanoidRootPart
+        mouse = plr:GetMouse()
+        mouse.KeyDown:connect(function(key)
+        if key == 't' then
+        if mouse.Target then
+        if clicktpon then
+
+local args = {
+    [1] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Vecna"):WaitForChild("Remotes"):WaitForChild("TelePunch"):FireServer(unpack(args))
+local args = {
+    [1] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Vecna"):WaitForChild("Remotes"):WaitForChild("TelePunch"):FireServer(unpack(args))
+local args = {
+    [1] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Vecna"):WaitForChild("Remotes"):WaitForChild("TelePunch"):FireServer(unpack(args))
+local args = {
+    [1] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Vecna"):WaitForChild("Remotes"):WaitForChild("TelePunch"):FireServer(unpack(args))
+local args = {
+    [1] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Vecna"):WaitForChild("Remotes"):WaitForChild("TelePunch"):FireServer(unpack(args))
+local args = {
+    [1] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Vecna"):WaitForChild("Remotes"):WaitForChild("TelePunch"):FireServer(unpack(args))
+local args = {
+    [1] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Vecna"):WaitForChild("Remotes"):WaitForChild("TelePunch"):FireServer(unpack(args))
+local args = {
+    [1] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Vecna"):WaitForChild("Remotes"):WaitForChild("TelePunch"):FireServer(unpack(args))
+local args = {
+    [1] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Vecna"):WaitForChild("Remotes"):WaitForChild("TelePunch"):FireServer(unpack(args))
+local args = {
+    [1] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Vecna"):WaitForChild("Remotes"):WaitForChild("TelePunch"):FireServer(unpack(args))
+local args = {
+    [1] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Vecna"):WaitForChild("Remotes"):WaitForChild("TelePunch"):FireServer(unpack(args))
+local args = {
+    [1] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Vecna"):WaitForChild("Remotes"):WaitForChild("TelePunch"):FireServer(unpack(args))
+local args = {
+    [1] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Vecna"):WaitForChild("Remotes"):WaitForChild("TelePunch"):FireServer(unpack(args))
+local args = {
+    [1] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Vecna"):WaitForChild("Remotes"):WaitForChild("TelePunch"):FireServer(unpack(args))
+local args = {
+    [1] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Vecna"):WaitForChild("Remotes"):WaitForChild("TelePunch"):FireServer(unpack(args))
+local args = {
+    [1] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Vecna"):WaitForChild("Remotes"):WaitForChild("TelePunch"):FireServer(unpack(args))
+local args = {
+    [1] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Vecna"):WaitForChild("Remotes"):WaitForChild("TelePunch"):FireServer(unpack(args))
+local args = {
+    [1] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Vecna"):WaitForChild("Remotes"):WaitForChild("TelePunch"):FireServer(unpack(args))
+local args = {
+    [1] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Vecna"):WaitForChild("Remotes"):WaitForChild("TelePunch"):FireServer(unpack(args))
+local args = {
+    [1] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Vecna"):WaitForChild("Remotes"):WaitForChild("TelePunch"):FireServer(unpack(args))
+local args = {
+    [1] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Vecna"):WaitForChild("Remotes"):WaitForChild("TelePunch"):FireServer(unpack(args))
+local args = {
+    [1] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Vecna"):WaitForChild("Remotes"):WaitForChild("TelePunch"):FireServer(unpack(args))
+local args = {
+    [1] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Vecna"):WaitForChild("Remotes"):WaitForChild("TelePunch"):FireServer(unpack(args))
+local args = {
+    [1] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Vecna"):WaitForChild("Remotes"):WaitForChild("TelePunch"):FireServer(unpack(args))
+local args = {
+    [1] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Vecna"):WaitForChild("Remotes"):WaitForChild("TelePunch"):FireServer(unpack(args))
+local args = {
+    [1] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Vecna"):WaitForChild("Remotes"):WaitForChild("TelePunch"):FireServer(unpack(args))
+local args = {
+    [1] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Vecna"):WaitForChild("Remotes"):WaitForChild("TelePunch"):FireServer(unpack(args))
+local args = {
+    [1] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Vecna"):WaitForChild("Remotes"):WaitForChild("TelePunch"):FireServer(unpack(args))
+local args = {
+    [1] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Vecna"):WaitForChild("Remotes"):WaitForChild("TelePunch"):FireServer(unpack(args))
+local args = {
+    [1] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Vecna"):WaitForChild("Remotes"):WaitForChild("TelePunch"):FireServer(unpack(args))
+local args = {
+    [1] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Vecna"):WaitForChild("Remotes"):WaitForChild("TelePunch"):FireServer(unpack(args))
+local args = {
+    [1] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Vecna"):WaitForChild("Remotes"):WaitForChild("TelePunch"):FireServer(unpack(args))
+local args = {
+    [1] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Vecna"):WaitForChild("Remotes"):WaitForChild("TelePunch"):FireServer(unpack(args))
+local args = {
+    [1] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Vecna"):WaitForChild("Remotes"):WaitForChild("TelePunch"):FireServer(unpack(args))
+local args = {
+    [1] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Vecna"):WaitForChild("Remotes"):WaitForChild("TelePunch"):FireServer(unpack(args))
+local args = {
+    [1] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Vecna"):WaitForChild("Remotes"):WaitForChild("TelePunch"):FireServer(unpack(args))
+local args = {
+    [1] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Vecna"):WaitForChild("Remotes"):WaitForChild("TelePunch"):FireServer(unpack(args))
+local args = {
+    [1] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Vecna"):WaitForChild("Remotes"):WaitForChild("TelePunch"):FireServer(unpack(args))
+local args = {
+    [1] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Vecna"):WaitForChild("Remotes"):WaitForChild("TelePunch"):FireServer(unpack(args))
+local args = {
+    [1] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Vecna"):WaitForChild("Remotes"):WaitForChild("TelePunch"):FireServer(unpack(args))
+
+end
+end
+end
+end)
+end)
+
+BennettSection:NewToggle("Force Counter", "Keybind (Y)", function()
+    print("You just clicked the bind")
+
+    local function getPlayer()
+        local userInput = game:GetService("UserInputService")
+        local cam = workspace.CurrentCamera
+        local mousePos = userInput:GetMouseLocation()
+        local mouseRay = cam:ViewportPointToRay(mousePos.X, mousePos.Y)
+        players = {}
+        for _, x in next, game:GetService('Players'):GetPlayers() do
+            players[#players + 1] = x.Character
+        end
+        local raycastParams = RaycastParams.new()
+        raycastParams.FilterType = Enum.RaycastFilterType.Whitelist
+        raycastParams.FilterDescendantsInstances = players
+        raycastParams.IgnoreWater = true
+        local raycastResult = workspace:Raycast(mouseRay.Origin, mouseRay.Direction * 1000, raycastParams)
+        if raycastResult then
+            for _, x in next, game:GetService('Players'):GetPlayers() do
+                if not raycastResult.Instance:IsDescendantOf(x.Character) then
+                    continue
+                end
+                return x
+            end
+        end
+        return false
+    end
+
+    local function Set(list)
+        local set = {}
+        for _, l in ipairs(list) do
+            if l then
+                set[l] = true
+            end
+        end
+        return set
+    end
+
+    game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
+        if key == "y" then
+            local player = getPlayer()
+            if player then
+	    
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+
+            end
+        end
+    end)
+end)
+
+local BennettSection = Bennett:NewSection("Darth Vader")
+
+BennettSection:NewToggle("Pull", "Keybind (U)", function()
+
+    clicktpon = true                 
+        plr = game.Players.LocalPlayer
+        hum = plr.Character.HumanoidRootPart
+        mouse = plr:GetMouse()
+        mouse.KeyDown:connect(function(key)
+        if key == 'u' then
+        if mouse.Target then
+        if clicktpon then
+
+local args = {
+    [1] = Vector3.new(230.468505859375, 8.189241409301758, 646.589111328125),
+    [2] = true
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("DarthVader"):WaitForChild("Remotes"):WaitForChild("Pull"):FireServer(unpack(args))
+local args = {
+    [1] = Vector3.new(230.468505859375, 8.189241409301758, 646.589111328125),
+    [2] = true
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("DarthVader"):WaitForChild("Remotes"):WaitForChild("Pull"):FireServer(unpack(args))local args = {
+    [1] = Vector3.new(230.468505859375, 8.189241409301758, 646.589111328125),
+    [2] = true
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("DarthVader"):WaitForChild("Remotes"):WaitForChild("Pull"):FireServer(unpack(args))local args = {
+    [1] = Vector3.new(230.468505859375, 8.189241409301758, 646.589111328125),
+    [2] = true
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("DarthVader"):WaitForChild("Remotes"):WaitForChild("Pull"):FireServer(unpack(args))local args = {
+    [1] = Vector3.new(230.468505859375, 8.189241409301758, 646.589111328125),
+    [2] = true
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("DarthVader"):WaitForChild("Remotes"):WaitForChild("Pull"):FireServer(unpack(args))local args = {
+    [1] = Vector3.new(230.468505859375, 8.189241409301758, 646.589111328125),
+    [2] = true
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("DarthVader"):WaitForChild("Remotes"):WaitForChild("Pull"):FireServer(unpack(args))local args = {
+    [1] = Vector3.new(230.468505859375, 8.189241409301758, 646.589111328125),
+    [2] = true
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("DarthVader"):WaitForChild("Remotes"):WaitForChild("Pull"):FireServer(unpack(args))local args = {
+    [1] = Vector3.new(230.468505859375, 8.189241409301758, 646.589111328125),
+    [2] = true
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("DarthVader"):WaitForChild("Remotes"):WaitForChild("Pull"):FireServer(unpack(args))local args = {
+    [1] = Vector3.new(230.468505859375, 8.189241409301758, 646.589111328125),
+    [2] = true
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("DarthVader"):WaitForChild("Remotes"):WaitForChild("Pull"):FireServer(unpack(args))local args = {
+    [1] = Vector3.new(230.468505859375, 8.189241409301758, 646.589111328125),
+    [2] = true
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("DarthVader"):WaitForChild("Remotes"):WaitForChild("Pull"):FireServer(unpack(args))local args = {
+    [1] = Vector3.new(230.468505859375, 8.189241409301758, 646.589111328125),
+    [2] = true
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("DarthVader"):WaitForChild("Remotes"):WaitForChild("Pull"):FireServer(unpack(args))local args = {
+    [1] = Vector3.new(230.468505859375, 8.189241409301758, 646.589111328125),
+    [2] = true
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("DarthVader"):WaitForChild("Remotes"):WaitForChild("Pull"):FireServer(unpack(args))local args = {
+    [1] = Vector3.new(230.468505859375, 8.189241409301758, 646.589111328125),
+    [2] = true
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("DarthVader"):WaitForChild("Remotes"):WaitForChild("Pull"):FireServer(unpack(args))local args = {
+    [1] = Vector3.new(230.468505859375, 8.189241409301758, 646.589111328125),
+    [2] = true
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("DarthVader"):WaitForChild("Remotes"):WaitForChild("Pull"):FireServer(unpack(args))local args = {
+    [1] = Vector3.new(230.468505859375, 8.189241409301758, 646.589111328125),
+    [2] = true
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("DarthVader"):WaitForChild("Remotes"):WaitForChild("Pull"):FireServer(unpack(args))local args = {
+    [1] = Vector3.new(230.468505859375, 8.189241409301758, 646.589111328125),
+    [2] = true
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("DarthVader"):WaitForChild("Remotes"):WaitForChild("Pull"):FireServer(unpack(args))
+local args = {
+    [1] = Vector3.new(230.468505859375, 8.189241409301758, 646.589111328125),
+    [2] = true
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("DarthVader"):WaitForChild("Remotes"):WaitForChild("Pull"):FireServer(unpack(args))
+local args = {
+    [1] = Vector3.new(230.468505859375, 8.189241409301758, 646.589111328125),
+    [2] = true
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("DarthVader"):WaitForChild("Remotes"):WaitForChild("Pull"):FireServer(unpack(args))
+local args = {
+    [1] = Vector3.new(230.468505859375, 8.189241409301758, 646.589111328125),
+    [2] = true
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("DarthVader"):WaitForChild("Remotes"):WaitForChild("Pull"):FireServer(unpack(args))
+local args = {
+    [1] = Vector3.new(230.468505859375, 8.189241409301758, 646.589111328125),
+    [2] = true
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("DarthVader"):WaitForChild("Remotes"):WaitForChild("Pull"):FireServer(unpack(args))
+local args = {
+    [1] = Vector3.new(230.468505859375, 8.189241409301758, 646.589111328125),
+    [2] = true
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("DarthVader"):WaitForChild("Remotes"):WaitForChild("Pull"):FireServer(unpack(args))
+local args = {
+    [1] = Vector3.new(230.468505859375, 8.189241409301758, 646.589111328125),
+    [2] = true
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("DarthVader"):WaitForChild("Remotes"):WaitForChild("Pull"):FireServer(unpack(args))
+local args = {
+    [1] = Vector3.new(230.468505859375, 8.189241409301758, 646.589111328125),
+    [2] = true
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("DarthVader"):WaitForChild("Remotes"):WaitForChild("Pull"):FireServer(unpack(args))
+local args = {
+    [1] = Vector3.new(230.468505859375, 8.189241409301758, 646.589111328125),
+    [2] = true
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("DarthVader"):WaitForChild("Remotes"):WaitForChild("Pull"):FireServer(unpack(args))
+local args = {
+    [1] = Vector3.new(230.468505859375, 8.189241409301758, 646.589111328125),
+    [2] = true
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("DarthVader"):WaitForChild("Remotes"):WaitForChild("Pull"):FireServer(unpack(args))
+local args = {
+    [1] = Vector3.new(230.468505859375, 8.189241409301758, 646.589111328125),
+    [2] = true
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("DarthVader"):WaitForChild("Remotes"):WaitForChild("Pull"):FireServer(unpack(args))
+local args = {
+    [1] = Vector3.new(230.468505859375, 8.189241409301758, 646.589111328125),
+    [2] = true
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("DarthVader"):WaitForChild("Remotes"):WaitForChild("Pull"):FireServer(unpack(args))
+local args = {
+    [1] = Vector3.new(230.468505859375, 8.189241409301758, 646.589111328125),
+    [2] = true
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("DarthVader"):WaitForChild("Remotes"):WaitForChild("Pull"):FireServer(unpack(args))
+local args = {
+    [1] = Vector3.new(230.468505859375, 8.189241409301758, 646.589111328125),
+    [2] = true
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("DarthVader"):WaitForChild("Remotes"):WaitForChild("Pull"):FireServer(unpack(args))
+local args = {
+    [1] = Vector3.new(230.468505859375, 8.189241409301758, 646.589111328125),
+    [2] = true
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("DarthVader"):WaitForChild("Remotes"):WaitForChild("Pull"):FireServer(unpack(args))
+local args = {
+    [1] = Vector3.new(230.468505859375, 8.189241409301758, 646.589111328125),
+    [2] = true
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("DarthVader"):WaitForChild("Remotes"):WaitForChild("Pull"):FireServer(unpack(args))
+local args = {
+    [1] = Vector3.new(230.468505859375, 8.189241409301758, 646.589111328125),
+    [2] = true
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("DarthVader"):WaitForChild("Remotes"):WaitForChild("Pull"):FireServer(unpack(args))
+local args = {
+    [1] = Vector3.new(230.468505859375, 8.189241409301758, 646.589111328125),
+    [2] = true
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("DarthVader"):WaitForChild("Remotes"):WaitForChild("Pull"):FireServer(unpack(args))
+local args = {
+    [1] = Vector3.new(230.468505859375, 8.189241409301758, 646.589111328125),
+    [2] = true
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("DarthVader"):WaitForChild("Remotes"):WaitForChild("Pull"):FireServer(unpack(args))
+local args = {
+    [1] = Vector3.new(230.468505859375, 8.189241409301758, 646.589111328125),
+    [2] = true
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("DarthVader"):WaitForChild("Remotes"):WaitForChild("Pull"):FireServer(unpack(args))
+local args = {
+    [1] = Vector3.new(230.468505859375, 8.189241409301758, 646.589111328125),
+    [2] = true
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("DarthVader"):WaitForChild("Remotes"):WaitForChild("Pull"):FireServer(unpack(args))
+local args = {
+    [1] = Vector3.new(230.468505859375, 8.189241409301758, 646.589111328125),
+    [2] = true
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("DarthVader"):WaitForChild("Remotes"):WaitForChild("Pull"):FireServer(unpack(args))
+
+end
+end
+end
+end)
+end)
+
+local BennettSection = Bennett:NewSection("Mr Fantastic")
+
+BennettSection:NewToggle("Scretch Punch", "Keybind (P)", function()
+    print("You just clicked the bind")
+
+    local function getPlayer()
+        local userInput = game:GetService("UserInputService")
+        local cam = workspace.CurrentCamera
+        local mousePos = userInput:GetMouseLocation()
+        local mouseRay = cam:ViewportPointToRay(mousePos.X, mousePos.Y)
+        players = {}
+        for _, x in next, game:GetService('Players'):GetPlayers() do
+            players[#players + 1] = x.Character
+        end
+        local raycastParams = RaycastParams.new()
+        raycastParams.FilterType = Enum.RaycastFilterType.Whitelist
+        raycastParams.FilterDescendantsInstances = players
+        raycastParams.IgnoreWater = true
+        local raycastResult = workspace:Raycast(mouseRay.Origin, mouseRay.Direction * 1000, raycastParams)
+        if raycastResult then
+            for _, x in next, game:GetService('Players'):GetPlayers() do
+                if not raycastResult.Instance:IsDescendantOf(x.Character) then
+                    continue
+                end
+                return x
+            end
+        end
+        return false
+    end
+
+    local function Set(list)
+        local set = {}
+        for _, l in ipairs(list) do
+            if l then
+                set[l] = true
+            end
+        end
+        return set
+    end
+
+    game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
+        if key == "p" then
+            local player = getPlayer()
+            if player then
+	    
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+
+            end
+        end
+    end)
+end)
+
+local BennettSection = Bennett:NewSection("Walter White")
+
+BennettSection:NewToggle("Gray Matter", "Keybind (F)", function()
+
+    clicktpon = true                 
+        plr = game.Players.LocalPlayer
+        hum = plr.Character.HumanoidRootPart
+        mouse = plr:GetMouse()
+        mouse.KeyDown:connect(function(key)
+        if key == 'f' then
+        if mouse.Target then
+        if clicktpon then
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Walter"):WaitForChild("Remotes"):WaitForChild("GunPoint"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Walter"):WaitForChild("Remotes"):WaitForChild("GunPoint"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Walter"):WaitForChild("Remotes"):WaitForChild("GunPoint"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Walter"):WaitForChild("Remotes"):WaitForChild("GunPoint"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Walter"):WaitForChild("Remotes"):WaitForChild("GunPoint"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Walter"):WaitForChild("Remotes"):WaitForChild("GunPoint"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Walter"):WaitForChild("Remotes"):WaitForChild("GunPoint"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Walter"):WaitForChild("Remotes"):WaitForChild("GunPoint"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Walter"):WaitForChild("Remotes"):WaitForChild("GunPoint"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Walter"):WaitForChild("Remotes"):WaitForChild("GunPoint"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Walter"):WaitForChild("Remotes"):WaitForChild("GunPoint"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Walter"):WaitForChild("Remotes"):WaitForChild("GunPoint"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Walter"):WaitForChild("Remotes"):WaitForChild("GunPoint"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Walter"):WaitForChild("Remotes"):WaitForChild("GunPoint"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Walter"):WaitForChild("Remotes"):WaitForChild("GunPoint"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Walter"):WaitForChild("Remotes"):WaitForChild("GunPoint"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Walter"):WaitForChild("Remotes"):WaitForChild("GunPoint"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Walter"):WaitForChild("Remotes"):WaitForChild("GunPoint"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Walter"):WaitForChild("Remotes"):WaitForChild("GunPoint"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Walter"):WaitForChild("Remotes"):WaitForChild("GunPoint"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Walter"):WaitForChild("Remotes"):WaitForChild("GunPoint"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Walter"):WaitForChild("Remotes"):WaitForChild("GunPoint"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Walter"):WaitForChild("Remotes"):WaitForChild("GunPoint"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Walter"):WaitForChild("Remotes"):WaitForChild("GunPoint"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Walter"):WaitForChild("Remotes"):WaitForChild("GunPoint"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Walter"):WaitForChild("Remotes"):WaitForChild("GunPoint"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Walter"):WaitForChild("Remotes"):WaitForChild("GunPoint"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Walter"):WaitForChild("Remotes"):WaitForChild("GunPoint"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Walter"):WaitForChild("Remotes"):WaitForChild("GunPoint"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Walter"):WaitForChild("Remotes"):WaitForChild("GunPoint"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Walter"):WaitForChild("Remotes"):WaitForChild("GunPoint"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Walter"):WaitForChild("Remotes"):WaitForChild("GunPoint"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Walter"):WaitForChild("Remotes"):WaitForChild("GunPoint"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Walter"):WaitForChild("Remotes"):WaitForChild("GunPoint"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Walter"):WaitForChild("Remotes"):WaitForChild("GunPoint"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Walter"):WaitForChild("Remotes"):WaitForChild("GunPoint"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Walter"):WaitForChild("Remotes"):WaitForChild("GunPoint"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Walter"):WaitForChild("Remotes"):WaitForChild("GunPoint"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Walter"):WaitForChild("Remotes"):WaitForChild("GunPoint"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Walter"):WaitForChild("Remotes"):WaitForChild("GunPoint"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Walter"):WaitForChild("Remotes"):WaitForChild("GunPoint"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Walter"):WaitForChild("Remotes"):WaitForChild("GunPoint"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Walter"):WaitForChild("Remotes"):WaitForChild("GunPoint"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Walter"):WaitForChild("Remotes"):WaitForChild("GunPoint"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Walter"):WaitForChild("Remotes"):WaitForChild("GunPoint"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Walter"):WaitForChild("Remotes"):WaitForChild("GunPoint"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Walter"):WaitForChild("Remotes"):WaitForChild("GunPoint"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Walter"):WaitForChild("Remotes"):WaitForChild("GunPoint"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Walter"):WaitForChild("Remotes"):WaitForChild("GunPoint"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Walter"):WaitForChild("Remotes"):WaitForChild("GunPoint"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Walter"):WaitForChild("Remotes"):WaitForChild("GunPoint"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Walter"):WaitForChild("Remotes"):WaitForChild("GunPoint"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Walter"):WaitForChild("Remotes"):WaitForChild("GunPoint"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Walter"):WaitForChild("Remotes"):WaitForChild("GunPoint"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Walter"):WaitForChild("Remotes"):WaitForChild("GunPoint"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Walter"):WaitForChild("Remotes"):WaitForChild("GunPoint"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Walter"):WaitForChild("Remotes"):WaitForChild("GunPoint"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Walter"):WaitForChild("Remotes"):WaitForChild("GunPoint"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Walter"):WaitForChild("Remotes"):WaitForChild("GunPoint"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Walter"):WaitForChild("Remotes"):WaitForChild("GunPoint"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Walter"):WaitForChild("Remotes"):WaitForChild("GunPoint"):FireServer()
+
+end
+end
+end
+end)
+end)
+
+local BennettSection = Bennett:NewSection("Pibby")
+
+BennettSection:NewToggle("Glitch Counter", "Keybind (G)", function()
+
+    clicktpon = true                 
+        plr = game.Players.LocalPlayer
+        hum = plr.Character.HumanoidRootPart
+        mouse = plr:GetMouse()
+        mouse.KeyDown:connect(function(key)
+        if key == 'g' then
+        if mouse.Target then
+        if clicktpon then
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Glitch"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Glitch"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Glitch"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Glitch"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Glitch"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Glitch"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Glitch"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Glitch"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Glitch"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Glitch"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Glitch"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Glitch"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Glitch"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Glitch"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Glitch"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Glitch"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Glitch"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Glitch"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Glitch"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Glitch"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Glitch"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Glitch"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Glitch"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Glitch"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Glitch"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Glitch"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Glitch"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Glitch"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Glitch"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Glitch"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Glitch"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Glitch"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Glitch"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Glitch"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Glitch"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Glitch"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Glitch"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Glitch"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Glitch"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Glitch"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Glitch"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Glitch"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Glitch"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Glitch"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Glitch"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Glitch"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Glitch"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Glitch"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Glitch"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Glitch"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Glitch"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Glitch"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Glitch"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Glitch"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Glitch"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Glitch"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Glitch"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Glitch"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Glitch"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Glitch"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Glitch"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Glitch"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Glitch"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Glitch"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Glitch"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Glitch"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Glitch"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Glitch"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Glitch"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Glitch"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Glitch"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Glitch"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Glitch"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Glitch"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Glitch"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Glitch"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Glitch"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Glitch"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Glitch"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Glitch"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Glitch"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Glitch"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Glitch"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Glitch"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Glitch"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Glitch"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Glitch"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Glitch"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Glitch"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Glitch"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Glitch"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Glitch"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Glitch"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Glitch"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Glitch"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Glitch"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Glitch"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Glitch"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Glitch"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Glitch"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Glitch"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Glitch"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Glitch"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Glitch"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Glitch"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Glitch"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Glitch"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Glitch"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Glitch"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Glitch"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Glitch"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Glitch"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Glitch"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Glitch"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Glitch"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Glitch"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Glitch"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Glitch"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Glitch"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Glitch"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Glitch"):FireServer()
+
+end
+end
+end
+end)
+end)
+
+local BennettSection = Bennett:NewSection("Vecna")
+BennettSection:NewToggle("Head Pull", "Keybind (H)", function()
+    print("You just clicked the bind")
+
+    local function getPlayer()
+        local userInput = game:GetService("UserInputService")
+        local cam = workspace.CurrentCamera
+        local mousePos = userInput:GetMouseLocation()
+        local mouseRay = cam:ViewportPointToRay(mousePos.X, mousePos.Y)
+        players = {}
+        for _, x in next, game:GetService('Players'):GetPlayers() do
+            players[#players + 1] = x.Character
+        end
+        local raycastParams = RaycastParams.new()
+        raycastParams.FilterType = Enum.RaycastFilterType.Whitelist
+        raycastParams.FilterDescendantsInstances = players
+        raycastParams.IgnoreWater = true
+        local raycastResult = workspace:Raycast(mouseRay.Origin, mouseRay.Direction * 1000, raycastParams)
+        if raycastResult then
+            for _, x in next, game:GetService('Players'):GetPlayers() do
+                if not raycastResult.Instance:IsDescendantOf(x.Character) then
+                    continue
+                end
+                return x
+            end
+        end
+        return false
+    end
+
+    local function Set(list)
+        local set = {}
+        for _, l in ipairs(list) do
+            if l then
+                set[l] = true
+            end
+        end
+        return set
+    end
+
+    game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
+        if key == "h" then
+            local player = getPlayer()
+            if player then
+	    
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Creel"):WaitForChild("Remotes"):WaitForChild("VinePull"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Creel"):WaitForChild("Remotes"):WaitForChild("VinePull"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Creel"):WaitForChild("Remotes"):WaitForChild("VinePull"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Creel"):WaitForChild("Remotes"):WaitForChild("VinePull"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Creel"):WaitForChild("Remotes"):WaitForChild("VinePull"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Creel"):WaitForChild("Remotes"):WaitForChild("VinePull"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Creel"):WaitForChild("Remotes"):WaitForChild("VinePull"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Creel"):WaitForChild("Remotes"):WaitForChild("VinePull"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Creel"):WaitForChild("Remotes"):WaitForChild("VinePull"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Creel"):WaitForChild("Remotes"):WaitForChild("VinePull"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Creel"):WaitForChild("Remotes"):WaitForChild("VinePull"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Creel"):WaitForChild("Remotes"):WaitForChild("VinePull"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Creel"):WaitForChild("Remotes"):WaitForChild("VinePull"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Creel"):WaitForChild("Remotes"):WaitForChild("VinePull"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Creel"):WaitForChild("Remotes"):WaitForChild("VinePull"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Creel"):WaitForChild("Remotes"):WaitForChild("VinePull"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Creel"):WaitForChild("Remotes"):WaitForChild("VinePull"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Creel"):WaitForChild("Remotes"):WaitForChild("VinePull"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Creel"):WaitForChild("Remotes"):WaitForChild("VinePull"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Creel"):WaitForChild("Remotes"):WaitForChild("VinePull"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Creel"):WaitForChild("Remotes"):WaitForChild("VinePull"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Creel"):WaitForChild("Remotes"):WaitForChild("VinePull"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Creel"):WaitForChild("Remotes"):WaitForChild("VinePull"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Creel"):WaitForChild("Remotes"):WaitForChild("VinePull"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Creel"):WaitForChild("Remotes"):WaitForChild("VinePull"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Creel"):WaitForChild("Remotes"):WaitForChild("VinePull"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Creel"):WaitForChild("Remotes"):WaitForChild("VinePull"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Creel"):WaitForChild("Remotes"):WaitForChild("VinePull"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Creel"):WaitForChild("Remotes"):WaitForChild("VinePull"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Creel"):WaitForChild("Remotes"):WaitForChild("VinePull"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Creel"):WaitForChild("Remotes"):WaitForChild("VinePull"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Creel"):WaitForChild("Remotes"):WaitForChild("VinePull"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Creel"):WaitForChild("Remotes"):WaitForChild("VinePull"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Creel"):WaitForChild("Remotes"):WaitForChild("VinePull"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Creel"):WaitForChild("Remotes"):WaitForChild("VinePull"):FireServer(unpack(args))
+
+            end
+        end
+    end)
+end)
+
+
+local Bennett = Window:NewTab("Finishers")
+local BennettSection = Bennett:NewSection("Special attack for finishers")
+
+BennettSection:NewToggle("The Attack", "Keybind (,)", function()
+
+    clicktpon = true                 
+        plr = game.Players.LocalPlayer
+        hum = plr.Character.HumanoidRootPart
+        mouse = plr:GetMouse()
+        mouse.KeyDown:connect(function(key)
+        if key == ',' then
+        if mouse.Target then
+        if clicktpon then
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Ghostface"):WaitForChild("Remotes"):WaitForChild("CounterStab"):FireServer()
+
+local args = {
+    [1] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Moonknight"):WaitForChild("Remotes"):WaitForChild("SmackDown"):FireServer(unpack(args))
+
+local args = {
+    [1] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Vigilante"):WaitForChild("Remotes"):WaitForChild("ChainsawPierce"):FireServer(unpack(args))
+
+local args = {
+    [1] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("DoctorStrange"):WaitForChild("Remotes"):WaitForChild("TendrillSlam"):FireServer(unpack(args))
+
+end
+end
+end
+end)
+end)
+
+BennettSection:NewToggle("Self Heal (Can glitch your screen)", "Keybind ([)", function()
+
+    clicktpon = true                 
+        plr = game.Players.LocalPlayer
+        hum = plr.Character.HumanoidRootPart
+        mouse = plr:GetMouse()
+        mouse.KeyDown:connect(function(key)
+        if key == '[' then
+        if mouse.Target then
+        if clicktpon then
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Sonic"):WaitForChild("Remotes"):WaitForChild("Transform"):FireServer()
+
+end
+end
+end
+end)
+end)
+
+local BennettSection = Bennett:NewSection("Springtrap")
+BennettSection:NewToggle("Finisher", "Keybind (Z)", function()
+
+    clicktpon = true                 
+        plr = game.Players.LocalPlayer
+        hum = plr.Character.HumanoidRootPart
+        mouse = plr:GetMouse()
+        mouse.KeyDown:connect(function(key)
+        if key == 'z' then
+        if mouse.Target then
+        if clicktpon then
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Springtrap"):WaitForChild("Remotes"):WaitForChild("Finisher"):FireServer()
+
+end
+end
+end
+end)
+end)
+
+local BennettSection = Bennett:NewSection("Eleven")
+BennettSection:NewToggle("Dust Finisher", "Keybind (X)", function()
+
+    clicktpon = true                 
+        plr = game.Players.LocalPlayer
+        hum = plr.Character.HumanoidRootPart
+        mouse = plr:GetMouse()
+        mouse.KeyDown:connect(function(key)
+        if key == 'x' then
+        if mouse.Target then
+        if clicktpon then
+
+local args = {
+    [1] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Vecna"):WaitForChild("Remotes"):WaitForChild("ElevenFinisher"):FireServer(unpack(args))
+
+end
+end
+end
+end)
+end)
+
+local BennettSection = Bennett:NewSection("Mr. Fantastic")
+BennettSection:NewToggle("Elastic Finisher", "Keybind (C)", function()
+
+    clicktpon = true                 
+        plr = game.Players.LocalPlayer
+        hum = plr.Character.HumanoidRootPart
+        mouse = plr:GetMouse()
+        mouse.KeyDown:connect(function(key)
+        if key == 'c' then
+        if mouse.Target then
+        if clicktpon then
+
+local args = {
+    [1] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("MrFantastic"):WaitForChild("Remotes"):WaitForChild("Finisher"):FireServer(unpack(args))
+
+end
+end
+end
+end)
+end)
+
+local BennettSection = Bennett:NewSection("Quicksilver")
+BennettSection:NewToggle("PingPong Finisher", "Keybind (V)", function()
+
+    clicktpon = true                 
+        plr = game.Players.LocalPlayer
+        hum = plr.Character.HumanoidRootPart
+        mouse = plr:GetMouse()
+        mouse.KeyDown:connect(function(key)
+        if key == 'v' then
+        if mouse.Target then
+        if clicktpon then
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("A-Train"):WaitForChild("Remotes"):WaitForChild("QuicksilverFinisher"):FireServer()
+
+end
+end
+end
+end)
+end)
+
+local BennettSection = Bennett:NewSection("Starlight")
+BennettSection:NewToggle("Sparks Finisher", "Keybind (B)", function()
+
+    clicktpon = true                 
+        plr = game.Players.LocalPlayer
+        hum = plr.Character.HumanoidRootPart
+        mouse = plr:GetMouse()
+        mouse.KeyDown:connect(function(key)
+        if key == 'b' then
+        if mouse.Target then
+        if clicktpon then
+
+local args = {
+    [1] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("StarLight"):WaitForChild("Remotes"):WaitForChild("Finisher"):FireServer(unpack(args))
+
+end
+end
+end
+end)
+end)
+
+local BennettSection = Bennett:NewSection("Pibby")
+BennettSection:NewToggle("Finisher", "Keybind (N)", function()
+
+    clicktpon = true                 
+        plr = game.Players.LocalPlayer
+        hum = plr.Character.HumanoidRootPart
+        mouse = plr:GetMouse()
+        mouse.KeyDown:connect(function(key)
+        if key == 'n' then
+        if mouse.Target then
+        if clicktpon then
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Pibby"):WaitForChild("Remotes"):WaitForChild("Finisher"):FireServer()
+
+end
+end
+end
+end)
+end)
+
+local BennettSection = Bennett:NewSection("Vecna")
+BennettSection:NewToggle("Times Up Finisher", "Keybind (M)", function()
+
+    clicktpon = true                 
+        plr = game.Players.LocalPlayer
+        hum = plr.Character.HumanoidRootPart
+        mouse = plr:GetMouse()
+        mouse.KeyDown:connect(function(key)
+        if key == 'm' then
+        if mouse.Target then
+        if clicktpon then
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Creel"):WaitForChild("Remotes"):WaitForChild("Finisher"):FireServer()
+
+end
+end
+end
+end)
+end)
+
+local Bennett = Window:NewTab("Insta Kill All")
+local BennettSection = Bennett:NewSection("Peacemaker")
+
+BennettSection:NewButton("Exploding Compression Bullets All", "ButtonInfo", function()
+    print("Clicked")
+    local Plr = game.Players.LocalPlayer
+    for i, Player in pairs (game.Players:GetPlayers()) do
+
+        if Player.Character ~= nil and Player ~= Plr then
+            local mag = (Player.Character.UpperTorso.Position - Plr.Character.UpperTorso.Position).magnitude
+            if mag < 100000 then
+                local Target = Player.Character or Player.CharacterAdded:Wait()
+-- Script generated by Nut The Menace Spy - credits to Claudev0#8849
+
+local args = {
+    [1] = Target
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Peacemaker"):WaitForChild("Remotes"):WaitForChild("HitGun"):FireServer(unpack(args))
+     local args = {
+    [1] = Target
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Peacemaker"):WaitForChild("Remotes"):WaitForChild("HitGun"):FireServer(unpack(args))local args = {
+    [1] = Target
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Peacemaker"):WaitForChild("Remotes"):WaitForChild("HitGun"):FireServer(unpack(args))local args = {
+    [1] = Target
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Peacemaker"):WaitForChild("Remotes"):WaitForChild("HitGun"):FireServer(unpack(args))local args = {
+    [1] = Target
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Peacemaker"):WaitForChild("Remotes"):WaitForChild("HitGun"):FireServer(unpack(args))local args = {
+    [1] = Target
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Peacemaker"):WaitForChild("Remotes"):WaitForChild("HitGun"):FireServer(unpack(args))local args = {
+    [1] = Target
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Peacemaker"):WaitForChild("Remotes"):WaitForChild("HitGun"):FireServer(unpack(args))local args = {
+    [1] = Target
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Peacemaker"):WaitForChild("Remotes"):WaitForChild("HitGun"):FireServer(unpack(args))local args = {
+    [1] = Target
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Peacemaker"):WaitForChild("Remotes"):WaitForChild("HitGun"):FireServer(unpack(args))local args = {
+    [1] = Target
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Peacemaker"):WaitForChild("Remotes"):WaitForChild("HitGun"):FireServer(unpack(args))local args = {
+    [1] = Target
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Peacemaker"):WaitForChild("Remotes"):WaitForChild("HitGun"):FireServer(unpack(args))local args = {
+    [1] = Target
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Peacemaker"):WaitForChild("Remotes"):WaitForChild("HitGun"):FireServer(unpack(args))local args = {
+    [1] = Target
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Peacemaker"):WaitForChild("Remotes"):WaitForChild("HitGun"):FireServer(unpack(args))local args = {
+    [1] = Target
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Peacemaker"):WaitForChild("Remotes"):WaitForChild("HitGun"):FireServer(unpack(args))local args = {
+    [1] = Target
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Peacemaker"):WaitForChild("Remotes"):WaitForChild("HitGun"):FireServer(unpack(args))local args = {
+    [1] = Target
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Peacemaker"):WaitForChild("Remotes"):WaitForChild("HitGun"):FireServer(unpack(args))local args = {
+    [1] = Target
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Peacemaker"):WaitForChild("Remotes"):WaitForChild("HitGun"):FireServer(unpack(args))local args = {
+    [1] = Target
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Peacemaker"):WaitForChild("Remotes"):WaitForChild("HitGun"):FireServer(unpack(args))local args = {
+    [1] = Target
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Peacemaker"):WaitForChild("Remotes"):WaitForChild("HitGun"):FireServer(unpack(args))local args = {
+    [1] = Target
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Peacemaker"):WaitForChild("Remotes"):WaitForChild("HitGun"):FireServer(unpack(args))local args = {
+    [1] = Target
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Peacemaker"):WaitForChild("Remotes"):WaitForChild("HitGun"):FireServer(unpack(args))local args = {
+    [1] = Target
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Peacemaker"):WaitForChild("Remotes"):WaitForChild("HitGun"):FireServer(unpack(args))local args = {
+    [1] = Target
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Peacemaker"):WaitForChild("Remotes"):WaitForChild("HitGun"):FireServer(unpack(args))local args = {
+    [1] = Target
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Peacemaker"):WaitForChild("Remotes"):WaitForChild("HitGun"):FireServer(unpack(args))local args = {
+    [1] = Target
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Peacemaker"):WaitForChild("Remotes"):WaitForChild("HitGun"):FireServer(unpack(args))local args = {
+    [1] = Target
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Peacemaker"):WaitForChild("Remotes"):WaitForChild("HitGun"):FireServer(unpack(args))local args = {
+    [1] = Target
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Peacemaker"):WaitForChild("Remotes"):WaitForChild("HitGun"):FireServer(unpack(args))local args = {
+    [1] = Target
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Peacemaker"):WaitForChild("Remotes"):WaitForChild("HitGun"):FireServer(unpack(args))local args = {
+    [1] = Target
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Peacemaker"):WaitForChild("Remotes"):WaitForChild("HitGun"):FireServer(unpack(args))local args = {
+    [1] = Target
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Peacemaker"):WaitForChild("Remotes"):WaitForChild("HitGun"):FireServer(unpack(args))local args = {
+    [1] = Target
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Peacemaker"):WaitForChild("Remotes"):WaitForChild("HitGun"):FireServer(unpack(args))local args = {
+    [1] = Target
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Peacemaker"):WaitForChild("Remotes"):WaitForChild("HitGun"):FireServer(unpack(args))local args = {
+    [1] = Target
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Peacemaker"):WaitForChild("Remotes"):WaitForChild("HitGun"):FireServer(unpack(args))local args = {
+    [1] = Target
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Peacemaker"):WaitForChild("Remotes"):WaitForChild("HitGun"):FireServer(unpack(args))local args = {
+    [1] = Target
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Peacemaker"):WaitForChild("Remotes"):WaitForChild("HitGun"):FireServer(unpack(args))local args = {
+    [1] = Target
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Peacemaker"):WaitForChild("Remotes"):WaitForChild("HitGun"):FireServer(unpack(args))local args = {
+    [1] = Target
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Peacemaker"):WaitForChild("Remotes"):WaitForChild("HitGun"):FireServer(unpack(args))local args = {
+    [1] = Target
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Peacemaker"):WaitForChild("Remotes"):WaitForChild("HitGun"):FireServer(unpack(args))
+   local args = {
+    [1] = Target
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Peacemaker"):WaitForChild("Remotes"):WaitForChild("HitGun"):FireServer(unpack(args))local args = {
+    [1] = Target
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Peacemaker"):WaitForChild("Remotes"):WaitForChild("HitGun"):FireServer(unpack(args))local args = {
+    [1] = Target
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Peacemaker"):WaitForChild("Remotes"):WaitForChild("HitGun"):FireServer(unpack(args))local args = {
+    [1] = Target
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Peacemaker"):WaitForChild("Remotes"):WaitForChild("HitGun"):FireServer(unpack(args))local args = {
+    [1] = Target
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Peacemaker"):WaitForChild("Remotes"):WaitForChild("HitGun"):FireServer(unpack(args))local args = {
+    [1] = Target
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Peacemaker"):WaitForChild("Remotes"):WaitForChild("HitGun"):FireServer(unpack(args))local args = {
+    [1] = Target
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Peacemaker"):WaitForChild("Remotes"):WaitForChild("HitGun"):FireServer(unpack(args))local args = {
+    [1] = Target
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Peacemaker"):WaitForChild("Remotes"):WaitForChild("HitGun"):FireServer(unpack(args))local args = {
+    [1] = Target
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Peacemaker"):WaitForChild("Remotes"):WaitForChild("HitGun"):FireServer(unpack(args))
+            end
+        end
+end   
+
+end)
+
+local BennettSection = Bennett:NewSection("Eleven")
+
+BennettSection:NewButton("Force Counter All", "ButtonInfo", function()
+    print("Clicked")
+    local Plr = game.Players.LocalPlayer
+    for i, Player in pairs (game.Players:GetPlayers()) do
+
+        if Player.Character ~= nil and Player ~= Plr then
+            local mag = (Player.Character.UpperTorso.Position - Plr.Character.UpperTorso.Position).magnitude
+            if mag < 100000 then
+                local Target = Player.Character or Player.CharacterAdded:Wait()
+-- Script generated by Nut The Menace Spy - credits to Claudev0#8849
+
+local args = {
+    [1] = Target
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+   local args = {
+    [1] = Target
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+  local args = {
+    [1] = Target
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+  local args = {
+    [1] = Target
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+  local args = {
+    [1] = Target
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+  local args = {
+    [1] = Target
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+  local args = {
+    [1] = Target
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+  local args = {
+    [1] = Target
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+  local args = {
+    [1] = Target
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+  local args = {
+    [1] = Target
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+  local args = {
+    [1] = Target
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+  local args = {
+    [1] = Target
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+  local args = {
+    [1] = Target
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+  local args = {
+    [1] = Target
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+  local args = {
+    [1] = Target
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+  local args = {
+    [1] = Target
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+  local args = {
+    [1] = Target
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+  local args = {
+    [1] = Target
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+  local args = {
+    [1] = Target
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+  local args = {
+    [1] = Target
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+  local args = {
+    [1] = Target
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+  local args = {
+    [1] = Target
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+  local args = {
+    [1] = Target
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+  local args = {
+    [1] = Target
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+  local args = {
+    [1] = Target
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+  local args = {
+    [1] = Target
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+  local args = {
+    [1] = Target
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+  local args = {
+    [1] = Target
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+  local args = {
+    [1] = Target
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+  local args = {
+    [1] = Target
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+  local args = {
+    [1] = Target
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+  local args = {
+    [1] = Target
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+  local args = {
+    [1] = Target
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+  local args = {
+    [1] = Target
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+  local args = {
+    [1] = Target
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+  local args = {
+    [1] = Target
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+  local args = {
+    [1] = Target
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+  
+            end
+        end
+end   
+
+end)
+
+local BennettSection = Bennett:NewSection("Mr Fantastic")
+
+BennettSection:NewButton("Scretch Punch All", "ButtonInfo", function()
+    print("Clicked")
+    local Plr = game.Players.LocalPlayer
+    for i, Player in pairs (game.Players:GetPlayers()) do
+
+        if Player.Character ~= nil and Player ~= Plr then
+            local mag = (Player.Character.UpperTorso.Position - Plr.Character.UpperTorso.Position).magnitude
+            if mag < 100000 then
+                local Target = Player.Character or Player.CharacterAdded:Wait()
+-- Script generated by Nut The Menace Spy - credits to Claudev0#8849
+
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("ComboEndRemote"):FireServer(unpack(args))
+
+        end
+        end
+end   
+
+end)
+
+
+local BennettSection = Bennett:NewSection("Vecna")
+
+BennettSection:NewButton("Head Pull All", "ButtonInfo", function()
+    print("Clicked")
+    local Plr = game.Players.LocalPlayer
+    for i, Player in pairs (game.Players:GetPlayers()) do
+
+        if Player.Character ~= nil and Player ~= Plr then
+            local mag = (Player.Character.UpperTorso.Position - Plr.Character.UpperTorso.Position).magnitude
+            if mag < 100000 then
+                local Target = Player.Character or Player.CharacterAdded:Wait()
+-- Script generated by Nut The Menace Spy - credits to Claudev0#8849
+
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Creel"):WaitForChild("Remotes"):WaitForChild("VinePull"):FireServer(unpack(args))
+ local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Creel"):WaitForChild("Remotes"):WaitForChild("VinePull"):FireServer(unpack(args))
+ local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Creel"):WaitForChild("Remotes"):WaitForChild("VinePull"):FireServer(unpack(args))
+ local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Creel"):WaitForChild("Remotes"):WaitForChild("VinePull"):FireServer(unpack(args))
+ local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Creel"):WaitForChild("Remotes"):WaitForChild("VinePull"):FireServer(unpack(args))
+ local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Creel"):WaitForChild("Remotes"):WaitForChild("VinePull"):FireServer(unpack(args))
+ local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Creel"):WaitForChild("Remotes"):WaitForChild("VinePull"):FireServer(unpack(args))
+ local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Creel"):WaitForChild("Remotes"):WaitForChild("VinePull"):FireServer(unpack(args))
+ local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Creel"):WaitForChild("Remotes"):WaitForChild("VinePull"):FireServer(unpack(args))
+ local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Creel"):WaitForChild("Remotes"):WaitForChild("VinePull"):FireServer(unpack(args))
+ local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Creel"):WaitForChild("Remotes"):WaitForChild("VinePull"):FireServer(unpack(args))
+ local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Creel"):WaitForChild("Remotes"):WaitForChild("VinePull"):FireServer(unpack(args))
+ local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Creel"):WaitForChild("Remotes"):WaitForChild("VinePull"):FireServer(unpack(args))
+ local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Creel"):WaitForChild("Remotes"):WaitForChild("VinePull"):FireServer(unpack(args))
+ local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Creel"):WaitForChild("Remotes"):WaitForChild("VinePull"):FireServer(unpack(args))
+ local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Creel"):WaitForChild("Remotes"):WaitForChild("VinePull"):FireServer(unpack(args))
+ local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Creel"):WaitForChild("Remotes"):WaitForChild("VinePull"):FireServer(unpack(args))
+ local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Creel"):WaitForChild("Remotes"):WaitForChild("VinePull"):FireServer(unpack(args))
+ local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Creel"):WaitForChild("Remotes"):WaitForChild("VinePull"):FireServer(unpack(args))
+ local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Creel"):WaitForChild("Remotes"):WaitForChild("VinePull"):FireServer(unpack(args))
+ local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Creel"):WaitForChild("Remotes"):WaitForChild("VinePull"):FireServer(unpack(args))
+ local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Creel"):WaitForChild("Remotes"):WaitForChild("VinePull"):FireServer(unpack(args))
+ local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Creel"):WaitForChild("Remotes"):WaitForChild("VinePull"):FireServer(unpack(args))
+ local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Creel"):WaitForChild("Remotes"):WaitForChild("VinePull"):FireServer(unpack(args))
+ local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Creel"):WaitForChild("Remotes"):WaitForChild("VinePull"):FireServer(unpack(args))
+ local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Creel"):WaitForChild("Remotes"):WaitForChild("VinePull"):FireServer(unpack(args))
+ local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Creel"):WaitForChild("Remotes"):WaitForChild("VinePull"):FireServer(unpack(args))
+ local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Creel"):WaitForChild("Remotes"):WaitForChild("VinePull"):FireServer(unpack(args))
+ local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Creel"):WaitForChild("Remotes"):WaitForChild("VinePull"):FireServer(unpack(args))
+ local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Creel"):WaitForChild("Remotes"):WaitForChild("VinePull"):FireServer(unpack(args))
+ local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Creel"):WaitForChild("Remotes"):WaitForChild("VinePull"):FireServer(unpack(args))
+ local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Creel"):WaitForChild("Remotes"):WaitForChild("VinePull"):FireServer(unpack(args))
+ local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Creel"):WaitForChild("Remotes"):WaitForChild("VinePull"):FireServer(unpack(args))
+ local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Creel"):WaitForChild("Remotes"):WaitForChild("VinePull"):FireServer(unpack(args))
+ local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Creel"):WaitForChild("Remotes"):WaitForChild("VinePull"):FireServer(unpack(args))
+ local args = {
+    [1] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Creel"):WaitForChild("Remotes"):WaitForChild("VinePull"):FireServer(unpack(args))
+ 
+        end
+        end
+end   
+
+end)
+
+local Main = Window:NewTab("Admin")
+local MainSection = Main:NewSection("")
+MainSection:NewButton("Infinite Yield", "", function()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Omg562/Scripts/main/INF'),true))()
+end)
+
+local Tab = Window:NewTab("Credits")
+local SettingsSection = Tab:NewSection("discord: bennettscripts")
+
+local SettingsSection = Tab:NewSection("Toggle UI")
+SettingsSection:NewKeybind("Toggle UI", "Toggle UI", Enum.KeyCode.M, function()
+    Library:ToggleUI()
+end)
