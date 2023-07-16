@@ -547,6 +547,26 @@ game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("838Eve
 
 end)
 
+MainSection:NewButton("Shield", " ", function()
+
+local args = {
+    [1] = "Shield",
+    [2] = "Begin"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("838Event"):FireServer(unpack(args))
+end)
+
+MainSection:NewButton("Unshield", " ", function()
+
+local args = {
+    [1] = "Shield",
+    [2] = "End"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("838Event"):FireServer(unpack(args))
+
+end)
 
 
 
