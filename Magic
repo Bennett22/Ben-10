@@ -5701,6 +5701,45 @@ local args = {
 game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("Purchase"):FireServer(unpack(args))
     print("Clicked")
 end)
+BennettSection:NewButton("Get Banana Beat Box", "", function()
+local args = {
+    [1] = "Banana Beat Box",
+    [2] = game:GetService("Players").LocalPlayer:WaitForChild("Cost")
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("Purchase"):FireServer(unpack(args))
+    print("Clicked")
+end)
+BennettSection:NewButton("Get Grape Juice", "", function()
+local args = {
+    [1] = "Grape Juice",
+    [2] = game:GetService("Players").LocalPlayer:WaitForChild("Cost")
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("Purchase"):FireServer(unpack(args))
+    print("Clicked")
+end)
+BennettSection:NewButton("Get Lime Juice", "", function()
+local args = {
+    [1] = "Lime Juice",
+    [2] = game:GetService("Players").LocalPlayer:WaitForChild("Cost")
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("Purchase"):FireServer(unpack(args))
+
+    print("Clicked")
+end)
+BennettSection:NewButton("Get Strawberry Blast", "", function()
+local args = {
+    [1] = "Strawberry Blast",
+    [2] = game:GetService("Players").LocalPlayer:WaitForChild("Cost")
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("Purchase"):FireServer(unpack(args))
+
+
+    print("Clicked")
+end)
 BennettSection:NewButton("Infinite Yield", "", function()
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/Omg562/Scripts/main/INF'),true))()
 end)
