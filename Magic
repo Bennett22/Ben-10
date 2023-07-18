@@ -5626,8 +5626,81 @@ game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Sirena
 end   
 end)
 
-local Bennett = Window:NewTab("Admin")
+local Bennett = Window:NewTab("Teleports")
+local BennettSection = Bennett:NewSection("Teleports")
+
+BennettSection:NewButton("ClassRoom", "", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(958.225586, 41.0479698, 717.645935, -0.300186634, -4.08062206e-08, 0.953880489, 2.62396149e-08, 1, 5.10367961e-08, -0.953880489, 4.03500202e-08, -0.300186634)
+    print("Clicked")
+end)
+BennettSection:NewButton("Riki's Cafe", "", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(370.281433, -7.45908594, 1151.98376, 0.0657995194, -9.93462805e-08, 0.997832835, -9.8253734e-09, 1, 1.00209952e-07, -0.997832835, -1.63978466e-08, 0.0657995194)
+    print("Clicked")
+end)
+BennettSection:NewButton("Ocean Cafe", "", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(79.5227356, 5.96920824, -191.757278, -0.997953773, -1.36228495e-08, 0.0639397502, -1.41160159e-08, 1, -7.26124272e-09, -0.0639397502, -8.14895884e-09, -0.997953773)
+    print("Clicked")
+end)
+BennettSection:NewButton("The Docks", "", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(235.758392, -13.3186436, 435.064423, 0.00570710422, -1.96286649e-08, 0.999983728, -4.83443081e-08, 1, 1.99048955e-08, -0.999983728, -4.8457121e-08, 0.00570710422)
+    print("Clicked")
+end)
+BennettSection:NewButton("Mako island", "", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1371.52075, -13.1332455, 342.447144, 0.0913789198, 1.07287939e-07, 0.995816171, -2.94189118e-08, 1, -1.05039128e-07, -0.995816171, -1.96974668e-08, 0.0913789198)
+    print("Clicked")
+end)
+BennettSection:NewButton("Moon Pool", "", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1748.62854, -15.2851677, 626.374878, -0.399805248, -3.08804502e-08, -0.916600108, -1.0076243e-08, 1, -2.92951245e-08, 0.916600108, -2.47645904e-09, -0.399805248)
+    print("Clicked")
+end)
+BennettSection:NewButton("Irish Moon Pool", "", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-481.072113, 12.6639118, -990.762268, 0.118983917, -9.27987074e-08, -0.992896199, -2.20004956e-08, 1, -9.60990789e-08, 0.992896199, 3.32784538e-08, 0.118983917)
+    print("Clicked")
+end)
+BennettSection:NewButton("Mermans Cave", "", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1733.35181, 21.2365894, -13.7410555, 0.413919389, -3.06951513e-08, 0.910313547, -1.45431311e-09, 1, 3.43805944e-08, -0.910313547, -1.55546758e-08, 0.413919389)
+    print("Clicked")
+end)
+BennettSection:NewButton("Mermans Cave Outside", "", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1767.89307, 21.4386387, -89.6060028, 0.890827954, 3.95015896e-08, -0.454340786, -1.81315229e-08, 1, 5.13920853e-08, 0.454340786, -3.75436144e-08, 0.890827954)
+    print("Clicked")
+end)
+BennettSection:NewButton("School", "", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(860.804382, 41.0479622, 807.33667, -0.324185848, 5.19318633e-08, 0.945993423, -8.08835721e-10, 1, -5.51738282e-08, -0.945993423, -1.86517273e-08, -0.324185848)
+    print("Clicked")
+end)
+
+local Bennett = Window:NewTab("Misc")
 local BennettSection = Bennett:NewSection("")
+BennettSection:NewButton("Get Flash light", "", function()
+local args = {
+    [1] = "Flash Light",
+    [2] = workspace:WaitForChild("ShopItems"):WaitForChild("Flash Light"):WaitForChild("ProximityPrompt"):WaitForChild("Cost")
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("Purchase"):FireServer(unpack(args))
+    print("Clicked")
+end)
+
+BennettSection:NewButton("Get Pink goo", "", function()
+local args = {
+    [1] = "Pink Goo",
+    [2] = workspace:WaitForChild("ShopItems"):WaitForChild("Pink Goo"):WaitForChild("ProximityPrompt"):WaitForChild("Cost")
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("Purchase"):FireServer(unpack(args))
+    print("Clicked")
+end)
+
+BennettSection:NewButton("Get 50 Moons Potion", "", function()
+local args = {
+    [1] = "50 Moons Potion",
+    [2] = workspace:WaitForChild("ShopItems"):WaitForChild("50 Moons Potion"):WaitForChild("ProximityPrompt"):WaitForChild("Cost")
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("Purchase"):FireServer(unpack(args))
+    print("Clicked")
+end)
 BennettSection:NewButton("Infinite Yield", "", function()
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/Omg562/Scripts/main/INF'),true))()
 end)
