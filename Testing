@@ -1113,7 +1113,7 @@ end)
 
 game.StarterGui:SetCore("SendNotification", { 
     Title = "⛤ Bennett Scripts ⛤";
-    Text = "Marvel United";
+    Text = "Marvel United: Testing";
     Icon = "rbxthumb://type=Asset&id=14067496704&w=150&h=150";
     Duration = "2";
     Button1 = "Close";
