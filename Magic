@@ -5751,3 +5751,13 @@ local SettingsSection = Tab:NewSection("Toggle UI")
 SettingsSection:NewKeybind("Toggle UI", "Toggle UI", Enum.KeyCode.M, function()
     Library:ToggleUI()
 end)
+
+wait(1)
+
+game.StarterGui:SetCore("SendNotification", { 
+    Title = "⛤ Bennett Scripts ⛤";
+    Text = "H2O: Mako Magic";
+    Icon = "rbxthumb://type=Asset&id=14067496704&w=150&h=150";
+    Duration = "2";
+    Button1 = "Close";
+})
