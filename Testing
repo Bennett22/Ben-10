@@ -1110,7 +1110,7 @@ local SettingsSection = Tab:NewSection("Toggle UI")
 SettingsSection:NewKeybind("Toggle UI", "Toggle UI", Enum.KeyCode.M, function()
     Library:ToggleUI()
 end)
-
+wait(1)
 game.StarterGui:SetCore("SendNotification", { 
     Title = "⛤ Bennett Scripts ⛤";
     Text = "Marvel United: Testing";
