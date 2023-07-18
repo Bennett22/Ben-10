@@ -2160,12 +2160,11 @@ BennettSection:NewToggle("Earth Spikes", "Keybind (L)", function()
         if mouse.Target then
         if clicktpon then
 
-
 local args = {
     [1] = game:GetService("Players").LocalPlayer
 }
 
-game:GetService("ReplicatedStorage").Characters.Gigachad.Remotes.Lunge:FireServer(unpack(args))
+game:GetService("ReplicatedStorage").Characters.Thanos.Remotes.EarthSpikes:FireServer(unpack(args))
 
 end
 end
@@ -2191,7 +2190,7 @@ local args = {
     [1] = game:GetService("Players").LocalPlayer
 }
 
-game:GetService("ReplicatedStorage").Characters.Thanos.Remotes.EarthSpikes:FireServer(unpack(args))
+game:GetService("ReplicatedStorage").Characters.Gigachad.Remotes.Lunge:FireServer(unpack(args))
 
 end
 end
