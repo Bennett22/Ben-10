@@ -5745,3 +5745,11 @@ local SettingsSection = Tab:NewSection("Toggle UI")
 SettingsSection:NewKeybind("Toggle UI", "Toggle UI", Enum.KeyCode.M, function()
     Library:ToggleUI()
 end)
+
+game.StarterGui:SetCore("SendNotification", { 
+    Title = "⛤ Bennett Scripts ⛤";
+    Text = "Crossover Legends: Reborn";
+    Icon = "rbxthumb://type=Asset&id=14067496704&w=150&h=150";
+    Duration = "2";
+    Button1 = "Close";
+})
