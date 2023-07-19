@@ -1240,7 +1240,7 @@ local args = {
 game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("WiccanEvent"):FireServer(unpack(args))
 
 end)
-    local Main = Window:NewTab("All")
+    local Main = Window:NewTab("Affect All")
 local MainSection = Main:NewSection("Agatha Harkness")
 
 MainSection:NewButton("Siphon All", "ButtonInfo", function()
