@@ -1165,6 +1165,81 @@ game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("ChildE
 
 end)
 
+MainSection:NewButton("Shield", " ", function()
+
+local args = {
+    [1] = "Shield",
+    [2] = "Begin"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("ChildEvent"):FireServer(unpack(args))
+
+end)
+
+MainSection:NewButton("Unshield", " ", function()
+
+local args = {
+    [1] = "Shield",
+    [2] = "End"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("ChildEvent"):FireServer(unpack(args))
+
+end)
+
+local MainSection = Main:NewSection("Wiccan")
+
+MainSection:NewButton("Outburst", " ", function()
+
+local args = {
+    [1] = "Burst"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("WiccanEvent"):FireServer(unpack(args))
+
+end)
+
+MainSection:NewButton("More", " ", function()
+
+local args = {
+    [1] = "More"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("WiccanEvent"):FireServer(unpack(args))
+
+end)
+
+MainSection:NewButton("Cloning", " ", function()
+
+local args = {
+    [1] = "Cloning"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("WiccanEvent"):FireServer(unpack(args))
+
+end)
+
+MainSection:NewButton("Shield", " ", function()
+
+local args = {
+    [1] = "Shield",
+    [2] = "Begin"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("WiccanEvent"):FireServer(unpack(args))
+
+end)
+
+MainSection:NewButton("Unshield", " ", function()
+
+local args = {
+    [1] = "Shield",
+    [2] = "End"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("WiccanEvent"):FireServer(unpack(args))
+
+end)
     local Main = Window:NewTab("All")
 local MainSection = Main:NewSection("Agatha Harkness")
 
