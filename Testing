@@ -913,14 +913,14 @@ end)
 
 local MainSection = Main:NewSection("Dark Phoenix")
 
-MainSection:NewToggle("Bolt", "Keybind (V)", function()
+MainSection:NewToggle("Bolt", "Keybind (P)", function()
 
     clicktpon = true               
         plr = game.Players.LocalPlayer
         hum = plr.Character.HumanoidRootPart
         mouse = plr:GetMouse()
         mouse.KeyDown:connect(function(key)
-        if key == 'v' then
+        if key == 'p' then
         if mouse.Target then
         if clicktpon then
 
@@ -940,7 +940,7 @@ end)
 end)
 
 
-MainSection:NewToggle("Drain", "Keybind (B)", function()
+MainSection:NewToggle("Drain", "Keybind (J)", function()
     print("You just clicked the bind")
 
     local function getPlayer()
@@ -979,7 +979,7 @@ MainSection:NewToggle("Drain", "Keybind (B)", function()
     end
 
     game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
-        if key == "b" then
+        if key == "j" then
             local player = getPlayer()
             if player then
 	    
@@ -995,7 +995,7 @@ game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("DarkPh
     end)
 end)
 
-MainSection:NewToggle("Disintegration", "Keybind (N)", function()
+MainSection:NewToggle("Disintegration", "Keybind (K)", function()
     print("You just clicked the bind")
 
     local function getPlayer()
@@ -1034,7 +1034,7 @@ MainSection:NewToggle("Disintegration", "Keybind (N)", function()
     end
 
     game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
-        if key == "n" then
+        if key == "k" then
             local player = getPlayer()
             if player then
 	    
@@ -1050,14 +1050,14 @@ game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("DarkPh
     end)
 end)
 
-MainSection:NewToggle("Meteors", "Keybind (M)", function()
+MainSection:NewToggle("Meteors", "Keybind (L)", function()
 
     clicktpon = true               
         plr = game.Players.LocalPlayer
         hum = plr.Character.HumanoidRootPart
         mouse = plr:GetMouse()
         mouse.KeyDown:connect(function(key)
-        if key == 'm' then
+        if key == 'l' then
         if mouse.Target then
         if clicktpon then
 
@@ -1119,14 +1119,14 @@ end)
 
 local MainSection = Main:NewSection("Child")
 
-MainSection:NewToggle("Bolts", "Keybind (G)", function()
+MainSection:NewToggle("Bolt", "Keybind (;)", function()
 
     clicktpon = true                 --- to turn off key function make this false and execute
         plr = game.Players.LocalPlayer
         hum = plr.Character.HumanoidRootPart
         mouse = plr:GetMouse()
         mouse.KeyDown:connect(function(key)
-        if key == 'g' then
+        if key == ';' then
         if mouse.Target then
         if clicktpon then
 
@@ -1144,6 +1144,70 @@ end
 end)
 end)
 
+MainSection:NewToggle("Headache", "Keybind (M)", function()
+    print("You just clicked the bind")
+
+    local function getPlayer()
+        local userInput = game:GetService("UserInputService")
+        local cam = workspace.CurrentCamera
+        local mousePos = userInput:GetMouseLocation()
+        local mouseRay = cam:ViewportPointToRay(mousePos.X, mousePos.Y)
+        players = {}
+        for _, x in next, game:GetService('Players'):GetPlayers() do
+            players[#players + 1] = x.Character
+        end
+        local raycastParams = RaycastParams.new()
+        raycastParams.FilterType = Enum.RaycastFilterType.Whitelist
+        raycastParams.FilterDescendantsInstances = players
+        raycastParams.IgnoreWater = true
+        local raycastResult = workspace:Raycast(mouseRay.Origin, mouseRay.Direction * 1000, raycastParams)
+        if raycastResult then
+            for _, x in next, game:GetService('Players'):GetPlayers() do
+                if not raycastResult.Instance:IsDescendantOf(x.Character) then
+                    continue
+                end
+                return x
+            end
+        end
+        return false
+    end
+
+    local function Set(list)
+        local set = {}
+        for _, l in ipairs(list) do
+            if l then
+                set[l] = true
+            end
+        end
+        return set
+    end
+
+    game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
+        if key == "m" then
+            local player = getPlayer()
+            if player then
+	    
+local args = {
+    [1] = "HeadSnap",
+    [2] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("ChildEvent"):FireServer(unpack(args))
+
+            end
+        end
+    end)
+end)
+
+MainSection:NewButton("Chaotic Explosion", " ", function()
+
+local args = {
+    [1] = "Confractus"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("ChildEvent"):FireServer(unpack(args))
+
+end)
 
 MainSection:NewButton("Heal", " ", function()
 
