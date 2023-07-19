@@ -1085,6 +1085,16 @@ game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("DarkPh
 
 end)
 
+MainSection:NewButton("Ultimate", " ", function()
+
+local args = {
+    [1] = "Ultimate"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("DarkPhoenixEvent"):FireServer(unpack(args))
+
+end)
+
 MainSection:NewButton("Shield", " ", function()
 
 local args = {
