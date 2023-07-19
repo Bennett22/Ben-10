@@ -1216,7 +1216,7 @@ MainSection:NewToggle("Bolt", "Keybind (;)", function()
 
 local args = {
     [1] = "Bolt",
-    [2] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 5, mouse.Hit.z)
+    [2] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 1.5, mouse.Hit.z)
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("ChildEvent"):FireServer(unpack(args))
