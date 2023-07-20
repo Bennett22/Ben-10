@@ -4735,7 +4735,7 @@ BennettSection:NewToggle("Aerokinetic Blast", "Keybind (Z)", function()
 local args = {
     [1] = "Blast",
     [2] = "Aerokinetic Blast",
-    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+    [3] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Exon"):FireServer(unpack(args))
@@ -4928,7 +4928,7 @@ BennettSection:NewToggle("Beam", "Keybind (C)", function()
 local args = {
     [1] = "Beam",
     [2] = "Beam",
-    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+    [3] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Exon"):FireServer(unpack(args))
@@ -4995,6 +4995,8 @@ game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForCh
         end
         end)
         end)
+
+
 
        BennettSection:NewButton("Cloaking", " ", function()
 
@@ -5088,6 +5090,102 @@ game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Cleo")
 
 end)
 
+BennettSection:NewToggle("Mass Aerokinesis", "Keybind (N)", function()
+
+    clicktpon = true                
+        plr = game.Players.LocalPlayer
+        hum = plr.Character.HumanoidRootPart
+        mouse = plr:GetMouse()
+        mouse.KeyDown:connect(function(key)
+        if key == 'n' then
+        if mouse.Target then
+        if clicktpon then
+
+local args = {
+    [1] = "Air",
+    [2] = "Mass Aerokinesisw",
+    [3] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Exon"):FireServer(unpack(args))
+
+end
+end
+end
+end)
+end)
+
+BennettSection:NewButton("Trident Shield On", " ", function()
+
+local args = {
+    [1] = "Shield",
+    [2] = "Trident Shield",
+    [4] = Vector3.new(341.7242736816406, -17.799102783203125, 980.750244140625),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Cleo"):FireServer(unpack(args))
+
+end)
+
+BennettSection:NewButton("Trident Shield Off", " ", function()
+
+local args = {
+    [1] = "Shield",
+    [2] = "Trident Shield",
+    [4] = Vector3.new(341.7242736816406, -17.799102783203125, 980.750244140625),
+    [5] = "Release"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Cleo"):FireServer(unpack(args))
+
+end)
+
+BennettSection:NewToggle("Lightning Strikes", "Keybind (M)", function()
+
+    clicktpon = true                
+        plr = game.Players.LocalPlayer
+        hum = plr.Character.HumanoidRootPart
+        mouse = plr:GetMouse()
+        mouse.KeyDown:connect(function(key)
+        if key == 'm' then
+        if mouse.Target then
+        if clicktpon then
+
+local args = {
+    [1] = "AdvLightning",
+    [2] = "Lightning Strikes",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args))
+
+end
+end
+end
+end)
+end)
+
+BennettSection:NewButton("Transform Into Mermaid", " ", function()
+
+local args = {
+    [1] = "Water"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("Transform"):FireServer(unpack(args))
+
+end)
+
+
+BennettSection:NewButton("Detransform", " ", function()
+
+local args = {
+    [1] = "Human"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("UnTransform"):FireServer(unpack(args))
+
+end)
 
 local Bennett = Window:NewTab("Affect All")
 
