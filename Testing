@@ -42,6 +42,30 @@ end
 end)
 end)
 
+MainSection:NewTextBox("Siphon", "", function(txt)
+    local Players = game:GetService("Players")
+    local msg = txt
+    local function findPlayer(stringg)
+        for _, v in pairs(Players:GetPlayers()) do
+            if stringg:lower() == (v.Name:lower()):sub(1, #stringg) then
+                return v
+            end
+        end
+    end
+
+    local player = findPlayer(msg)
+    local CHAR = player.Character
+
+	    
+local args = {
+    [1] = "Siphon",
+    [2] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("AgathaEvent"):FireServer(unpack(args))
+
+end)
+
 MainSection:NewToggle("Siphon", "Keybind (2)", function()
     print("You just clicked the bind")
 
@@ -217,6 +241,32 @@ end
 end
 end)
 end)
+
+MainSection:NewTextBox("Erease", "", function(txt)
+    local Players = game:GetService("Players")
+    local msg = txt
+    local function findPlayer(stringg)
+        for _, v in pairs(Players:GetPlayers()) do
+            if stringg:lower() == (v.Name:lower()):sub(1, #stringg) then
+                return v
+            end
+        end
+    end
+
+    local player = findPlayer(msg)
+    local CHAR = player.Character
+
+	    
+local args = {
+    [1] = "Erase",
+    [2] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("WVEvent"):FireServer(unpack(args))
+
+end)
+
+
 
 MainSection:NewToggle("Erease", "Keybind (4)", function()
     print("You just clicked the bind")
@@ -415,6 +465,31 @@ end
 end)
 end)
 
+MainSection:NewTextBox("Mental Pain", "", function(txt)
+    local Players = game:GetService("Players")
+    local msg = txt
+    local function findPlayer(stringg)
+        for _, v in pairs(Players:GetPlayers()) do
+            if stringg:lower() == (v.Name:lower()):sub(1, #stringg) then
+                return v
+            end
+        end
+    end
+
+    local player = findPlayer(msg)
+    local CHAR = player.Character
+
+	    
+local args = {
+    [1] = "MentalPain",
+    [2] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("838Event"):FireServer(unpack(args))
+
+end)
+
+
 MainSection:NewToggle("Mental Pain", "Keybind (8)", function()
     print("You just clicked the bind")
 
@@ -469,6 +544,31 @@ game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("838Eve
         end
     end)
 end)
+
+MainSection:NewTextBox("Neck Snap", "", function(txt)
+    local Players = game:GetService("Players")
+    local msg = txt
+    local function findPlayer(stringg)
+        for _, v in pairs(Players:GetPlayers()) do
+            if stringg:lower() == (v.Name:lower()):sub(1, #stringg) then
+                return v
+            end
+        end
+    end
+
+    local player = findPlayer(msg)
+    local CHAR = player.Character
+
+	    
+local args = {
+    [1] = "NeckSnap",
+    [2] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("838Event"):FireServer(unpack(args))
+
+end)
+
 
 MainSection:NewToggle("Neck Snap", "Keybind (9)", function()
     print("You just clicked the bind")
@@ -622,6 +722,30 @@ end)
 
 
 local MainSection = Main:NewSection("Speed")
+
+MainSection:NewTextBox("Molecular Acceleration", "", function(txt)
+    local Players = game:GetService("Players")
+    local msg = txt
+    local function findPlayer(stringg)
+        for _, v in pairs(Players:GetPlayers()) do
+            if stringg:lower() == (v.Name:lower()):sub(1, #stringg) then
+                return v
+            end
+        end
+    end
+
+    local player = findPlayer(msg)
+    local CHAR = player.Character
+
+local args = {
+    [1] = "Molecular Acceleration",
+    [2] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("SpeedEvent"):FireServer(unpack(args))
+
+end)
+
 
 MainSection:NewToggle("Molecular Acceleration", "Keybind ([)", function()
     print("You just clicked the bind")
@@ -780,6 +904,29 @@ end)
 
 local MainSection = Main:NewSection("Ice Queen")
 
+MainSection:NewTextBox("Drain", "", function(txt)
+    local Players = game:GetService("Players")
+    local msg = txt
+    local function findPlayer(stringg)
+        for _, v in pairs(Players:GetPlayers()) do
+            if stringg:lower() == (v.Name:lower()):sub(1, #stringg) then
+                return v
+            end
+        end
+    end
+
+    local player = findPlayer(msg)
+    local CHAR = player.Character
+
+local args = {
+    [1] = "Drain",
+    [2] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("IceQueenEvent"):FireServer(unpack(args))
+
+end)
+
 MainSection:NewToggle("Drain", "Keybind (-)", function()
     print("You just clicked the bind")
 
@@ -835,6 +982,27 @@ game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("IceQue
     end)
 end)
 
+MainSection:NewTextBox("Freeze", "", function(txt)
+    local Players = game:GetService("Players")
+    local msg = txt
+    local function findPlayer(stringg)
+        for _, v in pairs(Players:GetPlayers()) do
+            if stringg:lower() == (v.Name:lower()):sub(1, #stringg) then
+                return v
+            end
+        end
+    end
+
+    local player = findPlayer(msg)
+    local CHAR = player.Character
+
+local args = {
+    [1] = "Freeze",
+    [2] = player.Character
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("IceQueenEvent"):FireServer(unpack(args))
+
+end)
 
 MainSection:NewToggle("Freeze", "Keybind (=)", function()
     print("You just clicked the bind")
@@ -1012,6 +1180,29 @@ end
 end)
 end)
 
+MainSection:NewTextBox("Drain", "", function(txt)
+    local Players = game:GetService("Players")
+    local msg = txt
+    local function findPlayer(stringg)
+        for _, v in pairs(Players:GetPlayers()) do
+            if stringg:lower() == (v.Name:lower()):sub(1, #stringg) then
+                return v
+            end
+        end
+    end
+
+    local player = findPlayer(msg)
+    local CHAR = player.Character
+
+local args = {
+    [1] = "Siphon",
+    [2] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("DarkPhoenixEvent"):FireServer(unpack(args))
+
+end)
+
 
 MainSection:NewToggle("Drain", "Keybind (J)", function()
     print("You just clicked the bind")
@@ -1067,6 +1258,30 @@ game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("DarkPh
         end
     end)
 end)
+
+MainSection:NewTextBox("Disintegration", "", function(txt)
+    local Players = game:GetService("Players")
+    local msg = txt
+    local function findPlayer(stringg)
+        for _, v in pairs(Players:GetPlayers()) do
+            if stringg:lower() == (v.Name:lower()):sub(1, #stringg) then
+                return v
+            end
+        end
+    end
+
+    local player = findPlayer(msg)
+    local CHAR = player.Character
+
+local args = {
+    [1] = "Disintegration",
+    [2] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("DarkPhoenixEvent"):FireServer(unpack(args))
+
+end)
+
 
 MainSection:NewToggle("Disintegration", "Keybind (K)", function()
     print("You just clicked the bind")
@@ -1227,6 +1442,29 @@ end
 end)
 end)
 
+MainSection:NewTextBox("Headache", "", function(txt)
+    local Players = game:GetService("Players")
+    local msg = txt
+    local function findPlayer(stringg)
+        for _, v in pairs(Players:GetPlayers()) do
+            if stringg:lower() == (v.Name:lower()):sub(1, #stringg) then
+                return v
+            end
+        end
+    end
+
+    local player = findPlayer(msg)
+    local CHAR = player.Character
+
+local args = {
+    [1] = "HeadSnap",
+    [2] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("ChildEvent"):FireServer(unpack(args))
+
+end)
+
 MainSection:NewToggle("Headache", "Keybind (M)", function()
     print("You just clicked the bind")
 
@@ -1345,6 +1583,136 @@ game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("ChildE
 end)
 
 local MainSection = Main:NewSection("Wiccan")
+
+MainSection:NewTextBox("Kick from reality", "", function(txt)
+    local Players = game:GetService("Players")
+    local msg = txt
+    local function findPlayer(stringg)
+        for _, v in pairs(Players:GetPlayers()) do
+            if stringg:lower() == (v.Name:lower()):sub(1, #stringg) then
+                return v
+            end
+        end
+    end
+
+    local player = findPlayer(msg)
+    local CHAR = player.Character
+
+local args = {
+    [1] = "Delete",
+    [2] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("WiccanEvent"):FireServer(unpack(args))
+
+end)
+
+
+MainSection:NewToggle("Kick from reality", "Keybind (,)", function()
+    print("You just clicked the bind")
+
+    local function getPlayer()
+        local userInput = game:GetService("UserInputService")
+        local cam = workspace.CurrentCamera
+        local mousePos = userInput:GetMouseLocation()
+        local mouseRay = cam:ViewportPointToRay(mousePos.X, mousePos.Y)
+        players = {}
+        for _, x in next, game:GetService('Players'):GetPlayers() do
+            players[#players + 1] = x.Character
+        end
+        local raycastParams = RaycastParams.new()
+        raycastParams.FilterType = Enum.RaycastFilterType.Whitelist
+        raycastParams.FilterDescendantsInstances = players
+        raycastParams.IgnoreWater = true
+        local raycastResult = workspace:Raycast(mouseRay.Origin, mouseRay.Direction * 1000, raycastParams)
+        if raycastResult then
+            for _, x in next, game:GetService('Players'):GetPlayers() do
+                if not raycastResult.Instance:IsDescendantOf(x.Character) then
+                    continue
+                end
+                return x
+            end
+        end
+        return false
+    end
+
+    local function Set(list)
+        local set = {}
+        for _, l in ipairs(list) do
+            if l then
+                set[l] = true
+            end
+        end
+        return set
+    end
+
+    game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
+        if key == "," then
+            local player = getPlayer()
+            if player then
+	    
+local args = {
+    [1] = "Delete",
+    [2] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("WiccanEvent"):FireServer(unpack(args))
+
+            end
+        end
+    end)
+end)
+
+MainSection:NewTextBox("Telekinesis", "", function(txt)
+    local Players = game:GetService("Players")
+    local msg = txt
+    local function findPlayer(stringg)
+        for _, v in pairs(Players:GetPlayers()) do
+            if stringg:lower() == (v.Name:lower()):sub(1, #stringg) then
+                return v
+            end
+        end
+    end
+
+    local player = findPlayer(msg)
+    local CHAR = player.Character
+
+local args = {
+    [1] = "Telekinesis",
+    [2] = player.Character,
+    [3] = "Player"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("WiccanEvent"):FireServer(unpack(args))
+
+end)
+
+MainSection:NewButton("Throw", "", function()
+    print("Clicked")
+    local Plr = game.Players.LocalPlayer
+    for i, Player in pairs (game.Players:GetPlayers()) do
+
+        if Player.Character ~= nil and Player ~= Plr then
+            local mag = (Player.Character.UpperTorso.Position - Plr.Character.UpperTorso.Position).magnitude
+            if mag < 100000 then
+                local Target = Player.Character or Player.CharacterAdded:Wait()
+-- Script generated by Nut The Menace Spy - credits to Claudev0#8849
+
+
+local args = {
+    [1] = "TelekinesisEnd",
+    [2] = Target,
+    [3] = "Player"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("WiccanEvent"):FireServer(unpack(args))
+
+
+
+            end
+        end
+end   
+end)
 
 MainSection:NewButton("Outburst", " ", function()
 
