@@ -164,6 +164,19 @@ game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild
 
 end)
 
+local BennettSection = Bennett:NewSection("Secret Character")
+
+BennettSection:NewButton("Exon", " ", function()
+
+local args = {
+    [1] = "Outfit1",
+    [2] = "Exon"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
+
+end)
+
 local Bennett = Window:NewTab("Powers")
 local BennettSection = Bennett:NewSection("Rikki")
 
