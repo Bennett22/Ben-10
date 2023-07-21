@@ -7,7 +7,7 @@ local BennettSection = Bennett:NewSection("Half Mermaid")
 BennettSection:NewButton("Siren Sirena", " ", function()
 
 local args = {
-    [1] = "Outfit1",
+    [1] = "Outfit2",
     [2] = "Siren Sirena"
 }
 
@@ -18,7 +18,7 @@ end)
 BennettSection:NewButton("Weilan", " ", function()
 
 local args = {
-    [1] = "Outfit1",
+    [1] = "Outfit2",
     [2] = "Weilan"
 }
 
