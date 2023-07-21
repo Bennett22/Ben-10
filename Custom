@@ -747,8 +747,6 @@ BennettSection:NewToggle("Take Someone Down", "Keybind (1)", function()
             local player = getPlayer()
             if player then
 
-if game:GetService("Players").LocalPlayer.UserId == 4839849211 then
-
 local args = {
     [1] = "It doesnt matter, if hes an orignal. I can take down anyone who comes at me",
     [2] = "All"
@@ -1041,7 +1039,6 @@ local args = {
 
 game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Aquata"):FireServer(unpack(args))
 
-end
 
             end
         end
@@ -1058,8 +1055,6 @@ end
         if key == '2' then
         if mouse.Target then
         if clicktpon then
-
-if game:GetService("Players").LocalPlayer.UserId == 4839849211 then
 
 local args = {
     [1] = "I Have Every Magic!",
@@ -1504,7 +1499,6 @@ game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"
 
 game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"):FireServer(unpack(args))
 
-end
 end
 end
 end
