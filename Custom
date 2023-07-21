@@ -48,21 +48,10 @@ game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild
 
 end)
 
-BennettSection:NewButton("Zac Outfit 1", " ", function()
+BennettSection:NewButton("Zac", " ", function()
 
 local args = {
     [1] = "Outfit1",
-    [2] = "Zac"
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
-
-end)
-
-BennettSection:NewButton("Zac Outfit 2", " ", function()
-
-local args = {
-    [1] = "Outfit2",
     [2] = "Zac"
 }
 
@@ -85,6 +74,17 @@ BennettSection:NewButton("Charlotte Outfit 2", " ", function()
 
 local args = {
     [1] = "Outfit2",
+    [2] = "Charlotte"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
+
+end)
+
+BennettSection:NewButton("Charlotte Outfit 3", " ", function()
+
+local args = {
+    [1] = "Outfit3",
     [2] = "Charlotte"
 }
 
@@ -136,7 +136,18 @@ game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild
 
 end)
 
-BennettSection:NewButton("Exon Outfit 1", " ", function()
+BennettSection:NewButton("Ondina Outfit 3", " ", function()
+
+local args = {
+    [1] = "Outfit3",
+    [2] = "Ondina"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
+
+end)
+
+BennettSection:NewButton("Exon", " ", function()
 
 local args = {
     [1] = "Outfit1",
@@ -147,16 +158,6 @@ game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild
 
 end)
 
-BennettSection:NewButton("Exon Outfit 2", " ", function()
-
-local args = {
-    [1] = "Outfit2",
-    [2] = "Exon"
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
-
-end)
 local Tab = Window:NewTab("Credits")
 local SettingsSection = Tab:NewSection("discord: bennettscripts")
 
