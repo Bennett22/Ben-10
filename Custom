@@ -164,7 +164,7 @@ local BennettSection = Bennett:NewSection("Bennett")
 BennettSection:NewToggle("Take Someone Down", "Keybind (1)", function()
     print("You just clicked the bind")
 
-if game:GetService("Players").LocalPlayer.UserId == 4831686579 then
+
 
     local function getPlayer()
         local userInput = game:GetService("UserInputService")
@@ -205,6 +205,8 @@ if game:GetService("Players").LocalPlayer.UserId == 4831686579 then
         if key == "1" then
             local player = getPlayer()
             if player then
+
+if game:GetService("Players").LocalPlayer.UserId == 4831686579 then
 
 local args = {
     [1] = "It doesnt matter, if hes an orignal. I can take down anyone who comes at me",
