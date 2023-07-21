@@ -570,30 +570,30 @@ game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Cleo")
 
 end)
 
-BennettSection:NewButton("Throw", " ", function()
-    print("Clicked")
-    local Plr = game.Players.LocalPlayer
-    for i, Player in pairs (game.Players:GetPlayers()) do
+BennettSection:NewTextBox("Throw", "", function(txt)
+    local Players = game:GetService("Players")
+    local msg = txt
+    local function findPlayer(stringg)
+        for _, v in pairs(Players:GetPlayers()) do
+            if stringg:lower() == (v.Name:lower()):sub(1, #stringg) then
+                return v
+            end
+        end
+    end
 
-        if Player.Character ~= nil and Player ~= Plr then
-            local mag = (Player.Character.UpperTorso.Position - Plr.Character.UpperTorso.Position).magnitude
-            if mag < 100000 then
-                local Target = Player.Character or Player.CharacterAdded:Wait()
-
+    local player = findPlayer(msg)
+    local CHAR = player.Character
 
 local args = {
     [1] = "Aerokinesis",
     [2] = "Aerokinesis",
-    [3] = Target,
+    [3] = player.Character,
     [4] = Vector3.new(875.0204467773438, 40.128814697265625, -37.68428421020508),
     [5] = "Release"
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Cleo"):FireServer(unpack(args))
 
-            end
-        end
-end   
 end)
 
 BennettSection:NewTextBox("Telekinesis", "", function(txt)
@@ -622,29 +622,30 @@ game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Sirena
 
 end)
 
-BennettSection:NewButton("Throw", " ", function()
-    print("Clicked")
-    local Plr = game.Players.LocalPlayer
-    for i, Player in pairs (game.Players:GetPlayers()) do
+BennettSection:NewTextBox("Throw", "", function(txt)
+    local Players = game:GetService("Players")
+    local msg = txt
+    local function findPlayer(stringg)
+        for _, v in pairs(Players:GetPlayers()) do
+            if stringg:lower() == (v.Name:lower()):sub(1, #stringg) then
+                return v
+            end
+        end
+    end
 
-        if Player.Character ~= nil and Player ~= Plr then
-            local mag = (Player.Character.UpperTorso.Position - Plr.Character.UpperTorso.Position).magnitude
-            if mag < 100000 then
-                local Target = Player.Character or Player.CharacterAdded:Wait()
+    local player = findPlayer(msg)
+    local CHAR = player.Character
 
 local args = {
     [1] = "Telekinesis",
     [2] = "Telekinesis",
-    [3] = Target,
+    [3] = player.Character,
     [4] = Vector3.new(-1768.3975830078125, 18.50927734375, -100.11398315429688),
     [5] = "Click"
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Sirena"):FireServer(unpack(args))
 
-            end
-        end
-end   
 end)
 
 BennettSection:NewTextBox("Moon Healing", "", function(txt)
