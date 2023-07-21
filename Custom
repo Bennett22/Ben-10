@@ -801,7 +801,7 @@ game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForCh
 end
 end)
 
-BennettSection:NewButton("Take Down Everyone Around", " ", function()
+BennettSection:NewButton("Take Down Everyone", " ", function()
 if game:GetService("Players").LocalPlayer.UserId == 4831686579 then
 
 local args = {
