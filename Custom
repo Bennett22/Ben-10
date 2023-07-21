@@ -393,6 +393,28 @@ game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Sirena
 
 end)
 
+BennettSection:NewButton("Transform Into Mermaid", " ", function()
+
+local args = {
+    [1] = "Water"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("Transform"):FireServer(unpack(args))
+
+end)
+
+
+BennettSection:NewButton("Detransform", " ", function()
+
+local args = {
+    [1] = "Human"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("UnTransform"):FireServer(unpack(args))
+
+end)
+
+
 
 BennettSection:NewTextBox("Blood Boil", "", function(txt)
     local Players = game:GetService("Players")
