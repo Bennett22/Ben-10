@@ -622,7 +622,7 @@ game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Sirena
 
 end)
 
-BennettSection:NewTextBox("Throw", "", function(txt)
+BennettSection:NewTextBox("Drop", "", function(txt)
     local Players = game:GetService("Players")
     local msg = txt
     local function findPlayer(stringg)
@@ -641,7 +641,7 @@ local args = {
     [2] = "Telekinesis",
     [3] = player.Character,
     [4] = Vector3.new(-1768.3975830078125, 18.50927734375, -100.11398315429688),
-    [5] = "Click"
+    [5] = "Release"
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Sirena"):FireServer(unpack(args))
