@@ -15,7 +15,7 @@ game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild
 
 end)
 
-BennettSection:NewButton("Siren Sirena Outfit 2, " ", function()
+BennettSection:NewButton("Siren Sirena Outfit 2", " ", function()
 
 local args = {
     [1] = "Outfit2",
