@@ -1,7 +1,171 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 local Window = Library.CreateLib("Bennett Scripts | H2O: Mako Magic", "GrapeTheme")
 
-local Bennett = Window:NewTab("Characters")
+local Bennett = Window:NewTab("Free Characters")
+local BennettSection = Bennett:NewSection("Half Mermaid")
+
+BennettSection:NewButton("Rikki", " ", function()
+
+local args = {
+    [1] = "Outfit1",
+    [2] = "Rikki"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
+
+end)
+
+BennettSection:NewButton("Bella", " ", function()
+
+local args = {
+    [1] = "Outfit1",
+    [2] = "Bella"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
+
+end)
+
+BennettSection:NewButton("Emma", " ", function()
+
+local args = {
+    [1] = "Outfit1",
+    [2] = "Emma"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
+
+end)
+
+BennettSection:NewButton("Cleo", " ", function()
+
+local args = {
+    [1] = "Outfit1",
+    [2] = "Cleo"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
+
+end)
+
+local BennettSection = Bennett:NewSection("Mermaid")
+
+BennettSection:NewButton("Sirena", " ", function()
+
+local args = {
+    [1] = "Outfit1",
+    [2] = "Sirena"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
+
+end)
+
+BennettSection:NewButton("Aquata", " ", function()
+
+local args = {
+    [1] = "Outfit1",
+    [2] = "Aquata"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
+
+end)
+
+BennettSection:NewButton("Nixie", " ", function()
+
+local args = {
+    [1] = "Outfit1",
+    [2] = "Nixie"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
+
+end)
+
+BennettSection:NewButton("Lyla", " ", function()
+
+local args = {
+    [1] = "Outfit1",
+    [2] = "Lyla"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
+
+end)
+
+local BennettSection = Bennett:NewSection("Human")
+
+BennettSection:NewButton("Cam", " ", function()
+
+local args = {
+    [1] = "Outfit1",
+    [2] = "Cam"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
+
+end)
+
+BennettSection:NewButton("Evie", " ", function()
+
+local args = {
+    [1] = "Outfit1",
+    [2] = "Evie"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
+
+end)
+
+BennettSection:NewButton("Carly", " ", function()
+
+local args = {
+    [1] = "Outfit1",
+    [2] = "Carly"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
+
+end)
+
+BennettSection:NewButton("Will", " ", function()
+
+local args = {
+    [1] = "Outfit1",
+    [2] = "Will"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
+
+end)
+
+BennettSection:NewButton("Sophie", " ", function()
+
+local args = {
+    [1] = "Outfit1",
+    [2] = "Sophie"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
+
+end)
+
+local BennettSection = Bennett:NewSection("Merman")
+
+BennettSection:NewButton("Erik", " ", function()
+
+local args = {
+    [1] = "Outfit1",
+    [2] = "Erik"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
+
+end)
+
+
+local Bennett = Window:NewTab("Gamepass Characters")
 local BennettSection = Bennett:NewSection("Characters")
 
 BennettSection:NewButton("Siren Sirena Outfit 1", " ", function()
@@ -147,16 +311,370 @@ game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild
 
 end)
 
-BennettSection:NewButton("Exon", " ", function()
+local Bennett = Window:NewTab("Target")
+local BennettSection = Bennett:NewSection("Target Someone & Some Random Powers")
+
+BennettSection:NewButton("Water Orb", " ", function()
 
 local args = {
-    [1] = "Outfit1",
-    [2] = "Exon"
+    [1] = "Water",
+    [2] = "Water Orb",
+    [3] = workspace:WaitForChild("Terrain"),
+    [4] = Vector3.new(344.605224609375, -17.609373092651367, 986.8435668945312),
+    [5] = "Hold"
 }
 
-game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Cleo"):FireServer(unpack(args))
 
 end)
+
+BennettSection:NewToggle("Throw Water Orb", "Keybind (U)", function()
+
+    clicktpon = true                
+        plr = game.Players.LocalPlayer
+        hum = plr.Character.HumanoidRootPart
+        mouse = plr:GetMouse()
+        mouse.KeyDown:connect(function(key)
+        if key == 'u' then
+        if mouse.Target then
+        if clicktpon then
+
+local args = {
+    [1] = "Water",
+    [2] = "Water Orb",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 2, mouse.Hit.z),
+    [5] = "Click"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Cleo"):FireServer(unpack(args))
+
+end
+end
+end
+end)
+end)
+
+BennettSection:NewButton("Drop Water Orb", " ", function()
+
+local args = {
+    [1] = "Water",
+    [2] = "Water Orb",
+    [4] = Vector3.new(341.7242736816406, -17.799102783203125, 980.750244140625),
+    [5] = "Release"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Cleo"):FireServer(unpack(args))
+
+end)
+
+        BennettSection:NewButton("Cloaking", " ", function()
+
+local args = {
+    [1] = "Invisible",
+    [2] = "Cloaking",
+    [4] = Vector3.new(-1775.4530029296875, 18.509748458862305, -86.18093872070312),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Sirena"):FireServer(unpack(args))
+
+end)
+
+        BennettSection:NewButton("Stop Cloaking", " ", function()
+
+local args = {
+    [1] = "Invisible",
+    [2] = "Cloaking",
+    [4] = Vector3.new(-1774.46142578125, 18.515625, -99.41088104248047),
+    [5] = "Release"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Sirena"):FireServer(unpack(args))
+
+end)
+
+
+BennettSection:NewTextBox("Blood Boil", "", function(txt)
+    local Players = game:GetService("Players")
+    local msg = txt
+    local function findPlayer(stringg)
+        for _, v in pairs(Players:GetPlayers()) do
+            if stringg:lower() == (v.Name:lower()):sub(1, #stringg) then
+                return v
+            end
+        end
+    end
+
+    local player = findPlayer(msg)
+    local CHAR = player.Character
+
+local args = {
+    [1] = "BloodBoil",
+    [2] = "Blood Boil",
+    [3] = player.Character,
+    [4] = Vector3.new(701.055908203125, 41.5108757019043, 71.009765625)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Rikki"):FireServer(unpack(args))
+
+end)
+
+BennettSection:NewTextBox("Fire", "", function(txt)
+    local Players = game:GetService("Players")
+    local msg = txt
+    local function findPlayer(stringg)
+        for _, v in pairs(Players:GetPlayers()) do
+            if stringg:lower() == (v.Name:lower()):sub(1, #stringg) then
+                return v
+            end
+        end
+    end
+
+    local player = findPlayer(msg)
+    local CHAR = player.Character
+
+local args = {
+    [1] = "Fire",
+    [2] = "Fire",
+    [3] = player.Character,
+    [4] = Vector3.new(275.03082275390625, -25.45047378540039, 1002.78564453125)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Rikki"):FireServer(unpack(args))
+
+end)
+
+BennettSection:NewTextBox("Trap", "", function(txt)
+    local Players = game:GetService("Players")
+    local msg = txt
+    local function findPlayer(stringg)
+        for _, v in pairs(Players:GetPlayers()) do
+            if stringg:lower() == (v.Name:lower()):sub(1, #stringg) then
+                return v
+            end
+        end
+    end
+
+    local player = findPlayer(msg)
+    local CHAR = player.Character
+
+local args = {
+    [1] = "JellyTrap",
+    [2] = "Trap",
+    [3] = player.Character,
+    [4] = Vector3.new(1156.024658203125, 14.965455055236816, 267.38134765625)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Bella"):FireServer(unpack(args))
+
+end)
+
+BennettSection:NewTextBox("Snow Healing", "", function(txt)
+    local Players = game:GetService("Players")
+    local msg = txt
+    local function findPlayer(stringg)
+        for _, v in pairs(Players:GetPlayers()) do
+            if stringg:lower() == (v.Name:lower()):sub(1, #stringg) then
+                return v
+            end
+        end
+    end
+
+    local player = findPlayer(msg)
+    local CHAR = player.Character
+
+local args = {
+    [1] = "SnowHeal",
+    [2] = "Snow Healing",
+    [3] = player.Character,
+    [4] = Vector3.new(154.9129638671875, -26.665769577026367, 713.9075927734375)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Emma"):FireServer(unpack(args))
+
+end)
+
+BennettSection:NewTextBox("Advanced Freeze", "", function(txt)
+    local Players = game:GetService("Players")
+    local msg = txt
+    local function findPlayer(stringg)
+        for _, v in pairs(Players:GetPlayers()) do
+            if stringg:lower() == (v.Name:lower()):sub(1, #stringg) then
+                return v
+            end
+        end
+    end
+
+    local player = findPlayer(msg)
+    local CHAR = player.Character
+
+local args = {
+    [1] = "AdvFreeze",
+    [2] = "Advanced Freeze",
+    [3] = player.Character,
+    [4] = Vector3.new(-1488.1326904296875, -8.06732177734375, 433.3450927734375)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Emma"):FireServer(unpack(args))
+
+end)
+
+BennettSection:NewTextBox("Push", "", function(txt)
+    local Players = game:GetService("Players")
+    local msg = txt
+    local function findPlayer(stringg)
+        for _, v in pairs(Players:GetPlayers()) do
+            if stringg:lower() == (v.Name:lower()):sub(1, #stringg) then
+                return v
+            end
+        end
+    end
+
+    local player = findPlayer(msg)
+    local CHAR = player.Character
+
+local args = {
+    [1] = "Push",
+    [2] = "Push",
+    [3] = player.Character,
+    [4] = Vector3.new(352.7683410644531, -7.841368675231934, 1192.2022705078125)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Cleo"):FireServer(unpack(args))
+
+end)
+
+BennettSection:NewTextBox("Aerokinesis", "", function(txt)
+    local Players = game:GetService("Players")
+    local msg = txt
+    local function findPlayer(stringg)
+        for _, v in pairs(Players:GetPlayers()) do
+            if stringg:lower() == (v.Name:lower()):sub(1, #stringg) then
+                return v
+            end
+        end
+    end
+
+    local player = findPlayer(msg)
+    local CHAR = player.Character
+
+local args = {
+    [1] = "Aerokinesis",
+    [2] = "Aerokinesis",
+    [3] = player.Character,
+    [4] = Vector3.new(401.2671813964844, -11.739166259765625, 702.6560668945312),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Cleo"):FireServer(unpack(args))
+
+end)
+
+BennettSection:NewButton("Throw", " ", function()
+    print("Clicked")
+    local Plr = game.Players.LocalPlayer
+    for i, Player in pairs (game.Players:GetPlayers()) do
+
+        if Player.Character ~= nil and Player ~= Plr then
+            local mag = (Player.Character.UpperTorso.Position - Plr.Character.UpperTorso.Position).magnitude
+            if mag < 100000 then
+                local Target = Player.Character or Player.CharacterAdded:Wait()
+
+
+local args = {
+    [1] = "Aerokinesis",
+    [2] = "Aerokinesis",
+    [3] = Target,
+    [4] = Vector3.new(875.0204467773438, 40.128814697265625, -37.68428421020508),
+    [5] = "Release"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Cleo"):FireServer(unpack(args))
+
+            end
+        end
+end   
+end)
+
+BennettSection:NewTextBox("Telekinesis", "", function(txt)
+    local Players = game:GetService("Players")
+    local msg = txt
+    local function findPlayer(stringg)
+        for _, v in pairs(Players:GetPlayers()) do
+            if stringg:lower() == (v.Name:lower()):sub(1, #stringg) then
+                return v
+            end
+        end
+    end
+
+    local player = findPlayer(msg)
+    local CHAR = player.Character
+
+local args = {
+    [1] = "Telekinesis",
+    [2] = "Telekinesis",
+    [3] = player.Character,
+    [4] = Vector3.new(-1768.8924560546875, 22.049583435058594, -97.38066864013672),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Sirena"):FireServer(unpack(args))
+
+end)
+
+BennettSection:NewButton("Throw", " ", function()
+    print("Clicked")
+    local Plr = game.Players.LocalPlayer
+    for i, Player in pairs (game.Players:GetPlayers()) do
+
+        if Player.Character ~= nil and Player ~= Plr then
+            local mag = (Player.Character.UpperTorso.Position - Plr.Character.UpperTorso.Position).magnitude
+            if mag < 100000 then
+                local Target = Player.Character or Player.CharacterAdded:Wait()
+
+local args = {
+    [1] = "Telekinesis",
+    [2] = "Telekinesis",
+    [3] = Target,
+    [4] = Vector3.new(-1768.3975830078125, 18.50927734375, -100.11398315429688),
+    [5] = "Click"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Sirena"):FireServer(unpack(args))
+
+            end
+        end
+end   
+end)
+
+BennettSection:NewTextBox("Moon Healing", "", function(txt)
+    local Players = game:GetService("Players")
+    local msg = txt
+    local function findPlayer(stringg)
+        for _, v in pairs(Players:GetPlayers()) do
+            if stringg:lower() == (v.Name:lower()):sub(1, #stringg) then
+                return v
+            end
+        end
+    end
+
+    local player = findPlayer(msg)
+    local CHAR = player.Character
+
+local args = {
+    [1] = "MoonHeal",
+    [2] = "Healing",
+    [3] = player.Character,
+    [4] = Vector3.new(875.0204467773438, 40.128814697265625, -37.68428421020508),
+    [5] = "Release"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args))
+
+end)
+
+
+
 
 local Bennett = Window:NewTab("Custom Spells")
 local BennettSection = Bennett:NewSection("Bennett")
@@ -206,7 +724,7 @@ BennettSection:NewToggle("Take Someone Down", "Keybind (1)", function()
             local player = getPlayer()
             if player then
 
-if game:GetService("Players").LocalPlayer.UserId == 4831686579 then
+if game:GetService("Players").LocalPlayer.UserId == 4839849211 then
 
 local args = {
     [1] = "It doesnt matter, if hes an orignal. I can take down anyone who comes at me",
@@ -225,154 +743,281 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args))
+
 local args = {
-    [1] = "Shatter",
-    [2] = "Shatter",
+    [1] = "BloodBoil",
+    [2] = "Blood Boil",
     [3] = player.Character,
-    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
+    [4] = Vector3.new(701.055908203125, 41.5108757019043, 71.009765625)
 }
 
-game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args))local args = {
-    [1] = "Shatter",
-    [2] = "Shatter",
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Rikki"):FireServer(unpack(args))
+
+local args = {
+    [1] = "Fire",
+    [2] = "Fire",
     [3] = player.Character,
-    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
+    [4] = Vector3.new(275.03082275390625, -25.45047378540039, 1002.78564453125)
 }
 
-game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args))local args = {
-    [1] = "Shatter",
-    [2] = "Shatter",
-    [3] = player.Character,
-    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Rikki"):FireServer(unpack(args))
+
+    clicktpon = true                
+        plr = game.Players.LocalPlayer
+        hum = plr.Character.HumanoidRootPart
+        mouse = plr:GetMouse()
+        mouse.KeyDown:connect(function(key)
+        if key == '1' then
+        if mouse.Target then
+        if clicktpon then
+
+local args = {
+    [1] = "Bolt",
+    [2] = "Lightning Bolt",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z)
 }
 
-game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args))local args = {
-    [1] = "Shatter",
-    [2] = "Shatter",
-    [3] = player.Character,
-    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Rikki"):FireServer(unpack(args))
+
+end
+end
+end
+end)
+
+    clicktpon = true                
+        plr = game.Players.LocalPlayer
+        hum = plr.Character.HumanoidRootPart
+        mouse = plr:GetMouse()
+        mouse.KeyDown:connect(function(key)
+        if key == '1' then
+        if mouse.Target then
+        if clicktpon then
+
+local args = {
+    [1] = "Circle",
+    [2] = "Fire Circle",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z)
 }
 
-game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args))local args = {
-    [1] = "Shatter",
-    [2] = "Shatter",
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Rikki"):FireServer(unpack(args))
+
+end
+end
+end
+end)
+
+local args = {
+    [1] = "JellyTrap",
+    [2] = "Trap",
     [3] = player.Character,
-    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
+    [4] = Vector3.new(1156.024658203125, 14.965455055236816, 267.38134765625)
 }
 
-game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args))local args = {
-    [1] = "Shatter",
-    [2] = "Shatter",
-    [3] = player.Character,
-    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Bella"):FireServer(unpack(args))
+
+    clicktpon = true                
+        plr = game.Players.LocalPlayer
+        hum = plr.Character.HumanoidRootPart
+        mouse = plr:GetMouse()
+        mouse.KeyDown:connect(function(key)
+        if key == '1' then
+        if mouse.Target then
+        if clicktpon then
+
+local args = {
+    [1] = "Trail",
+    [2] = "Ice Trail",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z)
 }
 
-game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args))local args = {
-    [1] = "Shatter",
-    [2] = "Shatter",
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Emma"):FireServer(unpack(args))
+
+end
+end
+end
+end)
+
+local args = {
+    [1] = "AdvFreeze",
+    [2] = "Advanced Freeze",
     [3] = player.Character,
-    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
+    [4] = Vector3.new(-1488.1326904296875, -8.06732177734375, 433.3450927734375)
 }
 
-game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args))local args = {
-    [1] = "Shatter",
-    [2] = "Shatter",
-    [3] = player.Character,
-    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Emma"):FireServer(unpack(args))
+
+    clicktpon = true                
+        plr = game.Players.LocalPlayer
+        hum = plr.Character.HumanoidRootPart
+        mouse = plr:GetMouse()
+        mouse.KeyDown:connect(function(key)
+        if key == '1' then
+        if mouse.Target then
+        if clicktpon then
+
+local args = {
+    [1] = "MassFreeze",
+    [2] = "Mass Freeze",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z)
 }
 
-game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args))local args = {
-    [1] = "Shatter",
-    [2] = "Shatter",
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Emma"):FireServer(unpack(args))
+
+end
+end
+end
+end)
+
+local args = {
+    [1] = "Push",
+    [2] = "Push",
     [3] = player.Character,
-    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
+    [4] = Vector3.new(352.7683410644531, -7.841368675231934, 1192.2022705078125)
 }
 
-game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args))local args = {
-    [1] = "Shatter",
-    [2] = "Shatter",
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Cleo"):FireServer(unpack(args))
+
+local args = {
+    [1] = "Aerokinesis",
+    [2] = "Aerokinesis",
     [3] = player.Character,
-    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
+    [4] = Vector3.new(401.2671813964844, -11.739166259765625, 702.6560668945312),
+    [5] = "Hold"
 }
 
-game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args))local args = {
-    [1] = "Shatter",
-    [2] = "Shatter",
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Cleo"):FireServer(unpack(args))
+
+local args = {
+    [1] = "Aerokinesis",
+    [2] = "Aerokinesis",
     [3] = player.Character,
-    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
+    [4] = Vector3.new(875.0204467773438, 40.128814697265625, -37.68428421020508),
+    [5] = "Release"
 }
 
-game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args))local args = {
-    [1] = "Shatter",
-    [2] = "Shatter",
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Cleo"):FireServer(unpack(args))
+
+local args = {
+    [1] = "Telekinesis",
+    [2] = "Telekinesis",
     [3] = player.Character,
-    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
+    [4] = Vector3.new(-1768.8924560546875, 22.049583435058594, -97.38066864013672),
+    [5] = "Hold"
 }
 
-game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args))local args = {
-    [1] = "Shatter",
-    [2] = "Shatter",
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Sirena"):FireServer(unpack(args))
+
+local args = {
+    [1] = "Telekinesis",
+    [2] = "Telekinesis",
     [3] = player.Character,
-    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
+    [4] = Vector3.new(-1768.3975830078125, 18.50927734375, -100.11398315429688),
+    [5] = "click"
 }
 
-game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args))local args = {
-    [1] = "Shatter",
-    [2] = "Shatter",
-    [3] = player.Character,
-    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Sirena"):FireServer(unpack(args))
+
+local args = {
+    [1] = "Siren",
+    [2] = "Siren Lure",
+    [3] = workspace:WaitForChild("Terrain"),
+    [4] = Vector3.new(376.3300476074219, -11.454862594604492, 1014.2968139648438)
 }
 
-game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args))local args = {
-    [1] = "Shatter",
-    [2] = "Shatter",
-    [3] = player.Character,
-    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
-}
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Cleo"):FireServer(unpack(args))
 
-game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args))local args = {
-    [1] = "Shatter",
-    [2] = "Shatter",
-    [3] = player.Character,
-    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args))local args = {
-    [1] = "Shatter",
-    [2] = "Shatter",
-    [3] = player.Character,
-    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args))local args = {
-    [1] = "Shatter",
-    [2] = "Shatter",
-    [3] = player.Character,
-    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args))local args = {
-    [1] = "Shatter",
-    [2] = "Shatter",
-    [3] = player.Character,
-    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args))local args = {
-    [1] = "Shatter",
-    [2] = "Shatter",
-    [3] = player.Character,
-    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args))local args = {
-    [1] = "Shatter",
-    [2] = "Shatter",
-    [3] = player.Character,
-    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
+local args = {
+    [1] = "Torrent",
+    [2] = "Wind Torrent",
+    [4] = Vector3.new(-1758.801513671875, 18.515625, -97.70109558105469)
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args))
+
+    clicktpon = true                
+        plr = game.Players.LocalPlayer
+        hum = plr.Character.HumanoidRootPart
+        mouse = plr:GetMouse()
+        mouse.KeyDown:connect(function(key)
+        if key == '1' then
+        if mouse.Target then
+        if clicktpon then
+
+local args = {
+    [1] = "AdvLightning",
+    [2] = "Lightning Strikes",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args))
+
+end
+end
+end
+end)
+
+local args = {
+    [1] = "AreaTele",
+    [2] = "Area Telekinesis",
+    [3] = workspace:WaitForChild("Terrain"),
+    [4] = Vector3.new(237.18614196777344, 1.5195999145507812, -58.25132369995117)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Aquata"):FireServer(unpack(args))
+
+    clicktpon = true                
+        plr = game.Players.LocalPlayer
+        hum = plr.Character.HumanoidRootPart
+        mouse = plr:GetMouse()
+        mouse.KeyDown:connect(function(key)
+        if key == '1' then
+        if mouse.Target then
+        if clicktpon then
+
+local args = {
+    [1] = "Wave",
+    [2] = "Wind Projectile",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 1.5, mouse.Hit.z)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Aquata"):FireServer(unpack(args))
+
+end
+end
+end
+end)
+
+    clicktpon = true                
+        plr = game.Players.LocalPlayer
+        hum = plr.Character.HumanoidRootPart
+        mouse = plr:GetMouse()
+        mouse.KeyDown:connect(function(key)
+        if key == '1' then
+        if mouse.Target then
+        if clicktpon then
+
+local args = {
+    [1] = "Bolt",
+    [2] = "Lightning Bolt",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Aquata"):FireServer(unpack(args))
+
+end
+end
+end
+end)
+
+local args = {
+    [1] = "Ability",
+    [2] = "Shine",
+    [3] = workspace:WaitForChild("Terrain"),
+    [4] = Vector3.new(1061.208740234375, 11.015624046325684, 230.439697265625)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Aquata"):FireServer(unpack(args))
+
 end
 
             end
@@ -380,9 +1025,19 @@ end
         end)
         end)
 
+        BennettSection:NewToggle("Summon Expression", "Keybind (2)", function()
 
-BennettSection:NewButton("Summon Expression", " ", function()
-if game:GetService("Players").LocalPlayer.UserId == 4831686579 then
+    clicktpon = true                
+        plr = game.Players.LocalPlayer
+        hum = plr.Character.HumanoidRootPart
+        mouse = plr:GetMouse()
+        mouse.KeyDown:connect(function(key)
+        if key == '2' then
+        if mouse.Target then
+        if clicktpon then
+
+if game:GetService("Players").LocalPlayer.UserId == 4839849211 then
+
 local args = {
     [1] = "I Have Every Magic!",
     [2] = "All"
@@ -402,625 +1057,1646 @@ game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageReque
 wait(2)
 
 local args = {
-    [1] = "Phasmatos Incendia",
-    [2] = "All"
-}
-
-game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
-
-    local Plr = game.Players.LocalPlayer
-    for i, Player in pairs (game.Players:GetPlayers()) do
-
-        if Player.Character ~= nil and Player ~= Plr then
-            local mag = (Player.Character.UpperTorso.Position - Plr.Character.UpperTorso.Position).magnitude
-            if mag < 100000 then
-                local Target = Player.Character or Player.CharacterAdded:Wait()
-
-local args = {
-    [1] = "Fire",
-    [2] = "Fire",
-    [3] = Target,
-    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Aquata"):FireServer(unpack(args))
-
-            end
-        end
-end   
-
-wait(3)
-
-local args = {
     [1] = "I Have Expression!",
     [2] = "All"
 }
 
 game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
-
-wait(2)
+ wait(1)
 
 local args = {
-    [1] = "Phasmatos Incendia",
+    [1] = "MassBoil",
+    [2] = "Mass Boil",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"):FireServer(unpack(args))
+
+local args = {
+    [1] = "MassBoil",
+    [2] = "Mass Boil",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"):FireServer(unpack(args))local args = {
+    [1] = "MassBoil",
+    [2] = "Mass Boil",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"):FireServer(unpack(args))local args = {
+    [1] = "MassBoil",
+    [2] = "Mass Boil",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"):FireServer(unpack(args))local args = {
+    [1] = "MassBoil",
+    [2] = "Mass Boil",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"):FireServer(unpack(args))local args = {
+    [1] = "MassBoil",
+    [2] = "Mass Boil",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"):FireServer(unpack(args))local args = {
+    [1] = "MassBoil",
+    [2] = "Mass Boil",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"):FireServer(unpack(args))local args = {
+    [1] = "MassBoil",
+    [2] = "Mass Boil",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"):FireServer(unpack(args))local args = {
+    [1] = "MassBoil",
+    [2] = "Mass Boil",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"):FireServer(unpack(args))local args = {
+    [1] = "MassBoil",
+    [2] = "Mass Boil",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"):FireServer(unpack(args))local args = {
+    [1] = "MassBoil",
+    [2] = "Mass Boil",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"):FireServer(unpack(args))local args = {
+    [1] = "MassBoil",
+    [2] = "Mass Boil",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"):FireServer(unpack(args))local args = {
+    [1] = "MassBoil",
+    [2] = "Mass Boil",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"):FireServer(unpack(args))local args = {
+    [1] = "MassBoil",
+    [2] = "Mass Boil",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"):FireServer(unpack(args))local args = {
+    [1] = "MassBoil",
+    [2] = "Mass Boil",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"):FireServer(unpack(args))local args = {
+    [1] = "MassBoil",
+    [2] = "Mass Boil",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"):FireServer(unpack(args))local args = {
+    [1] = "MassBoil",
+    [2] = "Mass Boil",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"):FireServer(unpack(args))local args = {
+    [1] = "MassBoil",
+    [2] = "Mass Boil",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"):FireServer(unpack(args))local args = {
+    [1] = "MassBoil",
+    [2] = "Mass Boil",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"):FireServer(unpack(args))local args = {
+    [1] = "MassBoil",
+    [2] = "Mass Boil",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"):FireServer(unpack(args))local args = {
+    [1] = "MassBoil",
+    [2] = "Mass Boil",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"):FireServer(unpack(args))local args = {
+    [1] = "MassBoil",
+    [2] = "Mass Boil",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"):FireServer(unpack(args))local args = {
+    [1] = "MassBoil",
+    [2] = "Mass Boil",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"):FireServer(unpack(args))local args = {
+    [1] = "MassBoil",
+    [2] = "Mass Boil",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"):FireServer(unpack(args))local args = {
+    [1] = "MassBoil",
+    [2] = "Mass Boil",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"):FireServer(unpack(args))local args = {
+    [1] = "MassBoil",
+    [2] = "Mass Boil",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"):FireServer(unpack(args))local args = {
+    [1] = "MassBoil",
+    [2] = "Mass Boil",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"):FireServer(unpack(args))local args = {
+    [1] = "MassBoil",
+    [2] = "Mass Boil",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"):FireServer(unpack(args))local args = {
+    [1] = "MassBoil",
+    [2] = "Mass Boil",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"):FireServer(unpack(args))local args = {
+    [1] = "MassBoil",
+    [2] = "Mass Boil",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"):FireServer(unpack(args))local args = {
+    [1] = "MassBoil",
+    [2] = "Mass Boil",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"):FireServer(unpack(args))local args = {
+    [1] = "MassBoil",
+    [2] = "Mass Boil",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"):FireServer(unpack(args))local args = {
+    [1] = "MassBoil",
+    [2] = "Mass Boil",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"):FireServer(unpack(args))local args = {
+    [1] = "MassBoil",
+    [2] = "Mass Boil",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"):FireServer(unpack(args))local args = {
+    [1] = "MassBoil",
+    [2] = "Mass Boil",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"):FireServer(unpack(args))local args = {
+    [1] = "MassBoil",
+    [2] = "Mass Boil",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"):FireServer(unpack(args))local args = {
+    [1] = "MassBoil",
+    [2] = "Mass Boil",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"):FireServer(unpack(args))local args = {
+    [1] = "MassBoil",
+    [2] = "Mass Boil",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"):FireServer(unpack(args))local args = {
+    [1] = "MassBoil",
+    [2] = "Mass Boil",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"):FireServer(unpack(args))local args = {
+    [1] = "MassBoil",
+    [2] = "Mass Boil",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"):FireServer(unpack(args))local args = {
+    [1] = "MassBoil",
+    [2] = "Mass Boil",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"):FireServer(unpack(args))local args = {
+    [1] = "MassBoil",
+    [2] = "Mass Boil",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"):FireServer(unpack(args))local args = {
+    [1] = "MassBoil",
+    [2] = "Mass Boil",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"):FireServer(unpack(args))local args = {
+    [1] = "MassBoil",
+    [2] = "Mass Boil",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"):FireServer(unpack(args))local args = {
+    [1] = "MassBoil",
+    [2] = "Mass Boil",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"):FireServer(unpack(args))local args = {
+    [1] = "MassBoil",
+    [2] = "Mass Boil",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"):FireServer(unpack(args))local args = {
+    [1] = "MassBoil",
+    [2] = "Mass Boil",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"):FireServer(unpack(args))local args = {
+    [1] = "MassBoil",
+    [2] = "Mass Boil",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"):FireServer(unpack(args))local args = {
+    [1] = "MassBoil",
+    [2] = "Mass Boil",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"):FireServer(unpack(args))local args = {
+    [1] = "MassBoil",
+    [2] = "Mass Boil",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"):FireServer(unpack(args))local args = {
+    [1] = "MassBoil",
+    [2] = "Mass Boil",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"):FireServer(unpack(args))local args = {
+    [1] = "MassBoil",
+    [2] = "Mass Boil",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"):FireServer(unpack(args))local args = {
+    [1] = "MassBoil",
+    [2] = "Mass Boil",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"):FireServer(unpack(args))local args = {
+    [1] = "MassBoil",
+    [2] = "Mass Boil",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"):FireServer(unpack(args))local args = {
+    [1] = "MassBoil",
+    [2] = "Mass Boil",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"):FireServer(unpack(args))local args = {
+    [1] = "MassBoil",
+    [2] = "Mass Boil",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"):FireServer(unpack(args))local args = {
+    [1] = "MassBoil",
+    [2] = "Mass Boil",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"):FireServer(unpack(args))local args = {
+    [1] = "MassBoil",
+    [2] = "Mass Boil",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"):FireServer(unpack(args))local args = {
+    [1] = "MassBoil",
+    [2] = "Mass Boil",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"):FireServer(unpack(args))
+
+end
+end
+end
+end
+end)
+end)
+
+BennettSection:NewButton("Remove Effects After Expression", " ", function()
+
+local args = {
+    [1] = "MassBoil",
+    [2] = "Mass Boil",
+    [4] = Vector3.new(374.21405029296875, -15.609375, 975.845947265625),
+    [5] = "Release"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"):FireServer(unpack(args))
+
+end)
+
+local BennettSection = Bennett:NewSection("Scarlet Witch")
+
+BennettSection:NewToggle("I Dont Need You To Tell Me..", "Keybind (1)", function()
+    print("You just clicked the bind")
+
+
+
+    local function getPlayer()
+        local userInput = game:GetService("UserInputService")
+        local cam = workspace.CurrentCamera
+        local mousePos = userInput:GetMouseLocation()
+        local mouseRay = cam:ViewportPointToRay(mousePos.X, mousePos.Y)
+        players = {}
+        for _, x in next, game:GetService('Players'):GetPlayers() do
+            players[#players + 1] = x.Character
+        end
+        local raycastParams = RaycastParams.new()
+        raycastParams.FilterType = Enum.RaycastFilterType.Whitelist
+        raycastParams.FilterDescendantsInstances = players
+        raycastParams.IgnoreWater = true
+        local raycastResult = workspace:Raycast(mouseRay.Origin, mouseRay.Direction * 1000, raycastParams)
+        if raycastResult then
+            for _, x in next, game:GetService('Players'):GetPlayers() do
+                if not raycastResult.Instance:IsDescendantOf(x.Character) then
+                    continue
+                end
+                return x
+            end
+        end
+        return false
+    end
+
+    local function Set(list)
+        local set = {}
+        for _, l in ipairs(list) do
+            if l then
+                set[l] = true
+            end
+        end
+        return set
+    end
+
+    game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
+        if key == "1" then
+            local player = getPlayer()
+            if player then
+
+local args = {
+    [1] = "And I Don't Need You To Tell Me, Who I Am",
     [2] = "All"
 }
 
 game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
 
-    local Plr = game.Players.LocalPlayer
-    for i, Player in pairs (game.Players:GetPlayers()) do
-
-        if Player.Character ~= nil and Player ~= Plr then
-            local mag = (Player.Character.UpperTorso.Position - Plr.Character.UpperTorso.Position).magnitude
-            if mag < 100000 then
-                local Target = Player.Character or Player.CharacterAdded:Wait()
-
-local args = {
-    [1] = "Fire",
-    [2] = "Fire",
-    [3] = Target,
-    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Aquata"):FireServer(unpack(args))
-
-            end
-        end
-end 
-
-wait(2)
-
-local args = {
-    [1] = "Phasmatos Incendia",
-    [2] = "All"
-}
-
-game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
-
-    local Plr = game.Players.LocalPlayer
-    for i, Player in pairs (game.Players:GetPlayers()) do
-
-        if Player.Character ~= nil and Player ~= Plr then
-            local mag = (Player.Character.UpperTorso.Position - Plr.Character.UpperTorso.Position).magnitude
-            if mag < 100000 then
-                local Target = Player.Character or Player.CharacterAdded:Wait()
-
-local args = {
-    [1] = "Fire",
-    [2] = "Fire",
-    [3] = Target,
-    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Aquata"):FireServer(unpack(args))
-
-            end
-        end
-end 
-
-    local Plr = game.Players.LocalPlayer
-    for i, Player in pairs (game.Players:GetPlayers()) do
-
-        if Player.Character ~= nil and Player ~= Plr then
-            local mag = (Player.Character.UpperTorso.Position - Plr.Character.UpperTorso.Position).magnitude
-            if mag < 100000 then
-                local Target = Player.Character or Player.CharacterAdded:Wait()
-
-local args = {
-    [1] = "Fire",
-    [2] = "Fire",
-    [3] = Target,
-    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Aquata"):FireServer(unpack(args))
-
-            end
-        end
-end     local Plr = game.Players.LocalPlayer
-    for i, Player in pairs (game.Players:GetPlayers()) do
-
-        if Player.Character ~= nil and Player ~= Plr then
-            local mag = (Player.Character.UpperTorso.Position - Plr.Character.UpperTorso.Position).magnitude
-            if mag < 100000 then
-                local Target = Player.Character or Player.CharacterAdded:Wait()
-
-local args = {
-    [1] = "Fire",
-    [2] = "Fire",
-    [3] = Target,
-    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Aquata"):FireServer(unpack(args))
-
-            end
-        end
-end     local Plr = game.Players.LocalPlayer
-    for i, Player in pairs (game.Players:GetPlayers()) do
-
-        if Player.Character ~= nil and Player ~= Plr then
-            local mag = (Player.Character.UpperTorso.Position - Plr.Character.UpperTorso.Position).magnitude
-            if mag < 100000 then
-                local Target = Player.Character or Player.CharacterAdded:Wait()
-
-local args = {
-    [1] = "Fire",
-    [2] = "Fire",
-    [3] = Target,
-    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Aquata"):FireServer(unpack(args))
-
-            end
-        end
-end     local Plr = game.Players.LocalPlayer
-    for i, Player in pairs (game.Players:GetPlayers()) do
-
-        if Player.Character ~= nil and Player ~= Plr then
-            local mag = (Player.Character.UpperTorso.Position - Plr.Character.UpperTorso.Position).magnitude
-            if mag < 100000 then
-                local Target = Player.Character or Player.CharacterAdded:Wait()
-
-local args = {
-    [1] = "Fire",
-    [2] = "Fire",
-    [3] = Target,
-    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Aquata"):FireServer(unpack(args))
-
-            end
-        end
-end     local Plr = game.Players.LocalPlayer
-    for i, Player in pairs (game.Players:GetPlayers()) do
-
-        if Player.Character ~= nil and Player ~= Plr then
-            local mag = (Player.Character.UpperTorso.Position - Plr.Character.UpperTorso.Position).magnitude
-            if mag < 100000 then
-                local Target = Player.Character or Player.CharacterAdded:Wait()
-
-local args = {
-    [1] = "Fire",
-    [2] = "Fire",
-    [3] = Target,
-    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Aquata"):FireServer(unpack(args))
-
-            end
-        end
-end     local Plr = game.Players.LocalPlayer
-    for i, Player in pairs (game.Players:GetPlayers()) do
-
-        if Player.Character ~= nil and Player ~= Plr then
-            local mag = (Player.Character.UpperTorso.Position - Plr.Character.UpperTorso.Position).magnitude
-            if mag < 100000 then
-                local Target = Player.Character or Player.CharacterAdded:Wait()
-
-local args = {
-    [1] = "Fire",
-    [2] = "Fire",
-    [3] = Target,
-    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Aquata"):FireServer(unpack(args))
-
-            end
-        end
-end     local Plr = game.Players.LocalPlayer
-    for i, Player in pairs (game.Players:GetPlayers()) do
-
-        if Player.Character ~= nil and Player ~= Plr then
-            local mag = (Player.Character.UpperTorso.Position - Plr.Character.UpperTorso.Position).magnitude
-            if mag < 100000 then
-                local Target = Player.Character or Player.CharacterAdded:Wait()
-
-local args = {
-    [1] = "Fire",
-    [2] = "Fire",
-    [3] = Target,
-    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Aquata"):FireServer(unpack(args))
-
-            end
-        end
-end     local Plr = game.Players.LocalPlayer
-    for i, Player in pairs (game.Players:GetPlayers()) do
-
-        if Player.Character ~= nil and Player ~= Plr then
-            local mag = (Player.Character.UpperTorso.Position - Plr.Character.UpperTorso.Position).magnitude
-            if mag < 100000 then
-                local Target = Player.Character or Player.CharacterAdded:Wait()
-
-local args = {
-    [1] = "Fire",
-    [2] = "Fire",
-    [3] = Target,
-    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Aquata"):FireServer(unpack(args))
-
-            end
-        end
-end     local Plr = game.Players.LocalPlayer
-    for i, Player in pairs (game.Players:GetPlayers()) do
-
-        if Player.Character ~= nil and Player ~= Plr then
-            local mag = (Player.Character.UpperTorso.Position - Plr.Character.UpperTorso.Position).magnitude
-            if mag < 100000 then
-                local Target = Player.Character or Player.CharacterAdded:Wait()
-
-local args = {
-    [1] = "Fire",
-    [2] = "Fire",
-    [3] = Target,
-    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Aquata"):FireServer(unpack(args))
-
-            end
-        end
-end     local Plr = game.Players.LocalPlayer
-    for i, Player in pairs (game.Players:GetPlayers()) do
-
-        if Player.Character ~= nil and Player ~= Plr then
-            local mag = (Player.Character.UpperTorso.Position - Plr.Character.UpperTorso.Position).magnitude
-            if mag < 100000 then
-                local Target = Player.Character or Player.CharacterAdded:Wait()
-
-local args = {
-    [1] = "Fire",
-    [2] = "Fire",
-    [3] = Target,
-    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Aquata"):FireServer(unpack(args))
-
-            end
-        end
-end     local Plr = game.Players.LocalPlayer
-    for i, Player in pairs (game.Players:GetPlayers()) do
-
-        if Player.Character ~= nil and Player ~= Plr then
-            local mag = (Player.Character.UpperTorso.Position - Plr.Character.UpperTorso.Position).magnitude
-            if mag < 100000 then
-                local Target = Player.Character or Player.CharacterAdded:Wait()
-
-local args = {
-    [1] = "Fire",
-    [2] = "Fire",
-    [3] = Target,
-    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Aquata"):FireServer(unpack(args))
-
-            end
-        end
-end     local Plr = game.Players.LocalPlayer
-    for i, Player in pairs (game.Players:GetPlayers()) do
-
-        if Player.Character ~= nil and Player ~= Plr then
-            local mag = (Player.Character.UpperTorso.Position - Plr.Character.UpperTorso.Position).magnitude
-            if mag < 100000 then
-                local Target = Player.Character or Player.CharacterAdded:Wait()
-
-local args = {
-    [1] = "Fire",
-    [2] = "Fire",
-    [3] = Target,
-    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Aquata"):FireServer(unpack(args))
-
-            end
-        end
-end     local Plr = game.Players.LocalPlayer
-    for i, Player in pairs (game.Players:GetPlayers()) do
-
-        if Player.Character ~= nil and Player ~= Plr then
-            local mag = (Player.Character.UpperTorso.Position - Plr.Character.UpperTorso.Position).magnitude
-            if mag < 100000 then
-                local Target = Player.Character or Player.CharacterAdded:Wait()
-
-local args = {
-    [1] = "Fire",
-    [2] = "Fire",
-    [3] = Target,
-    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Aquata"):FireServer(unpack(args))
-
-            end
-        end
-end 
-
-wait(2)
+wait(1)
 
 local args = {
     [1] = "Shatter",
     [2] = "Shatter",
-    [3] = game:GetService("Players").LocalPlayer.Character,
+    [3] = player.Character,
     [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args))
+
 local args = {
-    [1] = "Shatter",
-    [2] = "Shatter",
-    [3] = game:GetService("Players").LocalPlayer.Character,
-    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
+    [1] = "BloodBoil",
+    [2] = "Blood Boil",
+    [3] = player.Character,
+    [4] = Vector3.new(701.055908203125, 41.5108757019043, 71.009765625)
 }
 
-game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args))local args = {
-    [1] = "Shatter",
-    [2] = "Shatter",
-    [3] = game:GetService("Players").LocalPlayer.Character,
-    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Rikki"):FireServer(unpack(args))
+
+local args = {
+    [1] = "Fire",
+    [2] = "Fire",
+    [3] = player.Character,
+    [4] = Vector3.new(275.03082275390625, -25.45047378540039, 1002.78564453125)
 }
 
-game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args))local args = {
-    [1] = "Shatter",
-    [2] = "Shatter",
-    [3] = game:GetService("Players").LocalPlayer.Character,
-    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Rikki"):FireServer(unpack(args))
+
+    clicktpon = true                
+        plr = game.Players.LocalPlayer
+        hum = plr.Character.HumanoidRootPart
+        mouse = plr:GetMouse()
+        mouse.KeyDown:connect(function(key)
+        if key == '1' then
+        if mouse.Target then
+        if clicktpon then
+
+local args = {
+    [1] = "Bolt",
+    [2] = "Lightning Bolt",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z)
 }
 
-game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args))local args = {
-    [1] = "Shatter",
-    [2] = "Shatter",
-    [3] = game:GetService("Players").LocalPlayer.Character,
-    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Rikki"):FireServer(unpack(args))
+
+end
+end
+end
+end)
+
+    clicktpon = true                
+        plr = game.Players.LocalPlayer
+        hum = plr.Character.HumanoidRootPart
+        mouse = plr:GetMouse()
+        mouse.KeyDown:connect(function(key)
+        if key == '1' then
+        if mouse.Target then
+        if clicktpon then
+
+local args = {
+    [1] = "Circle",
+    [2] = "Fire Circle",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z)
 }
 
-game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args))local args = {
-    [1] = "Shatter",
-    [2] = "Shatter",
-    [3] = game:GetService("Players").LocalPlayer.Character,
-    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Rikki"):FireServer(unpack(args))
+
+end
+end
+end
+end)
+
+local args = {
+    [1] = "JellyTrap",
+    [2] = "Trap",
+    [3] = player.Character,
+    [4] = Vector3.new(1156.024658203125, 14.965455055236816, 267.38134765625)
 }
 
-game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args))local args = {
-    [1] = "Shatter",
-    [2] = "Shatter",
-    [3] = game:GetService("Players").LocalPlayer.Character,
-    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Bella"):FireServer(unpack(args))
+
+    clicktpon = true                
+        plr = game.Players.LocalPlayer
+        hum = plr.Character.HumanoidRootPart
+        mouse = plr:GetMouse()
+        mouse.KeyDown:connect(function(key)
+        if key == '1' then
+        if mouse.Target then
+        if clicktpon then
+
+local args = {
+    [1] = "Trail",
+    [2] = "Ice Trail",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z)
 }
 
-game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args))local args = {
-    [1] = "Shatter",
-    [2] = "Shatter",
-    [3] = game:GetService("Players").LocalPlayer.Character,
-    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Emma"):FireServer(unpack(args))
+
+end
+end
+end
+end)
+
+local args = {
+    [1] = "AdvFreeze",
+    [2] = "Advanced Freeze",
+    [3] = player.Character,
+    [4] = Vector3.new(-1488.1326904296875, -8.06732177734375, 433.3450927734375)
 }
 
-game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args))local args = {
-    [1] = "Shatter",
-    [2] = "Shatter",
-    [3] = game:GetService("Players").LocalPlayer.Character,
-    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Emma"):FireServer(unpack(args))
+
+    clicktpon = true                
+        plr = game.Players.LocalPlayer
+        hum = plr.Character.HumanoidRootPart
+        mouse = plr:GetMouse()
+        mouse.KeyDown:connect(function(key)
+        if key == '1' then
+        if mouse.Target then
+        if clicktpon then
+
+local args = {
+    [1] = "MassFreeze",
+    [2] = "Mass Freeze",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z)
 }
 
-game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args))local args = {
-    [1] = "Shatter",
-    [2] = "Shatter",
-    [3] = game:GetService("Players").LocalPlayer.Character,
-    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Emma"):FireServer(unpack(args))
+
+end
+end
+end
+end)
+
+local args = {
+    [1] = "Push",
+    [2] = "Push",
+    [3] = player.Character,
+    [4] = Vector3.new(352.7683410644531, -7.841368675231934, 1192.2022705078125)
 }
 
-game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args))local args = {
-    [1] = "Shatter",
-    [2] = "Shatter",
-    [3] = game:GetService("Players").LocalPlayer.Character,
-    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Cleo"):FireServer(unpack(args))
+
+local args = {
+    [1] = "Aerokinesis",
+    [2] = "Aerokinesis",
+    [3] = player.Character,
+    [4] = Vector3.new(401.2671813964844, -11.739166259765625, 702.6560668945312),
+    [5] = "Hold"
 }
 
-game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args))local args = {
-    [1] = "Shatter",
-    [2] = "Shatter",
-    [3] = game:GetService("Players").LocalPlayer.Character,
-    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Cleo"):FireServer(unpack(args))
+
+local args = {
+    [1] = "Aerokinesis",
+    [2] = "Aerokinesis",
+    [3] = player.Character,
+    [4] = Vector3.new(875.0204467773438, 40.128814697265625, -37.68428421020508),
+    [5] = "Release"
 }
 
-game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args))local args = {
-    [1] = "Shatter",
-    [2] = "Shatter",
-    [3] = game:GetService("Players").LocalPlayer.Character,
-    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Cleo"):FireServer(unpack(args))
+
+local args = {
+    [1] = "Telekinesis",
+    [2] = "Telekinesis",
+    [3] = player.Character,
+    [4] = Vector3.new(-1768.8924560546875, 22.049583435058594, -97.38066864013672),
+    [5] = "Hold"
 }
 
-game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args))local args = {
-    [1] = "Shatter",
-    [2] = "Shatter",
-    [3] = game:GetService("Players").LocalPlayer.Character,
-    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Sirena"):FireServer(unpack(args))
+
+local args = {
+    [1] = "Telekinesis",
+    [2] = "Telekinesis",
+    [3] = player.Character,
+    [4] = Vector3.new(-1768.3975830078125, 18.50927734375, -100.11398315429688),
+    [5] = "click"
 }
 
-game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args))local args = {
-    [1] = "Shatter",
-    [2] = "Shatter",
-    [3] = game:GetService("Players").LocalPlayer.Character,
-    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Sirena"):FireServer(unpack(args))
+
+local args = {
+    [1] = "Siren",
+    [2] = "Siren Lure",
+    [3] = workspace:WaitForChild("Terrain"),
+    [4] = Vector3.new(376.3300476074219, -11.454862594604492, 1014.2968139648438)
 }
 
-game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args))local args = {
-    [1] = "Shatter",
-    [2] = "Shatter",
-    [3] = game:GetService("Players").LocalPlayer.Character,
-    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Cleo"):FireServer(unpack(args))
+
+local args = {
+    [1] = "Torrent",
+    [2] = "Wind Torrent",
+    [4] = Vector3.new(-1758.801513671875, 18.515625, -97.70109558105469)
 }
 
-game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args))local args = {
-    [1] = "Shatter",
-    [2] = "Shatter",
-    [3] = game:GetService("Players").LocalPlayer.Character,
-    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
-}
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args))
 
-game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args))local args = {
-    [1] = "Shatter",
-    [2] = "Shatter",
-    [3] = game:GetService("Players").LocalPlayer.Character,
-    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
-}
+    clicktpon = true                
+        plr = game.Players.LocalPlayer
+        hum = plr.Character.HumanoidRootPart
+        mouse = plr:GetMouse()
+        mouse.KeyDown:connect(function(key)
+        if key == '1' then
+        if mouse.Target then
+        if clicktpon then
 
-game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args))local args = {
-    [1] = "Shatter",
-    [2] = "Shatter",
-    [3] = game:GetService("Players").LocalPlayer.Character,
-    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args))local args = {
-    [1] = "Shatter",
-    [2] = "Shatter",
-    [3] = game:GetService("Players").LocalPlayer.Character,
-    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args))local args = {
-    [1] = "Shatter",
-    [2] = "Shatter",
-    [3] = game:GetService("Players").LocalPlayer.Character,
-    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args))local args = {
-    [1] = "Shatter",
-    [2] = "Shatter",
-    [3] = game:GetService("Players").LocalPlayer.Character,
-    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args))local args = {
-    [1] = "Shatter",
-    [2] = "Shatter",
-    [3] = game:GetService("Players").LocalPlayer.Character,
-    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args))local args = {
-    [1] = "Shatter",
-    [2] = "Shatter",
-    [3] = game:GetService("Players").LocalPlayer.Character,
-    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args))local args = {
-    [1] = "Shatter",
-    [2] = "Shatter",
-    [3] = game:GetService("Players").LocalPlayer.Character,
-    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args))local args = {
-    [1] = "Shatter",
-    [2] = "Shatter",
-    [3] = game:GetService("Players").LocalPlayer.Character,
-    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args))local args = {
-    [1] = "Shatter",
-    [2] = "Shatter",
-    [3] = game:GetService("Players").LocalPlayer.Character,
-    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args))local args = {
-    [1] = "Shatter",
-    [2] = "Shatter",
-    [3] = game:GetService("Players").LocalPlayer.Character,
-    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args))local args = {
-    [1] = "Shatter",
-    [2] = "Shatter",
-    [3] = game:GetService("Players").LocalPlayer.Character,
-    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args))local args = {
-    [1] = "Shatter",
-    [2] = "Shatter",
-    [3] = game:GetService("Players").LocalPlayer.Character,
-    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args))local args = {
-    [1] = "Shatter",
-    [2] = "Shatter",
-    [3] = game:GetService("Players").LocalPlayer.Character,
-    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args))local args = {
-    [1] = "Shatter",
-    [2] = "Shatter",
-    [3] = game:GetService("Players").LocalPlayer.Character,
-    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args))local args = {
-    [1] = "Shatter",
-    [2] = "Shatter",
-    [3] = game:GetService("Players").LocalPlayer.Character,
-    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args))local args = {
-    [1] = "Shatter",
-    [2] = "Shatter",
-    [3] = game:GetService("Players").LocalPlayer.Character,
-    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args))local args = {
-    [1] = "Shatter",
-    [2] = "Shatter",
-    [3] = game:GetService("Players").LocalPlayer.Character,
-    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args))local args = {
-    [1] = "Shatter",
-    [2] = "Shatter",
-    [3] = game:GetService("Players").LocalPlayer.Character,
-    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args))local args = {
-    [1] = "Shatter",
-    [2] = "Shatter",
-    [3] = game:GetService("Players").LocalPlayer.Character,
-    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args))local args = {
-    [1] = "Shatter",
-    [2] = "Shatter",
-    [3] = game:GetService("Players").LocalPlayer.Character,
-    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
+local args = {
+    [1] = "AdvLightning",
+    [2] = "Lightning Strikes",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z)
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args))
 
 end
+end
+end
 end)
 
+local args = {
+    [1] = "AreaTele",
+    [2] = "Area Telekinesis",
+    [3] = workspace:WaitForChild("Terrain"),
+    [4] = Vector3.new(237.18614196777344, 1.5195999145507812, -58.25132369995117)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Aquata"):FireServer(unpack(args))
+
+    clicktpon = true                
+        plr = game.Players.LocalPlayer
+        hum = plr.Character.HumanoidRootPart
+        mouse = plr:GetMouse()
+        mouse.KeyDown:connect(function(key)
+        if key == '1' then
+        if mouse.Target then
+        if clicktpon then
+
+local args = {
+    [1] = "Wave",
+    [2] = "Wind Projectile",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 1.5, mouse.Hit.z)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Aquata"):FireServer(unpack(args))
+
+end
+end
+end
+end)
+
+    clicktpon = true                
+        plr = game.Players.LocalPlayer
+        hum = plr.Character.HumanoidRootPart
+        mouse = plr:GetMouse()
+        mouse.KeyDown:connect(function(key)
+        if key == '1' then
+        if mouse.Target then
+        if clicktpon then
+
+local args = {
+    [1] = "Bolt",
+    [2] = "Lightning Bolt",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Aquata"):FireServer(unpack(args))
+
+end
+end
+end
+end)
+
+local args = {
+    [1] = "Ability",
+    [2] = "Shine",
+    [3] = workspace:WaitForChild("Terrain"),
+    [4] = Vector3.new(1061.208740234375, 11.015624046325684, 230.439697265625)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Aquata"):FireServer(unpack(args))
+
+
+            end
+        end
+        end)
+        end)
+
+
+BennettSection:NewToggle("You Have Exhausted My Patients", "Keybind (2)", function()
+    print("You just clicked the bind")
+
+
+
+    local function getPlayer()
+        local userInput = game:GetService("UserInputService")
+        local cam = workspace.CurrentCamera
+        local mousePos = userInput:GetMouseLocation()
+        local mouseRay = cam:ViewportPointToRay(mousePos.X, mousePos.Y)
+        players = {}
+        for _, x in next, game:GetService('Players'):GetPlayers() do
+            players[#players + 1] = x.Character
+        end
+        local raycastParams = RaycastParams.new()
+        raycastParams.FilterType = Enum.RaycastFilterType.Whitelist
+        raycastParams.FilterDescendantsInstances = players
+        raycastParams.IgnoreWater = true
+        local raycastResult = workspace:Raycast(mouseRay.Origin, mouseRay.Direction * 1000, raycastParams)
+        if raycastResult then
+            for _, x in next, game:GetService('Players'):GetPlayers() do
+                if not raycastResult.Instance:IsDescendantOf(x.Character) then
+                    continue
+                end
+                return x
+            end
+        end
+        return false
+    end
+
+    local function Set(list)
+        local set = {}
+        for _, l in ipairs(list) do
+            if l then
+                set[l] = true
+            end
+        end
+        return set
+    end
+
+    game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
+        if key == "2" then
+            local player = getPlayer()
+            if player then
+
+local args = {
+    [1] = "You Have Exhausted My Patients",
+    [2] = "All"
+}
+
+game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
+wait(1)
+
+local args = {
+    [1] = "Shatter",
+    [2] = "Shatter",
+    [3] = player.Character,
+    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args))
+
+local args = {
+    [1] = "BloodBoil",
+    [2] = "Blood Boil",
+    [3] = player.Character,
+    [4] = Vector3.new(701.055908203125, 41.5108757019043, 71.009765625)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Rikki"):FireServer(unpack(args))
+
+local args = {
+    [1] = "Fire",
+    [2] = "Fire",
+    [3] = player.Character,
+    [4] = Vector3.new(275.03082275390625, -25.45047378540039, 1002.78564453125)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Rikki"):FireServer(unpack(args))
+
+    clicktpon = true                
+        plr = game.Players.LocalPlayer
+        hum = plr.Character.HumanoidRootPart
+        mouse = plr:GetMouse()
+        mouse.KeyDown:connect(function(key)
+        if key == '2' then
+        if mouse.Target then
+        if clicktpon then
+
+local args = {
+    [1] = "Bolt",
+    [2] = "Lightning Bolt",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Rikki"):FireServer(unpack(args))
+
+end
+end
+end
+end)
+
+    clicktpon = true                
+        plr = game.Players.LocalPlayer
+        hum = plr.Character.HumanoidRootPart
+        mouse = plr:GetMouse()
+        mouse.KeyDown:connect(function(key)
+        if key == '2' then
+        if mouse.Target then
+        if clicktpon then
+
+local args = {
+    [1] = "Circle",
+    [2] = "Fire Circle",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Rikki"):FireServer(unpack(args))
+
+end
+end
+end
+end)
+
+local args = {
+    [1] = "JellyTrap",
+    [2] = "Trap",
+    [3] = player.Character,
+    [4] = Vector3.new(1156.024658203125, 14.965455055236816, 267.38134765625)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Bella"):FireServer(unpack(args))
+
+    clicktpon = true                
+        plr = game.Players.LocalPlayer
+        hum = plr.Character.HumanoidRootPart
+        mouse = plr:GetMouse()
+        mouse.KeyDown:connect(function(key)
+        if key == '2' then
+        if mouse.Target then
+        if clicktpon then
+
+local args = {
+    [1] = "Trail",
+    [2] = "Ice Trail",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Emma"):FireServer(unpack(args))
+
+end
+end
+end
+end)
+
+local args = {
+    [1] = "AdvFreeze",
+    [2] = "Advanced Freeze",
+    [3] = player.Character,
+    [4] = Vector3.new(-1488.1326904296875, -8.06732177734375, 433.3450927734375)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Emma"):FireServer(unpack(args))
+
+    clicktpon = true                
+        plr = game.Players.LocalPlayer
+        hum = plr.Character.HumanoidRootPart
+        mouse = plr:GetMouse()
+        mouse.KeyDown:connect(function(key)
+        if key == '2' then
+        if mouse.Target then
+        if clicktpon then
+
+local args = {
+    [1] = "MassFreeze",
+    [2] = "Mass Freeze",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Emma"):FireServer(unpack(args))
+
+end
+end
+end
+end)
+
+local args = {
+    [1] = "Push",
+    [2] = "Push",
+    [3] = player.Character,
+    [4] = Vector3.new(352.7683410644531, -7.841368675231934, 1192.2022705078125)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Cleo"):FireServer(unpack(args))
+
+local args = {
+    [1] = "Aerokinesis",
+    [2] = "Aerokinesis",
+    [3] = player.Character,
+    [4] = Vector3.new(401.2671813964844, -11.739166259765625, 702.6560668945312),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Cleo"):FireServer(unpack(args))
+
+local args = {
+    [1] = "Aerokinesis",
+    [2] = "Aerokinesis",
+    [3] = player.Character,
+    [4] = Vector3.new(875.0204467773438, 40.128814697265625, -37.68428421020508),
+    [5] = "Release"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Cleo"):FireServer(unpack(args))
+
+local args = {
+    [1] = "Telekinesis",
+    [2] = "Telekinesis",
+    [3] = player.Character,
+    [4] = Vector3.new(-1768.8924560546875, 22.049583435058594, -97.38066864013672),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Sirena"):FireServer(unpack(args))
+
+local args = {
+    [1] = "Telekinesis",
+    [2] = "Telekinesis",
+    [3] = player.Character,
+    [4] = Vector3.new(-1768.3975830078125, 18.50927734375, -100.11398315429688),
+    [5] = "click"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Sirena"):FireServer(unpack(args))
+
+local args = {
+    [1] = "Siren",
+    [2] = "Siren Lure",
+    [3] = workspace:WaitForChild("Terrain"),
+    [4] = Vector3.new(376.3300476074219, -11.454862594604492, 1014.2968139648438)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Cleo"):FireServer(unpack(args))
+
+local args = {
+    [1] = "Torrent",
+    [2] = "Wind Torrent",
+    [4] = Vector3.new(-1758.801513671875, 18.515625, -97.70109558105469)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args))
+
+    clicktpon = true                
+        plr = game.Players.LocalPlayer
+        hum = plr.Character.HumanoidRootPart
+        mouse = plr:GetMouse()
+        mouse.KeyDown:connect(function(key)
+        if key == '2' then
+        if mouse.Target then
+        if clicktpon then
+
+local args = {
+    [1] = "AdvLightning",
+    [2] = "Lightning Strikes",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args))
+
+end
+end
+end
+end)
+
+local args = {
+    [1] = "AreaTele",
+    [2] = "Area Telekinesis",
+    [3] = workspace:WaitForChild("Terrain"),
+    [4] = Vector3.new(237.18614196777344, 1.5195999145507812, -58.25132369995117)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Aquata"):FireServer(unpack(args))
+
+    clicktpon = true                
+        plr = game.Players.LocalPlayer
+        hum = plr.Character.HumanoidRootPart
+        mouse = plr:GetMouse()
+        mouse.KeyDown:connect(function(key)
+        if key == '2' then
+        if mouse.Target then
+        if clicktpon then
+
+local args = {
+    [1] = "Wave",
+    [2] = "Wind Projectile",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 1.5, mouse.Hit.z)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Aquata"):FireServer(unpack(args))
+
+end
+end
+end
+end)
+
+    clicktpon = true                
+        plr = game.Players.LocalPlayer
+        hum = plr.Character.HumanoidRootPart
+        mouse = plr:GetMouse()
+        mouse.KeyDown:connect(function(key)
+        if key == '2' then
+        if mouse.Target then
+        if clicktpon then
+
+local args = {
+    [1] = "Bolt",
+    [2] = "Lightning Bolt",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Aquata"):FireServer(unpack(args))
+
+end
+end
+end
+end)
+
+local args = {
+    [1] = "Ability",
+    [2] = "Shine",
+    [3] = workspace:WaitForChild("Terrain"),
+    [4] = Vector3.new(1061.208740234375, 11.015624046325684, 230.439697265625)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Aquata"):FireServer(unpack(args))
+
+
+            end
+        end
+        end)
+        end)
+
+        BennettSection:NewToggle("Being Reasonable", "Keybind (3)", function()
+
+    clicktpon = true                
+        plr = game.Players.LocalPlayer
+        hum = plr.Character.HumanoidRootPart
+        mouse = plr:GetMouse()
+        mouse.KeyDown:connect(function(key)
+        if key == '3' then
+        if mouse.Target then
+        if clicktpon then
+
+local args = {
+    [1] = "This Is Me...",
+    [2] = "All"
+}
+
+game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
+wait(2)
+
+local args = {
+    [1] = "Being...",
+    [2] = "All"
+}
+
+game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
+wait(2)
+
+local args = {
+    [1] = "Reasonable",
+    [2] = "All"
+}
+
+game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+ wait(1)
+
+local args = {
+    [1] = "MassBoil",
+    [2] = "Mass Boil",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"):FireServer(unpack(args))
+
+local args = {
+    [1] = "MassBoil",
+    [2] = "Mass Boil",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"):FireServer(unpack(args))local args = {
+    [1] = "MassBoil",
+    [2] = "Mass Boil",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"):FireServer(unpack(args))local args = {
+    [1] = "MassBoil",
+    [2] = "Mass Boil",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"):FireServer(unpack(args))local args = {
+    [1] = "MassBoil",
+    [2] = "Mass Boil",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"):FireServer(unpack(args))local args = {
+    [1] = "MassBoil",
+    [2] = "Mass Boil",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"):FireServer(unpack(args))local args = {
+    [1] = "MassBoil",
+    [2] = "Mass Boil",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"):FireServer(unpack(args))local args = {
+    [1] = "MassBoil",
+    [2] = "Mass Boil",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"):FireServer(unpack(args))local args = {
+    [1] = "MassBoil",
+    [2] = "Mass Boil",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"):FireServer(unpack(args))local args = {
+    [1] = "MassBoil",
+    [2] = "Mass Boil",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"):FireServer(unpack(args))local args = {
+    [1] = "MassBoil",
+    [2] = "Mass Boil",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"):FireServer(unpack(args))local args = {
+    [1] = "MassBoil",
+    [2] = "Mass Boil",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"):FireServer(unpack(args))local args = {
+    [1] = "MassBoil",
+    [2] = "Mass Boil",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"):FireServer(unpack(args))local args = {
+    [1] = "MassBoil",
+    [2] = "Mass Boil",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"):FireServer(unpack(args))local args = {
+    [1] = "MassBoil",
+    [2] = "Mass Boil",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"):FireServer(unpack(args))local args = {
+    [1] = "MassBoil",
+    [2] = "Mass Boil",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"):FireServer(unpack(args))local args = {
+    [1] = "MassBoil",
+    [2] = "Mass Boil",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"):FireServer(unpack(args))local args = {
+    [1] = "MassBoil",
+    [2] = "Mass Boil",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"):FireServer(unpack(args))local args = {
+    [1] = "MassBoil",
+    [2] = "Mass Boil",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"):FireServer(unpack(args))local args = {
+    [1] = "MassBoil",
+    [2] = "Mass Boil",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"):FireServer(unpack(args))local args = {
+    [1] = "MassBoil",
+    [2] = "Mass Boil",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"):FireServer(unpack(args))local args = {
+    [1] = "MassBoil",
+    [2] = "Mass Boil",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"):FireServer(unpack(args))local args = {
+    [1] = "MassBoil",
+    [2] = "Mass Boil",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"):FireServer(unpack(args))local args = {
+    [1] = "MassBoil",
+    [2] = "Mass Boil",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"):FireServer(unpack(args))local args = {
+    [1] = "MassBoil",
+    [2] = "Mass Boil",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"):FireServer(unpack(args))local args = {
+    [1] = "MassBoil",
+    [2] = "Mass Boil",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"):FireServer(unpack(args))local args = {
+    [1] = "MassBoil",
+    [2] = "Mass Boil",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"):FireServer(unpack(args))local args = {
+    [1] = "MassBoil",
+    [2] = "Mass Boil",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"):FireServer(unpack(args))local args = {
+    [1] = "MassBoil",
+    [2] = "Mass Boil",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"):FireServer(unpack(args))local args = {
+    [1] = "MassBoil",
+    [2] = "Mass Boil",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"):FireServer(unpack(args))local args = {
+    [1] = "MassBoil",
+    [2] = "Mass Boil",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"):FireServer(unpack(args))local args = {
+    [1] = "MassBoil",
+    [2] = "Mass Boil",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"):FireServer(unpack(args))local args = {
+    [1] = "MassBoil",
+    [2] = "Mass Boil",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"):FireServer(unpack(args))local args = {
+    [1] = "MassBoil",
+    [2] = "Mass Boil",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"):FireServer(unpack(args))local args = {
+    [1] = "MassBoil",
+    [2] = "Mass Boil",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"):FireServer(unpack(args))local args = {
+    [1] = "MassBoil",
+    [2] = "Mass Boil",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"):FireServer(unpack(args))local args = {
+    [1] = "MassBoil",
+    [2] = "Mass Boil",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"):FireServer(unpack(args))local args = {
+    [1] = "MassBoil",
+    [2] = "Mass Boil",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"):FireServer(unpack(args))local args = {
+    [1] = "MassBoil",
+    [2] = "Mass Boil",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"):FireServer(unpack(args))local args = {
+    [1] = "MassBoil",
+    [2] = "Mass Boil",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"):FireServer(unpack(args))local args = {
+    [1] = "MassBoil",
+    [2] = "Mass Boil",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"):FireServer(unpack(args))local args = {
+    [1] = "MassBoil",
+    [2] = "Mass Boil",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"):FireServer(unpack(args))local args = {
+    [1] = "MassBoil",
+    [2] = "Mass Boil",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"):FireServer(unpack(args))local args = {
+    [1] = "MassBoil",
+    [2] = "Mass Boil",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"):FireServer(unpack(args))local args = {
+    [1] = "MassBoil",
+    [2] = "Mass Boil",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"):FireServer(unpack(args))local args = {
+    [1] = "MassBoil",
+    [2] = "Mass Boil",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"):FireServer(unpack(args))local args = {
+    [1] = "MassBoil",
+    [2] = "Mass Boil",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"):FireServer(unpack(args))local args = {
+    [1] = "MassBoil",
+    [2] = "Mass Boil",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"):FireServer(unpack(args))local args = {
+    [1] = "MassBoil",
+    [2] = "Mass Boil",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"):FireServer(unpack(args))local args = {
+    [1] = "MassBoil",
+    [2] = "Mass Boil",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"):FireServer(unpack(args))local args = {
+    [1] = "MassBoil",
+    [2] = "Mass Boil",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"):FireServer(unpack(args))local args = {
+    [1] = "MassBoil",
+    [2] = "Mass Boil",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"):FireServer(unpack(args))local args = {
+    [1] = "MassBoil",
+    [2] = "Mass Boil",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"):FireServer(unpack(args))local args = {
+    [1] = "MassBoil",
+    [2] = "Mass Boil",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"):FireServer(unpack(args))local args = {
+    [1] = "MassBoil",
+    [2] = "Mass Boil",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"):FireServer(unpack(args))local args = {
+    [1] = "MassBoil",
+    [2] = "Mass Boil",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"):FireServer(unpack(args))local args = {
+    [1] = "MassBoil",
+    [2] = "Mass Boil",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"):FireServer(unpack(args))local args = {
+    [1] = "MassBoil",
+    [2] = "Mass Boil",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"):FireServer(unpack(args))local args = {
+    [1] = "MassBoil",
+    [2] = "Mass Boil",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"):FireServer(unpack(args))
+
+end
+end
+end
+end)
+end)
+
+BennettSection:NewButton("Remove Effects After Spell", " ", function()
+
+local args = {
+    [1] = "MassBoil",
+    [2] = "Mass Boil",
+    [4] = Vector3.new(374.21405029296875, -15.609375, 975.845947265625),
+    [5] = "Release"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rikki"):FireServer(unpack(args))
+
+end)
+
+local Bennett = Window:NewTab("Misc")
+local BennettSection = Bennett:NewSection("")
+BennettSection:NewButton("Get Flash light", "", function()
+local args = {
+    [1] = "Flash Light",
+    [2] = workspace:WaitForChild("ShopItems"):WaitForChild("Flash Light"):WaitForChild("ProximityPrompt"):WaitForChild("Cost")
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("Purchase"):FireServer(unpack(args))
+    print("Clicked")
+end)
+
+BennettSection:NewButton("Get Pink goo", "", function()
+local args = {
+    [1] = "Pink Goo",
+    [2] = workspace:WaitForChild("ShopItems"):WaitForChild("Pink Goo"):WaitForChild("ProximityPrompt"):WaitForChild("Cost")
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("Purchase"):FireServer(unpack(args))
+    print("Clicked")
+end)
+
+BennettSection:NewButton("Get 50 Moons Potion", "", function()
+local args = {
+    [1] = "50 Moons Potion",
+    [2] = workspace:WaitForChild("ShopItems"):WaitForChild("50 Moons Potion"):WaitForChild("ProximityPrompt"):WaitForChild("Cost")
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("Purchase"):FireServer(unpack(args))
+    print("Clicked")
+end)
+BennettSection:NewButton("Infinite Yield", "", function()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Omg562/Scripts/main/INF'),true))()
+end)
 
 local Tab = Window:NewTab("Credits")
 local SettingsSection = Tab:NewSection("discord: bennettscripts")
@@ -1034,7 +2710,7 @@ wait(1)
 
 game.StarterGui:SetCore("SendNotification", { 
     Title = "⛤ Bennett Scripts ⛤";
-    Text = "Custom Script";
+    Text = "H2O Custom Script";
     Icon = "rbxthumb://type=Asset&id=14067496704&w=150&h=150";
     Duration = "2";
     Button1 = "Close";
