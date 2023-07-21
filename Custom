@@ -2,7 +2,7 @@ local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHept
 local Window = Library.CreateLib("Bennett Scripts | H2O: Mako Magic", "GrapeTheme")
 
 local Bennett = Window:NewTab("Characters")
-local BennettSection = Bennett:NewSection("Half Mermaid")
+local BennettSection = Bennett:NewSection("Characters")
 
 BennettSection:NewButton("Siren Sirena Outfit 1", " ", function()
 
@@ -162,7 +162,7 @@ local Bennett = Window:NewTab("Custom Spells")
 local BennettSection = Bennett:NewSection("Bennett")
 
 BennettSection:NewButton("Summon Expression", " ", function()
-
+if game:GetService("Players").LocalPlayer.UserId == 4831686579 then
 local args = {
     [1] = "I Have Every Magic!",
     [2] = "All"
@@ -527,6 +527,278 @@ game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForCh
         end
 end 
 
+wait(2)
+
+local args = {
+    [1] = "Shatter",
+    [2] = "Shatter",
+    [3] = game:GetService("Players").LocalPlayer.Character,
+    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args))
+local args = {
+    [1] = "Shatter",
+    [2] = "Shatter",
+    [3] = game:GetService("Players").LocalPlayer.Character,
+    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args))local args = {
+    [1] = "Shatter",
+    [2] = "Shatter",
+    [3] = game:GetService("Players").LocalPlayer.Character,
+    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args))local args = {
+    [1] = "Shatter",
+    [2] = "Shatter",
+    [3] = game:GetService("Players").LocalPlayer.Character,
+    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args))local args = {
+    [1] = "Shatter",
+    [2] = "Shatter",
+    [3] = game:GetService("Players").LocalPlayer.Character,
+    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args))local args = {
+    [1] = "Shatter",
+    [2] = "Shatter",
+    [3] = game:GetService("Players").LocalPlayer.Character,
+    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args))local args = {
+    [1] = "Shatter",
+    [2] = "Shatter",
+    [3] = game:GetService("Players").LocalPlayer.Character,
+    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args))local args = {
+    [1] = "Shatter",
+    [2] = "Shatter",
+    [3] = game:GetService("Players").LocalPlayer.Character,
+    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args))local args = {
+    [1] = "Shatter",
+    [2] = "Shatter",
+    [3] = game:GetService("Players").LocalPlayer.Character,
+    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args))local args = {
+    [1] = "Shatter",
+    [2] = "Shatter",
+    [3] = game:GetService("Players").LocalPlayer.Character,
+    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args))local args = {
+    [1] = "Shatter",
+    [2] = "Shatter",
+    [3] = game:GetService("Players").LocalPlayer.Character,
+    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args))local args = {
+    [1] = "Shatter",
+    [2] = "Shatter",
+    [3] = game:GetService("Players").LocalPlayer.Character,
+    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args))local args = {
+    [1] = "Shatter",
+    [2] = "Shatter",
+    [3] = game:GetService("Players").LocalPlayer.Character,
+    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args))local args = {
+    [1] = "Shatter",
+    [2] = "Shatter",
+    [3] = game:GetService("Players").LocalPlayer.Character,
+    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args))local args = {
+    [1] = "Shatter",
+    [2] = "Shatter",
+    [3] = game:GetService("Players").LocalPlayer.Character,
+    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args))local args = {
+    [1] = "Shatter",
+    [2] = "Shatter",
+    [3] = game:GetService("Players").LocalPlayer.Character,
+    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args))local args = {
+    [1] = "Shatter",
+    [2] = "Shatter",
+    [3] = game:GetService("Players").LocalPlayer.Character,
+    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args))local args = {
+    [1] = "Shatter",
+    [2] = "Shatter",
+    [3] = game:GetService("Players").LocalPlayer.Character,
+    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args))local args = {
+    [1] = "Shatter",
+    [2] = "Shatter",
+    [3] = game:GetService("Players").LocalPlayer.Character,
+    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args))local args = {
+    [1] = "Shatter",
+    [2] = "Shatter",
+    [3] = game:GetService("Players").LocalPlayer.Character,
+    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args))local args = {
+    [1] = "Shatter",
+    [2] = "Shatter",
+    [3] = game:GetService("Players").LocalPlayer.Character,
+    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args))local args = {
+    [1] = "Shatter",
+    [2] = "Shatter",
+    [3] = game:GetService("Players").LocalPlayer.Character,
+    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args))local args = {
+    [1] = "Shatter",
+    [2] = "Shatter",
+    [3] = game:GetService("Players").LocalPlayer.Character,
+    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args))local args = {
+    [1] = "Shatter",
+    [2] = "Shatter",
+    [3] = game:GetService("Players").LocalPlayer.Character,
+    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args))local args = {
+    [1] = "Shatter",
+    [2] = "Shatter",
+    [3] = game:GetService("Players").LocalPlayer.Character,
+    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args))local args = {
+    [1] = "Shatter",
+    [2] = "Shatter",
+    [3] = game:GetService("Players").LocalPlayer.Character,
+    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args))local args = {
+    [1] = "Shatter",
+    [2] = "Shatter",
+    [3] = game:GetService("Players").LocalPlayer.Character,
+    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args))local args = {
+    [1] = "Shatter",
+    [2] = "Shatter",
+    [3] = game:GetService("Players").LocalPlayer.Character,
+    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args))local args = {
+    [1] = "Shatter",
+    [2] = "Shatter",
+    [3] = game:GetService("Players").LocalPlayer.Character,
+    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args))local args = {
+    [1] = "Shatter",
+    [2] = "Shatter",
+    [3] = game:GetService("Players").LocalPlayer.Character,
+    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args))local args = {
+    [1] = "Shatter",
+    [2] = "Shatter",
+    [3] = game:GetService("Players").LocalPlayer.Character,
+    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args))local args = {
+    [1] = "Shatter",
+    [2] = "Shatter",
+    [3] = game:GetService("Players").LocalPlayer.Character,
+    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args))local args = {
+    [1] = "Shatter",
+    [2] = "Shatter",
+    [3] = game:GetService("Players").LocalPlayer.Character,
+    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args))local args = {
+    [1] = "Shatter",
+    [2] = "Shatter",
+    [3] = game:GetService("Players").LocalPlayer.Character,
+    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args))local args = {
+    [1] = "Shatter",
+    [2] = "Shatter",
+    [3] = game:GetService("Players").LocalPlayer.Character,
+    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args))local args = {
+    [1] = "Shatter",
+    [2] = "Shatter",
+    [3] = game:GetService("Players").LocalPlayer.Character,
+    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args))local args = {
+    [1] = "Shatter",
+    [2] = "Shatter",
+    [3] = game:GetService("Players").LocalPlayer.Character,
+    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args))local args = {
+    [1] = "Shatter",
+    [2] = "Shatter",
+    [3] = game:GetService("Players").LocalPlayer.Character,
+    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args))
+
+end
 end)
 
 local Tab = Window:NewTab("Credits")
