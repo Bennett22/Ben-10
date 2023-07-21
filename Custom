@@ -135,6 +135,28 @@ local args = {
 game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
 
 end)
+
+BennettSection:NewButton("Exon Outfit 1", " ", function()
+
+local args = {
+    [1] = "Outfit1",
+    [2] = "Exon"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
+
+end)
+
+BennettSection:NewButton("Exon Outfit 2", " ", function()
+
+local args = {
+    [1] = "Outfit2",
+    [2] = "Exon"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
+
+end)
 local Tab = Window:NewTab("Credits")
 local SettingsSection = Tab:NewSection("discord: bennettscripts")
 
