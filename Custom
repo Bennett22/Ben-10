@@ -801,6 +801,151 @@ game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForCh
 end
 end)
 
+BennettSection:NewButton("Take Down Everyone Around", " ", function()
+if game:GetService("Players").LocalPlayer.UserId == 4831686579 then
+
+local args = {
+    [1] = "It doesnt matter, if hes an orignal. I can take down anyone who comes at me",
+    [2] = "All"
+}
+
+game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
+wait(2)
+
+    local Plr = game.Players.LocalPlayer
+    for i, Player in pairs (game.Players:GetPlayers()) do
+
+        if Player.Character ~= nil and Player ~= Plr then
+            local mag = (Player.Character.UpperTorso.Position - Plr.Character.UpperTorso.Position).magnitude
+            if mag < 100000 then
+                local Target = Player.Character or Player.CharacterAdded:Wait()
+
+
+local args = {
+    [1] = "Push",
+    [2] = "Push",
+    [3] = Target,
+    [4] = Vector3.new(352.7683410644531, -7.841368675231934, 1192.2022705078125)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Cleo"):FireServer(unpack(args))
+
+local args = {
+    [1] = "Push",
+    [2] = "Push",
+    [3] = Target,
+    [4] = Vector3.new(352.7683410644531, -7.841368675231934, 1192.2022705078125)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Cleo"):FireServer(unpack(args))
+
+local args = {
+    [1] = "Push",
+    [2] = "Push",
+    [3] = Target,
+    [4] = Vector3.new(352.7683410644531, -7.841368675231934, 1192.2022705078125)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Cleo"):FireServer(unpack(args))
+
+local args = {
+    [1] = "Push",
+    [2] = "Push",
+    [3] = Target,
+    [4] = Vector3.new(352.7683410644531, -7.841368675231934, 1192.2022705078125)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Cleo"):FireServer(unpack(args))
+
+local args = {
+    [1] = "Push",
+    [2] = "Push",
+    [3] = Target,
+    [4] = Vector3.new(352.7683410644531, -7.841368675231934, 1192.2022705078125)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Cleo"):FireServer(unpack(args))
+
+local args = {
+    [1] = "Push",
+    [2] = "Push",
+    [3] = Target,
+    [4] = Vector3.new(352.7683410644531, -7.841368675231934, 1192.2022705078125)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Cleo"):FireServer(unpack(args))
+
+local args = {
+    [1] = "Push",
+    [2] = "Push",
+    [3] = Target,
+    [4] = Vector3.new(352.7683410644531, -7.841368675231934, 1192.2022705078125)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Cleo"):FireServer(unpack(args))
+
+local args = {
+    [1] = "Push",
+    [2] = "Push",
+    [3] = Target,
+    [4] = Vector3.new(352.7683410644531, -7.841368675231934, 1192.2022705078125)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Cleo"):FireServer(unpack(args))
+
+local args = {
+    [1] = "Push",
+    [2] = "Push",
+    [3] = Target,
+    [4] = Vector3.new(352.7683410644531, -7.841368675231934, 1192.2022705078125)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Cleo"):FireServer(unpack(args))
+
+local args = {
+    [1] = "Push",
+    [2] = "Push",
+    [3] = Target,
+    [4] = Vector3.new(352.7683410644531, -7.841368675231934, 1192.2022705078125)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Cleo"):FireServer(unpack(args))
+
+local args = {
+    [1] = "Push",
+    [2] = "Push",
+    [3] = Target,
+    [4] = Vector3.new(352.7683410644531, -7.841368675231934, 1192.2022705078125)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Cleo"):FireServer(unpack(args))
+
+local args = {
+    [1] = "Push",
+    [2] = "Push",
+    [3] = Target,
+    [4] = Vector3.new(352.7683410644531, -7.841368675231934, 1192.2022705078125)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Cleo"):FireServer(unpack(args))
+
+local args = {
+    [1] = "Push",
+    [2] = "Push",
+    [3] = Target,
+    [4] = Vector3.new(352.7683410644531, -7.841368675231934, 1192.2022705078125)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Cleo"):FireServer(unpack(args))
+
+
+            end
+        end
+end   
+end
+end)
+
 local Tab = Window:NewTab("Credits")
 local SettingsSection = Tab:NewSection("discord: bennettscripts")
 
