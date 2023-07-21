@@ -7191,8 +7191,8 @@ end)
 BennettSection:NewButton("Infinite Yield", "", function()
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/Omg562/Scripts/main/INF'),true))()
 end)
-local BennettSection = Bennett:NewSection("Mine & 𝓢𝓬𝓪𝓻𝓵𝓮𝓽 𝓦𝓲𝓽𝓬𝓱#7870")
-BennettSection:NewButton("𝓢𝓬𝓪𝓻𝓵𝓮𝓽 𝓦𝓲𝓽𝓬𝓱#7870", "", function()
+local BennettSection = Bennett:NewSection("Mine & Scarlet Witches")
+BennettSection:NewButton("Scarlet Witches", "", function()
 if game:GetService("Players").LocalPlayer.UserId == 1032906063 then
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Bennett-Scripts/main/Custom'),true))()
 end
