@@ -823,126 +823,202 @@ wait(2)
 
 
 local args = {
-    [1] = "Push",
-    [2] = "Push",
+    [1] = "Shatter",
+    [2] = "Shatter",
     [3] = Target,
-    [4] = Vector3.new(352.7683410644531, -7.841368675231934, 1192.2022705078125)
+    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
 }
 
-game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Cleo"):FireServer(unpack(args))
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args)
+
 
 local args = {
-    [1] = "Push",
-    [2] = "Push",
+    [1] = "Shatter",
+    [2] = "Shatter",
     [3] = Target,
-    [4] = Vector3.new(352.7683410644531, -7.841368675231934, 1192.2022705078125)
+    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
 }
 
-game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Cleo"):FireServer(unpack(args))
-
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args)
 local args = {
-    [1] = "Push",
-    [2] = "Push",
+    [1] = "Shatter",
+    [2] = "Shatter",
     [3] = Target,
-    [4] = Vector3.new(352.7683410644531, -7.841368675231934, 1192.2022705078125)
+    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
 }
 
-game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Cleo"):FireServer(unpack(args))
-
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args)
 local args = {
-    [1] = "Push",
-    [2] = "Push",
+    [1] = "Shatter",
+    [2] = "Shatter",
     [3] = Target,
-    [4] = Vector3.new(352.7683410644531, -7.841368675231934, 1192.2022705078125)
+    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
 }
 
-game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Cleo"):FireServer(unpack(args))
-
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args)
 local args = {
-    [1] = "Push",
-    [2] = "Push",
+    [1] = "Shatter",
+    [2] = "Shatter",
     [3] = Target,
-    [4] = Vector3.new(352.7683410644531, -7.841368675231934, 1192.2022705078125)
+    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
 }
 
-game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Cleo"):FireServer(unpack(args))
-
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args)
 local args = {
-    [1] = "Push",
-    [2] = "Push",
+    [1] = "Shatter",
+    [2] = "Shatter",
     [3] = Target,
-    [4] = Vector3.new(352.7683410644531, -7.841368675231934, 1192.2022705078125)
+    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
 }
 
-game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Cleo"):FireServer(unpack(args))
-
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args)
 local args = {
-    [1] = "Push",
-    [2] = "Push",
+    [1] = "Shatter",
+    [2] = "Shatter",
     [3] = Target,
-    [4] = Vector3.new(352.7683410644531, -7.841368675231934, 1192.2022705078125)
+    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
 }
 
-game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Cleo"):FireServer(unpack(args))
-
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args)
 local args = {
-    [1] = "Push",
-    [2] = "Push",
+    [1] = "Shatter",
+    [2] = "Shatter",
     [3] = Target,
-    [4] = Vector3.new(352.7683410644531, -7.841368675231934, 1192.2022705078125)
+    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
 }
 
-game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Cleo"):FireServer(unpack(args))
-
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args)
 local args = {
-    [1] = "Push",
-    [2] = "Push",
+    [1] = "Shatter",
+    [2] = "Shatter",
     [3] = Target,
-    [4] = Vector3.new(352.7683410644531, -7.841368675231934, 1192.2022705078125)
+    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
 }
 
-game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Cleo"):FireServer(unpack(args))
-
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args)
 local args = {
-    [1] = "Push",
-    [2] = "Push",
+    [1] = "Shatter",
+    [2] = "Shatter",
     [3] = Target,
-    [4] = Vector3.new(352.7683410644531, -7.841368675231934, 1192.2022705078125)
+    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
 }
 
-game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Cleo"):FireServer(unpack(args))
-
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args)
 local args = {
-    [1] = "Push",
-    [2] = "Push",
+    [1] = "Shatter",
+    [2] = "Shatter",
     [3] = Target,
-    [4] = Vector3.new(352.7683410644531, -7.841368675231934, 1192.2022705078125)
+    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
 }
 
-game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Cleo"):FireServer(unpack(args))
-
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args)
 local args = {
-    [1] = "Push",
-    [2] = "Push",
+    [1] = "Shatter",
+    [2] = "Shatter",
     [3] = Target,
-    [4] = Vector3.new(352.7683410644531, -7.841368675231934, 1192.2022705078125)
+    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
 }
 
-game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Cleo"):FireServer(unpack(args))
-
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args)
 local args = {
-    [1] = "Push",
-    [2] = "Push",
+    [1] = "Shatter",
+    [2] = "Shatter",
     [3] = Target,
-    [4] = Vector3.new(352.7683410644531, -7.841368675231934, 1192.2022705078125)
+    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
 }
 
-game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Cleo"):FireServer(unpack(args))
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args)
+local args = {
+    [1] = "Shatter",
+    [2] = "Shatter",
+    [3] = Target,
+    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
+}
 
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args)
+local args = {
+    [1] = "Shatter",
+    [2] = "Shatter",
+    [3] = Target,
+    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
+}
 
-            end
-        end
-end   
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args)
+local args = {
+    [1] = "Shatter",
+    [2] = "Shatter",
+    [3] = Target,
+    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args)
+local args = {
+    [1] = "Shatter",
+    [2] = "Shatter",
+    [3] = Target,
+    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args)
+local args = {
+    [1] = "Shatter",
+    [2] = "Shatter",
+    [3] = Target,
+    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args)
+local args = {
+    [1] = "Shatter",
+    [2] = "Shatter",
+    [3] = Target,
+    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args)
+local args = {
+    [1] = "Shatter",
+    [2] = "Shatter",
+    [3] = Target,
+    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args)
+local args = {
+    [1] = "Shatter",
+    [2] = "Shatter",
+    [3] = Target,
+    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args)
+local args = {
+    [1] = "Shatter",
+    [2] = "Shatter",
+    [3] = Target,
+    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args)
+local args = {
+    [1] = "Shatter",
+    [2] = "Shatter",
+    [3] = Target,
+    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args)
+local args = {
+    [1] = "Shatter",
+    [2] = "Shatter",
+    [3] = Target,
+    [4] = Vector3.new(348.40545654296875, -7.884069442749023, 1137.759521484375)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Sirena"):FireServer(unpack(args)
+end
+end
+end
 end
 end)
 
