@@ -6487,29 +6487,6 @@ local args = {
 
 game:GetService("ReplicatedStorage"):WaitForChild("Psychics"):WaitForChild("Overalls Eleven"):WaitForChild("Overalls Eleven Powers"):FireServer(unpack(args))
 
-    clicktpon = true                 --- to turn off key function make this false and execute   
-        plr = game.Players.LocalPlayer
-        hum = plr.Character.HumanoidRootPart
-        mouse = plr:GetMouse()
-        mouse.KeyDown:connect(function(key)
-        if key == 'v' then
-        if mouse.Target then
-        if clicktpon then
-    
-
-local args = {
-    [1] = "barel pickup",
-    [2] = workspace:WaitForChild("StarcourtMall"):WaitForChild("1BottomLevel"):WaitForChild("Floor"):WaitForChild("Union"),
-    [3] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 1.5, mouse.Hit.z)
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("Psychics"):WaitForChild("Overalls Eleven"):WaitForChild("Overalls Eleven Powers"):FireServer(unpack(args))
-
-end
-end
-end
-end)
-
 local args = {
     [1] = "Pull",
     [2] = player.Character,
