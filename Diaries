@@ -1,0 +1,47 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Bennett Scripts | The Mystic Diaries", "GrapeTheme")
+
+local Bennett = Window:NewTab("Main")
+local BennettSection = Bennett:NewSection("You can be more than one character now!")
+
+BennettSection:NewButton("Enable Character Selection", " ", function()
+
+game.Players.LocalPlayer.PlayerGui.ChooseCharacter.Enabled = true
+
+end)
+
+BennettSection:NewButton("Disable Character Selection", " ", function()
+
+game.Players.LocalPlayer.PlayerGui.ChooseCharacter.Enabled = false
+
+end)
+
+local Bennett = Window:NewTab("Misc")
+local BennettSection = Bennett:NewSection("Misc")
+BennettSection:NewButton("Infinite Yield", "", function()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Omg562/Scripts/main/INF'),true))()
+end)
+BennettSection:NewButton("The Morningstar Circle Gui", "", function()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/TheMorningstarCircle/Spellman/main/TheMysticDiaries'),true))()
+end)
+BennettSection:NewButton("Custom Catalog", "", function()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Bennett-Scripts/main/Custom%20Catalog'),true))()
+end)
+
+
+local Tab = Window:NewTab("Credits")
+local SettingsSection = Tab:NewSection("discord: bennettscripts")
+local SettingsSection = Tab:NewSection("Toggle UI")
+SettingsSection:NewKeybind("Toggle UI", "Toggle UI", Enum.KeyCode.Nine, function()
+    Library:ToggleUI()
+end)
+
+wait(1)
+
+game.StarterGui:SetCore("SendNotification", { 
+    Title = "⛤ Bennett Scripts ⛤";
+    Text = "The Mystic Diaries";
+    Icon = "rbxthumb://type=Asset&id=14067496704&w=150&h=150";
+    Duration = "2";
+    Button1 = "Close";
+})
