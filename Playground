@@ -2258,6 +2258,34 @@ end
 end)
 end)
 
+BennettSection:NewButton("Auto Block On", "", function()
+getgenv().block = true;
+
+while Wait() do
+    if getgenv().block == true then
+local args = {
+    [1] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("Blocking"):FireServer(unpack(args))
+    end
+    end
+end)
+
+BennettSection:NewButton("Auto Block Off", "", function()
+getgenv().block = false;
+
+while Wait() do
+    if getgenv().block == true then
+local args = {
+    [1] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Characters"):WaitForChild("Combat"):WaitForChild("Remotes"):WaitForChild("Blocking"):FireServer(unpack(args))
+    end
+    end
+end)
+
 local BennettSection = Bennett:NewSection("Springtrap")
 BennettSection:NewToggle("Finisher", "Keybind (Z)", function()
 
