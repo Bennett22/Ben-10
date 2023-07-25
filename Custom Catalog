@@ -3,9 +3,11 @@ local Window = Library.CreateLib("Scarlet Bennett Scripts | Custom Catalog", "Gr
 local Tab = Window:NewTab("Bennett")
 local Section = Tab:NewSection("Bonnie 1")
 Section:NewButton("Custom", " ", function()
+if game:GetService("Players").LocalPlayer.UserId == 4334482090 then
     game.Players:Chat("!hat 13875301530")
     game.Players:Chat("!hat 13875286481")
     game.Players:Chat("!hat 12139995872")
+end
 end)
 
 local Tab = Window:NewTab("Heads")
