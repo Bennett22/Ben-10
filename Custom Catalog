@@ -1,5 +1,13 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 local Window = Library.CreateLib("Scarlet Bennett Scripts | Custom Catalog", "GrapeTheme")
+local Tab = Window:NewTab("Bennett")
+local Section = Tab:NewSection("Bonnie 1")
+Section:NewButton("Custom", " ", function()
+    game.Players:Chat("!hat 13875301530")
+    game.Players:Chat("!hat 13875286481")
+    game.Players:Chat("!hat 12139995872")
+end)
+
 local Tab = Window:NewTab("Heads")
 local Section = Tab:NewSection("")
 Section:NewButton("Narrow", " ", function()
