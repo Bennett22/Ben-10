@@ -64,6 +64,16 @@ game:GetService("ReplicatedStorage"):WaitForChild("ChangePlayerCharacter"):FireS
 
 end)
 
+BennettSection:NewButton("Scarlet Witch", " ", function()
+
+local args = {
+    [1] = "ScarletWitch"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("ChangePlayerCharacter"):FireServer(unpack(args))
+
+end)
+
 BennettSection:NewButton("Ursula", " ", function()
 
 local args = {
@@ -88,15 +98,6 @@ BennettSection:NewButton("Morgana", " ", function()
 
 local args = {
     [1] = "Morgana"
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("ChangePlayerCharacter"):FireServer(unpack(args))
-
-end)
-BennettSection:NewButton("Scarlet Witch", " ", function()
-
-local args = {
-    [1] = "ScarletWitch"
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("ChangePlayerCharacter"):FireServer(unpack(args))
