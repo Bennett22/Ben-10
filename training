@@ -46,7 +46,7 @@ end
 end)
 
 local Bennett = Window:NewTab("Misc")
-local BennettSection = Bennett:NewSection("Community Scripts")
+local BennettSection = Bennett:NewSection("Scripts")
 
 BennettSection:NewButton("Wandless Magic XTheMasterX Script", "", function()
     loadstring(game:HttpGet(('https://raw.githubusercontent.com/XTheMasterX/Scripts/Main/MagicTraining'),true))()
@@ -75,6 +75,10 @@ end)
 
 BennettSection:NewButton("District", "key is beta", function()
     loadstring(game:HttpGet("https://rentry.org/district-alpha/raw"))();
+end)
+
+BennettSection:NewButton("Custom Catalog", "", function()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Bennett-Scripts/main/Custom%20Catalog'),true))()
 end)
 local Tab = Window:NewTab("Credits")
 local SettingsSection = Tab:NewSection("discord: bennettscripts")
