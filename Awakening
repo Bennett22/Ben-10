@@ -1,0 +1,144 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Bennett Scripts | Multiversal Awakening", "GrapeTheme")
+
+local Bennett = Window:NewTab("Characters")
+local BennettSection = Bennett:NewSection("Delete Main Screen")
+BennettSection:NewButton("Delete", " ", function()
+
+game.ReplicatedStorage.Ui.MainScreen:destroy()
+game.WakSpace.Selection_Background:destroy()
+
+end)
+local BennettSection = Bennett:NewSection("Custom with powers")
+
+BennettSection:NewButton("Agatha Harkness", " ", function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Agatha Harkness")
+
+end)
+
+BennettSection:NewButton("Charmcaster", " ", function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Charm Caster")
+
+end)
+
+BennettSection:NewButton("Child", " ", function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Child")
+
+end)
+
+BennettSection:NewButton("Invisible Woman", " ", function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Invisible Woman")
+
+end)
+
+BennettSection:NewButton("Jean Grey", " ", function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Jean Grey")
+
+end)
+
+BennettSection:NewButton("Jean Grey: Dark Phoenix", " ", function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Jean Grey: Dark Phoenix")
+
+end)
+
+BennettSection:NewButton("Jean Grey: Phoenix Force", " ", function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Jean Grey: Phoenix Force")
+
+end)
+
+BennettSection:NewButton("Madison", " ", function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Madison")
+
+end)
+
+BennettSection:NewButton("Monica Rambeau", " ", function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Monica Rambeau")
+
+end)
+
+BennettSection:NewButton("Prom Gwen", " ", function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Prom Gwen")
+
+end)
+
+BennettSection:NewButton("Quicksilver", " ", function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Quicksilver")
+
+end)
+
+BennettSection:NewButton("Raven", " ", function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Raven")
+
+end)
+
+BennettSection:NewButton("Scarlet Witch", " ", function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Scarlet Witch")
+
+end)
+
+BennettSection:NewButton("Scarlet Witch: House Of Magneto", " ", function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Scarlet Witch: House Of Magneto")
+
+end)
+
+BennettSection:NewButton("Scarlet Witch: Multiverse Of Madness", " ", function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Scarlet Witch: Multiverse Of Madness")
+
+end)
+
+BennettSection:NewButton("Storm", " ", function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Storm")
+
+end)
+
+BennettSection:NewButton("Vision", " ", function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Vision")
+
+end)
+
+BennettSection:NewButton("Wanda Maximoff: Age Of Ultron", " ", function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Wanda Maximoff: Age Of Ultron")
+
+end)
+
+BennettSection:NewButton("Wanda Maximoff: Earth 838", " ", function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Wanda Maximoff: Earth 838")
+
+end)
+
+BennettSection:NewButton("Wanda Maximoff: Endgame", " ", function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Wanda Maximoff: Endgame")
+
+end)
+
+BennettSection:NewButton("Wanda Wardrobe", " ", function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Wanda Wardrobe")
+
+end)
+
+BennettSection:NewButton("Wiccan", " ", function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Wiccan")
+
+end)
