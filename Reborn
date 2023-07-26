@@ -3402,6 +3402,925 @@ game:GetService("Players").LocalPlayer.Character.Skill.Shield.Fire2:FireServer(u
 
 end)
 
+local BennettSection = Bennett:NewSection("Ursula")
+
+BennettSection:NewToggle("Puddle", "Keybind (1)", function()
+
+    clicktpon = true                
+        plr = game.Players.LocalPlayer
+        hum = plr.Character.HumanoidRootPart
+        mouse = plr:GetMouse()
+        mouse.KeyDown:connect(function(key)
+        if key == '1' then
+        if mouse.Target then
+        if clicktpon then
+
+local args = {
+    [1] = CFrame.new(2244.13696, 218, -295.713776, 0.889277339, 0.0765834525, -0.450911015, -0, 0.985881686, 0.167443737, 0.457368284, -0.148903921, 0.876722276),
+    [2] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.Puddle.RemoteEvent:FireServer(unpack(args))
+
+end
+end
+end
+end)
+end)
+
+BennettSection:NewToggle("Snakes", "Keybind (2)", function()
+
+    clicktpon = true                
+        plr = game.Players.LocalPlayer
+        hum = plr.Character.HumanoidRootPart
+        mouse = plr:GetMouse()
+        mouse.KeyDown:connect(function(key)
+        if key == '2' then
+        if mouse.Target then
+        if clicktpon then
+
+local args = {
+    [1] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 1.5, mouse.Hit.z)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.Snakes.Fire:FireServer(unpack(args))
+
+
+end
+end
+end
+end)
+end)
+
+BennettSection:NewButton("Ultimate", " ", function()
+
+local args = {
+    [1] = Vector3.new(2086.4228515625, 563.2993774414062, 234.02061462402344)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.Ultimate.Fire:FireServer(unpack(args))
+
+end)
+
+BennettSection:NewButton("Tornado", " ", function()
+
+local args = {
+    [1] = Vector3.new(2055.225830078125, 563.4907836914062, 287.9958190917969)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.Tornado.Fire:FireServer(unpack(args))
+
+end)
+
+BennettSection:NewButton("Sing", " ", function()
+
+local args = {
+    [1] = Vector3.new(2128.90234375, 219.53932189941406, 396.0096130371094)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.Sing.Fire:FireServer(unpack(args))
+
+end)
+
+BennettSection:NewButton("Shield", " ", function()
+
+local args = {
+    [1] = Vector3.new(2063.0986328125, 219.53929138183594, 466.0805969238281)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.Shield.Fire1:FireServer(unpack(args))
+
+end)
+
+BennettSection:NewButton("Unshield", " ", function()
+
+local args = {
+    [1] = Vector3.new(2058.73583984375, 219.5393829345703, 490.92681884765625)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.Shield.Fire2:FireServer(unpack(args))
+
+end)
+
+local BennettSection = Bennett:NewSection("Invisible Woman")
+
+ BennettSection:NewToggle("Kill", "Keybind (1)", function()
+    print("You just clicked the bind")
+
+    local function getPlayer()
+        local userInput = game:GetService("UserInputService")
+        local cam = workspace.CurrentCamera
+        local mousePos = userInput:GetMouseLocation()
+        local mouseRay = cam:ViewportPointToRay(mousePos.X, mousePos.Y)
+        players = {}
+        for _, x in next, game:GetService('Players'):GetPlayers() do
+            players[#players + 1] = x.Character
+        end
+        local raycastParams = RaycastParams.new()
+        raycastParams.FilterType = Enum.RaycastFilterType.Whitelist
+        raycastParams.FilterDescendantsInstances = players
+        raycastParams.IgnoreWater = true
+        local raycastResult = workspace:Raycast(mouseRay.Origin, mouseRay.Direction * 1000, raycastParams)
+        if raycastResult then
+            for _, x in next, game:GetService('Players'):GetPlayers() do
+                if not raycastResult.Instance:IsDescendantOf(x.Character) then
+                    continue
+                end
+                return x
+            end
+        end
+        return false
+    end
+
+    local function Set(list)
+        local set = {}
+        for _, l in ipairs(list) do
+            if l then
+                set[l] = true
+            end
+        end
+        return set
+    end
+
+    game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
+        if key == "1" then
+            local player = getPlayer()
+            if player then
+
+local args = {
+    [1] = player.Character.RightLowerArm,
+    [2] = Vector3.new(1731.626708984375, 268.74700927734375, -36.340538024902344)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.JailPush.Fire:FireServer(unpack(args))
+
+local args = {
+    [1] = player.Character.RightLowerArm,
+    [2] = Vector3.new(1731.626708984375, 268.74700927734375, -36.340538024902344)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.JailPush.Fire:FireServer(unpack(args))
+
+local args = {
+    [1] = player.Character.RightLowerArm,
+    [2] = Vector3.new(1731.626708984375, 268.74700927734375, -36.340538024902344)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.JailPush.Fire:FireServer(unpack(args))
+
+local args = {
+    [1] = player.Character.RightLowerArm,
+    [2] = Vector3.new(1731.626708984375, 268.74700927734375, -36.340538024902344)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.JailPush.Fire:FireServer(unpack(args))
+
+local args = {
+    [1] = player.Character.RightLowerArm,
+    [2] = Vector3.new(1731.626708984375, 268.74700927734375, -36.340538024902344)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.JailPush.Fire:FireServer(unpack(args))
+
+local args = {
+    [1] = player.Character.RightLowerArm,
+    [2] = Vector3.new(1731.626708984375, 268.74700927734375, -36.340538024902344)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.JailPush.Fire:FireServer(unpack(args))
+
+local args = {
+    [1] = player.Character.RightLowerArm,
+    [2] = Vector3.new(1731.626708984375, 268.74700927734375, -36.340538024902344)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.JailPush.Fire:FireServer(unpack(args))
+
+local args = {
+    [1] = player.Character.RightLowerArm,
+    [2] = Vector3.new(1731.626708984375, 268.74700927734375, -36.340538024902344)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.JailPush.Fire:FireServer(unpack(args))
+
+local args = {
+    [1] = player.Character.RightLowerArm,
+    [2] = Vector3.new(1731.626708984375, 268.74700927734375, -36.340538024902344)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.JailPush.Fire:FireServer(unpack(args))
+
+local args = {
+    [1] = player.Character.RightLowerArm,
+    [2] = Vector3.new(1731.626708984375, 268.74700927734375, -36.340538024902344)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.JailPush.Fire:FireServer(unpack(args))
+
+local args = {
+    [1] = player.Character.RightLowerArm,
+    [2] = Vector3.new(1731.626708984375, 268.74700927734375, -36.340538024902344)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.JailPush.Fire:FireServer(unpack(args))
+
+local args = {
+    [1] = player.Character.RightLowerArm,
+    [2] = Vector3.new(1731.626708984375, 268.74700927734375, -36.340538024902344)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.JailPush.Fire:FireServer(unpack(args))
+
+local args = {
+    [1] = player.Character.RightLowerArm,
+    [2] = Vector3.new(1731.626708984375, 268.74700927734375, -36.340538024902344)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.JailPush.Fire:FireServer(unpack(args))
+
+local args = {
+    [1] = player.Character.RightLowerArm,
+    [2] = Vector3.new(1731.626708984375, 268.74700927734375, -36.340538024902344)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.JailPush.Fire:FireServer(unpack(args))
+
+local args = {
+    [1] = player.Character.RightLowerArm,
+    [2] = Vector3.new(1731.626708984375, 268.74700927734375, -36.340538024902344)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.JailPush.Fire:FireServer(unpack(args))
+
+local args = {
+    [1] = player.Character.RightLowerArm,
+    [2] = Vector3.new(1731.626708984375, 268.74700927734375, -36.340538024902344)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.JailPush.Fire:FireServer(unpack(args))
+
+local args = {
+    [1] = player.Character.RightLowerArm,
+    [2] = Vector3.new(1731.626708984375, 268.74700927734375, -36.340538024902344)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.JailPush.Fire:FireServer(unpack(args))
+
+local args = {
+    [1] = player.Character.RightLowerArm,
+    [2] = Vector3.new(1731.626708984375, 268.74700927734375, -36.340538024902344)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.JailPush.Fire:FireServer(unpack(args))
+
+
+local args = {
+    [1] = player.Character.RightLowerArm,
+    [2] = Vector3.new(1731.626708984375, 268.74700927734375, -36.340538024902344)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.JailPush.Fire:FireServer(unpack(args))
+
+local args = {
+    [1] = player.Character.RightLowerArm,
+    [2] = Vector3.new(1731.626708984375, 268.74700927734375, -36.340538024902344)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.JailPush.Fire:FireServer(unpack(args))
+
+local args = {
+    [1] = player.Character.RightLowerArm,
+    [2] = Vector3.new(1731.626708984375, 268.74700927734375, -36.340538024902344)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.JailPush.Fire:FireServer(unpack(args))
+
+local args = {
+    [1] = player.Character.RightLowerArm,
+    [2] = Vector3.new(1731.626708984375, 268.74700927734375, -36.340538024902344)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.JailPush.Fire:FireServer(unpack(args))
+
+local args = {
+    [1] = player.Character.RightLowerArm,
+    [2] = Vector3.new(1731.626708984375, 268.74700927734375, -36.340538024902344)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.JailPush.Fire:FireServer(unpack(args))
+
+local args = {
+    [1] = player.Character.RightLowerArm,
+    [2] = Vector3.new(1731.626708984375, 268.74700927734375, -36.340538024902344)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.JailPush.Fire:FireServer(unpack(args))
+
+local args = {
+    [1] = player.Character.RightLowerArm,
+    [2] = Vector3.new(1731.626708984375, 268.74700927734375, -36.340538024902344)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.JailPush.Fire:FireServer(unpack(args))
+
+local args = {
+    [1] = player.Character.RightLowerArm,
+    [2] = Vector3.new(1731.626708984375, 268.74700927734375, -36.340538024902344)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.JailPush.Fire:FireServer(unpack(args))
+
+local args = {
+    [1] = player.Character.RightLowerArm,
+    [2] = Vector3.new(1731.626708984375, 268.74700927734375, -36.340538024902344)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.JailPush.Fire:FireServer(unpack(args))
+
+local args = {
+    [1] = player.Character.RightLowerArm,
+    [2] = Vector3.new(1731.626708984375, 268.74700927734375, -36.340538024902344)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.JailPush.Fire:FireServer(unpack(args))
+
+local args = {
+    [1] = player.Character.RightLowerArm,
+    [2] = Vector3.new(1731.626708984375, 268.74700927734375, -36.340538024902344)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.JailPush.Fire:FireServer(unpack(args))
+
+
+            end
+        end
+        end)
+        end)
+
+BennettSection:NewToggle("Kill", "Keybind (2)", function()
+    print("You just clicked the bind")
+
+    local function getPlayer()
+        local userInput = game:GetService("UserInputService")
+        local cam = workspace.CurrentCamera
+        local mousePos = userInput:GetMouseLocation()
+        local mouseRay = cam:ViewportPointToRay(mousePos.X, mousePos.Y)
+        players = {}
+        for _, x in next, game:GetService('Players'):GetPlayers() do
+            players[#players + 1] = x.Character
+        end
+        local raycastParams = RaycastParams.new()
+        raycastParams.FilterType = Enum.RaycastFilterType.Whitelist
+        raycastParams.FilterDescendantsInstances = players
+        raycastParams.IgnoreWater = true
+        local raycastResult = workspace:Raycast(mouseRay.Origin, mouseRay.Direction * 1000, raycastParams)
+        if raycastResult then
+            for _, x in next, game:GetService('Players'):GetPlayers() do
+                if not raycastResult.Instance:IsDescendantOf(x.Character) then
+                    continue
+                end
+                return x
+            end
+        end
+        return false
+    end
+
+    local function Set(list)
+        local set = {}
+        for _, l in ipairs(list) do
+            if l then
+                set[l] = true
+            end
+        end
+        return set
+    end
+
+    game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
+        if key == "2" then
+            local player = getPlayer()
+            if player then
+
+local args = {
+    [1] = player.Character.Head,
+    [2] = Vector3.new(1409.9630126953125, 223.47378540039062, -40.841861724853516)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.Choke.Fire:FireServer(unpack(args))
+local args = {
+    [1] = player.Character.Head,
+    [2] = Vector3.new(1409.9630126953125, 223.47378540039062, -40.841861724853516)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.Choke.Fire:FireServer(unpack(args))
+local args = {
+    [1] = player.Character.Head,
+    [2] = Vector3.new(1409.9630126953125, 223.47378540039062, -40.841861724853516)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.Choke.Fire:FireServer(unpack(args))
+local args = {
+    [1] = player.Character.Head,
+    [2] = Vector3.new(1409.9630126953125, 223.47378540039062, -40.841861724853516)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.Choke.Fire:FireServer(unpack(args))
+local args = {
+    [1] = player.Character.Head,
+    [2] = Vector3.new(1409.9630126953125, 223.47378540039062, -40.841861724853516)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.Choke.Fire:FireServer(unpack(args))
+local args = {
+    [1] = player.Character.Head,
+    [2] = Vector3.new(1409.9630126953125, 223.47378540039062, -40.841861724853516)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.Choke.Fire:FireServer(unpack(args))
+local args = {
+    [1] = player.Character.Head,
+    [2] = Vector3.new(1409.9630126953125, 223.47378540039062, -40.841861724853516)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.Choke.Fire:FireServer(unpack(args))
+local args = {
+    [1] = player.Character.Head,
+    [2] = Vector3.new(1409.9630126953125, 223.47378540039062, -40.841861724853516)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.Choke.Fire:FireServer(unpack(args))
+local args = {
+    [1] = player.Character.Head,
+    [2] = Vector3.new(1409.9630126953125, 223.47378540039062, -40.841861724853516)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.Choke.Fire:FireServer(unpack(args))
+local args = {
+    [1] = player.Character.Head,
+    [2] = Vector3.new(1409.9630126953125, 223.47378540039062, -40.841861724853516)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.Choke.Fire:FireServer(unpack(args))
+local args = {
+    [1] = player.Character.Head,
+    [2] = Vector3.new(1409.9630126953125, 223.47378540039062, -40.841861724853516)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.Choke.Fire:FireServer(unpack(args))
+local args = {
+    [1] = player.Character.Head,
+    [2] = Vector3.new(1409.9630126953125, 223.47378540039062, -40.841861724853516)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.Choke.Fire:FireServer(unpack(args))
+local args = {
+    [1] = player.Character.Head,
+    [2] = Vector3.new(1409.9630126953125, 223.47378540039062, -40.841861724853516)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.Choke.Fire:FireServer(unpack(args))
+local args = {
+    [1] = player.Character.Head,
+    [2] = Vector3.new(1409.9630126953125, 223.47378540039062, -40.841861724853516)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.Choke.Fire:FireServer(unpack(args))
+local args = {
+    [1] = player.Character.Head,
+    [2] = Vector3.new(1409.9630126953125, 223.47378540039062, -40.841861724853516)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.Choke.Fire:FireServer(unpack(args))
+local args = {
+    [1] = player.Character.Head,
+    [2] = Vector3.new(1409.9630126953125, 223.47378540039062, -40.841861724853516)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.Choke.Fire:FireServer(unpack(args))
+local args = {
+    [1] = player.Character.Head,
+    [2] = Vector3.new(1409.9630126953125, 223.47378540039062, -40.841861724853516)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.Choke.Fire:FireServer(unpack(args))
+local args = {
+    [1] = player.Character.Head,
+    [2] = Vector3.new(1409.9630126953125, 223.47378540039062, -40.841861724853516)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.Choke.Fire:FireServer(unpack(args))
+local args = {
+    [1] = player.Character.Head,
+    [2] = Vector3.new(1409.9630126953125, 223.47378540039062, -40.841861724853516)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.Choke.Fire:FireServer(unpack(args))
+local args = {
+    [1] = player.Character.Head,
+    [2] = Vector3.new(1409.9630126953125, 223.47378540039062, -40.841861724853516)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.Choke.Fire:FireServer(unpack(args))
+local args = {
+    [1] = player.Character.Head,
+    [2] = Vector3.new(1409.9630126953125, 223.47378540039062, -40.841861724853516)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.Choke.Fire:FireServer(unpack(args))
+local args = {
+    [1] = player.Character.Head,
+    [2] = Vector3.new(1409.9630126953125, 223.47378540039062, -40.841861724853516)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.Choke.Fire:FireServer(unpack(args))
+local args = {
+    [1] = player.Character.Head,
+    [2] = Vector3.new(1409.9630126953125, 223.47378540039062, -40.841861724853516)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.Choke.Fire:FireServer(unpack(args))
+local args = {
+    [1] = player.Character.Head,
+    [2] = Vector3.new(1409.9630126953125, 223.47378540039062, -40.841861724853516)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.Choke.Fire:FireServer(unpack(args))
+local args = {
+    [1] = player.Character.Head,
+    [2] = Vector3.new(1409.9630126953125, 223.47378540039062, -40.841861724853516)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.Choke.Fire:FireServer(unpack(args))
+local args = {
+    [1] = player.Character.Head,
+    [2] = Vector3.new(1409.9630126953125, 223.47378540039062, -40.841861724853516)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.Choke.Fire:FireServer(unpack(args))
+local args = {
+    [1] = player.Character.Head,
+    [2] = Vector3.new(1409.9630126953125, 223.47378540039062, -40.841861724853516)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.Choke.Fire:FireServer(unpack(args))
+local args = {
+    [1] = player.Character.Head,
+    [2] = Vector3.new(1409.9630126953125, 223.47378540039062, -40.841861724853516)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.Choke.Fire:FireServer(unpack(args))
+local args = {
+    [1] = player.Character.Head,
+    [2] = Vector3.new(1409.9630126953125, 223.47378540039062, -40.841861724853516)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.Choke.Fire:FireServer(unpack(args))
+local args = {
+    [1] = player.Character.Head,
+    [2] = Vector3.new(1409.9630126953125, 223.47378540039062, -40.841861724853516)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.Choke.Fire:FireServer(unpack(args))
+local args = {
+    [1] = player.Character.Head,
+    [2] = Vector3.new(1409.9630126953125, 223.47378540039062, -40.841861724853516)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.Choke.Fire:FireServer(unpack(args))
+local args = {
+    [1] = player.Character.Head,
+    [2] = Vector3.new(1409.9630126953125, 223.47378540039062, -40.841861724853516)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.Choke.Fire:FireServer(unpack(args))
+local args = {
+    [1] = player.Character.Head,
+    [2] = Vector3.new(1409.9630126953125, 223.47378540039062, -40.841861724853516)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.Choke.Fire:FireServer(unpack(args))
+local args = {
+    [1] = player.Character.Head,
+    [2] = Vector3.new(1409.9630126953125, 223.47378540039062, -40.841861724853516)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.Choke.Fire:FireServer(unpack(args))
+local args = {
+    [1] = player.Character.Head,
+    [2] = Vector3.new(1409.9630126953125, 223.47378540039062, -40.841861724853516)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.Choke.Fire:FireServer(unpack(args))
+
+            end
+        end
+        end)
+        end)
+
+BennettSection:NewToggle("Basics", "Keybind (3)", function()
+
+    clicktpon = true                
+        plr = game.Players.LocalPlayer
+        hum = plr.Character.HumanoidRootPart
+        mouse = plr:GetMouse()
+        mouse.KeyDown:connect(function(key)
+        if key == '3' then
+        if mouse.Target then
+        if clicktpon then
+
+local args = {
+    [1] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 1.5, mouse.Hit.z)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill:FindFirstChild("Blast(Basics)").Fire1:FireServer(unpack(args))
+
+local args = {
+    [1] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 1.5, mouse.Hit.z)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill:FindFirstChild("Blast(Basics)").Fire2:FireServer(unpack(args))
+
+end
+end
+end
+end)
+end)
+
+BennettSection:NewToggle("Jail Push", "Keybind (4)", function()
+    print("You just clicked the bind")
+
+    local function getPlayer()
+        local userInput = game:GetService("UserInputService")
+        local cam = workspace.CurrentCamera
+        local mousePos = userInput:GetMouseLocation()
+        local mouseRay = cam:ViewportPointToRay(mousePos.X, mousePos.Y)
+        players = {}
+        for _, x in next, game:GetService('Players'):GetPlayers() do
+            players[#players + 1] = x.Character
+        end
+        local raycastParams = RaycastParams.new()
+        raycastParams.FilterType = Enum.RaycastFilterType.Whitelist
+        raycastParams.FilterDescendantsInstances = players
+        raycastParams.IgnoreWater = true
+        local raycastResult = workspace:Raycast(mouseRay.Origin, mouseRay.Direction * 1000, raycastParams)
+        if raycastResult then
+            for _, x in next, game:GetService('Players'):GetPlayers() do
+                if not raycastResult.Instance:IsDescendantOf(x.Character) then
+                    continue
+                end
+                return x
+            end
+        end
+        return false
+    end
+
+    local function Set(list)
+        local set = {}
+        for _, l in ipairs(list) do
+            if l then
+                set[l] = true
+            end
+        end
+        return set
+    end
+
+    game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
+        if key == "4" then
+            local player = getPlayer()
+            if player then
+
+local args = {
+    [1] = player.Character.RightLowerArm,
+    [2] = Vector3.new(1731.626708984375, 268.74700927734375, -36.340538024902344)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.JailPush.Fire:FireServer(unpack(args))
+
+            end
+        end
+        end)
+        end)
+
+BennettSection:NewToggle("Choke", "Keybind (5)", function()
+    print("You just clicked the bind")
+
+    local function getPlayer()
+        local userInput = game:GetService("UserInputService")
+        local cam = workspace.CurrentCamera
+        local mousePos = userInput:GetMouseLocation()
+        local mouseRay = cam:ViewportPointToRay(mousePos.X, mousePos.Y)
+        players = {}
+        for _, x in next, game:GetService('Players'):GetPlayers() do
+            players[#players + 1] = x.Character
+        end
+        local raycastParams = RaycastParams.new()
+        raycastParams.FilterType = Enum.RaycastFilterType.Whitelist
+        raycastParams.FilterDescendantsInstances = players
+        raycastParams.IgnoreWater = true
+        local raycastResult = workspace:Raycast(mouseRay.Origin, mouseRay.Direction * 1000, raycastParams)
+        if raycastResult then
+            for _, x in next, game:GetService('Players'):GetPlayers() do
+                if not raycastResult.Instance:IsDescendantOf(x.Character) then
+                    continue
+                end
+                return x
+            end
+        end
+        return false
+    end
+
+    local function Set(list)
+        local set = {}
+        for _, l in ipairs(list) do
+            if l then
+                set[l] = true
+            end
+        end
+        return set
+    end
+
+    game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
+        if key == "5" then
+            local player = getPlayer()
+            if player then
+
+local args = {
+    [1] = player.Character.Head,
+    [2] = Vector3.new(1409.9630126953125, 223.47378540039062, -40.841861724853516)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.Choke.Fire:FireServer(unpack(args))
+
+            end
+        end
+        end)
+        end)
+
+BennettSection:NewToggle("Super Blast", "Keybind (6)", function()
+
+    clicktpon = true                
+        plr = game.Players.LocalPlayer
+        hum = plr.Character.HumanoidRootPart
+        mouse = plr:GetMouse()
+        mouse.KeyDown:connect(function(key)
+        if key == '6' then
+        if mouse.Target then
+        if clicktpon then
+
+local args = {
+    [1] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 1.5, mouse.Hit.z)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.SuperBlast.Fire1:FireServer(unpack(args))
+
+end
+end
+end
+end)
+end)
+
+BennettSection:NewButton("Ultimate", " ", function()
+
+local args = {
+    [1] = Vector3.new(1468.40869140625, 218, -314.6239013671875)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.Ultimate.Fire:FireServer(unpack(args))
+
+end)
+
+BennettSection:NewButton("Invisible", " ", function()
+
+local args = {
+    [1] = "Invisible"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Sue"):WaitForChild("Invisible"):FireServer(unpack(args))
+
+game:GetService("Players").LocalPlayer.Character.Skill.Invisibility.Fire1:FireServer()
+
+end)
+
+BennettSection:NewButton("Visible", " ", function()
+
+local args = {
+    [1] = "Visible"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Sue"):WaitForChild("Invisible"):FireServer(unpack(args))
+
+game:GetService("Players").LocalPlayer.Character.Skill.Invisibility.Fire2:FireServer()
+
+end)
+
+BennettSection:NewButton("Shield", " ", function()
+
+local args = {
+    [1] = Vector3.new(1496.908935546875, 223.82533264160156, -336.2084655761719)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.Shield.Fire1:FireServer(unpack(args))
+
+end)
+
+BennettSection:NewButton("Unshield", " ", function()
+
+local args = {
+    [1] = Vector3.new(1475.0509033203125, 218, -334.49566650390625)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.Shield.Fire2:FireServer(unpack(args))
+
+end)
+
+local BennettSection = Bennett:NewSection("Morgana")
+
+BennettSection:NewToggle("Dark Puddle", "Keybind (1)", function()
+
+    clicktpon = true                
+        plr = game.Players.LocalPlayer
+        hum = plr.Character.HumanoidRootPart
+        mouse = plr:GetMouse()
+        mouse.KeyDown:connect(function(key)
+        if key == '1' then
+        if mouse.Target then
+        if clicktpon then
+
+local args = {
+    [1] = CFrame.new(1627.07483, 219.539688, -224.276627, 0.999915123, 0.00342465495, -0.0125732468, -2.32830644e-10, 0.96484977, 0.262802213, 0.0130313011, -0.262779921, 0.964767814),
+    [2] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.Puddle.RemoteEvent:FireServer(unpack(args))
+
+end
+end
+end
+end)
+end)
+
+BennettSection:NewToggle("Super Blast", "Keybind (2)", function()
+
+    clicktpon = true                
+        plr = game.Players.LocalPlayer
+        hum = plr.Character.HumanoidRootPart
+        mouse = plr:GetMouse()
+        mouse.KeyDown:connect(function(key)
+        if key == '2' then
+        if mouse.Target then
+        if clicktpon then
+
+local args = {
+    [1] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 1.5, mouse.Hit.z)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.SuperBlast.Fire1:FireServer(unpack(args))
+
+end
+end
+end
+end)
+end)
+
+BennettSection:NewButton("Ultimate", " ", function()
+
+local args = {
+    [1] = Vector3.new(1361.7044677734375, 223.39474487304688, -594.6770629882812)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.Ultimate.Fire:FireServer(unpack(args))
+
+end)
+
+BennettSection:NewButton("Chain Explosion", " ", function()
+
+local args = {
+    [1] = Vector3.new(1365.489990234375, 219.870849609375, -602.4576416015625)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.ChainsExplosion.Fire:FireServer(unpack(args))
+
+end)
+
+BennettSection:NewButton("Shield", " ", function()
+
+local args = {
+    [1] = Vector3.new(2401.773193359375, 177.70803833007812, 756.4446411132812)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.Shield.Fire1:FireServer(unpack(args))
+
+end)
+
+BennettSection:NewButton("Unshield", " ", function()
+
+local args = {
+    [1] = Vector3.new(2403.90869140625, 177.70803833007812, 765.22314453125)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.Shield.Fire2:FireServer(unpack(args))
+
+end)
+
 local Bennett = Window:NewTab("Affect All")
 local BennettSection = Bennett:NewSection("Eleven")
 
@@ -5761,6 +6680,481 @@ game:GetService("Players").LocalPlayer.Character.Skill.Telekinesis.Fire:FireServ
 end   
 end)
 
+local BennettSection = Bennett:NewSection("Invisible Woman")
+
+BennettSection:NewButton("Kill All", " ", function()
+    print("Clicked")
+    local Plr = game.Players.LocalPlayer
+    for i, Player in pairs (game.Players:GetPlayers()) do
+
+        if Player.Character ~= nil and Player ~= Plr then
+            local mag = (Player.Character.UpperTorso.Position - Plr.Character.UpperTorso.Position).magnitude
+            if mag < 100000 then
+                local Target = Player.Character or Player.CharacterAdded:Wait()
+
+local args = {
+    [1] = Target.RightLowerArm,
+    [2] = Vector3.new(1731.626708984375, 268.74700927734375, -36.340538024902344)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.JailPush.Fire:FireServer(unpack(args))
+local args = {
+    [1] = Target.RightLowerArm,
+    [2] = Vector3.new(1731.626708984375, 268.74700927734375, -36.340538024902344)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.JailPush.Fire:FireServer(unpack(args))
+local args = {
+    [1] = Target.RightLowerArm,
+    [2] = Vector3.new(1731.626708984375, 268.74700927734375, -36.340538024902344)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.JailPush.Fire:FireServer(unpack(args))
+local args = {
+    [1] = Target.RightLowerArm,
+    [2] = Vector3.new(1731.626708984375, 268.74700927734375, -36.340538024902344)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.JailPush.Fire:FireServer(unpack(args))
+local args = {
+    [1] = Target.RightLowerArm,
+    [2] = Vector3.new(1731.626708984375, 268.74700927734375, -36.340538024902344)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.JailPush.Fire:FireServer(unpack(args))
+local args = {
+    [1] = Target.RightLowerArm,
+    [2] = Vector3.new(1731.626708984375, 268.74700927734375, -36.340538024902344)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.JailPush.Fire:FireServer(unpack(args))
+local args = {
+    [1] = Target.RightLowerArm,
+    [2] = Vector3.new(1731.626708984375, 268.74700927734375, -36.340538024902344)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.JailPush.Fire:FireServer(unpack(args))
+local args = {
+    [1] = Target.RightLowerArm,
+    [2] = Vector3.new(1731.626708984375, 268.74700927734375, -36.340538024902344)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.JailPush.Fire:FireServer(unpack(args))
+local args = {
+    [1] = Target.RightLowerArm,
+    [2] = Vector3.new(1731.626708984375, 268.74700927734375, -36.340538024902344)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.JailPush.Fire:FireServer(unpack(args))
+local args = {
+    [1] = Target.RightLowerArm,
+    [2] = Vector3.new(1731.626708984375, 268.74700927734375, -36.340538024902344)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.JailPush.Fire:FireServer(unpack(args))
+local args = {
+    [1] = Target.RightLowerArm,
+    [2] = Vector3.new(1731.626708984375, 268.74700927734375, -36.340538024902344)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.JailPush.Fire:FireServer(unpack(args))
+local args = {
+    [1] = Target.RightLowerArm,
+    [2] = Vector3.new(1731.626708984375, 268.74700927734375, -36.340538024902344)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.JailPush.Fire:FireServer(unpack(args))
+local args = {
+    [1] = Target.RightLowerArm,
+    [2] = Vector3.new(1731.626708984375, 268.74700927734375, -36.340538024902344)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.JailPush.Fire:FireServer(unpack(args))
+local args = {
+    [1] = Target.RightLowerArm,
+    [2] = Vector3.new(1731.626708984375, 268.74700927734375, -36.340538024902344)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.JailPush.Fire:FireServer(unpack(args))
+local args = {
+    [1] = Target.RightLowerArm,
+    [2] = Vector3.new(1731.626708984375, 268.74700927734375, -36.340538024902344)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.JailPush.Fire:FireServer(unpack(args))
+local args = {
+    [1] = Target.RightLowerArm,
+    [2] = Vector3.new(1731.626708984375, 268.74700927734375, -36.340538024902344)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.JailPush.Fire:FireServer(unpack(args))
+local args = {
+    [1] = Target.RightLowerArm,
+    [2] = Vector3.new(1731.626708984375, 268.74700927734375, -36.340538024902344)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.JailPush.Fire:FireServer(unpack(args))
+local args = {
+    [1] = Target.RightLowerArm,
+    [2] = Vector3.new(1731.626708984375, 268.74700927734375, -36.340538024902344)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.JailPush.Fire:FireServer(unpack(args))
+local args = {
+    [1] = Target.RightLowerArm,
+    [2] = Vector3.new(1731.626708984375, 268.74700927734375, -36.340538024902344)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.JailPush.Fire:FireServer(unpack(args))
+local args = {
+    [1] = Target.RightLowerArm,
+    [2] = Vector3.new(1731.626708984375, 268.74700927734375, -36.340538024902344)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.JailPush.Fire:FireServer(unpack(args))
+local args = {
+    [1] = Target.RightLowerArm,
+    [2] = Vector3.new(1731.626708984375, 268.74700927734375, -36.340538024902344)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.JailPush.Fire:FireServer(unpack(args))
+local args = {
+    [1] = Target.RightLowerArm,
+    [2] = Vector3.new(1731.626708984375, 268.74700927734375, -36.340538024902344)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.JailPush.Fire:FireServer(unpack(args))
+local args = {
+    [1] = Target.RightLowerArm,
+    [2] = Vector3.new(1731.626708984375, 268.74700927734375, -36.340538024902344)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.JailPush.Fire:FireServer(unpack(args))
+local args = {
+    [1] = Target.RightLowerArm,
+    [2] = Vector3.new(1731.626708984375, 268.74700927734375, -36.340538024902344)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.JailPush.Fire:FireServer(unpack(args))
+local args = {
+    [1] = Target.RightLowerArm,
+    [2] = Vector3.new(1731.626708984375, 268.74700927734375, -36.340538024902344)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.JailPush.Fire:FireServer(unpack(args))
+local args = {
+    [1] = Target.RightLowerArm,
+    [2] = Vector3.new(1731.626708984375, 268.74700927734375, -36.340538024902344)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.JailPush.Fire:FireServer(unpack(args))
+local args = {
+    [1] = Target.RightLowerArm,
+    [2] = Vector3.new(1731.626708984375, 268.74700927734375, -36.340538024902344)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.JailPush.Fire:FireServer(unpack(args))
+local args = {
+    [1] = Target.RightLowerArm,
+    [2] = Vector3.new(1731.626708984375, 268.74700927734375, -36.340538024902344)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.JailPush.Fire:FireServer(unpack(args))
+local args = {
+    [1] = Target.RightLowerArm,
+    [2] = Vector3.new(1731.626708984375, 268.74700927734375, -36.340538024902344)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.JailPush.Fire:FireServer(unpack(args))
+local args = {
+    [1] = Target.RightLowerArm,
+    [2] = Vector3.new(1731.626708984375, 268.74700927734375, -36.340538024902344)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.JailPush.Fire:FireServer(unpack(args))
+local args = {
+    [1] = Target.RightLowerArm,
+    [2] = Vector3.new(1731.626708984375, 268.74700927734375, -36.340538024902344)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.JailPush.Fire:FireServer(unpack(args))
+local args = {
+    [1] = Target.RightLowerArm,
+    [2] = Vector3.new(1731.626708984375, 268.74700927734375, -36.340538024902344)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.JailPush.Fire:FireServer(unpack(args))
+local args = {
+    [1] = Target.RightLowerArm,
+    [2] = Vector3.new(1731.626708984375, 268.74700927734375, -36.340538024902344)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.JailPush.Fire:FireServer(unpack(args))
+local args = {
+    [1] = Target.RightLowerArm,
+    [2] = Vector3.new(1731.626708984375, 268.74700927734375, -36.340538024902344)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.JailPush.Fire:FireServer(unpack(args))
+local args = {
+    [1] = Target.RightLowerArm,
+    [2] = Vector3.new(1731.626708984375, 268.74700927734375, -36.340538024902344)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.JailPush.Fire:FireServer(unpack(args))
+
+ end
+        end
+end   
+end)
+
+BennettSection:NewButton("Kill All", " ", function()
+    print("Clicked")
+    local Plr = game.Players.LocalPlayer
+    for i, Player in pairs (game.Players:GetPlayers()) do
+
+        if Player.Character ~= nil and Player ~= Plr then
+            local mag = (Player.Character.UpperTorso.Position - Plr.Character.UpperTorso.Position).magnitude
+            if mag < 100000 then
+                local Target = Player.Character or Player.CharacterAdded:Wait()
+
+local args = {
+    [1] = player.Character.Head,
+    [2] = Vector3.new(1409.9630126953125, 223.47378540039062, -40.841861724853516)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.Choke.Fire:FireServer(unpack(args))
+local args = {
+    [1] = player.Character.Head,
+    [2] = Vector3.new(1409.9630126953125, 223.47378540039062, -40.841861724853516)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.Choke.Fire:FireServer(unpack(args))
+local args = {
+    [1] = player.Character.Head,
+    [2] = Vector3.new(1409.9630126953125, 223.47378540039062, -40.841861724853516)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.Choke.Fire:FireServer(unpack(args))
+local args = {
+    [1] = player.Character.Head,
+    [2] = Vector3.new(1409.9630126953125, 223.47378540039062, -40.841861724853516)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.Choke.Fire:FireServer(unpack(args))
+local args = {
+    [1] = player.Character.Head,
+    [2] = Vector3.new(1409.9630126953125, 223.47378540039062, -40.841861724853516)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.Choke.Fire:FireServer(unpack(args))
+local args = {
+    [1] = player.Character.Head,
+    [2] = Vector3.new(1409.9630126953125, 223.47378540039062, -40.841861724853516)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.Choke.Fire:FireServer(unpack(args))
+local args = {
+    [1] = player.Character.Head,
+    [2] = Vector3.new(1409.9630126953125, 223.47378540039062, -40.841861724853516)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.Choke.Fire:FireServer(unpack(args))
+local args = {
+    [1] = player.Character.Head,
+    [2] = Vector3.new(1409.9630126953125, 223.47378540039062, -40.841861724853516)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.Choke.Fire:FireServer(unpack(args))
+local args = {
+    [1] = player.Character.Head,
+    [2] = Vector3.new(1409.9630126953125, 223.47378540039062, -40.841861724853516)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.Choke.Fire:FireServer(unpack(args))
+local args = {
+    [1] = player.Character.Head,
+    [2] = Vector3.new(1409.9630126953125, 223.47378540039062, -40.841861724853516)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.Choke.Fire:FireServer(unpack(args))
+local args = {
+    [1] = player.Character.Head,
+    [2] = Vector3.new(1409.9630126953125, 223.47378540039062, -40.841861724853516)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.Choke.Fire:FireServer(unpack(args))
+local args = {
+    [1] = player.Character.Head,
+    [2] = Vector3.new(1409.9630126953125, 223.47378540039062, -40.841861724853516)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.Choke.Fire:FireServer(unpack(args))
+local args = {
+    [1] = player.Character.Head,
+    [2] = Vector3.new(1409.9630126953125, 223.47378540039062, -40.841861724853516)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.Choke.Fire:FireServer(unpack(args))
+local args = {
+    [1] = player.Character.Head,
+    [2] = Vector3.new(1409.9630126953125, 223.47378540039062, -40.841861724853516)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.Choke.Fire:FireServer(unpack(args))
+local args = {
+    [1] = player.Character.Head,
+    [2] = Vector3.new(1409.9630126953125, 223.47378540039062, -40.841861724853516)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.Choke.Fire:FireServer(unpack(args))
+local args = {
+    [1] = player.Character.Head,
+    [2] = Vector3.new(1409.9630126953125, 223.47378540039062, -40.841861724853516)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.Choke.Fire:FireServer(unpack(args))
+local args = {
+    [1] = player.Character.Head,
+    [2] = Vector3.new(1409.9630126953125, 223.47378540039062, -40.841861724853516)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.Choke.Fire:FireServer(unpack(args))
+local args = {
+    [1] = player.Character.Head,
+    [2] = Vector3.new(1409.9630126953125, 223.47378540039062, -40.841861724853516)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.Choke.Fire:FireServer(unpack(args))
+local args = {
+    [1] = player.Character.Head,
+    [2] = Vector3.new(1409.9630126953125, 223.47378540039062, -40.841861724853516)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.Choke.Fire:FireServer(unpack(args))
+local args = {
+    [1] = player.Character.Head,
+    [2] = Vector3.new(1409.9630126953125, 223.47378540039062, -40.841861724853516)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.Choke.Fire:FireServer(unpack(args))
+local args = {
+    [1] = player.Character.Head,
+    [2] = Vector3.new(1409.9630126953125, 223.47378540039062, -40.841861724853516)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.Choke.Fire:FireServer(unpack(args))
+local args = {
+    [1] = player.Character.Head,
+    [2] = Vector3.new(1409.9630126953125, 223.47378540039062, -40.841861724853516)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.Choke.Fire:FireServer(unpack(args))
+local args = {
+    [1] = player.Character.Head,
+    [2] = Vector3.new(1409.9630126953125, 223.47378540039062, -40.841861724853516)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.Choke.Fire:FireServer(unpack(args))
+local args = {
+    [1] = player.Character.Head,
+    [2] = Vector3.new(1409.9630126953125, 223.47378540039062, -40.841861724853516)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.Choke.Fire:FireServer(unpack(args))
+local args = {
+    [1] = player.Character.Head,
+    [2] = Vector3.new(1409.9630126953125, 223.47378540039062, -40.841861724853516)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.Choke.Fire:FireServer(unpack(args))
+local args = {
+    [1] = player.Character.Head,
+    [2] = Vector3.new(1409.9630126953125, 223.47378540039062, -40.841861724853516)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.Choke.Fire:FireServer(unpack(args))
+local args = {
+    [1] = player.Character.Head,
+    [2] = Vector3.new(1409.9630126953125, 223.47378540039062, -40.841861724853516)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.Choke.Fire:FireServer(unpack(args))
+local args = {
+    [1] = player.Character.Head,
+    [2] = Vector3.new(1409.9630126953125, 223.47378540039062, -40.841861724853516)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.Choke.Fire:FireServer(unpack(args))
+local args = {
+    [1] = player.Character.Head,
+    [2] = Vector3.new(1409.9630126953125, 223.47378540039062, -40.841861724853516)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.Choke.Fire:FireServer(unpack(args))
+local args = {
+    [1] = player.Character.Head,
+    [2] = Vector3.new(1409.9630126953125, 223.47378540039062, -40.841861724853516)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.Choke.Fire:FireServer(unpack(args))
+local args = {
+    [1] = player.Character.Head,
+    [2] = Vector3.new(1409.9630126953125, 223.47378540039062, -40.841861724853516)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.Choke.Fire:FireServer(unpack(args))
+
+
+ end
+        end
+end   
+end)
+
+BennettSection:NewButton("Jail Push All", " ", function()
+    print("Clicked")
+    local Plr = game.Players.LocalPlayer
+    for i, Player in pairs (game.Players:GetPlayers()) do
+
+        if Player.Character ~= nil and Player ~= Plr then
+            local mag = (Player.Character.UpperTorso.Position - Plr.Character.UpperTorso.Position).magnitude
+            if mag < 100000 then
+                local Target = Player.Character or Player.CharacterAdded:Wait()
+
+local args = {
+    [1] = Target.RightLowerArm,
+    [2] = Vector3.new(1731.626708984375, 268.74700927734375, -36.340538024902344)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.JailPush.Fire:FireServer(unpack(args))
+
+ end
+        end
+end   
+end)
+
+BennettSection:NewButton("Choke All", " ", function()
+    print("Clicked")
+    local Plr = game.Players.LocalPlayer
+    for i, Player in pairs (game.Players:GetPlayers()) do
+
+        if Player.Character ~= nil and Player ~= Plr then
+            local mag = (Player.Character.UpperTorso.Position - Plr.Character.UpperTorso.Position).magnitude
+            if mag < 100000 then
+                local Target = Player.Character or Player.CharacterAdded:Wait()
+
+local args = {
+    [1] = player.Character.Head,
+    [2] = Vector3.new(1409.9630126953125, 223.47378540039062, -40.841861724853516)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.Choke.Fire:FireServer(unpack(args))
+
+
+ end
+        end
+end   
+end)
 
 local Bennett = Window:NewTab("Admin")
 local BennettSection = Bennett:NewSection("")
