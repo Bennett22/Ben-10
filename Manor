@@ -1,0 +1,158 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Bennett Scripts | Charmed", "GrapeTheme")
+
+local Bennett = Window:NewTab("Powers")
+local BennettSection = Bennett:NewSection("Powers Section")
+
+BennettSection:NewToggle("Lightning Strike", "Keybind (C)", function()
+
+    clicktpon = true                
+        plr = game.Players.LocalPlayer
+        hum = plr.Character.HumanoidRootPart
+        mouse = plr:GetMouse()
+        mouse.KeyDown:connect(function(key)
+        if key == 'c' then
+        if mouse.Target then
+        if clicktpon then
+
+local args = {
+    [1] = CFrame.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Witches"):WaitForChild("EvilWitches"):WaitForChild("Enchantress"):WaitForChild("PowerEvents"):WaitForChild("lightningStrikeEvent"):FireServer(unpack(args))
+
+end
+end
+end
+end)
+end)
+
+BennettSection:NewButton("Levitation", " ", function()
+
+local args = {
+    [1] = "prepare",
+    [2] = Vector3.new(-42.67594909667969, 76.22956848144531, -191.8939208984375)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Witches"):WaitForChild("GoodWitches"):WaitForChild("Phoebe"):WaitForChild("PowerEvents"):WaitForChild("PhoebeEvents"):FireServer(unpack(args))
+
+end)
+
+BennettSection:NewToggle("Kick", "Keybind (V)", function()
+
+    clicktpon = true                
+        plr = game.Players.LocalPlayer
+        hum = plr.Character.HumanoidRootPart
+        mouse = plr:GetMouse()
+        mouse.KeyDown:connect(function(key)
+        if key == 'v' then
+        if mouse.Target then
+        if clicktpon then
+
+local args = {
+    [1] = "attack",
+    [2] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z),
+    [3] = workspace:WaitForChild("Part")
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Witches"):WaitForChild("GoodWitches"):WaitForChild("Phoebe"):WaitForChild("PowerEvents"):WaitForChild("PhoebeEvents"):FireServer(unpack(args))
+
+end
+end
+end
+end)
+end)
+
+BennettSection:NewButton("Whirlwind", " ", function()
+
+local args = {
+    [1] = "start",
+    [2] = Vector3.new(-349.08319091796875, 7369.44287109375, 957.2813720703125)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Demons"):WaitForChild("UpperLevel"):WaitForChild("Shax"):WaitForChild("PowerEvents"):WaitForChild("ShaxEvents"):FireServer(unpack(args))
+
+end)
+
+BennettSection:NewToggle("Mover", "Keybind (X)", function()
+
+    clicktpon = true                
+        plr = game.Players.LocalPlayer
+        hum = plr.Character.HumanoidRootPart
+        mouse = plr:GetMouse()
+        mouse.KeyDown:connect(function(key)
+        if key == 'x' then
+        if mouse.Target then
+        if clicktpon then
+
+local args = {
+    [1] = "whirl",
+    [2] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Demons"):WaitForChild("UpperLevel"):WaitForChild("Shax"):WaitForChild("PowerEvents"):WaitForChild("ShaxEvents"):FireServer(unpack(args))
+
+end
+end
+end
+end)
+end)
+
+BennettSection:NewButton("Stop Whirlwind", " ", function()
+
+local args = {
+    [1] = "stop",
+    [2] = Vector3.new(-425.8410949707031, 7372.71044921875, 951.73828125)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Demons"):WaitForChild("UpperLevel"):WaitForChild("Shax"):WaitForChild("PowerEvents"):WaitForChild("ShaxEvents"):FireServer(unpack(args))
+
+end)
+
+BennettSection:NewButton("Get Beam Effect", " ", function()
+
+local args = {
+    [1] = "beam",
+    [2] = Vector3.new(640.4530029296875, 6.820258617401123, -894.988037109375)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Witches"):WaitForChild("GoodWitches"):WaitForChild("Billie"):WaitForChild("PowerEvents"):WaitForChild("UltimateEvents"):InvokeServer(unpack(args))
+
+local args = {
+    [1] = "enough",
+    [2] = Vector3.new(1574.4228515625, 6445.9658203125, -7711.7802734375)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Witches"):WaitForChild("GoodWitches"):WaitForChild("PBaxter"):WaitForChild("PowerEvents"):WaitForChild("BaxterEvents"):FireServer(unpack(args))
+
+end)
+
+BennettSection:NewButton("Remove Beam Effect", " ", function()
+
+local args = {
+    [1] = "beamend",
+    [2] = Vector3.new(723.222412109375, 6.966768264770508, -953.3323364257812)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Witches"):WaitForChild("GoodWitches"):WaitForChild("Billie"):WaitForChild("PowerEvents"):WaitForChild("BillieEvents"):FireServer(unpack(args))
+
+end)
+
+BennettSection:NewButton("Get Levitation Effect", " ", function()
+
+local args = {
+    [1] = "prepare",
+    [2] = Vector3.new(-42.67594909667969, 76.22956848144531, -191.8939208984375)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Witches"):WaitForChild("GoodWitches"):WaitForChild("Phoebe"):WaitForChild("PowerEvents"):WaitForChild("PhoebeEvents"):FireServer(unpack(args))
+
+local args = {
+    [1] = "attack",
+    [2] = Vector3.new(-42.67594909667969, 76.22956848144531, -191.8939208984375),
+    [3] = workspace:WaitForChild("Part")
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Witches"):WaitForChild("GoodWitches"):WaitForChild("Phoebe"):WaitForChild("PowerEvents"):WaitForChild("PhoebeEvents"):FireServer(unpack(args))
+
+end)
