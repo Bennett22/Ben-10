@@ -1,0 +1,109 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Bennett Scripts | Crossover Legends: Reborn", "GrapeTheme")
+
+local Bennett = Window:NewTab("Immortality")
+local BennettSection = Bennett:NewSection("Check misc for wandless magic")
+
+BennettSection:NewButton("Immortality", " ", function()
+
+if plr.Character and plr.Character:FindFirstChild("HumanoidRootPart") then
+  plr.Character.HumanoidRootPart.Anchored = true
+  --god mode script
+  task.wait(1)
+  plr.Character.HumanoidRootPart.Anchored = false
+end
+Try this
+Hades — 20.06.2023 17:56
+can u send the whole thing
+FixPlay6644 — 20.06.2023 17:57
+Ok wait
+I will send you mine
+local plr = game:GetService("Players").LocalPlayer
+local chatbar = plr.PlayerGui.Chat.Frame.ChatBarParentFrame.Frame.BoxFrame.Frame.ChatBar
+local startchatbartext = chatbar.Text
+if plr.Character and plr.Character:FindFirstChild("Humanoid") and plr.Character:FindFirstChild("HumanoidRootPart") then
+    for i,v in pairs(plr.Character.Humanoid:GetPlayingAnimationTracks()) do
+        v:Stop()
+    end
+    task.wait(0.1)
+    plr.Character.Humanoid:Destroy()
+    plr.Character.HumanoidRootPart.Anchored = true
+
+    startchatbartext = chatbar.Text
+    chatbar:SetTextFromInput("avada kedavra")
+    game.Players:Chat("avada kedavra")
+    chatbar.Text = startchatbartext
+    
+    local A_4 = {
+        ["hitCf"] = plr.Character.HumanoidRootPart.CFrame,
+        ["hitPart"] = plr.Character.HumanoidRootPart,
+        ["id"] = tostring(plr.Name .. game:GetService("Workspace").DistributedGameTime),
+        ["distance"] = 1,
+        ["actor"] = plr.Character,
+        ["spellName"] = "avada kedavra"
+    }
+    local Event = game:GetService("InsertService").Events.spellHit
+    Event:FireServer(A_4)
+
+    task.wait(1)
+
+    plr.Character.HumanoidRootPart.Anchored = false
+
+    Instance.new("Humanoid", plr.Character)
+
+    if plr.Character:FindFirstChild("Humanoid") then
+        plr.Character.Humanoid.HipHeight = 2
+    end
+    GodModeLC = true
+end
+
+end)
+
+local Bennett = Window:NewTab("Misc")
+local BennettSection = Bennett:NewSection("Community Scripts")
+
+BennettSection:NewButton("Wandless Magic XTheMasterX Script", "", function()
+    loadstring(game:HttpGet(('https://raw.githubusercontent.com/XTheMasterX/Scripts/Main/MagicTraining'),true))()
+end)
+
+BennettSection:NewButton("Free gamepasses", "", function()
+    local plr = game.Players.LocalPlayer
+
+local backup = game.Players:FindFirstChild("Flight",true):Clone()
+local backup2 = game.Players:FindFirstChild("Elder Wand",true):Clone()
+backup.Parent,backup2.Parent = game.ReplicatedStorage,game.ReplicatedStorage
+
+function give()
+   local c = game.ReplicatedStorage.Flight:Clone()
+   local c2 = game.ReplicatedStorage["Elder Wand"]:Clone()
+   c.Parent,c2.Parent = plr.Backpack,plr.Backpack
+end
+
+give()
+
+plr.CharacterAdded:Connect(function()
+   give()
+end)
+
+end)
+
+BennettSection:NewButton("District", "key is beta", function()
+    loadstring(game:HttpGet("https://rentry.org/district-alpha/raw"))();
+end)
+local Tab = Window:NewTab("Credits")
+local SettingsSection = Tab:NewSection("discord: bennettscripts")
+
+local SettingsSection = Tab:NewSection("Toggle UI")
+SettingsSection:NewKeybind("Toggle UI", "Toggle UI", Enum.KeyCode.M, function()
+    Library:ToggleUI()
+end)
+
+wait(1)
+
+game.StarterGui:SetCore("SendNotification", { 
+    Title = "⛤ Bennett Scripts ⛤";
+    Text = "Magic Training";
+    Icon = "rbxthumb://type=Asset&id=14067496704&w=150&h=150";
+    Duration = "2";
+    Button1 = "Close";
+})
