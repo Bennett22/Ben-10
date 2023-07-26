@@ -1,5 +1,5 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("Bennett Scripts | Charmed", "GrapeTheme")
+local Window = Library.CreateLib("Bennett Scripts | [MANOR] Charmed", "GrapeTheme")
 
 local Bennett = Window:NewTab("Powers")
 local BennettSection = Bennett:NewSection("Powers Section")
@@ -156,3 +156,29 @@ local args = {
 game:GetService("ReplicatedStorage"):WaitForChild("Witches"):WaitForChild("GoodWitches"):WaitForChild("Phoebe"):WaitForChild("PowerEvents"):WaitForChild("PhoebeEvents"):FireServer(unpack(args))
 
 end)
+
+local Bennett = Window:NewTab("Misc")
+local BennettSection = Bennett:NewSection("Misc")
+BennettSection:NewButton("Infinite Yield", "", function()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Omg562/Scripts/main/INF'),true))()
+end)
+BennettSection:NewButton("The Morningstar Circle Gui", "", function()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/TheMorningstarCircle/Spellman/main/CharmedVex'),true))()
+end)
+
+local Tab = Window:NewTab("Credits")
+local SettingsSection = Tab:NewSection("discord: bennettscripts")
+local SettingsSection = Tab:NewSection("Toggle UI")
+SettingsSection:NewKeybind("Toggle UI", "Toggle UI", Enum.KeyCode.M, function()
+    Library:ToggleUI()
+end)
+
+wait(1)
+
+game.StarterGui:SetCore("SendNotification", { 
+    Title = "⛤ Bennett Scripts ⛤";
+    Text = "[MANOR] Charmed";
+    Icon = "rbxthumb://type=Asset&id=14067496704&w=150&h=150";
+    Duration = "2";
+    Button1 = "Close";
+})
