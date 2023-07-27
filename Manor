@@ -109,6 +109,54 @@ game:GetService("ReplicatedStorage"):WaitForChild("Demons"):WaitForChild("UpperL
 
 end)
 
+
+BennettSection:NewButton("Telekinetic Hovering", " ", function()
+
+local args = {
+    [1] = "hover",
+    [2] = Vector3.new(-142.1442108154297, 113.62232208251953, -224.6883544921875)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Witches"):WaitForChild("GoodWitches"):WaitForChild("Prue"):WaitForChild("PowerEvents"):WaitForChild("PrueEvents"):FireServer(unpack(args))
+
+end)
+
+BennettSection:NewToggle("Mover", "Keybind (Z)", function()
+
+    clicktpon = true                
+        plr = game.Players.LocalPlayer
+        hum = plr.Character.HumanoidRootPart
+        mouse = plr:GetMouse()
+        mouse.KeyDown:connect(function(key)
+        if key == 'z' then
+        if mouse.Target then
+        if clicktpon then
+
+local args = {
+    [1] = "hmover",
+    [2] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 5, mouse.Hit.z)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Witches"):WaitForChild("GoodWitches"):WaitForChild("Prue"):WaitForChild("PowerEvents"):WaitForChild("PrueEvents"):FireServer(unpack(args))
+
+end
+end
+end
+end)
+end)
+
+BennettSection:NewButton("Stop", " ", function()
+
+local args = {
+    [1] = "hoverend",
+    [2] = Vector3.new(-142.1442108154297, 113.62232208251953, -224.6883544921875)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Witches"):WaitForChild("GoodWitches"):WaitForChild("Prue"):WaitForChild("PowerEvents"):WaitForChild("PrueEvents"):FireServer(unpack(args))
+
+end)
+
+
 BennettSection:NewButton("Get Beam Effect", " ", function()
 
 local args = {
