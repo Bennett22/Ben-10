@@ -30,7 +30,7 @@ BennettSection:NewButton("Anger", " ", function()
 
 local args = {
     [1] = "YSMAULT",
-    [2] = "Rage"
+    [2] = "Anger"
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("SpaceSystem"):FireServer(unpack(args))
@@ -646,7 +646,7 @@ BennettSection:NewButton("Qward", " ", function()
 
 local args = {
     [1] = "QWARD",
-    [2] = "Rage"
+    [2] = "Anger"
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("SpaceSystem"):FireServer(unpack(args))
@@ -657,7 +657,7 @@ BennettSection:NewButton("Oa", " ", function()
 
 local args = {
     [1] = "OA",
-    [2] = "Rage"
+    [2] = "Anger"
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("SpaceSystem"):FireServer(unpack(args))
@@ -668,7 +668,7 @@ BennettSection:NewButton("Odym", " ", function()
 
 local args = {
     [1] = "ODYM",
-    [2] = "Rage"
+    [2] = "Anger"
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("SpaceSystem"):FireServer(unpack(args))
@@ -679,7 +679,7 @@ BennettSection:NewButton("Ysmault", " ", function()
 
 local args = {
     [1] = "YSMAULT",
-    [2] = "Rage"
+    [2] = "Anger"
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("SpaceSystem"):FireServer(unpack(args))
