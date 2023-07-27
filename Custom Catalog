@@ -10,6 +10,30 @@ if game:GetService("Players").LocalPlayer.UserId == 4334482090 then
 end
 end)
 
+local Tab = Window:NewTab("ava <3")
+local Section = Tab:NewSection("Custom 1")
+Section:NewButton("Custom", " ", function()
+if game:GetService("Players").LocalPlayer.UserId == 3457959451 then
+    game.Players:Chat("!hat 6536289312")
+    game.Players:Chat("!hat 11280888020")
+    game.Players:Chat("!hat 11935028286")
+    game.Players:Chat("!hat 7764014975")
+end
+end)
+
+local Section = Tab:NewSection("Scarlet Witch")
+Section:NewButton("Custom", " ", function()
+if game:GetService("Players").LocalPlayer.UserId == 3457959451 then
+   game.Players:Chat("!hat 11205886318")
+    game.Players:Chat("!hat 8722372634")
+    game.Players:Chat("!hat 12752932444")
+    game.Players:Chat("!hat 8028831901")
+    game.Players:Chat("!hat 11305834898")
+    game.Players:Chat("!hat 11707825697")
+end
+end)
+
+
 local Tab = Window:NewTab("Heads")
 local Section = Tab:NewSection("")
 Section:NewButton("Narrow", " ", function()
