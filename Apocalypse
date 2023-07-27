@@ -1,0 +1,171 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Bennett Scripts | Heroes: Apocalypse", "GrapeTheme")
+
+local Bennett = Window:NewTab("Characters")
+local BennettSection = Bennett:NewSection("Delete Main Screen")
+BennettSection:NewButton("Delete", " ", function()
+
+game.ReplicatedStorage.Ui.MainScreen:destroy()
+game.WakSpace.Selection_Background:destroy()
+
+end)
+local BennettSection = Bennett:NewSection("Custom with powers")
+
+BennettSection:NewButton("Black Widow", " ", function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Black Widow")
+
+end)
+
+BennettSection:NewButton("Cyclops", " ", function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Cyclops")
+
+end)
+
+BennettSection:NewButton("Jean Grey", " ", function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Jean Grey")
+
+end)
+
+BennettSection:NewButton("Phoenix", " ", function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Phoenix")
+
+end)
+
+BennettSection:NewButton("Scarlet Witch", " ", function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Scarlet Witch")
+
+end)
+
+BennettSection:NewButton("Speed", " ", function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Speed")
+
+end)
+
+BennettSection:NewButton("Spider-Woman", " ", function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Spider-Woman")
+
+end)
+
+BennettSection:NewButton("Storm", " ", function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Storm")
+
+end)
+
+BennettSection:NewButton("The Child", " ", function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "The Child")
+
+end)
+
+BennettSection:NewButton("Vision", " ", function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Vision")
+
+end)
+
+BennettSection:NewButton("Wanda Maximoff", " ", function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Wanda Maximoff")
+
+end)
+
+
+local Bennett = Window:NewTab("Powers")
+local BennettSection = Bennett:NewSection("Black Widow")
+
+BennettSection:NewToggle("Bullets", "Keybind (1)", function()
+
+    clicktpon = true                
+        plr = game.Players.LocalPlayer
+        hum = plr.Character.HumanoidRootPart
+        mouse = plr:GetMouse()
+        mouse.KeyDown:connect(function(key)
+        if key == '1' then
+        if mouse.Target then
+        if clicktpon then
+
+local args = {
+    [1] = "\0BlackWidow_Bullet Fired\0\0",
+    [2] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 1.5, mouse.Hit.z),
+    [3] = 1
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
+
+local args = {
+    [1] = "\0BlackWidow_Bullet Fired\0\0",
+    [2] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 1.5, mouse.Hit.z),
+    [3] = 0
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
+
+end
+end
+end
+end)
+end)
+
+BennettSection:NewButton("Start Cloaking", " ", function()
+
+local args = {
+    [1] = "\0BlackWidow_StartCloaking\0\0"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("RemoteFunction"):InvokeServer(unpack(args))
+
+end)
+
+BennettSection:NewButton("Stop Cloaking", " ", function()
+
+local args = {
+    [1] = "\0BlackWidow_StopCloaking\0\0"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
+
+end)
+
+BennettSection:NewButton("Grenade", " ", function()
+
+local args = {
+    [1] = "\0BlackWidow_EquipGrenade\0\0"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("RemoteFunction"):InvokeServer(unpack(args))
+
+end)
+
+local BennettSection = Bennett:NewSection("Cyclops)
+
+BennettSection:NewToggle("Bolt", "Keybind (2)", function()
+
+    clicktpon = true                
+        plr = game.Players.LocalPlayer
+        hum = plr.Character.HumanoidRootPart
+        mouse = plr:GetMouse()
+        mouse.KeyDown:connect(function(key)
+        if key == '2' then
+        if mouse.Target then
+        if clicktpon then
+
+local args = {
+    [1] = "\0Cyclops Fire Eye Bolt\0\0",
+    [2] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 1.5, mouse.Hit.z)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
+
+end
+end
+end
+end)
+end)
