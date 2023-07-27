@@ -1,0 +1,755 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Bennett Scripts | Latern's Hub", "GrapeTheme")
+
+local Bennett = Window:NewTab("Emotion")
+local BennettSection = Bennett:NewSection("Change Emotion")
+
+BennettSection:NewButton("Willpower", " ", function()
+
+local args = {
+    [1] = "OA",
+    [2] = "Willpower"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("SpaceSystem"):FireServer(unpack(args))
+
+end)
+
+BennettSection:NewButton("Fear", " ", function()
+
+local args = {
+    [1] = "QWARD",
+    [2] = "Fear"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("SpaceSystem"):FireServer(unpack(args))
+
+end)
+
+BennettSection:NewButton("Anger", " ", function()
+
+local args = {
+    [1] = "YSMAULT",
+    [2] = "Rage"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("SpaceSystem"):FireServer(unpack(args))
+
+end)
+
+BennettSection:NewButton("Hope", " ", function()
+
+local args = {
+    [1] = "ODYM",
+    [2] = "Hope"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("SpaceSystem"):FireServer(unpack(args))
+
+end)
+
+local Bennett = Window:NewTab("Powers")
+local BennettSection = Bennett:NewSection("Willpower")
+
+BennettSection:NewToggle("Energy Blast", "Keybind (2)", function()
+
+    clicktpon = true                
+        plr = game.Players.LocalPlayer
+        hum = plr.Character.HumanoidRootPart
+        mouse = plr:GetMouse()
+        mouse.KeyDown:connect(function(key)
+        if key == '2' then
+        if mouse.Target then
+        if clicktpon then
+
+local args = {
+    [1] = "EnergyBlast",
+    [2] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 1.5, mouse.Hit.z)
+}
+
+game:GetService("Players").LocalPlayer.Character:FindFirstChild("Willpower Ring").ActivatedRemote:FireServer(unpack(args))
+
+end
+end
+end
+end)
+end)
+
+BennettSection:NewToggle("Jet Attack", "Keybind (3)", function()
+
+    clicktpon = true                
+        plr = game.Players.LocalPlayer
+        hum = plr.Character.HumanoidRootPart
+        mouse = plr:GetMouse()
+        mouse.KeyDown:connect(function(key)
+        if key == '3' then
+        if mouse.Target then
+        if clicktpon then
+
+local args = {
+    [1] = "Airplane",
+    [2] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 1.5, mouse.Hit.z)
+}
+
+game:GetService("Players").LocalPlayer.Character:FindFirstChild("Willpower Ring").ActivatedRemote:FireServer(unpack(args))
+
+end
+end
+end
+end)
+end)
+
+BennettSection:NewButton("Energy Burst", " ", function()
+
+local args = {
+    [1] = "Outburst"
+}
+
+game:GetService("Players").LocalPlayer.Character:FindFirstChild("Willpower Ring").ActivatedRemote:FireServer(unpack(args))
+
+end)
+
+BennettSection:NewButton("Power Fists", " ", function()
+
+local args = {
+    [1] = "Fists"
+}
+
+game:GetService("Players").LocalPlayer.Character:FindFirstChild("Willpower Ring").ActivatedRemote:FireServer(unpack(args))
+
+end)
+
+BennettSection:NewButton("Energy Bat", " ", function()
+
+local args = {
+    [1] = "Bat"
+}
+
+game:GetService("Players").LocalPlayer.Character:FindFirstChild("Willpower Ring").ActivatedRemote:FireServer(unpack(args))
+
+end)
+
+BennettSection:NewButton("Charge Ring", " ", function()
+
+local args = {
+    [1] = "ChargeRing"
+}
+
+game:GetService("Players").LocalPlayer.Character:FindFirstChild("Willpower Ring").ActivatedRemote:FireServer(unpack(args))
+
+end)
+
+BennettSection:NewButton("Shield", " ", function()
+
+local args = {
+    [1] = "ShieldStart"
+}
+
+game:GetService("Players").LocalPlayer.Character:FindFirstChild("Willpower Ring").ActivatedRemote:FireServer(unpack(args))
+
+end)
+
+BennettSection:NewButton("Unshield", " ", function()
+
+local args = {
+    [1] = "ShieldBreak"
+}
+
+game:GetService("Players").LocalPlayer.Character:FindFirstChild("Willpower Ring").ActivatedRemote:FireServer(unpack(args))
+
+end)
+
+BennettSection:NewButton("Get Infinite Energy", " ", function()
+getgenv().Energy = true;
+
+while Wait() do
+    if getgenv().Energy == true then
+local args = {
+    [1] = "UpdateRingPower",
+    [2] = 250
+}
+
+game:GetService("Players").LocalPlayer.Character:FindFirstChild("Willpower Ring").ActivatedRemote:FireServer(unpack(args))
+
+    end
+    end
+end)
+
+local BennettSection = Bennett:NewSection("Fear")
+
+BennettSection:NewToggle("Energy Bomb", "Keybind (2)", function()
+
+    clicktpon = true                
+        plr = game.Players.LocalPlayer
+        hum = plr.Character.HumanoidRootPart
+        mouse = plr:GetMouse()
+        mouse.KeyDown:connect(function(key)
+        if key == '2' then
+        if mouse.Target then
+        if clicktpon then
+
+local args = {
+    [1] = "EnergyBlast",
+    [2] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 1.5, mouse.Hit.z)
+}
+
+game:GetService("Players").LocalPlayer.Character:FindFirstChild("Fear Ring").ActivatedRemote:FireServer(unpack(args))
+
+end
+end
+end
+end)
+end)
+
+BennettSection:NewToggle("Air Assault", "Keybind (3)", function()
+
+    clicktpon = true                
+        plr = game.Players.LocalPlayer
+        hum = plr.Character.HumanoidRootPart
+        mouse = plr:GetMouse()
+        mouse.KeyDown:connect(function(key)
+        if key == '3' then
+        if mouse.Target then
+        if clicktpon then
+            
+local args = {
+    [1] = "Helicopter",
+    [2] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 1.5, mouse.Hit.z)
+}
+
+game:GetService("Players").LocalPlayer.Character:FindFirstChild("Fear Ring").ActivatedRemote:FireServer(unpack(args))
+
+end
+end
+end
+end)
+end)
+
+BennettSection:NewButton("Yellow Rage", " ", function()
+
+local args = {
+    [1] = "Outburst"
+}
+
+game:GetService("Players").LocalPlayer.Character:FindFirstChild("Fear Ring").ActivatedRemote:FireServer(unpack(args))
+
+end)
+
+BennettSection:NewButton("Twin Meteors", " ", function()
+
+local args = {
+    [1] = "Clash"
+}
+
+game:GetService("Players").LocalPlayer.Character:FindFirstChild("Fear Ring").ActivatedRemote:FireServer(unpack(args))
+
+end)
+
+BennettSection:NewButton("Energy Axe", " ", function()
+
+local args = {
+    [1] = "Meteor"
+}
+
+game:GetService("Players").LocalPlayer.Character:FindFirstChild("Fear Ring").ActivatedRemote:FireServer(unpack(args))
+
+end)
+
+BennettSection:NewButton("Charge Ring", " ", function()
+
+local args = {
+    [1] = "ChargeRing"
+}
+
+game:GetService("Players").LocalPlayer.Character:FindFirstChild("Fear Ring").ActivatedRemote:FireServer(unpack(args))
+
+end)
+
+BennettSection:NewButton("Shield", " ", function()
+
+local args = {
+    [1] = "ShieldStart"
+}
+
+game:GetService("Players").LocalPlayer.Character:FindFirstChild("Fear Ring").ActivatedRemote:FireServer(unpack(args))
+
+end)
+
+BennettSection:NewButton("Unshield", " ", function()
+
+local args = {
+    [1] = "ShieldBreak"
+}
+
+game:GetService("Players").LocalPlayer.Character:FindFirstChild("Fear Ring").ActivatedRemote:FireServer(unpack(args))
+
+end)
+
+BennettSection:NewButton("Get Infinite Energy", " ", function()
+getgenv().Energy = true;
+
+while Wait() do
+    if getgenv().Energy == true then
+local args = {
+    [1] = "UpdateRingPower",
+    [2] = 250
+}
+
+game:GetService("Players").LocalPlayer.Character:FindFirstChild("Fear Ring").ActivatedRemote:FireServer(unpack(args))
+
+    end
+    end
+end)
+
+local BennettSection = Bennett:NewSection("Anger")
+
+BennettSection:NewToggle("Blood Bomb", "Keybind (2)", function()
+
+    clicktpon = true                
+        plr = game.Players.LocalPlayer
+        hum = plr.Character.HumanoidRootPart
+        mouse = plr:GetMouse()
+        mouse.KeyDown:connect(function(key)
+        if key == '2' then
+        if mouse.Target then
+        if clicktpon then
+
+local args = {
+    [1] = "EnergyBlast",
+    [2] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 1.5, mouse.Hit.z)
+}
+
+game:GetService("Players").LocalPlayer.Character:FindFirstChild("Rage Ring").ActivatedRemote:FireServer(unpack(args))
+
+end
+end
+end
+end)
+end)
+
+
+BennettSection:NewToggle("Portal Creation", "Keybind (3)", function()
+
+    clicktpon = true                
+        plr = game.Players.LocalPlayer
+        hum = plr.Character.HumanoidRootPart
+        mouse = plr:GetMouse()
+        mouse.KeyDown:connect(function(key)
+        if key == '3' then
+        if mouse.Target then
+        if clicktpon then
+
+
+local args = {
+    [1] = "Portal",
+    [2] = CFrame.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z)
+}
+
+game:GetService("Players").LocalPlayer.Character:FindFirstChild("Rage Ring").ActivatedRemote:FireServer(unpack(args))
+
+end
+end
+end
+end)
+end)
+
+BennettSection:NewButton("Bloodburst", " ", function()
+
+local args = {
+    [1] = "Outburst"
+}
+
+game:GetService("Players").LocalPlayer.Character:FindFirstChild("Rage Ring").ActivatedRemote:FireServer(unpack(args))
+
+end)
+
+BennettSection:NewButton("Spike Ball Crush", " ", function()
+
+local args = {
+    [1] = "Rage"
+}
+
+game:GetService("Players").LocalPlayer.Character:FindFirstChild("Rage Ring").ActivatedRemote:FireServer(unpack(args))
+
+end)
+
+BennettSection:NewButton("Raging Beast", " ", function()
+
+local args = {
+    [1] = "Claw"
+}
+
+game:GetService("Players").LocalPlayer.Character:FindFirstChild("Rage Ring").ActivatedRemote:FireServer(unpack(args))
+
+end)
+
+BennettSection:NewButton("Charge Ring", " ", function()
+
+local args = {
+    [1] = "ChargeRing"
+}
+
+game:GetService("Players").LocalPlayer.Character:FindFirstChild("Rage Ring").ActivatedRemote:FireServer(unpack(args))
+
+end)
+
+BennettSection:NewButton("Shield", " ", function()
+
+local args = {
+    [1] = "ShieldStart"
+}
+
+game:GetService("Players").LocalPlayer.Character:FindFirstChild("Rage Ring").ActivatedRemote:FireServer(unpack(args))
+
+end)
+
+BennettSection:NewButton("Unshield", " ", function()
+
+local args = {
+    [1] = "ShieldBreak"
+}
+
+game:GetService("Players").LocalPlayer.Character:FindFirstChild("Rage Ring").ActivatedRemote:FireServer(unpack(args))
+
+end)
+
+BennettSection:NewButton("Get Infinite Energy", " ", function()
+getgenv().Energy = true;
+
+while Wait() do
+    if getgenv().Energy == true then
+local args = {
+    [1] = "UpdateRingPower",
+    [2] = 250
+}
+
+game:GetService("Players").LocalPlayer.Character:FindFirstChild("Rage Ring").ActivatedRemote:FireServer(unpack(args))
+
+    end
+    end
+end)
+
+local BennettSection = Bennett:NewSection("Hope")
+
+
+BennettSection:NewToggle("Energy Blast", "Keybind (2)", function()
+
+    clicktpon = true                
+        plr = game.Players.LocalPlayer
+        hum = plr.Character.HumanoidRootPart
+        mouse = plr:GetMouse()
+        mouse.KeyDown:connect(function(key)
+        if key == '2' then
+        if mouse.Target then
+        if clicktpon then
+
+
+local args = {
+    [1] = "EnergyBlast",
+    [2] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 1.5, mouse.Hit.z)
+}
+
+game:GetService("Players").LocalPlayer.Character:FindFirstChild("Hope Ring").ActivatedRemote:FireServer(unpack(args))
+
+end
+end
+end
+end)
+end)
+
+BennettSection:NewButton("Shining Hope", " ", function()
+
+local args = {
+    [1] = "Outburst"
+}
+
+game:GetService("Players").LocalPlayer.Character:FindFirstChild("Hope Ring").ActivatedRemote:FireServer(unpack(args))
+
+end)
+
+BennettSection:NewButton("Body Rejuvenation", " ", function()
+
+local args = {
+    [1] = "Rejuvenation"
+}
+
+game:GetService("Players").LocalPlayer.Character:FindFirstChild("Hope Ring").ActivatedRemote:FireServer(unpack(args))
+
+end)
+
+BennettSection:NewButton("Energy Comets", " ", function()
+
+local args = {
+    [1] = "Fists",
+    [2] = Vector3.new(-56.94041442871094, 67.05291748046875, 931.2373046875)
+}
+
+game:GetService("Players").LocalPlayer.Character:FindFirstChild("Hope Ring").ActivatedRemote:FireServer(unpack(args))
+
+end)
+
+BennettSection:NewButton("Energy Hammer", " ", function()
+
+local args = {
+    [1] = "Bat"
+}
+
+game:GetService("Players").LocalPlayer.Character:FindFirstChild("Hope Ring").ActivatedRemote:FireServer(unpack(args))
+
+end)
+
+BennettSection:NewButton("Charge Ring", " ", function()
+
+local args = {
+    [1] = "ChargeRing"
+}
+
+game:GetService("Players").LocalPlayer.Character:FindFirstChild("Hope Ring").ActivatedRemote:FireServer(unpack(args))
+
+end)
+
+BennettSection:NewButton("Shield", " ", function()
+
+local args = {
+    [1] = "ShieldStart"
+}
+
+game:GetService("Players").LocalPlayer.Character:FindFirstChild("Hope Ring").ActivatedRemote:FireServer(unpack(args))
+
+end)
+
+BennettSection:NewButton("Unshield", " ", function()
+
+local args = {
+    [1] = "ShieldBreak"
+}
+
+game:GetService("Players").LocalPlayer.Character:FindFirstChild("Hope Ring").ActivatedRemote:FireServer(unpack(args))
+
+end)
+
+
+
+
+BennettSection:NewButton("Get Infinite Energy", " ", function()
+getgenv().Energy = true;
+
+while Wait() do
+    if getgenv().Energy == true then
+local args = {
+    [1] = "UpdateRingPower",
+    [2] = 250
+}
+
+game:GetService("Players").LocalPlayer.Character:FindFirstChild("Hope Ring").ActivatedRemote:FireServer(unpack(args))
+
+    end
+    end
+end)
+
+local Bennett = Window:NewTab("Teleports")
+local BennettSection = Bennett:NewSection("Willpower")
+
+BennettSection:NewButton("Qward", " ", function()
+
+local args = {
+    [1] = "QWARD",
+    [2] = "Willpower"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("SpaceSystem"):FireServer(unpack(args))
+
+end)
+
+BennettSection:NewButton("Oa", " ", function()
+
+local args = {
+    [1] = "OA",
+    [2] = "Willpower"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("SpaceSystem"):FireServer(unpack(args))
+
+end)
+
+BennettSection:NewButton("Odym", " ", function()
+
+local args = {
+    [1] = "ODYM",
+    [2] = "Willpower"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("SpaceSystem"):FireServer(unpack(args))
+
+end)
+
+BennettSection:NewButton("Ysmault", " ", function()
+
+local args = {
+    [1] = "YSMAULT",
+    [2] = "Willpower"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("SpaceSystem"):FireServer(unpack(args))
+
+end)
+
+local BennettSection = Bennett:NewSection("Fear")
+
+BennettSection:NewButton("Qward", " ", function()
+
+local args = {
+    [1] = "QWARD",
+    [2] = "Fear"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("SpaceSystem"):FireServer(unpack(args))
+
+end)
+
+BennettSection:NewButton("Oa", " ", function()
+
+local args = {
+    [1] = "OA",
+    [2] = "Fear"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("SpaceSystem"):FireServer(unpack(args))
+
+end)
+
+BennettSection:NewButton("Odym", " ", function()
+
+local args = {
+    [1] = "ODYM",
+    [2] = "Fear"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("SpaceSystem"):FireServer(unpack(args))
+
+end)
+
+BennettSection:NewButton("Ysmault", " ", function()
+
+local args = {
+    [1] = "YSMAULT",
+    [2] = "Fear"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("SpaceSystem"):FireServer(unpack(args))
+
+end)
+
+local BennettSection = Bennett:NewSection("Anger")
+
+BennettSection:NewButton("Qward", " ", function()
+
+local args = {
+    [1] = "QWARD",
+    [2] = "Rage"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("SpaceSystem"):FireServer(unpack(args))
+
+end)
+
+BennettSection:NewButton("Oa", " ", function()
+
+local args = {
+    [1] = "OA",
+    [2] = "Rage"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("SpaceSystem"):FireServer(unpack(args))
+
+end)
+
+BennettSection:NewButton("Odym", " ", function()
+
+local args = {
+    [1] = "ODYM",
+    [2] = "Rage"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("SpaceSystem"):FireServer(unpack(args))
+
+end)
+
+BennettSection:NewButton("Ysmault", " ", function()
+
+local args = {
+    [1] = "YSMAULT",
+    [2] = "Rage"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("SpaceSystem"):FireServer(unpack(args))
+
+end)
+
+local BennettSection = Bennett:NewSection("Hope")
+
+BennettSection:NewButton("Qward", " ", function()
+
+local args = {
+    [1] = "QWARD",
+    [2] = "Hope"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("SpaceSystem"):FireServer(unpack(args))
+
+end)
+
+BennettSection:NewButton("Oa", " ", function()
+
+local args = {
+    [1] = "OA",
+    [2] = "Hope"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("SpaceSystem"):FireServer(unpack(args))
+
+end)
+
+BennettSection:NewButton("Odym", " ", function()
+
+local args = {
+    [1] = "ODYM",
+    [2] = "Hope"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("SpaceSystem"):FireServer(unpack(args))
+
+end)
+
+BennettSection:NewButton("Ysmault", " ", function()
+
+local args = {
+    [1] = "YSMAULT",
+    [2] = "Hope"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("SpaceSystem"):FireServer(unpack(args))
+
+end)
+
+local Bennett = Window:NewTab("Admin")
+local BennettSection = Bennett:NewSection("")
+BennettSection:NewButton("Infinite Yield", "", function()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Omg562/Scripts/main/INF'),true))()
+end)
+
+local Tab = Window:NewTab("Credits")
+local SettingsSection = Tab:NewSection("discord: bennettscripts")
+
+local SettingsSection = Tab:NewSection("Toggle UI")
+SettingsSection:NewKeybind("Toggle UI", "Toggle UI", Enum.KeyCode.M, function()
+    Library:ToggleUI()
+end)
+wait(1)
+game.StarterGui:SetCore("SendNotification", { 
+    Title = "⛤ Bennett Scripts ⛤";
+    Text = "Latern's Hub";
+    Icon = "rbxthumb://type=Asset&id=14067496704&w=150&h=150";
+    Duration = "2";
+    Button1 = "Close";
+})
