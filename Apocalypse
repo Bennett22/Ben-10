@@ -187,7 +187,7 @@ wait(1)
 
 game.StarterGui:SetCore("SendNotification", { 
     Title = "⛤ Bennett Scripts ⛤";
-    Text = "Magic Training";
+    Text = "Heroes: Apocalypse";
     Icon = "rbxthumb://type=Asset&id=14067496704&w=150&h=150";
     Duration = "2";
     Button1 = "Close";
