@@ -33,3 +33,12 @@ game.workspace[plr.name].Animate.toolnone.ToolNoneAnim.AnimationId = "rbxassetid
 --walk
 
 game.workspace[plr.name].Animate.walk.WalkAnim.AnimationId = "rbxassetid://12705693012"
+
+wait(1)
+game.StarterGui:SetCore("SendNotification", { 
+    Title = "⛤ Bennett Scripts ⛤";
+    Text = "Catwalk";
+    Icon = "rbxthumb://type=Asset&id=14067496704&w=150&h=150";
+    Duration = "2";
+    Button1 = "Close";
+})
