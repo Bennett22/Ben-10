@@ -1,0 +1,176 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Bennett Scripts | AHS: Collided", "GrapeTheme")
+
+local Bennett = Window:NewTab("Characters")
+local BennettSection = Bennett:NewSection("Mortal")
+
+BennettSection:NewButton("Brooke", " ", function()
+
+local args = {
+    [1] = "Brooke"
+}
+
+game:GetService("ReplicatedStorage")["Events()"].CharacterSelection.PickCharacter:FireServer(unpack(args))
+
+end)
+
+local BennettSection = Bennett:NewSection("Pale")
+
+BennettSection:NewButton("Pale", " ", function()
+
+local args = {
+    [1] = "Pale"
+}
+
+game:GetService("ReplicatedStorage")["Events()"].CharacterSelection.PickCharacter:FireServer(unpack(args))
+
+end)
+
+local BennettSection = Bennett:NewSection("Satanist")
+
+BennettSection:NewButton("Richard", " ", function()
+
+local args = {
+    [1] = "Richard"
+}
+
+game:GetService("ReplicatedStorage")["Events()"].CharacterSelection.PickCharacter:FireServer(unpack(args))
+
+end)
+
+local BennettSection = Bennett:NewSection("The Afflicted")
+
+BennettSection:NewButton("The Countess", " ", function()
+
+local args = {
+    [1] = "The Countess"
+}
+
+game:GetService("ReplicatedStorage")["Events()"].CharacterSelection.PickCharacter:FireServer(unpack(args))
+
+end)
+
+BennettSection:NewButton("Ramona Royale", " ", function()
+
+local args = {
+    [1] = "Ramona Royale"
+}
+
+game:GetService("ReplicatedStorage")["Events()"].CharacterSelection.PickCharacter:FireServer(unpack(args))
+
+end)
+
+BennettSection:NewButton("Donovan", " ", function()
+
+local args = {
+    [1] = "Donovan"
+}
+
+game:GetService("ReplicatedStorage")["Events()"].CharacterSelection.PickCharacter:FireServer(unpack(args))
+
+end)
+
+local BennettSection = Bennett:NewSection("Witch")
+
+BennettSection:NewButton("Cordelia Goode", " ", function()
+
+local args = {
+    [1] = "Cordelia Goode"
+}
+
+game:GetService("ReplicatedStorage")["Events()"].CharacterSelection.PickCharacter:FireServer(unpack(args))
+
+end)
+
+BennettSection:NewButton("Cordelia Goode Outfit", " ", function()
+
+local args = {
+    [1] = "Cordelia Goode S"
+}
+
+game:GetService("ReplicatedStorage")["Events()"].CharacterSelection.PickCharacter:FireServer(unpack(args))
+
+end)
+
+BennettSection:NewButton("Marie", " ", function()
+
+local args = {
+    [1] = "Marie"
+}
+
+game:GetService("ReplicatedStorage")["Events()"].CharacterSelection.PickCharacter:FireServer(unpack(args))
+
+end)
+
+BennettSection:NewButton("Queenie", " ", function()
+
+local args = {
+    [1] = "Queenie"
+}
+
+game:GetService("ReplicatedStorage")["Events()"].CharacterSelection.PickCharacter:FireServer(unpack(args))
+
+end)
+
+BennettSection:NewButton("Madison Montgomery", " ", function()
+
+local args = {
+    [1] = "Madison Montgomery"
+}
+
+game:GetService("ReplicatedStorage")["Events()"].CharacterSelection.PickCharacter:FireServer(unpack(args))
+
+end)
+
+BennettSection:NewButton("Misty Day", " ", function()
+
+local args = {
+    [1] = "Misty Day"
+}
+
+game:GetService("ReplicatedStorage")["Events()"].CharacterSelection.PickCharacter:FireServer(unpack(args))
+
+end)
+
+BennettSection:NewButton("Fiona Goode", " ", function()
+
+local args = {
+    [1] = "Fiona Goode"
+}
+
+game:GetService("ReplicatedStorage")["Events()"].CharacterSelection.PickCharacter:FireServer(unpack(args))
+
+end)
+
+BennettSection:NewButton("Myrtle Snow", " ", function()
+
+local args = {
+    [1] = "Myrtle Snow"
+}
+
+game:GetService("ReplicatedStorage")["Events()"].CharacterSelection.PickCharacter:FireServer(unpack(args))
+
+end)
+
+local Main = Window:NewTab("Admin")
+local MainSection = Main:NewSection("")
+MainSection:NewButton("Infinite Yield", "", function()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Omg562/Scripts/main/INF'),true))()
+end)
+
+local Tab = Window:NewTab("Credits")
+local SettingsSection = Tab:NewSection("discord: bennettscripts")
+
+local SettingsSection = Tab:NewSection("Toggle UI")
+SettingsSection:NewKeybind("Toggle UI", "Toggle UI", Enum.KeyCode.M, function()
+    Library:ToggleUI()
+end)
+
+wait(1)
+game.StarterGui:SetCore("SendNotification", { 
+    Title = "⛤ Bennett Scripts ⛤";
+    Text = "AHS: Collided";
+    Icon = "rbxthumb://type=Asset&id=14067496704&w=150&h=150";
+    Duration = "2";
+    Button1 = "Close";
+})
