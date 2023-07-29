@@ -1,0 +1,35 @@
+--climb
+
+local plr = game.Players.LocalPlayer
+
+game.workspace[plr.name].Animate.climb.ClimbAnim.AnimationId = "rbxassetid://10921053544"
+
+--fall
+
+game.workspace[plr.name].Animate.fall.FallAnim.AnimationId = "rbxassetid://10921061530"
+
+--idle
+
+game.workspace[plr.name].Animate.idle.Animation1.AnimationId = "rbxassetid://10921054344"
+game.workspace[plr.name].Animate.idle.Animation2.AnimationId = "rbxassetid://10921055107"
+
+--jump
+
+game.workspace[plr.name].Animate.jump.JumpAnim.AnimationId = "rbxassetid://10921062673"
+
+--run
+
+game.workspace[plr.name].Animate.run.RunAnim.AnimationId = "rbxassetid://12705693012"
+
+--sit
+
+game.workspace[plr.name].Animate.sit.SitAnim.AnimationId = "rbxassetid://2506281703"
+
+--toolnone? what the fuck is that?
+
+game.workspace[plr.name].Animate.toolnone.ToolNoneAnim.AnimationId = "rbxassetid://507768375"
+
+
+--walk
+
+game.workspace[plr.name].Animate.walk.WalkAnim.AnimationId = "rbxassetid://12705693012"
