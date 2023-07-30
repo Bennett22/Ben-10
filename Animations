@@ -1,0 +1,503 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Bennett Scripts | Heroes Online World - Animations", "GrapeTheme")
+
+local Bennett = Window:NewTab("Walk, Idle etc")
+local BennettSection = Bennett:NewSection("Animations")
+
+BennettSection:NewButton("Zatanna", " ", function()
+
+local plr = game.Players.LocalPlayer
+
+game.workspace[plr.name].Animate.cheer.CheerAnim.AnimationId = "rbxassetid://12108227905"
+game.workspace[plr.name].Animate.climb.ClimbAnim.AnimationId = "rbxassetid://12108228598"
+game.workspace[plr.name].Animate.fall.FallAnim.AnimationId = "rbxassetid://12085998455"
+game.workspace[plr.name].Animate.idle.Animation1.AnimationId = "rbxassetid://12073804356"
+game.workspace[plr.name].Animate.jump.JumpAnim.AnimationId = "rbxassetid://12076197174"
+game.workspace[plr.name].Animate.laugh.LaughAnim.AnimationId = "rbxassetid://12108228987"
+game.workspace[plr.name].Animate.point.PointAnim.AnimationId = "rbxassetid://12108229373"
+game.workspace[plr.name].Animate.run.RunAnim.AnimationId = "rbxassetid://12073804417"
+game.workspace[plr.name].Animate.sit.SitAnim.AnimationId = "rbxassetid://10823162511"
+game.workspace[plr.name].Animate.swim.Swim.AnimationId = "rbxassetid://12076197278"
+game.workspace[plr.name].Animate.swimidle.SwimIdle.AnimationId = "rbxassetid://12085998627"
+game.workspace[plr.name].Animate.toollunge.ToolLungeAnim.AnimationId = "rbxassetid://10823162621"
+game.workspace[plr.name].Animate.toolnone.ToolNoneAnim.AnimationId = "rbxassetid://10823162734"
+game.workspace[plr.name].Animate.toolslash.ToolSlashAnim.AnimationId = "rbxassetid://10823162871"
+game.workspace[plr.name].Animate.walk.WalkAnim.AnimationId = "rbxassetid://12073804501"
+game.workspace[plr.name].Animate.wave.WaveAnim.AnimationId = "rbxassetid://12108228543"
+
+end)
+
+BennettSection:NewButton("Y2k Raven", " ", function()
+
+local plr = game.Players.LocalPlayer
+
+game.workspace[plr.name].Animate.cheer.CheerAnim.AnimationId = "rbxassetid://12108227905"
+game.workspace[plr.name].Animate.climb.ClimbAnim.AnimationId = "rbxassetid://12108228598"
+game.workspace[plr.name].Animate.fall.FallAnim.AnimationId = "rbxassetid://12085998455"
+game.workspace[plr.name].Animate.idle.Animation1.AnimationId = "rbxassetid://12073809247"
+game.workspace[plr.name].Animate.jump.JumpAnim.AnimationId = "rbxassetid://12076197174"
+game.workspace[plr.name].Animate.laugh.LaughAnim.AnimationId = "rbxassetid://12108228987"
+game.workspace[plr.name].Animate.point.PointAnim.AnimationId = "rbxassetid://12108229373"
+game.workspace[plr.name].Animate.run.RunAnim.AnimationId = "rbxassetid://12073803590"
+game.workspace[plr.name].Animate.sit.SitAnim.AnimationId = "rbxassetid://10823162511"
+game.workspace[plr.name].Animate.swim.Swim.AnimationId = "rbxassetid://12076197278"
+game.workspace[plr.name].Animate.swimidle.SwimIdle.AnimationId = "rbxassetid://12085998627"
+game.workspace[plr.name].Animate.toollunge.ToolLungeAnim.AnimationId = "rbxassetid://10823162621"
+game.workspace[plr.name].Animate.toolnone.ToolNoneAnim.AnimationId = "rbxassetid://10823162734"
+game.workspace[plr.name].Animate.toolslash.ToolSlashAnim.AnimationId = "rbxassetid://10823162871"
+game.workspace[plr.name].Animate.walk.WalkAnim.AnimationId = "rbxassetid://12073803488"
+game.workspace[plr.name].Animate.wave.WaveAnim.AnimationId = "rbxassetid://12108228543"
+
+end)
+
+BennettSection:NewButton("Storm: Snow Edition", " ", function()
+
+local plr = game.Players.LocalPlayer
+
+game.workspace[plr.name].Animate.cheer.CheerAnim.AnimationId = "rbxassetid://12108227905"
+
+game.workspace[plr.name].Animate.climb.ClimbAnim.AnimationId = "rbxassetid://12108228598"
+
+game.workspace[plr.name].Animate.fall.FallAnim.AnimationId = "rbxassetid://12085998455"
+
+game.workspace[plr.name].Animate.idle.Animation1.AnimationId = "rbxassetid://12073807239"
+
+game.workspace[plr.name].Animate.jump.JumpAnim.AnimationId = "rbxassetid://12076197174"
+
+game.workspace[plr.name].Animate.laugh.LaughAnim.AnimationId = "rbxassetid://12108228987"
+
+game.workspace[plr.name].Animate.point.PointAnim.AnimationId = "rbxassetid://12108229373"
+
+game.workspace[plr.name].Animate.run.RunAnim.AnimationId = "rbxassetid://12073807327"
+
+game.workspace[plr.name].Animate.sit.SitAnim.AnimationId = "rbxassetid://10823162511"
+
+game.workspace[plr.name].Animate.swim.Swim.AnimationId = "rbxassetid://12076197278"
+
+game.workspace[plr.name].Animate.swimidle.SwimIdle.AnimationId = "rbxassetid://12085998627"
+
+game.workspace[plr.name].Animate.toollunge.ToolLungeAnim.AnimationId = "rbxassetid://10823162621"
+
+game.workspace[plr.name].Animate.toolnone.ToolNoneAnim.AnimationId = "rbxassetid://10823162734"
+
+game.workspace[plr.name].Animate.toolslash.ToolSlashAnim.AnimationId = "rbxassetid://10823162871"
+
+game.workspace[plr.name].Animate.walk.WalkAnim.AnimationId = "rbxassetid://12073807435"
+
+game.workspace[plr.name].Animate.wave.WaveAnim.AnimationId = "rbxassetid://12108228543"
+
+end)
+
+local Bennett = Window:NewTab("Animations")
+local BennettSection = Bennett:NewSection("Stop Animations")
+
+BennettSection:NewButton("Stop", " ", function()
+local plr = game.Players.LocalPlayer
+
+game.workspace[plr.name].Animate.cheer.CheerAnim.AnimationId = "rbxassetid://12108227905"
+
+game.workspace[plr.name].Animate.climb.ClimbAnim.AnimationId = "rbxassetid://12108228598"
+
+game.workspace[plr.name].Animate.fall.FallAnim.AnimationId = "rbxassetid://12085998455"
+
+game.workspace[plr.name].Animate.idle.Animation1.AnimationId = "rbxassetid://12073807239"
+
+game.workspace[plr.name].Animate.jump.JumpAnim.AnimationId = "rbxassetid://12076197174"
+
+game.workspace[plr.name].Animate.laugh.LaughAnim.AnimationId = "rbxassetid://12108228987"
+
+game.workspace[plr.name].Animate.point.PointAnim.AnimationId = "rbxassetid://12108229373"
+
+game.workspace[plr.name].Animate.run.RunAnim.AnimationId = "rbxassetid://12073807327"
+
+game.workspace[plr.name].Animate.sit.SitAnim.AnimationId = "rbxassetid://10823162511"
+
+game.workspace[plr.name].Animate.swim.Swim.AnimationId = "rbxassetid://12076197278"
+
+game.workspace[plr.name].Animate.swimidle.SwimIdle.AnimationId = "rbxassetid://12085998627"
+
+game.workspace[plr.name].Animate.toollunge.ToolLungeAnim.AnimationId = "rbxassetid://10823162621"
+
+game.workspace[plr.name].Animate.toolnone.ToolNoneAnim.AnimationId = "rbxassetid://10823162734"
+
+game.workspace[plr.name].Animate.toolslash.ToolSlashAnim.AnimationId = "rbxassetid://10823162871"
+
+game.workspace[plr.name].Animate.walk.WalkAnim.AnimationId = "rbxassetid://12073807435"
+
+game.workspace[plr.name].Animate.wave.WaveAnim.AnimationId = "rbxassetid://12108228543"
+
+end)
+
+local BennettSection = Bennett:NewSection("Animations")
+BennettSection:NewButton("White Raven Inducement", " ", function()
+
+local plr = game.Players.LocalPlayer
+
+game.workspace[plr.name].Animate.cheer.CheerAnim.AnimationId = "rbxassetid://12064811027"
+
+game.workspace[plr.name].Animate.climb.ClimbAnim.AnimationId = "rbxassetid://12064811027"
+
+game.workspace[plr.name].Animate.fall.FallAnim.AnimationId = "rbxassetid://12064811027"
+
+game.workspace[plr.name].Animate.idle.Animation1.AnimationId = "rbxassetid://12064811027"
+
+game.workspace[plr.name].Animate.jump.JumpAnim.AnimationId = "rbxassetid://12064811027"
+
+game.workspace[plr.name].Animate.laugh.LaughAnim.AnimationId = "rbxassetid://12064811027"
+
+game.workspace[plr.name].Animate.point.PointAnim.AnimationId = "rbxassetid://12064811027"
+
+game.workspace[plr.name].Animate.run.RunAnim.AnimationId = "rbxassetid://12064811027"
+
+game.workspace[plr.name].Animate.sit.SitAnim.AnimationId = "rbxassetid://12064811027"
+
+game.workspace[plr.name].Animate.swim.Swim.AnimationId = "rbxassetid://12064811027"
+
+game.workspace[plr.name].Animate.swimidle.SwimIdle.AnimationId = "rbxassetid://12064811027"
+
+game.workspace[plr.name].Animate.toollunge.ToolLungeAnim.AnimationId = "rbxassetid://12064811027"
+
+game.workspace[plr.name].Animate.toolnone.ToolNoneAnim.AnimationId = "rbxassetid://12064811027"
+
+game.workspace[plr.name].Animate.toolslash.ToolSlashAnim.AnimationId = "rbxassetid://12064811027"
+
+game.workspace[plr.name].Animate.walk.WalkAnim.AnimationId = "rbxassetid://12064811027"
+
+game.workspace[plr.name].Animate.wave.WaveAnim.AnimationId = "rbxassetid://12064811027"
+
+
+end)
+
+BennettSection:NewButton("White Raven Meditation", " ", function()
+
+local plr = game.Players.LocalPlayer
+
+game.workspace[plr.name].Animate.cheer.CheerAnim.AnimationId = "rbxassetid://12064810630"
+
+game.workspace[plr.name].Animate.climb.ClimbAnim.AnimationId = "rbxassetid://12064810630"
+
+game.workspace[plr.name].Animate.fall.FallAnim.AnimationId = "rbxassetid://12064810630"
+
+game.workspace[plr.name].Animate.idle.Animation1.AnimationId = "rbxassetid://12064810630"
+
+game.workspace[plr.name].Animate.jump.JumpAnim.AnimationId = "rbxassetid://12064810630"
+
+game.workspace[plr.name].Animate.laugh.LaughAnim.AnimationId = "rbxassetid://12064810630"
+
+game.workspace[plr.name].Animate.point.PointAnim.AnimationId = "rbxassetid://12064810630"
+
+game.workspace[plr.name].Animate.run.RunAnim.AnimationId = "rbxassetid://12064810630"
+
+game.workspace[plr.name].Animate.sit.SitAnim.AnimationId = "rbxassetid://12064810630"
+
+game.workspace[plr.name].Animate.swim.Swim.AnimationId = "rbxassetid://12064810630"
+
+game.workspace[plr.name].Animate.swimidle.SwimIdle.AnimationId = "rbxassetid://12064810630"
+
+game.workspace[plr.name].Animate.toollunge.ToolLungeAnim.AnimationId = "rbxassetid://12064810630"
+
+game.workspace[plr.name].Animate.toolnone.ToolNoneAnim.AnimationId = "rbxassetid://12064810630"
+
+game.workspace[plr.name].Animate.toolslash.ToolSlashAnim.AnimationId = "rbxassetid://12064810630"
+
+game.workspace[plr.name].Animate.walk.WalkAnim.AnimationId = "rbxassetid://12064810630"
+
+game.workspace[plr.name].Animate.wave.WaveAnim.AnimationId = "rbxassetid://12064810630"
+
+end)
+
+BennettSection:NewButton("Raven Trigon", " ", function()
+
+local plr = game.Players.LocalPlayer
+
+game.workspace[plr.name].Animate.cheer.CheerAnim.AnimationId = "rbxassetid://12866010789"
+
+game.workspace[plr.name].Animate.climb.ClimbAnim.AnimationId = "rbxassetid://12866010789"
+
+game.workspace[plr.name].Animate.fall.FallAnim.AnimationId = "rbxassetid://12866010789"
+
+game.workspace[plr.name].Animate.idle.Animation1.AnimationId = "rbxassetid://12866010789"
+
+game.workspace[plr.name].Animate.jump.JumpAnim.AnimationId = "rbxassetid://12866010789"
+
+game.workspace[plr.name].Animate.laugh.LaughAnim.AnimationId = "rbxassetid://12866010789"
+
+game.workspace[plr.name].Animate.point.PointAnim.AnimationId = "rbxassetid://12866010789"
+
+game.workspace[plr.name].Animate.run.RunAnim.AnimationId = "rbxassetid://12866010789"
+
+game.workspace[plr.name].Animate.sit.SitAnim.AnimationId = "rbxassetid://12866010789"
+
+game.workspace[plr.name].Animate.swim.Swim.AnimationId = "rbxassetid://12866010789"
+
+game.workspace[plr.name].Animate.swimidle.SwimIdle.AnimationId = "rbxassetid://12866010789"
+
+game.workspace[plr.name].Animate.toollunge.ToolLungeAnim.AnimationId = "rbxassetid://12866010789"
+
+game.workspace[plr.name].Animate.toolnone.ToolNoneAnim.AnimationId = "rbxassetid://12866010789"
+
+game.workspace[plr.name].Animate.toolslash.ToolSlashAnim.AnimationId = "rbxassetid://12866010789"
+
+game.workspace[plr.name].Animate.walk.WalkAnim.AnimationId = "rbxassetid://12866010789"
+
+game.workspace[plr.name].Animate.wave.WaveAnim.AnimationId = "rbxassetid://12866010789"
+
+end)
+
+BennettSection:NewButton("Agatha Siphon", " ", function()
+
+local plr = game.Players.LocalPlayer
+
+game.workspace[plr.name].Animate.cheer.CheerAnim.AnimationId = "rbxassetid://12063172962"
+
+game.workspace[plr.name].Animate.climb.ClimbAnim.AnimationId = "rbxassetid://12063172962"
+
+game.workspace[plr.name].Animate.fall.FallAnim.AnimationId = "rbxassetid://12063172962"
+
+game.workspace[plr.name].Animate.idle.Animation1.AnimationId = "rbxassetid://12063172962"
+
+game.workspace[plr.name].Animate.jump.JumpAnim.AnimationId = "rbxassetid://12063172962"
+
+game.workspace[plr.name].Animate.laugh.LaughAnim.AnimationId = "rbxassetid://12063172962"
+
+game.workspace[plr.name].Animate.point.PointAnim.AnimationId = "rbxassetid://12063172962"
+
+game.workspace[plr.name].Animate.run.RunAnim.AnimationId = "rbxassetid://12063172962"
+
+game.workspace[plr.name].Animate.sit.SitAnim.AnimationId = "rbxassetid://12063172962"
+
+game.workspace[plr.name].Animate.swim.Swim.AnimationId = "rbxassetid://12063172962"
+
+game.workspace[plr.name].Animate.swimidle.SwimIdle.AnimationId = "rbxassetid://12063172962"
+
+game.workspace[plr.name].Animate.toollunge.ToolLungeAnim.AnimationId = "rbxassetid://12063172962"
+
+game.workspace[plr.name].Animate.toolnone.ToolNoneAnim.AnimationId = "rbxassetid://12063172962"
+
+game.workspace[plr.name].Animate.toolslash.ToolSlashAnim.AnimationId = "rbxassetid://12063172962"
+
+game.workspace[plr.name].Animate.walk.WalkAnim.AnimationId = "rbxassetid://12063172962"
+
+game.workspace[plr.name].Animate.wave.WaveAnim.AnimationId = "rbxassetid://12063172962"
+
+end)
+
+BennettSection:NewButton("Agatha Telekinesis", " ", function()
+
+local plr = game.Players.LocalPlayer
+
+game.workspace[plr.name].Animate.cheer.CheerAnim.AnimationId = "rbxassetid://12063173053"
+
+game.workspace[plr.name].Animate.climb.ClimbAnim.AnimationId = "rbxassetid://12063173053"
+
+game.workspace[plr.name].Animate.fall.FallAnim.AnimationId = "rbxassetid://12063173053"
+
+game.workspace[plr.name].Animate.idle.Animation1.AnimationId = "rbxassetid://12063173053"
+
+game.workspace[plr.name].Animate.jump.JumpAnim.AnimationId = "rbxassetid://12063173053"
+
+game.workspace[plr.name].Animate.laugh.LaughAnim.AnimationId = "rbxassetid://12063173053"
+
+game.workspace[plr.name].Animate.point.PointAnim.AnimationId = "rbxassetid://12063173053"
+
+game.workspace[plr.name].Animate.run.RunAnim.AnimationId = "rbxassetid://12063173053"
+
+game.workspace[plr.name].Animate.sit.SitAnim.AnimationId = "rbxassetid://12063173053"
+
+game.workspace[plr.name].Animate.swim.Swim.AnimationId = "rbxassetid://12063173053"
+
+game.workspace[plr.name].Animate.swimidle.SwimIdle.AnimationId = "rbxassetid://12063173053"
+
+game.workspace[plr.name].Animate.toollunge.ToolLungeAnim.AnimationId = "rbxassetid://12063173053"
+
+game.workspace[plr.name].Animate.toolnone.ToolNoneAnim.AnimationId = "rbxassetid://12063173053"
+
+game.workspace[plr.name].Animate.toolslash.ToolSlashAnim.AnimationId = "rbxassetid://12063173053"
+
+game.workspace[plr.name].Animate.walk.WalkAnim.AnimationId = "rbxassetid://12063173053"
+
+game.workspace[plr.name].Animate.wave.WaveAnim.AnimationId = "rbxassetid://12063173053"
+
+end)
+
+BennettSection:NewButton("Dark Phoenix Drain", " ", function()
+
+local plr = game.Players.LocalPlayer
+
+game.workspace[plr.name].Animate.cheer.CheerAnim.AnimationId = "rbxassetid://12063163129"
+
+game.workspace[plr.name].Animate.climb.ClimbAnim.AnimationId = "rbxassetid://12063163129"
+
+game.workspace[plr.name].Animate.fall.FallAnim.AnimationId = "rbxassetid://12063163129"
+
+game.workspace[plr.name].Animate.idle.Animation1.AnimationId = "rbxassetid://12063163129"
+
+game.workspace[plr.name].Animate.jump.JumpAnim.AnimationId = "rbxassetid://12063163129"
+
+game.workspace[plr.name].Animate.laugh.LaughAnim.AnimationId = "rbxassetid://12063163129"
+
+game.workspace[plr.name].Animate.point.PointAnim.AnimationId = "rbxassetid://12063163129"
+
+game.workspace[plr.name].Animate.run.RunAnim.AnimationId = "rbxassetid://12063163129"
+
+game.workspace[plr.name].Animate.sit.SitAnim.AnimationId = "rbxassetid://12063163129"
+
+game.workspace[plr.name].Animate.swim.Swim.AnimationId = "rbxassetid://12063163129"
+
+game.workspace[plr.name].Animate.swimidle.SwimIdle.AnimationId = "rbxassetid://12063163129"
+
+game.workspace[plr.name].Animate.toollunge.ToolLungeAnim.AnimationId = "rbxassetid://12063163129"
+
+game.workspace[plr.name].Animate.toolnone.ToolNoneAnim.AnimationId = "rbxassetid://12063163129"
+
+game.workspace[plr.name].Animate.toolslash.ToolSlashAnim.AnimationId = "rbxassetid://12063163129"
+
+game.workspace[plr.name].Animate.walk.WalkAnim.AnimationId = "rbxassetid://12063163129"
+
+game.workspace[plr.name].Animate.wave.WaveAnim.AnimationId = "rbxassetid://12063163129"
+
+
+end)
+
+BennettSection:NewButton("Dark Phoenix Resurrection", " ", function()
+
+local plr = game.Players.LocalPlayer
+
+
+game.workspace[plr.name].Animate.cheer.CheerAnim.AnimationId = "rbxassetid://12064811425"
+
+game.workspace[plr.name].Animate.climb.ClimbAnim.AnimationId = "rbxassetid://12064811425"
+
+game.workspace[plr.name].Animate.fall.FallAnim.AnimationId = "rbxassetid://12064811425"
+
+game.workspace[plr.name].Animate.idle.Animation1.AnimationId = "rbxassetid://12064811425"
+
+game.workspace[plr.name].Animate.jump.JumpAnim.AnimationId = "rbxassetid://12064811425"
+
+game.workspace[plr.name].Animate.laugh.LaughAnim.AnimationId = "rbxassetid://12064811425"
+
+game.workspace[plr.name].Animate.point.PointAnim.AnimationId = "rbxassetid://12064811425"
+
+game.workspace[plr.name].Animate.run.RunAnim.AnimationId = "rbxassetid://12064811425"
+
+game.workspace[plr.name].Animate.sit.SitAnim.AnimationId = "rbxassetid://12064811425"
+
+game.workspace[plr.name].Animate.swim.Swim.AnimationId = "rbxassetid://12064811425"
+
+game.workspace[plr.name].Animate.swimidle.SwimIdle.AnimationId = "rbxassetid://12064811425"
+
+game.workspace[plr.name].Animate.toollunge.ToolLungeAnim.AnimationId = "rbxassetid://12064811425"
+
+game.workspace[plr.name].Animate.toolnone.ToolNoneAnim.AnimationId = "rbxassetid://12064811425"
+
+game.workspace[plr.name].Animate.toolslash.ToolSlashAnim.AnimationId = "rbxassetid://12064811425"
+
+game.workspace[plr.name].Animate.walk.WalkAnim.AnimationId = "rbxassetid://12064811425"
+
+game.workspace[plr.name].Animate.wave.WaveAnim.AnimationId = "rbxassetid://12064811425"
+
+
+end)
+
+BennettSection:NewButton("WandaVision Telepath", " ", function()
+
+local plr = game.Players.LocalPlayer
+
+game.workspace[plr.name].Animate.cheer.CheerAnim.AnimationId = "rbxassetid://12063171955"
+
+game.workspace[plr.name].Animate.climb.ClimbAnim.AnimationId = "rbxassetid://12063171955"
+
+game.workspace[plr.name].Animate.fall.FallAnim.AnimationId = "rbxassetid://12063171955"
+
+game.workspace[plr.name].Animate.idle.Animation1.AnimationId = "rbxassetid://12063171955"
+
+game.workspace[plr.name].Animate.jump.JumpAnim.AnimationId = "rbxassetid://12063171955"
+
+game.workspace[plr.name].Animate.laugh.LaughAnim.AnimationId = "rbxassetid://12063171955"
+
+game.workspace[plr.name].Animate.point.PointAnim.AnimationId = "rbxassetid://12063171955"
+
+game.workspace[plr.name].Animate.run.RunAnim.AnimationId = "rbxassetid://12063171955"
+
+game.workspace[plr.name].Animate.sit.SitAnim.AnimationId = "rbxassetid://12063171955"
+
+game.workspace[plr.name].Animate.swim.Swim.AnimationId = "rbxassetid://12063171955"
+
+game.workspace[plr.name].Animate.swimidle.SwimIdle.AnimationId = "rbxassetid://12063171955"
+
+game.workspace[plr.name].Animate.toollunge.ToolLungeAnim.AnimationId = "rbxassetid://12063171955"
+
+game.workspace[plr.name].Animate.toolnone.ToolNoneAnim.AnimationId = "rbxassetid://12063171955"
+
+game.workspace[plr.name].Animate.toolslash.ToolSlashAnim.AnimationId = "rbxassetid://12063171955"
+
+game.workspace[plr.name].Animate.walk.WalkAnim.AnimationId = "rbxassetid://12063171955"
+
+game.workspace[plr.name].Animate.wave.WaveAnim.AnimationId = "rbxassetid://12063171955"
+
+
+end)
+
+BennettSection:NewButton("WandaVision Shockwave", " ", function()
+
+local plr = game.Players.LocalPlayer
+
+game.workspace[plr.name].Animate.cheer.CheerAnim.AnimationId = "rbxassetid://12063171907"
+
+game.workspace[plr.name].Animate.climb.ClimbAnim.AnimationId = "rbxassetid://12063171907"
+
+game.workspace[plr.name].Animate.fall.FallAnim.AnimationId = "rbxassetid://12063171907"
+
+game.workspace[plr.name].Animate.idle.Animation1.AnimationId = "rbxassetid://12063171907"
+
+game.workspace[plr.name].Animate.jump.JumpAnim.AnimationId = "rbxassetid://12063171907"
+
+game.workspace[plr.name].Animate.laugh.LaughAnim.AnimationId = "rbxassetid://12063171907"
+
+game.workspace[plr.name].Animate.point.PointAnim.AnimationId = "rbxassetid://12063171907"
+
+game.workspace[plr.name].Animate.run.RunAnim.AnimationId = "rbxassetid://12063171907"
+
+game.workspace[plr.name].Animate.sit.SitAnim.AnimationId = "rbxassetid://12063171907"
+
+game.workspace[plr.name].Animate.swim.Swim.AnimationId = "rbxassetid://12063171907"
+
+game.workspace[plr.name].Animate.swimidle.SwimIdle.AnimationId = "rbxassetid://12063171907"
+
+game.workspace[plr.name].Animate.toollunge.ToolLungeAnim.AnimationId = "rbxassetid://12063171907"
+
+game.workspace[plr.name].Animate.toolnone.ToolNoneAnim.AnimationId = "rbxassetid://12063171907"
+
+game.workspace[plr.name].Animate.toolslash.ToolSlashAnim.AnimationId = "rbxassetid://12063171907"
+
+game.workspace[plr.name].Animate.walk.WalkAnim.AnimationId = "rbxassetid://12063171907"
+
+game.workspace[plr.name].Animate.wave.WaveAnim.AnimationId = "rbxassetid://12063171907"
+
+
+
+end)
+
+
+local Bennett = Window:NewTab("Admin")
+local BennettSection = Bennett:NewSection("")
+BennettSection:NewButton("Infinite Yield", "", function()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Omg562/Scripts/main/INF'),true))()
+end)
+
+local Tab = Window:NewTab("Credits")
+local SettingsSection = Tab:NewSection("DM FOR ANIMATIONS!")
+local SettingsSection = Tab:NewSection("discord: bennettscripts")
+
+local SettingsSection = Tab:NewSection("Toggle UI")
+SettingsSection:NewKeybind("Toggle UI", "Toggle UI", Enum.KeyCode.M, function()
+    Library:ToggleUI()
+end)
+wait(1)
+game.StarterGui:SetCore("SendNotification", { 
+    Title = "⛤ Bennett Scripts ⛤";
+    Text = "Heroes Online World - Animations";
+    Icon = "rbxthumb://type=Asset&id=14067496704&w=150&h=150";
+    Duration = "2";
+    Button1 = "Close";
+})
