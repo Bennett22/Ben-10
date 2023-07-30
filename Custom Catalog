@@ -33,7 +33,31 @@ if game:GetService("Players").LocalPlayer.UserId == 3457959451 then
 end
 end)
 
+local Section = Tab:NewSection("Custom 2")
+Section:NewButton("Custom", " ", function()
+if game:GetService("Players").LocalPlayer.UserId == 3457959451 then
+   game.Players:Chat("!hat 138291606")
+    game.Players:Chat("!hat 747460185")
+    game.Players:Chat("!hat 315266872")
+    game.Players:Chat("!hat 623841425")
+    game.Players:Chat("!hat 318235356")
+    game.Players:Chat("!hat 670735502")
+    game.Players:Chat("!hat 6707356582")
+end
+end)
 
+local Section = Tab:NewSection("Custom 3")
+Section:NewButton("Custom", " ", function()
+if game:GetService("Players").LocalPlayer.UserId == 3457959451 then
+   game.Players:Chat("!hat 0846567589")
+    game.Players:Chat("!hat 1051690392")
+    game.Players:Chat("!hat 995489631")
+    game.Players:Chat("!hat 650189833")
+    game.Players:Chat("!hat 968475140")
+    game.Players:Chat("!hat 717930764")
+    game.Players:Chat("!hat 7179311496")
+end
+end)
 local Tab = Window:NewTab("Heads")
 local Section = Tab:NewSection("")
 Section:NewButton("Narrow", " ", function()
