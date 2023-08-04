@@ -58,12 +58,6 @@ loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Bennett-Sc
 
 end)
 
-BennettSection:NewButton("Marvel United: Testing", " ", function()
-
-loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Bennett-Scripts/main/Testing'),true))()
-
-end)
-
 BennettSection:NewButton("Stranger Things: Tragedies", " ", function()
 
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Bennett-Scripts/main/Tragedies'),true))()
