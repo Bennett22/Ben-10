@@ -1,0 +1,108 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Bennett Scripts | Scripts", "Serpent")
+
+local Bennett = Window:NewTab("Scripts")
+local BennettSection = Bennett:NewSection("Scripts")
+
+BennettSection:NewButton("Heroes Online World - Animations", " ", function()
+
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Bennett-Scripts/main/Animations'),true))()
+
+end)
+
+BennettSection:NewButton("Lucky Blocks Battlegrounds", " ", function()
+
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Bennett-Scripts/main/Battlegrounds'),true))()
+
+end)
+
+BennettSection:NewButton("AHS: Collided", " ", function()
+
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Bennett-Scripts/main/Collided'),true))()
+
+end)
+
+BennettSection:NewButton("The Mystic Diaries", " ", function()
+
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Bennett-Scripts/main/Diaries'),true))()
+
+end)
+
+BennettSection:NewButton("Laterns Hub", " ", function()
+
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Bennett-Scripts/main/Hub'),true))()
+
+end)
+
+BennettSection:NewButton("[MANOR] Charmed", " ", function()
+
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Bennett-Scripts/main/Manor'),true))()
+
+end)
+
+BennettSection:NewButton("Marvellous Playground", " ", function()
+
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Bennett-Scripts/main/Playground'),true))()
+
+end)
+
+BennettSection:NewButton("Crossover Legends: Reborn", " ", function()
+
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Bennett-Scripts/main/Reborn'),true))()
+
+end)
+
+BennettSection:NewButton("Marvel: Enhanced (Old Testing Site)", " ", function()
+
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Bennett-Scripts/main/Site'),true))()
+
+end)
+
+BennettSection:NewButton("Marvel United: Testing", " ", function()
+
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Bennett-Scripts/main/Testing'),true))()
+
+end)
+
+BennettSection:NewButton("Stranger Things: Tragedies", " ", function()
+
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Bennett-Scripts/main/Tragedies'),true))()
+
+end)
+
+BennettSection:NewButton("Magic Training", " ", function()
+
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Bennett-Scripts/main/training'),true))()
+
+end)
+
+BennettSection:NewButton("Witchcraft.v2 (Catwalk)", " ", function()
+
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Bennett-Scripts/main/walk'),true))()
+
+end)
+
+local Bennett = Window:NewTab("Misc")
+local BennettSection = Bennett:NewSection("Misc")
+BennettSection:NewButton("All In One - The Morningstar Circle", "", function()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/TheMorningstarCircle/Spellman/main/All-In-One'),true))()
+end)
+BennettSection:NewButton("Infinite Yield", "", function()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Omg562/Scripts/main/INF'),true))()
+end)
+
+local Tab = Window:NewTab("Credits")
+local SettingsSection = Tab:NewSection("discord: bennettscripts")
+
+local SettingsSection = Tab:NewSection("Toggle UI")
+SettingsSection:NewKeybind("Toggle UI", "Toggle UI", Enum.KeyCode.M, function()
+    Library:ToggleUI()
+end)
+wait(1)
+game.StarterGui:SetCore("SendNotification", { 
+    Title = "⛤ Bennett Scripts ⛤";
+    Text = "Scripts";
+    Icon = "rbxthumb://type=Asset&id=14067496704&w=150&h=150";
+    Duration = "2";
+    Button1 = "Close";
+})
