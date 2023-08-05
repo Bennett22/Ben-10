@@ -10,6 +10,25 @@ if game:GetService("Players").LocalPlayer.UserId == 4334482090 then
 end
 end)
 
+local Section = Tab:NewSection("Lovely Peaches")
+Section:NewButton("Torso", " ", function()
+if game:GetService("Players").LocalPlayer.UserId == 4831686579 then
+    game.Players:Chat("!hat 4908013767")
+end
+end)
+Section:NewButton("others", " ", function()
+if game:GetService("Players").LocalPlayer.UserId == 4831686579 then
+    game.Players:Chat("!hat 14160138520")
+end
+end)
+Section:NewButton("others", " ", function()
+if game:GetService("Players").LocalPlayer.UserId == 4831686579 then
+    game.Players:Chat("!hat 9179722814")
+    game.Players:Chat("!hat 9248044793")
+    game.Players:Chat("!hat 13398598800")
+end
+end)
+
 local Tab = Window:NewTab("ava <3")
 local Section = Tab:NewSection("Custom 1")
 Section:NewButton("Custom", " ", function()
