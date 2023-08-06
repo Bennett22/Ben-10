@@ -179,7 +179,6 @@ end
 end)
 end)
 
-
 BennettSection:NewButton("Get Beam Effect", " ", function()
 
 local args = {
@@ -225,6 +224,77 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("Witches"):WaitForChild("GoodWitches"):WaitForChild("Phoebe"):WaitForChild("PowerEvents"):WaitForChild("PhoebeEvents"):FireServer(unpack(args))
+
+end)
+
+local Bennett = Window:NewTab("New Powers")
+local BennettSection = Bennett:NewSection("Only will work if character is in game")
+
+BennettSection:NewButton("Get Divination", "Keybind (G)", function()
+
+    local plr = game.Players.LocalPlayer
+
+local backup = game.Workspace:FindFirstChild("Divination",true):Clone()
+backup.Parent = game.Workspace
+
+function give()
+   local c = game.Workspace.Divination:Clone()
+   c.Parent = game.workspace[plr.name]
+end
+
+give()
+
+plr.CharacterAdded:Connect(function()
+   give()
+end)
+
+end)
+
+BennettSection:NewButton("Unglitch", " ", function()
+
+local args = {
+    [1] = "enough",
+    [2] = Vector3.new(1574.4228515625, 6445.9658203125, -7711.7802734375)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Witches"):WaitForChild("GoodWitches"):WaitForChild("PBaxter"):WaitForChild("PowerEvents"):WaitForChild("BaxterEvents"):FireServer(unpack(args))
+
+end)
+
+BennettSection:NewButton("Delete Divination", " ", function()
+
+    local plr = game.Players.LocalPlayer
+
+local backup = game.workspace[plr.name]:FindFirstChild("Divination",true):Destroy()
+
+end)
+
+
+BennettSection:NewButton("Get Life Draining", "Keybind (C)", function()
+
+    local plr = game.Players.LocalPlayer
+
+local backup = game.workspace:FindFirstChild("Life Draining",true):Clone()
+backup.Parent = game.Workspace
+
+function give()
+   local c = game.Workspace["Life Draining"]:Clone()
+   c.Parent = game.workspace[plr.name]
+end
+
+give()
+
+plr.CharacterAdded:Connect(function()
+   give()
+end)
+
+end)
+
+BennettSection:NewButton("Delete Life Draining", " ", function()
+
+    local plr = game.Players.LocalPlayer
+
+local backup = game.workspace[plr.name]:FindFirstChild("Life Draining",true):Destroy()
 
 end)
 
