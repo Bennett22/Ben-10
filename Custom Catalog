@@ -14,6 +14,10 @@ local Section = Tab:NewSection("Lovely Peaches")
 Section:NewButton("Torso", " ", function()
 if game:GetService("Players").LocalPlayer.UserId == 4334482090 then
     game.Players:Chat("!hat 4908013767")
+    game.Players:Chat("!hat 301823492")
+    game.Players:Chat("!hat 301823806")
+    game.Players:Chat("!hat 376530220")
+    game.Players:Chat("!hat 376531012")
 end
 end)
 Section:NewButton("others", " ", function()
