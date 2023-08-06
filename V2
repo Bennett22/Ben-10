@@ -1,0 +1,643 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Bennett Scripts | Marvel Enhanced V2", "GrapeTheme")
+
+local Bennett = Window:NewTab("Powers")
+local BennettSection = Bennett:NewSection("Invisible Woman")
+
+BennettSection:NewToggle("Shield Bash", "Keybind (1)", function()
+
+    clicktpon = true                
+        plr = game.Players.LocalPlayer
+        hum = plr.Character.HumanoidRootPart
+        mouse = plr:GetMouse()
+        mouse.KeyDown:connect(function(key)
+        if key == '1' then
+        if mouse.Target then
+        if clicktpon then
+
+local args = {
+    [1] = "ShieldBash",
+    [2] = CFrame.new(mouse.Hit.x, mouse.Hit.y + 1.5, mouse.Hit.z)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("InvisibleWomanAbilities"):InvokeServer(unpack(args))
+
+end
+end
+end
+end)
+end)
+
+BennettSection:NewToggle("ForceField Someone", "Keybind (2)", function()
+    print("You just clicked the bind")
+
+    local function getPlayer()
+        local userInput = game:GetService("UserInputService")
+        local cam = workspace.CurrentCamera
+        local mousePos = userInput:GetMouseLocation()
+        local mouseRay = cam:ViewportPointToRay(mousePos.X, mousePos.Y)
+        players = {}
+        for _, x in next, game:GetService('Players'):GetPlayers() do
+            players[#players + 1] = x.Character
+        end
+        local raycastParams = RaycastParams.new()
+        raycastParams.FilterType = Enum.RaycastFilterType.Whitelist
+        raycastParams.FilterDescendantsInstances = players
+        raycastParams.IgnoreWater = true
+        local raycastResult = workspace:Raycast(mouseRay.Origin, mouseRay.Direction * 1000, raycastParams)
+        if raycastResult then
+            for _, x in next, game:GetService('Players'):GetPlayers() do
+                if not raycastResult.Instance:IsDescendantOf(x.Character) then
+                    continue
+                end
+                return x
+            end
+        end
+        return false
+    end
+
+    local function Set(list)
+        local set = {}
+        for _, l in ipairs(list) do
+            if l then
+                set[l] = true
+            end
+        end
+        return set
+    end
+
+    game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
+        if key == "2" then
+            local player = getPlayer()
+            if player then
+
+local args = {
+    [1] = "Shield",
+    [2] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("InvisibleWomanAbilities"):InvokeServer(unpack(args))
+
+            end
+        end
+        end)
+        end)
+
+BennettSection:NewToggle("UnForceField Someone", "Keybind (3)", function()
+    print("You just clicked the bind")
+
+    local function getPlayer()
+        local userInput = game:GetService("UserInputService")
+        local cam = workspace.CurrentCamera
+        local mousePos = userInput:GetMouseLocation()
+        local mouseRay = cam:ViewportPointToRay(mousePos.X, mousePos.Y)
+        players = {}
+        for _, x in next, game:GetService('Players'):GetPlayers() do
+            players[#players + 1] = x.Character
+        end
+        local raycastParams = RaycastParams.new()
+        raycastParams.FilterType = Enum.RaycastFilterType.Whitelist
+        raycastParams.FilterDescendantsInstances = players
+        raycastParams.IgnoreWater = true
+        local raycastResult = workspace:Raycast(mouseRay.Origin, mouseRay.Direction * 1000, raycastParams)
+        if raycastResult then
+            for _, x in next, game:GetService('Players'):GetPlayers() do
+                if not raycastResult.Instance:IsDescendantOf(x.Character) then
+                    continue
+                end
+                return x
+            end
+        end
+        return false
+    end
+
+    local function Set(list)
+        local set = {}
+        for _, l in ipairs(list) do
+            if l then
+                set[l] = true
+            end
+        end
+        return set
+    end
+
+    game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
+        if key == "3" then
+            local player = getPlayer()
+            if player then
+
+local args = {
+    [1] = "ShieldOff",
+    [2] = player.Character.RemoteShield
+}
+
+game:GetService("ReplicatedStorage").Remotes.InvisibleWomanAbilities:InvokeServer(unpack(args))
+
+            end
+        end
+        end)
+        end)
+
+BennettSection:NewButton("Shield", " ", function()
+
+local args = {
+    [1] = "Shield",
+    [2] = game:GetService("Players").LocalPlayer.Character,
+    [3] = CFrame.new(-10298.3388671875, 552.3944091796875, -267.3870544433594, -0.7835012674331665, -2.7668487945220477e-08, -0.621390163898468, 3.292445782676623e-08, 1, -8.604069279272153e-08, 0.621390163898468, -8.787193195303189e-08, -0.7835012674331665)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("InvisibleWomanAbilities"):InvokeServer(unpack(args))
+
+end)
+
+BennettSection:NewButton("Unshield", " ", function()
+
+local args = {
+    [1] = "ShieldOff",
+    [2] = game:GetService("Players").LocalPlayer.Character.RemoteShield
+}
+
+game:GetService("ReplicatedStorage").Remotes.InvisibleWomanAbilities:InvokeServer(unpack(args))
+
+end)
+
+BennettSection:NewButton("Invisible", " ", function()
+
+local args = {
+    [1] = "InvisibleStart",
+    [2] = game:GetService("Players").LocalPlayer.Character
+}
+
+game:GetService("ReplicatedStorage").Remotes.InvisibleWomanAbilities:InvokeServer(unpack(args))
+
+end)
+
+BennettSection:NewButton("Visible", " ", function()
+
+local args = {
+    [1] = "InvisibleEnd",
+    [2] = game:GetService("Players").LocalPlayer.Character
+}
+
+game:GetService("ReplicatedStorage").Remotes.InvisibleWomanAbilities:InvokeServer(unpack(args))
+
+end)
+
+local BennettSection = Bennett:NewSection("Mystique")
+
+BennettSection:NewToggle("Shapeshift", "Keybind (4)", function()
+    print("You just clicked the bind")
+
+    local function getPlayer()
+        local userInput = game:GetService("UserInputService")
+        local cam = workspace.CurrentCamera
+        local mousePos = userInput:GetMouseLocation()
+        local mouseRay = cam:ViewportPointToRay(mousePos.X, mousePos.Y)
+        players = {}
+        for _, x in next, game:GetService('Players'):GetPlayers() do
+            players[#players + 1] = x.Character
+        end
+        local raycastParams = RaycastParams.new()
+        raycastParams.FilterType = Enum.RaycastFilterType.Whitelist
+        raycastParams.FilterDescendantsInstances = players
+        raycastParams.IgnoreWater = true
+        local raycastResult = workspace:Raycast(mouseRay.Origin, mouseRay.Direction * 1000, raycastParams)
+        if raycastResult then
+            for _, x in next, game:GetService('Players'):GetPlayers() do
+                if not raycastResult.Instance:IsDescendantOf(x.Character) then
+                    continue
+                end
+                return x
+            end
+        end
+        return false
+    end
+
+    local function Set(list)
+        local set = {}
+        for _, l in ipairs(list) do
+            if l then
+                set[l] = true
+            end
+        end
+        return set
+    end
+
+    game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
+        if key == "4" then
+            local player = getPlayer()
+            if player then
+
+local args = {
+    [1] = "Morph",
+    [2] = player.Character.Humanoid
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("MystiqueAbilities"):InvokeServer(unpack(args))
+
+            end
+        end
+        end)
+        end)
+
+BennettSection:NewButton("Stop Shapeshifting", " ", function()
+
+local args = {
+    [1] = "Morph",
+    [2] = game:GetService("Players").LocalPlayer.Character.Humanoid
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("MystiqueAbilities"):InvokeServer(unpack(args))
+
+end)
+
+BennettSection:NewToggle("Shoot", "Keybind (5)", function()
+    print("You just clicked the bind")
+
+    local function getPlayer()
+        local userInput = game:GetService("UserInputService")
+        local cam = workspace.CurrentCamera
+        local mousePos = userInput:GetMouseLocation()
+        local mouseRay = cam:ViewportPointToRay(mousePos.X, mousePos.Y)
+        players = {}
+        for _, x in next, game:GetService('Players'):GetPlayers() do
+            players[#players + 1] = x.Character
+        end
+        local raycastParams = RaycastParams.new()
+        raycastParams.FilterType = Enum.RaycastFilterType.Whitelist
+        raycastParams.FilterDescendantsInstances = players
+        raycastParams.IgnoreWater = true
+        local raycastResult = workspace:Raycast(mouseRay.Origin, mouseRay.Direction * 1000, raycastParams)
+        if raycastResult then
+            for _, x in next, game:GetService('Players'):GetPlayers() do
+                if not raycastResult.Instance:IsDescendantOf(x.Character) then
+                    continue
+                end
+                return x
+            end
+        end
+        return false
+    end
+
+    local function Set(list)
+        local set = {}
+        for _, l in ipairs(list) do
+            if l then
+                set[l] = true
+            end
+        end
+        return set
+    end
+
+    game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
+        if key == "5" then
+            local player = getPlayer()
+            if player then
+
+local args = {
+    [1] = "Shoot",
+    [2] = player.Character.Humanoid,
+    [3] = game:GetService("Players").LocalPlayer.Character.MystiqueGun
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("MystiqueAbilities"):InvokeServer(unpack(args))
+
+            end
+        end
+        end)
+        end)
+
+local BennettSection = Bennett:NewSection("Quicksilver")
+
+BennettSection:NewButton("Get Speed Effect", " ", function()
+
+local args = {
+    [1] = "StartSpeed"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("QuicksilverAbilities"):InvokeServer(unpack(args))
+
+end)
+
+BennettSection:NewButton("Remove Speed Effect", " ", function()
+
+local args = {
+    [1] = "StopSpeed",
+    [2] = {
+        [1] = game:GetService("Players").LocalPlayer.Character.Head.Attachment0,
+        [2] = game:GetService("Players").LocalPlayer.Character.Head.Attachment1,
+        [3] = game:GetService("Players").LocalPlayer.Character.Head.Trail,
+        [4] = game:GetService("Players").LocalPlayer.Character.UpperTorso.Attachment0,
+        [5] = game:GetService("Players").LocalPlayer.Character.UpperTorso.Attachment1,
+        [6] = game:GetService("Players").LocalPlayer.Character.UpperTorso.Trail,
+        [7] = game:GetService("Players").LocalPlayer.Character.RightUpperArm.Attachment0,
+        [8] = game:GetService("Players").LocalPlayer.Character.RightUpperArm.Attachment1,
+        [9] = game:GetService("Players").LocalPlayer.Character.RightUpperArm.Trail,
+        [10] = game:GetService("Players").LocalPlayer.Character.RightHand.Attachment0,
+        [11] = game:GetService("Players").LocalPlayer.Character.RightHand.Attachment1,
+        [12] = game:GetService("Players").LocalPlayer.Character.RightHand.Trail,
+        [13] = game:GetService("Players").LocalPlayer.Character.LeftUpperArm.Attachment0,
+        [14] = game:GetService("Players").LocalPlayer.Character.LeftUpperArm.Attachment1,
+        [15] = game:GetService("Players").LocalPlayer.Character.LeftUpperArm.Trail,
+        [16] = game:GetService("Players").LocalPlayer.Character.LeftHand.Attachment0,
+        [17] = game:GetService("Players").LocalPlayer.Character.LeftHand.Attachment1,
+        [18] = game:GetService("Players").LocalPlayer.Character.LeftHand.Trail,
+        [19] = game:GetService("Players").LocalPlayer.Character.LeftFoot.Attachment0,
+        [20] = game:GetService("Players").LocalPlayer.Character.LeftFoot.Attachment1,
+        [21] = game:GetService("Players").LocalPlayer.Character.LeftFoot.Trail,
+        [22] = game:GetService("Players").LocalPlayer.Character.LeftUpperLeg.Attachment0,
+        [23] = game:GetService("Players").LocalPlayer.Character.LeftUpperLeg.Attachment1,
+        [24] = game:GetService("Players").LocalPlayer.Character.LeftUpperLeg.Trail,
+        [25] = game:GetService("Players").LocalPlayer.Character.RightFoot.Attachment0,
+        [26] = game:GetService("Players").LocalPlayer.Character.RightFoot.Attachment1,
+        [27] = game:GetService("Players").LocalPlayer.Character.RightFoot.Trail,
+        [28] = game:GetService("Players").LocalPlayer.Character.RightUpperLeg.Attachment0,
+        [29] = game:GetService("Players").LocalPlayer.Character.RightUpperLeg.Attachment1,
+        [30] = game:GetService("Players").LocalPlayer.Character.RightUpperLeg.Trail,
+        [31] = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Speed,
+        [32] = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.SpeedSound
+    }
+}
+
+game:GetService("ReplicatedStorage").Remotes.QuicksilverAbilities:InvokeServer(unpack(args))
+
+end)
+
+local BennettSection = Bennett:NewSection("Quake")
+
+BennettSection:NewButton("Beam Start", " ", function()
+
+local args = {
+    [1] = "QuakeStart",
+    [2] = CFrame.new(-10033.79296875, 549.192626953125, -290.4586181640625, -0.0981055349111557, 0.4178936183452606, -0.9031834602355957, -0, 0.9075616002082825, 0.41991928219795227, 0.9951760768890381, 0.04119640588760376, -0.08903679996728897)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("QuakeAbilities"):InvokeServer(unpack(args))
+
+end)
+
+BennettSection:NewToggle("Mover", "Keybind (X)", function()
+
+    clicktpon = true                
+        plr = game.Players.LocalPlayer
+        hum = plr.Character.HumanoidRootPart
+        mouse = plr:GetMouse()
+        mouse.KeyDown:connect(function(key)
+        if key == 'x' then
+        if mouse.Target then
+        if clicktpon then
+
+local args = {
+    [1] = "QuakeUpdate",
+    [2] = CFrame.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("QuakeAbilities"):InvokeServer(unpack(args))
+
+end
+end
+end
+end)
+end)
+
+BennettSection:NewButton("Beam Stop", " ", function()
+
+local args = {
+    [1] = "QuakeStop"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("QuakeAbilities"):InvokeServer(unpack(args))
+
+end)
+
+BennettSection:NewToggle("Blast", "Keybind (6)", function()
+
+    clicktpon = true                
+        plr = game.Players.LocalPlayer
+        hum = plr.Character.HumanoidRootPart
+        mouse = plr:GetMouse()
+        mouse.KeyDown:connect(function(key)
+        if key == '6' then
+        if mouse.Target then
+        if clicktpon then
+
+local args = {
+    [1] = "QuakeHands",
+    [2] = CFrame.new(-10033.79296875, 549.192626953125, -290.4586181640625, -0.0981055349111557, 0.4178936183452606, -0.9031834602355957, -0, 0.9075616002082825, 0.41991928219795227, 0.9951760768890381, 0.04119640588760376, -0.08903679996728897)
+}
+
+game:GetService("ReplicatedStorage").Remotes.QuakeAbilities:InvokeServer(unpack(args))
+
+local args = {
+    [1] = "QuakeBlast",
+    [2] = CFrame.new(mouse.Hit.x, mouse.Hit.y + 1.5, mouse.Hit.z),
+    [3] = {
+        [1] = game:GetService("Players").LocalPlayer.Character.RightHand.Attachment,
+        [2] = game:GetService("Players").LocalPlayer.Character.LeftHand.Attachment
+    }
+}
+
+game:GetService("ReplicatedStorage").Remotes.QuakeAbilities:InvokeServer(unpack(args))
+
+
+        end
+        end
+        end
+        end)
+        end)
+
+BennettSection:NewButton("Shield", " ", function()
+
+local args = {
+    [1] = "QuakeShield"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("QuakeAbilities"):InvokeServer(unpack(args))
+
+end)
+
+BennettSection:NewButton("Unshield", " ", function()
+
+local args = {
+    [1] = "QuakeShieldStop"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("QuakeAbilities"):InvokeServer(unpack(args))
+
+end)
+
+local Bennett = Window:NewTab("Affect All")
+local BennettSection = Bennett:NewSection("Invisible Woman")
+
+BennettSection:NewButton("ForceField All", " ", function()
+    print("Clicked")
+    local Plr = game.Players.LocalPlayer
+    for i, Player in pairs (game.Players:GetPlayers()) do
+
+        if Player.Character ~= nil and Player ~= Plr then
+            local mag = (Player.Character.UpperTorso.Position - Plr.Character.UpperTorso.Position).magnitude
+            if mag < 100000 then
+                local Target = Player.Character or Player.CharacterAdded:Wait()
+
+local args = {
+    [1] = "Shield",
+    [2] = Target
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("InvisibleWomanAbilities"):InvokeServer(unpack(args))
+
+
+ end
+        end
+end   
+end)
+
+BennettSection:NewButton("UnForceField All", " ", function()
+    print("Clicked")
+    local Plr = game.Players.LocalPlayer
+    for i, Player in pairs (game.Players:GetPlayers()) do
+
+        if Player.Character ~= nil and Player ~= Plr then
+            local mag = (Player.Character.UpperTorso.Position - Plr.Character.UpperTorso.Position).magnitude
+            if mag < 100000 then
+                local Target = Player.Character or Player.CharacterAdded:Wait()
+
+local args = {
+    [1] = "ShieldOff",
+    [2] = Target.RemoteShield
+}
+
+game:GetService("ReplicatedStorage").Remotes.InvisibleWomanAbilities:InvokeServer(unpack(args))
+
+
+ end
+        end
+end   
+end)
+
+local BennettSection = Bennett:NewSection("Mystique")
+
+BennettSection:NewButton("Shoot All", " ", function()
+    print("Clicked")
+    local Plr = game.Players.LocalPlayer
+    for i, Player in pairs (game.Players:GetPlayers()) do
+
+        if Player.Character ~= nil and Player ~= Plr then
+            local mag = (Player.Character.UpperTorso.Position - Plr.Character.UpperTorso.Position).magnitude
+            if mag < 100000 then
+                local Target = Player.Character or Player.CharacterAdded:Wait()
+
+local args = {
+    [1] = "Shoot",
+    [2] = Target.Humanoid,
+    [3] = game:GetService("Players").LocalPlayer.Character.MystiqueGun
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("MystiqueAbilities"):InvokeServer(unpack(args))
+
+
+ end
+        end
+end   
+end)
+
+local Bennett = Window:NewTab("Custom")
+local BennettSection = Bennett:NewSection("Settings for Custom")
+
+BennettSection:NewButton("Enable Character Selection", "", function()
+
+game.Players.LocalPlayer.PlayerGui.CharacterSelection.Enabled = true
+
+end)
+
+BennettSection:NewButton("Disable Character Selection", "to see your avatar", function()
+
+game.Players.LocalPlayer.PlayerGui.CharacterSelection.Enabled = false
+
+end)
+
+BennettSection:NewButton("allow moving", "", function()
+
+    local plr = game.Players.LocalPlayer
+
+local backup = game.Workspace:FindFirstChild("Stats",true):Clone()
+backup.Parent = game.Workspace
+
+function give()
+   local c = game.Workspace.Stats:Clone()
+   c.Parent = game.workspace[plr.name]
+end
+
+give()
+
+plr.CharacterAdded:Connect(function()
+   give()
+end)
+
+end)
+
+BennettSection:NewButton("Get Animations", "", function()
+
+    local plr = game.Players.LocalPlayer
+
+local backup = game.Workspace.Map:FindFirstChild("Animate",true):Clone()
+backup.Parent = game.Workspace
+
+function give()
+   local c = game.Workspace.Map.Animate:Clone()
+   c.Parent = game.workspace[plr.name]
+end
+
+give()
+
+plr.CharacterAdded:Connect(function()
+   give()
+end)
+
+end)
+
+BennettSection:NewButton("Change To Bubbly Animation Pack", "", function()
+
+local plr = game.Players.LocalPlayer
+
+game.workspace[plr.name].Animate.cheer.CheerAnim.AnimationId = "rbxassetid://507770677"
+game.workspace[plr.name].Animate.climb.ClimbAnim.AnimationId = "rbxassetid://10921053544"
+game.workspace[plr.name].Animate.fall.FallAnim.AnimationId = "rbxassetid://10921061530"
+game.workspace[plr.name].Animate.idle.Animation1.AnimationId = "rbxassetid://10921054344"
+game.workspace[plr.name].Animate.idle.Animation2.AnimationId = "rbxassetid://10921055107"
+game.workspace[plr.name].Animate.jump.JumpAnim.AnimationId = "rbxassetid://10921062673"
+game.workspace[plr.name].Animate.laugh.LaughAnim.AnimationId = "rbxassetid://507770818"
+game.workspace[plr.name].Animate.point.PointAnim.AnimationId = "rbxassetid://507770453"
+game.workspace[plr.name].Animate.run.RunAnim.AnimationId = "rbxassetid://10921057244"
+game.workspace[plr.name].Animate.sit.SitAnim.AnimationId = "rbxassetid://2506281703"
+game.workspace[plr.name].Animate.swim.Swim.AnimationId = "rbxassetid://10921063569"
+game.workspace[plr.name].Animate.swimidle.SwimIdle.AnimationId = "rbxassetid://10922582160"
+game.workspace[plr.name].Animate.toollunge.ToolLungeAnim.AnimationId = "rbxassetid://522638767"
+game.workspace[plr.name].Animate.toolnone.ToolNoneAnim.AnimationId = "rbxassetid://507768375"
+game.workspace[plr.name].Animate.toolslash.ToolSlashAnim.AnimationId = "rbxassetid://522635514"
+game.workspace[plr.name].Animate.walk.WalkAnim.AnimationId = "rbxassetid://10980888364"
+game.workspace[plr.name].Animate.wave.WaveAnim.AnimationId = "rbxassetid://507770239"
+
+end)
+
+local Bennett = Window:NewTab("Admin")
+local BennettSection = Bennett:NewSection("")
+BennettSection:NewButton("Infinite Yield", "", function()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Omg562/Scripts/main/INF'),true))()
+end)
+
+local Tab = Window:NewTab("Credits")
+local SettingsSection = Tab:NewSection("discord: bennettscripts")
+
+local SettingsSection = Tab:NewSection("Toggle UI")
+SettingsSection:NewKeybind("Toggle UI", "Toggle UI", Enum.KeyCode.M, function()
+    Library:ToggleUI()
+end)
+wait(1)
+game.StarterGui:SetCore("SendNotification", { 
+    Title = "⛤ Bennett Scripts ⛤";
+    Text = "Marvel Enhanced V2";
+    Icon = "rbxthumb://type=Asset&id=14067496704&w=150&h=150";
+    Duration = "2";
+    Button1 = "Close";
+})
