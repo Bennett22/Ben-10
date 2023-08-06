@@ -228,7 +228,7 @@ game:GetService("ReplicatedStorage"):WaitForChild("Witches"):WaitForChild("GoodW
 end)
 
 local Bennett = Window:NewTab("New Powers")
-local BennettSection = Bennett:NewSection("Only will work if character is in game")
+local BennettSection = Bennett:NewSection("Be Queenie or Bille to be able use them as any char")
 
 BennettSection:NewButton("Get Divination", "Keybind (G)", function()
 
