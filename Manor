@@ -252,13 +252,19 @@ end)
 
 BennettSection:NewButton("Unglitch", " ", function()
 
-local args = {
-    [1] = "enough",
-    [2] = Vector3.new(1574.4228515625, 6445.9658203125, -7711.7802734375)
-}
+    local ohString1 = "field"
+    local ohVector32 = Vector3.new(-402.63726806640625, 7372.216796875, 947.439208984375)
 
-game:GetService("ReplicatedStorage"):WaitForChild("Witches"):WaitForChild("GoodWitches"):WaitForChild("PBaxter"):WaitForChild("PowerEvents"):WaitForChild("BaxterEvents"):FireServer(unpack(args))
+    game:GetService("ReplicatedStorage").Witches.EvilWitches.Neena.PowerEvents.NeenaEvents:FireServer(ohString1,
+        ohVector32)
 
+        wait(1)
+
+            local ohString1 = "stop"
+    local ohVector32 = Vector3.new(-403.1217956542969, 7377.94580078125, 944.2177124023438)
+
+    game:GetService("ReplicatedStorage").Witches.EvilWitches.Neena.PowerEvents.NeenaEvents:FireServer(ohString1,
+        ohVector32)
 end)
 
 BennettSection:NewButton("Delete Divination", " ", function()
