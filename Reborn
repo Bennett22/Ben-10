@@ -104,6 +104,16 @@ game:GetService("ReplicatedStorage"):WaitForChild("ChangePlayerCharacter"):FireS
 
 end)
 
+BennettSection:NewButton("Maleficent", " ", function()
+
+local args = {
+    [1] = "Maleficent"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("ChangePlayerCharacter"):FireServer(unpack(args))
+
+end)
+
 local Bennett = Window:NewTab("Keybinds & Buttons")
 local BennettSection = Bennett:NewSection("Boa Hankock")
 
