@@ -859,31 +859,6 @@ game:GetService("ReplicatedStorage").Remotes.WandaAbilities:InvokeServer(unpack(
 end   
 end)
 
-local BennettSection = Bennett:NewSection("Rogue")
-
-BennettSection:NewButton("Steal Power All", " ", function()
-    print("Clicked")
-    local Plr = game.Players.LocalPlayer
-    for i, Player in pairs (game.Players:GetPlayers()) do
-
-        if Player.Character ~= nil and Player ~= Plr then
-            local mag = (Player.Character.UpperTorso.Position - Plr.Character.UpperTorso.Position).magnitude
-            if mag < 100000 then
-                local Target = Player.Character or Player.CharacterAdded:Wait()
-
-local args = {
-    [1] = "StealPower",
-    [2] = Target,
-    [3] = game:GetService("Players").LocalPlayer
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("RogueAbilities"):InvokeServer(unpack(args))
-
-
- end
-        end
-end   
-end)
 
 local Bennett = Window:NewTab("Custom")
 local BennettSection = Bennett:NewSection("Settings for Custom")
