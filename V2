@@ -675,6 +675,65 @@ game:GetService("ReplicatedStorage").Remotes.WandaAbilities:InvokeServer(unpack(
 
 end)
 
+local BennettSection = Bennett:NewSection("Rogue")
+
+BennettSection:NewToggle("Steal Power", "Keybind (=)", function()
+    print("You just clicked the bind")
+
+    local function getPlayer()
+        local userInput = game:GetService("UserInputService")
+        local cam = workspace.CurrentCamera
+        local mousePos = userInput:GetMouseLocation()
+        local mouseRay = cam:ViewportPointToRay(mousePos.X, mousePos.Y)
+        players = {}
+        for _, x in next, game:GetService('Players'):GetPlayers() do
+            players[#players + 1] = x.Character
+        end
+        local raycastParams = RaycastParams.new()
+        raycastParams.FilterType = Enum.RaycastFilterType.Whitelist
+        raycastParams.FilterDescendantsInstances = players
+        raycastParams.IgnoreWater = true
+        local raycastResult = workspace:Raycast(mouseRay.Origin, mouseRay.Direction * 1000, raycastParams)
+        if raycastResult then
+            for _, x in next, game:GetService('Players'):GetPlayers() do
+                if not raycastResult.Instance:IsDescendantOf(x.Character) then
+                    continue
+                end
+                return x
+            end
+        end
+        return false
+    end
+
+    local function Set(list)
+        local set = {}
+        for _, l in ipairs(list) do
+            if l then
+                set[l] = true
+            end
+        end
+        return set
+    end
+
+    game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
+        if key == "=" then
+            local player = getPlayer()
+            if player then
+
+
+local args = {
+    [1] = "StealPower",
+    [2] = player.Character,
+    [3] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("RogueAbilities"):InvokeServer(unpack(args))
+
+            end
+        end
+        end)
+        end)
+
 local Bennett = Window:NewTab("Affect All")
 local BennettSection = Bennett:NewSection("Invisible Woman")
 
@@ -743,6 +802,82 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("MystiqueAbilities"):InvokeServer(unpack(args))
+
+
+ end
+        end
+end   
+end)
+
+local BennettSection = Bennett:NewSection("Scarlet Witch")
+
+BennettSection:NewButton("Telekinesis Start All", " ", function()
+    print("Clicked")
+    local Plr = game.Players.LocalPlayer
+    for i, Player in pairs (game.Players:GetPlayers()) do
+
+        if Player.Character ~= nil and Player ~= Plr then
+            local mag = (Player.Character.UpperTorso.Position - Plr.Character.UpperTorso.Position).magnitude
+            if mag < 100000 then
+                local Target = Player.Character or Player.CharacterAdded:Wait()
+
+local args = {
+    [1] = "HexTKStart",
+    [2] = Target.Humanoid
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("WandaAbilities"):InvokeServer(unpack(args))
+
+
+ end
+        end
+end   
+end)
+
+BennettSection:NewButton("Telekinesis Throw All", " ", function()
+    print("Clicked")
+    local Plr = game.Players.LocalPlayer
+    for i, Player in pairs (game.Players:GetPlayers()) do
+
+        if Player.Character ~= nil and Player ~= Plr then
+            local mag = (Player.Character.UpperTorso.Position - Plr.Character.UpperTorso.Position).magnitude
+            if mag < 100000 then
+                local Target = Player.Character or Player.CharacterAdded:Wait()
+
+local args = {
+    [1] = "HexTKEnd",
+    [2] = Target.HumanoidRootPart.BodyPosition,
+    [3] = Vector3.new(-10196.259765625, 552.8869018554688, -437.88311767578125, -0.23110653460025787, -0.8689502477645874, -0.4376241862773895, 0.8339816331863403, 0.05471969395875931, -0.549072265625, 0.5010632872581482, -0.4918648600578308, 0.7120426893234253),
+    [4] = Target.Humanoid
+}
+
+game:GetService("ReplicatedStorage").Remotes.WandaAbilities:InvokeServer(unpack(args))
+
+
+ end
+        end
+end   
+end)
+
+local BennettSection = Bennett:NewSection("Rogue")
+
+BennettSection:NewButton("Steal Power All", " ", function()
+    print("Clicked")
+    local Plr = game.Players.LocalPlayer
+    for i, Player in pairs (game.Players:GetPlayers()) do
+
+        if Player.Character ~= nil and Player ~= Plr then
+            local mag = (Player.Character.UpperTorso.Position - Plr.Character.UpperTorso.Position).magnitude
+            if mag < 100000 then
+                local Target = Player.Character or Player.CharacterAdded:Wait()
+
+local args = {
+    [1] = "StealPower",
+    [2] = Target,
+    [3] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("RogueAbilities"):InvokeServer(unpack(args))
 
 
  end
