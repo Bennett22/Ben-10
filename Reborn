@@ -4321,6 +4321,139 @@ game:GetService("Players").LocalPlayer.Character.Skill.Shield.Fire2:FireServer(u
 
 end)
 
+local BennettSection = Bennett:NewSection("Maleficent")
+
+BennettSection:NewToggle("Basics", "Keybind (1)", function()
+
+    clicktpon = true                
+        plr = game.Players.LocalPlayer
+        hum = plr.Character.HumanoidRootPart
+        mouse = plr:GetMouse()
+        mouse.KeyDown:connect(function(key)
+        if key == '1' then
+        if mouse.Target then
+        if clicktpon then
+
+local args = {
+    [1] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 1.5, mouse.Hit.z)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill:FindFirstChild("Blast(Basics)").Fire1:FireServer(unpack(args))
+
+local args = {
+    [1] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 1.5, mouse.Hit.z)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill:FindFirstChild("Blast(Basics)").Fire2:FireServer(unpack(args))
+
+local args = {
+    [1] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 1.5, mouse.Hit.z)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill:FindFirstChild("Blast(Basics)").Fire3:FireServer(unpack(args))
+
+end
+end
+end
+end)
+end)
+
+BennettSection:NewToggle("Tornado", "Keybind (2)", function()
+
+    clicktpon = true                
+        plr = game.Players.LocalPlayer
+        hum = plr.Character.HumanoidRootPart
+        mouse = plr:GetMouse()
+        mouse.KeyDown:connect(function(key)
+        if key == '2' then
+        if mouse.Target then
+        if clicktpon then
+
+local args = {
+    [1] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 1.5, mouse.Hit.z)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.Tornado.Fire1:FireServer(unpack(args))
+
+end
+end
+end
+end)
+end)
+
+BennettSection:NewToggle("Wings Blast", "Keybind (3)", function()
+
+    clicktpon = true                
+        plr = game.Players.LocalPlayer
+        hum = plr.Character.HumanoidRootPart
+        mouse = plr:GetMouse()
+        mouse.KeyDown:connect(function(key)
+        if key == '3' then
+        if mouse.Target then
+        if clicktpon then
+
+local args = {
+    [1] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 1.5, mouse.Hit.z)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.SuperBlast.Fire1:FireServer(unpack(args))
+
+end
+end
+end
+end)
+end)
+
+BennettSection:NewButton("Outburst", " ", function()
+
+local args = {
+    [1] = Vector3.new(2144.80859375, 218, 596.994873046875)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.Beams.Fire:FireServer(unpack(args))
+
+end)
+
+BennettSection:NewButton("Ultimate", " ", function()
+
+local args = {
+    [1] = Vector3.new(2208.020263671875, 191.06695556640625, 757.7280883789062)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.Ultimate.Fire:FireServer(unpack(args))
+
+end)
+
+BennettSection:NewButton("Explosion", " ", function()
+
+local args = {
+    [1] = Vector3.new(2153.59912109375, 191.06695556640625, 931.6022338867188)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.Explosion.Fire:FireServer(unpack(args))
+
+end)
+
+BennettSection:NewButton("Shield", " ", function()
+
+local args = {
+    [1] = Vector3.new(2026.077880859375, 191.06695556640625, 953.119873046875)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.Shield.Fire1:FireServer(unpack(args))
+
+end)
+
+BennettSection:NewButton("Unshield", " ", function()
+
+local args = {
+    [1] = Vector3.new(2050.14404296875, 191.06695556640625, 939.6412963867188)
+}
+
+game:GetService("Players").LocalPlayer.Character.Skill.Shield.Fire2:FireServer(unpack(args))
+
+end)
+
 local Bennett = Window:NewTab("Affect All")
 local BennettSection = Bennett:NewSection("Eleven")
 
