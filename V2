@@ -466,6 +466,215 @@ game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Quake
 
 end)
 
+local BennettSection = Bennett:NewSection("Scarlet Witch")
+
+BennettSection:NewToggle("Hex Blast", "Keybind (7)", function()
+
+    clicktpon = true                
+        plr = game.Players.LocalPlayer
+        hum = plr.Character.HumanoidRootPart
+        mouse = plr:GetMouse()
+        mouse.KeyDown:connect(function(key)
+        if key == '7' then
+        if mouse.Target then
+        if clicktpon then
+
+local args = {
+    [1] = "HexThrow",
+    [2] = CFrame.new(-10033.79296875, 549.192626953125, -290.4586181640625, -0.0981055349111557, 0.4178936183452606, -0.9031834602355957, -0, 0.9075616002082825, 0.41991928219795227, 0.9951760768890381, 0.04119640588760376, -0.08903679996728897),
+    [3] = CFrame.new(mouse.Hit.x, mouse.Hit.y + 1.5, mouse.Hit.z)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("WandaAbilities"):InvokeServer(unpack(args))
+
+
+        end
+        end
+        end
+        end)
+        end)
+
+BennettSection:NewToggle("Telekinesis Start", "Keybind (8)", function()
+    print("You just clicked the bind")
+
+    local function getPlayer()
+        local userInput = game:GetService("UserInputService")
+        local cam = workspace.CurrentCamera
+        local mousePos = userInput:GetMouseLocation()
+        local mouseRay = cam:ViewportPointToRay(mousePos.X, mousePos.Y)
+        players = {}
+        for _, x in next, game:GetService('Players'):GetPlayers() do
+            players[#players + 1] = x.Character
+        end
+        local raycastParams = RaycastParams.new()
+        raycastParams.FilterType = Enum.RaycastFilterType.Whitelist
+        raycastParams.FilterDescendantsInstances = players
+        raycastParams.IgnoreWater = true
+        local raycastResult = workspace:Raycast(mouseRay.Origin, mouseRay.Direction * 1000, raycastParams)
+        if raycastResult then
+            for _, x in next, game:GetService('Players'):GetPlayers() do
+                if not raycastResult.Instance:IsDescendantOf(x.Character) then
+                    continue
+                end
+                return x
+            end
+        end
+        return false
+    end
+
+    local function Set(list)
+        local set = {}
+        for _, l in ipairs(list) do
+            if l then
+                set[l] = true
+            end
+        end
+        return set
+    end
+
+    game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
+        if key == "8" then
+            local player = getPlayer()
+            if player then
+
+
+local args = {
+    [1] = "HexTKStart",
+    [2] = player.Character.Humanoid
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("WandaAbilities"):InvokeServer(unpack(args))
+
+            end
+        end
+        end)
+        end)
+
+BennettSection:NewToggle("Telekinesis Throw", "Keybind (9)", function()
+    print("You just clicked the bind")
+
+    local function getPlayer()
+        local userInput = game:GetService("UserInputService")
+        local cam = workspace.CurrentCamera
+        local mousePos = userInput:GetMouseLocation()
+        local mouseRay = cam:ViewportPointToRay(mousePos.X, mousePos.Y)
+        players = {}
+        for _, x in next, game:GetService('Players'):GetPlayers() do
+            players[#players + 1] = x.Character
+        end
+        local raycastParams = RaycastParams.new()
+        raycastParams.FilterType = Enum.RaycastFilterType.Whitelist
+        raycastParams.FilterDescendantsInstances = players
+        raycastParams.IgnoreWater = true
+        local raycastResult = workspace:Raycast(mouseRay.Origin, mouseRay.Direction * 1000, raycastParams)
+        if raycastResult then
+            for _, x in next, game:GetService('Players'):GetPlayers() do
+                if not raycastResult.Instance:IsDescendantOf(x.Character) then
+                    continue
+                end
+                return x
+            end
+        end
+        return false
+    end
+
+    local function Set(list)
+        local set = {}
+        for _, l in ipairs(list) do
+            if l then
+                set[l] = true
+            end
+        end
+        return set
+    end
+
+    game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
+        if key == "9" then
+            local player = getPlayer()
+            if player then
+
+
+local args = {
+    [1] = "HexTKEnd",
+    [2] = player.Character.HumanoidRootPart.BodyPosition,
+    [3] = Vector3.new(-10196.259765625, 552.8869018554688, -437.88311767578125, -0.23110653460025787, -0.8689502477645874, -0.4376241862773895, 0.8339816331863403, 0.05471969395875931, -0.549072265625, 0.5010632872581482, -0.4918648600578308, 0.7120426893234253),
+    [4] = player.Character.Humanoid
+}
+
+game:GetService("ReplicatedStorage").Remotes.WandaAbilities:InvokeServer(unpack(args))
+
+            end
+        end
+        end)
+        end)
+
+BennettSection:NewToggle("Shield", "Keybind (-)", function()
+
+    clicktpon = true                
+        plr = game.Players.LocalPlayer
+        hum = plr.Character.HumanoidRootPart
+        mouse = plr:GetMouse()
+        mouse.KeyDown:connect(function(key)
+        if key == '-' then
+        if mouse.Target then
+        if clicktpon then
+
+local args = {
+    [1] = "ShieldStart",
+    [2] = CFrame.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("WandaAbilities"):InvokeServer(unpack(args))
+
+
+        end
+        end
+        end
+        end)
+        end)
+
+BennettSection:NewButton("Unshield", " ", function()
+
+local args = {
+    [1] = "ShieldEnd",
+    [2] = {
+        ["Shield"] = game:GetService("Players").LocalPlayer.Character.Shield,
+        ["Effects"] = {
+            [1] = game:GetService("Players").LocalPlayer.Character.LeftHand.TKEffectHands,
+            [2] = game:GetService("Players").LocalPlayer.Character.RightHand.TKEffectHands
+        }
+    }
+}
+
+game:GetService("ReplicatedStorage").Remotes.WandaAbilities:InvokeServer(unpack(args))
+
+end)
+
+BennettSection:NewButton("Get Flight Effect", " ", function()
+
+local args = {
+    [1] = "HoverStart"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("WandaAbilities"):InvokeServer(unpack(args))
+
+end)
+
+BennettSection:NewButton("Remove Flight Effect", " ", function()
+
+local args = {
+    [1] = "HoverEnd",
+    [2] = {
+        [1] = game:GetService("Players").LocalPlayer.Character.LeftHand.Hover,
+        [2] = game:GetService("Players").LocalPlayer.Character.RightHand.Hover,
+        [3] = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.TKSound
+    }
+}
+
+game:GetService("ReplicatedStorage").Remotes.WandaAbilities:InvokeServer(unpack(args))
+
+end)
+
 local Bennett = Window:NewTab("Affect All")
 local BennettSection = Bennett:NewSection("Invisible Woman")
 
