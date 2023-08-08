@@ -1,0 +1,30 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Bennett Scripts | Marvel Enhanced V2", "GrapeTheme")
+local Bennett = Window:NewTab("Rogue")
+local BennettSection = Bennett:NewSection("Settings for Custom to get Rogues powers")
+local BennettSection = Bennett:NewSection("Be Invisible Woman and click 2nd button")
+BennettSection:NewButton("Click me first", " ", function()
+
+game.StarterGui.CharacterSelection.Selection.Characters:destroy()
+
+end)
+
+BennettSection:NewButton("Get Powers", " ", function()
+
+    local plr = game.Players.LocalPlayer
+
+local backup = game.Players:FindFirstChild("Invisible Woman",true):Clone()
+backup.Parent = game.Players
+
+function give()
+   local c = game.Players["Invisible Woman"]:Clone()
+   c.Parent = plr.Backpack
+end
+
+give()
+
+plr.CharacterAdded:Connect(function()
+   give()
+end)
+
+end)
