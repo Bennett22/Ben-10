@@ -1,5 +1,5 @@
     local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-    local Window = Library.CreateLib("Bennett Scripts | Stranger Things: Tragedies", "GrapeTheme")
+    local Window = Library.CreateLib("Scarlet Bennett Scripts | Stranger Things: Tragedies", "GrapeTheme")
 
 local Main = Window:NewTab("Insta Kills")
 local MainSection = Main:NewSection("Lab Eleven")
@@ -18437,7 +18437,7 @@ end)
 
 local Tab = Window:NewTab("Credits")
 local SettingsSection = Tab:NewSection("discord: bennettscripts")
-
+local SettingsSection = Tab:NewSection("Help from: scarlett._.witch")
 local SettingsSection = Tab:NewSection("Toggle UI")
 SettingsSection:NewKeybind("Toggle UI", "Toggle UI", Enum.KeyCode.M, function()
     Library:ToggleUI()
