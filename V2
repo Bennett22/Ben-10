@@ -765,6 +765,14 @@ game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Rogue
 local args = {
     [1] = "StealPower",
     [2] = player.Character,
+    [3] = game:GetService("Players").LocalPlayer.PlayerGui.Wolverine
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("RogueAbilities"):InvokeServer(unpack(args))
+
+local args = {
+    [1] = "StealPower",
+    [2] = player.Character,
     [3] = game:GetService("Players").LocalPlayer.PlayerGui["Scarlet Witch"]
 }
 
@@ -820,6 +828,58 @@ BennettSection:NewButton("Delete Your Powers", " ", function()
 local plr = game.Players.LocalPlayer
 
 local backup = game.Players[plr.name]:FindFirstChild("Abilities",true):Destroy()
+
+end)
+
+BennettSection:NewButton("Get Wandas Powers", " ", function()
+
+local args = {
+    [1] = "StealPower",
+    [2] = workspace:WaitForChild("Map"):WaitForChild("Scarlet Witch"),
+    [3] = game:GetService("Players").LocalPlayer.PlayerGui.Quicksilver
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("RogueAbilities"):InvokeServer(unpack(args))
+
+local args = {
+    [1] = "StealPower",
+    [2] = workspace:WaitForChild("Map"):WaitForChild("Scarlet Witch"),
+    [3] = game:GetService("Players").LocalPlayer.PlayerGui.Rogue
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("RogueAbilities"):InvokeServer(unpack(args))
+
+local args = {
+    [1] = "StealPower",
+    [2] = workspace:WaitForChild("Map"):WaitForChild("Scarlet Witch"),
+    [3] = game:GetService("Players").LocalPlayer.PlayerGui.Mystique
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("RogueAbilities"):InvokeServer(unpack(args))
+
+local args = {
+    [1] = "StealPower",
+    [2] = workspace:WaitForChild("Map"):WaitForChild("Scarlet Witch"),
+    [3] = game:GetService("Players").LocalPlayer.PlayerGui.Quake
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("RogueAbilities"):InvokeServer(unpack(args))
+
+local args = {
+    [1] = "StealPower",
+    [2] = workspace:WaitForChild("Map"):WaitForChild("Scarlet Witch"),
+    [3] = game:GetService("Players").LocalPlayer.PlayerGui["Invisible Woman"]
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("RogueAbilities"):InvokeServer(unpack(args))
+
+local args = {
+    [1] = "StealPower",
+    [2] = workspace:WaitForChild("Map"):WaitForChild("Scarlet Witch"),
+    [3] = game:GetService("Players").LocalPlayer.PlayerGui.Wolverine
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("RogueAbilities"):InvokeServer(unpack(args))
 
 end)
 
@@ -904,6 +964,20 @@ backup.Parent = game.Players
 
 function give()
    local c = game.Players["Mystique"]:Clone()
+   c.Parent = game.Players[plr.name]
+end
+
+give()
+
+plr.CharacterAdded:Connect(function()
+   give()
+end)
+
+local backup = game.Players:FindFirstChild("Wolverine",true):Clone()
+backup.Parent = game.Players
+
+function give()
+   local c = game.Players["Wolverine"]:Clone()
    c.Parent = game.Players[plr.name]
 end
 
