@@ -676,7 +676,7 @@ game:GetService("ReplicatedStorage").Remotes.WandaAbilities:InvokeServer(unpack(
 end)
 
 local Bennett = Window:NewTab("Rogue")
-local BennettSection = Bennett:NewSection("Power")
+local BennettSection = Bennett:NewSection("Invisible Woman")
 
 BennettSection:NewToggle("Steal Power", "Keybind (=)", function()
     print("You just clicked the bind")
@@ -721,15 +721,6 @@ BennettSection:NewToggle("Steal Power", "Keybind (=)", function()
             local player = getPlayer()
             if player then
 
-
-local args = {
-    [1] = "StealPower",
-    [2] = player.Character,
-    [3] = game:GetService("Players").LocalPlayer.PlayerGui.Quake
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("RogueAbilities"):InvokeServer(unpack(args))
-
 local args = {
     [1] = "StealPower",
     [2] = player.Character,
@@ -738,58 +729,10 @@ local args = {
 
 game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("RogueAbilities"):InvokeServer(unpack(args))
 
-local args = {
-    [1] = "StealPower",
-    [2] = player.Character,
-    [3] = game:GetService("Players").LocalPlayer.PlayerGui.Quicksilver
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("RogueAbilities"):InvokeServer(unpack(args))
-
-local args = {
-    [1] = "StealPower",
-    [2] = player.Character,
-    [3] = game:GetService("Players").LocalPlayer.PlayerGui.Rogue
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("RogueAbilities"):InvokeServer(unpack(args))
-
-local args = {
-    [1] = "StealPower",
-    [2] = player.Character,
-    [3] = game:GetService("Players").LocalPlayer.PlayerGui.Mystique
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("RogueAbilities"):InvokeServer(unpack(args))
-
-local args = {
-    [1] = "StealPower",
-    [2] = player.Character,
-    [3] = game:GetService("Players").LocalPlayer.PlayerGui.Wolverine
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("RogueAbilities"):InvokeServer(unpack(args))
-
-local args = {
-    [1] = "StealPower",
-    [2] = player.Character,
-    [3] = game:GetService("Players").LocalPlayer.PlayerGui["Scarlet Witch"]
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("RogueAbilities"):InvokeServer(unpack(args))
-
             end
         end
         end)
         end)
-
-BennettSection:NewButton("Delete Invisible Womans Powers", " ", function()
-
-local plr = game.Players.LocalPlayer
-
-local backup = game.Players[plr.name]:FindFirstChild("Invisible Woman",true):Destroy()
-
-end)
 
 BennettSection:NewButton("Delete Quicksilvers Powers", " ", function()
 
@@ -836,156 +779,651 @@ BennettSection:NewButton("Get Wandas Powers", " ", function()
 local args = {
     [1] = "StealPower",
     [2] = workspace:WaitForChild("Map"):WaitForChild("Scarlet Witch"),
-    [3] = game:GetService("Players").LocalPlayer.PlayerGui.Quicksilver
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("RogueAbilities"):InvokeServer(unpack(args))
-
-local args = {
-    [1] = "StealPower",
-    [2] = workspace:WaitForChild("Map"):WaitForChild("Scarlet Witch"),
-    [3] = game:GetService("Players").LocalPlayer.PlayerGui.Rogue
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("RogueAbilities"):InvokeServer(unpack(args))
-
-local args = {
-    [1] = "StealPower",
-    [2] = workspace:WaitForChild("Map"):WaitForChild("Scarlet Witch"),
-    [3] = game:GetService("Players").LocalPlayer.PlayerGui.Mystique
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("RogueAbilities"):InvokeServer(unpack(args))
-
-local args = {
-    [1] = "StealPower",
-    [2] = workspace:WaitForChild("Map"):WaitForChild("Scarlet Witch"),
-    [3] = game:GetService("Players").LocalPlayer.PlayerGui.Quake
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("RogueAbilities"):InvokeServer(unpack(args))
-
-local args = {
-    [1] = "StealPower",
-    [2] = workspace:WaitForChild("Map"):WaitForChild("Scarlet Witch"),
     [3] = game:GetService("Players").LocalPlayer.PlayerGui["Invisible Woman"]
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("RogueAbilities"):InvokeServer(unpack(args))
 
+end)
+
+
+local BennettSection = Bennett:NewSection("Mystique")
+
+BennettSection:NewToggle("Steal Power", "Keybind (=)", function()
+    print("You just clicked the bind")
+
+    local function getPlayer()
+        local userInput = game:GetService("UserInputService")
+        local cam = workspace.CurrentCamera
+        local mousePos = userInput:GetMouseLocation()
+        local mouseRay = cam:ViewportPointToRay(mousePos.X, mousePos.Y)
+        players = {}
+        for _, x in next, game:GetService('Players'):GetPlayers() do
+            players[#players + 1] = x.Character
+        end
+        local raycastParams = RaycastParams.new()
+        raycastParams.FilterType = Enum.RaycastFilterType.Whitelist
+        raycastParams.FilterDescendantsInstances = players
+        raycastParams.IgnoreWater = true
+        local raycastResult = workspace:Raycast(mouseRay.Origin, mouseRay.Direction * 1000, raycastParams)
+        if raycastResult then
+            for _, x in next, game:GetService('Players'):GetPlayers() do
+                if not raycastResult.Instance:IsDescendantOf(x.Character) then
+                    continue
+                end
+                return x
+            end
+        end
+        return false
+    end
+
+    local function Set(list)
+        local set = {}
+        for _, l in ipairs(list) do
+            if l then
+                set[l] = true
+            end
+        end
+        return set
+    end
+
+    game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
+        if key == "=" then
+            local player = getPlayer()
+            if player then
+
+local args = {
+    [1] = "StealPower",
+    [2] = player.Character,
+    [3] = game:GetService("Players").LocalPlayer.PlayerGui["Mystique"]
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("RogueAbilities"):InvokeServer(unpack(args))
+
+            end
+        end
+        end)
+        end)
+
+BennettSection:NewButton("Delete Quicksilvers Powers", " ", function()
+
+local plr = game.Players.LocalPlayer
+
+local backup = game.Players[plr.name]:FindFirstChild("Quicksilver",true):Destroy()
+
+end)
+
+BennettSection:NewButton("Delete Invisible Womans Powers", " ", function()
+
+local plr = game.Players.LocalPlayer
+
+local backup = game.Players[plr.name]:FindFirstChild("Invisible Woman",true):Destroy()
+
+end)
+
+BennettSection:NewButton("Delete Quakes Powers", " ", function()
+
+local plr = game.Players.LocalPlayer
+
+local backup = game.Players[plr.name]:FindFirstChild("Quake",true):Destroy()
+
+end)
+
+BennettSection:NewButton("Delete Wandas Powers", " ", function()
+
+local plr = game.Players.LocalPlayer
+
+local backup = game.Players[plr.name]:FindFirstChild("Scarlet Witch",true):Destroy()
+
+end)
+
+BennettSection:NewButton("Delete Your Powers", " ", function()
+
+local plr = game.Players.LocalPlayer
+
+local backup = game.Players[plr.name]:FindFirstChild("Abilities",true):Destroy()
+
+end)
+
+BennettSection:NewButton("Get Wandas Powers", " ", function()
+
 local args = {
     [1] = "StealPower",
     [2] = workspace:WaitForChild("Map"):WaitForChild("Scarlet Witch"),
-    [3] = game:GetService("Players").LocalPlayer.PlayerGui.Wolverine
+    [3] = game:GetService("Players").LocalPlayer.PlayerGui["Mystique"]
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("RogueAbilities"):InvokeServer(unpack(args))
 
 end)
 
-local BennettSection = Bennett:NewSection("Settings for Custom to get Rogues power")
-local BennettSection = Bennett:NewSection("Be any char to get the powers, u can reset after")
-BennettSection:NewButton("Get Powers", " ", function()
+local BennettSection = Bennett:NewSection("Quicksilver")
+
+BennettSection:NewToggle("Steal Power", "Keybind (=)", function()
+    print("You just clicked the bind")
+
+    local function getPlayer()
+        local userInput = game:GetService("UserInputService")
+        local cam = workspace.CurrentCamera
+        local mousePos = userInput:GetMouseLocation()
+        local mouseRay = cam:ViewportPointToRay(mousePos.X, mousePos.Y)
+        players = {}
+        for _, x in next, game:GetService('Players'):GetPlayers() do
+            players[#players + 1] = x.Character
+        end
+        local raycastParams = RaycastParams.new()
+        raycastParams.FilterType = Enum.RaycastFilterType.Whitelist
+        raycastParams.FilterDescendantsInstances = players
+        raycastParams.IgnoreWater = true
+        local raycastResult = workspace:Raycast(mouseRay.Origin, mouseRay.Direction * 1000, raycastParams)
+        if raycastResult then
+            for _, x in next, game:GetService('Players'):GetPlayers() do
+                if not raycastResult.Instance:IsDescendantOf(x.Character) then
+                    continue
+                end
+                return x
+            end
+        end
+        return false
+    end
+
+    local function Set(list)
+        local set = {}
+        for _, l in ipairs(list) do
+            if l then
+                set[l] = true
+            end
+        end
+        return set
+    end
+
+    game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
+        if key == "=" then
+            local player = getPlayer()
+            if player then
+
+local args = {
+    [1] = "StealPower",
+    [2] = player.Character,
+    [3] = game:GetService("Players").LocalPlayer.PlayerGui["Quicksilver"]
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("RogueAbilities"):InvokeServer(unpack(args))
+
+            end
+        end
+        end)
+        end)
+
+BennettSection:NewButton("Delete Mystiques Powers", " ", function()
 
 local plr = game.Players.LocalPlayer
 
-local backup = game.Players:FindFirstChild("Invisible Woman",true):Clone()
-backup.Parent = game.Players
+local backup = game.Players[plr.name]:FindFirstChild("Mystique",true):Destroy()
 
-function give()
-   local c = game.Players["Invisible Woman"]:Clone()
-   c.Parent = game.Players[plr.name]
-end
-
-give()
-
-plr.CharacterAdded:Connect(function()
-   give()
 end)
 
-local backup = game.Players:FindFirstChild("Scarlet Witch",true):Clone()
-backup.Parent = game.Players
+BennettSection:NewButton("Delete Invisible Womans Powers", " ", function()
 
-function give()
-   local c = game.Players["Scarlet Witch"]:Clone()
-   c.Parent = game.Players[plr.name]
-end
+local plr = game.Players.LocalPlayer
 
-give()
+local backup = game.Players[plr.name]:FindFirstChild("Invisible Woman",true):Destroy()
 
-plr.CharacterAdded:Connect(function()
-   give()
 end)
 
-local backup = game.Players:FindFirstChild("Rogue",true):Clone()
-backup.Parent = game.Players
+BennettSection:NewButton("Delete Quakes Powers", " ", function()
 
-function give()
-   local c = game.Players["Rogue"]:Clone()
-   c.Parent = game.Players[plr.name]
-end
+local plr = game.Players.LocalPlayer
 
-give()
+local backup = game.Players[plr.name]:FindFirstChild("Quake",true):Destroy()
 
-plr.CharacterAdded:Connect(function()
-   give()
 end)
 
-local backup = game.Players:FindFirstChild("Quicksilver",true):Clone()
-backup.Parent = game.Players
+BennettSection:NewButton("Delete Wandas Powers", " ", function()
 
-function give()
-   local c = game.Players["Quicksilver"]:Clone()
-   c.Parent = game.Players[plr.name]
-end
+local plr = game.Players.LocalPlayer
 
-give()
+local backup = game.Players[plr.name]:FindFirstChild("Scarlet Witch",true):Destroy()
 
-plr.CharacterAdded:Connect(function()
-   give()
 end)
 
-local backup = game.Players:FindFirstChild("Quake",true):Clone()
-backup.Parent = game.Players
+BennettSection:NewButton("Delete Your Powers", " ", function()
 
-function give()
-   local c = game.Players["Quake"]:Clone()
-   c.Parent = game.Players[plr.name]
-end
+local plr = game.Players.LocalPlayer
 
-give()
+local backup = game.Players[plr.name]:FindFirstChild("Abilities",true):Destroy()
 
-plr.CharacterAdded:Connect(function()
-   give()
 end)
 
-local backup = game.Players:FindFirstChild("Mystique",true):Clone()
-backup.Parent = game.Players
+BennettSection:NewButton("Get Wandas Powers", " ", function()
 
-function give()
-   local c = game.Players["Mystique"]:Clone()
-   c.Parent = game.Players[plr.name]
-end
+local args = {
+    [1] = "StealPower",
+    [2] = workspace:WaitForChild("Map"):WaitForChild("Scarlet Witch"),
+    [3] = game:GetService("Players").LocalPlayer.PlayerGui["Quicksilver"]
+}
 
-give()
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("RogueAbilities"):InvokeServer(unpack(args))
 
-plr.CharacterAdded:Connect(function()
-   give()
 end)
 
-local backup = game.Players:FindFirstChild("Wolverine",true):Clone()
-backup.Parent = game.Players
+local BennettSection = Bennett:NewSection("Wolverine")
 
-function give()
-   local c = game.Players["Wolverine"]:Clone()
-   c.Parent = game.Players[plr.name]
-end
+BennettSection:NewToggle("Steal Power", "Keybind (=)", function()
+    print("You just clicked the bind")
 
-give()
+    local function getPlayer()
+        local userInput = game:GetService("UserInputService")
+        local cam = workspace.CurrentCamera
+        local mousePos = userInput:GetMouseLocation()
+        local mouseRay = cam:ViewportPointToRay(mousePos.X, mousePos.Y)
+        players = {}
+        for _, x in next, game:GetService('Players'):GetPlayers() do
+            players[#players + 1] = x.Character
+        end
+        local raycastParams = RaycastParams.new()
+        raycastParams.FilterType = Enum.RaycastFilterType.Whitelist
+        raycastParams.FilterDescendantsInstances = players
+        raycastParams.IgnoreWater = true
+        local raycastResult = workspace:Raycast(mouseRay.Origin, mouseRay.Direction * 1000, raycastParams)
+        if raycastResult then
+            for _, x in next, game:GetService('Players'):GetPlayers() do
+                if not raycastResult.Instance:IsDescendantOf(x.Character) then
+                    continue
+                end
+                return x
+            end
+        end
+        return false
+    end
 
-plr.CharacterAdded:Connect(function()
-   give()
+    local function Set(list)
+        local set = {}
+        for _, l in ipairs(list) do
+            if l then
+                set[l] = true
+            end
+        end
+        return set
+    end
+
+    game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
+        if key == "=" then
+            local player = getPlayer()
+            if player then
+
+local args = {
+    [1] = "StealPower",
+    [2] = player.Character,
+    [3] = game:GetService("Players").LocalPlayer.PlayerGui["Wolverine"]
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("RogueAbilities"):InvokeServer(unpack(args))
+
+            end
+        end
+        end)
+        end)
+
+BennettSection:NewButton("Delete Mystiques Powers", " ", function()
+
+local plr = game.Players.LocalPlayer
+
+local backup = game.Players[plr.name]:FindFirstChild("Mystique",true):Destroy()
+
 end)
+
+BennettSection:NewButton("Delete Invisible Womans Powers", " ", function()
+
+local plr = game.Players.LocalPlayer
+
+local backup = game.Players[plr.name]:FindFirstChild("Invisible Woman",true):Destroy()
+
+end)
+
+BennettSection:NewButton("Delete Quakes Powers", " ", function()
+
+local plr = game.Players.LocalPlayer
+
+local backup = game.Players[plr.name]:FindFirstChild("Quake",true):Destroy()
+
+end)
+
+BennettSection:NewButton("Delete Wandas Powers", " ", function()
+
+local plr = game.Players.LocalPlayer
+
+local backup = game.Players[plr.name]:FindFirstChild("Scarlet Witch",true):Destroy()
+
+end)
+
+BennettSection:NewButton("Delete Your Powers", " ", function()
+
+local plr = game.Players.LocalPlayer
+
+local backup = game.Players[plr.name]:FindFirstChild("Abilities",true):Destroy()
+
+end)
+
+BennettSection:NewButton("Get Wandas Powers", " ", function()
+
+local args = {
+    [1] = "StealPower",
+    [2] = workspace:WaitForChild("Map"):WaitForChild("Scarlet Witch"),
+    [3] = game:GetService("Players").LocalPlayer.PlayerGui["Wolverine"]
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("RogueAbilities"):InvokeServer(unpack(args))
+
+end)
+
+local BennettSection = Bennett:NewSection("Quake")
+
+BennettSection:NewToggle("Steal Power", "Keybind (=)", function()
+    print("You just clicked the bind")
+
+    local function getPlayer()
+        local userInput = game:GetService("UserInputService")
+        local cam = workspace.CurrentCamera
+        local mousePos = userInput:GetMouseLocation()
+        local mouseRay = cam:ViewportPointToRay(mousePos.X, mousePos.Y)
+        players = {}
+        for _, x in next, game:GetService('Players'):GetPlayers() do
+            players[#players + 1] = x.Character
+        end
+        local raycastParams = RaycastParams.new()
+        raycastParams.FilterType = Enum.RaycastFilterType.Whitelist
+        raycastParams.FilterDescendantsInstances = players
+        raycastParams.IgnoreWater = true
+        local raycastResult = workspace:Raycast(mouseRay.Origin, mouseRay.Direction * 1000, raycastParams)
+        if raycastResult then
+            for _, x in next, game:GetService('Players'):GetPlayers() do
+                if not raycastResult.Instance:IsDescendantOf(x.Character) then
+                    continue
+                end
+                return x
+            end
+        end
+        return false
+    end
+
+    local function Set(list)
+        local set = {}
+        for _, l in ipairs(list) do
+            if l then
+                set[l] = true
+            end
+        end
+        return set
+    end
+
+    game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
+        if key == "=" then
+            local player = getPlayer()
+            if player then
+
+local args = {
+    [1] = "StealPower",
+    [2] = player.Character,
+    [3] = game:GetService("Players").LocalPlayer.PlayerGui["Quake"]
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("RogueAbilities"):InvokeServer(unpack(args))
+
+            end
+        end
+        end)
+        end)
+
+BennettSection:NewButton("Delete Mystiques Powers", " ", function()
+
+local plr = game.Players.LocalPlayer
+
+local backup = game.Players[plr.name]:FindFirstChild("Mystique",true):Destroy()
+
+end)
+
+BennettSection:NewButton("Delete Invisible Womans Powers", " ", function()
+
+local plr = game.Players.LocalPlayer
+
+local backup = game.Players[plr.name]:FindFirstChild("Invisible Woman",true):Destroy()
+
+end)
+
+BennettSection:NewButton("Delete Wandas Powers", " ", function()
+
+local plr = game.Players.LocalPlayer
+
+local backup = game.Players[plr.name]:FindFirstChild("Scarlet Witch",true):Destroy()
+
+end)
+
+BennettSection:NewButton("Delete Your Powers", " ", function()
+
+local plr = game.Players.LocalPlayer
+
+local backup = game.Players[plr.name]:FindFirstChild("Abilities",true):Destroy()
+
+end)
+
+BennettSection:NewButton("Get Wandas Powers", " ", function()
+
+local args = {
+    [1] = "StealPower",
+    [2] = workspace:WaitForChild("Map"):WaitForChild("Scarlet Witch"),
+    [3] = game:GetService("Players").LocalPlayer.PlayerGui["Wolverine"]
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("QuakeAbilities"):InvokeServer(unpack(args))
+
+end)
+
+local BennettSection = Bennett:NewSection("Scarlet Witch")
+
+BennettSection:NewToggle("Steal Power", "Keybind (=)", function()
+    print("You just clicked the bind")
+
+    local function getPlayer()
+        local userInput = game:GetService("UserInputService")
+        local cam = workspace.CurrentCamera
+        local mousePos = userInput:GetMouseLocation()
+        local mouseRay = cam:ViewportPointToRay(mousePos.X, mousePos.Y)
+        players = {}
+        for _, x in next, game:GetService('Players'):GetPlayers() do
+            players[#players + 1] = x.Character
+        end
+        local raycastParams = RaycastParams.new()
+        raycastParams.FilterType = Enum.RaycastFilterType.Whitelist
+        raycastParams.FilterDescendantsInstances = players
+        raycastParams.IgnoreWater = true
+        local raycastResult = workspace:Raycast(mouseRay.Origin, mouseRay.Direction * 1000, raycastParams)
+        if raycastResult then
+            for _, x in next, game:GetService('Players'):GetPlayers() do
+                if not raycastResult.Instance:IsDescendantOf(x.Character) then
+                    continue
+                end
+                return x
+            end
+        end
+        return false
+    end
+
+    local function Set(list)
+        local set = {}
+        for _, l in ipairs(list) do
+            if l then
+                set[l] = true
+            end
+        end
+        return set
+    end
+
+    game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
+        if key == "=" then
+            local player = getPlayer()
+            if player then
+
+local args = {
+    [1] = "StealPower",
+    [2] = player.Character,
+    [3] = game:GetService("Players").LocalPlayer.PlayerGui["Scarlet Witch"]
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("RogueAbilities"):InvokeServer(unpack(args))
+
+            end
+        end
+        end)
+        end)
+
+BennettSection:NewButton("Delete Mystiques Powers", " ", function()
+
+local plr = game.Players.LocalPlayer
+
+local backup = game.Players[plr.name]:FindFirstChild("Mystique",true):Destroy()
+
+end)
+
+BennettSection:NewButton("Delete Invisible Womans Powers", " ", function()
+
+local plr = game.Players.LocalPlayer
+
+local backup = game.Players[plr.name]:FindFirstChild("Invisible Woman",true):Destroy()
+
+end)
+
+BennettSection:NewButton("Delete Quakes Powers", " ", function()
+
+local plr = game.Players.LocalPlayer
+
+local backup = game.Players[plr.name]:FindFirstChild("Quake",true):Destroy()
+
+end)
+
+BennettSection:NewButton("Delete Quakes Powers", " ", function()
+
+local plr = game.Players.LocalPlayer
+
+local backup = game.Players[plr.name]:FindFirstChild("Quake",true):Destroy()
+
+end)
+
+BennettSection:NewButton("Delete Your Powers", " ", function()
+
+local plr = game.Players.LocalPlayer
+
+local backup = game.Players[plr.name]:FindFirstChild("Abilities",true):Destroy()
+
+end)
+
+local BennettSection = Bennett:NewSection("Rogue")
+
+BennettSection:NewToggle("Steal Power", "Keybind (=)", function()
+    print("You just clicked the bind")
+
+    local function getPlayer()
+        local userInput = game:GetService("UserInputService")
+        local cam = workspace.CurrentCamera
+        local mousePos = userInput:GetMouseLocation()
+        local mouseRay = cam:ViewportPointToRay(mousePos.X, mousePos.Y)
+        players = {}
+        for _, x in next, game:GetService('Players'):GetPlayers() do
+            players[#players + 1] = x.Character
+        end
+        local raycastParams = RaycastParams.new()
+        raycastParams.FilterType = Enum.RaycastFilterType.Whitelist
+        raycastParams.FilterDescendantsInstances = players
+        raycastParams.IgnoreWater = true
+        local raycastResult = workspace:Raycast(mouseRay.Origin, mouseRay.Direction * 1000, raycastParams)
+        if raycastResult then
+            for _, x in next, game:GetService('Players'):GetPlayers() do
+                if not raycastResult.Instance:IsDescendantOf(x.Character) then
+                    continue
+                end
+                return x
+            end
+        end
+        return false
+    end
+
+    local function Set(list)
+        local set = {}
+        for _, l in ipairs(list) do
+            if l then
+                set[l] = true
+            end
+        end
+        return set
+    end
+
+    game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
+        if key == "=" then
+            local player = getPlayer()
+            if player then
+
+local args = {
+    [1] = "StealPower",
+    [2] = player.Character,
+    [3] = game:GetService("Players").LocalPlayer.PlayerGui["Rogue"]
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("RogueAbilities"):InvokeServer(unpack(args))
+
+            end
+        end
+        end)
+        end)
+
+BennettSection:NewButton("Delete Mystiques Powers", " ", function()
+
+local plr = game.Players.LocalPlayer
+
+local backup = game.Players[plr.name]:FindFirstChild("Mystique",true):Destroy()
+
+end)
+
+BennettSection:NewButton("Delete Invisible Womans Powers", " ", function()
+
+local plr = game.Players.LocalPlayer
+
+local backup = game.Players[plr.name]:FindFirstChild("Invisible Woman",true):Destroy()
+
+end)
+
+BennettSection:NewButton("Delete Quakes Powers", " ", function()
+
+local plr = game.Players.LocalPlayer
+
+local backup = game.Players[plr.name]:FindFirstChild("Quake",true):Destroy()
+
+end)
+
+BennettSection:NewButton("Delete Wandas Powers", " ", function()
+
+local plr = game.Players.LocalPlayer
+
+local backup = game.Players[plr.name]:FindFirstChild("Scarlet Witch",true):Destroy()
+
+end)
+
+BennettSection:NewButton("Delete Your Powers", " ", function()
+
+local plr = game.Players.LocalPlayer
+
+local backup = game.Players[plr.name]:FindFirstChild("Abilities",true):Destroy()
+
+end)
+
+BennettSection:NewButton("Get Wandas Powers", " ", function()
+
+local args = {
+    [1] = "StealPower",
+    [2] = workspace:WaitForChild("Map"):WaitForChild("Scarlet Witch"),
+    [3] = game:GetService("Players").LocalPlayer.PlayerGui["Rogue"]
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("RogueAbilities"):InvokeServer(unpack(args))
 
 end)
 
@@ -1112,86 +1550,6 @@ game:GetService("ReplicatedStorage").Remotes.WandaAbilities:InvokeServer(unpack(
  end
         end
 end   
-end)
-
-
-local Bennett = Window:NewTab("Custom")
-local BennettSection = Bennett:NewSection("Settings for Custom")
-
-BennettSection:NewButton("Enable Character Selection", "", function()
-
-game.Players.LocalPlayer.PlayerGui.CharacterSelection.Enabled = true
-
-end)
-
-BennettSection:NewButton("Disable Character Selection", "to see your avatar", function()
-
-game.Players.LocalPlayer.PlayerGui.CharacterSelection.Enabled = false
-
-end)
-
-BennettSection:NewButton("allow moving", "", function()
-
-    local plr = game.Players.LocalPlayer
-
-local backup = game.Workspace:FindFirstChild("Stats",true):Clone()
-backup.Parent = game.Workspace
-
-function give()
-   local c = game.Workspace.Stats:Clone()
-   c.Parent = game.workspace[plr.name]
-end
-
-give()
-
-plr.CharacterAdded:Connect(function()
-   give()
-end)
-
-end)
-
-BennettSection:NewButton("Get Animations", "", function()
-
-    local plr = game.Players.LocalPlayer
-
-local backup = game.Workspace:FindFirstChild("Animate",true):Clone()
-backup.Parent = game.Workspace
-
-function give()
-   local c = game.Workspace.Animate:Clone()
-   c.Parent = game.workspace[plr.name]
-end
-
-give()
-
-plr.CharacterAdded:Connect(function()
-   give()
-end)
-
-end)
-
-BennettSection:NewButton("Change To Bubbly Animation Pack", "", function()
-
-local plr = game.Players.LocalPlayer
-
-game.workspace[plr.name].Animate.cheer.CheerAnim.AnimationId = "rbxassetid://507770677"
-game.workspace[plr.name].Animate.climb.ClimbAnim.AnimationId = "rbxassetid://10921053544"
-game.workspace[plr.name].Animate.fall.FallAnim.AnimationId = "rbxassetid://10921061530"
-game.workspace[plr.name].Animate.idle.Animation1.AnimationId = "rbxassetid://10921054344"
-game.workspace[plr.name].Animate.idle.Animation2.AnimationId = "rbxassetid://10921055107"
-game.workspace[plr.name].Animate.jump.JumpAnim.AnimationId = "rbxassetid://10921062673"
-game.workspace[plr.name].Animate.laugh.LaughAnim.AnimationId = "rbxassetid://507770818"
-game.workspace[plr.name].Animate.point.PointAnim.AnimationId = "rbxassetid://507770453"
-game.workspace[plr.name].Animate.run.RunAnim.AnimationId = "rbxassetid://10921057244"
-game.workspace[plr.name].Animate.sit.SitAnim.AnimationId = "rbxassetid://2506281703"
-game.workspace[plr.name].Animate.swim.Swim.AnimationId = "rbxassetid://10921063569"
-game.workspace[plr.name].Animate.swimidle.SwimIdle.AnimationId = "rbxassetid://10922582160"
-game.workspace[plr.name].Animate.toollunge.ToolLungeAnim.AnimationId = "rbxassetid://522638767"
-game.workspace[plr.name].Animate.toolnone.ToolNoneAnim.AnimationId = "rbxassetid://507768375"
-game.workspace[plr.name].Animate.toolslash.ToolSlashAnim.AnimationId = "rbxassetid://522635514"
-game.workspace[plr.name].Animate.walk.WalkAnim.AnimationId = "rbxassetid://10980888364"
-game.workspace[plr.name].Animate.wave.WaveAnim.AnimationId = "rbxassetid://507770239"
-
 end)
 
 local Bennett = Window:NewTab("Admin")
