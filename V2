@@ -675,7 +675,8 @@ game:GetService("ReplicatedStorage").Remotes.WandaAbilities:InvokeServer(unpack(
 
 end)
 
-local BennettSection = Bennett:NewSection("Rogue")
+local Bennett = Window:NewTab("Rogue")
+local BennettSection = Bennett:NewSection("Power")
 
 BennettSection:NewToggle("Steal Power", "Keybind (=)", function()
     print("You just clicked the bind")
@@ -724,7 +725,47 @@ BennettSection:NewToggle("Steal Power", "Keybind (=)", function()
 local args = {
     [1] = "StealPower",
     [2] = player.Character,
-    [3] = game:GetService("Players").LocalPlayer
+    [3] = game:GetService("Players").LocalPlayer.PlayerGui.Quake
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("RogueAbilities"):InvokeServer(unpack(args))
+
+local args = {
+    [1] = "StealPower",
+    [2] = player.Character,
+    [3] = game:GetService("Players").LocalPlayer.PlayerGui["Invisible Woman"]
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("RogueAbilities"):InvokeServer(unpack(args))
+
+local args = {
+    [1] = "StealPower",
+    [2] = player.Character,
+    [3] = game:GetService("Players").LocalPlayer.PlayerGui.Quicksilver
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("RogueAbilities"):InvokeServer(unpack(args))
+
+local args = {
+    [1] = "StealPower",
+    [2] = player.Character,
+    [3] = game:GetService("Players").LocalPlayer.PlayerGui.Rogue
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("RogueAbilities"):InvokeServer(unpack(args))
+
+local args = {
+    [1] = "StealPower",
+    [2] = player.Character,
+    [3] = game:GetService("Players").LocalPlayer.PlayerGui.Mystique
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("RogueAbilities"):InvokeServer(unpack(args))
+
+local args = {
+    [1] = "StealPower",
+    [2] = player.Character,
+    [3] = game:GetService("Players").LocalPlayer.PlayerGui["Scarlet Witch"]
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("RogueAbilities"):InvokeServer(unpack(args))
@@ -733,6 +774,146 @@ game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Rogue
         end
         end)
         end)
+
+BennettSection:NewButton("Delete Invisible Womans Powers", " ", function()
+
+local plr = game.Players.LocalPlayer
+
+local backup = game.Players[plr.name]:FindFirstChild("Invisible Woman",true):Destroy()
+
+end)
+
+BennettSection:NewButton("Delete Quicksilvers Powers", " ", function()
+
+local plr = game.Players.LocalPlayer
+
+local backup = game.Players[plr.name]:FindFirstChild("Quicksilver",true):Destroy()
+
+end)
+
+BennettSection:NewButton("Delete Mystiques Powers", " ", function()
+
+local plr = game.Players.LocalPlayer
+
+local backup = game.Players[plr.name]:FindFirstChild("Mystique",true):Destroy()
+
+end)
+
+BennettSection:NewButton("Delete Quakes Powers", " ", function()
+
+local plr = game.Players.LocalPlayer
+
+local backup = game.Players[plr.name]:FindFirstChild("Quake",true):Destroy()
+
+end)
+
+BennettSection:NewButton("Delete Wandas Powers", " ", function()
+
+local plr = game.Players.LocalPlayer
+
+local backup = game.Players[plr.name]:FindFirstChild("Scarlet Witch",true):Destroy()
+
+end)
+
+BennettSection:NewButton("Delete Your Powers", " ", function()
+
+local plr = game.Players.LocalPlayer
+
+local backup = game.Players[plr.name]:FindFirstChild("Abilities",true):Destroy()
+
+end)
+
+local BennettSection = Bennett:NewSection("Settings for Custom to get Rogues power")
+local BennettSection = Bennett:NewSection("Be any char to get the powers, u can reset after")
+BennettSection:NewButton("Get Powers", " ", function()
+
+local plr = game.Players.LocalPlayer
+
+local backup = game.Players:FindFirstChild("Invisible Woman",true):Clone()
+backup.Parent = game.Players
+
+function give()
+   local c = game.Players["Invisible Woman"]:Clone()
+   c.Parent = game.Players[plr.name]
+end
+
+give()
+
+plr.CharacterAdded:Connect(function()
+   give()
+end)
+
+local backup = game.Players:FindFirstChild("Scarlet Witch",true):Clone()
+backup.Parent = game.Players
+
+function give()
+   local c = game.Players["Scarlet Witch"]:Clone()
+   c.Parent = game.Players[plr.name]
+end
+
+give()
+
+plr.CharacterAdded:Connect(function()
+   give()
+end)
+
+local backup = game.Players:FindFirstChild("Rogue",true):Clone()
+backup.Parent = game.Players
+
+function give()
+   local c = game.Players["Rogue"]:Clone()
+   c.Parent = game.Players[plr.name]
+end
+
+give()
+
+plr.CharacterAdded:Connect(function()
+   give()
+end)
+
+local backup = game.Players:FindFirstChild("Quicksilver",true):Clone()
+backup.Parent = game.Players
+
+function give()
+   local c = game.Players["Quicksilver"]:Clone()
+   c.Parent = game.Players[plr.name]
+end
+
+give()
+
+plr.CharacterAdded:Connect(function()
+   give()
+end)
+
+local backup = game.Players:FindFirstChild("Quake",true):Clone()
+backup.Parent = game.Players
+
+function give()
+   local c = game.Players["Quake"]:Clone()
+   c.Parent = game.Players[plr.name]
+end
+
+give()
+
+plr.CharacterAdded:Connect(function()
+   give()
+end)
+
+local backup = game.Players:FindFirstChild("Mystique",true):Clone()
+backup.Parent = game.Players
+
+function give()
+   local c = game.Players["Mystique"]:Clone()
+   c.Parent = game.Players[plr.name]
+end
+
+give()
+
+plr.CharacterAdded:Connect(function()
+   give()
+end)
+
+end)
 
 local Bennett = Window:NewTab("Affect All")
 local BennettSection = Bennett:NewSection("Invisible Woman")
