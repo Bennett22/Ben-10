@@ -1212,7 +1212,7 @@ BennettSection:NewButton("Get Wandas Powers", " ", function()
 local args = {
     [1] = "StealPower",
     [2] = workspace:WaitForChild("Map"):WaitForChild("Scarlet Witch"),
-    [3] = game:GetService("Players").LocalPlayer.PlayerGui["Wolverine"]
+    [3] = game:GetService("Players").LocalPlayer.PlayerGui["Quake"]
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("QuakeAbilities"):InvokeServer(unpack(args))
