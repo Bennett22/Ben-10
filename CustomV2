@@ -28,10 +28,6 @@ plr.CharacterAdded:Connect(function()
    give()
 end)
 
-wait(1)
-
-local backup = game.Players:FindFirstChild("Abilities",true):Destroy()
-
 end)
 
 local BennettSection = Bennett:NewSection("Power")
