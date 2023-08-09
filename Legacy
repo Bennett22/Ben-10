@@ -1,0 +1,221 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Bennett Scripts | Marvel: Legacy", "GrapeTheme")
+
+local Bennett = Window:NewTab("Characters")
+local BennettSection = Bennett:NewSection("Delete Main Screen")
+BennettSection:NewButton("Delete", " ", function()
+
+game.ReplicatedStorage.Ui.MainScreen:destroy()
+game.WakSpace.Selection_Background:destroy()
+
+end)
+local BennettSection = Bennett:NewSection("Custom with powers")
+
+BennettSection:NewButton("Agatha Harkness", " ", function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Agatha Harkness")
+
+end)
+
+BennettSection:NewButton("Atom Eve", " ", function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Atom Eve")
+
+end)
+
+BennettSection:NewButton("Barbie", " ", function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Barbie")
+
+end)
+
+BennettSection:NewButton("Black Panther", " ", function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Black Panther")
+
+end)
+
+BennettSection:NewButton("Bloom", " ", function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Bloom")
+
+end)
+
+BennettSection:NewButton("CharmCaster", " ", function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "CharmCaster")
+
+end)
+
+BennettSection:NewButton("Child", " ", function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Child")
+
+end)
+
+BennettSection:NewButton("Emma Frost", " ", function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Emma Frost")
+
+end)
+
+BennettSection:NewButton("Enchantress", " ", function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Enchantress")
+
+end)
+
+BennettSection:NewButton("Gwen", " ", function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Gwen")
+
+end)
+
+BennettSection:NewButton("Inadu Labonair", " ", function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Inadu Labonair")
+
+end)
+
+BennettSection:NewButton("Jean Grey", " ", function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Jean Grey")
+
+end)
+
+BennettSection:NewButton("Lillian Veraux", " ", function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Lillian Veraux")
+
+end)
+
+BennettSection:NewButton("Madison", " ", function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Madison")
+
+end)
+
+BennettSection:NewButton("Monica", " ", function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Monica")
+
+end)
+
+BennettSection:NewButton("Prom Gwen", " ", function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Prom Gwen")
+
+end)
+
+BennettSection:NewButton("Raven", " ", function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Raven")
+
+end)
+
+BennettSection:NewButton("Sabrina", " ", function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Sabrina")
+
+end)
+
+BennettSection:NewButton("Scarlet Witch", " ", function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Scarlet Witch")
+
+end)
+
+BennettSection:NewButton("Scarlet Witch: Multiverse Of Madness", " ", function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Scarlet Witch: Multiverse Of Madness")
+
+end)
+
+BennettSection:NewButton("Speed", " ", function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Speed")
+
+end)
+
+BennettSection:NewButton("Starfire", " ", function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Starfire")
+
+end)
+
+BennettSection:NewButton("Starlight", " ", function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Starlight")
+
+end)
+
+BennettSection:NewButton("Storm", " ", function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Storm")
+
+end)
+
+BennettSection:NewButton("Sue", " ", function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Sue")
+
+end)
+
+BennettSection:NewButton("Supergirl", " ", function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Supergirl")
+
+end)
+
+BennettSection:NewButton("Wanda Maximoff", " ", function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Wanda Maximoff")
+
+end)
+
+BennettSection:NewButton("Wandavision Wanda", " ", function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Wandavision Wanda")
+
+end)
+
+BennettSection:NewButton("Wednesday", " ", function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Wednesday")
+
+end)
+
+BennettSection:NewButton("White Raven", " ", function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "White Raven")
+
+end)
+
+BennettSection:NewButton("Zatanna", " ", function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Zatanna")
+
+end)
+
+local Bennett = Window:NewTab("Misc")
+local BennettSection = Bennett:NewSection("Misc")
+BennettSection:NewButton("Custom Catalog", "", function()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Bennett-Scripts/main/Custom%20Catalog'),true))()
+end)
+local Tab = Window:NewTab("Credits")
+local SettingsSection = Tab:NewSection("discord: bennettscripts")
+
+local SettingsSection = Tab:NewSection("Toggle UI")
+SettingsSection:NewKeybind("Toggle UI", "Toggle UI", Enum.KeyCode.M, function()
+    Library:ToggleUI()
+end)
+
+wait(1)
+
+game.StarterGui:SetCore("SendNotification", { 
+    Title = "⛤ Bennett Scripts ⛤";
+    Text = "Marvel: Legacy";
+    Icon = "rbxthumb://type=Asset&id=14067496704&w=150&h=150";
+    Duration = "2";
+    Button1 = "Close";
+})
