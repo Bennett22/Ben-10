@@ -3,7 +3,7 @@
 
 local Main = Window:NewTab("Insta Kills")
 local MainSection = Main:NewSection("Lab Eleven")
-BennettSection:NewTextBox("Push", "", function(txt)
+MainSection:NewTextBox("Push", "", function(txt)
     local Players = game:GetService("Players")
     local msg = txt
     local function findPlayer(stringg)
@@ -476,7 +476,7 @@ game:GetService("ReplicatedStorage"):WaitForChild("Psychics"):WaitForChild("Lab 
 
 end)
 
-BennettSection:NewTextBox("Neck Snap", "", function(txt)
+MainSection:NewTextBox("Neck Snap", "", function(txt)
     local Players = game:GetService("Players")
     local msg = txt
     local function findPlayer(stringg)
@@ -941,7 +941,7 @@ game:GetService("ReplicatedStorage"):WaitForChild("Psychics"):WaitForChild("Lab 
 
 end)
 
-BennettSection:NewTextBox("Pull", "", function(txt)
+MainSection:NewTextBox("Pull", "", function(txt)
     local Players = game:GetService("Players")
     local msg = txt
     local function findPlayer(stringg)
@@ -1206,7 +1206,7 @@ game:GetService("ReplicatedStorage"):WaitForChild("Psychics"):WaitForChild("Lab 
 
 end)
 
-BennettSection:NewTextBox("Throw", "", function(txt)
+MainSection:NewTextBox("Throw", "", function(txt)
     local Players = game:GetService("Players")
     local msg = txt
     local function findPlayer(stringg)
@@ -1455,7 +1455,7 @@ game:GetService("ReplicatedStorage"):WaitForChild("Psychics"):WaitForChild("Lab 
 
 end)
 
-BennettSection:NewTextBox("Telekinesis Glitch", "", function(txt)
+MainSection:NewTextBox("Telekinesis Glitch", "", function(txt)
     local Players = game:GetService("Players")
     local msg = txt
     local function findPlayer(stringg)
@@ -11992,7 +11992,7 @@ local args = {
 game:GetService("ReplicatedStorage"):WaitForChild("Humans"):WaitForChild("Combat"):WaitForChild("Combat Event"):FireServer(unpack(args))
 end)
 
-local Tab = Window:NewTab("All")
+local Tab = Window:NewTab("Affect All")
 
 local plr = game:GetService("Players").LocalPlayer
 
