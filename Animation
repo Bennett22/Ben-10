@@ -8,7 +8,7 @@ Section:NewButton("Rthro Animation Pack", " ", function()
 local plr = game.Players.LocalPlayer
 
 --climb
-game.workspace.[plr.name].Animate.climb.ClimbAnim.AnimationId = "rbxassetid://507765644"
+game.workspace[plr.name].Animate.climb.ClimbAnim.AnimationId = "rbxassetid://507765644"
 
 --fall
 
