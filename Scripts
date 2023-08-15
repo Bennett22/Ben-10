@@ -46,6 +46,12 @@ loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Bennett-Sc
 
 end)
 
+BennettSection:NewButton("Marvel: Legacy", " ", function()
+
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Bennett-Scripts/main/Legacy'),true))()
+
+end)
+
 BennettSection:NewButton("Crossover Legends: Reborn", " ", function()
 
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Bennett-Scripts/main/Reborn'),true))()
