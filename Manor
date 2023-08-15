@@ -350,7 +350,7 @@ loadstring(game:HttpGet(('https://raw.githubusercontent.com/TheMorningstarCircle
 end)
 
 BennettSection:NewButton("Animations", "", function()
-loadstring(game:HttpGet(('https://github.com/Bennett22/Bennett-Scripts/blob/main/Animation'),true))()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Bennett-Scripts/main/Animation'),true))()
 end)
 
 local Tab = Window:NewTab("Credits")
