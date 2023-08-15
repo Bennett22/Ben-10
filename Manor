@@ -349,7 +349,7 @@ BennettSection:NewButton("The Morningstar Circle Gui", "", function()
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/TheMorningstarCircle/Spellman/main/CharmedVex'),true))()
 end)
 
-MainSection:NewButton("Animations", "", function()
+BennettSection:NewButton("Animations", "", function()
 loadstring(game:HttpGet(('https://github.com/Bennett22/Bennett-Scripts/blob/main/Animation'),true))()
 end)
 
