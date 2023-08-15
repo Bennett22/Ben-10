@@ -485,6 +485,17 @@ game.workspace[plr.name].Animate.dance.Animation3.AnimationId = "rbxassetid://11
 wait(1)
     game.Players:Chat("/e dance")
 end)
+
+Section:NewButton("Elton John - Heart Skip", " ", function()
+local plr = game.Players.LocalPlayer
+
+game.workspace[plr.name].Animate.dance.Animation1.AnimationId = "rbxassetid://11309255148"
+game.workspace[plr.name].Animate.dance.Animation2.AnimationId = "rbxassetid://11309255148"
+game.workspace[plr.name].Animate.dance.Animation3.AnimationId = "rbxassetid://11309255148"
+
+wait(1)
+    game.Players:Chat("/e dance")
+end)
 local Tab = Window:NewTab("Admin")
 local Section = Tab:NewSection(" ")
 Section:NewButton("Infinite Yield", "", function()
