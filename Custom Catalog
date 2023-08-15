@@ -440,6 +440,51 @@ Section:NewButton("1", " ", function()
     game.Players:Chat("!hat 139607718")
 
 end)
+local Tab = Window:NewTab("Emotes")
+local Section = Tab:NewSection("")
+Section:NewButton("TWICE The Feels", " ", function()
+local plr = game.Players.LocalPlayer
+
+game.workspace[plr.name].Animate.dance.Animation1.AnimationId = "rbxassetid://12874447851"
+game.workspace[plr.name].Animate.dance.Animation2.AnimationId = "rbxassetid://12874447851"
+game.workspace[plr.name].Animate.dance.Animation3.AnimationId = "rbxassetid://12874447851"
+
+wait(1)
+    game.Players:Chat("/e dance")
+end)
+
+Section:NewButton("TWICE What Is Love", " ", function()
+local plr = game.Players.LocalPlayer
+
+game.workspace[plr.name].Animate.dance.Animation1.AnimationId = "rbxassetid://13327655243"
+game.workspace[plr.name].Animate.dance.Animation2.AnimationId = "rbxassetid://13327655243"
+game.workspace[plr.name].Animate.dance.Animation3.AnimationId = "rbxassetid://13327655243"
+
+wait(1)
+    game.Players:Chat("/e dance")
+end)
+
+Section:NewButton("BURBERRY LOLA ATTITUDE - NIMBUS", " ", function()
+local plr = game.Players.LocalPlayer
+
+game.workspace[plr.name].Animate.dance.Animation1.AnimationId = "rbxassetid://10147821284"
+game.workspace[plr.name].Animate.dance.Animation2.AnimationId = "rbxassetid://10147821284"
+game.workspace[plr.name].Animate.dance.Animation3.AnimationId = "rbxassetid://10147821284"
+
+wait(1)
+    game.Players:Chat("/e dance")
+end)
+
+Section:NewButton("Elton John - Rock Out", " ", function()
+local plr = game.Players.LocalPlayer
+
+game.workspace[plr.name].Animate.dance.Animation1.AnimationId = "rbxassetid://11753474067"
+game.workspace[plr.name].Animate.dance.Animation2.AnimationId = "rbxassetid://11753474067"
+game.workspace[plr.name].Animate.dance.Animation3.AnimationId = "rbxassetid://11753474067"
+
+wait(1)
+    game.Players:Chat("/e dance")
+end)
 local Tab = Window:NewTab("Admin")
 local Section = Tab:NewSection(" ")
 Section:NewButton("Infinite Yield", "", function()
