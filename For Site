@@ -33,7 +33,7 @@ game.workspace.Characters[plr.name].Animate.walk.WalkAnim.AnimationId = "rbxasse
 
 end)
 
-BennettSection:NewButton("Bubbly Animation Pack", " ", function()
+Section:NewButton("Bubbly Animation Pack", " ", function()
 
 local plr = game.Players.LocalPlayer
 
