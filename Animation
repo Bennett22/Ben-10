@@ -1,0 +1,137 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Bennett Scripts | Animations", "GrapeTheme")
+local Tab = Window:NewTab("Bundle Packs")
+local Section = Tab:NewSection("Bundles")
+
+Section:NewButton("Rthro Animation Pack", " ", function()
+
+local plr = game.Players.LocalPlayer
+
+--climb
+game.workspace[plr.name].Animate.climb.ClimbAnim.AnimationId = "rbxassetid://507765644"
+
+--fall
+
+game.workspace[plr.name].Animate.fall.FallAnim.AnimationId = "rbxassetid://507767968"
+
+--idle
+
+game.workspace[plr.name].Animate.idle.Animation1.AnimationId = "rbxassetid://507766388"
+game.workspace[plr.name].Animate.idle.Animation2.AnimationId = "rbxassetid://507766666"
+
+--jump
+
+game.workspace[plr.name].Animate.jump.JumpAnim.AnimationId = "rbxassetid://507765000"
+
+--run
+
+game.workspace[plr.name].Animate.run.RunAnim.AnimationId = "rbxassetid://913376220"
+
+--walk
+
+game.workspace[plr.name].Animate.walk.WalkAnim.AnimationId = "rbxassetid://913402848"
+
+end)
+
+BennettSection:NewButton("Bubbly Animation Pack", " ", function()
+
+local plr = game.Players.LocalPlayer
+
+game.workspace[plr.name].Animate.cheer.CheerAnim.AnimationId = "rbxassetid://507770677"
+game.workspace[plr.name].Animate.climb.ClimbAnim.AnimationId = "rbxassetid://10921053544"
+game.workspace[plr.name].Animate.fall.FallAnim.AnimationId = "rbxassetid://10921061530"
+game.workspace[plr.name].Animate.idle.Animation1.AnimationId = "rbxassetid://10921054344"
+game.workspace[plr.name].Animate.idle.Animation2.AnimationId = "rbxassetid://10921055107"
+game.workspace[plr.name].Animate.jump.JumpAnim.AnimationId = "rbxassetid://10921062673"
+game.workspace[plr.name].Animate.laugh.LaughAnim.AnimationId = "rbxassetid://507770818"
+game.workspace[plr.name].Animate.point.PointAnim.AnimationId = "rbxassetid://507770453"
+game.workspace[plr.name].Animate.run.RunAnim.AnimationId = "rbxassetid://10921057244"
+game.workspace[plr.name].Animate.sit.SitAnim.AnimationId = "rbxassetid://2506281703"
+game.workspace[plr.name].Animate.swim.Swim.AnimationId = "rbxassetid://10921063569"
+game.workspace[plr.name].Animate.swimidle.SwimIdle.AnimationId = "rbxassetid://10922582160"
+game.workspace[plr.name].Animate.toollunge.ToolLungeAnim.AnimationId = "rbxassetid://522638767"
+game.workspace[plr.name].Animate.toolnone.ToolNoneAnim.AnimationId = "rbxassetid://507768375"
+game.workspace[plr.name].Animate.toolslash.ToolSlashAnim.AnimationId = "rbxassetid://522635514"
+game.workspace[plr.name].Animate.walk.WalkAnim.AnimationId = "rbxassetid://10980888364"
+game.workspace[plr.name].Animate.wave.WaveAnim.AnimationId = "rbxassetid://507770239"
+
+end)
+
+local Tab = Window:NewTab("Emotes")
+local Section = Tab:NewSection("")
+Section:NewButton("TWICE The Feels", " ", function()
+local plr = game.Players.LocalPlayer
+
+game.workspace[plr.name].Animate.dance.Animation1.AnimationId = "rbxassetid://12874447851"
+game.workspace[plr.name].Animate.dance.Animation2.AnimationId = "rbxassetid://12874447851"
+game.workspace[plr.name].Animate.dance.Animation3.AnimationId = "rbxassetid://12874447851"
+
+wait(1)
+    game.Players:Chat("/e dance")
+end)
+
+Section:NewButton("TWICE What Is Love", " ", function()
+local plr = game.Players.LocalPlayer
+
+game.workspace[plr.name].Animate.dance.Animation1.AnimationId = "rbxassetid://13327655243"
+game.workspace[plr.name].Animate.dance.Animation2.AnimationId = "rbxassetid://13327655243"
+game.workspace[plr.name].Animate.dance.Animation3.AnimationId = "rbxassetid://13327655243"
+
+wait(1)
+    game.Players:Chat("/e dance")
+end)
+
+Section:NewButton("BURBERRY LOLA ATTITUDE - NIMBUS", " ", function()
+local plr = game.Players.LocalPlayer
+
+game.workspace[plr.name].Animate.dance.Animation1.AnimationId = "rbxassetid://10147821284"
+game.workspace[plr.name].Animate.dance.Animation2.AnimationId = "rbxassetid://10147821284"
+game.workspace[plr.name].Animate.dance.Animation3.AnimationId = "rbxassetid://10147821284"
+
+wait(1)
+    game.Players:Chat("/e dance")
+end)
+
+Section:NewButton("Elton John - Rock Out", " ", function()
+local plr = game.Players.LocalPlayer
+
+game.workspace[plr.name].Animate.dance.Animation1.AnimationId = "rbxassetid://11753474067"
+game.workspace[plr.name].Animate.dance.Animation2.AnimationId = "rbxassetid://11753474067"
+game.workspace[plr.name].Animate.dance.Animation3.AnimationId = "rbxassetid://11753474067"
+
+wait(1)
+    game.Players:Chat("/e dance")
+end)
+
+Section:NewButton("Elton John - Heart Skip", " ", function()
+local plr = game.Players.LocalPlayer
+
+game.workspace[plr.name].Animate.dance.Animation1.AnimationId = "rbxassetid://11309255148"
+game.workspace[plr.name].Animate.dance.Animation2.AnimationId = "rbxassetid://11309255148"
+game.workspace[plr.name].Animate.dance.Animation3.AnimationId = "rbxassetid://11309255148"
+
+wait(1)
+    game.Players:Chat("/e dance")
+end)
+
+local Tab = Window:NewTab("Admin")
+local Section = Tab:NewSection(" ")
+Section:NewButton("Infinite Yield", "", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end)
+local Tab = Window:NewTab("Credits")
+local SettingsSection = Tab:NewSection("More Soon!!")
+local SettingsSection = Tab:NewSection("discord: bennettscripts")
+local SettingsSection = Tab:NewSection("Toggle UI")
+SettingsSection:NewKeybind("Toggle UI", "Toggle UI", Enum.KeyCode.M, function()
+    Library:ToggleUI()
+end)
+
+wait(1)
+game.StarterGui:SetCore("SendNotification", { 
+    Title = "⛤ Bennett Scripts ⛤";
+    Text = "Animations";
+    Icon = "rbxthumb://type=Asset&id=14067496704&w=150&h=150";
+    Duration = "2";
+    Button1 = "Close";
+})
