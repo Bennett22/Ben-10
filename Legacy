@@ -241,6 +241,49 @@ game.workspace[plr.name].Animate.walk.WalkAnim.AnimationId = "rbxassetid://12489
 
 
 end)
+
+BennettSection:NewButton("Get Catwalk", " ", function()
+
+local plr = game.Players.LocalPlayer
+
+--cheer
+game.workspace[plr.name].Animate.cheer.CheerAnim.AnimationId = "rbxassetid://507770677"
+
+--climb
+game.workspace[plr.name].Animate.climb.ClimbAnim.AnimationId = "rbxassetid://507765644"
+
+--fall
+
+game.workspace[plr.name].Animate.fall.FallAnim.AnimationId = "rbxassetid://2510195892"
+
+--idle
+
+game.workspace[plr.name].Animate.idle.Animation1.AnimationId = "rbxassetid://12369072569"
+game.workspace[plr.name].Animate.idle.Animation2.AnimationId = "rbxassetid://12369072569"
+
+--jump
+
+game.workspace[plr.name].Animate.jump.JumpAnim.AnimationId = "rbxassetid://2510197830"
+
+--run
+
+game.workspace[plr.name].Animate.run.RunAnim.AnimationId = "rbxassetid://12369116763"
+
+--sit
+
+game.workspace[plr.name].Animate.sit.SitAnim.AnimationId = "rbxassetid://2506281703"
+
+--toolnone? what the fuck is that?
+
+game.workspace[plr.name].Animate.toolnone.ToolNoneAnim.AnimationId = "rbxassetid://507768375"
+
+
+--walk
+
+game.workspace[plr.name].Animate.walk.WalkAnim.AnimationId = "rbxassetid://11187010753"
+
+
+end)
 local Bennett = Window:NewTab("Misc")
 local BennettSection = Bennett:NewSection("Misc")
 BennettSection:NewButton("Custom Catalog", "", function()
