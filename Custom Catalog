@@ -3,7 +3,7 @@ local Window = Library.CreateLib("Scarlet Bennett Scripts | Custom Catalog", "Gr
 local Tab = Window:NewTab("Bennett")
 local Section = Tab:NewSection("Bonnie 1")
 Section:NewButton("Custom", " ", function()
-if game:GetService("Players").LocalPlayer.UserId == 736533499 then
+if game:GetService("Players").LocalPlayer.UserId == 4831686579 then
     game.Players:Chat("!hat 13875301530")
     game.Players:Chat("!hat 13875286481")
     game.Players:Chat("!hat 12139995872")
@@ -12,7 +12,7 @@ end)
 
 local Section = Tab:NewSection("Lovely Peaches")
 Section:NewButton("Torso", " ", function()
-if game:GetService("Players").LocalPlayer.UserId == 736533499 then
+if game:GetService("Players").LocalPlayer.UserId == 4831686579 then
     game.Players:Chat("!hat 4908013767")
     game.Players:Chat("!hat 301823492")
     game.Players:Chat("!hat 301823806")
@@ -22,12 +22,12 @@ if game:GetService("Players").LocalPlayer.UserId == 736533499 then
 end
 end)
 Section:NewButton("others", " ", function()
-if game:GetService("Players").LocalPlayer.UserId == 736533499 then
+if game:GetService("Players").LocalPlayer.UserId == 4831686579 then
     game.Players:Chat("!hat 14160138520")
 end
 end)
 Section:NewButton("others", " ", function()
-if game:GetService("Players").LocalPlayer.UserId == 736533499 then
+if game:GetService("Players").LocalPlayer.UserId == 4831686579 then
     game.Players:Chat("!hat 9179722814")
     game.Players:Chat("!hat 9248044793")
     game.Players:Chat("!hat 13398598800")
