@@ -88,6 +88,12 @@ loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Bennett-Sc
 
 end)
 
+BennettSection:NewButton("Animations", " ", function()
+
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Bennett-Scripts/main/Animation'),true))()
+
+end)
+
 local Bennett = Window:NewTab("Misc")
 local BennettSection = Bennett:NewSection("Misc")
 BennettSection:NewButton("All In One - The Morningstar Circle", "", function()
