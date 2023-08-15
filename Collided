@@ -152,10 +152,13 @@ game:GetService("ReplicatedStorage")["Events()"].CharacterSelection.PickCharacte
 
 end)
 
-local Main = Window:NewTab("Admin")
+local Main = Window:NewTab("Misc")
 local MainSection = Main:NewSection("")
 MainSection:NewButton("Infinite Yield", "", function()
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/Omg562/Scripts/main/INF'),true))()
+end)
+MainSection:NewButton("Animations", "", function()
+loadstring(game:HttpGet(('https://github.com/Bennett22/Bennett-Scripts/blob/main/Animation'),true))()
 end)
 
 local Tab = Window:NewTab("Credits")
