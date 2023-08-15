@@ -1194,8 +1194,11 @@ game:GetService("ReplicatedStorage"):WaitForChild("network"):WaitForChild("Abili
 
 end)
 
-local Bennett = Window:NewTab("Admin")
+local Bennett = Window:NewTab("Misc")
 local BennettSection = Bennett:NewSection("")
+BennettSection:NewButton("Animations", "", function()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Bennett-Scripts/main/Animation'),true))()
+end)
 BennettSection:NewButton("Infinite Yield", "", function()
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/Omg562/Scripts/main/INF'),true))()
 end)
