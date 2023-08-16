@@ -1,0 +1,13 @@
+BennettTab:AddTextbox({
+	Name = "Give Yourself Coins",
+	Default = "input",
+	TextDisappear = true,
+	Callback = function(Value)
+	local args = {
+    [1] = Value
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("GiveCurrency"):FireServer(unpack(args))
+
+	end	  
+})
