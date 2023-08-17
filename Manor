@@ -1,10 +1,17 @@
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("Bennett Scripts | [MANOR] Charmed", "GrapeTheme")
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "Bennett Scripts | [MANOR] Charmed", HidePremium = false, IntroText = "Bennett Scripts", SaveConfig = true, ConfigFolder = "OrionTest"})
 
-local Bennett = Window:NewTab("Powers")
-local BennettSection = Bennett:NewSection("Powers Section")
+local BennettTab = Window:MakeTab({
+	Name = "Powers",
+	Icon = "rbxassetid://14458282849",
+	PremiumOnly = false
+})
 
-BennettSection:NewToggle("Lightning Strike", "Keybind (R)", function()
+BennettTab:AddBind({
+	Name = "Lightning Strike",
+	Default = Enum.KeyCode.R,
+	Hold = true,
+	Callback = function()
 
     clicktpon = true                
         plr = game.Players.LocalPlayer
@@ -25,9 +32,14 @@ end
 end
 end
 end)
-end)
+end    
+})
 
-BennettSection:NewButton("Levitation", " ", function()
+BennettTab:AddParagraph("","")
+
+BennettTab:AddButton({
+	Name = "Levitation",
+	Callback = function()
 
 local args = {
     [1] = "prepare",
@@ -35,10 +47,15 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("Witches"):WaitForChild("GoodWitches"):WaitForChild("Phoebe"):WaitForChild("PowerEvents"):WaitForChild("PhoebeEvents"):FireServer(unpack(args))
+      
+  	end    
+})
 
-end)
-
-BennettSection:NewToggle("Kick", "Keybind (V)", function()
+BennettTab:AddBind({
+	Name = "Lightning Strike",
+	Default = Enum.KeyCode.V,
+	Hold = true,
+	Callback = function()
 
     clicktpon = true                
         plr = game.Players.LocalPlayer
@@ -61,9 +78,14 @@ end
 end
 end
 end)
-end)
+end    
+})
 
-BennettSection:NewButton("Whirlwind", " ", function()
+BennettTab:AddParagraph("","")
+
+BennettTab:AddButton({
+	Name = "Whirlwind",
+	Callback = function()
 
 local args = {
     [1] = "start",
@@ -71,10 +93,15 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("Demons"):WaitForChild("UpperLevel"):WaitForChild("Shax"):WaitForChild("PowerEvents"):WaitForChild("ShaxEvents"):FireServer(unpack(args))
+  
+  	end    
+})
 
-end)
-
-BennettSection:NewToggle("Mover", "Keybind (X)", function()
+BennettTab:AddBind({
+	Name = "Mover",
+	Default = Enum.KeyCode.X,
+	Hold = true,
+	Callback = function()
 
     clicktpon = true                
         plr = game.Players.LocalPlayer
@@ -96,9 +123,12 @@ end
 end
 end
 end)
-end)
+end    
+})
 
-BennettSection:NewButton("Stop Whirlwind", " ", function()
+BennettTab:AddButton({
+	Name = "Stop Whirlwind",
+	Callback = function()
 
 local args = {
     [1] = "stop",
@@ -107,66 +137,25 @@ local args = {
 
 game:GetService("ReplicatedStorage"):WaitForChild("Demons"):WaitForChild("UpperLevel"):WaitForChild("Shax"):WaitForChild("PowerEvents"):WaitForChild("ShaxEvents"):FireServer(unpack(args))
 
-end)
+  	end    
+})
 
+BennettTab:AddParagraph("","")
 
-BennettSection:NewButton("Telekinetic Hovering", " ", function()
-
-local args = {
-    [1] = "hover",
-    [2] = Vector3.new(-142.1442108154297, 113.62232208251953, -224.6883544921875)
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("Witches"):WaitForChild("GoodWitches"):WaitForChild("Prue"):WaitForChild("PowerEvents"):WaitForChild("PrueEvents"):FireServer(unpack(args))
-
-end)
-
-BennettSection:NewToggle("Mover", "Keybind (Z)", function()
+BennettTab:AddBind({
+	Name = "Transmutation",
+	Default = Enum.KeyCode.T,
+	Hold = true,
+	Callback = function()
 
     clicktpon = true                
         plr = game.Players.LocalPlayer
         hum = plr.Character.HumanoidRootPart
         mouse = plr:GetMouse()
         mouse.KeyDown:connect(function(key)
-        if key == 'z' then
+        if key == 't' then
         if mouse.Target then
         if clicktpon then
-
-local args = {
-    [1] = "hmover",
-    [2] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 5, mouse.Hit.z)
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("Witches"):WaitForChild("GoodWitches"):WaitForChild("Prue"):WaitForChild("PowerEvents"):WaitForChild("PrueEvents"):FireServer(unpack(args))
-
-end
-end
-end
-end)
-end)
-
-BennettSection:NewButton("Stop", " ", function()
-
-local args = {
-    [1] = "hoverend",
-    [2] = Vector3.new(-142.1442108154297, 113.62232208251953, -224.6883544921875)
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("Witches"):WaitForChild("GoodWitches"):WaitForChild("Prue"):WaitForChild("PowerEvents"):WaitForChild("PrueEvents"):FireServer(unpack(args))
-
-end)
-
-BennettSection:NewToggle("Transmutation", "Keybind (F)", function()
-
-    clicktpon = true                
-        plr = game.Players.LocalPlayer
-        hum = plr.Character.HumanoidRootPart
-        mouse = plr:GetMouse()
-        mouse.KeyDown:connect(function(key)
-        if key == 'f' then
-        if mouse.Target then
-        if clicktpon then
-
 
 local ohString1 = "trans"
 local ohVector32 = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z)
@@ -177,9 +166,44 @@ end
 end
 end
 end)
-end)
+end    
+})
+BennettTab:AddParagraph("","")
 
-BennettSection:NewButton("Bind Neena", " ", function()
+BennettTab:AddButton({
+	Name = "Empathic Replication",
+	Callback = function()
+
+local args = {
+    [1] = "anim",
+    [2] = Vector3.new(-147.8687286376953, 110.46371459960938, -223.83950805664062)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Witches"):WaitForChild("GoodWitches"):WaitForChild("Phoebe"):WaitForChild("PowerEvents"):WaitForChild("PhoebeEvents"):FireServer(unpack(args))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Stop Empathic Replication",
+	Callback = function()
+
+local args = {
+    [1] = "animend",
+    [2] = Vector3.new(-144.627685546875, 112.85968780517578, -223.8395538330078)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Witches"):WaitForChild("GoodWitches"):WaitForChild("Phoebe"):WaitForChild("PowerEvents"):WaitForChild("PhoebeEvents"):FireServer(unpack(args))
+
+  	end    
+})
+
+
+BennettTab:AddParagraph("","")
+
+BennettTab:AddButton({
+	Name = "Bind Neena",
+	Callback = function()
 
   local args = {
     [1] = "Bind"
@@ -191,50 +215,60 @@ BennettSection:NewButton("Bind Neena", " ", function()
     game:GetService("ReplicatedStorage").Witches.GoodWitches.Paige.PowerEvents.SpellEvents:FireServer(unpack(args))
     game:GetService("ReplicatedStorage").Witches.GoodWitches.Phoebe.PowerEvents.SpellEvents:FireServer(unpack(args)) 
 
-end)
+  	end    
+})
 
-BennettSection:NewButton("Summon one of the Charmed ones", " ", function()
+BennettTab:AddButton({
+	Name = "Vanquish Shax",
+	Callback = function()
+
+  local args = {
+    [1] = "Shax"
+  }  
+    
+    
+    game:GetService("ReplicatedStorage").Witches.GoodWitches.Prue.PowerEvents.SpellEvents:FireServer(unpack(args))
+    game:GetService("ReplicatedStorage").Witches.GoodWitches.Piper.PowerEvents.SpellEvents:FireServer(unpack(args))
+    game:GetService("ReplicatedStorage").Witches.GoodWitches.Paige.PowerEvents.SpellEvents:FireServer(unpack(args))
+    game:GetService("ReplicatedStorage").Witches.GoodWitches.Phoebe.PowerEvents.SpellEvents:FireServer(unpack(args)) 
+
+  	end    
+})
+
+BennettTab:AddParagraph("","")
+
+BennettTab:AddButton({
+	Name = "Summon One Of The Charmed Ones",
+	Callback = function()
 
 game.Players.LocalPlayer.PlayerGui.Visuals.PiperSummon.Enabled = true
 
-end)
+  	end    
+})
 
-BennettSection:NewButton("Summon Billie", " ", function()
+BennettTab:AddButton({
+	Name = "Summon Billie",
+	Callback = function()
 
 game.Players.LocalPlayer.PlayerGui.Visuals.ChristySummon.Enabled = true
-end)
 
-BennettSection:NewButton("Summon Christy", " ", function()
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Summon Christy",
+	Callback = function()
 
 game.Players.LocalPlayer.PlayerGui.Visuals.BillieSummon.Enabled = true
 
-end)
+  	end    
+})
 
-BennettSection:NewButton("Empathic Replication", " ", function()
+BennettTab:AddParagraph("","")
 
-local args = {
-    [1] = "anim",
-    [2] = Vector3.new(-147.8687286376953, 110.46371459960938, -223.83950805664062)
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("Witches"):WaitForChild("GoodWitches"):WaitForChild("Phoebe"):WaitForChild("PowerEvents"):WaitForChild("PhoebeEvents"):FireServer(unpack(args))
-
-
-end)
-
-BennettSection:NewButton("Stop Empathic Replication", " ", function()
-
-local args = {
-    [1] = "animend",
-    [2] = Vector3.new(-144.627685546875, 112.85968780517578, -223.8395538330078)
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("Witches"):WaitForChild("GoodWitches"):WaitForChild("Phoebe"):WaitForChild("PowerEvents"):WaitForChild("PhoebeEvents"):FireServer(unpack(args))
-
-
-end)
-
-BennettSection:NewButton("Get Beam Effect", " ", function()
+BennettTab:AddButton({
+	Name = "Get Beam Effect",
+	Callback = function()
 
 local args = {
     [1] = "beam",
@@ -244,15 +278,23 @@ local args = {
 game:GetService("ReplicatedStorage"):WaitForChild("Witches"):WaitForChild("GoodWitches"):WaitForChild("Billie"):WaitForChild("PowerEvents"):WaitForChild("UltimateEvents"):InvokeServer(unpack(args))
 
 local args = {
-    [1] = "enough",
-    [2] = Vector3.new(1574.4228515625, 6445.9658203125, -7711.7802734375)
+    [1] = "field"
+    [2] = Vector3.new(-402.63726806640625, 7372.216796875, 947.439208984375)
 }
+    game:GetService("ReplicatedStorage").Witches.EvilWitches.Neena.PowerEvents.NeenaEvents:FireServer(unpack(args))
+wait(1)
+local args = {
+    [1] = "stop"
+    [2] = Vector3.new(-403.1217956542969, 7377.94580078125, 944.2177124023438)
+}
+    game:GetService("ReplicatedStorage").Witches.EvilWitches.Neena.PowerEvents.NeenaEvents:FireServer(unpack(args))
 
-game:GetService("ReplicatedStorage"):WaitForChild("Witches"):WaitForChild("GoodWitches"):WaitForChild("PBaxter"):WaitForChild("PowerEvents"):WaitForChild("BaxterEvents"):FireServer(unpack(args))
+  	end    
+})
 
-end)
-
-BennettSection:NewButton("Remove Beam Effect", " ", function()
+BennettTab:AddButton({
+	Name = "Remove Beam Effect",
+	Callback = function()
 
 local args = {
     [1] = "beamend",
@@ -261,9 +303,12 @@ local args = {
 
 game:GetService("ReplicatedStorage"):WaitForChild("Witches"):WaitForChild("GoodWitches"):WaitForChild("Billie"):WaitForChild("PowerEvents"):WaitForChild("BillieEvents"):FireServer(unpack(args))
 
-end)
+  	end    
+})
 
-BennettSection:NewButton("Get Levitation Effect", " ", function()
+BennettTab:AddButton({
+	Name = "Get Levitation Effect",
+	Callback = function()
 
 local args = {
     [1] = "prepare",
@@ -280,12 +325,20 @@ local args = {
 
 game:GetService("ReplicatedStorage"):WaitForChild("Witches"):WaitForChild("GoodWitches"):WaitForChild("Phoebe"):WaitForChild("PowerEvents"):WaitForChild("PhoebeEvents"):FireServer(unpack(args))
 
-end)
+  	end    
+})
 
-local Bennett = Window:NewTab("New Powers")
-local BennettSection = Bennett:NewSection("Be Queenie or Billie to be able use them as any char")
+local BennettTab = Window:MakeTab({
+	Name = "Other Powers",
+	Icon = "rbxassetid://14458282849",
+	PremiumOnly = false
+})
 
-BennettSection:NewButton("Get Divination", "Keybind (G)", function()
+BennettTab:AddParagraph("Be Queenie or Billie to be able use them as any character!","click divination once to not glitch it! (Divination = G, Life Draining = C)")
+
+BennettTab:AddButton({
+	Name = "Get Divination",
+	Callback = function()
 
     local plr = game.Players.LocalPlayer
 
@@ -303,35 +356,46 @@ plr.CharacterAdded:Connect(function()
    give()
 end)
 
-end)
+  	end    
+})
 
-BennettSection:NewButton("Unglitch", " ", function()
+BennettTab:AddButton({
+	Name = "Unglitch",
+	Callback = function()
 
-    local ohString1 = "field"
-    local ohVector32 = Vector3.new(-402.63726806640625, 7372.216796875, 947.439208984375)
+local args = {
+    [1] = "field"
+    [2] = Vector3.new(-402.63726806640625, 7372.216796875, 947.439208984375)
+}
+    game:GetService("ReplicatedStorage").Witches.EvilWitches.Neena.PowerEvents.NeenaEvents:FireServer(unpack(args))
+wait(1)
+local args = {
+    [1] = "stop"
+    [2] = Vector3.new(-403.1217956542969, 7377.94580078125, 944.2177124023438)
+}
+    game:GetService("ReplicatedStorage").Witches.EvilWitches.Neena.PowerEvents.NeenaEvents:FireServer(unpack(args))
 
-    game:GetService("ReplicatedStorage").Witches.EvilWitches.Neena.PowerEvents.NeenaEvents:FireServer(ohString1,
-        ohVector32)
 
-        wait(1)
+  	end    
+})
 
-            local ohString1 = "stop"
-    local ohVector32 = Vector3.new(-403.1217956542969, 7377.94580078125, 944.2177124023438)
+BennettTab:AddButton({
+	Name = "Delete Divination",
+	Callback = function()
 
-    game:GetService("ReplicatedStorage").Witches.EvilWitches.Neena.PowerEvents.NeenaEvents:FireServer(ohString1,
-        ohVector32)
-end)
-
-BennettSection:NewButton("Delete Divination", " ", function()
-
-    local plr = game.Players.LocalPlayer
+local plr = game.Players.LocalPlayer
 
 local backup = game.workspace[plr.name]:FindFirstChild("Divination",true):Destroy()
 
-end)
 
+  	end    
+})
 
-BennettSection:NewButton("Get Life Draining", "Keybind (C)", function()
+BennettTab:AddParagraph("","")
+
+BennettTab:AddButton({
+	Name = "Get Life Draining",
+	Callback = function()
 
     local plr = game.Players.LocalPlayer
 
@@ -349,31 +413,50 @@ plr.CharacterAdded:Connect(function()
    give()
 end)
 
-end)
+  	end    
+})
 
-BennettSection:NewButton("Delete Life Draining", " ", function()
+BennettTab:AddButton({
+	Name = "Delete Life Draining",
+	Callback = function()
 
-    local plr = game.Players.LocalPlayer
+local plr = game.Players.LocalPlayer
 
 local backup = game.workspace[plr.name]:FindFirstChild("Life Draining",true):Destroy()
 
-end)
 
-local Bennett = Window:NewTab("Misc")
-local BennettSection = Bennett:NewSection("Misc")
-BennettSection:NewButton("Enable Character Selection", "", function()
+  	end    
+})
+
+local BennettTab = Window:MakeTab({
+	Name = "Misc",
+	Icon = "rbxassetid://14458282849",
+	PremiumOnly = false
+})
+
+BennettTab:AddParagraph("Type in Infinite Yield ;fixcam to see your avatar!","")
+
+BennettTab:AddButton({
+	Name = "Enable Character Selection",
+	Callback = function()
 
 game.Players.LocalPlayer.PlayerGui.CharacterGUI.Enabled = true
 
-end)
+  	end    
+})
 
-BennettSection:NewButton("Disable Character Selection", "", function()
+BennettTab:AddButton({
+	Name = "Disable Character Selection",
+	Callback = function()
 
-game.Players.LocalPlayer.PlayerGui.CharacterGUI.Enabled =  false
+game.Players.LocalPlayer.PlayerGui.CharacterGUI.Enabled = false
 
-end)
+  	end    
+})
 
-BennettSection:NewButton("Neena walk, idle etc.", "", function()
+BennettTab:AddButton({
+	Name = "Get Neenas Animations",
+	Callback = function()
 
 local plr = game.Players.LocalPlayer
 
@@ -395,25 +478,49 @@ game.workspace[plr.name].Animate.toolslash.ToolSlashAnim.AnimationId = "rbxasset
 game.workspace[plr.name].Animate.walk.WalkAnim.AnimationId = "rbxassetid://540798782"
 game.workspace[plr.name].Animate.wave.WaveAnim.AnimationId = "rbxassetid://507770239"
 
-end)
+  	end    
+})
 
-BennettSection:NewButton("Infinite Yield", "", function()
+local Section = BennettTab:AddSection({
+	Name = "Other Scripts"
+})
+
+BennettTab:AddButton({
+	Name = "Infinite Yield",
+	Callback = function()
+
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/Omg562/Scripts/main/INF'),true))()
-end)
-BennettSection:NewButton("The Morningstar Circle Gui", "", function()
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "The Morningstar Circle Gui",
+	Callback = function()
+
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/TheMorningstarCircle/Spellman/main/CharmedVex'),true))()
-end)
 
-BennettSection:NewButton("Animations", "", function()
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Animations",
+	Callback = function()
+
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Ben-10/main/Animation'),true))()
-end)
 
-local Tab = Window:NewTab("Credits")
-local SettingsSection = Tab:NewSection("discord: bennettscripts")
-local SettingsSection = Tab:NewSection("Toggle UI")
-SettingsSection:NewKeybind("Toggle UI", "Toggle UI", Enum.KeyCode.M, function()
-    Library:ToggleUI()
-end)
+  	end    
+})
+
+local BennettTab = Window:MakeTab({
+	Name = "Credits",
+	Icon = "rbxassetid://14458282849",
+	PremiumOnly = false
+})
+
+local Section = BennettTab:AddSection({
+	Name = "discord: bennettscripts"
+})
 
 wait(1)
 
