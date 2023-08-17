@@ -52,7 +52,7 @@ game:GetService("ReplicatedStorage"):WaitForChild("Witches"):WaitForChild("GoodW
 })
 
 BennettTab:AddBind({
-	Name = "Lightning Strike",
+	Name = "Kick",
 	Default = Enum.KeyCode.V,
 	Hold = true,
 	Callback = function()
@@ -272,22 +272,24 @@ BennettTab:AddButton({
 
 local args = {
     [1] = "beam",
-    [2] = Vector3.new(640.4530029296875, 6.820258617401123, -894.988037109375)
+    [2] = Vector3.new(723.222412109375, 6.966768264770508, -953.3323364257812)
 }
 
-game:GetService("ReplicatedStorage"):WaitForChild("Witches"):WaitForChild("GoodWitches"):WaitForChild("Billie"):WaitForChild("PowerEvents"):WaitForChild("UltimateEvents"):InvokeServer(unpack(args))
+game:GetService("ReplicatedStorage"):WaitForChild("Witches"):WaitForChild("GoodWitches"):WaitForChild("Billie"):WaitForChild("PowerEvents"):WaitForChild("BillieEvents"):FireServer(unpack(args))
 
-local args = {
-    [1] = "field"
-    [2] = Vector3.new(-402.63726806640625, 7372.216796875, 947.439208984375)
-}
-    game:GetService("ReplicatedStorage").Witches.EvilWitches.Neena.PowerEvents.NeenaEvents:FireServer(unpack(args))
-wait(1)
-local args = {
-    [1] = "stop"
-    [2] = Vector3.new(-403.1217956542969, 7377.94580078125, 944.2177124023438)
-}
-    game:GetService("ReplicatedStorage").Witches.EvilWitches.Neena.PowerEvents.NeenaEvents:FireServer(unpack(args))
+    local ohString1 = "field"
+    local ohVector32 = Vector3.new(-402.63726806640625, 7372.216796875, 947.439208984375)
+
+    game:GetService("ReplicatedStorage").Witches.EvilWitches.Neena.PowerEvents.NeenaEvents:FireServer(ohString1,
+        ohVector32)
+
+        wait(1)
+
+            local ohString1 = "stop"
+    local ohVector32 = Vector3.new(-403.1217956542969, 7377.94580078125, 944.2177124023438)
+
+    game:GetService("ReplicatedStorage").Witches.EvilWitches.Neena.PowerEvents.NeenaEvents:FireServer(ohString1,
+        ohVector32)
 
   	end    
 })
@@ -363,18 +365,19 @@ BennettTab:AddButton({
 	Name = "Unglitch",
 	Callback = function()
 
-local args = {
-    [1] = "field"
-    [2] = Vector3.new(-402.63726806640625, 7372.216796875, 947.439208984375)
-}
-    game:GetService("ReplicatedStorage").Witches.EvilWitches.Neena.PowerEvents.NeenaEvents:FireServer(unpack(args))
-wait(1)
-local args = {
-    [1] = "stop"
-    [2] = Vector3.new(-403.1217956542969, 7377.94580078125, 944.2177124023438)
-}
-    game:GetService("ReplicatedStorage").Witches.EvilWitches.Neena.PowerEvents.NeenaEvents:FireServer(unpack(args))
+    local ohString1 = "field"
+    local ohVector32 = Vector3.new(-402.63726806640625, 7372.216796875, 947.439208984375)
 
+    game:GetService("ReplicatedStorage").Witches.EvilWitches.Neena.PowerEvents.NeenaEvents:FireServer(ohString1,
+        ohVector32)
+
+        wait(1)
+
+            local ohString1 = "stop"
+    local ohVector32 = Vector3.new(-403.1217956542969, 7377.94580078125, 944.2177124023438)
+
+    game:GetService("ReplicatedStorage").Witches.EvilWitches.Neena.PowerEvents.NeenaEvents:FireServer(ohString1,
+        ohVector32)
 
   	end    
 })
