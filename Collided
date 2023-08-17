@@ -158,7 +158,7 @@ MainSection:NewButton("Infinite Yield", "", function()
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/Omg562/Scripts/main/INF'),true))()
 end)
 MainSection:NewButton("Animations", "", function()
-loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Bennett-Scripts/main/Animation'),true))()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Ben-10/main/Animation'),true))()
 end)
 
 local Tab = Window:NewTab("Credits")
