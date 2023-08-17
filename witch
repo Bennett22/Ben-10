@@ -1,7 +1,5 @@
-
-
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "Bennett Scripts | Witchcraft.v2", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+local Window = OrionLib:MakeWindow({Name = "Bennett Scripts | Witchcraft.v2", HidePremium = false, IntroText = "Bennett Scripts", SaveConfig = true, ConfigFolder = "OrionTest"})
 
 local BennettTab = Window:MakeTab({
 	Name = "Powers",
@@ -1050,6 +1048,20 @@ local BennettTab = Window:MakeTab({
 	PremiumOnly = false
 })
 
+BennettTab:AddColorpicker({
+	Name = "Color of Your Rank",
+	Default = Color3.fromRGB(255, 0, 0),
+	Callback = function(Value)
+
+local args = {
+    [1] = BrickColor.new(Value)
+}
+
+game:GetService("ReplicatedStorage").Remotes.ChangeTeam:FireServer(unpack(args))
+
+	end	  
+})
+
 BennettTab:AddButton({
 	Name = "Pink",
 	Callback = function()
@@ -1714,6 +1726,51 @@ BennettTab:AddButton({
   	end    
 })
 
+BennettTab:AddButton({
+	Name = "Heaven",
+	Callback = function()
+
+        game:GetService("ReplicatedStorage").ToHeaven:FireServer()
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Leave Heaven",
+	Callback = function()
+
+        game:GetService("ReplicatedStorage").OutHeaven:FireServer()
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Hell",
+	Callback = function()
+
+        game:GetService("ReplicatedStorage").ToHell:FireServer()
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "The Void",
+	Callback = function()
+
+        game:GetService("ReplicatedStorage").TheVoidPor:FireServer()
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Leave The Void",
+	Callback = function()
+
+        game:GetService("ReplicatedStorage").TrapVoid:FireServer()
+
+  	end    
+})
+
 local BennettTab = Window:MakeTab({
 	Name = "Badges & Others",
 	Icon = "rbxassetid://14458282849",
@@ -1768,7 +1825,13 @@ BennettTab:AddButton({
 
       game.Players.LocalPlayer.Character:MoveTo(Vector3.new(360, -79, 141))
 
-      wait(5)
+      local args = {
+        [1] = 500
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.GiveCurrency:FireServer(unpack(args))
+
+      wait(10)
       game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-373, 21, -299))
 
   	end    
@@ -1833,15 +1896,6 @@ BennettTab:AddButton({
 	Callback = function()
 
       game:GetService("ReplicatedStorage").BurnAngelWing:FireServer()
-      
-  	end    
-})
-
-BennettTab:AddButton({
-	Name = "Teleport Beam",
-	Callback = function()
-
-      game:GetService("ReplicatedStorage").TeleportBeam1:FireServer()
       
   	end    
 })
@@ -1925,4 +1979,71 @@ BennettTab:AddButton({
 
       
   	end    
+})
+
+local BennettTab = Window:MakeTab({
+	Name = "Misc",
+	Icon = "rbxassetid://14458282849",
+	PremiumOnly = false
+})
+
+local Section = BennettTab:AddSection({
+	Name = "Other Scripts"
+})
+
+BennettTab:AddButton({
+	Name = "Animations",
+	Callback = function()
+
+        loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Bennett-Scripts/main/Animation'),true))()
+
+      
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Custom Catalog",
+	Callback = function()
+
+        loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Bennett-Scripts/main/Custom%20Catalog'),true))()
+
+      
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "The Morningstar Circle Gui",
+	Callback = function()
+
+        loadstring(game:HttpGet(('https://raw.githubusercontent.com/TheMorningstarCircle/Spellman/main/WitchcraftV2'),true))()
+      
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Infinite Yield",
+	Callback = function()
+
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+      
+  	end    
+})
+
+local BennettTab = Window:MakeTab({
+	Name = "Credits",
+	Icon = "rbxassetid://14458282849",
+	PremiumOnly = false
+})
+
+local Section = BennettTab:AddSection({
+	Name = "discord: bennettscripts"
+})
+
+wait(1)
+game.StarterGui:SetCore("SendNotification", { 
+    Title = "⛤ Bennett Scripts ⛤";
+    Text = "Witchcraft.v2";
+    Icon = "rbxthumb://type=Asset&id=14067496704&w=150&h=150";
+    Duration = "2";
+    Button1 = "Close";
 })
