@@ -1376,7 +1376,7 @@ local args = {
     [1] = "Magic Candle"
 }
 
-game:GetService("ReplicatedStorage").Remotes.TravelMerchant:FireServer(unpack(args))
+game:GetService("ReplicatedStorage").Remotes.BuyItem:FireServer(unpack(args))
 
   	end    
 })
