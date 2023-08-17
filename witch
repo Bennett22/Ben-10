@@ -1995,7 +1995,7 @@ BennettTab:AddButton({
 	Name = "Animations",
 	Callback = function()
 
-        loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Bennett-Scripts/main/Animation'),true))()
+        loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Ben-10/main/Animation'),true))()
 
       
   	end    
@@ -2005,7 +2005,7 @@ BennettTab:AddButton({
 	Name = "Custom Catalog",
 	Callback = function()
 
-        loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Bennett-Scripts/main/Custom%20Catalog'),true))()
+        loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Ben-10/main/Custom%20Catalog'),true))()
 
       
   	end    
