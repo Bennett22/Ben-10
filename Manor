@@ -195,19 +195,19 @@ end)
 
 BennettSection:NewButton("Summon one of the Charmed ones", " ", function()
 
-game.Players.LocalPlayer.PlayerGui.PrueSummon.Enabled =  true
+game.Players.LocalPlayer.PlayerGui.Visuals.PrueSummon.Enabled =  true
 
 end)
 
 BennettSection:NewButton("Summon Billie", " ", function()
 
-game.Players.LocalPlayer.PlayerGui.ChristySummon.Enabled =  true
+game.Players.LocalPlayer.PlayerGui.Visuals.ChristySummon.Enabled =  true
 
 end)
 
 BennettSection:NewButton("Summon Christy", " ", function()
 
-game.Players.LocalPlayer.PlayerGui.BillieSummon.Enabled =  true
+game.Players.LocalPlayer.PlayerGui.Visuals.BillieSummon.Enabled =  true
 
 end)
 
