@@ -22,6 +22,12 @@ loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Ben-10/mai
 
 end)
 
+BennettSection:NewButton("H2O: Magic Tides", " ", function()
+
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Ben-10/main/Tides'),true))()
+
+end)
+
 BennettSection:NewButton("The Mystic Diaries", " ", function()
 
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Ben-10/main/Diaries'),true))()
