@@ -193,6 +193,30 @@ BennettSection:NewButton("Bind Neena", " ", function()
 
 end)
 
+BennettSection:NewButton("Empathic Replication", " ", function()
+
+local args = {
+    [1] = "anim",
+    [2] = Vector3.new(-147.8687286376953, 110.46371459960938, -223.83950805664062)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Witches"):WaitForChild("GoodWitches"):WaitForChild("Phoebe"):WaitForChild("PowerEvents"):WaitForChild("PhoebeEvents"):FireServer(unpack(args))
+
+
+end)
+
+BennettSection:NewButton("Stop Empathic Replication", " ", function()
+
+local args = {
+    [1] = "animend",
+    [2] = Vector3.new(-144.627685546875, 112.85968780517578, -223.8395538330078)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Witches"):WaitForChild("GoodWitches"):WaitForChild("Phoebe"):WaitForChild("PowerEvents"):WaitForChild("PhoebeEvents"):FireServer(unpack(args))
+
+
+end)
+
 BennettSection:NewButton("Get Beam Effect", " ", function()
 
 local args = {
