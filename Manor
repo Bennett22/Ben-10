@@ -193,6 +193,24 @@ BennettSection:NewButton("Bind Neena", " ", function()
 
 end)
 
+BennettSection:NewButton("Summon one of the Charmed ones", " ", function()
+
+game.Players.LocalPlayer.PlayerGui.PrueSummon.Enabled =  true
+
+end)
+
+BennettSection:NewButton("Summon Billie", " ", function()
+
+game.Players.LocalPlayer.PlayerGui.ChristySummon.Enabled =  true
+
+end)
+
+BennettSection:NewButton("Summon Christy", " ", function()
+
+game.Players.LocalPlayer.PlayerGui.BillieSummon.Enabled =  true
+
+end)
+
 BennettSection:NewButton("Empathic Replication", " ", function()
 
 local args = {
