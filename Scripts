@@ -82,9 +82,9 @@ loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Bennett-Sc
 
 end)
 
-BennettSection:NewButton("Witchcraft.v2 (Catwalk)", " ", function()
+BennettSection:NewButton("Witchcraft.v2", " ", function()
 
-loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Bennett-Scripts/main/walk'),true))()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Bennett-Scripts/main/witch'),true))()
 
 end)
 
