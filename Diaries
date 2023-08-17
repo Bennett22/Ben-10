@@ -25,7 +25,7 @@ BennettSection:NewButton("The Morningstar Circle Gui", "", function()
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/TheMorningstarCircle/Spellman/main/TheMysticDiaries'),true))()
 end)
 BennettSection:NewButton("Custom Catalog", "", function()
-loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Bennett-Scripts/main/Custom%20Catalog'),true))()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Ben-10/main/Custom%20Catalog'),true))()
 end)
 
 
