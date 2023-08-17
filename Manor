@@ -179,6 +179,20 @@ end
 end)
 end)
 
+BennettSection:NewButton("Bind Neena", " ", function()
+
+  local args = {
+    [1] = "Bind"
+  }  
+    
+    
+    game:GetService("ReplicatedStorage").Witches.GoodWitches.Prue.PowerEvents.SpellEvents:FireServer(unpack(args))
+    game:GetService("ReplicatedStorage").Witches.GoodWitches.Piper.PowerEvents.SpellEvents:FireServer(unpack(args))
+    game:GetService("ReplicatedStorage").Witches.GoodWitches.Paige.PowerEvents.SpellEvents:FireServer(unpack(args))
+    game:GetService("ReplicatedStorage").Witches.GoodWitches.Phoebe.PowerEvents.SpellEvents:FireServer(unpack(args)) 
+
+end)
+
 BennettSection:NewButton("Get Beam Effect", " ", function()
 
 local args = {
