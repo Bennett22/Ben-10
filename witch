@@ -1,0 +1,1928 @@
+
+
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "Bennett Scripts | Witchcraft.v2", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+
+local BennettTab = Window:MakeTab({
+	Name = "Powers",
+	Icon = "rbxassetid://14458282849",
+	PremiumOnly = false
+})
+
+BennettTab:AddParagraph("Some powers won't work if you're not in the right team!","Holy fire etc.")
+
+BennettTab:AddTextbox({
+	Name = "Holy Fire Someone",
+	Default = "input",
+	TextDisappear = true,
+	Callback = function(txt)
+      local Players = game:GetService("Players")
+      local msg = txt
+      local function findPlayer(stringg)
+          for _, v in pairs(Players:GetPlayers()) do
+              if stringg:lower() == (v.Name:lower()):sub(1, #stringg) then
+                  return v
+              end
+          end
+      end
+  
+      local player = findPlayer(msg)
+      local CHAR = player.Character
+
+      local args = {
+         [1] = player.Character.HitPart
+     }
+     
+     game:GetService("ReplicatedStorage"):WaitForChild("HellFire3"):FireServer(unpack(args))
+     
+
+	end	  
+})
+
+BennettTab:AddBind({
+	Name = "Holy Fire",
+	Default = Enum.KeyCode.R,
+	Hold = false,
+	Callback = function()
+		print("You just clicked the bind")
+
+      local function getPlayer()
+         local userInput = game:GetService("UserInputService")
+         local cam = workspace.CurrentCamera
+         local mousePos = userInput:GetMouseLocation()
+         local mouseRay = cam:ViewportPointToRay(mousePos.X, mousePos.Y)
+         players = {}
+         for _, x in next, game:GetService('Players'):GetPlayers() do
+             players[#players + 1] = x.Character
+         end
+         local raycastParams = RaycastParams.new()
+         raycastParams.FilterType = Enum.RaycastFilterType.Whitelist
+         raycastParams.FilterDescendantsInstances = players
+         raycastParams.IgnoreWater = true
+         local raycastResult = workspace:Raycast(mouseRay.Origin, mouseRay.Direction * 1000, raycastParams)
+         if raycastResult then
+             for _, x in next, game:GetService('Players'):GetPlayers() do
+                 if not raycastResult.Instance:IsDescendantOf(x.Character) then
+                     continue
+                 end
+                 return x
+             end
+         end
+         return false
+     end
+ 
+     local function Set(list)
+         local set = {}
+         for _, l in ipairs(list) do
+             if l then
+                 set[l] = true
+             end
+         end
+         return set
+     end
+ 
+     game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
+         if key == "r" then
+             local player = getPlayer()
+             if player then
+
+               local args = {
+                  [1] = player.Character.HitPart
+              }
+              
+              game:GetService("ReplicatedStorage"):WaitForChild("HellFire3"):FireServer(unpack(args))
+
+             end
+            end
+         end)
+	end    
+})
+
+BennettTab:AddButton({
+	Name = "Holy Fire All",
+	Callback = function()
+      		    print("Clicked")
+    local Plr = game.Players.LocalPlayer
+    for i, Player in pairs (game.Players:GetPlayers()) do
+
+        if Player.Character ~= nil and Player ~= Plr then
+            local mag = (Player.Character.UpperTorso.Position - Plr.Character.UpperTorso.Position).magnitude
+            if mag < 100000 then
+                local Target = Player.Character or Player.CharacterAdded:Wait()
+
+                local args = {
+                  [1] = Target.HitPart
+              }
+              
+              game:GetService("ReplicatedStorage"):WaitForChild("HellFire3"):FireServer(unpack(args))
+
+
+            end
+         end
+      end       
+  	end    
+})
+
+BennettTab:AddParagraph("","")
+
+BennettTab:AddTextbox({
+	Name = "Hellfire Someone",
+	Default = "input",
+	TextDisappear = true,
+	Callback = function(txt)
+      local Players = game:GetService("Players")
+      local msg = txt
+      local function findPlayer(stringg)
+          for _, v in pairs(Players:GetPlayers()) do
+              if stringg:lower() == (v.Name:lower()):sub(1, #stringg) then
+                  return v
+              end
+          end
+      end
+  
+      local player = findPlayer(msg)
+      local CHAR = player.Character
+
+local args = {
+    [1] = player.Character.HitPart
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("HellFire2"):FireServer(unpack(args))
+     
+
+	end	  
+})
+
+BennettTab:AddBind({
+	Name = "Hellfire",
+	Default = Enum.KeyCode.F,
+	Hold = false,
+	Callback = function()
+		print("You just clicked the bind")
+
+      local function getPlayer()
+         local userInput = game:GetService("UserInputService")
+         local cam = workspace.CurrentCamera
+         local mousePos = userInput:GetMouseLocation()
+         local mouseRay = cam:ViewportPointToRay(mousePos.X, mousePos.Y)
+         players = {}
+         for _, x in next, game:GetService('Players'):GetPlayers() do
+             players[#players + 1] = x.Character
+         end
+         local raycastParams = RaycastParams.new()
+         raycastParams.FilterType = Enum.RaycastFilterType.Whitelist
+         raycastParams.FilterDescendantsInstances = players
+         raycastParams.IgnoreWater = true
+         local raycastResult = workspace:Raycast(mouseRay.Origin, mouseRay.Direction * 1000, raycastParams)
+         if raycastResult then
+             for _, x in next, game:GetService('Players'):GetPlayers() do
+                 if not raycastResult.Instance:IsDescendantOf(x.Character) then
+                     continue
+                 end
+                 return x
+             end
+         end
+         return false
+     end
+ 
+     local function Set(list)
+         local set = {}
+         for _, l in ipairs(list) do
+             if l then
+                 set[l] = true
+             end
+         end
+         return set
+     end
+ 
+     game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
+         if key == "f" then
+             local player = getPlayer()
+             if player then
+
+local args = {
+    [1] = player.Character.HitPart
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("HellFire2"):FireServer(unpack(args))
+
+
+
+             end
+            end
+         end)
+	end    
+})
+
+BennettTab:AddButton({
+	Name = "Hellfire All",
+	Callback = function()
+      		    print("Clicked")
+    local Plr = game.Players.LocalPlayer
+    for i, Player in pairs (game.Players:GetPlayers()) do
+
+        if Player.Character ~= nil and Player ~= Plr then
+            local mag = (Player.Character.UpperTorso.Position - Plr.Character.UpperTorso.Position).magnitude
+            if mag < 100000 then
+                local Target = Player.Character or Player.CharacterAdded:Wait()
+
+local args = {
+    [1] = Target.HitPart
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("HellFire2"):FireServer(unpack(args))
+
+
+            end
+         end
+      end       
+  	end    
+})
+
+BennettTab:AddParagraph("","")
+
+BennettTab:AddTextbox({
+	Name = "Ignis Someone",
+	Default = "input",
+	TextDisappear = true,
+	Callback = function(txt)
+      local Players = game:GetService("Players")
+      local msg = txt
+      local function findPlayer(stringg)
+          for _, v in pairs(Players:GetPlayers()) do
+              if stringg:lower() == (v.Name:lower()):sub(1, #stringg) then
+                  return v
+              end
+          end
+      end
+  
+      local player = findPlayer(msg)
+      local CHAR = player.Character
+
+      local args = {
+         [1] = player.Character.HitPart
+     }
+     
+     game:GetService("ReplicatedStorage"):WaitForChild("HellFire"):FireServer(unpack(args))
+     
+
+	end	  
+})
+
+BennettTab:AddBind({
+	Name = "Ignis",
+	Default = Enum.KeyCode.C,
+	Hold = false,
+	Callback = function()
+		print("You just clicked the bind")
+
+      local function getPlayer()
+         local userInput = game:GetService("UserInputService")
+         local cam = workspace.CurrentCamera
+         local mousePos = userInput:GetMouseLocation()
+         local mouseRay = cam:ViewportPointToRay(mousePos.X, mousePos.Y)
+         players = {}
+         for _, x in next, game:GetService('Players'):GetPlayers() do
+             players[#players + 1] = x.Character
+         end
+         local raycastParams = RaycastParams.new()
+         raycastParams.FilterType = Enum.RaycastFilterType.Whitelist
+         raycastParams.FilterDescendantsInstances = players
+         raycastParams.IgnoreWater = true
+         local raycastResult = workspace:Raycast(mouseRay.Origin, mouseRay.Direction * 1000, raycastParams)
+         if raycastResult then
+             for _, x in next, game:GetService('Players'):GetPlayers() do
+                 if not raycastResult.Instance:IsDescendantOf(x.Character) then
+                     continue
+                 end
+                 return x
+             end
+         end
+         return false
+     end
+ 
+     local function Set(list)
+         local set = {}
+         for _, l in ipairs(list) do
+             if l then
+                 set[l] = true
+             end
+         end
+         return set
+     end
+ 
+     game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
+         if key == "c" then
+             local player = getPlayer()
+             if player then
+
+local args = {
+    [1] = player.Character.HitPart
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("HellFire"):FireServer(unpack(args))
+
+
+
+             end
+            end
+         end)
+	end    
+})
+
+BennettTab:AddButton({
+	Name = "Ignis All",
+	Callback = function()
+      		    print("Clicked")
+    local Plr = game.Players.LocalPlayer
+    for i, Player in pairs (game.Players:GetPlayers()) do
+
+        if Player.Character ~= nil and Player ~= Plr then
+            local mag = (Player.Character.UpperTorso.Position - Plr.Character.UpperTorso.Position).magnitude
+            if mag < 100000 then
+                local Target = Player.Character or Player.CharacterAdded:Wait()
+
+local args = {
+    [1] = Target.HitPart
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("HellFire"):FireServer(unpack(args))
+
+
+            end
+         end
+      end       
+  	end    
+})
+
+BennettTab:AddParagraph("","")
+
+BennettTab:AddTextbox({
+	Name = "Poison Someone",
+	Default = "input",
+	TextDisappear = true,
+	Callback = function(txt)
+      local Players = game:GetService("Players")
+      local msg = txt
+      local function findPlayer(stringg)
+          for _, v in pairs(Players:GetPlayers()) do
+              if stringg:lower() == (v.Name:lower()):sub(1, #stringg) then
+                  return v
+              end
+          end
+      end
+  
+      local player = findPlayer(msg)
+      local CHAR = player.Character
+
+      local args = {
+         [1] = player.Character.HitPart
+     }
+     
+     game:GetService("ReplicatedStorage"):WaitForChild("PoisonFire"):FireServer(unpack(args))
+     
+     
+
+	end	  
+})
+
+BennettTab:AddBind({
+	Name = "Poison",
+	Default = Enum.KeyCode.V,
+	Hold = false,
+	Callback = function()
+		print("You just clicked the bind")
+
+      local function getPlayer()
+         local userInput = game:GetService("UserInputService")
+         local cam = workspace.CurrentCamera
+         local mousePos = userInput:GetMouseLocation()
+         local mouseRay = cam:ViewportPointToRay(mousePos.X, mousePos.Y)
+         players = {}
+         for _, x in next, game:GetService('Players'):GetPlayers() do
+             players[#players + 1] = x.Character
+         end
+         local raycastParams = RaycastParams.new()
+         raycastParams.FilterType = Enum.RaycastFilterType.Whitelist
+         raycastParams.FilterDescendantsInstances = players
+         raycastParams.IgnoreWater = true
+         local raycastResult = workspace:Raycast(mouseRay.Origin, mouseRay.Direction * 1000, raycastParams)
+         if raycastResult then
+             for _, x in next, game:GetService('Players'):GetPlayers() do
+                 if not raycastResult.Instance:IsDescendantOf(x.Character) then
+                     continue
+                 end
+                 return x
+             end
+         end
+         return false
+     end
+ 
+     local function Set(list)
+         local set = {}
+         for _, l in ipairs(list) do
+             if l then
+                 set[l] = true
+             end
+         end
+         return set
+     end
+ 
+     game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
+         if key == "v" then
+             local player = getPlayer()
+             if player then
+
+               local args = {
+                  [1] = player.Character.HitPart
+              }
+              
+              game:GetService("ReplicatedStorage"):WaitForChild("PoisonFire"):FireServer(unpack(args))
+              
+
+
+             end
+            end
+         end)
+	end    
+})
+
+BennettTab:AddButton({
+	Name = "Poison All",
+	Callback = function()
+      		    print("Clicked")
+    local Plr = game.Players.LocalPlayer
+    for i, Player in pairs (game.Players:GetPlayers()) do
+
+        if Player.Character ~= nil and Player ~= Plr then
+            local mag = (Player.Character.UpperTorso.Position - Plr.Character.UpperTorso.Position).magnitude
+            if mag < 100000 then
+                local Target = Player.Character or Player.CharacterAdded:Wait()
+
+                local args = {
+                  [1] = Target.HitPart
+              }
+              
+              game:GetService("ReplicatedStorage"):WaitForChild("PoisonFire"):FireServer(unpack(args))
+              
+
+            end
+         end
+      end       
+  	end    
+})
+
+BennettTab:AddParagraph("","")
+
+BennettTab:AddTextbox({
+	Name = "Vine Entrapment Someone",
+	Default = "input",
+	TextDisappear = true,
+	Callback = function(txt)
+      local Players = game:GetService("Players")
+      local msg = txt
+      local function findPlayer(stringg)
+          for _, v in pairs(Players:GetPlayers()) do
+              if stringg:lower() == (v.Name:lower()):sub(1, #stringg) then
+                  return v
+              end
+          end
+      end
+  
+      local player = findPlayer(msg)
+      local CHAR = player.Character
+
+      local args = {
+         [1] = player.Character.HitPart
+     }
+     
+     game:GetService("ReplicatedStorage").VineTrap:FireServer(unpack(args))
+     
+     
+
+	end	  
+})
+
+BennettTab:AddBind({
+	Name = "Vine Entrapment",
+	Default = Enum.KeyCode.X,
+	Hold = false,
+	Callback = function()
+		print("You just clicked the bind")
+
+      local function getPlayer()
+         local userInput = game:GetService("UserInputService")
+         local cam = workspace.CurrentCamera
+         local mousePos = userInput:GetMouseLocation()
+         local mouseRay = cam:ViewportPointToRay(mousePos.X, mousePos.Y)
+         players = {}
+         for _, x in next, game:GetService('Players'):GetPlayers() do
+             players[#players + 1] = x.Character
+         end
+         local raycastParams = RaycastParams.new()
+         raycastParams.FilterType = Enum.RaycastFilterType.Whitelist
+         raycastParams.FilterDescendantsInstances = players
+         raycastParams.IgnoreWater = true
+         local raycastResult = workspace:Raycast(mouseRay.Origin, mouseRay.Direction * 1000, raycastParams)
+         if raycastResult then
+             for _, x in next, game:GetService('Players'):GetPlayers() do
+                 if not raycastResult.Instance:IsDescendantOf(x.Character) then
+                     continue
+                 end
+                 return x
+             end
+         end
+         return false
+     end
+ 
+     local function Set(list)
+         local set = {}
+         for _, l in ipairs(list) do
+             if l then
+                 set[l] = true
+             end
+         end
+         return set
+     end
+ 
+     game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
+         if key == "x" then
+             local player = getPlayer()
+             if player then
+
+               local args = {
+                  [1] = player.Character.HitPart
+              }
+              
+              game:GetService("ReplicatedStorage").VineTrap:FireServer(unpack(args))
+
+
+             end
+            end
+         end)
+	end    
+})
+
+BennettTab:AddButton({
+	Name = "Vine Entrapment All",
+	Callback = function()
+      		    print("Clicked")
+    local Plr = game.Players.LocalPlayer
+    for i, Player in pairs (game.Players:GetPlayers()) do
+
+        if Player.Character ~= nil and Player ~= Plr then
+            local mag = (Player.Character.UpperTorso.Position - Plr.Character.UpperTorso.Position).magnitude
+            if mag < 100000 then
+                local Target = Player.Character or Player.CharacterAdded:Wait()
+
+                local args = {
+                  [1] = Target.HitPart
+              }
+              
+              game:GetService("ReplicatedStorage").VineTrap:FireServer(unpack(args))
+
+
+            end
+         end
+      end       
+  	end    
+})
+
+BennettTab:AddParagraph("","")
+
+BennettTab:AddTextbox({
+	Name = "Freeze Someone",
+	Default = "input",
+	TextDisappear = true,
+	Callback = function(txt)
+      local Players = game:GetService("Players")
+      local msg = txt
+      local function findPlayer(stringg)
+          for _, v in pairs(Players:GetPlayers()) do
+              if stringg:lower() == (v.Name:lower()):sub(1, #stringg) then
+                  return v
+              end
+          end
+      end
+  
+      local player = findPlayer(msg)
+      local CHAR = player.Character
+
+      local args = {
+         [1] = player.Character.HitPart
+     }
+     
+     game:GetService("ReplicatedStorage").FreezeFire:FireServer(unpack(args))
+     
+
+	end	  
+})
+
+BennettTab:AddBind({
+	Name = "Freeze",
+	Default = Enum.KeyCode.Z,
+	Hold = false,
+	Callback = function()
+		print("You just clicked the bind")
+
+      local function getPlayer()
+         local userInput = game:GetService("UserInputService")
+         local cam = workspace.CurrentCamera
+         local mousePos = userInput:GetMouseLocation()
+         local mouseRay = cam:ViewportPointToRay(mousePos.X, mousePos.Y)
+         players = {}
+         for _, x in next, game:GetService('Players'):GetPlayers() do
+             players[#players + 1] = x.Character
+         end
+         local raycastParams = RaycastParams.new()
+         raycastParams.FilterType = Enum.RaycastFilterType.Whitelist
+         raycastParams.FilterDescendantsInstances = players
+         raycastParams.IgnoreWater = true
+         local raycastResult = workspace:Raycast(mouseRay.Origin, mouseRay.Direction * 1000, raycastParams)
+         if raycastResult then
+             for _, x in next, game:GetService('Players'):GetPlayers() do
+                 if not raycastResult.Instance:IsDescendantOf(x.Character) then
+                     continue
+                 end
+                 return x
+             end
+         end
+         return false
+     end
+ 
+     local function Set(list)
+         local set = {}
+         for _, l in ipairs(list) do
+             if l then
+                 set[l] = true
+             end
+         end
+         return set
+     end
+ 
+     game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
+         if key == "z" then
+             local player = getPlayer()
+             if player then
+
+               local args = {
+                  [1] = player.Character.HitPart
+              }
+              
+              game:GetService("ReplicatedStorage").FreezeFire:FireServer(unpack(args))
+              
+
+             end
+            end
+         end)
+	end    
+})
+
+BennettTab:AddButton({
+	Name = "Freeze All",
+	Callback = function()
+      		    print("Clicked")
+    local Plr = game.Players.LocalPlayer
+    for i, Player in pairs (game.Players:GetPlayers()) do
+
+        if Player.Character ~= nil and Player ~= Plr then
+            local mag = (Player.Character.UpperTorso.Position - Plr.Character.UpperTorso.Position).magnitude
+            if mag < 100000 then
+                local Target = Player.Character or Player.CharacterAdded:Wait()
+
+                local args = {
+                  [1] = Target.HitPart
+              }
+              
+              game:GetService("ReplicatedStorage").FreezeFire:FireServer(unpack(args))
+              
+
+            end
+         end
+      end       
+  	end    
+})
+
+BennettTab:AddParagraph("","")
+
+BennettTab:AddTextbox({
+	Name = "Fire Heal Someone",
+	Default = "input",
+	TextDisappear = true,
+	Callback = function(txt)
+      local Players = game:GetService("Players")
+      local msg = txt
+      local function findPlayer(stringg)
+          for _, v in pairs(Players:GetPlayers()) do
+              if stringg:lower() == (v.Name:lower()):sub(1, #stringg) then
+                  return v
+              end
+          end
+      end
+  
+      local player = findPlayer(msg)
+      local CHAR = player.Character
+
+      local args = {
+         [1] = player.Character.HitPart
+     }
+     
+     game:GetService("ReplicatedStorage").HealFire:FireServer(unpack(args))
+     
+
+	end	  
+})
+
+BennettTab:AddBind({
+	Name = "Fire Heal",
+	Default = Enum.KeyCode.E,
+	Hold = false,
+	Callback = function()
+		print("You just clicked the bind")
+
+      local function getPlayer()
+         local userInput = game:GetService("UserInputService")
+         local cam = workspace.CurrentCamera
+         local mousePos = userInput:GetMouseLocation()
+         local mouseRay = cam:ViewportPointToRay(mousePos.X, mousePos.Y)
+         players = {}
+         for _, x in next, game:GetService('Players'):GetPlayers() do
+             players[#players + 1] = x.Character
+         end
+         local raycastParams = RaycastParams.new()
+         raycastParams.FilterType = Enum.RaycastFilterType.Whitelist
+         raycastParams.FilterDescendantsInstances = players
+         raycastParams.IgnoreWater = true
+         local raycastResult = workspace:Raycast(mouseRay.Origin, mouseRay.Direction * 1000, raycastParams)
+         if raycastResult then
+             for _, x in next, game:GetService('Players'):GetPlayers() do
+                 if not raycastResult.Instance:IsDescendantOf(x.Character) then
+                     continue
+                 end
+                 return x
+             end
+         end
+         return false
+     end
+ 
+     local function Set(list)
+         local set = {}
+         for _, l in ipairs(list) do
+             if l then
+                 set[l] = true
+             end
+         end
+         return set
+     end
+ 
+     game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
+         if key == "e" then
+             local player = getPlayer()
+             if player then
+
+               local args = {
+                  [1] = player.Character.HitPart
+              }
+              
+              game:GetService("ReplicatedStorage").HealFire:FireServer(unpack(args))
+              
+
+             end
+            end
+         end)
+	end    
+})
+
+BennettTab:AddButton({
+	Name = "Fire Heal All",
+	Callback = function()
+      		    print("Clicked")
+    local Plr = game.Players.LocalPlayer
+    for i, Player in pairs (game.Players:GetPlayers()) do
+
+        if Player.Character ~= nil and Player ~= Plr then
+            local mag = (Player.Character.UpperTorso.Position - Plr.Character.UpperTorso.Position).magnitude
+            if mag < 100000 then
+                local Target = Player.Character or Player.CharacterAdded:Wait()
+
+                local args = {
+                  [1] = Target.HitPart
+              }
+              
+              game:GetService("ReplicatedStorage").HealFire:FireServer(unpack(args))
+              
+
+            end
+         end
+      end       
+  	end    
+})
+
+BennettTab:AddParagraph("","")
+
+BennettTab:AddTextbox({
+	Name = "Force Holy Heal Someone",
+	Default = "input",
+	TextDisappear = true,
+	Callback = function(txt)
+      local Players = game:GetService("Players")
+      local msg = txt
+      local function findPlayer(stringg)
+          for _, v in pairs(Players:GetPlayers()) do
+              if stringg:lower() == (v.Name:lower()):sub(1, #stringg) then
+                  return v
+              end
+          end
+      end
+  
+      local player = findPlayer(msg)
+      local CHAR = player.Character
+
+      local args = {
+         [1] = player.Character.HitPart
+     }
+     
+     game:GetService("ReplicatedStorage").HealFire2:FireServer(unpack(args))
+     
+
+	end	  
+})
+
+BennettTab:AddBind({
+	Name = "Force Holy Heal",
+	Default = Enum.KeyCode.Q,
+	Hold = false,
+	Callback = function()
+		print("You just clicked the bind")
+
+      local function getPlayer()
+         local userInput = game:GetService("UserInputService")
+         local cam = workspace.CurrentCamera
+         local mousePos = userInput:GetMouseLocation()
+         local mouseRay = cam:ViewportPointToRay(mousePos.X, mousePos.Y)
+         players = {}
+         for _, x in next, game:GetService('Players'):GetPlayers() do
+             players[#players + 1] = x.Character
+         end
+         local raycastParams = RaycastParams.new()
+         raycastParams.FilterType = Enum.RaycastFilterType.Whitelist
+         raycastParams.FilterDescendantsInstances = players
+         raycastParams.IgnoreWater = true
+         local raycastResult = workspace:Raycast(mouseRay.Origin, mouseRay.Direction * 1000, raycastParams)
+         if raycastResult then
+             for _, x in next, game:GetService('Players'):GetPlayers() do
+                 if not raycastResult.Instance:IsDescendantOf(x.Character) then
+                     continue
+                 end
+                 return x
+             end
+         end
+         return false
+     end
+ 
+     local function Set(list)
+         local set = {}
+         for _, l in ipairs(list) do
+             if l then
+                 set[l] = true
+             end
+         end
+         return set
+     end
+ 
+     game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
+         if key == "q" then
+             local player = getPlayer()
+             if player then
+
+               local args = {
+                  [1] = player.Character.HitPart
+              }
+              
+              game:GetService("ReplicatedStorage").HealFire2:FireServer(unpack(args))
+              
+
+             end
+            end
+         end)
+	end    
+})
+
+BennettTab:AddButton({
+	Name = "Force Holy Heal All",
+	Callback = function()
+      		    print("Clicked")
+    local Plr = game.Players.LocalPlayer
+    for i, Player in pairs (game.Players:GetPlayers()) do
+
+        if Player.Character ~= nil and Player ~= Plr then
+            local mag = (Player.Character.UpperTorso.Position - Plr.Character.UpperTorso.Position).magnitude
+            if mag < 100000 then
+                local Target = Player.Character or Player.CharacterAdded:Wait()
+
+                local args = {
+                  [1] = Target.HitPart
+              }
+              
+              game:GetService("ReplicatedStorage").HealFire2:FireServer(unpack(args))
+              
+
+            end
+         end
+      end       
+  	end    
+})
+
+local BennettTab = Window:MakeTab({
+	Name = "Teams",
+	Icon = "rbxassetid://14458282849",
+	PremiumOnly = false
+})
+
+
+BennettTab:AddButton({
+	Name = "Mortal",
+	Callback = function()
+
+local args = {
+    [1] = BrickColor.new("Fossil")
+}
+
+game:GetService("ReplicatedStorage").Remotes.ChangeTeam:FireServer(unpack(args))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Pagan Witch",
+	Callback = function()
+
+local args = {
+    [1] = BrickColor.new("Bright bluish green")
+}
+
+game:GetService("ReplicatedStorage").Remotes.ChangeTeam:FireServer(unpack(args))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Weak Witch / Warlock",
+	Callback = function()
+
+local args = {
+    [1] = BrickColor.new("Lapis")
+}
+
+game:GetService("ReplicatedStorage").Remotes.ChangeTeam:FireServer(unpack(args))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Advanced Witch / Warlock",
+	Callback = function()
+
+local args = {
+    [1] = BrickColor.new("Royal purple")
+}
+
+game:GetService("ReplicatedStorage").Remotes.ChangeTeam:FireServer(unpack(args))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Fairy",
+	Callback = function()
+
+local args = {
+    [1] = BrickColor.new("Sea green")
+}
+
+game:GetService("ReplicatedStorage").Remotes.ChangeTeam:FireServer(unpack(args))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Hex Witch",
+	Callback = function()
+
+local args = {
+    [1] = BrickColor.new("Persimmon")
+}
+
+game:GetService("ReplicatedStorage").Remotes.ChangeTeam:FireServer(unpack(args))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Angel",
+	Callback = function()
+
+local args = {
+    [1] = BrickColor.new("Cool yellow")
+}
+
+game:GetService("ReplicatedStorage").Remotes.ChangeTeam:FireServer(unpack(args))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Fallen Angel",
+	Callback = function()
+
+local args = {
+    [1] = BrickColor.new("Black")
+}
+
+game:GetService("ReplicatedStorage").Remotes.ChangeTeam:FireServer(unpack(args))
+
+  	end    
+})
+
+local BennettTab = Window:MakeTab({
+	Name = "Custom Teams",
+	Icon = "rbxassetid://14458282849",
+	PremiumOnly = false
+})
+
+BennettTab:AddButton({
+	Name = "Pink",
+	Callback = function()
+
+local args = {
+    [1] = BrickColor.new("Pink")
+}
+
+game:GetService("ReplicatedStorage").Remotes.ChangeTeam:FireServer(unpack(args))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Yellow",
+	Callback = function()
+
+local args = {
+    [1] = BrickColor.new("New Yeller")
+}
+
+game:GetService("ReplicatedStorage").Remotes.ChangeTeam:FireServer(unpack(args))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Green",
+	Callback = function()
+
+local args = {
+    [1] = BrickColor.new("Earth green")
+}
+
+game:GetService("ReplicatedStorage").Remotes.ChangeTeam:FireServer(unpack(args))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Blue",
+	Callback = function()
+
+local args = {
+    [1] = BrickColor.new("Really blue")
+}
+
+game:GetService("ReplicatedStorage").Remotes.ChangeTeam:FireServer(unpack(args))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Purple",
+	Callback = function()
+
+local args = {
+    [1] = BrickColor.new("Magenta")
+}
+
+game:GetService("ReplicatedStorage").Remotes.ChangeTeam:FireServer(unpack(args))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Red",
+	Callback = function()
+
+local args = {
+    [1] = BrickColor.new("Maroon")
+}
+
+game:GetService("ReplicatedStorage").Remotes.ChangeTeam:FireServer(unpack(args))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Orange",
+	Callback = function()
+
+local args = {
+    [1] = BrickColor.new("Deep orange")
+}
+
+game:GetService("ReplicatedStorage").Remotes.ChangeTeam:FireServer(unpack(args))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Black",
+	Callback = function()
+
+local args = {
+    [1] = BrickColor.new("Really black")
+}
+
+game:GetService("ReplicatedStorage").Remotes.ChangeTeam:FireServer(unpack(args))
+
+  	end    
+})
+
+local BennettTab = Window:MakeTab({
+	Name = "Shop",
+	Icon = "rbxassetid://14458282849",
+	PremiumOnly = false
+})
+
+BennettTab:AddTextbox({
+	Name = "Get Coins",
+	Default = "input",
+	TextDisappear = true,
+	Callback = function(Value)
+      local args = {
+         [1] = Value
+     }
+     
+     game:GetService("ReplicatedStorage").Remotes.GiveCurrency:FireServer(unpack(args))
+     
+	end	  
+})
+
+BennettTab:AddButton({
+	Name = "Buy Health Potion",
+	Callback = function()
+
+local args = {
+    [1] = "Health Potion"
+}
+
+game:GetService("ReplicatedStorage").Remotes.BuyItem:FireServer(unpack(args))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Buy Swiftness Potion",
+	Callback = function()
+
+local args = {
+    [1] = "Swiftness Potion"
+}
+
+game:GetService("ReplicatedStorage").Remotes.BuyItem:FireServer(unpack(args))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Buy Jump Boost Potion",
+	Callback = function()
+
+local args = {
+    [1] = "Jump Boost Potion"
+}
+
+game:GetService("ReplicatedStorage").Remotes.BuyItem:FireServer(unpack(args))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Buy Sealing Amber",
+	Callback = function()
+
+local args = {
+    [1] = "Sealing Amber"
+}
+
+game:GetService("ReplicatedStorage").Remotes.BuyItem:FireServer(unpack(args))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Buy Regeneration Potion",
+	Callback = function()
+
+local args = {
+    [1] = "Regeneration Potion"
+}
+
+game:GetService("ReplicatedStorage").Remotes.BuyItem:FireServer(unpack(args))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Buy Greater Health Potion",
+	Callback = function()
+
+local args = {
+    [1] = "Greater Health Potion"
+}
+
+game:GetService("ReplicatedStorage").Remotes.BuyItem:FireServer(unpack(args))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Buy Invisibility Potion",
+	Callback = function()
+
+local args = {
+    [1] = "Invisibility Potion"
+}
+
+game:GetService("ReplicatedStorage").Remotes.BuyItem:FireServer(unpack(args))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Buy Size Potion",
+	Callback = function()
+
+local args = {
+    [1] = "Size Potion"
+}
+
+game:GetService("ReplicatedStorage").Remotes.BuyItem:FireServer(unpack(args))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Buy Mind Stone",
+	Callback = function()
+
+local args = {
+    [1] = "Bought Mind Stone"
+}
+
+game:GetService("ReplicatedStorage").Remotes.BuyItem:FireServer(unpack(args))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Buy Celestial Stone",
+	Callback = function()
+
+local args = {
+    [1] = "Celestial Stone"
+}
+
+game:GetService("ReplicatedStorage").Remotes.BuyItem:FireServer(unpack(args))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Buy Angelic Scroll",
+	Callback = function()
+
+local args = {
+    [1] = "Angelic Scroll"
+}
+
+game:GetService("ReplicatedStorage").Remotes.BuyItem:FireServer(unpack(args))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Buy Nature Scroll",
+	Callback = function()
+
+local args = {
+    [1] = "Nature Scroll"
+}
+
+game:GetService("ReplicatedStorage").Remotes.BuyItem:FireServer(unpack(args))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Buy Magic Scroll",
+	Callback = function()
+
+local args = {
+    [1] = "Magic Scroll"
+}
+
+game:GetService("ReplicatedStorage").Remotes.BuyItem:FireServer(unpack(args))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Buy Dimensional Shards",
+	Callback = function()
+
+local args = {
+    [1] = "Dimensional Shards"
+}
+
+game:GetService("ReplicatedStorage").Remotes.BuyItem:FireServer(unpack(args))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Buy Magic Candle",
+	Callback = function()
+
+local args = {
+    [1] = "Magic Candle"
+}
+
+game:GetService("ReplicatedStorage").Remotes.TravelMerchant:FireServer(unpack(args))
+
+  	end    
+})
+
+local BennettTab = Window:MakeTab({
+	Name = "Target",
+	Icon = "rbxassetid://14458282849",
+	PremiumOnly = false
+})
+
+BennettTab:AddTextbox({
+	Name = "View Someone",
+	Default = "input",
+	TextDisappear = true,
+	Callback = function(txt)
+      local Players = game:GetService("Players")
+      local msg = txt
+      local function findPlayer(stringg)
+          for _, v in pairs(Players:GetPlayers()) do
+              if stringg:lower() == (v.Name:lower()):sub(1, #stringg) then
+                  return v
+              end
+          end
+      end
+  
+      local player = findPlayer(msg)
+      local CHAR = player.Character
+
+      game:GetService("Workspace").CurrentCamera.CameraSubject = player.Character
+
+	end	  
+})
+
+
+BennettTab:AddButton({
+	Name = "Unview",
+	Callback = function()
+
+     player = game:GetService("Players").LocalPlayer
+     game:GetService("Workspace").CurrentCamera.CameraSubject = player.Character
+
+
+  	end
+})
+
+BennettTab:AddTextbox({
+	Name = "Holy Fire Someone",
+	Default = "input",
+	TextDisappear = true,
+	Callback = function(txt)
+      local Players = game:GetService("Players")
+      local msg = txt
+      local function findPlayer(stringg)
+          for _, v in pairs(Players:GetPlayers()) do
+              if stringg:lower() == (v.Name:lower()):sub(1, #stringg) then
+                  return v
+              end
+          end
+      end
+  
+      local player = findPlayer(msg)
+      local CHAR = player.Character
+
+      local args = {
+         [1] = player.Character.HitPart
+     }
+     
+     game:GetService("ReplicatedStorage"):WaitForChild("HellFire3"):FireServer(unpack(args))
+     
+
+	end	  
+})
+
+BennettTab:AddTextbox({
+	Name = "Hellfire Someone",
+	Default = "input",
+	TextDisappear = true,
+	Callback = function(txt)
+      local Players = game:GetService("Players")
+      local msg = txt
+      local function findPlayer(stringg)
+          for _, v in pairs(Players:GetPlayers()) do
+              if stringg:lower() == (v.Name:lower()):sub(1, #stringg) then
+                  return v
+              end
+          end
+      end
+  
+      local player = findPlayer(msg)
+      local CHAR = player.Character
+
+local args = {
+    [1] = player.Character.HitPart
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("HellFire2"):FireServer(unpack(args))
+     
+
+	end	  
+})
+
+BennettTab:AddTextbox({
+	Name = "Ignis Someone",
+	Default = "input",
+	TextDisappear = true,
+	Callback = function(txt)
+      local Players = game:GetService("Players")
+      local msg = txt
+      local function findPlayer(stringg)
+          for _, v in pairs(Players:GetPlayers()) do
+              if stringg:lower() == (v.Name:lower()):sub(1, #stringg) then
+                  return v
+              end
+          end
+      end
+  
+      local player = findPlayer(msg)
+      local CHAR = player.Character
+
+      local args = {
+         [1] = player.Character.HitPart
+     }
+     
+     game:GetService("ReplicatedStorage"):WaitForChild("HellFire"):FireServer(unpack(args))
+     
+
+	end	  
+})
+
+BennettTab:AddTextbox({
+	Name = "Poison Someone",
+	Default = "input",
+	TextDisappear = true,
+	Callback = function(txt)
+      local Players = game:GetService("Players")
+      local msg = txt
+      local function findPlayer(stringg)
+          for _, v in pairs(Players:GetPlayers()) do
+              if stringg:lower() == (v.Name:lower()):sub(1, #stringg) then
+                  return v
+              end
+          end
+      end
+  
+      local player = findPlayer(msg)
+      local CHAR = player.Character
+
+      local args = {
+         [1] = player.Character.HitPart
+     }
+     
+     game:GetService("ReplicatedStorage"):WaitForChild("PoisonFire"):FireServer(unpack(args))
+     
+     
+
+	end	  
+})
+
+BennettTab:AddTextbox({
+	Name = "Vine Entrapment Someone",
+	Default = "input",
+	TextDisappear = true,
+	Callback = function(txt)
+      local Players = game:GetService("Players")
+      local msg = txt
+      local function findPlayer(stringg)
+          for _, v in pairs(Players:GetPlayers()) do
+              if stringg:lower() == (v.Name:lower()):sub(1, #stringg) then
+                  return v
+              end
+          end
+      end
+  
+      local player = findPlayer(msg)
+      local CHAR = player.Character
+
+      local args = {
+         [1] = player.Character.HitPart
+     }
+     
+     game:GetService("ReplicatedStorage").VineTrap:FireServer(unpack(args))
+     
+     
+
+	end	  
+})
+
+BennettTab:AddTextbox({
+	Name = "Freeze Someone",
+	Default = "input",
+	TextDisappear = true,
+	Callback = function(txt)
+      local Players = game:GetService("Players")
+      local msg = txt
+      local function findPlayer(stringg)
+          for _, v in pairs(Players:GetPlayers()) do
+              if stringg:lower() == (v.Name:lower()):sub(1, #stringg) then
+                  return v
+              end
+          end
+      end
+  
+      local player = findPlayer(msg)
+      local CHAR = player.Character
+
+      local args = {
+         [1] = player.Character.HitPart
+     }
+     
+     game:GetService("ReplicatedStorage").FreezeFire:FireServer(unpack(args))
+     
+
+	end	  
+})
+
+BennettTab:AddTextbox({
+	Name = "Fire Heal Someone",
+	Default = "input",
+	TextDisappear = true,
+	Callback = function(txt)
+      local Players = game:GetService("Players")
+      local msg = txt
+      local function findPlayer(stringg)
+          for _, v in pairs(Players:GetPlayers()) do
+              if stringg:lower() == (v.Name:lower()):sub(1, #stringg) then
+                  return v
+              end
+          end
+      end
+  
+      local player = findPlayer(msg)
+      local CHAR = player.Character
+
+      local args = {
+         [1] = player.Character.HitPart
+     }
+     
+     game:GetService("ReplicatedStorage").HealFire:FireServer(unpack(args))
+     
+
+	end	  
+})
+
+BennettTab:AddTextbox({
+	Name = "Force Holy Heal Someone",
+	Default = "input",
+	TextDisappear = true,
+	Callback = function(txt)
+      local Players = game:GetService("Players")
+      local msg = txt
+      local function findPlayer(stringg)
+          for _, v in pairs(Players:GetPlayers()) do
+              if stringg:lower() == (v.Name:lower()):sub(1, #stringg) then
+                  return v
+              end
+          end
+      end
+  
+      local player = findPlayer(msg)
+      local CHAR = player.Character
+
+      local args = {
+         [1] = player.Character.HitPart
+     }
+     
+     game:GetService("ReplicatedStorage").HealFire2:FireServer(unpack(args))
+     
+
+	end	  
+})
+
+local BennettTab = Window:MakeTab({
+	Name = "Teleports",
+	Icon = "rbxassetid://14458282849",
+	PremiumOnly = false
+})
+
+BennettTab:AddButton({
+	Name = "Village",
+	Callback = function()
+
+      game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-373, 21, -299))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Circle",
+	Callback = function()
+
+      game.Players.LocalPlayer.Character:MoveTo(Vector3.new(189, 51, -296))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Chruch Of Night",
+	Callback = function()
+
+      game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-63, 37, -321))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Cave",
+	Callback = function()
+
+      game.Players.LocalPlayer.Character:MoveTo(Vector3.new(358, 47, 18))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Cabin",
+	Callback = function()
+
+      game.Players.LocalPlayer.Character:MoveTo(Vector3.new(114, 40, -190))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Fairy Pool",
+	Callback = function()
+
+      game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-70, 38, -23))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Temple",
+	Callback = function()
+
+      game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-64, 40074, -48))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Darkhold",
+	Callback = function()
+
+      game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-61, 40004, -473))
+
+  	end    
+})
+
+local BennettTab = Window:MakeTab({
+	Name = "Badges & Others",
+	Icon = "rbxassetid://14458282849",
+	PremiumOnly = false
+})
+
+local Section = BennettTab:AddSection({
+	Name = "Badges"
+})
+
+BennettTab:AddButton({
+	Name = "Get Badges",
+	Callback = function()
+
+      game:GetService("ReplicatedStorage"):WaitForChild("AngelicScrollBadge"):FireServer()
+      game:GetService("ReplicatedStorage"):WaitForChild("ForgiveBadge"):FireServer()
+      game:GetService("ReplicatedStorage"):WaitForChild("MCandleBadge"):FireServer()
+      game:GetService("ReplicatedStorage"):WaitForChild("MagicScrollBadge"):FireServer()
+      game:GetService("ReplicatedStorage"):WaitForChild("NatureScrollBadge"):FireServer()
+      game:GetService("ReplicatedStorage"):WaitForChild("ShardBadge"):FireServer()
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Get Judas Iscariot's 30 Pieces of Sliver",
+	Callback = function()
+
+      game.Players.LocalPlayer.Character:MoveTo(Vector3.new(450, -147, -463))
+
+      wait(5)
+      game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-373, 21, -299))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Get Crystal Candle",
+	Callback = function()
+
+      game.Players.LocalPlayer.Character:MoveTo(Vector3.new(402, -23, 135))
+
+      wait(5)
+      game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-373, 21, -299))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Get Portal Spell",
+	Callback = function()
+
+      game.Players.LocalPlayer.Character:MoveTo(Vector3.new(360, -79, 141))
+
+      wait(5)
+      game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-373, 21, -299))
+
+  	end    
+})
+
+local Section = BennettTab:AddSection({
+	Name = "Others"
+})
+
+BennettTab:AddButton({
+	Name = "Get Hell Shard",
+	Callback = function()
+
+      local plr = game.Players.LocalPlayer
+
+      local backup = game.Teams:FindFirstChild("Hell Shard",true):Clone()
+      backup.Parent = game.Players
+      
+      function give()
+         local c = game.Players["Hell Shard"]:Clone()
+         c.Parent = plr.Backpack
+      end
+      
+      give()
+      
+      plr.CharacterAdded:Connect(function()
+         give()
+      end)
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Change Moon",
+	Callback = function()
+
+      game:GetService("ReplicatedStorage").MoonChange:FireServer()
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Sign the Book",
+	Callback = function()
+
+      game:GetService("ReplicatedStorage").HaveSigned:FireServer()
+      
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Get Horns",
+	Callback = function()
+
+      game:GetService("ReplicatedStorage").SpiritFused:FireServer()
+      
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Burn Angel Wings",
+	Callback = function()
+
+      game:GetService("ReplicatedStorage").BurnAngelWing:FireServer()
+      
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Teleport Beam",
+	Callback = function()
+
+      game:GetService("ReplicatedStorage").TeleportBeam1:FireServer()
+      
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Get Catwalk",
+	Callback = function()
+
+--climb
+
+local plr = game.Players.LocalPlayer
+
+game.workspace[plr.name].Animate.climb.ClimbAnim.AnimationId = "rbxassetid://10921053544"
+
+--fall
+
+game.workspace[plr.name].Animate.fall.FallAnim.AnimationId = "rbxassetid://10921061530"
+
+--idle
+
+game.workspace[plr.name].Animate.idle.Animation1.AnimationId = "rbxassetid://10921054344"
+game.workspace[plr.name].Animate.idle.Animation2.AnimationId = "rbxassetid://10921055107"
+
+--jump
+
+game.workspace[plr.name].Animate.jump.JumpAnim.AnimationId = "rbxassetid://10921062673"
+
+--run
+
+game.workspace[plr.name].Animate.run.RunAnim.AnimationId = "rbxassetid://12705693012"
+
+--sit
+
+game.workspace[plr.name].Animate.sit.SitAnim.AnimationId = "rbxassetid://2506281703"
+
+--toolnone? what the fuck is that?
+
+game.workspace[plr.name].Animate.toolnone.ToolNoneAnim.AnimationId = "rbxassetid://507768375"
+
+
+--walk
+
+game.workspace[plr.name].Animate.walk.WalkAnim.AnimationId = "rbxassetid://12705693012"
+
+wait(1)
+game.StarterGui:SetCore("SendNotification", { 
+    Title = "⛤ Bennett Scripts ⛤";
+    Text = "Catwalk";
+    Icon = "rbxthumb://type=Asset&id=14067496704&w=150&h=150";
+    Duration = "2";
+    Button1 = "Close";
+})
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Delete Barrier Circle",
+	Callback = function()
+
+      game.Workspace.FlameBarrierThing:destroy()
+      
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Delete Hex",
+	Callback = function()
+
+      game.Workspace.HexExpand:destroy()
+
+      
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Delete Chaos Barrier",
+	Callback = function()
+
+      game.Workspace:FindFirstChild("ChaosBarrier", true):destroy()
+
+      
+  	end    
+})
