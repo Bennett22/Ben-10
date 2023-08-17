@@ -6,49 +6,49 @@ local BennettSection = Bennett:NewSection("Scripts")
 
 BennettSection:NewButton("Heroes Online World - Animations", " ", function()
 
-loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Bennett-Scripts/main/Animations'),true))()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Ben-10/main/Animations'),true))()
 
 end)
 
 BennettSection:NewButton("Lucky Blocks Battlegrounds", " ", function()
 
-loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Bennett-Scripts/main/Battlegrounds'),true))()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Ben-10/main/Battlegrounds'),true))()
 
 end)
 
 BennettSection:NewButton("AHS: Collided", " ", function()
 
-loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Bennett-Scripts/main/Collided'),true))()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Ben-10/main/Collided'),true))()
 
 end)
 
 BennettSection:NewButton("The Mystic Diaries", " ", function()
 
-loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Bennett-Scripts/main/Diaries'),true))()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Ben-10/main/Diaries'),true))()
 
 end)
 
 BennettSection:NewButton("Laterns Hub", " ", function()
 
-loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Bennett-Scripts/main/Hub'),true))()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Ben-10/main/Hub'),true))()
 
 end)
 
 BennettSection:NewButton("[MANOR] Charmed", " ", function()
 
-loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Bennett-Scripts/main/Manor'),true))()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Ben-10/main/Manor'),true))()
 
 end)
 
 BennettSection:NewButton("Marvellous Playground", " ", function()
 
-loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Bennett-Scripts/main/Playground'),true))()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Ben-10/main/Playground'),true))()
 
 end)
 
 BennettSection:NewButton("Marvel: Legacy", " ", function()
 
-loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Bennett-Scripts/main/Legacy'),true))()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Ben-10/main/Legacy'),true))()
 
 end)
 
@@ -60,37 +60,37 @@ end)
 
 BennettSection:NewButton("Marvel: Enhanced (Old Testing Site)", " ", function()
 
-loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Bennett-Scripts/main/Site'),true))()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Ben-10/main/Site'),true))()
 
 end)
 
 BennettSection:NewButton("Marvel: Enhanced V2", " ", function()
 
-loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Bennett-Scripts/main/V2'),true))()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Ben-10/main/V2'),true))()
 
 end)
 
 BennettSection:NewButton("Stranger Things: Tragedies", " ", function()
 
-loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Bennett-Scripts/main/Tragedies'),true))()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Ben-10/main/Tragedies'),true))()
 
 end)
 
 BennettSection:NewButton("Magic Training", " ", function()
 
-loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Bennett-Scripts/main/training'),true))()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Ben-10/main/training'),true))()
 
 end)
 
 BennettSection:NewButton("Witchcraft.v2", " ", function()
 
-loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Bennett-Scripts/main/witch'),true))()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Ben-10/main/witch'),true))()
 
 end)
 
 BennettSection:NewButton("Animations", " ", function()
 
-loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Bennett-Scripts/main/Animation'),true))()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Ben-10/main/Animation'),true))()
 
 end)
 
