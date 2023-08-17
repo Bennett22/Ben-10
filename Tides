@@ -1,0 +1,800 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "Bennett Scripts | H2O: Magic Tides", HidePremium = false, IntroText = "Bennett Scripts", SaveConfig = true, ConfigFolder = "OrionTest"})
+
+local BennettTab = Window:MakeTab({
+	Name = "Characters",
+	Icon = "rbxassetid://14458282849",
+	PremiumOnly = false
+})
+local Section = BennettTab:AddSection({
+	Name = "Half Mermaid"
+})
+
+BennettTab:AddButton({
+	Name = "Rikki Outfit 1",
+	Callback = function()
+
+local args = {
+    [1] = "Outfit1",
+    [2] = "Rikki"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Rikki Outfit 2",
+	Callback = function()
+
+local args = {
+    [1] = "Outfit2",
+    [2] = "Rikki"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Rikki Outfit 3",
+	Callback = function()
+
+local args = {
+    [1] = "Outfit3",
+    [2] = "Rikki"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Rikki Outfit 4",
+	Callback = function()
+
+local args = {
+    [1] = "Outfit4",
+    [2] = "Rikki"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+BennettTab:AddParagraph("","")
+
+BennettTab:AddButton({
+	Name = "Bella Outfit 1",
+	Callback = function()
+
+local args = {
+    [1] = "Outfit1",
+    [2] = "Bella"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Bella Outfit 2",
+	Callback = function()
+
+local args = {
+    [1] = "Outfit2",
+    [2] = "Bella"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Bella Outfit 3",
+	Callback = function()
+
+local args = {
+    [1] = "Outfit3",
+    [2] = "Bella"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+BennettTab:AddParagraph("","")
+
+BennettTab:AddButton({
+	Name = "Emma Outfit 1",
+	Callback = function()
+
+local args = {
+    [1] = "Outfit1",
+    [2] = "Emma"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Emma Outfit 2",
+	Callback = function()
+
+local args = {
+    [1] = "Outfit2",
+    [2] = "Emma"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Emma Outfit 3",
+	Callback = function()
+
+local args = {
+    [1] = "Outfit3",
+    [2] = "Emma"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+BennettTab:AddParagraph("","")
+
+BennettTab:AddButton({
+	Name = "Cleo Outfit 1",
+	Callback = function()
+
+local args = {
+    [1] = "Outfit1",
+    [2] = "Cleo"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Cleo Outfit 2",
+	Callback = function()
+
+local args = {
+    [1] = "Outfit2",
+    [2] = "Cleo"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Cleo Outfit 3",
+	Callback = function()
+
+local args = {
+    [1] = "Outfit3",
+    [2] = "Cleo"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+BennettTab:AddParagraph("","")
+
+BennettTab:AddButton({
+	Name = "Charlotte Outfit 1",
+	Callback = function()
+
+local args = {
+    [1] = "Outfit1",
+    [2] = "Charlotte"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Charlotte Outfit 2",
+	Callback = function()
+
+local args = {
+    [1] = "Outfit2",
+    [2] = "Charlotte"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Charlotte Outfit 3",
+	Callback = function()
+
+local args = {
+    [1] = "Outfit3",
+    [2] = "Charlotte"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+local Section = BennettTab:AddSection({
+	Name = "Mermaid"
+})
+
+BennettTab:AddButton({
+	Name = "Nerissa",
+	Callback = function()
+
+local args = {
+    [1] = "Outfit1",
+    [2] = "Nerissa"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+BennettTab:AddParagraph("","")
+
+BennettTab:AddButton({
+	Name = "Sirena Outfit 1",
+	Callback = function()
+
+local args = {
+    [1] = "Outfit1",
+    [2] = "Sirena"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Sirena Outfit 2",
+	Callback = function()
+
+local args = {
+    [1] = "Outfit2",
+    [2] = "Sirena"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+BennettTab:AddParagraph("","")
+
+BennettTab:AddButton({
+	Name = "Weilan Outfit 1",
+	Callback = function()
+
+local args = {
+    [1] = "Outfit1",
+    [2] = "Weilan"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Weilan Outfit 2",
+	Callback = function()
+
+local args = {
+    [1] = "Outfit2",
+    [2] = "Weilan"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Weilan Outfit 3",
+	Callback = function()
+
+local args = {
+    [1] = "Outfit3",
+    [2] = "Weilan"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+BennettTab:AddParagraph("","")
+
+BennettTab:AddButton({
+	Name = "Ondina Outfit 1",
+	Callback = function()
+
+local args = {
+    [1] = "Outfit1",
+    [2] = "Ondina"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Ondina Outfit 2",
+	Callback = function()
+
+local args = {
+    [1] = "Outfit2",
+    [2] = "Ondina"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Ondina Outfit 3",
+	Callback = function()
+
+local args = {
+    [1] = "Outfit3",
+    [2] = "Ondina"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+BennettTab:AddParagraph("","")
+
+BennettTab:AddButton({
+	Name = "Mimmi Outfit 1",
+	Callback = function()
+
+local args = {
+    [1] = "Outfit1",
+    [2] = "Mimmi"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Mimmi Outfit 2",
+	Callback = function()
+
+local args = {
+    [1] = "Outfit2",
+    [2] = "Mimmi"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Mimmi Outfit 3",
+	Callback = function()
+
+local args = {
+    [1] = "Outfit3",
+    [2] = "Mimmi"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+BennettTab:AddParagraph("","")
+
+BennettTab:AddButton({
+	Name = "Aquata Outfit 1",
+	Callback = function()
+
+local args = {
+    [1] = "Outfit1",
+    [2] = "Aquata"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Aquata Outfit 2",
+	Callback = function()
+
+local args = {
+    [1] = "Outfit2",
+    [2] = "Aquata"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+BennettTab:AddParagraph("","")
+
+BennettTab:AddButton({
+	Name = "Nixie",
+	Callback = function()
+
+local args = {
+    [1] = "Outfit1",
+    [2] = "Nixie"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+BennettTab:AddParagraph("","")
+
+BennettTab:AddButton({
+	Name = "Lyla",
+	Callback = function()
+
+local args = {
+    [1] = "Outfit1",
+    [2] = "Lyla"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+BennettTab:AddParagraph("","")
+
+BennettTab:AddButton({
+	Name = "Siren Sirena Outfit 1",
+	Callback = function()
+
+local args = {
+    [1] = "Outfit1",
+    [2] = "Siren Sirena"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Siren Sirena Outfit 2",
+	Callback = function()
+
+local args = {
+    [1] = "Outfit2",
+    [2] = "Siren Sirena"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+BennettTab:AddParagraph("","")
+
+BennettTab:AddButton({
+	Name = "Rita",
+	Callback = function()
+
+local args = {
+    [1] = "Outfit1",
+    [2] = "Rita"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+local Section = BennettTab:AddSection({
+	Name = "Human"
+})
+
+BennettTab:AddButton({
+	Name = "Cam",
+	Callback = function()
+
+local args = {
+    [1] = "Outfit1",
+    [2] = "Cam"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Evie",
+	Callback = function()
+
+local args = {
+    [1] = "Outfit1",
+    [2] = "Evie"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Carly",
+	Callback = function()
+
+local args = {
+    [1] = "Outfit1",
+    [2] = "Carly"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+
+BennettTab:AddButton({
+	Name = "Will",
+	Callback = function()
+
+local args = {
+    [1] = "Outfit1",
+    [2] = "Will"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Sophie",
+	Callback = function()
+
+local args = {
+    [1] = "Outfit1",
+    [2] = "Sophie"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+local Section = BennettTab:AddSection({
+	Name = "Merman"
+})
+
+BennettTab:AddButton({
+	Name = "Erik",
+	Callback = function()
+
+local args = {
+    [1] = "Outfit1",
+    [2] = "Erik"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Zac",
+	Callback = function()
+
+local args = {
+    [1] = "Outfit1",
+    [2] = "Zac"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+local Section = BennettTab:AddSection({
+	Name = "Exclusive"
+})
+
+
+BennettTab:AddButton({
+	Name = "Nicki Minaj",
+	Callback = function()
+
+local args = {
+    [1] = "Outfit1",
+    [2] = "Nicki Minaj"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Ariel",
+	Callback = function()
+
+local args = {
+    [1] = "Outfit1",
+    [2] = "Ariel"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+
+BennettTab:AddButton({
+	Name = "Wanda",
+	Callback = function()
+
+local args = {
+    [1] = "Outfit1",
+    [2] = "Wanda"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+
+local Section = BennettTab:AddSection({
+	Name = "Not In Game Characters"
+})
+
+
+BennettTab:AddButton({
+	Name = "Vanessa",
+	Callback = function()
+
+local args = {
+    [1] = "Outfit1",
+    [2] = "Vanessa"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+local BennettTab = Window:MakeTab({
+	Name = "Misc",
+	Icon = "rbxassetid://14458282849",
+	PremiumOnly = false
+})
+
+local Section = BennettTab:AddSection({
+	Name = "Other Scripts"
+})
+
+BennettTab:AddButton({
+	Name = "Animations",
+	Callback = function()
+
+        loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Ben-10/main/Animation'),true))()
+
+      
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Infinite Yield",
+	Callback = function()
+
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+      
+  	end    
+})
+
+local BennettTab = Window:MakeTab({
+	Name = "Credits",
+	Icon = "rbxassetid://14458282849",
+	PremiumOnly = false
+})
+
+local Section = BennettTab:AddSection({
+	Name = "discord: bennettscripts"
+})
+
+wait(1)
+game.StarterGui:SetCore("SendNotification", { 
+    Title = "⛤ Bennett Scripts ⛤";
+    Text = "H2O: Magic Tides";
+    Icon = "rbxthumb://type=Asset&id=14067496704&w=150&h=150";
+    Duration = "2";
+    Button1 = "Close";
+})
