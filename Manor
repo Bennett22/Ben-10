@@ -201,13 +201,12 @@ end)
 
 BennettSection:NewButton("Summon Billie", " ", function()
 
-game.Players.LocalPlayer.PlayerGui.Visuals.BillieSummon.Enabled = true
 game.Players.LocalPlayer.PlayerGui.Visuals.ChristySummon.Enabled = true
 end)
 
 BennettSection:NewButton("Summon Christy", " ", function()
 
-game.Players.LocalPlayer.PlayerGui.Visuals.ChristySummon.Enabled = true
+game.Players.LocalPlayer.PlayerGui.Visuals.BillieSummon.Enabled = true
 
 end)
 
