@@ -565,6 +565,23 @@ game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild
   	end    
 })
 
+BennettTab:AddParagraph("","")
+
+BennettTab:AddButton({
+	Name = "Vanessa",
+	Callback = function()
+
+local args = {
+    [1] = "Outfit1",
+    [2] = "Vanessa"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
+
+
+  	end    
+})
+
 local Section = BennettTab:AddSection({
 	Name = "Human"
 })
@@ -684,6 +701,7 @@ local Section = BennettTab:AddSection({
 })
 
 
+
 BennettTab:AddButton({
 	Name = "Nicki Minaj",
 	Callback = function()
@@ -730,6 +748,21 @@ game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild
   	end    
 })
 
+BennettTab:AddButton({
+	Name = "Barbie",
+	Callback = function()
+
+local args = {
+    [1] = "Outfit1",
+    [2] = "Barbie"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
+
+
+  	end    
+})
+
 
 local Section = BennettTab:AddSection({
 	Name = "Not In Game Characters"
@@ -737,12 +770,12 @@ local Section = BennettTab:AddSection({
 
 
 BennettTab:AddButton({
-	Name = "Vanessa",
+	Name = "Seylah",
 	Callback = function()
 
 local args = {
     [1] = "Outfit1",
-    [2] = "Vanessa"
+    [2] = "Seylah"
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
