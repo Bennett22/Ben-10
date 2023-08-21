@@ -63,49 +63,7 @@ local args = {
 
 game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Seylah"):FireServer(unpack(args))
 
-    clicktpon = true                
-        plr = game.Players.LocalPlayer
-        hum = plr.Character.HumanoidRootPart
-        mouse = plr:GetMouse()
-        mouse.KeyDown:connect(function(key)
-        if key == '1' then
-        if mouse.Target then
-        if clicktpon then
 
-local args = {
-    [1] = "AdvLightning",
-    [2] = "PinkLightning Strikes",
-    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z)
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Seylah"):FireServer(unpack(args))
-
-end
-end
-end
-end)
-
-    clicktpon = true                
-        plr = game.Players.LocalPlayer
-        hum = plr.Character.HumanoidRootPart
-        mouse = plr:GetMouse()
-        mouse.KeyDown:connect(function(key)
-        if key == '1' then
-        if mouse.Target then
-        if clicktpon then
-
-local args = {
-    [1] = "Bolt",
-    [2] = "Lightning Bolt",
-    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z)
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Seylah"):FireServer(unpack(args))
-
-end
-end
-end
-end)
 
 local args = {
     [1] = "SongLure",
@@ -121,23 +79,6 @@ local args = {
     [2] = "Manipulation",
     [3] = player.Character,
     [4] = Vector3.new(649.2760009765625, 43.55667495727539, 287.1421813964844)
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Seylah"):FireServer(unpack(args))
-
-local args = {
-    [1] = "Torrent",
-    [2] = "Wind Torrent",
-    [4] = Vector3.new(815.32861328125, 38.054229736328125, 820.8920288085938)
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Seylah"):FireServer(unpack(args))
-
-local args = {
-    [1] = "Shockwave",
-    [2] = "Shockwaves",
-    [3] = game:GetService("Players").LocalPlayer.Character:FindFirstChild("Puzzle Box"),
-    [4] = Vector3.new(242.13616943359375, 2.3308486938476562, -90.90900421142578)
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Seylah"):FireServer(unpack(args))
