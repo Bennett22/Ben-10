@@ -700,7 +700,20 @@ local Section = BennettTab:AddSection({
 	Name = "Exclusive"
 })
 
+BennettTab:AddButton({
+	Name = "Cardi B",
+	Callback = function()
 
+local args = {
+    [1] = "Outfit1",
+    [2] = "Cardi B"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
+
+
+  	end    
+})
 
 BennettTab:AddButton({
 	Name = "Nicki Minaj",
@@ -763,6 +776,20 @@ game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild
   	end    
 })
 
+BennettTab:AddButton({
+	Name = "Eleven",
+	Callback = function()
+
+local args = {
+    [1] = "Outfit1",
+    [2] = "Eleven"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
+
+
+  	end    
+})
 
 local Section = BennettTab:AddSection({
 	Name = "Not In Game Characters"
