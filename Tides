@@ -2,6 +2,181 @@ local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shl
 local Window = OrionLib:MakeWindow({Name = "Bennett Scripts | H2O: Magic Tides", HidePremium = false, IntroText = "Bennett Scripts", SaveConfig = true, ConfigFolder = "OrionTest"})
 
 local BennettTab = Window:MakeTab({
+	Name = "Powers",
+	Icon = "rbxassetid://14458282849",
+	PremiumOnly = false
+})
+
+BennettTab:AddBind({
+	Name = "Combo For Seylah",
+	Default = Enum.KeyCode.One,
+	Hold = false,
+	Callback = function()
+		print("You just clicked the bind")
+
+      local function getPlayer()
+         local userInput = game:GetService("UserInputService")
+         local cam = workspace.CurrentCamera
+         local mousePos = userInput:GetMouseLocation()
+         local mouseRay = cam:ViewportPointToRay(mousePos.X, mousePos.Y)
+         players = {}
+         for _, x in next, game:GetService('Players'):GetPlayers() do
+             players[#players + 1] = x.Character
+         end
+         local raycastParams = RaycastParams.new()
+         raycastParams.FilterType = Enum.RaycastFilterType.Whitelist
+         raycastParams.FilterDescendantsInstances = players
+         raycastParams.IgnoreWater = true
+         local raycastResult = workspace:Raycast(mouseRay.Origin, mouseRay.Direction * 1000, raycastParams)
+         if raycastResult then
+             for _, x in next, game:GetService('Players'):GetPlayers() do
+                 if not raycastResult.Instance:IsDescendantOf(x.Character) then
+                     continue
+                 end
+                 return x
+             end
+         end
+         return false
+     end
+ 
+     local function Set(list)
+         local set = {}
+         for _, l in ipairs(list) do
+             if l then
+                 set[l] = true
+             end
+         end
+         return set
+     end
+ 
+     game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
+         if key == "1" then
+             local player = getPlayer()
+             if player then
+
+local args = {
+    [1] = "Fire",
+    [2] = "Fire",
+    [3] = player.Character,
+    [4] = Vector3.new(678.2867431640625, 41.68195343017578, 221.17771911621094)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Seylah"):FireServer(unpack(args))
+
+    clicktpon = true                
+        plr = game.Players.LocalPlayer
+        hum = plr.Character.HumanoidRootPart
+        mouse = plr:GetMouse()
+        mouse.KeyDown:connect(function(key)
+        if key == '1' then
+        if mouse.Target then
+        if clicktpon then
+
+local args = {
+    [1] = "AdvLightning",
+    [2] = "PinkLightning Strikes",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Seylah"):FireServer(unpack(args))
+
+end
+end
+end
+end)
+
+    clicktpon = true                
+        plr = game.Players.LocalPlayer
+        hum = plr.Character.HumanoidRootPart
+        mouse = plr:GetMouse()
+        mouse.KeyDown:connect(function(key)
+        if key == '1' then
+        if mouse.Target then
+        if clicktpon then
+
+local args = {
+    [1] = "Bolt",
+    [2] = "Lightning Bolt",
+    [4] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Seylah"):FireServer(unpack(args))
+
+end
+end
+end
+end)
+
+local args = {
+    [1] = "SongLure",
+    [2] = "Song Lure",
+    [3] = player.Character,
+    [4] = Vector3.new(692.0059814453125, 38.927730560302734, 24.158016204833984)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Seylah"):FireServer(unpack(args))
+
+local args = {
+    [1] = "Manipulation",
+    [2] = "Manipulation",
+    [3] = player.Character,
+    [4] = Vector3.new(649.2760009765625, 43.55667495727539, 287.1421813964844)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Seylah"):FireServer(unpack(args))
+
+local args = {
+    [1] = "Torrent",
+    [2] = "Wind Torrent",
+    [4] = Vector3.new(815.32861328125, 38.054229736328125, 820.8920288085938)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Seylah"):FireServer(unpack(args))
+
+local args = {
+    [1] = "Shockwave",
+    [2] = "Shockwaves",
+    [3] = game:GetService("Players").LocalPlayer.Character:FindFirstChild("Puzzle Box"),
+    [4] = Vector3.new(242.13616943359375, 2.3308486938476562, -90.90900421142578)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Seylah"):FireServer(unpack(args))
+
+local args = {
+    [1] = "AreaTele",
+    [2] = "Area Telekinesis",
+    [3] = workspace:WaitForChild("Terrain"),
+    [4] = Vector3.new(306.8042907714844, 2.187501907348633, -315.08074951171875)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Seylah"):FireServer(unpack(args))
+
+local args = {
+    [1] = "BloodBoil",
+    [2] = "Blood Boil",
+    [3] = player.Character,
+    [4] = Vector3.new(117.37601470947266, 4.391148090362549, -173.28977966308594)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Seylah"):FireServer(unpack(args))
+
+local args = {
+    [1] = "Freezy",
+    [2] = "Freezy Scare",
+    [3] = player.Character,
+    [4] = Vector3.new(586.8722534179688, 40.97441101074219, -24.099687576293945)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Seylah"):FireServer(unpack(args))
+
+
+             end
+            end
+         end)
+	end    
+})
+
+local BennettTab = Window:MakeTab({
 	Name = "Characters",
 	Icon = "rbxassetid://14458282849",
 	PremiumOnly = false
