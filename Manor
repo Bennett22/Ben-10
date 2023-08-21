@@ -501,7 +501,7 @@ BennettTab:AddButton({
 	Name = "The Morningstar Circle Gui",
 	Callback = function()
 
-loadstring(game:HttpGet(('https://raw.githubusercontent.com/MorningstarCircle/TMC/main/CharmedReborn'),true))()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/TheMorningstarCircle/Spellman/main/All-In-One'),true))()
 
   	end    
 })
