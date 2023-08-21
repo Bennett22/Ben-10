@@ -2015,7 +2015,7 @@ BennettTab:AddButton({
 	Name = "The Morningstar Circle Gui",
 	Callback = function()
 
-        loadstring(game:HttpGet(('https://raw.githubusercontent.com/TheMorningstarCircle/Spellman/main/WitchcraftV2'),true))()
+
       
   	end    
 })
@@ -2024,8 +2024,8 @@ BennettTab:AddButton({
 	Name = "Infinite Yield",
 	Callback = function()
 
-        loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
-      
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/MorningstarCircle/TMC/main/CharmedReborn'),true))()
+
   	end    
 })
 
