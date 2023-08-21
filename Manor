@@ -330,6 +330,19 @@ game:GetService("ReplicatedStorage"):WaitForChild("Witches"):WaitForChild("GoodW
   	end    
 })
 
+BennettTab:AddButton({
+	Name = "Get Bald (Only for Patience, spam)",
+	Callback = function()
+
+local args = {
+    [1] = "Weave"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Witches"):WaitForChild("GoodWitches"):WaitForChild("Patience"):WaitForChild("PowerEvents"):WaitForChild("SpellEvents"):FireServer(unpack(args))
+
+
+  	end    
+})
 local BennettTab = Window:MakeTab({
 	Name = "Other Powers",
 	Icon = "rbxassetid://14458282849",
