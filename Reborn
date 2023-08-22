@@ -8887,11 +8887,11 @@ BennettSection:NewButton("Click me as any char to get flight", " ", function()
 local backup = game.Workspace:FindFirstChild("Skill6",true):Clone()
 backup.Parent = game.Players.LocalPlayer.PlayerGui.SkillGUI.SkillGUI.Frame
 
-local backup2 = game.Workspace:FindFirstChild("ActiveFly",true):Clone()
-backup2.Parent = game.Workspace.LocalPlayer.Skill
+local backup2 = game.Workspace:FindFirstChild("ActiveFly", true):Clone()
+backup2.Parent = plr.Character.Skill
 
-local backup3 = game.Workspace:FindFirstChild("FlyScript",true):Clone()
-backup3.Parent= game.Workspace
+local backup2 = game.Workspace:FindFirstChild("FlyScript", true):Clone()
+backup2.Parent = plr.Character.Skill
 
 end)
 
