@@ -501,6 +501,23 @@ local Section = BennettTab:AddSection({
 	Name = "Other Scripts"
 })
 
+BennettTab:AddTextbox({
+	Name = "Choose Character",
+	Default = "",
+	TextDisappear = true,
+	Callback = function(txt)
+
+local args = {
+    [1] = txt
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("PickCharacter"):FireServer(unpack(args))
+
+
+	end	  
+})
+
+
 BennettTab:AddButton({
 	Name = "Infinite Yield",
 	Callback = function()
