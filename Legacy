@@ -740,6 +740,21 @@ game.workspace[plr.name].Animate.walk.WalkAnim.AnimationId = "rbxassetid://11187
 
 end)
 local Bennett = Window:NewTab("Misc")
+local BennettSection = Bennett:NewSection("")
+BennettSection:NewButton("Delete the map", "", function()
+
+local backup = game.Workspace["Marvel Legacy Map"].Model:Clone()
+backup.Parent = game.VRService
+
+wait(1)
+
+local backup = game.Workspace["Marvel Legacy Map"].Model:Destroy()
+end)
+BennettSection:NewButton("Show map", "", function()
+local backup = game.VRService["Model"]:Clone()
+backup.Parent = game.Workspace["Marvel Legacy Map"]
+end)
+
 local BennettSection = Bennett:NewSection("Misc")
 BennettSection:NewButton("Custom Catalog", "", function()
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Ben-10/main/Custom%20Catalog'),true))()
