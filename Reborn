@@ -8872,10 +8872,10 @@ BennettSection:NewButton("Click me first", " ", function()
 local backup = game.Players.LocalPlayer.PlayerGui.SkillGUI.SkillGUI.Frame:FindFirstChild("Skill6",true):Clone()
 backup.Parent = game.Workspace
 
-local backup2 = game.Workspace:FindFirstChild("ActiveFly",true):Clone()
+local backup2 = plr.Character.Skill.ActiveFly:Clone()
 backup2.Parent = game.Workspace
 
-local backup3 = game.Workspace:FindFirstChild("FlyScript",true):Clone()
+local backup3 = plr.Character.Skill.FlyScript:Clone()
 backup3.Parent= game.Workspace
 
 end)
