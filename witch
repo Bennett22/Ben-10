@@ -1991,6 +1991,32 @@ local Section = BennettTab:AddSection({
 	Name = "Other Scripts"
 })
 
+BennettTab:AddSlider({
+	Name = "Speed",
+	Min = 0,
+	Max = 200,
+	Default = 16,
+	Color = Color3.fromRGB(),
+	Increment = 1,
+	ValueName = "Speed Value",
+	Callback = function(Value)
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
+	end    
+})
+
+BennettTab:AddSlider({
+	Name = "Jump",
+	Min = 0,
+	Max = 200,
+	Default = 10,
+	Color = Color3.fromRGB(),
+	Increment = 1,
+	ValueName = "Jump Value",
+	Callback = function(Value)
+game.Players.LocalPlayer.Character.Humanoid.JumpPower = Value
+	end    
+})
+
 BennettTab:AddButton({
 	Name = "Animations",
 	Callback = function()
@@ -2024,7 +2050,7 @@ BennettTab:AddButton({
 	Name = "Infinite Yield",
 	Callback = function()
 
-loadstring(game:HttpGet(('https://raw.githubusercontent.com/MorningstarCircle/TMC/main/CharmedReborn'),true))()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
 
   	end    
 })
