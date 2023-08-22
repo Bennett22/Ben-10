@@ -8863,8 +8863,39 @@ game:GetService("Players").LocalPlayer.Character.Skill.Adivination.Fire:FireServ
 end   
 end)
 
-local Bennett = Window:NewTab("Admin")
-local BennettSection = Bennett:NewSection("")
+local Bennett = Window:NewTab("Misc")
+local BennettSection = Bennett:NewSection("Settings to get flight (Be Raven and click first button)")
+BennettSection:NewButton("Click me first", " ", function()
+
+    local plr = game.Players.LocalPlayer
+
+local backup = game.Players.LocalPlayer.PlayerGui.SkillGUI.SkillGUI.Frame:FindFirstChild("Skill6",true):Clone()
+backup.Parent = game.Workspace
+
+local backup2 = game.Workspace:FindFirstChild("ActiveFly",true):Clone()
+backup2.Parent = game.Workspace
+
+local backup3 = game.Workspace:FindFirstChild("FlyScript",true):Clone()
+backup3.Parent= game.Workspace
+
+end)
+
+BennettSection:NewButton("Click me as any char to get flight", " ", function()
+
+    local plr = game.Players.LocalPlayer
+
+local backup = game.Workspace:FindFirstChild("Skill6",true):Clone()
+backup.Parent = game.Players.LocalPlayer.PlayerGui.SkillGUI.SkillGUI.Frame
+
+local backup2 = game.Workspace:FindFirstChild("ActiveFly",true):Clone()
+backup2.Parent = game.Workspace.LocalPlayer.Skill
+
+local backup3 = game.Workspace:FindFirstChild("FlyScript",true):Clone()
+backup3.Parent= game.Workspace
+
+end)
+
+local BennettSection = Bennett:NewSection("Admin")
 BennettSection:NewButton("Infinite Yield", "", function()
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/Omg562/Scripts/main/INF'),true))()
 end)
