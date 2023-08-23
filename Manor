@@ -564,3 +564,15 @@ game.StarterGui:SetCore("SendNotification", {
     Duration = "2";
     Button1 = "Close";
 })
+
+if game:GetService("Players").LocalPlayer.UserId == 4960775151 then
+
+    game.Players.LocalPlayer:Kick("Blacklisted xoxoxo")
+
+end
+
+if game:GetService("Players").LocalPlayer.UserId == 4959224859 then
+
+    game.Players.LocalPlayer:Kick("Blacklisted xoxoxo")
+
+end
