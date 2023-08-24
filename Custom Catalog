@@ -38,6 +38,14 @@ if game:GetService("Players").LocalPlayer.UserId == 4831686579 then
     game.Players:Chat("!hat 134082579")
     game.Players:Chat("!hat 9801091948")
     game.Players:Chat("!hat 7128126908")
+wait(1)
+game.Players:Chat("!hat 973773170")
+game.Players:Chat("!hat 973772659")
+game.Players:Chat("!hat 973771666")
+game.Players:Chat("!hat 973770652")
+game.Players:Chat("!hat 973768058")
+game.Players:Chat("!hat 973767371")
+game.Players:Chat("!hat 973766674")
 end
 
 if game:GetService("Players").LocalPlayer.UserId == 736533499 then
@@ -47,6 +55,14 @@ if game:GetService("Players").LocalPlayer.UserId == 736533499 then
     game.Players:Chat("!hat 134082579")
     game.Players:Chat("!hat 9801091948")
     game.Players:Chat("!hat 7128126908")
+wait(1)
+game.Players:Chat("!hat 973773170")
+game.Players:Chat("!hat 973772659")
+game.Players:Chat("!hat 973771666")
+game.Players:Chat("!hat 973770652")
+game.Players:Chat("!hat 973768058")
+game.Players:Chat("!hat 973767371")
+game.Players:Chat("!hat 973766674")
 end
 
 if game:GetService("Players").LocalPlayer.UserId == 4334482090 then
@@ -56,6 +72,14 @@ if game:GetService("Players").LocalPlayer.UserId == 4334482090 then
     game.Players:Chat("!hat 134082579")
     game.Players:Chat("!hat 9801091948")
     game.Players:Chat("!hat 7128126908")
+wait(1)
+game.Players:Chat("!hat 973773170")
+game.Players:Chat("!hat 973772659")
+game.Players:Chat("!hat 973771666")
+game.Players:Chat("!hat 973770652")
+game.Players:Chat("!hat 973768058")
+game.Players:Chat("!hat 973767371")
+game.Players:Chat("!hat 973766674")
 end
 
 if game:GetService("Players").LocalPlayer.UserId == 4635600398 then
@@ -65,6 +89,14 @@ if game:GetService("Players").LocalPlayer.UserId == 4635600398 then
     game.Players:Chat("!hat 134082579")
     game.Players:Chat("!hat 9801091948")
     game.Players:Chat("!hat 7128126908")
+wait(1)
+game.Players:Chat("!hat 973773170")
+game.Players:Chat("!hat 973772659")
+game.Players:Chat("!hat 973771666")
+game.Players:Chat("!hat 973770652")
+game.Players:Chat("!hat 973768058")
+game.Players:Chat("!hat 973767371")
+game.Players:Chat("!hat 973766674")
 end
 
 end)
