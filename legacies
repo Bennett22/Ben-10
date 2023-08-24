@@ -659,55 +659,21 @@ game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpa
 
 local BennettSection = Bennett:NewSection("Witch")
 
-                        BennettSection:NewToggle("Good Spell Combo", "Keybind (1)", function()
-    print("You just clicked the bind")
-    
-    local function getPlayer()
-        local userInput = game:GetService("UserInputService")
-        local cam = workspace.CurrentCamera
-        local mousePos = userInput:GetMouseLocation()
-        local mouseRay = cam:ViewportPointToRay(mousePos.X, mousePos.Y)
-        players = {}
-        for _, x in next, game:GetService('Players'):GetPlayers() do
-            players[#players + 1] = x.Character
-        end
-        local raycastParams = RaycastParams.new()
-        raycastParams.FilterType = Enum.RaycastFilterType.Whitelist
-        raycastParams.FilterDescendantsInstances = players
-        raycastParams.IgnoreWater = true
-        local raycastResult = workspace:Raycast(mouseRay.Origin, mouseRay.Direction * 1000, raycastParams)
-        if raycastResult then
-            for _, x in next, game:
-	    GetService('Players'):GetPlayers() do
-                if not raycastResult.Instance:IsDescendantOf(x.Character) then
-                    continue
-                end
-                return x
-            end
-        end
-        return false
-    end
+BennettSection:NewButton("Crash the server", "", function()
+    print("Clicked")
+    local Plr = game.Players.LocalPlayer
+    for i, Player in pairs (game.Players:GetPlayers()) do
 
-    local function Set(list)
-        local set = {}
-        for _, l in ipairs(list) do
-            if l then
-                set[l] = true
-            end
-        end
-        return set
-    end
-
-    game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
-        if key == "1" then
-            local player = getPlayer()
-            if player then
+        if Player.Character ~= nil and Player ~= Plr then
+            local mag = (Player.Character.UpperTorso.Position - Plr.Character.UpperTorso.Position).magnitude
+            if mag < 100000 then
+                local Target = Player.Character or Player.CharacterAdded:Wait()
 
 local args = {
     [1] = {
         [1] = {
             [1] = "\6",
-            [2] = player.Character,
+            [2] = Target,
             [3] = "Crescere abor"
         },
         [2] = {
@@ -717,7 +683,7 @@ local args = {
         },
         [3] = {
             [1] = "\4",
-            [2] = player.Character,
+            [2] = Target,
             [3] = game:GetService("SoundService"):WaitForChild("NormalCast")
         }
     }
@@ -732,7 +698,7 @@ local args = {
     [1] = {
         [1] = {
             [1] = "\6",
-            [2] = player.Character,
+            [2] = Target,
             [3] = "Incendia"
         },
         [2] = {
@@ -742,7 +708,7 @@ local args = {
         },
         [3] = {
             [1] = "\4",
-            [2] = player.Character,
+            [2] = Target,
             [3] = game:GetService("SoundService"):WaitForChild("NormalCast")
         }
     }
@@ -756,7 +722,7 @@ game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpa
     [1] = {
         [1] = {
             [1] = "\6",
-            [2] = player.Character,
+            [2] = Target,
             [3] = "Confractus ab intus"
         },
         [2] = {
@@ -766,7 +732,7 @@ game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpa
         },
         [3] = {
             [1] = "\4",
-            [2] = player.Character,
+            [2] = Target,
             [3] = game:GetService("SoundService"):WaitForChild("NormalCast")
         }
     }
@@ -780,7 +746,7 @@ game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpa
     [1] = {
         [1] = {
             [1] = "\6",
-            [2] = player.Character,
+            [2] = Target,
             [3] = "Errox Femus"
         },
         [2] = {
@@ -790,7 +756,7 @@ game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpa
         },
         [3] = {
             [1] = "\4",
-            [2] = player.Character,
+            [2] = Target,
             [3] = game:GetService("SoundService"):WaitForChild("NormalCast")
         }
     }
@@ -798,8 +764,9 @@ game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpa
 
 game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
  
+
             end
         end
-        end)
-        end)
+end   
+end)
 
