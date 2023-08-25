@@ -264,6 +264,36 @@ game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForCh
 	end    
 })
 
+BennettTab:AddButton({
+	Name = "Transform Into Mermaid",
+	Callback = function()
+
+
+local args = {
+    [1] = "Water"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("Transform"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Detransform",
+	Callback = function()
+
+local args = {
+    [1] = "Human"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("UnTransform"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+
 local BennettTab = Window:MakeTab({
 	Name = "Characters",
 	Icon = "rbxassetid://14458282849",
