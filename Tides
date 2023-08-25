@@ -268,7 +268,7 @@ BennettTab:AddParagraph("Transform to unglitch","they might be stuck forver 🥰
 
 BennettTab:AddBind({
 	Name = "Glitch Someone",
-	Default = Enum.KeyCode.L,
+	Default = Enum.KeyCode.Nine,
 	Hold = false,
 	Callback = function()
 		print("You just clicked the bind")
@@ -309,7 +309,7 @@ BennettTab:AddBind({
      end
  
      game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
-         if key == "l" then
+         if key == "9" then
              local player = getPlayer()
              if player then
 
