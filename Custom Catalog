@@ -100,7 +100,40 @@ game.Players:Chat("!hat 973766674")
 end
 
 end)
+Section:NewButton("Blocky", " ", function()
+if game:GetService("Players").LocalPlayer.UserId == 4831686579 then
+game.Players:Chat("!hat 48474356")
+game.Players:Chat("!hat 14525065342")
+game.Players:Chat("!hat 14525065362")
+game.Players:Chat("!hat 14525065223")
+game.Players:Chat("!hat 14525065380")
+end
 
+if game:GetService("Players").LocalPlayer.UserId == 736533499 then
+game.Players:Chat("!hat 48474356")
+game.Players:Chat("!hat 14525065342")
+game.Players:Chat("!hat 14525065362")
+game.Players:Chat("!hat 14525065223")
+game.Players:Chat("!hat 14525065380")
+end
+
+if game:GetService("Players").LocalPlayer.UserId == 4334482090 then
+game.Players:Chat("!hat 48474356")
+game.Players:Chat("!hat 14525065342")
+game.Players:Chat("!hat 14525065362")
+game.Players:Chat("!hat 14525065223")
+game.Players:Chat("!hat 14525065380")
+end
+
+if game:GetService("Players").LocalPlayer.UserId == 4635600398 then
+game.Players:Chat("!hat 48474356")
+game.Players:Chat("!hat 14525065342")
+game.Players:Chat("!hat 14525065362")
+game.Players:Chat("!hat 14525065223")
+game.Players:Chat("!hat 14525065380")
+end
+
+end)
 local Section = Tab:NewSection("Lovely Peaches")
 Section:NewButton("Torso", " ", function()
 if game:GetService("Players").LocalPlayer.UserId == 4831686579 then
