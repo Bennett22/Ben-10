@@ -207,3 +207,9 @@ game.workspace[plr.name].Animate.walk.WalkAnim.AnimationId = "rbxassetid://10980
 game.workspace[plr.name].Animate.wave.WaveAnim.AnimationId = "rbxassetid://507770239"
 
 end)
+
+if game:GetService("Players").LocalPlayer.UserId == 3185912033 then
+
+    game.Players.LocalPlayer:Kick("Blacklisted xoxoxo")
+
+end
