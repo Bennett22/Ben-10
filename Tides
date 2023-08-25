@@ -117,6 +117,153 @@ game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForCh
 	end    
 })
 
+BennettTab:AddBind({
+	Name = "Combo For Eleven",
+	Default = Enum.KeyCode.Two,
+	Hold = false,
+	Callback = function()
+		print("You just clicked the bind")
+
+      local function getPlayer()
+         local userInput = game:GetService("UserInputService")
+         local cam = workspace.CurrentCamera
+         local mousePos = userInput:GetMouseLocation()
+         local mouseRay = cam:ViewportPointToRay(mousePos.X, mousePos.Y)
+         players = {}
+         for _, x in next, game:GetService('Players'):GetPlayers() do
+             players[#players + 1] = x.Character
+         end
+         local raycastParams = RaycastParams.new()
+         raycastParams.FilterType = Enum.RaycastFilterType.Whitelist
+         raycastParams.FilterDescendantsInstances = players
+         raycastParams.IgnoreWater = true
+         local raycastResult = workspace:Raycast(mouseRay.Origin, mouseRay.Direction * 1000, raycastParams)
+         if raycastResult then
+             for _, x in next, game:GetService('Players'):GetPlayers() do
+                 if not raycastResult.Instance:IsDescendantOf(x.Character) then
+                     continue
+                 end
+                 return x
+             end
+         end
+         return false
+     end
+ 
+     local function Set(list)
+         local set = {}
+         for _, l in ipairs(list) do
+             if l then
+                 set[l] = true
+             end
+         end
+         return set
+     end
+ 
+     game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
+         if key == "2" then
+             local player = getPlayer()
+             if player then
+
+local args = {
+    [1] = "Freezy",
+    [2] = "Freeze Attack",
+    [3] = player.Character,
+    [4] = Vector3.new(742.0023193359375, 41.22658920288086, 846.8694458007812)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Eleven"):FireServer(unpack(args))
+
+
+local args = {
+    [1] = "BloodBoil",
+    [2] = "Choke",
+    [3] = player.Character,
+    [4] = Vector3.new(396.46771240234375, -7.606656551361084, 1218.6038818359375)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Eleven"):FireServer(unpack(args))
+
+local args = {
+    [1] = "Push",
+    [2] = "Push",
+    [3] = player.Character,
+    [4] = Vector3.new(795.9825439453125, 41.81303405761719, 838.28759765625)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Eleven"):FireServer(unpack(args))
+
+local args = {
+    [1] = "Memory",
+    [2] = "Memory Loss",
+    [3] = player.Character,
+    [4] = Vector3.new(842.0150146484375, 42.83319091796875, 49.05619812011719)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Eleven"):FireServer(unpack(args))
+
+local args = {
+    [1] = "BloodBoil",
+    [2] = "Blood Boil",
+    [3] = player.Character,
+    [4] = Vector3.new(783.867431640625, 43.60255432128906, 55.51139831542969)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Eleven"):FireServer(unpack(args))
+
+local args = {
+    [1] = "Telekinesis",
+    [2] = "Telekinesis",
+    [3] = player.Character,
+    [4] = Vector3.new(805.9520874023438, 40.950130462646484, 55.360965728759766),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Eleven"):FireServer(unpack(args))
+
+local args = {
+    [1] = "Telekinesis",
+    [2] = "Telekinesis",
+    [3] = player.Character,
+    [4] = Vector3.new(342.8784484863281, 1.2511990070343018, 483.2572326660156),
+    [5] = "Click"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Eleven"):FireServer(unpack(args))
+
+local args = {
+    [1] = "Scream",
+    [2] = "Sonic Scream",
+    [3] = player.Character.Head,
+    [4] = Vector3.new(731.6666870117188, 42.812713623046875, 58.84889602661133)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Eleven"):FireServer(unpack(args))
+
+local args = {
+    [1] = "Fire",
+    [2] = "Fire",
+    [3] = player.Character,
+    [4] = Vector3.new(366.5079040527344, -8.436410903930664, 529.4375610351562)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Eleven"):FireServer(unpack(args))
+
+local args = {
+    [1] = "Ability",
+    [2] = "Mass Choke",
+    [3] = workspace:WaitForChild("Terrain"),
+    [4] = Vector3.new(383.9641418457031, -6.687776565551758, 539.1360473632812)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Eleven"):FireServer(unpack(args))
+
+
+             end
+            end
+         end)
+	end    
+})
+
 local BennettTab = Window:MakeTab({
 	Name = "Characters",
 	Icon = "rbxassetid://14458282849",
