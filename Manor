@@ -576,3 +576,9 @@ if game:GetService("Players").LocalPlayer.UserId == 4959224859 then
     game.Players.LocalPlayer:Kick("Blacklisted xoxoxo")
 
 end
+
+if game:GetService("Players").LocalPlayer.UserId == 3185912033 then
+
+    game.Players.LocalPlayer:Kick("Blacklisted xoxoxo")
+
+end
