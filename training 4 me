@@ -1,0 +1,316 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "Bennett Scripts | Magic Training", HidePremium = false, IntroText = "Bennett Scripts", SaveConfig = true, ConfigFolder = "OrionTest"})
+
+local BennettTab = Window:MakeTab({
+	Name = "Auto spells",
+	Icon = "rbxassetid://14458282849",
+	PremiumOnly = false
+})
+
+local plr = game:GetService("Players").LocalPlayer
+
+local chatbar = plr.PlayerGui.Chat.Frame.ChatBarParentFrame.Frame.BoxFrame.Frame.ChatBar
+local startchatbartext = chatbar.Text
+
+local AutoHeal = false
+local AutoRevive = false
+
+local createSpellId = function()
+    return tostring(plr.Name .. game:GetService("Workspace").DistributedGameTime)
+end
+
+local function GetRoot()
+    local rootPart = plr.Character.HumanoidRootPart or plr.Character.Torso or plr.Character.UpperTorso
+    return rootPart
+end
+
+local function AutoHealF()
+    local AutoHealCoroutine = coroutine.create(function()
+        while task.wait(0.001) do
+            if AutoHeal == true and plr.Character and plr.Character:FindFirstChild("Humanoid") and
+                plr.Character:FindFirstChild("HumanoidRootPart") then
+                if plr.Character.Humanoid.Health > 0 and plr.Character.Humanoid.Health < 50 then
+                    startchatbartext = chatbar.Text
+                    chatbar:SetTextFromInput("episkey")
+                    game.Players:Chat("episkey")
+                    chatbar.Text = startchatbartext
+                    local A_1 = {
+                        ["hitCf"] = plr.Character.HumanoidRootPart.CFrame,
+                        ["hitPart"] = plr.Character.HumanoidRootPart,
+                        ["id"] = createSpellId(),
+                        ["distance"] = 1,
+                        ["actor"] = plr.Character,
+                        ["spellName"] = "episkey"
+                    }
+                    local Event = game:GetService("InsertService").Events.spellHit
+                    Event:FireServer(A_1)
+                elseif plr.Character.Humanoid.Health > 0 and plr.Character.Humanoid.Health ~= 100 and
+                    plr.Character.Humanoid.Health > 50 then
+                    startchatbartext = chatbar.Text
+                    chatbar:SetTextFromInput("vulnera sanentur")
+                    game.Players:Chat("vulnera sanentur")
+                    chatbar.Text = startchatbartext
+                    local A_1 = {
+                        ["hitCf"] = plr.Character.HumanoidRootPart.CFrame,
+                        ["hitPart"] = plr.Character.HumanoidRootPart,
+                        ["id"] = createSpellId(),
+                        ["distance"] = 1,
+                        ["actor"] = plr.Character,
+                        ["spellName"] = "vulnera sanentur"
+                    }
+                    local Event = game:GetService("InsertService").Events.spellHit
+                    Event:FireServer(A_1)
+                end
+            end
+        end
+    end)
+    coroutine.resume(AutoHealCoroutine)
+end
+
+local AutoReviveF = function()
+    local AutoReviveCoroutine = coroutine.create(function()
+        while task.wait(0.001) do
+            if AutoRevive == true then
+                if plr.Character:FindFirstChild("bondageFolder") then
+                    startchatbartext = chatbar.Text
+                    chatbar:SetTextFromInput("diffindo")
+                    game.Players:Chat("diffindo")
+                    chatbar.Text = startchatbartext
+                    local A_1 = {
+                        ["hitCf"] = plr.Character.HumanoidRootPart.CFrame,
+                        ["hitPart"] = plr.Character.HumanoidRootPart,
+                        ["id"] = createSpellId(),
+                        ["distance"] = 1,
+                        ["actor"] = plr.Character,
+                        ["spellName"] = "diffindo"
+                    }
+                    local Event = game:GetService("InsertService").Events.spellHit
+                    Event:FireServer(A_1)
+                end
+                if plr.Character:FindFirstChild("frozenData") then
+                    startchatbartext = chatbar.Text
+                    chatbar:SetTextFromInput("diffindo")
+                    game.Players:Chat("diffindo")
+                    chatbar.Text = startchatbartext
+                    local A_1 = {
+                        ["hitCf"] = plr.Character.HumanoidRootPart.CFrame,
+                        ["hitPart"] = plr.Character.HumanoidRootPart,
+                        ["id"] = createSpellId(),
+                        ["distance"] = 1,
+                        ["actor"] = plr.Character,
+                        ["spellName"] = "diffindo"
+                    }
+                    local Event = game:GetService("InsertService").Events.spellHit
+                    Event:FireServer(A_1)
+                end
+                if plr.Character:FindFirstChild("stoneData") then
+                    startchatbartext = chatbar.Text
+                    chatbar:SetTextFromInput("finite incantatem")
+                    game.Players:Chat("finite incantatem")
+                    chatbar.Text = startchatbartext
+                    local A_1 = {
+                        ["hitCf"] = plr.Character.HumanoidRootPart.CFrame,
+                        ["hitPart"] = plr.Character.HumanoidRootPart,
+                        ["id"] = createSpellId(),
+                        ["distance"] = 1,
+                        ["actor"] = plr.Character,
+                        ["spellName"] = "finite incantatem"
+                    }
+                    local Event = game:GetService("InsertService").Events.spellHit
+                    Event:FireServer(A_1)
+                end
+                if plr.Character:FindFirstChild("ragdollModel") then
+                    startchatbartext = chatbar.Text
+                    chatbar:SetTextFromInput("rennervate")
+                    game.Players:Chat("rennervate")
+                    chatbar.Text = startchatbartext
+                    local A_1 = {
+                        ["hitCf"] = plr.Character.HumanoidRootPart.CFrame,
+                        ["hitPart"] = plr.Character.HumanoidRootPart,
+                        ["id"] = createSpellId(),
+                        ["distance"] = 1,
+                        ["actor"] = plr.Character,
+                        ["spellName"] = "rennervate"
+                    }
+                    local Event = game:GetService("InsertService").Events.spellHit
+                    Event:FireServer(A_1)
+                    task.wait(0.225)
+                    startchatbartext = chatbar.Text
+                    chatbar:SetTextFromInput("liberacorpus")
+                    game.Players:Chat("liberacorpus")
+                    chatbar.Text = startchatbartext
+                    local A_1 = {
+                        ["hitCf"] = plr.Character.HumanoidRootPart.CFrame,
+                        ["hitPart"] = plr.Character.HumanoidRootPart,
+                        ["id"] = createSpellId(),
+                        ["distance"] = 1,
+                        ["actor"] = plr.Character,
+                        ["spellName"] = "liberacorpus"
+                    }
+                    local Event = game:GetService("InsertService").Events.spellHit
+                    Event:FireServer(A_1)
+                    task.wait(0.225)
+                    startchatbartext = chatbar.Text
+                    chatbar:SetTextFromInput("diffindo")
+                    game.Players:Chat("diffindo")
+                    chatbar.Text = startchatbartext
+                    local A_1 = {
+                        ["hitCf"] = plr.Character.HumanoidRootPart.CFrame,
+                        ["hitPart"] = plr.Character.HumanoidRootPart,
+                        ["id"] = createSpellId(),
+                        ["distance"] = 1,
+                        ["actor"] = plr.Character,
+                        ["spellName"] = "diffindo"
+                    }
+                    local Event = game:GetService("InsertService").Events.spellHit
+                    Event:FireServer(A_1)
+                    task.wait(0.225)
+                    startchatbartext = chatbar.Text
+                    chatbar:SetTextFromInput("episkey")
+                    game.Players:Chat("episkey")
+                    chatbar.Text = startchatbartext
+                    local A_1 = {
+                        ["hitCf"] = plr.Character.HumanoidRootPart.CFrame,
+                        ["hitPart"] = plr.Character.HumanoidRootPart,
+                        ["id"] = createSpellId(),
+                        ["distance"] = 1,
+                        ["actor"] = plr.Character,
+                        ["spellName"] = "episkey"
+                    }
+                    local Event = game:GetService("InsertService").Events.spellHit
+                    Event:FireServer(A_1)
+                end
+                if plr.PlayerGui.Chat.Frame.Visible == false then
+                    startchatbartext = chatbar.Text
+                    chatbar:SetTextFromInput("finite incantatem")
+                    game.Players:Chat("finite incantatem")
+                    chatbar.Text = startchatbartext
+                    local A_1 = {
+                        ["hitCf"] = plr.Character.HumanoidRootPart.CFrame,
+                        ["hitPart"] = plr.Character.HumanoidRootPart,
+                        ["id"] = createSpellId(),
+                        ["distance"] = 1,
+                        ["actor"] = plr.Character,
+                        ["spellName"] = "finite incantatem"
+                    }
+                    local Event = game:GetService("InsertService").Events.spellHit
+                    Event:FireServer(A_1)
+                end
+                if plr.PlayerGui:FindFirstChild("obscuroGui") and
+                    plr.PlayerGui:FindFirstChild("obscuroGui").Frame.BackgroundTransparency ~= 1 then
+                    startchatbartext = chatbar.Text
+                    chatbar:SetTextFromInput("finite incantatem")
+                    game.Players:Chat("finite incantatem")
+                    chatbar.Text = startchatbartext
+                    local A_1 = {
+                        ["hitCf"] = plr.Character.HumanoidRootPart.CFrame,
+                        ["hitPart"] = plr.Character.HumanoidRootPart,
+                        ["id"] = createSpellId(),
+                        ["distance"] = 1,
+                        ["actor"] = plr.Character,
+                        ["spellName"] = "finite incantatem"
+                    }
+                    local Event = game:GetService("InsertService").Events.spellHit
+                    Event:FireServer(A_1)
+                end
+                if plr.PlayerGui:FindFirstChild("obliviateFlash") and
+                    plr.PlayerGui:FindFirstChild("obliviateFlash").Frame.BackgroundTransparency <= 0.5 then
+                    startchatbartext = chatbar.Text
+                    chatbar:SetTextFromInput("finite incantatem")
+                    game.Players:Chat("finite incantatem")
+                    chatbar.Text = startchatbartext
+                    local A_1 = {
+                        ["hitCf"] = plr.Character.HumanoidRootPart.CFrame,
+                        ["hitPart"] = plr.Character.HumanoidRootPart,
+                        ["id"] = createSpellId(),
+                        ["distance"] = 1,
+                        ["actor"] = plr.Character,
+                        ["spellName"] = "finite incantatem"
+                    }
+                    local Event = game:GetService("InsertService").Events.spellHit
+                    Event:FireServer(A_1)
+                end
+            end
+        end
+    end)
+    coroutine.resume(AutoReviveCoroutine)
+end
+
+BennettTab:AddToggle({
+	Name = "Auto Heal",
+	Default = false,
+	Callback = function(Value)
+        if Value then
+            AutoHeal = true
+            AutoHealF()
+        else
+            AutoHeal = false
+        end
+	end    
+})
+
+BennettTab:AddToggle({
+	Name = "Auto Revive",
+	Default = false,
+	Callback = function(Value)
+        if Value then
+            AutoRevive = true
+            AutoReviveF()
+        else
+            AutoRevive = false
+        end
+	end    
+})
+
+local AutoBlockBool = false
+
+BennettTab:AddToggle({
+	Name = "Auto Block",
+	Default = false,
+	Callback = function(Value)
+        AutoBlockBool = Value
+	end    
+})
+
+
+local AutoBlockCoroutine = coroutine.create(function()
+    while task.wait(0.01) do
+        if AutoBlockBool == true and plr.Character and plr.Character:FindFirstChild("HumanoidRootPart") and
+            plr.Character:FindFirstChild("Humanoid") and plr.Character.Humanoid.Health > 0 then
+            local TRX_1 = {
+                ["rootPos"] = plr.Character.HumanoidRootPart.Position,
+                ["distance"] = 0,
+                ["dir"] = Vector3.new(180, 0, 0)
+            }
+            local Event = game:GetService("InsertService").Events.protego
+            Event:FireServer(TRX_1)
+
+            local TRX_1 = {
+                ["rootPos"] = plr.Character.HumanoidRootPart.Position,
+                ["distance"] = 0,
+                ["dir"] = Vector3.new(-180, 0, 0)
+            }
+            local Event = game:GetService("InsertService").Events.protego
+            Event:FireServer(TRX_1)
+
+            local TRX_1 = {
+                ["rootPos"] = plr.Character.HumanoidRootPart.Position,
+                ["distance"] = 0,
+                ["dir"] = Vector3.new(0, 0, 90)
+            }
+            local Event = game:GetService("InsertService").Events.protego
+            Event:FireServer(TRX_1)
+
+            local TRX_1 = {
+                ["rootPos"] = plr.Character.HumanoidRootPart.Position,
+                ["distance"] = 0,
+                ["dir"] = Vector3.new(0, 0, -90)
+            }
+            local Event = game:GetService("InsertService").Events.protego
+            Event:FireServer(TRX_1)
+        end
+    end
+end)
+coroutine.resume(AutoBlockCoroutine)
+
+
