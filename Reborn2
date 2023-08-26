@@ -1806,14 +1806,6 @@ BennettTab:AddButton({
   	end    
 })
 
-BennettTab:AddButton({
-	Name = "Waterfall",
-	Callback = function()
-
-      game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-386, 86, 302))
-
-  	end    
-})
 
 BennettTab:AddButton({
 	Name = "Temple",
