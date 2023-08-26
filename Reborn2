@@ -1,0 +1,1610 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "Bennett Scripts | Olympus Reborn", HidePremium = false, IntroText = "Bennett Scripts", SaveConfig = true, ConfigFolder = "OrionTest"})
+
+local BennettTab = Window:MakeTab({
+	Name = "Characters",
+	Icon = "rbxassetid://14458282849",
+	PremiumOnly = false
+})
+
+local Section = BennettTab:AddSection({
+	Name = "Goddesses"
+})
+
+BennettTab:AddButton({
+	Name = "Hera",
+	Callback = function()
+
+local args = {
+    [1] = "Hera"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("PickCharacter"):FireServer(unpack(args))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Persephone",
+	Callback = function()
+
+local args = {
+    [1] = "Persephone"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("PickCharacter"):FireServer(unpack(args))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Hestia",
+	Callback = function()
+
+local args = {
+    [1] = "Hestia"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("PickCharacter"):FireServer(unpack(args))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Athena",
+	Callback = function()
+
+local args = {
+    [1] = "Athena"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("PickCharacter"):FireServer(unpack(args))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Aphrodite",
+	Callback = function()
+
+local args = {
+    [1] = "Aphrodite"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("PickCharacter"):FireServer(unpack(args))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Hecate",
+	Callback = function()
+
+local args = {
+    [1] = "Hecate"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("PickCharacter"):FireServer(unpack(args))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Iris",
+	Callback = function()
+
+local args = {
+    [1] = "Iris"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("PickCharacter"):FireServer(unpack(args))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Circe",
+	Callback = function()
+
+local args = {
+    [1] = "Circe"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("PickCharacter"):FireServer(unpack(args))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Amphitrite",
+	Callback = function()
+
+local args = {
+    [1] = "Amphitrite"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("PickCharacter"):FireServer(unpack(args))
+
+  	end    
+})
+
+local Section = BennettTab:AddSection({
+	Name = "Gods"
+})
+
+BennettTab:AddButton({
+	Name = "Poseidon",
+	Callback = function()
+
+local args = {
+    [1] = "Poseidon"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("PickCharacter"):FireServer(unpack(args))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Apollo",
+	Callback = function()
+
+local args = {
+    [1] = "Apollo"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("PickCharacter"):FireServer(unpack(args))
+
+  	end    
+})
+
+local Section = BennettTab:AddSection({
+	Name = "Not In Game"
+})
+
+BennettTab:AddButton({
+	Name = "Hades",
+	Callback = function()
+
+local args = {
+    [1] = "Hades"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("PickCharacter"):FireServer(unpack(args))
+
+  	end    
+})
+local BennettTab = Window:MakeTab({
+	Name = "Powers",
+	Icon = "rbxassetid://14458282849",
+	PremiumOnly = false
+})
+
+local Section = BennettTab:AddSection({
+	Name = "Hera"
+})
+
+BennettTab:AddTextbox({
+	Name = "Glitch Someone",
+	Default = "",
+	TextDisappear = true,
+	Callback = function(txt)
+      local Players = game:GetService("Players")
+      local msg = txt
+      local function findPlayer(stringg)
+          for _, v in pairs(Players:GetPlayers()) do
+              if stringg:lower() == (v.Name:lower()):sub(1, #stringg) then
+                  return v
+              end
+          end
+      end
+  
+      local player = findPlayer(msg)
+      local CHAR = player.Character
+
+local args = {
+    [1] = "telekinesis",
+    [2] = player.Character.UpperTorso
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Olympians"):WaitForChild("Goddesses"):WaitForChild("Hera"):WaitForChild("PowerEvents"):WaitForChild("HeraEvents"):FireServer(unpack(args))
+
+
+	end	  
+})
+
+BennettTab:AddBind({
+	Name = "Glitch",
+	Default = Enum.KeyCode.One,
+	Hold = false,
+	Callback = function()
+		print("You just clicked the bind")
+
+      local function getPlayer()
+         local userInput = game:GetService("UserInputService")
+         local cam = workspace.CurrentCamera
+         local mousePos = userInput:GetMouseLocation()
+         local mouseRay = cam:ViewportPointToRay(mousePos.X, mousePos.Y)
+         players = {}
+         for _, x in next, game:GetService('Players'):GetPlayers() do
+             players[#players + 1] = x.Character
+         end
+         local raycastParams = RaycastParams.new()
+         raycastParams.FilterType = Enum.RaycastFilterType.Whitelist
+         raycastParams.FilterDescendantsInstances = players
+         raycastParams.IgnoreWater = true
+         local raycastResult = workspace:Raycast(mouseRay.Origin, mouseRay.Direction * 1000, raycastParams)
+         if raycastResult then
+             for _, x in next, game:GetService('Players'):GetPlayers() do
+                 if not raycastResult.Instance:IsDescendantOf(x.Character) then
+                     continue
+                 end
+                 return x
+             end
+         end
+         return false
+     end
+ 
+     local function Set(list)
+         local set = {}
+         for _, l in ipairs(list) do
+             if l then
+                 set[l] = true
+             end
+         end
+         return set
+     end
+ 
+     game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
+         if key == "1" then
+             local player = getPlayer()
+             if player then
+
+local args = {
+    [1] = "telekinesis",
+    [2] = player.Character.UpperTorso
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Olympians"):WaitForChild("Goddesses"):WaitForChild("Hera"):WaitForChild("PowerEvents"):WaitForChild("HeraEvents"):FireServer(unpack(args))
+
+             end
+            end
+         end)
+	end    
+})
+
+BennettTab:AddBind({
+	Name = "Raven Invocation",
+	Default = Enum.KeyCode.Two,
+	Hold = true,
+	Callback = function()
+
+    clicktpon = true                
+        plr = game.Players.LocalPlayer
+        hum = plr.Character.HumanoidRootPart
+        mouse = plr:GetMouse()
+        mouse.KeyDown:connect(function(key)
+        if key == '2' then
+        if mouse.Target then
+        if clicktpon then
+
+local args = {
+    [1] = "raven",
+    [2] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 1.5, mouse.Hit.z)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Olympians"):WaitForChild("Goddesses"):WaitForChild("Hera"):WaitForChild("PowerEvents"):WaitForChild("HeraEvents"):FireServer(unpack(args))
+
+end
+end
+end
+end)
+end    
+})
+
+BennettTab:AddBind({
+	Name = "Negation Curse",
+	Default = Enum.KeyCode.Three,
+	Hold = false,
+	Callback = function()
+		print("You just clicked the bind")
+
+      local function getPlayer()
+         local userInput = game:GetService("UserInputService")
+         local cam = workspace.CurrentCamera
+         local mousePos = userInput:GetMouseLocation()
+         local mouseRay = cam:ViewportPointToRay(mousePos.X, mousePos.Y)
+         players = {}
+         for _, x in next, game:GetService('Players'):GetPlayers() do
+             players[#players + 1] = x.Character
+         end
+         local raycastParams = RaycastParams.new()
+         raycastParams.FilterType = Enum.RaycastFilterType.Whitelist
+         raycastParams.FilterDescendantsInstances = players
+         raycastParams.IgnoreWater = true
+         local raycastResult = workspace:Raycast(mouseRay.Origin, mouseRay.Direction * 1000, raycastParams)
+         if raycastResult then
+             for _, x in next, game:GetService('Players'):GetPlayers() do
+                 if not raycastResult.Instance:IsDescendantOf(x.Character) then
+                     continue
+                 end
+                 return x
+             end
+         end
+         return false
+     end
+ 
+     local function Set(list)
+         local set = {}
+         for _, l in ipairs(list) do
+             if l then
+                 set[l] = true
+             end
+         end
+         return set
+     end
+ 
+     game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
+         if key == "3" then
+             local player = getPlayer()
+             if player then
+
+local args = {
+    [1] = "curse",
+    [2] = player.Character.UpperTorso
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Olympians"):WaitForChild("Goddesses"):WaitForChild("Hera"):WaitForChild("PowerEvents"):WaitForChild("HeraEvents"):FireServer(unpack(args))
+
+             end
+            end
+         end)
+	end    
+})
+
+BennettTab:AddBind({
+	Name = "Channel",
+	Default = Enum.KeyCode.Four,
+	Hold = false,
+	Callback = function()
+		print("You just clicked the bind")
+
+      local function getPlayer()
+         local userInput = game:GetService("UserInputService")
+         local cam = workspace.CurrentCamera
+         local mousePos = userInput:GetMouseLocation()
+         local mouseRay = cam:ViewportPointToRay(mousePos.X, mousePos.Y)
+         players = {}
+         for _, x in next, game:GetService('Players'):GetPlayers() do
+             players[#players + 1] = x.Character
+         end
+         local raycastParams = RaycastParams.new()
+         raycastParams.FilterType = Enum.RaycastFilterType.Whitelist
+         raycastParams.FilterDescendantsInstances = players
+         raycastParams.IgnoreWater = true
+         local raycastResult = workspace:Raycast(mouseRay.Origin, mouseRay.Direction * 1000, raycastParams)
+         if raycastResult then
+             for _, x in next, game:GetService('Players'):GetPlayers() do
+                 if not raycastResult.Instance:IsDescendantOf(x.Character) then
+                     continue
+                 end
+                 return x
+             end
+         end
+         return false
+     end
+ 
+     local function Set(list)
+         local set = {}
+         for _, l in ipairs(list) do
+             if l then
+                 set[l] = true
+             end
+         end
+         return set
+     end
+ 
+     game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
+         if key == "4" then
+             local player = getPlayer()
+             if player then
+
+local args = {
+    [1] = "channel",
+    [2] = player.Character.Head
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Olympians"):WaitForChild("Goddesses"):WaitForChild("Hera"):WaitForChild("PowerEvents"):WaitForChild("HeraEvents"):FireServer(unpack(args))
+
+             end
+            end
+         end)
+	end    
+})
+
+BennettTab:AddButton({
+	Name = "Get Flight (F)",
+	Callback = function()
+    local plr = game.Players.LocalPlayer
+local backup = game.Workspace.HeraOld.PowerClient.Powers.Flight:Clone()
+backup.Parent = plr.Character.PowerClient
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Remove Flight",
+	Callback = function()
+
+    local plr = game.Players.LocalPlayer
+
+plr.Character.PowerClient.Flight:Destroy()
+
+  	end    
+})
+
+local Section = BennettTab:AddSection({
+	Name = "Persephone"
+})
+
+BennettTab:AddBind({
+	Name = "Pomegranate Necrosis",
+	Default = Enum.KeyCode.Five,
+	Hold = true,
+	Callback = function()
+
+    clicktpon = true                
+        plr = game.Players.LocalPlayer
+        hum = plr.Character.HumanoidRootPart
+        mouse = plr:GetMouse()
+        mouse.KeyDown:connect(function(key)
+        if key == '5' then
+        if mouse.Target then
+        if clicktpon then
+
+local args = {
+    [1] = "seed",
+    [2] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 1.5, mouse.Hit.z)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Olympians"):WaitForChild("Goddesses"):WaitForChild("Persephone"):WaitForChild("PowerEvents"):WaitForChild("PersephoneEvents"):FireServer(unpack(args))
+
+end
+end
+end
+end)
+end    
+})
+
+BennettTab:AddBind({
+	Name = "Daughter Of Spring",
+	Default = Enum.KeyCode.Six,
+	Hold = true,
+	Callback = function()
+
+    clicktpon = true                
+        plr = game.Players.LocalPlayer
+        hum = plr.Character.HumanoidRootPart
+        mouse = plr:GetMouse()
+        mouse.KeyDown:connect(function(key)
+        if key == '6' then
+        if mouse.Target then
+        if clicktpon then
+
+local args = {
+    [1] = "explode",
+    [2] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Olympians"):WaitForChild("Goddesses"):WaitForChild("Persephone"):WaitForChild("PowerEvents"):WaitForChild("PersephoneEvents"):FireServer(unpack(args))
+
+end
+end
+end
+end)
+end    
+})
+
+BennettTab:AddBind({
+	Name = "Flourish",
+	Default = Enum.KeyCode.Seven,
+	Hold = true,
+	Callback = function()
+
+    clicktpon = true                
+        plr = game.Players.LocalPlayer
+        hum = plr.Character.HumanoidRootPart
+        mouse = plr:GetMouse()
+        mouse.KeyDown:connect(function(key)
+        if key == '7' then
+        if mouse.Target then
+        if clicktpon then
+
+local args = {
+    [1] = "flower",
+    [2] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Olympians"):WaitForChild("Goddesses"):WaitForChild("Persephone"):WaitForChild("PowerEvents"):WaitForChild("PersephoneEvents"):FireServer(unpack(args))
+
+end
+end
+end
+end)
+end    
+})
+
+local Section = BennettTab:AddSection({
+	Name = "Hestia"
+})
+
+BennettTab:AddBind({
+	Name = "Flaming",
+	Default = Enum.KeyCode.Eight,
+	Hold = true,
+	Callback = function()
+
+    clicktpon = true                
+        plr = game.Players.LocalPlayer
+        hum = plr.Character.HumanoidRootPart
+        mouse = plr:GetMouse()
+        mouse.KeyDown:connect(function(key)
+        if key == '8' then
+        if mouse.Target then
+        if clicktpon then
+
+local args = {
+    [1] = "flaming",
+    [2] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Olympians"):WaitForChild("Goddesses"):WaitForChild("Hestia"):WaitForChild("PowerEvents"):WaitForChild("HestiaEvents"):FireServer(unpack(args))
+
+end
+end
+end
+end)
+end    
+})
+
+BennettTab:AddButton({
+	Name = "Fiery Eruption",
+	Callback = function()
+
+local args = {
+    [1] = "explosion",
+    [2] = Vector3.new(465.3851623535156, 6.312315940856934, -258.054443359375)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Olympians"):WaitForChild("Goddesses"):WaitForChild("Hestia"):WaitForChild("PowerEvents"):WaitForChild("HestiaEvents"):FireServer(unpack(args))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Shield",
+	Callback = function()
+
+local args = {
+    [1] = "shield",
+    [2] = Vector3.new(463.4930725097656, 6.1625776290893555, -210.7328643798828)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Olympians"):WaitForChild("Goddesses"):WaitForChild("Hestia"):WaitForChild("PowerEvents"):WaitForChild("HestiaEvents"):FireServer(unpack(args))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Unshield",
+	Callback = function()
+
+local args = {
+    [1] = "shieldend",
+    [2] = Vector3.new(463.4930725097656, 6.1625776290893555, -210.7328643798828)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Olympians"):WaitForChild("Goddesses"):WaitForChild("Hestia"):WaitForChild("PowerEvents"):WaitForChild("HestiaEvents"):FireServer(unpack(args))
+
+  	end    
+})
+
+local Section = BennettTab:AddSection({
+	Name = "Athena"
+})
+
+BennettTab:AddBind({
+	Name = "Conjuration",
+	Default = Enum.KeyCode.Nine,
+	Hold = true,
+	Callback = function()
+
+    clicktpon = true                
+        plr = game.Players.LocalPlayer
+        hum = plr.Character.HumanoidRootPart
+        mouse = plr:GetMouse()
+        mouse.KeyDown:connect(function(key)
+        if key == '9' then
+        if mouse.Target then
+        if clicktpon then
+
+local args = {
+    [1] = "conjure",
+    [2] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Olympians"):WaitForChild("Goddesses"):WaitForChild("Athena"):WaitForChild("PowerEvents"):WaitForChild("AthenaEvents"):FireServer(unpack(args))
+
+end
+end
+end
+end)
+end    
+})
+
+BennettTab:AddButton({
+	Name = "Regeneration Boost",
+	Callback = function()
+
+local args = {
+    [1] = "heal",
+    [2] = Vector3.new(-576.1573486328125, 94, -127.02186584472656)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Olympians"):WaitForChild("Goddesses"):WaitForChild("Athena"):WaitForChild("PowerEvents"):WaitForChild("AthenaEvents"):FireServer(unpack(args))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Shockwave",
+	Callback = function()
+
+local args = {
+    [1] = "wave",
+    [2] = Vector3.new(-481.4220886230469, 94, -182.74241638183594)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Olympians"):WaitForChild("Goddesses"):WaitForChild("Athena"):WaitForChild("PowerEvents"):WaitForChild("AthenaEvents"):FireServer(unpack(args))
+
+  	end    
+})
+
+local Section = BennettTab:AddSection({
+	Name = "Aphrodite"
+})
+
+BennettTab:AddBind({
+	Name = "Kiss",
+	Default = Enum.KeyCode.Zero,
+	Hold = true,
+	Callback = function()
+
+    clicktpon = true                
+        plr = game.Players.LocalPlayer
+        hum = plr.Character.HumanoidRootPart
+        mouse = plr:GetMouse()
+        mouse.KeyDown:connect(function(key)
+        if key == '0' then
+        if mouse.Target then
+        if clicktpon then
+
+local args = {
+    [1] = "kiss",
+    [2] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 1.5, mouse.Hit.z)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Olympians"):WaitForChild("Goddesses"):WaitForChild("Aphrodite"):WaitForChild("PowerEvents"):WaitForChild("AphroditeEvents"):FireServer(unpack(args))
+
+end
+end
+end
+end)
+end    
+})
+
+BennettTab:AddBind({
+	Name = "Love Birds",
+	Default = Enum.KeyCode.Q,
+	Hold = true,
+	Callback = function()
+
+    clicktpon = true                
+        plr = game.Players.LocalPlayer
+        hum = plr.Character.HumanoidRootPart
+        mouse = plr:GetMouse()
+        mouse.KeyDown:connect(function(key)
+        if key == 'q' then
+        if mouse.Target then
+        if clicktpon then
+
+local args = {
+    [1] = "dove",
+    [2] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 1.5, mouse.Hit.z)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Olympians"):WaitForChild("Goddesses"):WaitForChild("Aphrodite"):WaitForChild("PowerEvents"):WaitForChild("AphroditeEvents"):FireServer(unpack(args))
+
+end
+end
+end
+end)
+end    
+})
+
+BennettTab:AddBind({
+	Name = "Undying Love",
+	Default = Enum.KeyCode.E,
+	Hold = false,
+	Callback = function()
+		print("You just clicked the bind")
+
+      local function getPlayer()
+         local userInput = game:GetService("UserInputService")
+         local cam = workspace.CurrentCamera
+         local mousePos = userInput:GetMouseLocation()
+         local mouseRay = cam:ViewportPointToRay(mousePos.X, mousePos.Y)
+         players = {}
+         for _, x in next, game:GetService('Players'):GetPlayers() do
+             players[#players + 1] = x.Character
+         end
+         local raycastParams = RaycastParams.new()
+         raycastParams.FilterType = Enum.RaycastFilterType.Whitelist
+         raycastParams.FilterDescendantsInstances = players
+         raycastParams.IgnoreWater = true
+         local raycastResult = workspace:Raycast(mouseRay.Origin, mouseRay.Direction * 1000, raycastParams)
+         if raycastResult then
+             for _, x in next, game:GetService('Players'):GetPlayers() do
+                 if not raycastResult.Instance:IsDescendantOf(x.Character) then
+                     continue
+                 end
+                 return x
+             end
+         end
+         return false
+     end
+ 
+     local function Set(list)
+         local set = {}
+         for _, l in ipairs(list) do
+             if l then
+                 set[l] = true
+             end
+         end
+         return set
+     end
+ 
+     game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
+         if key == "e" then
+             local player = getPlayer()
+             if player then
+
+local args = {
+    [1] = "undying2",
+    [2] = player.Character.Head
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Olympians"):WaitForChild("Goddesses"):WaitForChild("Aphrodite"):WaitForChild("PowerEvents"):WaitForChild("AphroditeEvents"):FireServer(unpack(args))
+
+             end
+            end
+         end)
+	end    
+})
+
+BennettTab:AddButton({
+	Name = "Dismissal",
+	Callback = function()
+
+local args = {
+    [1] = "stomp",
+    [2] = Vector3.new(-181.445556640625, 103.45001983642578, -313.7196044921875)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Olympians"):WaitForChild("Goddesses"):WaitForChild("Aphrodite"):WaitForChild("PowerEvents"):WaitForChild("AphroditeEvents"):FireServer(unpack(args))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Insatiable",
+	Callback = function()
+
+local args = {
+    [1] = "undying",
+    [2] = Vector3.new(-30.4154109954834, 120.27239990234375, -300.99725341796875)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Olympians"):WaitForChild("Goddesses"):WaitForChild("Aphrodite"):WaitForChild("PowerEvents"):WaitForChild("AphroditeEvents"):FireServer(unpack(args))
+
+  	end    
+})
+
+local Section = BennettTab:AddSection({
+	Name = "Hecate"
+})
+
+BennettTab:AddBind({
+	Name = "Telekinetic Push",
+	Default = Enum.KeyCode.R,
+	Hold = false,
+	Callback = function()
+		print("You just clicked the bind")
+
+      local function getPlayer()
+         local userInput = game:GetService("UserInputService")
+         local cam = workspace.CurrentCamera
+         local mousePos = userInput:GetMouseLocation()
+         local mouseRay = cam:ViewportPointToRay(mousePos.X, mousePos.Y)
+         players = {}
+         for _, x in next, game:GetService('Players'):GetPlayers() do
+             players[#players + 1] = x.Character
+         end
+         local raycastParams = RaycastParams.new()
+         raycastParams.FilterType = Enum.RaycastFilterType.Whitelist
+         raycastParams.FilterDescendantsInstances = players
+         raycastParams.IgnoreWater = true
+         local raycastResult = workspace:Raycast(mouseRay.Origin, mouseRay.Direction * 1000, raycastParams)
+         if raycastResult then
+             for _, x in next, game:GetService('Players'):GetPlayers() do
+                 if not raycastResult.Instance:IsDescendantOf(x.Character) then
+                     continue
+                 end
+                 return x
+             end
+         end
+         return false
+     end
+ 
+     local function Set(list)
+         local set = {}
+         for _, l in ipairs(list) do
+             if l then
+                 set[l] = true
+             end
+         end
+         return set
+     end
+ 
+     game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
+         if key == "r" then
+             local player = getPlayer()
+             if player then
+
+local args = {
+    [1] = "telekineticpush",
+    [2] = player.Character.Head
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Olympians"):WaitForChild("Goddesses"):WaitForChild("Hecate"):WaitForChild("PowerEvents"):WaitForChild("HecateEvents"):FireServer(unpack(args))
+
+             end
+            end
+         end)
+	end    
+})
+
+BennettTab:AddBind({
+	Name = "Magic Bolts",
+	Default = Enum.KeyCode.T,
+	Hold = true,
+	Callback = function()
+
+    clicktpon = true                
+        plr = game.Players.LocalPlayer
+        hum = plr.Character.HumanoidRootPart
+        mouse = plr:GetMouse()
+        mouse.KeyDown:connect(function(key)
+        if key == 't' then
+        if mouse.Target then
+        if clicktpon then
+
+local args = {
+    [1] = "right",
+    [2] = Vector3.new(-58.45948028564453, 202.6398162841797, -486.98065185546875)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Olympians"):WaitForChild("Goddesses"):WaitForChild("Hecate"):WaitForChild("PowerEvents"):WaitForChild("HecateEvents"):FireServer(unpack(args))
+
+local args = {
+    [1] = "left",
+    [2] = Vector3.new(-57.20521926879883, 203.5434112548828, -486.8169250488281)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Olympians"):WaitForChild("Goddesses"):WaitForChild("Hecate"):WaitForChild("PowerEvents"):WaitForChild("HecateEvents"):FireServer(unpack(args))
+
+local args = {
+    [1] = "rThrow",
+    [2] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 1.5, mouse.Hit.z)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Olympians"):WaitForChild("Goddesses"):WaitForChild("Hecate"):WaitForChild("PowerEvents"):WaitForChild("HecateEvents"):FireServer(unpack(args))
+
+local args = {
+    [1] = "lThrow",
+    [2] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 1.5, mouse.Hit.z)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Olympians"):WaitForChild("Goddesses"):WaitForChild("Hecate"):WaitForChild("PowerEvents"):WaitForChild("HecateEvents"):FireServer(unpack(args))
+
+end
+end
+end
+end)
+end    
+})
+
+BennettTab:AddButton({
+	Name = "Cloned Illusion",
+	Callback = function()
+
+local args = {
+    [1] = "clone",
+    [2] = Vector3.new(-178.7840576171875, 107.34486389160156, -291.6484069824219)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Olympians"):WaitForChild("Goddesses"):WaitForChild("Hecate"):WaitForChild("PowerEvents"):WaitForChild("HecateEvents"):FireServer(unpack(args))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Get Flight (F)",
+	Callback = function()
+    local plr = game.Players.LocalPlayer
+    
+local backup = game.Workspace.HecateOld.PowerClient.Powers.Flight:Clone()
+backup.Parent = plr.Character.PowerClient
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Remove Flight",
+	Callback = function()
+
+    local plr = game.Players.LocalPlayer
+
+plr.Character.PowerClient.Flight:Destroy()
+
+  	end    
+})
+
+BennettTab:AddParagraph("Spells","Ignis is only for Hecate")
+
+BennettTab:AddBind({
+	Name = "Ignis",
+	Default = Enum.KeyCode.Y,
+	Hold = false,
+	Callback = function()
+		print("You just clicked the bind")
+
+      local function getPlayer()
+         local userInput = game:GetService("UserInputService")
+         local cam = workspace.CurrentCamera
+         local mousePos = userInput:GetMouseLocation()
+         local mouseRay = cam:ViewportPointToRay(mousePos.X, mousePos.Y)
+         players = {}
+         for _, x in next, game:GetService('Players'):GetPlayers() do
+             players[#players + 1] = x.Character
+         end
+         local raycastParams = RaycastParams.new()
+         raycastParams.FilterType = Enum.RaycastFilterType.Whitelist
+         raycastParams.FilterDescendantsInstances = players
+         raycastParams.IgnoreWater = true
+         local raycastResult = workspace:Raycast(mouseRay.Origin, mouseRay.Direction * 1000, raycastParams)
+         if raycastResult then
+             for _, x in next, game:GetService('Players'):GetPlayers() do
+                 if not raycastResult.Instance:IsDescendantOf(x.Character) then
+                     continue
+                 end
+                 return x
+             end
+         end
+         return false
+     end
+ 
+     local function Set(list)
+         local set = {}
+         for _, l in ipairs(list) do
+             if l then
+                 set[l] = true
+             end
+         end
+         return set
+     end
+ 
+     game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
+         if key == "y" then
+             local player = getPlayer()
+             if player then
+
+local args = {
+    [1] = "Ignis",
+    [2] = player.Character.Humanoid
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Olympians"):WaitForChild("Goddesses"):WaitForChild("Hecate"):WaitForChild("PowerEvents"):WaitForChild("SpellEvents"):FireServer(unpack(args))
+
+             end
+            end
+         end)
+	end    
+})
+
+BennettTab:AddButton({
+	Name = "Tempus",
+	Callback = function()
+
+local args = {
+    [1] = "Tempus"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Olympians"):WaitForChild("Goddesses"):WaitForChild("Hecate"):WaitForChild("PowerEvents"):WaitForChild("SpellEvents"):FireServer(unpack(args))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Veritas",
+	Callback = function()
+
+local args = {
+    [1] = "Veritas"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Olympians"):WaitForChild("Goddesses"):WaitForChild("Hecate"):WaitForChild("PowerEvents"):WaitForChild("SpellEvents"):FireServer(unpack(args))
+
+  	end    
+})
+
+local Section = BennettTab:AddSection({
+	Name = "Iris"
+})
+
+BennettTab:AddBind({
+	Name = "Blasts of Color",
+	Default = Enum.KeyCode.G,
+	Hold = true,
+	Callback = function()
+
+    clicktpon = true                
+        plr = game.Players.LocalPlayer
+        hum = plr.Character.HumanoidRootPart
+        mouse = plr:GetMouse()
+        mouse.KeyDown:connect(function(key)
+        if key == 'g' then
+        if mouse.Target then
+        if clicktpon then
+
+local args = {
+    [1] = "blast",
+    [2] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 1.5, mouse.Hit.z)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Olympians"):WaitForChild("Goddesses"):WaitForChild("Iris"):WaitForChild("PowerEvents"):WaitForChild("IrisEvents"):FireServer(unpack(args))
+
+local args = {
+    [1] = "blast2",
+    [2] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 1.5, mouse.Hit.z)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Olympians"):WaitForChild("Goddesses"):WaitForChild("Iris"):WaitForChild("PowerEvents"):WaitForChild("IrisEvents"):FireServer(unpack(args))
+
+local args = {
+    [1] = "blast3",
+    [2] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 1.5, mouse.Hit.z)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Olympians"):WaitForChild("Goddesses"):WaitForChild("Iris"):WaitForChild("PowerEvents"):WaitForChild("IrisEvents"):FireServer(unpack(args))
+
+end
+end
+end
+end)
+end    
+})
+
+BennettTab:AddButton({
+	Name = "Rainbow's Repulse",
+	Callback = function()
+
+local args = {
+    [1] = "wave",
+    [2] = Vector3.new(-60.735965728759766, 250.11215209960938, -62.539581298828125)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Olympians"):WaitForChild("Goddesses"):WaitForChild("Iris"):WaitForChild("PowerEvents"):WaitForChild("IrisEvents"):FireServer(unpack(args))
+
+  	end    
+})
+
+local Section = BennettTab:AddSection({
+	Name = "Circe"
+})
+
+BennettTab:AddBind({
+	Name = "Wand Blast",
+	Default = Enum.KeyCode.H,
+	Hold = true,
+	Callback = function()
+
+    clicktpon = true                
+        plr = game.Players.LocalPlayer
+        hum = plr.Character.HumanoidRootPart
+        mouse = plr:GetMouse()
+        mouse.KeyDown:connect(function(key)
+        if key == 'h' then
+        if mouse.Target then
+        if clicktpon then
+
+local args = {
+    [1] = "zap",
+    [2] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 1.5, mouse.Hit.z)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Olympians"):WaitForChild("Goddesses"):WaitForChild("Circe"):WaitForChild("PowerEvents"):WaitForChild("CirceEvents"):FireServer(unpack(args))
+
+end
+end
+end
+end)
+end    
+})
+
+BennettTab:AddBind({
+	Name = "Teleportation",
+	Default = Enum.KeyCode.J,
+	Hold = true,
+	Callback = function()
+
+    clicktpon = true                
+        plr = game.Players.LocalPlayer
+        hum = plr.Character.HumanoidRootPart
+        mouse = plr:GetMouse()
+        mouse.KeyDown:connect(function(key)
+        if key == 'j' then
+        if mouse.Target then
+        if clicktpon then
+
+local args = {
+    [1] = "tp",
+    [2] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Olympians"):WaitForChild("Goddesses"):WaitForChild("Circe"):WaitForChild("PowerEvents"):WaitForChild("CirceEvents"):FireServer(unpack(args))
+
+end
+end
+end
+end)
+end    
+})
+
+BennettTab:AddBind({
+	Name = "Transfiguration",
+	Default = Enum.KeyCode.K,
+	Hold = false,
+	Callback = function()
+		print("You just clicked the bind")
+
+      local function getPlayer()
+         local userInput = game:GetService("UserInputService")
+         local cam = workspace.CurrentCamera
+         local mousePos = userInput:GetMouseLocation()
+         local mouseRay = cam:ViewportPointToRay(mousePos.X, mousePos.Y)
+         players = {}
+         for _, x in next, game:GetService('Players'):GetPlayers() do
+             players[#players + 1] = x.Character
+         end
+         local raycastParams = RaycastParams.new()
+         raycastParams.FilterType = Enum.RaycastFilterType.Whitelist
+         raycastParams.FilterDescendantsInstances = players
+         raycastParams.IgnoreWater = true
+         local raycastResult = workspace:Raycast(mouseRay.Origin, mouseRay.Direction * 1000, raycastParams)
+         if raycastResult then
+             for _, x in next, game:GetService('Players'):GetPlayers() do
+                 if not raycastResult.Instance:IsDescendantOf(x.Character) then
+                     continue
+                 end
+                 return x
+             end
+         end
+         return false
+     end
+ 
+     local function Set(list)
+         local set = {}
+         for _, l in ipairs(list) do
+             if l then
+                 set[l] = true
+             end
+         end
+         return set
+     end
+ 
+     game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
+         if key == "k" then
+             local player = getPlayer()
+             if player then
+
+local args = {
+    [1] = "trans",
+    [2] = player.Character.Head
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Olympians"):WaitForChild("Goddesses"):WaitForChild("Circe"):WaitForChild("PowerEvents"):WaitForChild("CirceEvents"):FireServer(unpack(args))
+
+             end
+            end
+         end)
+	end    
+})
+
+BennettTab:AddBind({
+	Name = "Gas Release",
+	Default = Enum.KeyCode.L,
+	Hold = true,
+	Callback = function()
+
+    clicktpon = true                
+        plr = game.Players.LocalPlayer
+        hum = plr.Character.HumanoidRootPart
+        mouse = plr:GetMouse()
+        mouse.KeyDown:connect(function(key)
+        if key == 'l' then
+        if mouse.Target then
+        if clicktpon then
+
+local args = {
+    [1] = "cloud",
+    [2] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Olympians"):WaitForChild("Goddesses"):WaitForChild("Circe"):WaitForChild("PowerEvents"):WaitForChild("CirceEvents"):FireServer(unpack(args))
+
+end
+end
+end
+end)
+end    
+})
+
+BennettTab:AddButton({
+	Name = "Shield",
+	Callback = function()
+
+local args = {
+    [1] = "shield",
+    [2] = Vector3.new(411.92120361328125, 64.13987731933594, 90.29049682617188)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Olympians"):WaitForChild("Goddesses"):WaitForChild("Circe"):WaitForChild("PowerEvents"):WaitForChild("CirceEvents"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Unshield",
+	Callback = function()
+
+local args = {
+    [1] = "end",
+    [2] = Vector3.new(396.4210205078125, 64.13987731933594, 107.40890502929688)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Olympians"):WaitForChild("Goddesses"):WaitForChild("Circe"):WaitForChild("PowerEvents"):WaitForChild("CirceEvents"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+BennettTab:AddParagraph("Spells","")
+
+BennettTab:AddButton({
+	Name = "Volare",
+	Callback = function()
+
+local args = {
+    [1] = "Volare"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Olympians"):WaitForChild("Goddesses"):WaitForChild("Circe"):WaitForChild("PowerEvents"):WaitForChild("SpellEvents"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+
+local Section = BennettTab:AddSection({
+	Name = "Amphitrite"
+})
+
+BennettTab:AddBind({
+	Name = "Water Choke",
+	Default = Enum.KeyCode.Z,
+	Hold = false,
+	Callback = function()
+		print("You just clicked the bind")
+
+      local function getPlayer()
+         local userInput = game:GetService("UserInputService")
+         local cam = workspace.CurrentCamera
+         local mousePos = userInput:GetMouseLocation()
+         local mouseRay = cam:ViewportPointToRay(mousePos.X, mousePos.Y)
+         players = {}
+         for _, x in next, game:GetService('Players'):GetPlayers() do
+             players[#players + 1] = x.Character
+         end
+         local raycastParams = RaycastParams.new()
+         raycastParams.FilterType = Enum.RaycastFilterType.Whitelist
+         raycastParams.FilterDescendantsInstances = players
+         raycastParams.IgnoreWater = true
+         local raycastResult = workspace:Raycast(mouseRay.Origin, mouseRay.Direction * 1000, raycastParams)
+         if raycastResult then
+             for _, x in next, game:GetService('Players'):GetPlayers() do
+                 if not raycastResult.Instance:IsDescendantOf(x.Character) then
+                     continue
+                 end
+                 return x
+             end
+         end
+         return false
+     end
+ 
+     local function Set(list)
+         local set = {}
+         for _, l in ipairs(list) do
+             if l then
+                 set[l] = true
+             end
+         end
+         return set
+     end
+ 
+     game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
+         if key == "z" then
+             local player = getPlayer()
+             if player then
+
+local args = {
+    [1] = "swarm",
+    [2] = player.Character.UpperTorso
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Olympians"):WaitForChild("Goddesses"):WaitForChild("Amphitrite"):WaitForChild("PowerEvents"):WaitForChild("AmphitriteEvents"):FireServer(unpack(args))
+
+             end
+            end
+         end)
+	end    
+})
+
+BennettTab:AddButton({
+	Name = "Stop Water Choke",
+	Callback = function()
+
+local args = {
+    [1] = "swarmEnd",
+    [2] = Vector3.new(-42.64649963378906, 265.3453369140625, 170.15817260742188)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Olympians"):WaitForChild("Goddesses"):WaitForChild("Amphitrite"):WaitForChild("PowerEvents"):WaitForChild("AmphitriteEvents"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Shield",
+	Callback = function()
+
+local args = {
+    [1] = "shield",
+    [2] = Vector3.new(532.07666015625, -2.8884754180908203, -236.38796997070312)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Olympians"):WaitForChild("Goddesses"):WaitForChild("Amphitrite"):WaitForChild("PowerEvents"):WaitForChild("AmphitriteEvents"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Unshield",
+	Callback = function()
+
+local args = {
+    [1] = "shieldEnd",
+    [2] = Vector3.new(500.664794921875, 2.369741439819336, -174.28231811523438)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Olympians"):WaitForChild("Goddesses"):WaitForChild("Amphitrite"):WaitForChild("PowerEvents"):WaitForChild("AmphitriteEvents"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Cyclone",
+	Callback = function()
+
+local args = {
+    [1] = "cyclone",
+    [2] = Vector3.new(448.6688537597656, 6.097506523132324, -186.9755859375)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Olympians"):WaitForChild("Goddesses"):WaitForChild("Amphitrite"):WaitForChild("PowerEvents"):WaitForChild("AmphitriteEvents"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Siren Scream",
+	Callback = function()
+
+local args = {
+    [1] = "sirenscream",
+    [2] = Vector3.new(488.2403564453125, 13.514599800109863, -308.543212890625)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Olympians"):WaitForChild("Goddesses"):WaitForChild("Amphitrite"):WaitForChild("PowerEvents"):WaitForChild("AmphitriteEvents"):FireServer(unpack(args))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Mermaid Transformation",
+	Callback = function()
+
+local args = {
+    [1] = "Transformation"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Olympians"):WaitForChild("Goddesses"):WaitForChild("Amphitrite"):WaitForChild("PowerEvents"):WaitForChild("AmphitriteEvents"):FireServer(unpack(args))
+
+  	end    
+})
+
+local Section = BennettTab:AddSection({
+	Name = "Poseidon"
+})
+
+BennettTab:AddBind({
+	Name = "Water Splash",
+	Default = Enum.KeyCode.X,
+	Hold = true,
+	Callback = function()
+
+    clicktpon = true                
+        plr = game.Players.LocalPlayer
+        hum = plr.Character.HumanoidRootPart
+        mouse = plr:GetMouse()
+        mouse.KeyDown:connect(function(key)
+        if key == 'x' then
+        if mouse.Target then
+        if clicktpon then
+
+local args = {
+    [1] = "charge",
+    [2] = Vector3.new(938.5394897460938, -0.16054630279541016, -208.45408630371094)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Olympians"):WaitForChild("Gods"):WaitForChild("Poseidon"):WaitForChild("PowerEvents"):WaitForChild("PoseidonEvents"):FireServer(unpack(args))
+
+local args = {
+    [1] = "combust",
+    [2] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 1.5, mouse.Hit.z)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Olympians"):WaitForChild("Gods"):WaitForChild("Poseidon"):WaitForChild("PowerEvents"):WaitForChild("PoseidonEvents"):FireServer(unpack(args))
+
+end
+end
+end
+end)
+end    
+})
+
+BennettTab:AddButton({
+	Name = "Earthquake Slam",
+	Callback = function()
+
+local args = {
+    [1] = "slam",
+    [2] = Vector3.new(1404.12548828125, -280.4632263183594, 827.8828735351562)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Olympians"):WaitForChild("Gods"):WaitForChild("Poseidon"):WaitForChild("PowerEvents"):WaitForChild("PoseidonEvents"):FireServer(unpack(args))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Shield",
+	Callback = function()
+
+local args = {
+    [1] = "shield",
+    [2] = Vector3.new(1413.4122314453125, -280.5503234863281, 827.15087890625)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Olympians"):WaitForChild("Gods"):WaitForChild("Poseidon"):WaitForChild("PowerEvents"):WaitForChild("PoseidonEvents"):FireServer(unpack(args))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Unshield",
+	Callback = function()
+
+local args = {
+    [1] = "shieldend",
+    [2] = Vector3.new(1409.283935546875, -279.4823913574219, 822.5982666015625)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Olympians"):WaitForChild("Gods"):WaitForChild("Poseidon"):WaitForChild("PowerEvents"):WaitForChild("PoseidonEvents"):FireServer(unpack(args))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Water Explosion",
+	Callback = function()
+
+local args = {
+    [1] = "Seas"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Olympians"):WaitForChild("Gods"):WaitForChild("Poseidon"):WaitForChild("PowerEvents"):WaitForChild("SpellEvents"):FireServer(unpack(args))
+
+  	end    
+})
+
+local Section = BennettTab:AddSection({
+	Name = "Apollo"
+})
+
+BennettTab:AddButton({
+	Name = "Blinding Melody",
+	Callback = function()
+
+local args = {
+    [1] = "lyre",
+    [2] = Vector3.new(-66.9703140258789, 200.7382049560547, -513.6990356445312)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Olympians"):WaitForChild("Gods"):WaitForChild("Apollo"):WaitForChild("PowerEvents"):WaitForChild("ApolloEvents"):FireServer(unpack(args))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Speed of Light",
+	Callback = function()
+
+local args = {
+    [1] = "speed",
+    [2] = Vector3.new(-65.20726776123047, 200.7382049560547, -512.8576049804688)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Olympians"):WaitForChild("Gods"):WaitForChild("Apollo"):WaitForChild("PowerEvents"):WaitForChild("ApolloEvents"):FireServer(unpack(args))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Stop Speed of Light",
+	Callback = function()
+
+local args = {
+    [1] = "end",
+    [2] = Vector3.new(-56.313072204589844, 200.83819580078125, -511.0501403808594)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Olympians"):WaitForChild("Gods"):WaitForChild("Apollo"):WaitForChild("PowerEvents"):WaitForChild("ApolloEvents"):FireServer(unpack(args))
+
+  	end    
+})
