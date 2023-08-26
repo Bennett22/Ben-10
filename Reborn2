@@ -1567,6 +1567,126 @@ local Section = BennettTab:AddSection({
 	Name = "Apollo"
 })
 
+BennettTab:AddBind({
+	Name = "Radiant Healing",
+	Default = Enum.KeyCode.C,
+	Hold = false,
+	Callback = function()
+		print("You just clicked the bind")
+
+      local function getPlayer()
+         local userInput = game:GetService("UserInputService")
+         local cam = workspace.CurrentCamera
+         local mousePos = userInput:GetMouseLocation()
+         local mouseRay = cam:ViewportPointToRay(mousePos.X, mousePos.Y)
+         players = {}
+         for _, x in next, game:GetService('Players'):GetPlayers() do
+             players[#players + 1] = x.Character
+         end
+         local raycastParams = RaycastParams.new()
+         raycastParams.FilterType = Enum.RaycastFilterType.Whitelist
+         raycastParams.FilterDescendantsInstances = players
+         raycastParams.IgnoreWater = true
+         local raycastResult = workspace:Raycast(mouseRay.Origin, mouseRay.Direction * 1000, raycastParams)
+         if raycastResult then
+             for _, x in next, game:GetService('Players'):GetPlayers() do
+                 if not raycastResult.Instance:IsDescendantOf(x.Character) then
+                     continue
+                 end
+                 return x
+             end
+         end
+         return false
+     end
+ 
+     local function Set(list)
+         local set = {}
+         for _, l in ipairs(list) do
+             if l then
+                 set[l] = true
+             end
+         end
+         return set
+     end
+ 
+     game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
+         if key == "c" then
+             local player = getPlayer()
+             if player then
+
+local args = {
+    [1] = "heal",
+    [2] = player.Character.RightLowerArm
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Olympians"):WaitForChild("Gods"):WaitForChild("Apollo"):WaitForChild("PowerEvents"):WaitForChild("ApolloEvents"):FireServer(unpack(args))
+
+             end
+            end
+         end)
+	end    
+})
+
+BennettTab:AddBind({
+	Name = "Light Dash",
+	Default = Enum.KeyCode.V,
+	Hold = false,
+	Callback = function()
+		print("You just clicked the bind")
+
+      local function getPlayer()
+         local userInput = game:GetService("UserInputService")
+         local cam = workspace.CurrentCamera
+         local mousePos = userInput:GetMouseLocation()
+         local mouseRay = cam:ViewportPointToRay(mousePos.X, mousePos.Y)
+         players = {}
+         for _, x in next, game:GetService('Players'):GetPlayers() do
+             players[#players + 1] = x.Character
+         end
+         local raycastParams = RaycastParams.new()
+         raycastParams.FilterType = Enum.RaycastFilterType.Whitelist
+         raycastParams.FilterDescendantsInstances = players
+         raycastParams.IgnoreWater = true
+         local raycastResult = workspace:Raycast(mouseRay.Origin, mouseRay.Direction * 1000, raycastParams)
+         if raycastResult then
+             for _, x in next, game:GetService('Players'):GetPlayers() do
+                 if not raycastResult.Instance:IsDescendantOf(x.Character) then
+                     continue
+                 end
+                 return x
+             end
+         end
+         return false
+     end
+ 
+     local function Set(list)
+         local set = {}
+         for _, l in ipairs(list) do
+             if l then
+                 set[l] = true
+             end
+         end
+         return set
+     end
+ 
+     game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
+         if key == "v" then
+             local player = getPlayer()
+             if player then
+
+local args = {
+    [1] = "dash",
+    [2] = game:GetService("Players"):WaitForChild("dorriann1").Character.UpperTorso
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Olympians"):WaitForChild("Gods"):WaitForChild("Apollo"):WaitForChild("PowerEvents"):WaitForChild("ApolloEvents"):FireServer(unpack(args))
+
+             end
+            end
+         end)
+	end    
+})
+
 BennettTab:AddButton({
 	Name = "Blinding Melody",
 	Callback = function()
@@ -1607,4 +1727,212 @@ local args = {
 game:GetService("ReplicatedStorage"):WaitForChild("Olympians"):WaitForChild("Gods"):WaitForChild("Apollo"):WaitForChild("PowerEvents"):WaitForChild("ApolloEvents"):FireServer(unpack(args))
 
   	end    
+})
+
+local BennettTab = Window:MakeTab({
+	Name = "Teleports",
+	Icon = "rbxassetid://14458282849",
+	PremiumOnly = false
+})
+
+BennettTab:AddButton({
+	Name = "Spawn",
+	Callback = function()
+
+      game.Players.LocalPlayer.Character:MoveTo(Vector3.new(1406, -277, 832))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Some random place V1",
+	Callback = function()
+
+      game.Players.LocalPlayer.Character:MoveTo(Vector3.new(740, -37, 852))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Some random place V2",
+	Callback = function()
+
+      game.Players.LocalPlayer.Character:MoveTo(Vector3.new(976, -55, -888))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Some random place V3",
+	Callback = function()
+
+      game.Players.LocalPlayer.Character:MoveTo(Vector3.new(101, 94, -713))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Some random place V3",
+	Callback = function()
+
+      game.Players.LocalPlayer.Character:MoveTo(Vector3.new(182, 9, -417))
+
+  	end    
+})
+BennettTab:AddButton({
+	Name = "Laura",
+	Callback = function()
+
+      game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-412, 101, -272))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Beach",
+	Callback = function()
+
+      game.Players.LocalPlayer.Character:MoveTo(Vector3.new(669, 9, -378))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Waterfall",
+	Callback = function()
+
+      game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-386, 86, 302))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Waterfall",
+	Callback = function()
+
+      game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-386, 86, 302))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Temple",
+	Callback = function()
+
+      game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-52, 268, 221))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Hecate's and Circe's Temple",
+	Callback = function()
+
+      game.Players.LocalPlayer.Character:MoveTo(Vector3.new(389, 67, 95))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Aphrodite's Spawn",
+	Callback = function()
+
+      game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-66, 204, -497))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Persephone's Spawn",
+	Callback = function()
+
+      game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-193, 105, -321))
+
+  	end    
+})
+
+local BennettTab = Window:MakeTab({
+	Name = "Misc",
+	Icon = "rbxassetid://14458282849",
+	PremiumOnly = false
+})
+
+BennettTab:AddButton({
+	Name = "Enable Character Selection",
+	Callback = function()
+
+game.Players.LocalPlayer.PlayerGui.CharacterGUI.Enabled = true
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Enable Character Selection",
+	Callback = function()
+
+game.Players.LocalPlayer.PlayerGui.CharacterGUI.Enabled = false
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Remove Your Powers",
+	Callback = function()
+
+local plr = game.Players.LocalPlayer
+
+plr.Character.PowerClient.Powers:Destroy()
+
+  	end    
+})
+
+local Section = BennettTab:AddSection({
+	Name = "Scripts"
+})
+
+BennettTab:AddButton({
+	Name = "Infinite Yield",
+	Callback = function()
+
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Omg562/Scripts/main/INF'),true))()
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "The Morningstar Circle Gui",
+	Callback = function()
+
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/TheMorningstarCircle/Spellman/main/All-In-One'),true))()
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Animations",
+	Callback = function()
+
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Ben-10/main/Animation'),true))()
+
+  	end    
+})
+
+local BennettTab = Window:MakeTab({
+	Name = "Credits",
+	Icon = "rbxassetid://14458282849",
+	PremiumOnly = false
+})
+
+local Section = BennettTab:AddSection({
+	Name = "discord: bennettscripts"
+})
+
+wait(1)
+
+game.StarterGui:SetCore("SendNotification", { 
+    Title = "⛤ Bennett Scripts ⛤";
+    Text = "Olympus Reborn";
+    Icon = "rbxthumb://type=Asset&id=14067496704&w=150&h=150";
+    Duration = "2";
+    Button1 = "Close";
 })
