@@ -1878,6 +1878,23 @@ plr.Character.PowerClient.Powers:Destroy()
   	end    
 })
 
+BennettTab:AddButton({
+	Name = "Remove Effects",
+	Callback = function()
+
+game.ReplicatedStorage.Misc.Shaker:Destroy()
+game.Lighting.Effects.Blur:Destroy()
+game.Lighting.Effects.Effect:Destroy()
+game.Lighting.Effects.Fire:Destroy()
+game.Lighting.Blur:Destroy()
+game.Lighting.ScreenEffectColour:Destroy()
+game.Lighting.SunRays:Destroy()
+game.Lighting.UnderWaterBlurry:Destroy()
+game.Lighting.UnderWater:Destroy()
+
+  	end    
+})
+
 local Section = BennettTab:AddSection({
 	Name = "Scripts"
 })
