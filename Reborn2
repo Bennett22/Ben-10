@@ -1867,7 +1867,7 @@ game.Players.LocalPlayer.PlayerGui.CharacterGUI.Enabled = true
 })
 
 BennettTab:AddButton({
-	Name = "Enable Character Selection",
+	Name = "Disable Character Selection",
 	Callback = function()
 
 game.Players.LocalPlayer.PlayerGui.CharacterGUI.Enabled = false
