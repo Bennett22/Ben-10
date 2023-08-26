@@ -427,7 +427,7 @@ BennettTab:AddButton({
 	Callback = function()
     local plr = game.Players.LocalPlayer
 local backup = game.Workspace.HeraOld.PowerClient.Powers.Flight:Clone()
-backup.Parent = plr.Character.PowerClient
+backup.Parent = plr.Character
 
   	end    
 })
@@ -438,7 +438,7 @@ BennettTab:AddButton({
 
     local plr = game.Players.LocalPlayer
 
-plr.Character.PowerClient.Flight:Destroy()
+plr.Character.Flight:Destroy()
 
   	end    
 })
@@ -954,7 +954,7 @@ BennettTab:AddButton({
     local plr = game.Players.LocalPlayer
     
 local backup = game.Workspace.HecateOld.PowerClient.Powers.Flight:Clone()
-backup.Parent = plr.Character.PowerClient
+backup.Parent = plr.Character
 
   	end    
 })
@@ -965,7 +965,7 @@ BennettTab:AddButton({
 
     local plr = game.Players.LocalPlayer
 
-plr.Character.PowerClient.Flight:Destroy()
+plr.Character.Flight:Destroy()
 
   	end    
 })
