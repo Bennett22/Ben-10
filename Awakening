@@ -645,31 +645,9 @@ game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Wiccan
 })
 
 local BennettTab = Window:MakeTab({
-	Name = "Misc",
+	Name = "Admin",
 	Icon = "rbxassetid://14458282849",
 	PremiumOnly = false
-})
-
-local Section = BennettTab:AddSection({
-	Name = "Other Scripts"
-})
-
-BennettTab:AddButton({
-	Name = "Custom Catalog",
-	Callback = function()
-
-loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Ben-10/main/Custom%20Catalog'),true))()
-
-  	end    
-})
-
-BennettTab:AddButton({
-	Name = "Animations",
-	Callback = function()
-
-loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Ben-10/main/Animation'),true))()
-
-  	end    
 })
 
 BennettTab:AddButton({
