@@ -64,6 +64,12 @@ loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Ben-10/mai
 
 end)
 
+BennettSection:NewButton("Multiversal: Awakening", " ", function()
+
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Ben-10/main/Awakening'),true))()
+
+end)
+
 BennettSection:NewButton("Crossover Legends: Reborn", " ", function()
 
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Bennett-Scripts/main/Reborn'),true))()
