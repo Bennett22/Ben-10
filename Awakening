@@ -581,6 +581,35 @@ game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Remot
 	end    
 })
 
+BennettTab:AddBind({
+	Name = "Chaos Bolts",
+	Default = Enum.KeyCode.M,
+	Hold = true,
+	Callback = function()
+
+    clicktpon = true                
+        plr = game.Players.LocalPlayer
+        hum = plr.Character.HumanoidRootPart
+        mouse = plr:GetMouse()
+        mouse.KeyDown:connect(function(key)
+        if key == 'm' then
+        if mouse.Target then
+        if clicktpon then
+
+local args = {
+    [1] = "\0Scarlet Witch: House Of Magneto Chaos Bolt\0\0",
+    [2] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
+
+end
+end
+end
+end)
+end    
+})
+
 BennettTab:AddButton({
 	Name = "Shield",
 	Callback = function()
