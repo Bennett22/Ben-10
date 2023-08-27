@@ -16,6 +16,21 @@ game.Players.LocalPlayer.PlayerGui.ChooseCharacter.Enabled = false
 
 end)
 
+local BennettSection = Bennett:NewSection("Powers")
+BennettSection:NewButton("Self Siphon", " ", function()
+
+local plr = game.Players.LocalPlayer
+
+local args = {
+    [1] = "siphon_self",
+    [2] = game:GetService("Players").LocalPlayer.Character.Humanoid,
+    [3] = plr.character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("REMOTES"):WaitForChild("Key"):FireServer(unpack(args))
+
+end)
+
 local Bennett = Window:NewTab("Misc")
 local BennettSection = Bennett:NewSection("Misc")
 BennettSection:NewButton("Infinite Yield", "", function()
