@@ -2107,7 +2107,7 @@ end
 BennettTab:AddParagraph("","")
 
 BennettTab:AddBind({
-	Name = "Psychic Reflection",
+	Name = "Projective Levitation",
 	Default = Enum.KeyCode.Y,
 	Hold = false,
 	Callback = function()
