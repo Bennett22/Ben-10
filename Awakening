@@ -648,6 +648,19 @@ game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Remot
 
   	end    
 })
+
+BennettTab:AddButton({
+	Name = "Ultimate",
+	Callback = function()
+
+local args = {
+    [1] = "\0Scarlet Witch: House Of Magneto Ultimate\0\0"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
+
+  	end    
+})
 local BennettTab = Window:MakeTab({
 	Name = "Characters",
 	Icon = "rbxassetid://14458282849",
