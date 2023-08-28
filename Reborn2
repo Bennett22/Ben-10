@@ -1,5 +1,5 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "Bennett Scripts | Olympus Reborn", HidePremium = false, IntroText = "Bennett Scripts", SaveConfig = true, ConfigFolder = "OrionTest"})
+local Window = OrionLib:MakeWindow({Name = "Bennett Scripts | Olympus: Reborn", HidePremium = false, IntroText = "Bennett Scripts", SaveConfig = true, ConfigFolder = "OrionTest"})
 
 local BennettTab = Window:MakeTab({
 	Name = "Characters",
@@ -1940,7 +1940,7 @@ wait(1)
 
 game.StarterGui:SetCore("SendNotification", { 
     Title = "⛤ Bennett Scripts ⛤";
-    Text = "Olympus Reborn";
+    Text = "Olympus: Reborn";
     Icon = "rbxthumb://type=Asset&id=14067496704&w=150&h=150";
     Duration = "2";
     Button1 = "Close";
