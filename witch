@@ -1841,6 +1841,27 @@ local Section = BennettTab:AddSection({
 	Name = "Others"
 })
 
+--farm things
+
+_G.MagicFarm = true
+
+function MagicFarm()
+
+while _G.MagicFarm == true do
+game:GetService("ReplicatedStorage").SpiritFused:FireServer()
+wait(.0000000000000000000000000000000000000001)
+end
+end
+
+BennettTab:AddToggle({
+	Name = "Magic Farm",
+	Default = false,
+	Callback = function(Value)
+		_G.MagicFarm = Value
+                MagicFarm()
+	end    
+})
+
 BennettTab:AddButton({
 	Name = "Get Hell Shard",
 	Callback = function()
