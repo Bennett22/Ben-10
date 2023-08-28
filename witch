@@ -11,7 +11,7 @@ BennettTab:AddParagraph("Some powers won't work if you're not in the right team!
 
 BennettTab:AddTextbox({
 	Name = "Holy Fire Someone",
-	Default = "input",
+	Default = "",
 	TextDisappear = true,
 	Callback = function(txt)
       local Players = game:GetService("Players")
@@ -125,7 +125,7 @@ BennettTab:AddParagraph("","")
 
 BennettTab:AddTextbox({
 	Name = "Hellfire Someone",
-	Default = "input",
+	Default = "",
 	TextDisappear = true,
 	Callback = function(txt)
       local Players = game:GetService("Players")
@@ -241,7 +241,7 @@ BennettTab:AddParagraph("","")
 
 BennettTab:AddTextbox({
 	Name = "Ignis Someone",
-	Default = "input",
+	Default = "",
 	TextDisappear = true,
 	Callback = function(txt)
       local Players = game:GetService("Players")
@@ -357,7 +357,7 @@ BennettTab:AddParagraph("","")
 
 BennettTab:AddTextbox({
 	Name = "Poison Someone",
-	Default = "input",
+	Default = "",
 	TextDisappear = true,
 	Callback = function(txt)
       local Players = game:GetService("Players")
@@ -474,7 +474,7 @@ BennettTab:AddParagraph("","")
 
 BennettTab:AddTextbox({
 	Name = "Vine Entrapment Someone",
-	Default = "input",
+	Default = "",
 	TextDisappear = true,
 	Callback = function(txt)
       local Players = game:GetService("Players")
@@ -590,7 +590,7 @@ BennettTab:AddParagraph("","")
 
 BennettTab:AddTextbox({
 	Name = "Freeze Someone",
-	Default = "input",
+	Default = "",
 	TextDisappear = true,
 	Callback = function(txt)
       local Players = game:GetService("Players")
@@ -705,7 +705,7 @@ BennettTab:AddParagraph("","")
 
 BennettTab:AddTextbox({
 	Name = "Fire Heal Someone",
-	Default = "input",
+	Default = "",
 	TextDisappear = true,
 	Callback = function(txt)
       local Players = game:GetService("Players")
@@ -820,7 +820,7 @@ BennettTab:AddParagraph("","")
 
 BennettTab:AddTextbox({
 	Name = "Force Holy Heal Someone",
-	Default = "input",
+	Default = "",
 	TextDisappear = true,
 	Callback = function(txt)
       local Players = game:GetService("Players")
@@ -1389,7 +1389,7 @@ local BennettTab = Window:MakeTab({
 
 BennettTab:AddTextbox({
 	Name = "View Someone",
-	Default = "input",
+	Default = "",
 	TextDisappear = true,
 	Callback = function(txt)
       local Players = game:GetService("Players")
@@ -1423,8 +1423,28 @@ BennettTab:AddButton({
 })
 
 BennettTab:AddTextbox({
+	Name = "Teleport To Someone",
+	Default = "",
+	TextDisappear = true,
+	Callback = function(txt)
+      local Players = game:GetService("Players")
+      local msg = txt
+      local function findPlayer(stringg)
+          for _, v in pairs(Players:GetPlayers()) do
+              if stringg:lower() == (v.Name:lower()):sub(1, #stringg) then
+                  return v
+              end
+          end
+      end
+  
+      local player = findPlayer(msg)
+      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = player.Character.HumanoidRootPart.CFrame
+	end	  
+})
+
+BennettTab:AddTextbox({
 	Name = "Holy Fire Someone",
-	Default = "input",
+	Default = "",
 	TextDisappear = true,
 	Callback = function(txt)
       local Players = game:GetService("Players")
@@ -1452,7 +1472,7 @@ BennettTab:AddTextbox({
 
 BennettTab:AddTextbox({
 	Name = "Hellfire Someone",
-	Default = "input",
+	Default = "",
 	TextDisappear = true,
 	Callback = function(txt)
       local Players = game:GetService("Players")
@@ -1480,7 +1500,7 @@ game:GetService("ReplicatedStorage"):WaitForChild("HellFire2"):FireServer(unpack
 
 BennettTab:AddTextbox({
 	Name = "Ignis Someone",
-	Default = "input",
+	Default = "",
 	TextDisappear = true,
 	Callback = function(txt)
       local Players = game:GetService("Players")
@@ -1508,7 +1528,7 @@ BennettTab:AddTextbox({
 
 BennettTab:AddTextbox({
 	Name = "Poison Someone",
-	Default = "input",
+	Default = "",
 	TextDisappear = true,
 	Callback = function(txt)
       local Players = game:GetService("Players")
@@ -1537,7 +1557,7 @@ BennettTab:AddTextbox({
 
 BennettTab:AddTextbox({
 	Name = "Vine Entrapment Someone",
-	Default = "input",
+	Default = "",
 	TextDisappear = true,
 	Callback = function(txt)
       local Players = game:GetService("Players")
@@ -1566,7 +1586,7 @@ BennettTab:AddTextbox({
 
 BennettTab:AddTextbox({
 	Name = "Freeze Someone",
-	Default = "input",
+	Default = "",
 	TextDisappear = true,
 	Callback = function(txt)
       local Players = game:GetService("Players")
@@ -1594,7 +1614,7 @@ BennettTab:AddTextbox({
 
 BennettTab:AddTextbox({
 	Name = "Fire Heal Someone",
-	Default = "input",
+	Default = "",
 	TextDisappear = true,
 	Callback = function(txt)
       local Players = game:GetService("Players")
@@ -1622,7 +1642,7 @@ BennettTab:AddTextbox({
 
 BennettTab:AddTextbox({
 	Name = "Force Holy Heal Someone",
-	Default = "input",
+	Default = "",
 	TextDisappear = true,
 	Callback = function(txt)
       local Players = game:GetService("Players")
