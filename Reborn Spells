@@ -1,0 +1,161 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "Bennett Scripts | Every Witch Way: Reborn", HidePremium = false, IntroText = "Bennett Scripts", SaveConfig = true, ConfigFolder = "OrionTest"})
+
+local BennettTab = Window:MakeTab({
+	Name = "Spells & Powers",
+	Icon = "rbxassetid://14458282849",
+	PremiumOnly = false
+})
+
+BennettTab:AddButton({
+	Name = "Autem",
+	Callback = function()
+
+local args = {
+    [1] = "Autem",
+    [2] = "All"
+}
+
+game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
+local args = {
+    [1] = Vector3.new(0, 0, 0)
+}
+
+game:GetService("ReplicatedStorage").EarthquakeAbility:FireServer(unpack(args))
+
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Omnis immobilus est",
+	Callback = function()
+
+local args = {
+    [1] = "Omnis immobilus est",
+    [2] = "All"
+}
+
+game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
+local args = {
+    [1] = Vector3.new(0, 0, 0)
+}
+
+game:GetService("ReplicatedStorage").FreezeEvent:FireServer(unpack(args))
+
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Summon Storm",
+	Callback = function()
+
+local args = {
+    [1] = Vector3.new(0, 0, 0)
+}
+
+game:GetService("ReplicatedStorage").SummonStormEvent:FireServer(unpack(args))
+
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Expression",
+	Callback = function()
+
+local args = {
+    [1] = "I Have Every Magic!",
+    [2] = "All"
+}
+
+game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
+wait(1)
+
+local args = {
+    [1] = "I Have The Spirits!",
+    [2] = "All"
+}
+
+game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
+wait(1)
+
+local args = {
+    [1] = "I Have Expression!",
+    [2] = "All"
+}
+
+game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
+local args = {
+    [1] = Vector3.new(0, 0, 0)
+}
+
+game:GetService("ReplicatedStorage").StormEvent:FireServer(unpack(args))
+
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Motus",
+	Callback = function()
+
+local args = {
+    [1] = "Motus",
+    [2] = "All"
+}
+
+game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
+local args = {
+    [1] = Vector3.new(0, 0, 0)
+}
+
+game:GetService("ReplicatedStorage").TeleAreaEvent:FireServer(unpack(args))
+
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Lecutio Maxima",
+	Callback = function()
+
+local args = {
+    [1] = "Lecutio Maxima",
+    [2] = "All"
+}
+
+game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
+local args = {
+    [1] = "Start",
+    [2] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("ReplicatedStorage").BeamEvent:FireServer(unpack(args))
+
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Stop Lecutio",
+	Callback = function()
+
+local args = {
+    [1] = "End",
+    [2] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("ReplicatedStorage").BeamEvent:FireServer(unpack(args))
+
+
+  	end    
+})
