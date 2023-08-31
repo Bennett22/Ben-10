@@ -99,7 +99,7 @@ end
 end
 
 BennettTab:AddToggle({
-	Name = "Magic Farm",
+	Name = "Auto Punch",
 	Default = false,
 	Callback = function(Value)
 		_G.AutoPunch = Value
