@@ -88,6 +88,12 @@ loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Ben-10/mai
 
 end)
 
+BennettSection:NewButton("Cultivation of Realms", " ", function()
+
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Ben-10/main/Realms'),true))()
+
+end)
+
 BennettSection:NewButton("Witchcraft.v2", " ", function()
 
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Ben-10/main/witch'),true))()
