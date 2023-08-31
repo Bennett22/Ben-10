@@ -1,0 +1,157 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "Bennett Scripts | Cultivation of Realms", HidePremium = false, IntroText = "Bennett Scripts", SaveConfig = true, ConfigFolder = "OrionTest"})
+
+local BennettTab = Window:MakeTab({
+	Name = "Auto Things",
+	Icon = "rbxassetid://14458282849",
+	PremiumOnly = false
+})
+
+local Section = BennettTab:AddSection({
+	Name = "Meditate"
+})
+
+BennettTab:AddButton({
+	Name = "Start Meditate",
+	Callback = function()
+
+local args = {
+    [1] = {
+        ["value"] = true,
+        ["TrValue"] = false
+    }
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("onREvent"):FireServer(unpack(args))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Stop Meditate",
+	Callback = function()
+
+local args = {
+    [1] = {
+        ["value"] = true,
+        ["TrValue"] = false
+    }
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("onREvent"):FireServer(unpack(args))
+
+  	end    
+})
+
+local Section = BennettTab:AddSection({
+	Name = "Breakthrough"
+})
+
+BennettTab:AddButton({
+	Name = "Start Breakthrough",
+	Callback = function()
+
+local args = {
+    [1] = {
+        ["value"] = true
+    }
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("AscendEvent"):FireServer(unpack(args))
+
+while wait() do
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Trascendence"):FireServer()
+
+end
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Stop Breakthrough",
+	Callback = function()
+
+local args = {
+    [1] = {
+        ["value"] = false
+    }
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("AscendEvent"):FireServer(unpack(args))
+
+  	end    
+})
+
+local Section = BennettTab:AddSection({
+	Name = "Punch"
+})
+
+--auto things
+
+_G.AutoPunch = true
+
+function AutoPunch()
+
+while _G.AutoPunch == true do
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("PunchEvent"):FireServer()
+wait(.0000000000000000000000000000000000000000000000000001)
+end
+end
+
+BennettTab:AddToggle({
+	Name = "Magic Farm",
+	Default = false,
+	Callback = function(Value)
+		_G.AutoPunch = Value
+                AutoPunch()
+	end    
+})
+
+local BennettTab = Window:MakeTab({
+	Name = "Misc",
+	Icon = "rbxassetid://14458282849",
+	PremiumOnly = false
+})
+
+BennettTab:AddButton({
+	Name = "Teleport to safe place",
+	Callback = function()
+
+      game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-918, 14, -2608))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Infinite Yield",
+	Callback = function()
+
+loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+
+  	end    
+})
+
+local BennettTab = Window:MakeTab({
+	Name = "Credits",
+	Icon = "rbxassetid://14458282849",
+	PremiumOnly = false
+})
+
+local Section = BennettTab:AddSection({
+	Name = "discord: bennettscripts"
+})
+
+wait(1)
+game.StarterGui:SetCore("SendNotification", { 
+    Title = "⛤ Bennett Scripts ⛤";
+    Text = "Cultivation of Realms";
+    Icon = "rbxthumb://type=Asset&id=14067496704&w=150&h=150";
+    Duration = "2";
+    Button1 = "Close";
+})
+
+if game:GetService("Players").LocalPlayer.UserId == 3185912033 then
+
+    game.Players.LocalPlayer:Kick("Blacklisted xoxoxo")
+
+end
