@@ -1,23 +1,42 @@
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("Bennett Scripts | The Mystic Diaries", "GrapeTheme")
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "Bennett Scripts | The Mystic Diaries", HidePremium = false, IntroText = "Bennett Scripts", SaveConfig = true, ConfigFolder = "OrionTest"})
 
-local Bennett = Window:NewTab("Main")
-local BennettSection = Bennett:NewSection("You can be more than one character now!")
+local BennettTab = Window:MakeTab({
+	Name = "Main",
+	Icon = "rbxassetid://14458282849",
+	PremiumOnly = false
+})
 
-BennettSection:NewButton("Enable Character Selection", " ", function()
+BennettTab:AddParagraph("You can be more than one character now!","or maybe custom tribrid")
+
+BennettTab:AddButton({
+	Name = "Enable Character Selection",
+	Callback = function()
+
 
 game.Players.LocalPlayer.PlayerGui.ChooseCharacter.Enabled = true
 
-end)
 
-BennettSection:NewButton("Disable Character Selection", " ", function()
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Disable Character Selection",
+	Callback = function()
 
 game.Players.LocalPlayer.PlayerGui.ChooseCharacter.Enabled = false
 
-end)
 
-local BennettSection = Bennett:NewSection("Powers")
-BennettSection:NewButton("Self Siphon", " ", function()
+  	end    
+})
+
+local Section = BennettTab:AddSection({
+	Name = "Powers"
+})
+
+BennettTab:AddButton({
+	Name = "Self Siphon",
+	Callback = function()
 
 local plr = game.Players.LocalPlayer
 
@@ -29,30 +48,74 @@ local args = {
 
 game:GetService("ReplicatedStorage"):WaitForChild("REMOTES"):WaitForChild("Key"):FireServer(unpack(args))
 
-end)
 
-local Bennett = Window:NewTab("Misc")
-local BennettSection = Bennett:NewSection("Misc")
-BennettSection:NewButton("Infinite Yield", "", function()
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Self Res",
+	Callback = function()
+
+	local plr = game.Players.LocalPlayer
+
+	local args = {
+		[1] = "resurect",
+		[2] = workspace:FindFirstChild(plr.Name.." clone").Head,
+		[3] = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart,
+		[4] = game:GetService("Players").LocalPlayer.Character.Humanoid
+	}
+	for i=1,4 do
+	game:GetService("ReplicatedStorage").REMOTES.Spell:FireServer(unpack(args))
+	end
+
+  	end    
+})
+
+
+local BennettTab = Window:MakeTab({
+	Name = "Misc",
+	Icon = "rbxassetid://14458282849",
+	PremiumOnly = false
+})
+
+BennettTab:AddButton({
+	Name = "Infinite Yield",
+	Callback = function()
+
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/Omg562/Scripts/main/INF'),true))()
-end)
-BennettSection:NewButton("The Morningstar Circle Gui", "", function()
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "The Morningstar Circle Gui",
+	Callback = function()
+
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/TheMorningstarCircle/Spellman/main/TheMysticDiaries'),true))()
-end)
-BennettSection:NewButton("Custom Catalog", "", function()
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Custom Catalog",
+	Callback = function()
+
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Ben-10/main/Custom%20Catalog'),true))()
-end)
 
+  	end    
+})
 
-local Tab = Window:NewTab("Credits")
-local SettingsSection = Tab:NewSection("discord: bennettscripts")
-local SettingsSection = Tab:NewSection("Toggle UI")
-SettingsSection:NewKeybind("Toggle UI", "Toggle UI", Enum.KeyCode.Nine, function()
-    Library:ToggleUI()
-end)
+local BennettTab = Window:MakeTab({
+	Name = "Credits",
+	Icon = "rbxassetid://14458282849",
+	PremiumOnly = false
+})
+
+local Section = BennettTab:AddSection({
+	Name = "discord: bennettscripts"
+})
 
 wait(1)
-
 game.StarterGui:SetCore("SendNotification", { 
     Title = "⛤ Bennett Scripts ⛤";
     Text = "The Mystic Diaries";
