@@ -97,6 +97,43 @@ end
 
 end)
 
+Section:NewButton("Just Clothes", " ", function()
+if game:GetService("Players").LocalPlayer.UserId == 4831686579 then
+    game.Players:Chat("!hat 13702880788")
+    game.Players:Chat("!hat 13979152252")
+    game.Players:Chat("!hat 9573637022")
+    game.Players:Chat("!hat 9573635366")
+    game.Players:Chat("!hat 13085090528")
+
+end
+
+if game:GetService("Players").LocalPlayer.UserId == 736533499 then
+    game.Players:Chat("!hat 13702880788")
+    game.Players:Chat("!hat 13979152252")
+    game.Players:Chat("!hat 9573637022")
+    game.Players:Chat("!hat 9573635366")
+    game.Players:Chat("!hat 13085090528")
+end
+
+if game:GetService("Players").LocalPlayer.UserId == 4334482090 then
+    game.Players:Chat("!hat 13702880788")
+    game.Players:Chat("!hat 13979152252")
+    game.Players:Chat("!hat 9573637022")
+    game.Players:Chat("!hat 9573635366")
+    game.Players:Chat("!hat 13085090528")
+end
+
+if game:GetService("Players").LocalPlayer.UserId == 4635600398 then
+    game.Players:Chat("!hat 13702880788")
+    game.Players:Chat("!hat 13979152252")
+    game.Players:Chat("!hat 9573637022")
+    game.Players:Chat("!hat 9573635366")
+    game.Players:Chat("!hat 13085090528")
+end
+
+end)
+
+
 local Section = Tab:NewSection("Regular outfit")
 Section:NewButton("Custom", " ", function()
 if game:GetService("Players").LocalPlayer.UserId == 4831686579 then
