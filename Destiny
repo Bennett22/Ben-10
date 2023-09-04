@@ -323,7 +323,7 @@ game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForCh
 
 BennettTab:AddBind({
 	Name = "Combo For Mimmi",
-	Default = Enum.KeyCode.Three,
+	Default = Enum.KeyCode.Two,
 	Hold = false,
 	Callback = function()
 		print("You just clicked the bind")
