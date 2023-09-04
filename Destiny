@@ -7,6 +7,11 @@ local BennettTab = Window:MakeTab({
 	PremiumOnly = false
 })
 
+local Section = BennettTab:AddSection({
+	Name = "Realistic"
+})
+
+
 BennettTab:AddTextbox({
 	Name = "Combo For Realistic",
 	Default = "",
@@ -215,6 +220,413 @@ game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForCh
 	end    
 })
 
+local Section = BennettTab:AddSection({
+	Name = "Mimmi"
+})
+
+BennettTab:AddTextbox({
+	Name = "Combo For Mimmi",
+	Default = "",
+	TextDisappear = true,
+	Callback = function(txt)
+      local Players = game:GetService("Players")
+      local msg = txt
+      local function findPlayer(stringg)
+          for _, v in pairs(Players:GetPlayers()) do
+              if stringg:lower() == (v.Name:lower()):sub(1, #stringg) then
+                  return v
+              end
+          end
+      end
+  
+      local player = findPlayer(msg)
+      local CHAR = player.Character
+
+local args = {
+    [1] = "Fire",
+    [2] = "Fire",
+    [3] = player.Character,
+    [4] = Vector3.new(52.6291389465332, -37.617164611816406, 417.7151794433594)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Realistic"):FireServer(unpack(args))
+
+local args = {
+    [1] = "AdvFreeze",
+    [2] = "Advanced Freeze",
+    [3] = player.Character,
+    [4] = Vector3.new(123.55098724365234, -10.603315353393555, 420.5798034667969)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Emma"):FireServer(unpack(args))
+
+
+local args = {
+    [1] = "AreaTele",
+    [2] = "Area Telekinesis",
+    [3] = workspace:WaitForChild("Terrain"),
+    [4] = Vector3.new(247.02088928222656, 2.9843759536743164, -131.55868530273438)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Mimmi"):FireServer(unpack(args))
+
+local args = {
+    [1] = "Combo",
+    [2] = "Telekinetic Combo",
+    [3] = player.Character,
+    [4] = nil --[[Vector3]]
+}
+
+game:GetService("ReplicatedStorage").Character_Remotes.Mimmi:FireServer(unpack(args))
+
+local args = {
+    [1] = "Push",
+    [2] = "Push",
+    [3] = player.Character,
+    [4] = nil --[[Vector3]]
+}
+
+game:GetService("ReplicatedStorage").Character_Remotes.Mimmi:FireServer(unpack(args))
+
+local args = {
+    [1] = "Telekinesis",
+    [2] = "Telekinesis",
+    [3] = player.Character,
+    [4] = Vector3.new(369.16180419921875, -11.344131469726562, 972.9254150390625),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Realistic"):FireServer(unpack(args))
+
+local args = {
+    [1] = "Telekinesis",
+    [2] = "Telekinesis",
+    [3] = player.Character,
+    [4] = Vector3.new(434.5182189941406, -5.861790180206299, 906.918212890625),
+    [5] = "Click"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Realistic"):FireServer(unpack(args))
+
+local args = {
+    [1] = "AreaTele",
+    [2] = "Area Telekinesis",
+    [3] = workspace:WaitForChild("Terrain"),
+    [4] = Vector3.new(247.02088928222656, 2.9843759536743164, -131.55868530273438)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Mimmi"):FireServer(unpack(args))
+
+	end	  
+})
+
+
+BennettTab:AddBind({
+	Name = "Combo For Mimmi",
+	Default = Enum.KeyCode.Three,
+	Hold = false,
+	Callback = function()
+		print("You just clicked the bind")
+
+      local function getPlayer()
+         local userInput = game:GetService("UserInputService")
+         local cam = workspace.CurrentCamera
+         local mousePos = userInput:GetMouseLocation()
+         local mouseRay = cam:ViewportPointToRay(mousePos.X, mousePos.Y)
+         players = {}
+         for _, x in next, game:GetService('Players'):GetPlayers() do
+             players[#players + 1] = x.Character
+         end
+         local raycastParams = RaycastParams.new()
+         raycastParams.FilterType = Enum.RaycastFilterType.Whitelist
+         raycastParams.FilterDescendantsInstances = players
+         raycastParams.IgnoreWater = true
+         local raycastResult = workspace:Raycast(mouseRay.Origin, mouseRay.Direction * 1000, raycastParams)
+         if raycastResult then
+             for _, x in next, game:GetService('Players'):GetPlayers() do
+                 if not raycastResult.Instance:IsDescendantOf(x.Character) then
+                     continue
+                 end
+                 return x
+             end
+         end
+         return false
+     end
+ 
+     local function Set(list)
+         local set = {}
+         for _, l in ipairs(list) do
+             if l then
+                 set[l] = true
+             end
+         end
+         return set
+     end
+ 
+     game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
+         if key == "2" then
+             local player = getPlayer()
+             if player then
+
+local args = {
+    [1] = "Combo",
+    [2] = "Telekinetic Combo",
+    [3] = player.Character,
+    [4] = nil --[[Vector3]]
+}
+
+game:GetService("ReplicatedStorage").Character_Remotes.Mimmi:FireServer(unpack(args))
+
+local args = {
+    [1] = "Push",
+    [2] = "Push",
+    [3] = player.Character,
+    [4] = nil --[[Vector3]]
+}
+
+game:GetService("ReplicatedStorage").Character_Remotes.Mimmi:FireServer(unpack(args))
+
+local args = {
+    [1] = "Fire",
+    [2] = "Fire",
+    [3] = player.Character,
+    [4] = Vector3.new(52.6291389465332, -37.617164611816406, 417.7151794433594)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Realistic"):FireServer(unpack(args))
+
+local args = {
+    [1] = "AdvFreeze",
+    [2] = "Advanced Freeze",
+    [3] = player.Character,
+    [4] = Vector3.new(123.55098724365234, -10.603315353393555, 420.5798034667969)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Emma"):FireServer(unpack(args))
+
+local args = {
+    [1] = "Telekinesis",
+    [2] = "Telekinesis",
+    [3] = player.Character,
+    [4] = Vector3.new(369.16180419921875, -11.344131469726562, 972.9254150390625),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Realistic"):FireServer(unpack(args))
+
+local args = {
+    [1] = "Telekinesis",
+    [2] = "Telekinesis",
+    [3] = player.Character,
+    [4] = Vector3.new(434.5182189941406, -5.861790180206299, 906.918212890625),
+    [5] = "Click"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Realistic"):FireServer(unpack(args))
+
+local args = {
+    [1] = "AreaTele",
+    [2] = "Area Telekinesis",
+    [3] = workspace:WaitForChild("Terrain"),
+    [4] = Vector3.new(247.02088928222656, 2.9843759536743164, -131.55868530273438)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Mimmi"):FireServer(unpack(args))
+
+             end
+            end
+         end)
+	end    
+})
+
+
+BennettTab:AddTextbox({
+	Name = "Remote Spell (Hold Pink Goo)",
+	Default = "",
+	TextDisappear = true,
+	Callback = function(txt)
+      local Players = game:GetService("Players")
+      local msg = txt
+      local function findPlayer(stringg)
+          for _, v in pairs(Players:GetPlayers()) do
+              if stringg:lower() == (v.Name:lower()):sub(1, #stringg) then
+                  return v
+              end
+          end
+      end
+  
+      local player = findPlayer(msg)
+      local CHAR = player.Character
+
+local args = {
+    [1] = "Remote",
+    [2] = "Remote Spell",
+    [3] = player.Character,
+    [4] = game:GetService("Players").LocalPlayer.Character["Pink Goo"]
+}
+
+game:GetService("ReplicatedStorage").Character_Remotes.Mimmi:FireServer(unpack(args))
+
+
+	end	  
+})
+
+BennettTab:AddBind({
+	Name = "Remote Spell (Hold Pink Goo)",
+	Default = Enum.KeyCode.Three,
+	Hold = false,
+	Callback = function()
+		print("You just clicked the bind")
+
+      local function getPlayer()
+         local userInput = game:GetService("UserInputService")
+         local cam = workspace.CurrentCamera
+         local mousePos = userInput:GetMouseLocation()
+         local mouseRay = cam:ViewportPointToRay(mousePos.X, mousePos.Y)
+         players = {}
+         for _, x in next, game:GetService('Players'):GetPlayers() do
+             players[#players + 1] = x.Character
+         end
+         local raycastParams = RaycastParams.new()
+         raycastParams.FilterType = Enum.RaycastFilterType.Whitelist
+         raycastParams.FilterDescendantsInstances = players
+         raycastParams.IgnoreWater = true
+         local raycastResult = workspace:Raycast(mouseRay.Origin, mouseRay.Direction * 1000, raycastParams)
+         if raycastResult then
+             for _, x in next, game:GetService('Players'):GetPlayers() do
+                 if not raycastResult.Instance:IsDescendantOf(x.Character) then
+                     continue
+                 end
+                 return x
+             end
+         end
+         return false
+     end
+ 
+     local function Set(list)
+         local set = {}
+         for _, l in ipairs(list) do
+             if l then
+                 set[l] = true
+             end
+         end
+         return set
+     end
+ 
+     game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
+         if key == "3" then
+             local player = getPlayer()
+             if player then
+
+local args = {
+    [1] = "Remote",
+    [2] = "Remote Spell",
+    [3] = player.Character,
+    [4] = game:GetService("Players").LocalPlayer.Character["Pink Goo"]
+}
+
+game:GetService("ReplicatedStorage").Character_Remotes.Mimmi:FireServer(unpack(args))
+
+
+             end
+            end
+         end)
+	end    
+})
+
+BennettTab:AddTextbox({
+	Name = "50 Moons Spell (Hold 50 Moons Potion)",
+	Default = "",
+	TextDisappear = true,
+	Callback = function(txt)
+      local Players = game:GetService("Players")
+      local msg = txt
+      local function findPlayer(stringg)
+          for _, v in pairs(Players:GetPlayers()) do
+              if stringg:lower() == (v.Name:lower()):sub(1, #stringg) then
+                  return v
+              end
+          end
+      end
+  
+      local player = findPlayer(msg)
+      local CHAR = player.Character
+
+
+local args = {
+    [1] = "MoonSpell",
+    [2] = "50 Moons Spell",
+    [3] = player.Character,
+    [4] = game:GetService("Players").LocalPlayer.Character["50 Moons Potion"]
+}
+
+game:GetService("ReplicatedStorage").Character_Remotes.Mimmi:FireServer(unpack(args))
+
+	end	  
+})
+
+BennettTab:AddBind({
+	Name = "50 Moons Spell (Hold 50 Moons Potion)",
+	Default = Enum.KeyCode.Four,
+	Hold = false,
+	Callback = function()
+		print("You just clicked the bind")
+
+      local function getPlayer()
+         local userInput = game:GetService("UserInputService")
+         local cam = workspace.CurrentCamera
+         local mousePos = userInput:GetMouseLocation()
+         local mouseRay = cam:ViewportPointToRay(mousePos.X, mousePos.Y)
+         players = {}
+         for _, x in next, game:GetService('Players'):GetPlayers() do
+             players[#players + 1] = x.Character
+         end
+         local raycastParams = RaycastParams.new()
+         raycastParams.FilterType = Enum.RaycastFilterType.Whitelist
+         raycastParams.FilterDescendantsInstances = players
+         raycastParams.IgnoreWater = true
+         local raycastResult = workspace:Raycast(mouseRay.Origin, mouseRay.Direction * 1000, raycastParams)
+         if raycastResult then
+             for _, x in next, game:GetService('Players'):GetPlayers() do
+                 if not raycastResult.Instance:IsDescendantOf(x.Character) then
+                     continue
+                 end
+                 return x
+             end
+         end
+         return false
+     end
+ 
+     local function Set(list)
+         local set = {}
+         for _, l in ipairs(list) do
+             if l then
+                 set[l] = true
+             end
+         end
+         return set
+     end
+ 
+     game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
+         if key == "4" then
+             local player = getPlayer()
+             if player then
+
+local args = {
+    [1] = "MoonSpell",
+    [2] = "50 Moons Spell",
+    [3] = player.Character,
+    [4] = game:GetService("Players").LocalPlayer.Character["50 Moons Potion"]
+}
+
+game:GetService("ReplicatedStorage").Character_Remotes.Mimmi:FireServer(unpack(args))
+
+
+             end
+            end
+         end)
+	end    
+})
 
 BennettTab:AddParagraph("Transform to unglitch","they might be stuck forver 🥰")
 
