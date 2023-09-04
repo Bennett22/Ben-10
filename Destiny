@@ -1,0 +1,1157 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "Bennett Scripts | H2O: Mako Destiny", HidePremium = false, IntroText = "Bennett Scripts", SaveConfig = true, ConfigFolder = "OrionTest"})
+
+local BennettTab = Window:MakeTab({
+	Name = "Powers",
+	Icon = "rbxassetid://14458282849",
+	PremiumOnly = false
+})
+
+BennettTab:AddBind({
+	Name = "Combo For Realistic",
+	Default = Enum.KeyCode.One,
+	Hold = false,
+	Callback = function()
+		print("You just clicked the bind")
+
+      local function getPlayer()
+         local userInput = game:GetService("UserInputService")
+         local cam = workspace.CurrentCamera
+         local mousePos = userInput:GetMouseLocation()
+         local mouseRay = cam:ViewportPointToRay(mousePos.X, mousePos.Y)
+         players = {}
+         for _, x in next, game:GetService('Players'):GetPlayers() do
+             players[#players + 1] = x.Character
+         end
+         local raycastParams = RaycastParams.new()
+         raycastParams.FilterType = Enum.RaycastFilterType.Whitelist
+         raycastParams.FilterDescendantsInstances = players
+         raycastParams.IgnoreWater = true
+         local raycastResult = workspace:Raycast(mouseRay.Origin, mouseRay.Direction * 1000, raycastParams)
+         if raycastResult then
+             for _, x in next, game:GetService('Players'):GetPlayers() do
+                 if not raycastResult.Instance:IsDescendantOf(x.Character) then
+                     continue
+                 end
+                 return x
+             end
+         end
+         return false
+     end
+ 
+     local function Set(list)
+         local set = {}
+         for _, l in ipairs(list) do
+             if l then
+                 set[l] = true
+             end
+         end
+         return set
+     end
+ 
+     game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
+         if key == "1" then
+             local player = getPlayer()
+             if player then
+
+local args = {
+    [1] = "Fire",
+    [2] = "Fire",
+    [3] = player.Character,
+    [4] = Vector3.new(52.6291389465332, -37.617164611816406, 417.7151794433594)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Realistic"):FireServer(unpack(args))
+
+local args = {
+    [1] = "Ability",
+    [2] = "Shine",
+    [3] = workspace:WaitForChild("Terrain"),
+    [4] = Vector3.new(288.8275146484375, -15.625, 338.32611083984375)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Realistic"):FireServer(unpack(args))
+
+local args = {
+    [1] = "Push",
+    [2] = "Push",
+    [3] = player.Character,
+    [4] = Vector3.new(380.03631591796875, 11.544686317443848, 434.3777770996094)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Realistic"):FireServer(unpack(args))
+
+local args = {
+    [1] = "AreaTele",
+    [2] = "Area Telekinesis",
+    [3] = workspace:WaitForChild("Terrain"),
+    [4] = Vector3.new(380.6689147949219, -14.5745210647583, 984.686279296875)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Realistic"):FireServer(unpack(args))
+
+local args = {
+    [1] = "Telekinesis",
+    [2] = "Telekinesis",
+    [3] = player.Character,
+    [4] = Vector3.new(369.16180419921875, -11.344131469726562, 972.9254150390625),
+    [5] = "Hold"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Realistic"):FireServer(unpack(args))
+
+local args = {
+    [1] = "Telekinesis",
+    [2] = "Telekinesis",
+    [3] = player.Character,
+    [4] = Vector3.new(434.5182189941406, -5.861790180206299, 906.918212890625),
+    [5] = "Click"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Realistic"):FireServer(unpack(args))
+
+local args = {
+    [1] = "AdvFreeze",
+    [2] = "Advanced Freeze",
+    [3] = player.Character,
+    [4] = Vector3.new(123.55098724365234, -10.603315353393555, 420.5798034667969)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Character_Remotes"):WaitForChild("Emma"):FireServer(unpack(args))
+
+
+             end
+            end
+         end)
+	end    
+})
+
+
+BennettTab:AddParagraph("Transform to unglitch","they might be stuck forver 🥰")
+
+BennettTab:AddBind({
+	Name = "Glitch Someone",
+	Default = Enum.KeyCode.Nine,
+	Hold = false,
+	Callback = function()
+		print("You just clicked the bind")
+
+      local function getPlayer()
+         local userInput = game:GetService("UserInputService")
+         local cam = workspace.CurrentCamera
+         local mousePos = userInput:GetMouseLocation()
+         local mouseRay = cam:ViewportPointToRay(mousePos.X, mousePos.Y)
+         players = {}
+         for _, x in next, game:GetService('Players'):GetPlayers() do
+             players[#players + 1] = x.Character
+         end
+         local raycastParams = RaycastParams.new()
+         raycastParams.FilterType = Enum.RaycastFilterType.Whitelist
+         raycastParams.FilterDescendantsInstances = players
+         raycastParams.IgnoreWater = true
+         local raycastResult = workspace:Raycast(mouseRay.Origin, mouseRay.Direction * 1000, raycastParams)
+         if raycastResult then
+             for _, x in next, game:GetService('Players'):GetPlayers() do
+                 if not raycastResult.Instance:IsDescendantOf(x.Character) then
+                     continue
+                 end
+                 return x
+             end
+         end
+         return false
+     end
+ 
+     local function Set(list)
+         local set = {}
+         for _, l in ipairs(list) do
+             if l then
+                 set[l] = true
+             end
+         end
+         return set
+     end
+ 
+     game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
+         if key == "9" then
+             local player = getPlayer()
+             if player then
+
+local args = {
+    [1] = "Dry",
+    [2] = player.Character
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("DryOther"):FireServer(unpack(args))
+
+
+             end
+            end
+         end)
+	end    
+})
+
+BennettTab:AddButton({
+	Name = "Transform Into Mermaid",
+	Callback = function()
+
+
+local args = {
+    [1] = "Water"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("Transform"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Detransform",
+	Callback = function()
+
+local args = {
+    [1] = "Human"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("UnTransform"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+local BennettTab = Window:MakeTab({
+	Name = "Characters",
+	Icon = "rbxassetid://14458282849",
+	PremiumOnly = false
+})
+local Section = BennettTab:AddSection({
+	Name = "Half Mermaid"
+})
+
+BennettTab:AddButton({
+	Name = "Rikki Outfit 1",
+	Callback = function()
+
+local args = {
+    [1] = "Outfit1",
+    [2] = "Rikki"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Rikki Outfit 2",
+	Callback = function()
+
+local args = {
+    [1] = "Outfit2",
+    [2] = "Rikki"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Rikki Outfit 3",
+	Callback = function()
+
+local args = {
+    [1] = "Outfit3",
+    [2] = "Rikki"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Rikki Outfit 4",
+	Callback = function()
+
+local args = {
+    [1] = "Outfit4",
+    [2] = "Rikki"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+BennettTab:AddParagraph("","")
+
+BennettTab:AddButton({
+	Name = "Bella Outfit 1",
+	Callback = function()
+
+local args = {
+    [1] = "Outfit1",
+    [2] = "Bella"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Bella Outfit 2",
+	Callback = function()
+
+local args = {
+    [1] = "Outfit2",
+    [2] = "Bella"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Bella Outfit 3",
+	Callback = function()
+
+local args = {
+    [1] = "Outfit3",
+    [2] = "Bella"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+BennettTab:AddParagraph("","")
+
+BennettTab:AddButton({
+	Name = "Emma Outfit 1",
+	Callback = function()
+
+local args = {
+    [1] = "Outfit1",
+    [2] = "Emma"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Emma Outfit 2",
+	Callback = function()
+
+local args = {
+    [1] = "Outfit2",
+    [2] = "Emma"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Emma Outfit 3",
+	Callback = function()
+
+local args = {
+    [1] = "Outfit3",
+    [2] = "Emma"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+BennettTab:AddParagraph("","")
+
+BennettTab:AddButton({
+	Name = "Cleo Outfit 1",
+	Callback = function()
+
+local args = {
+    [1] = "Outfit1",
+    [2] = "Cleo"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Cleo Outfit 2",
+	Callback = function()
+
+local args = {
+    [1] = "Outfit2",
+    [2] = "Cleo"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Cleo Outfit 3",
+	Callback = function()
+
+local args = {
+    [1] = "Outfit3",
+    [2] = "Cleo"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+BennettTab:AddParagraph("","")
+
+BennettTab:AddButton({
+	Name = "Charlotte Outfit 1",
+	Callback = function()
+
+local args = {
+    [1] = "Outfit1",
+    [2] = "Charlotte"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Charlotte Outfit 2",
+	Callback = function()
+
+local args = {
+    [1] = "Outfit2",
+    [2] = "Charlotte"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Charlotte Outfit 3",
+	Callback = function()
+
+local args = {
+    [1] = "Outfit3",
+    [2] = "Charlotte"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+
+local Section = BennettTab:AddSection({
+	Name = "Mermaid"
+})
+
+BennettTab:AddButton({
+	Name = "Aquata Outfit 1",
+	Callback = function()
+
+local args = {
+    [1] = "Outfit1",
+    [2] = "Aquata"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Aquata Outfit 2",
+	Callback = function()
+
+local args = {
+    [1] = "Outfit2",
+    [2] = "Aquata"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+BennettTab:AddParagraph("","")
+
+BennettTab:AddButton({
+	Name = "Siren Sirena Outfit 1",
+	Callback = function()
+
+local args = {
+    [1] = "Outfit1",
+    [2] = "Siren Sirena"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Siren Sirena Outfit 2",
+	Callback = function()
+
+local args = {
+    [1] = "Outfit2",
+    [2] = "Siren Sirena"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+BennettTab:AddParagraph("","")
+
+BennettTab:AddButton({
+	Name = "Mimmi Outfit 1",
+	Callback = function()
+
+local args = {
+    [1] = "Outfit1",
+    [2] = "Mimmi"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Mimmi Outfit 2",
+	Callback = function()
+
+local args = {
+    [1] = "Outfit2",
+    [2] = "Mimmi"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+BennettTab:AddParagraph("","")
+
+BennettTab:AddButton({
+	Name = "Weilan Outfit 1",
+	Callback = function()
+
+local args = {
+    [1] = "Outfit1",
+    [2] = "Weilan"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Weilan Outfit 2",
+	Callback = function()
+
+local args = {
+    [1] = "Outfit2",
+    [2] = "Weilan"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+BennettTab:AddParagraph("","")
+
+BennettTab:AddButton({
+	Name = "Rita",
+	Callback = function()
+
+local args = {
+    [1] = "Outfit1",
+    [2] = "Rita"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+BennettTab:AddParagraph("","")
+
+BennettTab:AddButton({
+	Name = "Ondina Outfit 1",
+	Callback = function()
+
+local args = {
+    [1] = "Outfit1",
+    [2] = "Ondina"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Ondina Outfit 2",
+	Callback = function()
+
+local args = {
+    [1] = "Outfit2",
+    [2] = "Ondina"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Ondina Outfit 3",
+	Callback = function()
+
+local args = {
+    [1] = "Outfit3",
+    [2] = "Ondina"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+BennettTab:AddParagraph("","")
+
+BennettTab:AddButton({
+	Name = "Nixie",
+	Callback = function()
+
+local args = {
+    [1] = "Outfit1",
+    [2] = "Nixie"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+BennettTab:AddParagraph("","")
+
+BennettTab:AddButton({
+	Name = "Sirena Outfit 1",
+	Callback = function()
+
+local args = {
+    [1] = "Outfit1",
+    [2] = "Sirena"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Sirena Outfit 2",
+	Callback = function()
+
+local args = {
+    [1] = "Outfit2",
+    [2] = "Sirena"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+BennettTab:AddParagraph("","")
+
+BennettTab:AddButton({
+	Name = "Lyla",
+	Callback = function()
+
+local args = {
+    [1] = "Outfit1",
+    [2] = "Lyla"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+BennettTab:AddParagraph("","")
+
+BennettTab:AddButton({
+	Name = "Vanessa",
+	Callback = function()
+
+local args = {
+    [1] = "Outfit1",
+    [2] = "Vanessa"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+BennettTab:AddParagraph("","")
+
+BennettTab:AddButton({
+	Name = "Karina",
+	Callback = function()
+
+local args = {
+    [1] = "Outfit1",
+    [2] = "Karina"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+BennettTab:AddParagraph("","")
+
+BennettTab:AddButton({
+	Name = "Ariel",
+	Callback = function()
+
+local args = {
+    [1] = "Outfit1",
+    [2] = "Ariel"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+BennettTab:AddParagraph("","")
+
+BennettTab:AddButton({
+	Name = "Iris",
+	Callback = function()
+
+local args = {
+    [1] = "Outfit1",
+    [2] = "Iris"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+local Section = BennettTab:AddSection({
+	Name = "Human"
+})
+
+BennettTab:AddButton({
+	Name = "Carly",
+	Callback = function()
+
+local args = {
+    [1] = "Outfit1",
+    [2] = "Carly"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+
+BennettTab:AddButton({
+	Name = "Evie",
+	Callback = function()
+
+local args = {
+    [1] = "Outfit1",
+    [2] = "Evie"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+local Section = BennettTab:AddSection({
+	Name = "Merman"
+})
+
+BennettTab:AddButton({
+	Name = "Erik",
+	Callback = function()
+
+local args = {
+    [1] = "Outfit1",
+    [2] = "Erik"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Zac",
+	Callback = function()
+
+local args = {
+    [1] = "Outfit1",
+    [2] = "Zac"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+local Section = BennettTab:AddSection({
+	Name = "Not In Game Characters"
+})
+
+BennettTab:AddButton({
+	Name = "Realistic",
+	Callback = function()
+
+local args = {
+    [1] = "Outfit1",
+    [2] = "Realistic"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+
+BennettTab:AddButton({
+	Name = "Elsa",
+	Callback = function()
+
+local args = {
+    [1] = "Outfit1",
+    [2] = "Elsa"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Tamika",
+	Callback = function()
+
+local args = {
+    [1] = "Outfit1",
+    [2] = "Tamika"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Will",
+	Callback = function()
+
+local args = {
+    [1] = "Outfit1",
+    [2] = "Will"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Cam",
+	Callback = function()
+
+local args = {
+    [1] = "Outfit1",
+    [2] = "Cam"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+local BennettTab = Window:MakeTab({
+	Name = "Teleports",
+	Icon = "rbxassetid://14458282849",
+	PremiumOnly = false
+})
+
+BennettTab:AddButton({
+	Name = "ClassRoom",
+	Callback = function()
+
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(958.225586, 41.0479698, 717.645935, -0.300186634, -4.08062206e-08, 0.953880489, 2.62396149e-08, 1, 5.10367961e-08, -0.953880489, 4.03500202e-08, -0.300186634)
+    print("Clicked")
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Riki's Cafe",
+	Callback = function()
+
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(370.281433, -7.45908594, 1151.98376, 0.0657995194, -9.93462805e-08, 0.997832835, -9.8253734e-09, 1, 1.00209952e-07, -0.997832835, -1.63978466e-08, 0.0657995194)
+    print("Clicked")
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Ocean Cafe",
+	Callback = function()
+
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(79.5227356, 5.96920824, -191.757278, -0.997953773, -1.36228495e-08, 0.0639397502, -1.41160159e-08, 1, -7.26124272e-09, -0.0639397502, -8.14895884e-09, -0.997953773)
+    print("Clicked")
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "The Docks",
+	Callback = function()
+
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(235.758392, -13.3186436, 435.064423, 0.00570710422, -1.96286649e-08, 0.999983728, -4.83443081e-08, 1, 1.99048955e-08, -0.999983728, -4.8457121e-08, 0.00570710422)
+    print("Clicked")
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Mako island",
+	Callback = function()
+
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1371.52075, -13.1332455, 342.447144, 0.0913789198, 1.07287939e-07, 0.995816171, -2.94189118e-08, 1, -1.05039128e-07, -0.995816171, -1.96974668e-08, 0.0913789198)
+    print("Clicked")
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Moon Pool",
+	Callback = function()
+
+   game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1748.62854, -15.2851677, 626.374878, -0.399805248, -3.08804502e-08, -0.916600108, -1.0076243e-08, 1, -2.92951245e-08, 0.916600108, -2.47645904e-09, -0.399805248)
+    print("Clicked")
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Irish Moon Pool",
+	Callback = function()
+
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-481.072113, 12.6639118, -990.762268, 0.118983917, -9.27987074e-08, -0.992896199, -2.20004956e-08, 1, -9.60990789e-08, 0.992896199, 3.32784538e-08, 0.118983917)
+    print("Clicked")
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Mermans Cave",
+	Callback = function()
+
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1733.35181, 21.2365894, -13.7410555, 0.413919389, -3.06951513e-08, 0.910313547, -1.45431311e-09, 1, 3.43805944e-08, -0.910313547, -1.55546758e-08, 0.413919389)
+    print("Clicked")
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Mermans Cave Outside",
+	Callback = function()
+
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1767.89307, 21.4386387, -89.6060028, 0.890827954, 3.95015896e-08, -0.454340786, -1.81315229e-08, 1, 5.13920853e-08, 0.454340786, -3.75436144e-08, 0.890827954)
+    print("Clicked")
+
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "School",
+	Callback = function()
+
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(860.804382, 41.0479622, 807.33667, -0.324185848, 5.19318633e-08, 0.945993423, -8.08835721e-10, 1, -5.51738282e-08, -0.945993423, -1.86517273e-08, -0.324185848)
+    print("Clicked")
+
+
+  	end    
+})
+local BennettTab = Window:MakeTab({
+	Name = "Misc",
+	Icon = "rbxassetid://14458282849",
+	PremiumOnly = false
+})
+
+BennettTab:AddButton({
+	Name = "Get Catwalk",
+	Callback = function()
+
+local plr = game.Players.LocalPlayer
+
+--cheer
+game.workspace[plr.name].Animate.cheer.CheerAnim.AnimationId = "rbxassetid://507770677"
+
+--climb
+game.workspace[plr.name].Animate.climb.ClimbAnim.AnimationId = "rbxassetid://507765644"
+
+--fall
+
+game.workspace[plr.name].Animate.fall.FallAnim.AnimationId = "rbxassetid://2510195892"
+
+--idle
+
+game.workspace[plr.name].Animate.idle.Animation1.AnimationId = "rbxassetid://14342435413"
+game.workspace[plr.name].Animate.idle.Animation2.AnimationId = "rbxassetid://14342435413"
+
+--jump
+
+game.workspace[plr.name].Animate.jump.JumpAnim.AnimationId = "rbxassetid://2510197830"
+
+--run
+
+game.workspace[plr.name].Animate.run.RunAnim.AnimationId = "rbxassetid://14342440000"
+
+--sit
+
+game.workspace[plr.name].Animate.sit.SitAnim.AnimationId = "rbxassetid://1"
+
+--walk
+
+game.workspace[plr.name].Animate.walk.WalkAnim.AnimationId = "rbxassetid://14342440000"
+
+
+  	end    
+})
+
+local Section = BennettTab:AddSection({
+	Name = "Other Scripts"
+})
+
+BennettTab:AddButton({
+	Name = "Animations",
+	Callback = function()
+
+        loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Ben-10/main/Animation'),true))()
+
+      
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Infinite Yield",
+	Callback = function()
+
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+      
+  	end    
+})
+
+local BennettTab = Window:MakeTab({
+	Name = "Credits",
+	Icon = "rbxassetid://14458282849",
+	PremiumOnly = false
+})
+
+local Section = BennettTab:AddSection({
+	Name = "discord: bennettscripts"
+})
+
+wait(1)
+game.StarterGui:SetCore("SendNotification", { 
+    Title = "⛤ Bennett Scripts ⛤";
+    Text = "H2O: Mako Destiny";
+    Icon = "rbxthumb://type=Asset&id=14067496704&w=150&h=150";
+    Duration = "2";
+    Button1 = "Close";
+})
+
+if game:GetService("Players").LocalPlayer.UserId == 3185912033 then
+
+    game.Players.LocalPlayer:Kick("Blacklisted xoxoxo")
+
+end
