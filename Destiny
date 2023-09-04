@@ -1562,6 +1562,57 @@ BennettTab:AddButton({
 
   	end    
 })
+
+local BennettTab = Window:MakeTab({
+	Name = "Shop",
+	Icon = "rbxassetid://14458282849",
+	PremiumOnly = false
+})
+
+BennettTab:AddButton({
+	Name = "Buy Flash light",
+	Callback = function()
+
+local args = {
+    [1] = "Flash Light",
+    [2] = workspace:WaitForChild("ShopItems"):WaitForChild("Flash Light"):WaitForChild("ProximityPrompt"):WaitForChild("Cost")
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("Purchase"):FireServer(unpack(args))
+    print("Clicked")
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Buy Pink goo",
+	Callback = function()
+
+local args = {
+    [1] = "Pink Goo",
+    [2] = workspace:WaitForChild("ShopItems"):WaitForChild("Pink Goo"):WaitForChild("ProximityPrompt"):WaitForChild("Cost")
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("Purchase"):FireServer(unpack(args))
+    print("Clicked")
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Buy 50 Moons Potion",
+	Callback = function()
+
+local args = {
+    [1] = "50 Moons Potion",
+    [2] = workspace:WaitForChild("ShopItems"):WaitForChild("50 Moons Potion"):WaitForChild("ProximityPrompt"):WaitForChild("Cost")
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("Purchase"):FireServer(unpack(args))
+    print("Clicked")
+
+  	end    
+})
 local BennettTab = Window:MakeTab({
 	Name = "Misc",
 	Icon = "rbxassetid://14458282849",
