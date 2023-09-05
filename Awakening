@@ -908,6 +908,126 @@ game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Wiccan
   	end    
 })
 
+local Section = BennettTab:AddSection({
+	Name = "Characters"
+})
+
+BennettTab:AddButton({
+	Name = "Agatha Harkness",
+	Callback = function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Agatha Harkness")
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Audrey",
+	Callback = function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Audrey")
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Charm Caster",
+	Callback = function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Charm Caster")
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Invisible Woman",
+	Callback = function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Invisible Woman")
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Jean Grey",
+	Callback = function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Jean Grey")
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Monica Rambeau",
+	Callback = function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Monica Rambeau")
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Prom Gwen",
+	Callback = function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Prom Gwen")
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Quicksilver",
+	Callback = function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Quicksilver")
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Raven",
+	Callback = function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Raven")
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Storm",
+	Callback = function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Storm")
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Vision",
+	Callback = function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Vision")
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Wanda Maximoff: Endgame",
+	Callback = function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Wanda Maximoff: Endgame")
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Wiccan",
+	Callback = function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Wiccan")
+
+  	end    
+})
 local BennettTab = Window:MakeTab({
 	Name = "Admin",
 	Icon = "rbxassetid://14458282849",
