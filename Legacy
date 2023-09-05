@@ -1033,6 +1033,12 @@ game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Zatann
 
 end)
 
+BennettSection:NewButton("Stella", " ", function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Stella")
+
+end)
+
 local Bennett = Window:NewTab("Animations")
 local BennettSection = Bennett:NewSection("Animations")
 BennettSection:NewButton("Get White Ravens Animations", " ", function()
