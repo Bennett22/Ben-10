@@ -1,0 +1,95 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "Bennett Scripts | The Mako Pod", HidePremium = false, IntroText = "Bennett Scripts", SaveConfig = true, ConfigFolder = "OrionTest"})
+local BennettTab = Window:MakeTab({
+	Name = "Custom",
+	Icon = "rbxassetid://14458282849",
+	PremiumOnly = false
+})
+local Section = BennettTab:AddSection({
+	Name = "Settings for custom"
+})
+
+BennettTab:AddButton({
+	Name = "Become a Custom",
+	Callback = function()
+
+game.Players.LocalPlayer.PlayerGui.CharactersGUI.Enabled = false
+
+game.Players.LocalPlayer.PlayerGui.BoxGUI.Enabled = true
+
+game.Lighting.StartingBlur:Destroy()
+
+local backup = game.Workspace:FindFirstChild("Necesario", true):Clone()
+backup.Parent = Workspace
+
+local backup = game.Workspace:FindFirstChild("Necesario", true):Clone()
+backup.Parent = plr
+
+local plr = game.Players.LocalPlayer
+local backup = game.Workspace:FindFirstChild("Necesario", true):Clone()
+backup.Parent = plr.character
+
+  	end    
+})
+
+local BennettTab = Window:MakeTab({
+	Name = "Misc",
+	Icon = "rbxassetid://14458282849",
+	PremiumOnly = false
+})
+
+local Section = BennettTab:AddSection({
+	Name = "Other Scripts"
+})
+
+BennettTab:AddButton({
+	Name = "Custom Catalog",
+	Callback = function()
+
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Ben-10/main/Custom%20Catalog'),true))()
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Animations",
+	Callback = function()
+
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Ben-10/main/Animation'),true))()
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Infinite Yield",
+	Callback = function()
+
+loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+
+  	end    
+})
+
+local BennettTab = Window:MakeTab({
+	Name = "Credits",
+	Icon = "rbxassetid://14458282849",
+	PremiumOnly = false
+})
+
+local Section = BennettTab:AddSection({
+	Name = "discord: bennettscripts"
+})
+
+wait(1)
+game.StarterGui:SetCore("SendNotification", { 
+    Title = "⛤ Bennett Scripts ⛤";
+    Text = "The Mako Pod";
+    Icon = "rbxthumb://type=Asset&id=14067496704&w=150&h=150";
+    Duration = "2";
+    Button1 = "Close";
+})
+
+if game:GetService("Players").LocalPlayer.UserId == 3185912033 then
+
+    game.Players.LocalPlayer:Kick("Blacklisted xoxoxo")
+
+end
