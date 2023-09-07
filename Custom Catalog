@@ -370,6 +370,74 @@ if game:GetService("Players").LocalPlayer.UserId == 3457959451 then
     game.Players:Chat("!hat 7179311496")
 end
 end)
+
+local Tab = Window:NewTab("Lilith")
+local Section = Tab:NewSection("Sabrina")
+Section:NewButton("Custom", " ", function()
+if game:GetService("Players").LocalPlayer.UserId == 4474769408 then
+    game.Players:Chat("!hat 7896135207")
+    game.Players:Chat("!hat 5707416289")
+    game.Players:Chat("!hat 7858023860")
+end
+
+if game:GetService("Players").LocalPlayer.UserId == 5010073899 then
+    game.Players:Chat("!hat 7896135207")
+    game.Players:Chat("!hat 5707416289")
+    game.Players:Chat("!hat 7858023860")
+end
+
+end)
+local Section = Tab:NewSection("Charmcaster")
+Section:NewButton("Custom", " ", function()
+if game:GetService("Players").LocalPlayer.UserId == 4474769408 then
+    game.Players:Chat("!hat 6127986422")
+    game.Players:Chat("!hat 9159466188")
+end
+if game:GetService("Players").LocalPlayer.UserId == 5010073899 then
+    game.Players:Chat("!hat 6127986422")
+    game.Players:Chat("!hat 9159466188")
+end
+end)
+local Section = Tab:NewSection("Child")
+Section:NewButton("Custom", " ", function()
+if game:GetService("Players").LocalPlayer.UserId == 4474769408 then
+    game.Players:Chat("!hat 13796825641")
+    game.Players:Chat("!hat 10654095351")
+end
+
+if game:GetService("Players").LocalPlayer.UserId == 5010073899 then
+    game.Players:Chat("!hat 13796825641")
+    game.Players:Chat("!hat 10654095351")
+end
+end)
+local Section = Tab:NewSection("White Phoenix")
+Section:NewButton("Custom", " ", function()
+if game:GetService("Players").LocalPlayer.UserId == 4474769408 then
+    game.Players:Chat("!hat 13745010143")
+    game.Players:Chat("!hat 10260161563")
+end
+
+if game:GetService("Players").LocalPlayer.UserId == 5010073899 then
+    game.Players:Chat("!hat 13745010143")
+    game.Players:Chat("!hat 10260161563")
+end
+end)
+local Section = Tab:NewSection("Atom Eve")
+Section:NewButton("Custom", " ", function()
+if game:GetService("Players").LocalPlayer.UserId == 4474769408 then
+    game.Players:Chat("!hat 14125159822")
+    game.Players:Chat("!hat 12731443570")
+    game.Players:Chat("!hat 9491026135")
+    game.Players:Chat("!hat 7403602095")
+end
+
+if game:GetService("Players").LocalPlayer.UserId == 5010073899 then
+    game.Players:Chat("!hat 14125159822")
+    game.Players:Chat("!hat 12731443570")
+    game.Players:Chat("!hat 9491026135")
+    game.Players:Chat("!hat 7403602095")
+end
+end)
 local Tab = Window:NewTab("Heads")
 local Section = Tab:NewSection("")
 Section:NewButton("Narrow", " ", function()
