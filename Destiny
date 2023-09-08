@@ -1395,18 +1395,6 @@ game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild
 })
 
 
-BennettTab:AddButton({
-	Name = "Elsa",
-	Callback = function()
-
-local args = {
-    [1] = "Outfit1",
-    [2] = "Elsa"
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
-
-
   	end    
 })
 
@@ -1447,6 +1435,21 @@ BennettTab:AddButton({
 local args = {
     [1] = "Outfit1",
     [2] = "Cam"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Sophie",
+	Callback = function()
+
+local args = {
+    [1] = "Outfit1",
+    [2] = "Sophie"
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild("CharacterChoose"):FireServer(unpack(args))
