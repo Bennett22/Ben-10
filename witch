@@ -1042,6 +1042,20 @@ game:GetService("ReplicatedStorage").Remotes.ChangeTeam:FireServer(unpack(args))
   	end    
 })
 
+BennettTab:AddButton({
+	Name = "Royal Bloodline",
+	Callback = function()
+
+local args = {
+    [1] = BrickColor.new("Crimson")
+}
+
+game:GetService("ReplicatedStorage").Remotes.ChangeTeam:FireServer(unpack(args))
+
+  	end    
+})
+
+
 local BennettTab = Window:MakeTab({
 	Name = "Custom Teams",
 	Icon = "rbxassetid://14458282849",
