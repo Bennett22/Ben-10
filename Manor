@@ -4308,6 +4308,138 @@ BennettTab:AddButton({
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("Witches"):WaitForChild("GoodWitches"):WaitForChild("Paige"):WaitForChild("PowerEvents"):WaitForChild("PaigeEvents"):FireServer(unpack(args))
+    local args = {
+    [1] = "heals",
+    [2] = Vector3.new(86.54939270019531, 128.59620666503906, -121.95008087158203)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Witches"):WaitForChild("GoodWitches"):WaitForChild("Paige"):WaitForChild("PowerEvents"):WaitForChild("PaigeEvents"):FireServer(unpack(args))
+    local args = {
+    [1] = "heals",
+    [2] = Vector3.new(86.54939270019531, 128.59620666503906, -121.95008087158203)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Witches"):WaitForChild("GoodWitches"):WaitForChild("Paige"):WaitForChild("PowerEvents"):WaitForChild("PaigeEvents"):FireServer(unpack(args))
+    local args = {
+    [1] = "heals",
+    [2] = Vector3.new(86.54939270019531, 128.59620666503906, -121.95008087158203)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Witches"):WaitForChild("GoodWitches"):WaitForChild("Paige"):WaitForChild("PowerEvents"):WaitForChild("PaigeEvents"):FireServer(unpack(args))
+    local args = {
+    [1] = "heals",
+    [2] = Vector3.new(86.54939270019531, 128.59620666503906, -121.95008087158203)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Witches"):WaitForChild("GoodWitches"):WaitForChild("Paige"):WaitForChild("PowerEvents"):WaitForChild("PaigeEvents"):FireServer(unpack(args))
+    local args = {
+    [1] = "heals",
+    [2] = Vector3.new(86.54939270019531, 128.59620666503906, -121.95008087158203)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Witches"):WaitForChild("GoodWitches"):WaitForChild("Paige"):WaitForChild("PowerEvents"):WaitForChild("PaigeEvents"):FireServer(unpack(args))
+    local args = {
+    [1] = "heals",
+    [2] = Vector3.new(86.54939270019531, 128.59620666503906, -121.95008087158203)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Witches"):WaitForChild("GoodWitches"):WaitForChild("Paige"):WaitForChild("PowerEvents"):WaitForChild("PaigeEvents"):FireServer(unpack(args))
+    local args = {
+    [1] = "heals",
+    [2] = Vector3.new(86.54939270019531, 128.59620666503906, -121.95008087158203)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Witches"):WaitForChild("GoodWitches"):WaitForChild("Paige"):WaitForChild("PowerEvents"):WaitForChild("PaigeEvents"):FireServer(unpack(args))
+    local args = {
+    [1] = "heals",
+    [2] = Vector3.new(86.54939270019531, 128.59620666503906, -121.95008087158203)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Witches"):WaitForChild("GoodWitches"):WaitForChild("Paige"):WaitForChild("PowerEvents"):WaitForChild("PaigeEvents"):FireServer(unpack(args))
+    local args = {
+    [1] = "heals",
+    [2] = Vector3.new(86.54939270019531, 128.59620666503906, -121.95008087158203)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Witches"):WaitForChild("GoodWitches"):WaitForChild("Paige"):WaitForChild("PowerEvents"):WaitForChild("PaigeEvents"):FireServer(unpack(args))
+    local args = {
+    [1] = "heals",
+    [2] = Vector3.new(86.54939270019531, 128.59620666503906, -121.95008087158203)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Witches"):WaitForChild("GoodWitches"):WaitForChild("Paige"):WaitForChild("PowerEvents"):WaitForChild("PaigeEvents"):FireServer(unpack(args))
+    local args = {
+    [1] = "heals",
+    [2] = Vector3.new(86.54939270019531, 128.59620666503906, -121.95008087158203)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Witches"):WaitForChild("GoodWitches"):WaitForChild("Paige"):WaitForChild("PowerEvents"):WaitForChild("PaigeEvents"):FireServer(unpack(args))
+    local args = {
+    [1] = "heals",
+    [2] = Vector3.new(86.54939270019531, 128.59620666503906, -121.95008087158203)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Witches"):WaitForChild("GoodWitches"):WaitForChild("Paige"):WaitForChild("PowerEvents"):WaitForChild("PaigeEvents"):FireServer(unpack(args))
+    local args = {
+    [1] = "heals",
+    [2] = Vector3.new(86.54939270019531, 128.59620666503906, -121.95008087158203)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Witches"):WaitForChild("GoodWitches"):WaitForChild("Paige"):WaitForChild("PowerEvents"):WaitForChild("PaigeEvents"):FireServer(unpack(args))
+    local args = {
+    [1] = "heals",
+    [2] = Vector3.new(86.54939270019531, 128.59620666503906, -121.95008087158203)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Witches"):WaitForChild("GoodWitches"):WaitForChild("Paige"):WaitForChild("PowerEvents"):WaitForChild("PaigeEvents"):FireServer(unpack(args))
+    local args = {
+    [1] = "heals",
+    [2] = Vector3.new(86.54939270019531, 128.59620666503906, -121.95008087158203)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Witches"):WaitForChild("GoodWitches"):WaitForChild("Paige"):WaitForChild("PowerEvents"):WaitForChild("PaigeEvents"):FireServer(unpack(args))
+    local args = {
+    [1] = "heals",
+    [2] = Vector3.new(86.54939270019531, 128.59620666503906, -121.95008087158203)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Witches"):WaitForChild("GoodWitches"):WaitForChild("Paige"):WaitForChild("PowerEvents"):WaitForChild("PaigeEvents"):FireServer(unpack(args))
+    local args = {
+    [1] = "heals",
+    [2] = Vector3.new(86.54939270019531, 128.59620666503906, -121.95008087158203)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Witches"):WaitForChild("GoodWitches"):WaitForChild("Paige"):WaitForChild("PowerEvents"):WaitForChild("PaigeEvents"):FireServer(unpack(args))
+    local args = {
+    [1] = "heals",
+    [2] = Vector3.new(86.54939270019531, 128.59620666503906, -121.95008087158203)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Witches"):WaitForChild("GoodWitches"):WaitForChild("Paige"):WaitForChild("PowerEvents"):WaitForChild("PaigeEvents"):FireServer(unpack(args))
+    local args = {
+    [1] = "heals",
+    [2] = Vector3.new(86.54939270019531, 128.59620666503906, -121.95008087158203)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Witches"):WaitForChild("GoodWitches"):WaitForChild("Paige"):WaitForChild("PowerEvents"):WaitForChild("PaigeEvents"):FireServer(unpack(args))
+    local args = {
+    [1] = "heals",
+    [2] = Vector3.new(86.54939270019531, 128.59620666503906, -121.95008087158203)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Witches"):WaitForChild("GoodWitches"):WaitForChild("Paige"):WaitForChild("PowerEvents"):WaitForChild("PaigeEvents"):FireServer(unpack(args))
+    local args = {
+    [1] = "heals",
+    [2] = Vector3.new(86.54939270019531, 128.59620666503906, -121.95008087158203)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Witches"):WaitForChild("GoodWitches"):WaitForChild("Paige"):WaitForChild("PowerEvents"):WaitForChild("PaigeEvents"):FireServer(unpack(args))
+    local args = {
+    [1] = "heals",
+    [2] = Vector3.new(86.54939270019531, 128.59620666503906, -121.95008087158203)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Witches"):WaitForChild("GoodWitches"):WaitForChild("Paige"):WaitForChild("PowerEvents"):WaitForChild("PaigeEvents"):FireServer(unpack(args))
 
 
   	end    
