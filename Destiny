@@ -1394,10 +1394,6 @@ game:GetService("ReplicatedStorage"):WaitForChild("System_Remotes"):WaitForChild
   	end    
 })
 
-
-  	end    
-})
-
 BennettTab:AddButton({
 	Name = "Tamika",
 	Callback = function()
