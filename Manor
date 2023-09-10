@@ -4154,8 +4154,8 @@ end
 })
 
 BennettTab:AddBind({
-	Name = "Sleep Induction",
-	Default = Enum.KeyCode.L,
+	Name = "Daze",
+	Default = Enum.KeyCode.X,
 	Hold = false,
 	Callback = function()
 		print("You just clicked the bind")
