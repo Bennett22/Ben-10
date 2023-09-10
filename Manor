@@ -4292,7 +4292,7 @@ game:GetService("ReplicatedStorage"):WaitForChild("Demons"):WaitForChild("UpperL
 
 BennettTab:AddBind({
 	Name = "Mover",
-	Default = Enum.KeyCode.C,
+	Default = Enum.KeyCode.V,
 	Hold = true,
 	Callback = function()
 
@@ -4301,7 +4301,7 @@ BennettTab:AddBind({
         hum = plr.Character.HumanoidRootPart
         mouse = plr:GetMouse()
         mouse.KeyDown:connect(function(key)
-        if key == 'c' then
+        if key == 'v' then
         if mouse.Target then
         if clicktpon then
 
@@ -4337,7 +4337,7 @@ BennettTab:AddParagraph("","")
 
 BennettTab:AddBind({
 	Name = "Transmutation",
-	Default = Enum.KeyCode.V,
+	Default = Enum.KeyCode.B,
 	Hold = true,
 	Callback = function()
 
@@ -4346,7 +4346,7 @@ BennettTab:AddBind({
         hum = plr.Character.HumanoidRootPart
         mouse = plr:GetMouse()
         mouse.KeyDown:connect(function(key)
-        if key == 'v' then
+        if key == 'b' then
         if mouse.Target then
         if clicktpon then
 
