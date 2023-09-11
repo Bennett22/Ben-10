@@ -398,11 +398,11 @@ game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Remot
 })
 
 local Section = BennettTab:AddSection({
-	Name = "Scarlet Witch: House Of Magneto"
+	Name = "White Raven"
 })
 
 BennettTab:AddBind({
-	Name = "Shatter",
+	Name = "Dark Matter Banish",
 	Default = Enum.KeyCode.V,
 	Hold = false,
 	Callback = function()
@@ -449,8 +449,8 @@ BennettTab:AddBind({
              if player then
 
 local args = {
-    [1] = "\0Shatter Scarlet Witch: House Of Magneto\0\0",
-    [2] = player.Character.UpperTorso
+    [1] = "\0DarkMatterBanish\0\0",
+    [2] = player.Character.Head
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
@@ -462,7 +462,7 @@ game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Remot
 })
 
 BennettTab:AddBind({
-	Name = "Reality Transfiguration",
+	Name = "Siphon",
 	Default = Enum.KeyCode.B,
 	Hold = false,
 	Callback = function()
@@ -509,8 +509,8 @@ BennettTab:AddBind({
              if player then
 
 local args = {
-    [1] = "\0Scarlet Witch: House Of Magneto Reality Transfiguration\0\0",
-    [2] = player.Character
+    [1] = "\0White Raven Start Siphon\0\0",
+    [2] = player.Character.Head
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
@@ -521,69 +521,23 @@ game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Remot
 	end    
 })
 
-BennettTab:AddBind({
-	Name = "Life Drain",
-	Default = Enum.KeyCode.N,
-	Hold = false,
+BennettTab:AddButton({
+	Name = "Stop Siphon",
 	Callback = function()
-		print("You just clicked the bind")
-
-      local function getPlayer()
-         local userInput = game:GetService("UserInputService")
-         local cam = workspace.CurrentCamera
-         local mousePos = userInput:GetMouseLocation()
-         local mouseRay = cam:ViewportPointToRay(mousePos.X, mousePos.Y)
-         players = {}
-         for _, x in next, game:GetService('Players'):GetPlayers() do
-             players[#players + 1] = x.Character
-         end
-         local raycastParams = RaycastParams.new()
-         raycastParams.FilterType = Enum.RaycastFilterType.Whitelist
-         raycastParams.FilterDescendantsInstances = players
-         raycastParams.IgnoreWater = true
-         local raycastResult = workspace:Raycast(mouseRay.Origin, mouseRay.Direction * 1000, raycastParams)
-         if raycastResult then
-             for _, x in next, game:GetService('Players'):GetPlayers() do
-                 if not raycastResult.Instance:IsDescendantOf(x.Character) then
-                     continue
-                 end
-                 return x
-             end
-         end
-         return false
-     end
- 
-     local function Set(list)
-         local set = {}
-         for _, l in ipairs(list) do
-             if l then
-                 set[l] = true
-             end
-         end
-         return set
-     end
- 
-     game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
-         if key == "n" then
-             local player = getPlayer()
-             if player then
 
 local args = {
-    [1] = "\0LifeDrain\0\0",
-    [2] = player.Character.UpperTorso
+    [1] = "\0White Raven Stop Siphon\0\0",
+    [2] = game:GetService("Players").LocalPlayer
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
 
-             end
-            end
-         end)
-	end    
+  	end    
 })
 
 BennettTab:AddBind({
-	Name = "Chaos Bolts",
-	Default = Enum.KeyCode.M,
+	Name = "Chaos Bolt",
+	Default = Enum.KeyCode.N,
 	Hold = true,
 	Callback = function()
 
@@ -592,12 +546,12 @@ BennettTab:AddBind({
         hum = plr.Character.HumanoidRootPart
         mouse = plr:GetMouse()
         mouse.KeyDown:connect(function(key)
-        if key == 'm' then
+        if key == 'n' then
         if mouse.Target then
         if clicktpon then
 
 local args = {
-    [1] = "\0Scarlet Witch: House Of Magneto Chaos Bolt\0\0",
+    [1] = "\0White Raven Chaos Bolt\0\0",
     [2] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z)
 }
 
@@ -610,12 +564,13 @@ end)
 end    
 })
 
+
 BennettTab:AddButton({
 	Name = "Shield",
 	Callback = function()
 
 local args = {
-    [1] = "\0Scarlet Witch: House Of Magneto Start Shield\0\0"
+    [1] = "\0White Raven Start Shield\0\0"
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
@@ -628,20 +583,7 @@ BennettTab:AddButton({
 	Callback = function()
 
 local args = {
-    [1] = "\0Scarlet Witch: House Of Magneto Stop Shield\0\0"
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
-
-  	end    
-})
-
-BennettTab:AddButton({
-	Name = "Telepathic Outburst",
-	Callback = function()
-
-local args = {
-    [1] = "\0Scarlet Witch: House Of Magneto Telepathic Outburst\0\0"
+    [1] = "\0White Raven Stop Shield\0\0"
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
@@ -654,13 +596,27 @@ BennettTab:AddButton({
 	Callback = function()
 
 local args = {
-    [1] = "\0Scarlet Witch: House Of Magneto Ultimate\0\0"
+    [1] = "\0White Raven Ultimate\0\0"
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
 
   	end    
 })
+
+BennettTab:AddButton({
+	Name = "Telepathic Outburst",
+	Callback = function()
+
+local args = {
+    [1] = "\0White Raven Telepathic Outburst\0\0"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
+
+  	end    
+})
+
 local BennettTab = Window:MakeTab({
 	Name = "Characters",
 	Icon = "rbxassetid://14458282849",
