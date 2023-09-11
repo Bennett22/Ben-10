@@ -997,6 +997,18 @@ Section:NewButton("Smiling Girl", " ", function()
     game.Players:Chat("!hat 209994875")
 
 end)
+Section:NewButton("Woman Face", " ", function()
+    game.Players:Chat("!hat 86487766")
+
+end)
+Section:NewButton("Classic Female v2 - Face", " ", function()
+    game.Players:Chat("!hat 4637266368")
+
+end)
+Section:NewButton("Claire's Face", " ", function()
+    game.Players:Chat("!hat 301827089")
+
+end)
 Section:NewButton("Sigmund", " ", function()
     game.Players:Chat("!hat 21311601")
 
@@ -1007,6 +1019,14 @@ Section:NewButton("Nouveau George", " ", function()
 end)
 Section:NewButton("Otakufaic", " ", function()
     game.Players:Chat("!hat 1665638148")
+
+end)
+Section:NewButton("John's Face", " ", function()
+    game.Players:Chat("!hat 301827199")
+
+end)
+Section:NewButton("Man Face", " ", function()
+    game.Players:Chat("!hat 86487700")
 
 end)
 local Tab = Window:NewTab("Body types")
