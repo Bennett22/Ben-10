@@ -402,6 +402,36 @@ end
 
 end)
 
+
+
+local Section = Tab:NewSection("Catalog With Wigs")
+Section:NewButton("Wigs", " ", function()
+if game:GetService("Players").LocalPlayer.UserId == 4831686579 then
+
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/Bennett22/Ben-10/main/wigs'))()
+
+end
+
+if game:GetService("Players").LocalPlayer.UserId == 736533499 then
+
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/Bennett22/Ben-10/main/wigs'))()
+
+end
+
+if game:GetService("Players").LocalPlayer.UserId == 4334482090 then
+
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/Bennett22/Ben-10/main/wigs'))()
+
+end
+
+if game:GetService("Players").LocalPlayer.UserId == 4635600398 then
+
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/Bennett22/Ben-10/main/wigs'))()
+
+end
+
+end)
+
 local Tab = Window:NewTab("ava <3")
 local Section = Tab:NewSection("Custom 1")
 Section:NewButton("Custom", " ", function()
