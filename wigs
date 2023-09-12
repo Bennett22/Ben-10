@@ -1,6 +1,6 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 local Window = Library.CreateLib("Bennett Scripts | Catalog With Wigs", "GrapeTheme")
-ocal Tab = Window:NewTab("Wigs")
+local Tab = Window:NewTab("Wigs")
 local Section = Tab:NewSection("my fav wigs")
 Section:NewButton("Purple Action Ponytail", " ", function()
     game.Players:Chat("!hat 398673423")
