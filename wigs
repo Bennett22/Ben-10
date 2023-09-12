@@ -1,0 +1,70 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Scarlet Bennett Scripts | Catalog With Wigs", "GrapeTheme")
+ocal Tab = Window:NewTab("Wigs")
+local Section = Tab:NewSection("my fav wigs")
+Section:NewButton("Purple Action Ponytail", " ", function()
+    game.Players:Chat("!hat 398673423")
+
+end)
+Section:NewButton("Frozen Action Ponytail", " ", function()
+    game.Players:Chat("!hat 2588168421")
+
+end)
+Section:NewButton("Teal Action Ponytail", " ", function()
+    game.Players:Chat("!hat 638100095")
+
+end)
+Section:NewButton("Starshine Sparkle Warrior", " ", function()
+    game.Players:Chat("!hat 745793544")
+
+end)
+Section:NewButton("Regal Teal Y2K Princess Hair with High Pigtails", " ", function()
+    game.Players:Chat("!hat 14394105215")
+
+end)
+Section:NewButton("Clean Black Spikes", " ", function()
+    game.Players:Chat("!hat 5674419485")
+
+end)
+Section:NewButton("Virgo's Starlight Hair", " ", function()
+    game.Players:Chat("!hat 2934014598")
+
+end)
+Section:NewButton("Blonde Braided Ponytail", " ", function()
+    game.Players:Chat("!hat 2222561889")
+
+end)
+Section:NewButton("Nutmeg Pigtail Curls", " ", function()
+    game.Players:Chat("!hat 4149852183")
+
+end)
+Section:NewButton("Purple Bubble Braids", " ", function()
+    game.Players:Chat("!hat 13315622182")
+
+end)
+Section:NewButton("Blonde Pigtails with Pink Ties", " ", function()
+    game.Players:Chat("!hat 212971294")
+
+end)
+Section:NewButton("Starshine Sparkle Warrior", " ", function()
+    game.Players:Chat("!hat 745793544")
+
+end)
+
+local Tab = Window:NewTab("Admin")
+local Section = Tab:NewSection(" ")
+Section:NewButton("Infinite Yield", "", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end)
+local Tab = Window:NewTab("Credits")
+local SettingsSection = Tab:NewSection("discord: bennettscripts")
+local SettingsSection = Tab:NewSection("Toggle UI")
+SettingsSection:NewKeybind("Toggle UI", "Toggle UI", Enum.KeyCode.N, function()
+    Library:ToggleUI()
+end)
+
+if game:GetService("Players").LocalPlayer.UserId == 3185912033 then
+
+    game.Players.LocalPlayer:Kick("Blacklisted xoxoxo")
+
+end
