@@ -659,6 +659,85 @@ game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpa
 
 local BennettSection = Bennett:NewSection("Witch")
 
+BennettSection:NewTextBox("Ad Somnum Someone", "", function(txt)
+    local Players = game:GetService("Players")
+    local msg = txt
+    local function findPlayer(stringg)
+        for _, v in pairs(Players:GetPlayers()) do
+            if stringg:lower() == (v.Name:lower()):sub(1, #stringg) then
+                return v
+            end
+        end
+    end
+
+    local player = findPlayer(msg)
+    local CHAR = player.Character
+
+	    
+ local args = {
+    [1] = {
+        [1] = {
+            [1] = "\6",
+            [2] = player.Character,
+            [3] = "Ad Somnum"
+        },
+        [2] = {
+            [1] = "\4",
+            [2] = game:GetService("Players").LocalPlayer,
+            [3] = game:GetService("SoundService"):WaitForChild("NormalCast")
+        },
+        [3] = {
+            [1] = "\4",
+            [2] = player.Character,
+            [3] = game:GetService("SoundService"):WaitForChild("NormalCast")
+        }
+    }
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
+
+end)
+
+BennettSection:NewTextBox("Conversus Someone", "", function(txt)
+    local Players = game:GetService("Players")
+    local msg = txt
+    local function findPlayer(stringg)
+        for _, v in pairs(Players:GetPlayers()) do
+            if stringg:lower() == (v.Name:lower()):sub(1, #stringg) then
+                return v
+            end
+        end
+    end
+
+    local player = findPlayer(msg)
+    local CHAR = player.Character
+
+	    
+ local args = {
+    [1] = {
+        [1] = {
+            [1] = "\6",
+            [2] = player.Character,
+            [3] = "Conversus ad corvos"
+        },
+        [2] = {
+            [1] = "\4",
+            [2] = game:GetService("Players").LocalPlayer,
+            [3] = game:GetService("SoundService"):WaitForChild("NormalCast")
+        },
+        [3] = {
+            [1] = "\4",
+            [2] = player.Character,
+            [3] = game:GetService("SoundService"):WaitForChild("NormalCast")
+        }
+    }
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
+
+end)
+
+
 BennettSection:NewButton("Crash the server", "", function()
     print("Clicked")
     local Plr = game.Players.LocalPlayer
