@@ -620,6 +620,205 @@ game:GetService("ReplicatedStorage"):WaitForChild("GameWideRemoteEvents"):WaitFo
   	end    
 })
 
+local Section = BennettTab:AddSection({
+	Name = "Not In Game Characters"
+})
+
+BennettTab:AddButton({
+	Name = "Cobalt",
+	Callback = function()
+
+local args = {
+    [1] = "Cobalt"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("GameWideRemoteEvents"):WaitForChild("ChangePlayerCharacter"):FireServer(unpack(args))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Cosmic",
+	Callback = function()
+
+local args = {
+    [1] = "Cosmic"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("GameWideRemoteEvents"):WaitForChild("ChangePlayerCharacter"):FireServer(unpack(args))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "DBN",
+	Callback = function()
+
+local args = {
+    [1] = "DBN"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("GameWideRemoteEvents"):WaitForChild("ChangePlayerCharacter"):FireServer(unpack(args))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "DCEU Flash 2023 (BF)",
+	Callback = function()
+
+local args = {
+    [1] = "DCEU Flash 2023 (BF)"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("GameWideRemoteEvents"):WaitForChild("ChangePlayerCharacter"):FireServer(unpack(args))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "DCEU Flash 2023 2",
+	Callback = function()
+
+local args = {
+    [1] = "DCEU Flash 2023 2"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("GameWideRemoteEvents"):WaitForChild("ChangePlayerCharacter"):FireServer(unpack(args))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "DCEU Overdrive",
+	Callback = function()
+
+local args = {
+    [1] = "DCEU Overdrive"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("GameWideRemoteEvents"):WaitForChild("ChangePlayerCharacter"):FireServer(unpack(args))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "DCEU RedDeath",
+	Callback = function()
+
+local args = {
+    [1] = "DCEU RedDeath"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("GameWideRemoteEvents"):WaitForChild("ChangePlayerCharacter"):FireServer(unpack(args))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Firestorm",
+	Callback = function()
+
+local args = {
+    [1] = "Firestorm"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("GameWideRemoteEvents"):WaitForChild("ChangePlayerCharacter"):FireServer(unpack(args))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Karma",
+	Callback = function()
+
+local args = {
+    [1] = "Karma"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("GameWideRemoteEvents"):WaitForChild("ChangePlayerCharacter"):FireServer(unpack(args))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Kieran",
+	Callback = function()
+
+local args = {
+    [1] = "Kieran"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("GameWideRemoteEvents"):WaitForChild("ChangePlayerCharacter"):FireServer(unpack(args))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Olympus",
+	Callback = function()
+
+local args = {
+    [1] = "Olympus"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("GameWideRemoteEvents"):WaitForChild("ChangePlayerCharacter"):FireServer(unpack(args))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Reyes",
+	Callback = function()
+
+local args = {
+    [1] = "Reyes"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("GameWideRemoteEvents"):WaitForChild("ChangePlayerCharacter"):FireServer(unpack(args))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Tachyon",
+	Callback = function()
+
+local args = {
+    [1] = "Tachyon"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("GameWideRemoteEvents"):WaitForChild("ChangePlayerCharacter"):FireServer(unpack(args))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Thor",
+	Callback = function()
+
+local args = {
+    [1] = "Thor"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("GameWideRemoteEvents"):WaitForChild("ChangePlayerCharacter"):FireServer(unpack(args))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "morph",
+	Callback = function()
+
+local args = {
+    [1] = "morph"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("GameWideRemoteEvents"):WaitForChild("ChangePlayerCharacter"):FireServer(unpack(args))
+
+  	end    
+})
+
 local BennettTab = Window:MakeTab({
 	Name = "Misc",
 	Icon = "rbxassetid://14458282849",
