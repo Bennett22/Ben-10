@@ -1,0 +1,711 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "Bennett Scripts | Multiverse Reborn", HidePremium = false, IntroText = "Bennett Scripts", SaveConfig = true, ConfigFolder = "OrionTest"})
+
+local BennettTab = Window:MakeTab({
+	Name = "Powers",
+	Icon = "rbxassetid://14458282849",
+	PremiumOnly = false
+})
+
+local Section = BennettTab:AddSection({
+	Name = "Custom Speedster"
+})
+
+BennettTab:AddBind({
+	Name = "Lightning",
+	Default = Enum.KeyCode.One,
+	Hold = true,
+	Callback = function()
+
+    clicktpon = true                
+        plr = game.Players.LocalPlayer
+        hum = plr.Character.HumanoidRootPart
+        mouse = plr:GetMouse()
+        mouse.KeyDown:connect(function(key)
+        if key == '1' then
+        if mouse.Target then
+        if clicktpon then
+
+local args = {
+    [1] = CFrame.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z)
+}
+
+game:GetService("Players").LocalPlayer.Character:FindFirstChild("New Lightning Throw").Lightning:FireServer(unpack(args))
+
+end
+end
+end
+end)
+end    
+})
+
+BennettTab:AddBind({
+	Name = "Fire",
+	Default = Enum.KeyCode.Two,
+	Hold = true,
+	Callback = function()
+
+    clicktpon = true                
+        plr = game.Players.LocalPlayer
+        hum = plr.Character.HumanoidRootPart
+        mouse = plr:GetMouse()
+        mouse.KeyDown:connect(function(key)
+        if key == '2' then
+        if mouse.Target then
+        if clicktpon then
+
+local args = {
+    [1] = CFrame.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z)
+}
+
+game:GetService("Players").LocalPlayer.Character:FindFirstChild("New Lightning Throw").Fire:FireServer(unpack(args))
+
+end
+end
+end
+end)
+end    
+})
+
+BennettTab:AddBind({
+	Name = "Snow",
+	Default = Enum.KeyCode.Three,
+	Hold = true,
+	Callback = function()
+
+    clicktpon = true                
+        plr = game.Players.LocalPlayer
+        hum = plr.Character.HumanoidRootPart
+        mouse = plr:GetMouse()
+        mouse.KeyDown:connect(function(key)
+        if key == '3' then
+        if mouse.Target then
+        if clicktpon then
+
+local args = {
+    [1] = CFrame.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z)
+}
+
+game:GetService("Players").LocalPlayer.Character:FindFirstChild("New Lightning Throw").Snow:FireServer(unpack(args))
+
+end
+end
+end
+end)
+end    
+})
+
+BennettTab:AddBind({
+	Name = "Water",
+	Default = Enum.KeyCode.Four,
+	Hold = true,
+	Callback = function()
+
+    clicktpon = true                
+        plr = game.Players.LocalPlayer
+        hum = plr.Character.HumanoidRootPart
+        mouse = plr:GetMouse()
+        mouse.KeyDown:connect(function(key)
+        if key == '4' then
+        if mouse.Target then
+        if clicktpon then
+
+local args = {
+    [1] = CFrame.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z)
+}
+
+game:GetService("Players").LocalPlayer.Character:FindFirstChild("New Lightning Throw").Water:FireServer(unpack(args))
+
+end
+end
+end
+end)
+end    
+})
+
+BennettTab:AddButton({
+	Name = "Start Charge",
+	Callback = function()
+
+game:GetService("Players").LocalPlayer.Character:FindFirstChild("Charge Lightning").ChargeParticles:FireServer()
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Stop Charge",
+	Callback = function()
+
+game:GetService("Players").LocalPlayer.Character:FindFirstChild("Charge Lightning").ChargeStop:FireServer()
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Trail On",
+	Callback = function()
+
+local args = {
+    [1] = "trailOnF"
+}
+
+game:GetService("Players").LocalPlayer.Character:FindFirstChild("Speed Script").SpeedScriptStuff.Remote:FireServer(unpack(args))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Trail Off",
+	Callback = function()
+
+local args = {
+    [1] = "trailOff"
+}
+
+game:GetService("Players").LocalPlayer.Character:FindFirstChild("Speed Script").SpeedScriptStuff.Remote:FireServer(unpack(args))
+
+  	end    
+})
+local BennettTab = Window:MakeTab({
+	Name = "Characters",
+	Icon = "rbxassetid://14458282849",
+	PremiumOnly = false
+})
+
+local Section = BennettTab:AddSection({
+	Name = "Free Characters"
+})
+
+BennettTab:AddButton({
+	Name = "Flash",
+	Callback = function()
+
+local args = {
+    [1] = "Flash"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("GameWideRemoteEvents"):WaitForChild("ChangePlayerCharacter"):FireServer(unpack(args))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Reverse Flash",
+	Callback = function()
+
+local args = {
+    [1] = "ReverseFlash"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("GameWideRemoteEvents"):WaitForChild("ChangePlayerCharacter"):FireServer(unpack(args))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Zoom",
+	Callback = function()
+
+local args = {
+    [1] = "Zoom"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("GameWideRemoteEvents"):WaitForChild("ChangePlayerCharacter"):FireServer(unpack(args))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "God Speed",
+	Callback = function()
+
+local args = {
+    [1] = "GodSpeed"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("GameWideRemoteEvents"):WaitForChild("ChangePlayerCharacter"):FireServer(unpack(args))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Speedster",
+	Callback = function()
+
+local args = {
+    [1] = "Speedster"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("GameWideRemoteEvents"):WaitForChild("ChangePlayerCharacter"):FireServer(unpack(args))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Superman",
+	Callback = function()
+
+local args = {
+    [1] = "Superman"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("GameWideRemoteEvents"):WaitForChild("ChangePlayerCharacter"):FireServer(unpack(args))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Supergirl",
+	Callback = function()
+
+local args = {
+    [1] = "Supergirl"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("GameWideRemoteEvents"):WaitForChild("ChangePlayerCharacter"):FireServer(unpack(args))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Savitar",
+	Callback = function()
+
+local args = {
+    [1] = "Savitar"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("GameWideRemoteEvents"):WaitForChild("ChangePlayerCharacter"):FireServer(unpack(args))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Kai",
+	Callback = function()
+
+local args = {
+    [1] = "Kai"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("GameWideRemoteEvents"):WaitForChild("ChangePlayerCharacter"):FireServer(unpack(args))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Jay",
+	Callback = function()
+
+local args = {
+    [1] = "Jay"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("GameWideRemoteEvents"):WaitForChild("ChangePlayerCharacter"):FireServer(unpack(args))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Zane",
+	Callback = function()
+
+local args = {
+    [1] = "Zane"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("GameWideRemoteEvents"):WaitForChild("ChangePlayerCharacter"):FireServer(unpack(args))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Cole",
+	Callback = function()
+
+local args = {
+    [1] = "Cole"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("GameWideRemoteEvents"):WaitForChild("ChangePlayerCharacter"):FireServer(unpack(args))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Lloyd",
+	Callback = function()
+
+local args = {
+    [1] = "Lloyd"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("GameWideRemoteEvents"):WaitForChild("ChangePlayerCharacter"):FireServer(unpack(args))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Sonic",
+	Callback = function()
+
+local args = {
+    [1] = "Sonic"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("GameWideRemoteEvents"):WaitForChild("ChangePlayerCharacter"):FireServer(unpack(args))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Goku",
+	Callback = function()
+
+local args = {
+    [1] = "Goku"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("GameWideRemoteEvents"):WaitForChild("ChangePlayerCharacter"):FireServer(unpack(args))
+
+  	end    
+})
+
+
+BennettTab:AddButton({
+	Name = "Brightburn",
+	Callback = function()
+
+local args = {
+    [1] = "Brightburn"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("GameWideRemoteEvents"):WaitForChild("ChangePlayerCharacter"):FireServer(unpack(args))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Homelander",
+	Callback = function()
+
+local args = {
+    [1] = "Homelander"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("GameWideRemoteEvents"):WaitForChild("ChangePlayerCharacter"):FireServer(unpack(args))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "A-Train",
+	Callback = function()
+
+local args = {
+    [1] = "A-Train"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("GameWideRemoteEvents"):WaitForChild("ChangePlayerCharacter"):FireServer(unpack(args))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Billy",
+	Callback = function()
+
+local args = {
+    [1] = "Billy"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("GameWideRemoteEvents"):WaitForChild("ChangePlayerCharacter"):FireServer(unpack(args))
+
+  	end    
+})
+
+local Section = BennettTab:AddSection({
+	Name = "Gamepasses"
+})
+
+BennettTab:AddButton({
+	Name = "Chroma Savitar",
+	Callback = function()
+
+local args = {
+    [1] = "Chroma Savitar"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("GameWideRemoteEvents"):WaitForChild("ChangePlayerCharacter"):FireServer(unpack(args))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "God Flash",
+	Callback = function()
+
+local args = {
+    [1] = "GodFlash"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("GameWideRemoteEvents"):WaitForChild("ChangePlayerCharacter"):FireServer(unpack(args))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Custom Speedster",
+	Callback = function()
+	
+		local plr = game.Players.LocalPlayer
+local args = {
+    [1] = plr.Name.."'s Speedster"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("GameWideRemoteEvents"):WaitForChild("ChangePlayerCharacter"):FireServer(unpack(args))
+
+  	end    
+})
+
+
+BennettTab:AddButton({
+	Name = "Goku Black",
+	Callback = function()
+
+local args = {
+    [1] = "Goku Black"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("GameWideRemoteEvents"):WaitForChild("ChangePlayerCharacter"):FireServer(unpack(args))
+
+  	  	end    
+})
+
+  	local Section = BennettTab:AddSection({
+	Name = "Group Characters"
+})
+
+BennettTab:AddButton({
+	Name = "DCEU Flash",
+	Callback = function()
+
+local args = {
+    [1] = "DCEU Flash"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("GameWideRemoteEvents"):WaitForChild("ChangePlayerCharacter"):FireServer(unpack(args))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "S8 Reverse Flash",
+	Callback = function()
+
+local args = {
+    [1] = "S8 Reverse Flash"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("GameWideRemoteEvents"):WaitForChild("ChangePlayerCharacter"):FireServer(unpack(args))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "DCEU Flash 2023",
+	Callback = function()
+
+local args = {
+    [1] = "DCEU Flash 2023"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("GameWideRemoteEvents"):WaitForChild("ChangePlayerCharacter"):FireServer(unpack(args))
+
+  	end    
+})
+
+  	local Section = BennettTab:AddSection({
+	Name = "Special Characters"
+})
+
+BennettTab:AddButton({
+	Name = "DCEU Reverse Flash",
+	Callback = function()
+
+local args = {
+    [1] = "DCEU ReverseFlash"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("GameWideRemoteEvents"):WaitForChild("ChangePlayerCharacter"):FireServer(unpack(args))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "100K Visits",
+	Callback = function()
+
+local args = {
+    [1] = "100K Visits"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("GameWideRemoteEvents"):WaitForChild("ChangePlayerCharacter"):FireServer(unpack(args))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "1M Visits",
+	Callback = function()
+
+local args = {
+    [1] = "1M Visits"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("GameWideRemoteEvents"):WaitForChild("ChangePlayerCharacter"):FireServer(unpack(args))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "???",
+	Callback = function()
+
+local args = {
+    [1] = "???"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("GameWideRemoteEvents"):WaitForChild("ChangePlayerCharacter"):FireServer(unpack(args))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Rebirth Flash",
+	Callback = function()
+
+local args = {
+    [1] = "Rebirth Flash"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("GameWideRemoteEvents"):WaitForChild("ChangePlayerCharacter"):FireServer(unpack(args))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Savitar Negative",
+	Callback = function()
+
+local args = {
+    [1] = "Savitar Negative"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("GameWideRemoteEvents"):WaitForChild("ChangePlayerCharacter"):FireServer(unpack(args))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Gigalander",
+	Callback = function()
+
+local args = {
+    [1] = "Gigalander"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("GameWideRemoteEvents"):WaitForChild("ChangePlayerCharacter"):FireServer(unpack(args))
+
+  	end    
+})
+
+local BennettTab = Window:MakeTab({
+	Name = "Misc",
+	Icon = "rbxassetid://14458282849",
+	PremiumOnly = false
+})
+
+local Section = BennettTab:AddSection({
+	Name = "Other Scripts"
+})
+
+BennettTab:AddSlider({
+	Name = "Speed",
+	Min = 0,
+	Max = 200,
+	Default = 16,
+	Color = Color3.fromRGB(),
+	Increment = 1,
+	ValueName = "Speed Value",
+	Callback = function(Value)
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
+	end    
+})
+
+BennettTab:AddSlider({
+	Name = "Jump",
+	Min = 0,
+	Max = 200,
+	Default = 10,
+	Color = Color3.fromRGB(),
+	Increment = 1,
+	ValueName = "Jump Value",
+	Callback = function(Value)
+game.Players.LocalPlayer.Character.Humanoid.JumpPower = Value
+	end    
+})
+
+BennettTab:AddButton({
+	Name = "Animations",
+	Callback = function()
+
+        loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Ben-10/main/Animation'),true))()
+
+      
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Custom Catalog",
+	Callback = function()
+
+        loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Ben-10/main/Custom%20Catalog'),true))()
+
+      
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Infinite Yield",
+	Callback = function()
+
+loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+
+  	end    
+})
+
+local BennettTab = Window:MakeTab({
+	Name = "Credits",
+	Icon = "rbxassetid://14458282849",
+	PremiumOnly = false
+})
+
+local Section = BennettTab:AddSection({
+	Name = "discord: bennettscripts"
+})
+
+wait(1)
+game.StarterGui:SetCore("SendNotification", { 
+    Title = "⛤ Bennett Scripts ⛤";
+    Text = "Multiverse Reborn";
+    Icon = "rbxthumb://type=Asset&id=14067496704&w=150&h=150";
+    Duration = "2";
+    Button1 = "Close";
+})
+
+if game:GetService("Players").LocalPlayer.UserId == 3185912033 then
+
+    game.Players.LocalPlayer:Kick("Blacklisted xoxoxo")
+
+end
