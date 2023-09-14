@@ -402,7 +402,7 @@ end
 
 end)
 
-local Section = Tab:NewSection(""Rapunzel)
+local Section = Tab:NewSection("Rapunzel")
 Section:NewButton("Custom", " ", function()
 if game:GetService("Players").LocalPlayer.UserId == 4831686579 then
     game.Players:Chat("!hat 2528319611")
