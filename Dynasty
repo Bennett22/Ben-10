@@ -1,3 +1,5 @@
+
+
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 local Window = OrionLib:MakeWindow({Name = "Bennett Scripts | Crossover Dynasty", HidePremium = false, IntroText = "Bennett Scripts", SaveConfig = true, ConfigFolder = "OrionTest"})
 
@@ -7,71 +9,40 @@ local BennettTab = Window:MakeTab({
 	PremiumOnly = false
 })
 local Section = BennettTab:AddSection({
-	Name = "Jean Grey: Dark Phoenix"
+	Name = "Child"
 })
 
 BennettTab:AddBind({
-	Name = "Shatter",
+	Name = "Chaos Bolt",
 	Default = Enum.KeyCode.One,
-	Hold = false,
+	Hold = true,
 	Callback = function()
-		print("You just clicked the bind")
 
-      local function getPlayer()
-         local userInput = game:GetService("UserInputService")
-         local cam = workspace.CurrentCamera
-         local mousePos = userInput:GetMouseLocation()
-         local mouseRay = cam:ViewportPointToRay(mousePos.X, mousePos.Y)
-         players = {}
-         for _, x in next, game:GetService('Players'):GetPlayers() do
-             players[#players + 1] = x.Character
-         end
-         local raycastParams = RaycastParams.new()
-         raycastParams.FilterType = Enum.RaycastFilterType.Whitelist
-         raycastParams.FilterDescendantsInstances = players
-         raycastParams.IgnoreWater = true
-         local raycastResult = workspace:Raycast(mouseRay.Origin, mouseRay.Direction * 1000, raycastParams)
-         if raycastResult then
-             for _, x in next, game:GetService('Players'):GetPlayers() do
-                 if not raycastResult.Instance:IsDescendantOf(x.Character) then
-                     continue
-                 end
-                 return x
-             end
-         end
-         return false
-     end
- 
-     local function Set(list)
-         local set = {}
-         for _, l in ipairs(list) do
-             if l then
-                 set[l] = true
-             end
-         end
-         return set
-     end
- 
-     game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
-         if key == "1" then
-             local player = getPlayer()
-             if player then
+    clicktpon = true                
+        plr = game.Players.LocalPlayer
+        hum = plr.Character.HumanoidRootPart
+        mouse = plr:GetMouse()
+        mouse.KeyDown:connect(function(key)
+        if key == '1' then
+        if mouse.Target then
+        if clicktpon then
 
 local args = {
-    [1] = "\0Shatter\0\0",
-    [2] = player.Character.UpperTorso
+    [1] = "\0Child Chaos Bolt\0\0",
+    [2] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z)
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
 
-             end
-            end
-         end)
-	end    
+end
+end
+end
+end)
+end    
 })
 
 BennettTab:AddBind({
-	Name = "Start Siphon",
+	Name = "Disintegration",
 	Default = Enum.KeyCode.Two,
 	Hold = false,
 	Callback = function()
@@ -118,7 +89,140 @@ BennettTab:AddBind({
              if player then
 
 local args = {
-    [1] = "\0Jean Grey: Dark Phoenix Start Siphon\0\0",
+    [1] = "\0Disintegration\0\0",
+    [2] = player.Character.Head
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
+
+             end
+            end
+         end)
+	end    
+})
+
+
+BennettTab:AddButton({
+	Name = "Shield",
+	Callback = function()
+
+local args = {
+    [1] = "\0Child Start Shield\0\0"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Unshield",
+	Callback = function()
+
+local args = {
+    [1] = "\0Child Stop Shield\0\0"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Telepathic Outburst",
+	Callback = function()
+
+local args = {
+    [1] = "\0Child Telepathic Outburst\0\0"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
+
+  	end    
+})
+
+local Section = BennettTab:AddSection({
+	Name = "Barbie"
+})
+
+BennettTab:AddBind({
+	Name = "Chaos Bolt",
+	Default = Enum.KeyCode.H,
+	Hold = true,
+	Callback = function()
+
+    clicktpon = true                
+        plr = game.Players.LocalPlayer
+        hum = plr.Character.HumanoidRootPart
+        mouse = plr:GetMouse()
+        mouse.KeyDown:connect(function(key)
+        if key == 'h' then
+        if mouse.Target then
+        if clicktpon then
+
+local args = {
+    [1] = "\0Barbie Chaos Bolt\0\0",
+    [2] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
+
+end
+end
+end
+end)
+end    
+})
+
+BennettTab:AddBind({
+	Name = "Siphon",
+	Default = Enum.KeyCode.J,
+	Hold = false,
+	Callback = function()
+		print("You just clicked the bind")
+
+      local function getPlayer()
+         local userInput = game:GetService("UserInputService")
+         local cam = workspace.CurrentCamera
+         local mousePos = userInput:GetMouseLocation()
+         local mouseRay = cam:ViewportPointToRay(mousePos.X, mousePos.Y)
+         players = {}
+         for _, x in next, game:GetService('Players'):GetPlayers() do
+             players[#players + 1] = x.Character
+         end
+         local raycastParams = RaycastParams.new()
+         raycastParams.FilterType = Enum.RaycastFilterType.Whitelist
+         raycastParams.FilterDescendantsInstances = players
+         raycastParams.IgnoreWater = true
+         local raycastResult = workspace:Raycast(mouseRay.Origin, mouseRay.Direction * 1000, raycastParams)
+         if raycastResult then
+             for _, x in next, game:GetService('Players'):GetPlayers() do
+                 if not raycastResult.Instance:IsDescendantOf(x.Character) then
+                     continue
+                 end
+                 return x
+             end
+         end
+         return false
+     end
+ 
+     local function Set(list)
+         local set = {}
+         for _, l in ipairs(list) do
+             if l then
+                 set[l] = true
+             end
+         end
+         return set
+     end
+ 
+     game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
+         if key == "j" then
+             local player = getPlayer()
+             if player then
+
+local args = {
+    [1] = "\0Barbie Start Siphon\0\0",
     [2] = player.Character.Head
 }
 
@@ -135,57 +239,75 @@ BennettTab:AddButton({
 	Callback = function()
 
 local args = {
-    [1] = "\0Jean Grey: Dark Phoenix Stop Siphon\0\0",
+    [1] = "\0Barbie Stop Siphon\0\0",
     [2] = game:GetService("Players").LocalPlayer
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
 
-
   	end    
 })
 
-BennettTab:AddButton({
-	Name = "Shield",
+BennettTab:AddBind({
+	Name = "Disintegration",
+	Default = Enum.KeyCode.K,
+	Hold = false,
 	Callback = function()
+		print("You just clicked the bind")
+
+      local function getPlayer()
+         local userInput = game:GetService("UserInputService")
+         local cam = workspace.CurrentCamera
+         local mousePos = userInput:GetMouseLocation()
+         local mouseRay = cam:ViewportPointToRay(mousePos.X, mousePos.Y)
+         players = {}
+         for _, x in next, game:GetService('Players'):GetPlayers() do
+             players[#players + 1] = x.Character
+         end
+         local raycastParams = RaycastParams.new()
+         raycastParams.FilterType = Enum.RaycastFilterType.Whitelist
+         raycastParams.FilterDescendantsInstances = players
+         raycastParams.IgnoreWater = true
+         local raycastResult = workspace:Raycast(mouseRay.Origin, mouseRay.Direction * 1000, raycastParams)
+         if raycastResult then
+             for _, x in next, game:GetService('Players'):GetPlayers() do
+                 if not raycastResult.Instance:IsDescendantOf(x.Character) then
+                     continue
+                 end
+                 return x
+             end
+         end
+         return false
+     end
+ 
+     local function Set(list)
+         local set = {}
+         for _, l in ipairs(list) do
+             if l then
+                 set[l] = true
+             end
+         end
+         return set
+     end
+ 
+     game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
+         if key == "k" then
+             local player = getPlayer()
+             if player then
 
 local args = {
-    [1] = "\0Jean Grey: Dark Phoenix Start Shield\0\0"
+    [1] = "\0Barbie Disintegrate\0\0",
+    [2] = player.Character.Head
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
 
-
-  	end    
+             end
+            end
+         end)
+	end    
 })
 
-BennettTab:AddButton({
-	Name = "Unshield",
-	Callback = function()
-
-local args = {
-    [1] = "\0Jean Grey: Dark Phoenix Stop Shield\0\0"
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
-
-
-  	end    
-})
-
-BennettTab:AddButton({
-	Name = "Phoenix Wave",
-	Callback = function()
-
-local args = {
-    [1] = "\0Jean Grey: Dark Phoenix Wave\0\0"
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
-
-
-  	end    
-})
 local BennettTab = Window:MakeTab({
 	Name = "Characters",
 	Icon = "rbxassetid://14458282849",
@@ -200,21 +322,14 @@ BennettTab:AddButton({
 
 game.ReplicatedStorage.Ui.MainScreen:destroy()
 game.WakSpace.Selection_Background:destroy()
+game.ReplicatedStorage.Ui.CharacterSelection.Characters:Destroy()
+game.Workspace.Hera:Destroy()
 
   	end    
 })
 
 local Section = BennettTab:AddSection({
 	Name = "Custom With Powers"
-})
-
-BennettTab:AddButton({
-	Name = "Agatha Harkness",
-	Callback = function()
-
-game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Agatha Harkness")
-
-  	end    
 })
 
 BennettTab:AddButton({
@@ -227,19 +342,38 @@ game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Atomic
 })
 
 BennettTab:AddButton({
-	Name = "Captain Marvel",
+	Name = "Barbie",
 	Callback = function()
 
-game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Captain Marvel")
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Barbie")
 
   	end    
 })
 
 BennettTab:AddButton({
-	Name = "Charmcaster",
+	Name = "Child",
 	Callback = function()
 
-game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Charmcaster")
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Child")
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Dark Phoenix",
+	Callback = function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Dark Phoenix")
+
+  	end    
+})
+
+
+BennettTab:AddButton({
+	Name = "Dr. Strange",
+	Callback = function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Dr. Strange")
 
   	end    
 })
@@ -254,28 +388,19 @@ game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Emma F
 })
 
 BennettTab:AddButton({
-	Name = "Emma: Phoenix 5",
+	Name = "Emma: Phoenix Five",
 	Callback = function()
 
-game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Emma: Phoenix 5")
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Emma: Phoenix Five")
 
   	end    
 })
 
 BennettTab:AddButton({
-	Name = "Esme Cuckoo",
+	Name = "Gwen",
 	Callback = function()
 
-game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Esme Cuckoo")
-
-  	end    
-})
-
-BennettTab:AddButton({
-	Name = "Hela",
-	Callback = function()
-
-game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Hela")
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Gwen")
 
   	end    
 })
@@ -289,16 +414,6 @@ game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Iceman
   	end    
 })
 
-
-BennettTab:AddButton({
-	Name = "Invisible Woman",
-	Callback = function()
-
-game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Invisible Woman")
-
-  	end    
-})
-
 BennettTab:AddButton({
 	Name = "Jean Grey",
 	Callback = function()
@@ -308,59 +423,6 @@ game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Jean G
   	end    
 })
 
-BennettTab:AddButton({
-	Name = "Jean Grey: Dark Phoenix",
-	Callback = function()
-
-game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Jean Grey: Dark Phoenix")
-
-  	end    
-})
-
-BennettTab:AddButton({
-	Name = "Jean Grey: Phoenix Force",
-	Callback = function()
-
-game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Jean Grey: Phoenix Force")
-
-  	end    
-})
-
-BennettTab:AddButton({
-	Name = "Lauren Strucker",
-	Callback = function()
-
-game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Lauren Strucker")
-
-  	end    
-})
-
-BennettTab:AddButton({
-	Name = "Madison",
-	Callback = function()
-
-game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Madison")
-
-  	end    
-})
-
-BennettTab:AddButton({
-	Name = "Mera",
-	Callback = function()
-
-game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Mera")
-
-  	end    
-})
-
-BennettTab:AddButton({
-	Name = "Polaris Lorna Dane",
-	Callback = function()
-
-game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Polaris Lorna Dane")
-
-  	end    
-})
 
 BennettTab:AddButton({
 	Name = "Quake",
@@ -381,7 +443,7 @@ game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Raven"
 })
 
 BennettTab:AddButton({
-	Name = "Scarlet Witch: Multiverse Of Madness",
+	Name = "Scarlet Wtich: Multiverse Of Madness",
 	Callback = function()
 
 game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Scarlet Witch: Multiverse Of Madness")
@@ -390,10 +452,10 @@ game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Scarle
 })
 
 BennettTab:AddButton({
-	Name = "Star Butterfly",
+	Name = "Starlight",
 	Callback = function()
 
-game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Star  Butterfly")
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Starlight")
 
   	end    
 })
@@ -408,37 +470,20 @@ game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Storm"
 })
 
 BennettTab:AddButton({
-	Name = "The Child",
+	Name = "Wanda Wardrobe",
 	Callback = function()
 
-game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "The Child")
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Wanda Wardrobe")
 
   	end    
 })
 
-BennettTab:AddButton({
-	Name = "Wanda Maximoff: Aou",
-	Callback = function()
-
-game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Wanda Maximoff: Aou")
-
-  	end    
-})
 
 BennettTab:AddButton({
 	Name = "WandaComics",
 	Callback = function()
 
 game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "WandaComics")
-
-  	end    
-})
-
-BennettTab:AddButton({
-	Name = "Wiccan",
-	Callback = function()
-
-game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Wiccan")
 
   	end    
 })
@@ -451,8 +496,166 @@ game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Zatann
 
   	end    
 })
+
+
+local Section = BennettTab:AddSection({
+	Name = "Characters"
+})
+
+BennettTab:AddButton({
+	Name = "Emma Frost",
+	Callback = function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Emma Frost")
+
+  	end    
+})
+
+
+BennettTab:AddParagraph("","")
+
+BennettTab:AddButton({
+	Name = "Gwen",
+	Callback = function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Gwen")
+
+  	end    
+})
+BennettTab:AddParagraph("","")
+
+BennettTab:AddButton({
+	Name = "Iceman",
+	Callback = function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Iceman")
+
+  	end    
+})
+
+BennettTab:AddParagraph("","")
+
+BennettTab:AddButton({
+	Name = "Jean Grey",
+	Callback = function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Jean Grey")
+
+  	end    
+})
+
+BennettTab:AddParagraph("","")
+
+BennettTab:AddButton({
+	Name = "Quake",
+	Callback = function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Quake")
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Quake: Ariana Grande",
+	Callback = function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Quake", "Ariana Grande")
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Quake: Sindel Mk",
+	Callback = function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Quake", "Sindel Mk")
+
+
+  	end    
+})
+
+BennettTab:AddParagraph("","")
+
+BennettTab:AddButton({
+	Name = "Starlight",
+	Callback = function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Starlight")
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Starlight: Lana Del Rey",
+	Callback = function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Starlight", "Lana Del Rey")
+
+  	end    
+})
+
+BennettTab:AddParagraph("","")
+
+BennettTab:AddButton({
+	Name = "Storm",
+	Callback = function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Storm")
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Storm: Prom Storm",
+	Callback = function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Storm", "Prom Storm")
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Storm: Casual Storm",
+	Callback = function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Storm", "Casual Storm")
+
+  	end    
+})
+
+
 local BennettTab = Window:MakeTab({
-	Name = "Admin",
+	Name = "Animations",
+	Icon = "rbxassetid://14458282849",
+	PremiumOnly = false
+})
+
+BennettTab:AddButton({
+	Name = "Delete Your Animations",
+	Callback = function()
+
+local plr = game.Players.LocalPlayer
+
+plr.Character.Animate:Destroy()
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Get Random Animations",
+	Callback = function()
+
+
+local plr = game.Players.LocalPlayer
+
+local backup = game.Workspace:FindFirstChild("Animate",true):Clone()
+backup.Parent = plr.Character
+
+  	end    
+})
+
+local BennettTab = Window:MakeTab({
+	Name = "Misc",
 	Icon = "rbxassetid://14458282849",
 	PremiumOnly = false
 })
@@ -465,6 +668,16 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/
 
   	end    
 })
+
+BennettTab:AddButton({
+	Name = "Animations",
+	Callback = function()
+
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Ben-10/main/Animation'),true))()
+
+  	end    
+})
+
 
 local BennettTab = Window:MakeTab({
 	Name = "Credits",
