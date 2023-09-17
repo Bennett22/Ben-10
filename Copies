@@ -34,6 +34,11 @@ loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Ben-10/mai
 
 end)
 
+BennettSection:NewButton("Crossover Dynasty", " ", function()
+
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Ben-10/main/Dynasty'),true))()
+
+end)
 
 local Bennett = Window:NewTab("Misc")
 local BennettSection = Bennett:NewSection("Misc")
