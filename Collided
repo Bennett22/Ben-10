@@ -38,6 +38,16 @@ game:GetService("ReplicatedStorage")["Events()"].CharacterSelection.PickCharacte
 
 end)
 
+BennettSection:NewButton("Mary", " ", function()
+
+local args = {
+    [1] = "Mary"
+}
+
+game:GetService("ReplicatedStorage")["Events()"].CharacterSelection.PickCharacter:FireServer(unpack(args))
+
+end)
+
 local BennettSection = Bennett:NewSection("The Afflicted")
 
 BennettSection:NewButton("The Countess", " ", function()
