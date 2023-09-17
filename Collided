@@ -38,10 +38,10 @@ game:GetService("ReplicatedStorage")["Events()"].CharacterSelection.PickCharacte
 
 end)
 
-BennettSection:NewButton("Mary", " ", function()
+BennettSection:NewButton("Sister Mary", " ", function()
 
 local args = {
-    [1] = "Mary"
+    [1] = "Sister Mary"
 }
 
 game:GetService("ReplicatedStorage")["Events()"].CharacterSelection.PickCharacter:FireServer(unpack(args))
