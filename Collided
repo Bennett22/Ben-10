@@ -277,7 +277,9 @@ end)
 MainSection:NewButton("Animations", "", function()
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Ben-10/main/Animation'),true))()
 end)
-
+BennettSection:NewButton("Custom Catalog", "", function()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Ben-10/main/Custom%20Catalog'),true))()
+end)
 local Tab = Window:NewTab("Credits")
 local SettingsSection = Tab:NewSection("discord: bennettscripts")
 
