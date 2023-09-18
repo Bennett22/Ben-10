@@ -731,6 +731,16 @@ game:GetService("ReplicatedStorage"):WaitForChild("Events()"):WaitForChild("Char
 
 end)
 
+BennettSection:NewButton("Summon (Say Someones nickname after u click)", " ", function()
+
+local args = {
+    [1] = "Summon"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events()"):WaitForChild("Characters"):WaitForChild("Witches"):WaitForChild("Shared"):WaitForChild("Events"):WaitForChild("Spells"):FireServer(unpack(args))
+
+end)
+
 local Bennett = Window:NewTab("Combat")
 local BennettSection = Bennett:NewSection("Some characters dont have so here")
 BennettSection:NewButton("Combat", " ", function()
