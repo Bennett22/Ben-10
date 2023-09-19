@@ -1,51 +1,62 @@
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("Bennett Scripts | AHS: Collided", "GrapeTheme")
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "Bennett Scripts | AHS: Collided", HidePremium = false, IntroText = "Bennett Scripts", SaveConfig = true, ConfigFolder = "OrionTest"})
 
-local Bennett = Window:NewTab("Powers")
-local BennettSection = Bennett:NewSection("Characters Powers (they should work as any char)")
+local BennettTab = Window:MakeTab({
+	Name = "Powers",
+	Icon = "rbxassetid://14458282849",
+	PremiumOnly = false
+})
 
-BennettSection:NewToggle("Combo", "Keybind (1)", function()
-    print("You just clicked the bind")
+local Section = BennettTab:AddSection({
+	Name = "Characters Powers (Most Should Work As Any Character)"
+})
 
-    local function getPlayer()
-        local userInput = game:GetService("UserInputService")
-        local cam = workspace.CurrentCamera
-        local mousePos = userInput:GetMouseLocation()
-        local mouseRay = cam:ViewportPointToRay(mousePos.X, mousePos.Y)
-        players = {}
-        for _, x in next, game:GetService('Players'):GetPlayers() do
-            players[#players + 1] = x.Character
-        end
-        local raycastParams = RaycastParams.new()
-        raycastParams.FilterType = Enum.RaycastFilterType.Whitelist
-        raycastParams.FilterDescendantsInstances = players
-        raycastParams.IgnoreWater = true
-        local raycastResult = workspace:Raycast(mouseRay.Origin, mouseRay.Direction * 1000, raycastParams)
-        if raycastResult then
-            for _, x in next, game:GetService('Players'):GetPlayers() do
-                if not raycastResult.Instance:IsDescendantOf(x.Character) then
-                    continue
-                end
-                return x
-            end
-        end
-        return false
-    end
+BennettTab:AddBind({
+	Name = "Power Combo",
+	Default = Enum.KeyCode.One,
+	Hold = false,
+	Callback = function()
+		print("You just clicked the bind")
 
-    local function Set(list)
-        local set = {}
-        for _, l in ipairs(list) do
-            if l then
-                set[l] = true
-            end
-        end
-        return set
-    end
-
-    game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
-        if key == "1" then
-            local player = getPlayer()
-            if player then
+      local function getPlayer()
+         local userInput = game:GetService("UserInputService")
+         local cam = workspace.CurrentCamera
+         local mousePos = userInput:GetMouseLocation()
+         local mouseRay = cam:ViewportPointToRay(mousePos.X, mousePos.Y)
+         players = {}
+         for _, x in next, game:GetService('Players'):GetPlayers() do
+             players[#players + 1] = x.Character
+         end
+         local raycastParams = RaycastParams.new()
+         raycastParams.FilterType = Enum.RaycastFilterType.Whitelist
+         raycastParams.FilterDescendantsInstances = players
+         raycastParams.IgnoreWater = true
+         local raycastResult = workspace:Raycast(mouseRay.Origin, mouseRay.Direction * 1000, raycastParams)
+         if raycastResult then
+             for _, x in next, game:GetService('Players'):GetPlayers() do
+                 if not raycastResult.Instance:IsDescendantOf(x.Character) then
+                     continue
+                 end
+                 return x
+             end
+         end
+         return false
+     end
+ 
+     local function Set(list)
+         local set = {}
+         for _, l in ipairs(list) do
+             if l then
+                 set[l] = true
+             end
+         end
+         return set
+     end
+ 
+     game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
+         if key == "1" then
+             local player = getPlayer()
+             if player then
 
 local args = {
     [1] = "Memory",
@@ -110,12 +121,453 @@ local args = {
 
 game:GetService("ReplicatedStorage"):WaitForChild("Events()"):WaitForChild("Characters"):WaitForChild("Witches"):WaitForChild("Supreme"):WaitForChild("Cordelia"):WaitForChild("Events"):WaitForChild("PowerEvents"):FireServer(unpack(args))
 
+             end
             end
-        end
-        end)
-        end)
+         end)
+	end    
 
-BennettSection:NewToggle("Transmutation", "Keybind (Q)", function()
+})
+
+BennettTab:AddBind({
+	Name = "Vitalum Vitalis",
+	Default = Enum.KeyCode.Two,
+	Hold = false,
+	Callback = function()
+		print("You just clicked the bind")
+
+      local function getPlayer()
+         local userInput = game:GetService("UserInputService")
+         local cam = workspace.CurrentCamera
+         local mousePos = userInput:GetMouseLocation()
+         local mouseRay = cam:ViewportPointToRay(mousePos.X, mousePos.Y)
+         players = {}
+         for _, x in next, game:GetService('Players'):GetPlayers() do
+             players[#players + 1] = x.Character
+         end
+         local raycastParams = RaycastParams.new()
+         raycastParams.FilterType = Enum.RaycastFilterType.Whitelist
+         raycastParams.FilterDescendantsInstances = players
+         raycastParams.IgnoreWater = true
+         local raycastResult = workspace:Raycast(mouseRay.Origin, mouseRay.Direction * 1000, raycastParams)
+         if raycastResult then
+             for _, x in next, game:GetService('Players'):GetPlayers() do
+                 if not raycastResult.Instance:IsDescendantOf(x.Character) then
+                     continue
+                 end
+                 return x
+             end
+         end
+         return false
+     end
+ 
+     local function Set(list)
+         local set = {}
+         for _, l in ipairs(list) do
+             if l then
+                 set[l] = true
+             end
+         end
+         return set
+     end
+ 
+     game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
+         if key == "2" then
+             local player = getPlayer()
+             if player then
+
+local args = {
+    [1] = "VitalumVitalis",
+    [2] = player.Character.Head
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events()"):WaitForChild("Characters"):WaitForChild("Witches"):WaitForChild("Shared"):WaitForChild("Events"):WaitForChild("PowerEvents"):FireServer(unpack(args))
+
+
+             end
+            end
+         end)
+	end    
+
+})
+
+BennettTab:AddBind({
+	Name = "Choke",
+	Default = Enum.KeyCode.Three,
+	Hold = false,
+	Callback = function()
+		print("You just clicked the bind")
+
+      local function getPlayer()
+         local userInput = game:GetService("UserInputService")
+         local cam = workspace.CurrentCamera
+         local mousePos = userInput:GetMouseLocation()
+         local mouseRay = cam:ViewportPointToRay(mousePos.X, mousePos.Y)
+         players = {}
+         for _, x in next, game:GetService('Players'):GetPlayers() do
+             players[#players + 1] = x.Character
+         end
+         local raycastParams = RaycastParams.new()
+         raycastParams.FilterType = Enum.RaycastFilterType.Whitelist
+         raycastParams.FilterDescendantsInstances = players
+         raycastParams.IgnoreWater = true
+         local raycastResult = workspace:Raycast(mouseRay.Origin, mouseRay.Direction * 1000, raycastParams)
+         if raycastResult then
+             for _, x in next, game:GetService('Players'):GetPlayers() do
+                 if not raycastResult.Instance:IsDescendantOf(x.Character) then
+                     continue
+                 end
+                 return x
+             end
+         end
+         return false
+     end
+ 
+     local function Set(list)
+         local set = {}
+         for _, l in ipairs(list) do
+             if l then
+                 set[l] = true
+             end
+         end
+         return set
+     end
+ 
+     game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
+         if key == "3" then
+             local player = getPlayer()
+             if player then
+
+local args = {
+    [1] = "Choke",
+    [2] = player.Character.Head
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events()"):WaitForChild("Characters"):WaitForChild("Witches"):WaitForChild("Shared"):WaitForChild("Events"):WaitForChild("PowerEvents"):FireServer(unpack(args))
+
+
+             end
+            end
+         end)
+	end    
+
+})
+
+BennettTab:AddBind({
+	Name = "Memory Erase",
+	Default = Enum.KeyCode.Four,
+	Hold = false,
+	Callback = function()
+		print("You just clicked the bind")
+
+      local function getPlayer()
+         local userInput = game:GetService("UserInputService")
+         local cam = workspace.CurrentCamera
+         local mousePos = userInput:GetMouseLocation()
+         local mouseRay = cam:ViewportPointToRay(mousePos.X, mousePos.Y)
+         players = {}
+         for _, x in next, game:GetService('Players'):GetPlayers() do
+             players[#players + 1] = x.Character
+         end
+         local raycastParams = RaycastParams.new()
+         raycastParams.FilterType = Enum.RaycastFilterType.Whitelist
+         raycastParams.FilterDescendantsInstances = players
+         raycastParams.IgnoreWater = true
+         local raycastResult = workspace:Raycast(mouseRay.Origin, mouseRay.Direction * 1000, raycastParams)
+         if raycastResult then
+             for _, x in next, game:GetService('Players'):GetPlayers() do
+                 if not raycastResult.Instance:IsDescendantOf(x.Character) then
+                     continue
+                 end
+                 return x
+             end
+         end
+         return false
+     end
+ 
+     local function Set(list)
+         local set = {}
+         for _, l in ipairs(list) do
+             if l then
+                 set[l] = true
+             end
+         end
+         return set
+     end
+ 
+     game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
+         if key == "4" then
+             local player = getPlayer()
+             if player then
+
+local args = {
+    [1] = "Memory",
+    [2] = player.Character.Head
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events()"):WaitForChild("Characters"):WaitForChild("Witches"):WaitForChild("Shared"):WaitForChild("Events"):WaitForChild("PowerEvents"):FireServer(unpack(args))
+
+
+             end
+            end
+         end)
+	end    
+
+})
+
+BennettTab:AddBind({
+	Name = "Concilium (The Afflicted one)",
+	Default = Enum.KeyCode.Five,
+	Hold = false,
+	Callback = function()
+		print("You just clicked the bind")
+
+      local function getPlayer()
+         local userInput = game:GetService("UserInputService")
+         local cam = workspace.CurrentCamera
+         local mousePos = userInput:GetMouseLocation()
+         local mouseRay = cam:ViewportPointToRay(mousePos.X, mousePos.Y)
+         players = {}
+         for _, x in next, game:GetService('Players'):GetPlayers() do
+             players[#players + 1] = x.Character
+         end
+         local raycastParams = RaycastParams.new()
+         raycastParams.FilterType = Enum.RaycastFilterType.Whitelist
+         raycastParams.FilterDescendantsInstances = players
+         raycastParams.IgnoreWater = true
+         local raycastResult = workspace:Raycast(mouseRay.Origin, mouseRay.Direction * 1000, raycastParams)
+         if raycastResult then
+             for _, x in next, game:GetService('Players'):GetPlayers() do
+                 if not raycastResult.Instance:IsDescendantOf(x.Character) then
+                     continue
+                 end
+                 return x
+             end
+         end
+         return false
+     end
+ 
+     local function Set(list)
+         local set = {}
+         for _, l in ipairs(list) do
+             if l then
+                 set[l] = true
+             end
+         end
+         return set
+     end
+ 
+     game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
+         if key == "5" then
+             local player = getPlayer()
+             if player then
+
+local args = {
+    [1] = "Concilium",
+    [2] = player.Character.Head
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events()"):WaitForChild("Characters"):WaitForChild("Afflicteds"):WaitForChild("Countess"):WaitForChild("Events"):WaitForChild("PowerEvents"):FireServer(unpack(args))
+
+
+             end
+            end
+         end)
+	end    
+
+})
+
+
+BennettTab:AddBind({
+	Name = "Afflicted Combo",
+	Default = Enum.KeyCode.Six,
+	Hold = false,
+	Callback = function()
+		print("You just clicked the bind")
+
+      local function getPlayer()
+         local userInput = game:GetService("UserInputService")
+         local cam = workspace.CurrentCamera
+         local mousePos = userInput:GetMouseLocation()
+         local mouseRay = cam:ViewportPointToRay(mousePos.X, mousePos.Y)
+         players = {}
+         for _, x in next, game:GetService('Players'):GetPlayers() do
+             players[#players + 1] = x.Character
+         end
+         local raycastParams = RaycastParams.new()
+         raycastParams.FilterType = Enum.RaycastFilterType.Whitelist
+         raycastParams.FilterDescendantsInstances = players
+         raycastParams.IgnoreWater = true
+         local raycastResult = workspace:Raycast(mouseRay.Origin, mouseRay.Direction * 1000, raycastParams)
+         if raycastResult then
+             for _, x in next, game:GetService('Players'):GetPlayers() do
+                 if not raycastResult.Instance:IsDescendantOf(x.Character) then
+                     continue
+                 end
+                 return x
+             end
+         end
+         return false
+     end
+ 
+     local function Set(list)
+         local set = {}
+         for _, l in ipairs(list) do
+             if l then
+                 set[l] = true
+             end
+         end
+         return set
+     end
+ 
+     game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
+         if key == "6" then
+             local player = getPlayer()
+             if player then
+
+local args = {
+    [1] = "Combo",
+    [2] = player.Character.Head
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events()"):WaitForChild("Characters"):WaitForChild("Afflicteds"):WaitForChild("Countess"):WaitForChild("Events"):WaitForChild("PowerEvents"):FireServer(unpack(args))
+
+
+             end
+            end
+         end)
+	end    
+
+})
+
+BennettTab:AddBind({
+	Name = "Feeding",
+	Default = Enum.KeyCode.Seven,
+	Hold = false,
+	Callback = function()
+		print("You just clicked the bind")
+
+      local function getPlayer()
+         local userInput = game:GetService("UserInputService")
+         local cam = workspace.CurrentCamera
+         local mousePos = userInput:GetMouseLocation()
+         local mouseRay = cam:ViewportPointToRay(mousePos.X, mousePos.Y)
+         players = {}
+         for _, x in next, game:GetService('Players'):GetPlayers() do
+             players[#players + 1] = x.Character
+         end
+         local raycastParams = RaycastParams.new()
+         raycastParams.FilterType = Enum.RaycastFilterType.Whitelist
+         raycastParams.FilterDescendantsInstances = players
+         raycastParams.IgnoreWater = true
+         local raycastResult = workspace:Raycast(mouseRay.Origin, mouseRay.Direction * 1000, raycastParams)
+         if raycastResult then
+             for _, x in next, game:GetService('Players'):GetPlayers() do
+                 if not raycastResult.Instance:IsDescendantOf(x.Character) then
+                     continue
+                 end
+                 return x
+             end
+         end
+         return false
+     end
+ 
+     local function Set(list)
+         local set = {}
+         for _, l in ipairs(list) do
+             if l then
+                 set[l] = true
+             end
+         end
+         return set
+     end
+ 
+     game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
+         if key == "7" then
+             local player = getPlayer()
+             if player then
+
+local args = {
+    [1] = "feeding2",
+    [2] = player.Character.Head
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events()"):WaitForChild("Characters"):WaitForChild("Afflicteds"):WaitForChild("Countess"):WaitForChild("Events"):WaitForChild("PowerEvents"):FireServer(unpack(args))
+
+
+             end
+            end
+         end)
+	end    
+
+})
+
+BennettTab:AddBind({
+	Name = "Slap",
+	Default = Enum.KeyCode.Eight,
+	Hold = false,
+	Callback = function()
+		print("You just clicked the bind")
+
+      local function getPlayer()
+         local userInput = game:GetService("UserInputService")
+         local cam = workspace.CurrentCamera
+         local mousePos = userInput:GetMouseLocation()
+         local mouseRay = cam:ViewportPointToRay(mousePos.X, mousePos.Y)
+         players = {}
+         for _, x in next, game:GetService('Players'):GetPlayers() do
+             players[#players + 1] = x.Character
+         end
+         local raycastParams = RaycastParams.new()
+         raycastParams.FilterType = Enum.RaycastFilterType.Whitelist
+         raycastParams.FilterDescendantsInstances = players
+         raycastParams.IgnoreWater = true
+         local raycastResult = workspace:Raycast(mouseRay.Origin, mouseRay.Direction * 1000, raycastParams)
+         if raycastResult then
+             for _, x in next, game:GetService('Players'):GetPlayers() do
+                 if not raycastResult.Instance:IsDescendantOf(x.Character) then
+                     continue
+                 end
+                 return x
+             end
+         end
+         return false
+     end
+ 
+     local function Set(list)
+         local set = {}
+         for _, l in ipairs(list) do
+             if l then
+                 set[l] = true
+             end
+         end
+         return set
+     end
+ 
+     game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
+         if key == "8" then
+             local player = getPlayer()
+             if player then
+
+local args = {
+    [1] = "Slap",
+    [2] = player.Character.Head
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events()"):WaitForChild("Characters"):WaitForChild("Witches"):WaitForChild("Normal"):WaitForChild("Misty"):WaitForChild("Events"):WaitForChild("PowerEvents"):FireServer(unpack(args))
+
+
+             end
+            end
+         end)
+	end    
+
+})
+
+BennettTab:AddBind({
+	Name = "Transmutation",
+	Default = Enum.KeyCode.Q,
+	Hold = true,
+	Callback = function()
 
     clicktpon = true                
         plr = game.Players.LocalPlayer
@@ -137,394 +589,12 @@ end
 end
 end
 end)
-end)
+end    
+})
 
-BennettSection:NewToggle("Vitalum Vitalis", "Keybind (2)", function()
-    print("You just clicked the bind")
-
-    local function getPlayer()
-        local userInput = game:GetService("UserInputService")
-        local cam = workspace.CurrentCamera
-        local mousePos = userInput:GetMouseLocation()
-        local mouseRay = cam:ViewportPointToRay(mousePos.X, mousePos.Y)
-        players = {}
-        for _, x in next, game:GetService('Players'):GetPlayers() do
-            players[#players + 1] = x.Character
-        end
-        local raycastParams = RaycastParams.new()
-        raycastParams.FilterType = Enum.RaycastFilterType.Whitelist
-        raycastParams.FilterDescendantsInstances = players
-        raycastParams.IgnoreWater = true
-        local raycastResult = workspace:Raycast(mouseRay.Origin, mouseRay.Direction * 1000, raycastParams)
-        if raycastResult then
-            for _, x in next, game:GetService('Players'):GetPlayers() do
-                if not raycastResult.Instance:IsDescendantOf(x.Character) then
-                    continue
-                end
-                return x
-            end
-        end
-        return false
-    end
-
-    local function Set(list)
-        local set = {}
-        for _, l in ipairs(list) do
-            if l then
-                set[l] = true
-            end
-        end
-        return set
-    end
-
-    game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
-        if key == "2" then
-            local player = getPlayer()
-            if player then
-
-local args = {
-    [1] = "VitalumVitalis",
-    [2] = player.Character.Head
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("Events()"):WaitForChild("Characters"):WaitForChild("Witches"):WaitForChild("Shared"):WaitForChild("Events"):WaitForChild("PowerEvents"):FireServer(unpack(args))
-
-            end
-        end
-        end)
-        end)
-
-BennettSection:NewToggle("Choke", "Keybind (3)", function()
-    print("You just clicked the bind")
-
-    local function getPlayer()
-        local userInput = game:GetService("UserInputService")
-        local cam = workspace.CurrentCamera
-        local mousePos = userInput:GetMouseLocation()
-        local mouseRay = cam:ViewportPointToRay(mousePos.X, mousePos.Y)
-        players = {}
-        for _, x in next, game:GetService('Players'):GetPlayers() do
-            players[#players + 1] = x.Character
-        end
-        local raycastParams = RaycastParams.new()
-        raycastParams.FilterType = Enum.RaycastFilterType.Whitelist
-        raycastParams.FilterDescendantsInstances = players
-        raycastParams.IgnoreWater = true
-        local raycastResult = workspace:Raycast(mouseRay.Origin, mouseRay.Direction * 1000, raycastParams)
-        if raycastResult then
-            for _, x in next, game:GetService('Players'):GetPlayers() do
-                if not raycastResult.Instance:IsDescendantOf(x.Character) then
-                    continue
-                end
-                return x
-            end
-        end
-        return false
-    end
-
-    local function Set(list)
-        local set = {}
-        for _, l in ipairs(list) do
-            if l then
-                set[l] = true
-            end
-        end
-        return set
-    end
-
-    game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
-        if key == "3" then
-            local player = getPlayer()
-            if player then
-
-local args = {
-    [1] = "Choke",
-    [2] = player.Character.Head
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("Events()"):WaitForChild("Characters"):WaitForChild("Witches"):WaitForChild("Shared"):WaitForChild("Events"):WaitForChild("PowerEvents"):FireServer(unpack(args))
-
-            end
-        end
-        end)
-        end)
-
-BennettSection:NewToggle("Memory Erase", "Keybind (4)", function()
-    print("You just clicked the bind")
-
-    local function getPlayer()
-        local userInput = game:GetService("UserInputService")
-        local cam = workspace.CurrentCamera
-        local mousePos = userInput:GetMouseLocation()
-        local mouseRay = cam:ViewportPointToRay(mousePos.X, mousePos.Y)
-        players = {}
-        for _, x in next, game:GetService('Players'):GetPlayers() do
-            players[#players + 1] = x.Character
-        end
-        local raycastParams = RaycastParams.new()
-        raycastParams.FilterType = Enum.RaycastFilterType.Whitelist
-        raycastParams.FilterDescendantsInstances = players
-        raycastParams.IgnoreWater = true
-        local raycastResult = workspace:Raycast(mouseRay.Origin, mouseRay.Direction * 1000, raycastParams)
-        if raycastResult then
-            for _, x in next, game:GetService('Players'):GetPlayers() do
-                if not raycastResult.Instance:IsDescendantOf(x.Character) then
-                    continue
-                end
-                return x
-            end
-        end
-        return false
-    end
-
-    local function Set(list)
-        local set = {}
-        for _, l in ipairs(list) do
-            if l then
-                set[l] = true
-            end
-        end
-        return set
-    end
-
-    game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
-        if key == "4" then
-            local player = getPlayer()
-            if player then
-
-local args = {
-    [1] = "Memory",
-    [2] = player.Character.Head
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("Events()"):WaitForChild("Characters"):WaitForChild("Witches"):WaitForChild("Shared"):WaitForChild("Events"):WaitForChild("PowerEvents"):FireServer(unpack(args))
-
-            end
-        end
-        end)
-        end)
-
-BennettSection:NewToggle("Concilium (The Afflicted one)", "Keybind (5)", function()
-    print("You just clicked the bind")
-
-    local function getPlayer()
-        local userInput = game:GetService("UserInputService")
-        local cam = workspace.CurrentCamera
-        local mousePos = userInput:GetMouseLocation()
-        local mouseRay = cam:ViewportPointToRay(mousePos.X, mousePos.Y)
-        players = {}
-        for _, x in next, game:GetService('Players'):GetPlayers() do
-            players[#players + 1] = x.Character
-        end
-        local raycastParams = RaycastParams.new()
-        raycastParams.FilterType = Enum.RaycastFilterType.Whitelist
-        raycastParams.FilterDescendantsInstances = players
-        raycastParams.IgnoreWater = true
-        local raycastResult = workspace:Raycast(mouseRay.Origin, mouseRay.Direction * 1000, raycastParams)
-        if raycastResult then
-            for _, x in next, game:GetService('Players'):GetPlayers() do
-                if not raycastResult.Instance:IsDescendantOf(x.Character) then
-                    continue
-                end
-                return x
-            end
-        end
-        return false
-    end
-
-    local function Set(list)
-        local set = {}
-        for _, l in ipairs(list) do
-            if l then
-                set[l] = true
-            end
-        end
-        return set
-    end
-
-    game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
-        if key == "5" then
-            local player = getPlayer()
-            if player then
-
-local args = {
-    [1] = "Concilium",
-    [2] = player.Character.Head
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("Events()"):WaitForChild("Characters"):WaitForChild("Afflicteds"):WaitForChild("Countess"):WaitForChild("Events"):WaitForChild("PowerEvents"):FireServer(unpack(args))
-
-            end
-        end
-        end)
-        end)
-
-BennettSection:NewToggle("Afflicted Combo", "Keybind (6)", function()
-    print("You just clicked the bind")
-
-    local function getPlayer()
-        local userInput = game:GetService("UserInputService")
-        local cam = workspace.CurrentCamera
-        local mousePos = userInput:GetMouseLocation()
-        local mouseRay = cam:ViewportPointToRay(mousePos.X, mousePos.Y)
-        players = {}
-        for _, x in next, game:GetService('Players'):GetPlayers() do
-            players[#players + 1] = x.Character
-        end
-        local raycastParams = RaycastParams.new()
-        raycastParams.FilterType = Enum.RaycastFilterType.Whitelist
-        raycastParams.FilterDescendantsInstances = players
-        raycastParams.IgnoreWater = true
-        local raycastResult = workspace:Raycast(mouseRay.Origin, mouseRay.Direction * 1000, raycastParams)
-        if raycastResult then
-            for _, x in next, game:GetService('Players'):GetPlayers() do
-                if not raycastResult.Instance:IsDescendantOf(x.Character) then
-                    continue
-                end
-                return x
-            end
-        end
-        return false
-    end
-
-    local function Set(list)
-        local set = {}
-        for _, l in ipairs(list) do
-            if l then
-                set[l] = true
-            end
-        end
-        return set
-    end
-
-    game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
-        if key == "6" then
-            local player = getPlayer()
-            if player then
-
-local args = {
-    [1] = "Combo",
-    [2] = player.Character.Head
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("Events()"):WaitForChild("Characters"):WaitForChild("Afflicteds"):WaitForChild("Countess"):WaitForChild("Events"):WaitForChild("PowerEvents"):FireServer(unpack(args))
-
-            end
-        end
-        end)
-        end)
-
-BennettSection:NewToggle("Feeding", "Keybind (7)", function()
-    print("You just clicked the bind")
-
-    local function getPlayer()
-        local userInput = game:GetService("UserInputService")
-        local cam = workspace.CurrentCamera
-        local mousePos = userInput:GetMouseLocation()
-        local mouseRay = cam:ViewportPointToRay(mousePos.X, mousePos.Y)
-        players = {}
-        for _, x in next, game:GetService('Players'):GetPlayers() do
-            players[#players + 1] = x.Character
-        end
-        local raycastParams = RaycastParams.new()
-        raycastParams.FilterType = Enum.RaycastFilterType.Whitelist
-        raycastParams.FilterDescendantsInstances = players
-        raycastParams.IgnoreWater = true
-        local raycastResult = workspace:Raycast(mouseRay.Origin, mouseRay.Direction * 1000, raycastParams)
-        if raycastResult then
-            for _, x in next, game:GetService('Players'):GetPlayers() do
-                if not raycastResult.Instance:IsDescendantOf(x.Character) then
-                    continue
-                end
-                return x
-            end
-        end
-        return false
-    end
-
-    local function Set(list)
-        local set = {}
-        for _, l in ipairs(list) do
-            if l then
-                set[l] = true
-            end
-        end
-        return set
-    end
-
-    game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
-        if key == "7" then
-            local player = getPlayer()
-            if player then
-
-local args = {
-    [1] = "feeding2",
-    [2] = player.Character.Head
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("Events()"):WaitForChild("Characters"):WaitForChild("Afflicteds"):WaitForChild("Countess"):WaitForChild("Events"):WaitForChild("PowerEvents"):FireServer(unpack(args))
-
-            end
-        end
-        end)
-        end)
-
-BennettSection:NewToggle("Slap", "Keybind (8)", function()
-    print("You just clicked the bind")
-
-    local function getPlayer()
-        local userInput = game:GetService("UserInputService")
-        local cam = workspace.CurrentCamera
-        local mousePos = userInput:GetMouseLocation()
-        local mouseRay = cam:ViewportPointToRay(mousePos.X, mousePos.Y)
-        players = {}
-        for _, x in next, game:GetService('Players'):GetPlayers() do
-            players[#players + 1] = x.Character
-        end
-        local raycastParams = RaycastParams.new()
-        raycastParams.FilterType = Enum.RaycastFilterType.Whitelist
-        raycastParams.FilterDescendantsInstances = players
-        raycastParams.IgnoreWater = true
-        local raycastResult = workspace:Raycast(mouseRay.Origin, mouseRay.Direction * 1000, raycastParams)
-        if raycastResult then
-            for _, x in next, game:GetService('Players'):GetPlayers() do
-                if not raycastResult.Instance:IsDescendantOf(x.Character) then
-                    continue
-                end
-                return x
-            end
-        end
-        return false
-    end
-
-    local function Set(list)
-        local set = {}
-        for _, l in ipairs(list) do
-            if l then
-                set[l] = true
-            end
-        end
-        return set
-    end
-
-    game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
-        if key == "8" then
-            local player = getPlayer()
-            if player then
-
-local args = {
-    [1] = "Slap",
-    [2] = player.Character.Head
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("Events()"):WaitForChild("Characters"):WaitForChild("Witches"):WaitForChild("Normal"):WaitForChild("Misty"):WaitForChild("Events"):WaitForChild("PowerEvents"):FireServer(unpack(args))
-
-            end
-        end
-        end)
-        end)
-
-BennettSection:NewButton("Area Telekinesis", " ", function()
+BennettTab:AddButton({
+	Name = "Area Telekinesis",
+	Callback = function()
 
 local args = {
     [1] = "ArealThrow"
@@ -532,9 +602,13 @@ local args = {
 
 game:GetService("ReplicatedStorage"):WaitForChild("Events()"):WaitForChild("Characters"):WaitForChild("Witches"):WaitForChild("Supreme"):WaitForChild("Cordelia"):WaitForChild("Events"):WaitForChild("PowerEvents"):FireServer(unpack(args))
 
-end)
 
-BennettSection:NewButton("Earthquake", " ", function()
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Earthquake",
+	Callback = function()
 
 local args = {
     [1] = "Earth",
@@ -543,9 +617,13 @@ local args = {
 
 game:GetService("ReplicatedStorage"):WaitForChild("Events()"):WaitForChild("Characters"):WaitForChild("Witches"):WaitForChild("Normal"):WaitForChild("Madison"):WaitForChild("Events"):WaitForChild("PowerEvents"):FireServer(unpack(args))
 
-end)
 
-BennettSection:NewButton("Fire Outburst", " ", function()
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Fire Outburst",
+	Callback = function()
 
 local args = {
     [1] = "Pyro",
@@ -554,9 +632,13 @@ local args = {
 
 game:GetService("ReplicatedStorage"):WaitForChild("Events()"):WaitForChild("Characters"):WaitForChild("Witches"):WaitForChild("Normal"):WaitForChild("Madison"):WaitForChild("Events"):WaitForChild("PowerEvents"):FireServer(unpack(args))
 
-end)
 
-BennettSection:NewButton("Illusion Manipulation", " ", function()
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Illusion Manipulation",
+	Callback = function()
 
 local args = {
     [1] = "Illusion",
@@ -565,9 +647,12 @@ local args = {
 
 game:GetService("ReplicatedStorage"):WaitForChild("Events()"):WaitForChild("Characters"):WaitForChild("Witches"):WaitForChild("Normal"):WaitForChild("Myrtle"):WaitForChild("Events"):WaitForChild("PowerEvents"):FireServer(unpack(args))
 
-end)
+  	end    
+})
 
-BennettSection:NewButton("Area Freeze", " ", function()
+BennettTab:AddButton({
+	Name = "Area Freeze",
+	Callback = function()
 
 local args = {
     [1] = "AreaFreeze",
@@ -576,52 +661,59 @@ local args = {
 
 game:GetService("ReplicatedStorage"):WaitForChild("Events()"):WaitForChild("Characters"):WaitForChild("Witches"):WaitForChild("Normal"):WaitForChild("Myrtle"):WaitForChild("Events"):WaitForChild("PowerEvents"):FireServer(unpack(args))
 
-end)
+  	end    
+})
 
-local BennettSection = Bennett:NewSection("Spells (they should work as any char)")
+local Section = BennettTab:AddSection({
+	Name = "Spells (Most Should Work As Any Character)"
+})
 
-BennettSection:NewToggle("Ignis", "Keybind (C)", function()
-    print("You just clicked the bind")
+BennettTab:AddBind({
+	Name = "Ignis",
+	Default = Enum.KeyCode.C,
+	Hold = false,
+	Callback = function()
+		print("You just clicked the bind")
 
-    local function getPlayer()
-        local userInput = game:GetService("UserInputService")
-        local cam = workspace.CurrentCamera
-        local mousePos = userInput:GetMouseLocation()
-        local mouseRay = cam:ViewportPointToRay(mousePos.X, mousePos.Y)
-        players = {}
-        for _, x in next, game:GetService('Players'):GetPlayers() do
-            players[#players + 1] = x.Character
-        end
-        local raycastParams = RaycastParams.new()
-        raycastParams.FilterType = Enum.RaycastFilterType.Whitelist
-        raycastParams.FilterDescendantsInstances = players
-        raycastParams.IgnoreWater = true
-        local raycastResult = workspace:Raycast(mouseRay.Origin, mouseRay.Direction * 1000, raycastParams)
-        if raycastResult then
-            for _, x in next, game:GetService('Players'):GetPlayers() do
-                if not raycastResult.Instance:IsDescendantOf(x.Character) then
-                    continue
-                end
-                return x
-            end
-        end
-        return false
-    end
-
-    local function Set(list)
-        local set = {}
-        for _, l in ipairs(list) do
-            if l then
-                set[l] = true
-            end
-        end
-        return set
-    end
-
-    game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
-        if key == "c" then
-            local player = getPlayer()
-            if player then
+      local function getPlayer()
+         local userInput = game:GetService("UserInputService")
+         local cam = workspace.CurrentCamera
+         local mousePos = userInput:GetMouseLocation()
+         local mouseRay = cam:ViewportPointToRay(mousePos.X, mousePos.Y)
+         players = {}
+         for _, x in next, game:GetService('Players'):GetPlayers() do
+             players[#players + 1] = x.Character
+         end
+         local raycastParams = RaycastParams.new()
+         raycastParams.FilterType = Enum.RaycastFilterType.Whitelist
+         raycastParams.FilterDescendantsInstances = players
+         raycastParams.IgnoreWater = true
+         local raycastResult = workspace:Raycast(mouseRay.Origin, mouseRay.Direction * 1000, raycastParams)
+         if raycastResult then
+             for _, x in next, game:GetService('Players'):GetPlayers() do
+                 if not raycastResult.Instance:IsDescendantOf(x.Character) then
+                     continue
+                 end
+                 return x
+             end
+         end
+         return false
+     end
+ 
+     local function Set(list)
+         local set = {}
+         for _, l in ipairs(list) do
+             if l then
+                 set[l] = true
+             end
+         end
+         return set
+     end
+ 
+     game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
+         if key == "c" then
+             local player = getPlayer()
+             if player then
 
 local args = {
     [1] = "Ignis",
@@ -630,53 +722,60 @@ local args = {
 
 game:GetService("ReplicatedStorage"):WaitForChild("Events()"):WaitForChild("Characters"):WaitForChild("Witches"):WaitForChild("Normal"):WaitForChild("Myrtle"):WaitForChild("Events"):WaitForChild("Spells"):FireServer(unpack(args))
 
+
+             end
             end
-        end
-        end)
-        end)
+         end)
+	end    
 
-BennettSection:NewToggle("Fractum Os", "Keybind (V)", function()
-    print("You just clicked the bind")
+})
 
-    local function getPlayer()
-        local userInput = game:GetService("UserInputService")
-        local cam = workspace.CurrentCamera
-        local mousePos = userInput:GetMouseLocation()
-        local mouseRay = cam:ViewportPointToRay(mousePos.X, mousePos.Y)
-        players = {}
-        for _, x in next, game:GetService('Players'):GetPlayers() do
-            players[#players + 1] = x.Character
-        end
-        local raycastParams = RaycastParams.new()
-        raycastParams.FilterType = Enum.RaycastFilterType.Whitelist
-        raycastParams.FilterDescendantsInstances = players
-        raycastParams.IgnoreWater = true
-        local raycastResult = workspace:Raycast(mouseRay.Origin, mouseRay.Direction * 1000, raycastParams)
-        if raycastResult then
-            for _, x in next, game:GetService('Players'):GetPlayers() do
-                if not raycastResult.Instance:IsDescendantOf(x.Character) then
-                    continue
-                end
-                return x
-            end
-        end
-        return false
-    end
+BennettTab:AddBind({
+	Name = "Fractum Os",
+	Default = Enum.KeyCode.V,
+	Hold = false,
+	Callback = function()
+		print("You just clicked the bind")
 
-    local function Set(list)
-        local set = {}
-        for _, l in ipairs(list) do
-            if l then
-                set[l] = true
-            end
-        end
-        return set
-    end
-
-    game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
-        if key == "v" then
-            local player = getPlayer()
-            if player then
+      local function getPlayer()
+         local userInput = game:GetService("UserInputService")
+         local cam = workspace.CurrentCamera
+         local mousePos = userInput:GetMouseLocation()
+         local mouseRay = cam:ViewportPointToRay(mousePos.X, mousePos.Y)
+         players = {}
+         for _, x in next, game:GetService('Players'):GetPlayers() do
+             players[#players + 1] = x.Character
+         end
+         local raycastParams = RaycastParams.new()
+         raycastParams.FilterType = Enum.RaycastFilterType.Whitelist
+         raycastParams.FilterDescendantsInstances = players
+         raycastParams.IgnoreWater = true
+         local raycastResult = workspace:Raycast(mouseRay.Origin, mouseRay.Direction * 1000, raycastParams)
+         if raycastResult then
+             for _, x in next, game:GetService('Players'):GetPlayers() do
+                 if not raycastResult.Instance:IsDescendantOf(x.Character) then
+                     continue
+                 end
+                 return x
+             end
+         end
+         return false
+     end
+ 
+     local function Set(list)
+         local set = {}
+         for _, l in ipairs(list) do
+             if l then
+                 set[l] = true
+             end
+         end
+         return set
+     end
+ 
+     game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
+         if key == "v" then
+             local player = getPlayer()
+             if player then
 
 local args = {
     [1] = "Fractum Os",
@@ -685,53 +784,62 @@ local args = {
 
 game:GetService("ReplicatedStorage"):WaitForChild("Events()"):WaitForChild("Characters"):WaitForChild("Witches"):WaitForChild("Shared"):WaitForChild("Events"):WaitForChild("Spells"):FireServer(unpack(args))
 
+
+             end
             end
-        end
-        end)
-        end)
+         end)
+	end    
 
-BennettSection:NewToggle("Heart Attack (Say nickname after u click on someone)", "Keybind (B)", function()
-    print("You just clicked the bind")
+})
 
-    local function getPlayer()
-        local userInput = game:GetService("UserInputService")
-        local cam = workspace.CurrentCamera
-        local mousePos = userInput:GetMouseLocation()
-        local mouseRay = cam:ViewportPointToRay(mousePos.X, mousePos.Y)
-        players = {}
-        for _, x in next, game:GetService('Players'):GetPlayers() do
-            players[#players + 1] = x.Character
-        end
-        local raycastParams = RaycastParams.new()
-        raycastParams.FilterType = Enum.RaycastFilterType.Whitelist
-        raycastParams.FilterDescendantsInstances = players
-        raycastParams.IgnoreWater = true
-        local raycastResult = workspace:Raycast(mouseRay.Origin, mouseRay.Direction * 1000, raycastParams)
-        if raycastResult then
-            for _, x in next, game:GetService('Players'):GetPlayers() do
-                if not raycastResult.Instance:IsDescendantOf(x.Character) then
-                    continue
-                end
-                return x
-            end
-        end
-        return false
-    end
+BennettTab:AddBind({
+	Name = "Heart Attack (Nickname of your target is in your clipboard)",
+	Default = Enum.KeyCode.B,
+	Hold = false,
+	Callback = function()
+		print("You just clicked the bind")
 
-    local function Set(list)
-        local set = {}
-        for _, l in ipairs(list) do
-            if l then
-                set[l] = true
-            end
-        end
-        return set
-    end
+      local function getPlayer()
+         local userInput = game:GetService("UserInputService")
+         local cam = workspace.CurrentCamera
+         local mousePos = userInput:GetMouseLocation()
+         local mouseRay = cam:ViewportPointToRay(mousePos.X, mousePos.Y)
+         players = {}
+         for _, x in next, game:GetService('Players'):GetPlayers() do
+             players[#players + 1] = x.Character
+         end
+         local raycastParams = RaycastParams.new()
+         raycastParams.FilterType = Enum.RaycastFilterType.Whitelist
+         raycastParams.FilterDescendantsInstances = players
+         raycastParams.IgnoreWater = true
+         local raycastResult = workspace:Raycast(mouseRay.Origin, mouseRay.Direction * 1000, raycastParams)
+         if raycastResult then
+             for _, x in next, game:GetService('Players'):GetPlayers() do
+                 if not raycastResult.Instance:IsDescendantOf(x.Character) then
+                     continue
+                 end
+                 return x
+             end
+         end
+         return false
+     end
+ 
+     local function Set(list)
+         local set = {}
+         for _, l in ipairs(list) do
+             if l then
+                 set[l] = true
+             end
+         end
+         return set
+     end
+ 
+     game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
+         if key == "b" then
+             local player = getPlayer()
+             if player then
 
-    game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
-        if key == "b" then
-            local player = getPlayer()
-            if player then
+local plr = player.Character
 
 local args = {
     [1] = "Heart",
@@ -740,12 +848,18 @@ local args = {
 
 game:GetService("ReplicatedStorage"):WaitForChild("Events()"):WaitForChild("Characters"):WaitForChild("Witches"):WaitForChild("Shared"):WaitForChild("Events"):WaitForChild("Spells"):FireServer(unpack(args))
 
-            end
-        end
-        end)
-        end)
+setclipboard(plr.Name.."")
 
-BennettSection:NewButton("Heal", " ", function()
+             end
+            end
+         end)
+	end    
+
+})
+
+BennettTab:AddButton({
+	Name = "Heal",
+	Callback = function()
 
 local args = {
     [1] = "Restitue eum ad naturam"
@@ -753,9 +867,12 @@ local args = {
 
 game:GetService("ReplicatedStorage"):WaitForChild("Events()"):WaitForChild("Characters"):WaitForChild("Witches"):WaitForChild("Shared"):WaitForChild("Events"):WaitForChild("Spells"):FireServer(unpack(args))
 
-end)
+  	end    
+})
 
-BennettSection:NewButton("Barrier", " ", function()
+BennettTab:AddButton({
+	Name = "Barrier",
+	Callback = function()
 
 local args = {
     [1] = "Repellendum malum minatur, ut nobis"
@@ -763,9 +880,12 @@ local args = {
 
 game:GetService("ReplicatedStorage"):WaitForChild("Events()"):WaitForChild("Characters"):WaitForChild("Witches"):WaitForChild("Shared"):WaitForChild("Events"):WaitForChild("Spells"):FireServer(unpack(args))
 
-end)
+  	end    
+})
 
-BennettSection:NewButton("Stop Barrier", " ", function()
+BennettTab:AddButton({
+	Name = "Stop Barrier",
+	Callback = function()
 
 local args = {
     [1] = "Stop"
@@ -773,20 +893,14 @@ local args = {
 
 game:GetService("ReplicatedStorage"):WaitForChild("Events()"):WaitForChild("Characters"):WaitForChild("Witches"):WaitForChild("Shared"):WaitForChild("Events"):WaitForChild("Spells"):FireServer(unpack(args))
 
-end)
+  	end    
+})
 
-BennettSection:NewButton("Astral Projection", " ", function()
+BennettTab:AddParagraph("Type in target first letter of players nickname","click summon first, the nickname will be copied to your clipboard")
 
-local args = {
-    [1] = "Astral",
-    [2] = workspace:WaitForChild("Model")
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("Events()"):WaitForChild("Characters"):WaitForChild("Witches"):WaitForChild("Shared"):WaitForChild("Events"):WaitForChild("Spells"):FireServer(unpack(args))
-
-end)
-
-BennettSection:NewButton("Summon (Say Someones nickname after u click)", " ", function()
+BennettTab:AddButton({
+	Name = "Summon",
+	Callback = function()
 
 local args = {
     [1] = "Summon"
@@ -794,11 +908,43 @@ local args = {
 
 game:GetService("ReplicatedStorage"):WaitForChild("Events()"):WaitForChild("Characters"):WaitForChild("Witches"):WaitForChild("Shared"):WaitForChild("Events"):WaitForChild("Spells"):FireServer(unpack(args))
 
-end)
+  	end    
+})
 
-local Bennett = Window:NewTab("Combat")
-local BennettSection = Bennett:NewSection("Some characters dont have so here")
-BennettSection:NewButton("Combat", " ", function()
+BennettTab:AddTextbox({
+	Name = "target",
+	Default = "input",
+	TextDisappear = true,
+	Callback = function(txt)
+      local Players = game:GetService("Players")
+      local msg = txt
+      local function findPlayer(stringg)
+          for _, v in pairs(Players:GetPlayers()) do
+              if stringg:lower() == (v.Name:lower()):sub(1, #stringg) then
+                  return v
+              end
+          end
+      end
+  
+      local player = findPlayer(msg)
+      local CHAR = player.Character
+
+local plr = player.Character
+
+setclipboard(plr.Name.."")
+
+	end	  
+})
+
+local BennettTab = Window:MakeTab({
+	Name = "Combat",
+	Icon = "rbxassetid://14458282849",
+	PremiumOnly = false
+})
+
+BennettTab:AddButton({
+	Name = "Combat",
+	Callback = function()
 
 local args = {
     [1] = "combat"
@@ -806,12 +952,22 @@ local args = {
 
 game:GetService("ReplicatedStorage"):WaitForChild("Mortals"):WaitForChild("1998"):WaitForChild("Brooke"):WaitForChild("Events"):WaitForChild("CharacterEvents"):FireServer(unpack(args))
 
-end)
+  	end    
+})
 
-local Bennett = Window:NewTab("Characters")
-local BennettSection = Bennett:NewSection("Mortal")
+local BennettTab = Window:MakeTab({
+	Name = "Characters",
+	Icon = "rbxassetid://14458282849",
+	PremiumOnly = false
+})
 
-BennettSection:NewButton("Brooke", " ", function()
+local Section = BennettTab:AddSection({
+	Name = "Mortal"
+})
+
+BennettTab:AddButton({
+	Name = "Brooke",
+	Callback = function()
 
 local args = {
     [1] = "Brooke"
@@ -819,11 +975,16 @@ local args = {
 
 game:GetService("ReplicatedStorage")["Events()"].CharacterSelection.PickCharacter:FireServer(unpack(args))
 
-end)
+  	end    
+})
 
-local BennettSection = Bennett:NewSection("Pale")
+local Section = BennettTab:AddSection({
+	Name = "Pale"
+})
 
-BennettSection:NewButton("Pale", " ", function()
+BennettTab:AddButton({
+	Name = "Pale",
+	Callback = function()
 
 local args = {
     [1] = "Pale"
@@ -831,11 +992,16 @@ local args = {
 
 game:GetService("ReplicatedStorage")["Events()"].CharacterSelection.PickCharacter:FireServer(unpack(args))
 
-end)
+  	end    
+})
 
-local BennettSection = Bennett:NewSection("Satanist")
+local Section = BennettTab:AddSection({
+	Name = "Satanist"
+})
 
-BennettSection:NewButton("Richard", " ", function()
+BennettTab:AddButton({
+	Name = "Richard",
+	Callback = function()
 
 local args = {
     [1] = "Richard"
@@ -843,9 +1009,12 @@ local args = {
 
 game:GetService("ReplicatedStorage")["Events()"].CharacterSelection.PickCharacter:FireServer(unpack(args))
 
-end)
+  	end    
+})
 
-BennettSection:NewButton("Sister Mary", " ", function()
+BennettTab:AddButton({
+	Name = "Sister Mary",
+	Callback = function()
 
 local args = {
     [1] = "Sister Mary"
@@ -853,11 +1022,16 @@ local args = {
 
 game:GetService("ReplicatedStorage")["Events()"].CharacterSelection.PickCharacter:FireServer(unpack(args))
 
-end)
+  	end    
+})
 
-local BennettSection = Bennett:NewSection("The Afflicted")
+local Section = BennettTab:AddSection({
+	Name = "The Afflicted"
+})
 
-BennettSection:NewButton("The Countess", " ", function()
+BennettTab:AddButton({
+	Name = "The Countess",
+	Callback = function()
 
 local args = {
     [1] = "The Countess"
@@ -865,9 +1039,12 @@ local args = {
 
 game:GetService("ReplicatedStorage")["Events()"].CharacterSelection.PickCharacter:FireServer(unpack(args))
 
-end)
+  	end    
+})
 
-BennettSection:NewButton("Ramona Royale", " ", function()
+BennettTab:AddButton({
+	Name = "Ramona Royale",
+	Callback = function()
 
 local args = {
     [1] = "Ramona Royale"
@@ -875,9 +1052,12 @@ local args = {
 
 game:GetService("ReplicatedStorage")["Events()"].CharacterSelection.PickCharacter:FireServer(unpack(args))
 
-end)
+  	end    
+})
 
-BennettSection:NewButton("Donovan", " ", function()
+BennettTab:AddButton({
+	Name = "Donovan",
+	Callback = function()
 
 local args = {
     [1] = "Donovan"
@@ -885,11 +1065,16 @@ local args = {
 
 game:GetService("ReplicatedStorage")["Events()"].CharacterSelection.PickCharacter:FireServer(unpack(args))
 
-end)
+  	end    
+})
 
-local BennettSection = Bennett:NewSection("Witch")
+local Section = BennettTab:AddSection({
+	Name = "Witch"
+})
 
-BennettSection:NewButton("Cordelia Goode", " ", function()
+BennettTab:AddButton({
+	Name = "Cordelia Goode",
+	Callback = function()
 
 local args = {
     [1] = "Cordelia Goode"
@@ -897,9 +1082,12 @@ local args = {
 
 game:GetService("ReplicatedStorage")["Events()"].CharacterSelection.PickCharacter:FireServer(unpack(args))
 
-end)
+  	end    
+})
 
-BennettSection:NewButton("Cordelia Goode Outfit", " ", function()
+BennettTab:AddButton({
+	Name = "Cordelia Goode Outfit",
+	Callback = function()
 
 local args = {
     [1] = "Cordelia Goode S"
@@ -907,9 +1095,12 @@ local args = {
 
 game:GetService("ReplicatedStorage")["Events()"].CharacterSelection.PickCharacter:FireServer(unpack(args))
 
-end)
+  	end    
+})
 
-BennettSection:NewButton("Marie", " ", function()
+BennettTab:AddButton({
+	Name = "Marie",
+	Callback = function()
 
 local args = {
     [1] = "Marie"
@@ -917,9 +1108,12 @@ local args = {
 
 game:GetService("ReplicatedStorage")["Events()"].CharacterSelection.PickCharacter:FireServer(unpack(args))
 
-end)
+  	end    
+})
 
-BennettSection:NewButton("Queenie", " ", function()
+BennettTab:AddButton({
+	Name = "Queenie",
+	Callback = function()
 
 local args = {
     [1] = "Queenie"
@@ -927,9 +1121,12 @@ local args = {
 
 game:GetService("ReplicatedStorage")["Events()"].CharacterSelection.PickCharacter:FireServer(unpack(args))
 
-end)
+  	end    
+})
 
-BennettSection:NewButton("Madison Montgomery", " ", function()
+BennettTab:AddButton({
+	Name = "Madison Montgomery",
+	Callback = function()
 
 local args = {
     [1] = "Madison Montgomery"
@@ -937,9 +1134,12 @@ local args = {
 
 game:GetService("ReplicatedStorage")["Events()"].CharacterSelection.PickCharacter:FireServer(unpack(args))
 
-end)
+  	end    
+})
 
-BennettSection:NewButton("Misty Day", " ", function()
+BennettTab:AddButton({
+	Name = "Misty Day",
+	Callback = function()
 
 local args = {
     [1] = "Misty Day"
@@ -947,9 +1147,12 @@ local args = {
 
 game:GetService("ReplicatedStorage")["Events()"].CharacterSelection.PickCharacter:FireServer(unpack(args))
 
-end)
+  	end    
+})
 
-BennettSection:NewButton("Fiona Goode", " ", function()
+BennettTab:AddButton({
+	Name = "Fiona Goode",
+	Callback = function()
 
 local args = {
     [1] = "Fiona Goode"
@@ -957,9 +1160,12 @@ local args = {
 
 game:GetService("ReplicatedStorage")["Events()"].CharacterSelection.PickCharacter:FireServer(unpack(args))
 
-end)
+  	end    
+})
 
-BennettSection:NewButton("Myrtle Snow", " ", function()
+BennettTab:AddButton({
+	Name = "Myrtle Snow",
+	Callback = function()
 
 local args = {
     [1] = "Myrtle Snow"
@@ -967,26 +1173,55 @@ local args = {
 
 game:GetService("ReplicatedStorage")["Events()"].CharacterSelection.PickCharacter:FireServer(unpack(args))
 
-end)
+  	end    
+})
 
-local Main = Window:NewTab("Misc")
-local MainSection = Main:NewSection("")
-MainSection:NewButton("Infinite Yield", "", function()
-loadstring(game:HttpGet(('https://raw.githubusercontent.com/Omg562/Scripts/main/INF'),true))()
-end)
-MainSection:NewButton("Animations", "", function()
-loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Ben-10/main/Animation'),true))()
-end)
-MainSection:NewButton("Custom Catalog", "", function()
+local BennettTab = Window:MakeTab({
+	Name = "Misc",
+	Icon = "rbxassetid://14458282849",
+	PremiumOnly = false
+})
+
+local Section = BennettTab:AddSection({
+	Name = "Other Scripts"
+})
+
+BennettTab:AddButton({
+	Name = "Custom Catalog",
+	Callback = function()
+
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Ben-10/main/Custom%20Catalog'),true))()
-end)
-local Tab = Window:NewTab("Credits")
-local SettingsSection = Tab:NewSection("discord: bennettscripts")
 
-local SettingsSection = Tab:NewSection("Toggle UI")
-SettingsSection:NewKeybind("Toggle UI", "Toggle UI", Enum.KeyCode.M, function()
-    Library:ToggleUI()
-end)
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Animations",
+	Callback = function()
+
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Ben-10/main/Animation'),true))()
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Infinite Yield",
+	Callback = function()
+
+loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+
+  	end    
+})
+
+local BennettTab = Window:MakeTab({
+	Name = "Credits",
+	Icon = "rbxassetid://14458282849",
+	PremiumOnly = false
+})
+
+local Section = BennettTab:AddSection({
+	Name = "discord: bennettscripts"
+})
 
 wait(1)
 game.StarterGui:SetCore("SendNotification", { 
