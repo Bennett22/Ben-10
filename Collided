@@ -913,7 +913,7 @@ game:GetService("ReplicatedStorage"):WaitForChild("Events()"):WaitForChild("Char
 
 BennettTab:AddTextbox({
 	Name = "target",
-	Default = "input",
+	Default = "",
 	TextDisappear = true,
 	Callback = function(txt)
       local Players = game:GetService("Players")
