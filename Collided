@@ -841,6 +841,8 @@ BennettTab:AddBind({
 
 local plr = player.Character
 
+setclipboard(plr.Name.."")
+
 local args = {
     [1] = "Heart",
     [2] = player.Character.Head
@@ -848,7 +850,7 @@ local args = {
 
 game:GetService("ReplicatedStorage"):WaitForChild("Events()"):WaitForChild("Characters"):WaitForChild("Witches"):WaitForChild("Shared"):WaitForChild("Events"):WaitForChild("Spells"):FireServer(unpack(args))
 
-setclipboard(plr.Name.."")
+
 
              end
             end
