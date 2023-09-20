@@ -939,7 +939,7 @@ setclipboard(plr.Name.."")
 })
 
 local BennettTab = Window:MakeTab({
-	Name = "Combat",
+	Name = "Others",
 	Icon = "rbxassetid://14458282849",
 	PremiumOnly = false
 })
@@ -957,6 +957,42 @@ game:GetService("ReplicatedStorage"):WaitForChild("Mortals"):WaitForChild("1998"
   	end    
 })
 
+BennettTab:AddParagraph("","")
+
+BennettTab:AddButton({
+	Name = "Get Affilicted Sprint",
+	Callback = function()
+
+local plr = game.Players.LocalPlayer
+
+local backup = game.Lighting.Affilicted.Donovan.Abilities.Sprint:Clone()
+backup.Parent = plr.Character.Abilities
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Get Normal Sprint",
+	Callback = function()
+
+local plr = game.Players.LocalPlayer
+
+local backup = game.Lighting.Human.Brooke.Abilities.Sprint:Clone()
+backup.Parent = plr.Character.Abilities
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Remove Sprint",
+	Callback = function()
+
+local plr = game.Players.LocalPlayer
+
+plr.character.Abilities.Sprint:Destroy()
+
+  	end    
+})
 local BennettTab = Window:MakeTab({
 	Name = "Characters",
 	Icon = "rbxassetid://14458282849",
