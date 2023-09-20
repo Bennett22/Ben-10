@@ -1220,6 +1220,87 @@ local BennettTab = Window:MakeTab({
 	PremiumOnly = false
 })
 
+BennettTab:AddTextbox({
+	Name = "View Someone",
+	Default = "",
+	TextDisappear = true,
+	Callback = function(txt)
+      local Players = game:GetService("Players")
+      local msg = txt
+      local function findPlayer(stringg)
+          for _, v in pairs(Players:GetPlayers()) do
+              if stringg:lower() == (v.Name:lower()):sub(1, #stringg) then
+                  return v
+              end
+          end
+      end
+  
+      local player = findPlayer(msg)
+      local CHAR = player.Character
+
+      game:GetService("Workspace").CurrentCamera.CameraSubject = player.Character
+
+	end	  
+})
+
+
+BennettTab:AddButton({
+	Name = "Unview",
+	Callback = function()
+
+     player = game:GetService("Players").LocalPlayer
+     game:GetService("Workspace").CurrentCamera.CameraSubject = player.Character
+
+
+  	end
+})
+
+BennettTab:AddTextbox({
+	Name = "Teleport To Someone",
+	Default = "",
+	TextDisappear = true,
+	Callback = function(txt)
+      local Players = game:GetService("Players")
+      local msg = txt
+      local function findPlayer(stringg)
+          for _, v in pairs(Players:GetPlayers()) do
+              if stringg:lower() == (v.Name:lower()):sub(1, #stringg) then
+                  return v
+              end
+          end
+      end
+  
+      local player = findPlayer(msg)
+      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = player.Character.HumanoidRootPart.CFrame
+	end	  
+})
+
+BennettTab:AddSlider({
+	Name = "Speed",
+	Min = 0,
+	Max = 200,
+	Default = 16,
+	Color = Color3.fromRGB(),
+	Increment = 1,
+	ValueName = "Speed Value",
+	Callback = function(Value)
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
+	end    
+})
+
+BennettTab:AddSlider({
+	Name = "Jump",
+	Min = 0,
+	Max = 200,
+	Default = 10,
+	Color = Color3.fromRGB(),
+	Increment = 1,
+	ValueName = "Jump Value",
+	Callback = function(Value)
+game.Players.LocalPlayer.Character.Humanoid.JumpPower = Value
+	end    
+})
+
 local Section = BennettTab:AddSection({
 	Name = "Other Scripts"
 })
