@@ -898,6 +898,34 @@ game:GetService("ReplicatedStorage"):WaitForChild("Events()"):WaitForChild("Char
   	end    
 })
 
+BennettTab:AddButton({
+	Name = "Movere",
+	Callback = function()
+
+local args = {
+    [1] = "Movere",
+    [2] = workspace:WaitForChild("Model")
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events()"):WaitForChild("Characters"):WaitForChild("Witches"):WaitForChild("Shared"):WaitForChild("Events"):WaitForChild("Spells"):FireServer(unpack(args))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Astral Projection",
+	Callback = function()
+
+local args = {
+    [1] = "Astral",
+    [2] = workspace:WaitForChild("Model")
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events()"):WaitForChild("Characters"):WaitForChild("Witches"):WaitForChild("Shared"):WaitForChild("Events"):WaitForChild("Spells"):FireServer(unpack(args))
+
+  	end    
+})
+
 BennettTab:AddParagraph("Type in target first letter of players nickname","click summon first, the nickname will be copied to your clipboard")
 
 BennettTab:AddButton({
