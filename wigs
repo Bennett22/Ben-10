@@ -53,7 +53,7 @@ end)
 
 local Tab = Window:NewTab("Misc")
 local Section = Tab:NewSection(" ")
-BennettSection:NewTextBox("View Someone", "", function(txt)
+Section:NewTextBox("View Someone", "", function(txt)
     local Players = game:GetService("Players")
     local msg = txt
     local function findPlayer(stringg)
@@ -71,14 +71,14 @@ BennettSection:NewTextBox("View Someone", "", function(txt)
       
 end)
 
-BennettSection:NewButton("Unview", " ", function()
+Section:NewButton("Unview", " ", function()
 
      player = game:GetService("Players").LocalPlayer
      game:GetService("Workspace").CurrentCamera.CameraSubject = player.Character
 
 end)
 
-BennettSection:NewTextBox("Teleport To Someone", "", function(txt)
+Section:NewTextBox("Teleport To Someone", "", function(txt)
     local Players = game:GetService("Players")
     local msg = txt
     local function findPlayer(stringg)
@@ -97,10 +97,10 @@ BennettSection:NewTextBox("Teleport To Someone", "", function(txt)
 end)
 
 
-BennettSection:NewTextBox("Speed", "Speed Value", function(txt)
+Section:NewTextBox("Speed", "Speed Value", function(txt)
 	game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = txt
 end)
-BennettSection:NewTextBox("Jump", "Jump Value", function(txt)
+Section:NewTextBox("Jump", "Jump Value", function(txt)
 	game.Players.LocalPlayer.Character.Humanoid.JumpPower = txt
 end)
 Section:NewButton("Infinite Yield", "", function()
