@@ -271,7 +271,7 @@ BennettTab:AddBind({
      end
  
      game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
-         if key == "3" then
+         if key == "4" then
              local player = getPlayer()
              if player then
              
