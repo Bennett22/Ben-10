@@ -51,8 +51,58 @@ Section:NewButton("Starshine Sparkle Warrior", " ", function()
 
 end)
 
-local Tab = Window:NewTab("Admin")
+local Tab = Window:NewTab("Misc")
 local Section = Tab:NewSection(" ")
+BennettSection:NewTextBox("View Someone", "", function(txt)
+    local Players = game:GetService("Players")
+    local msg = txt
+    local function findPlayer(stringg)
+        for _, v in pairs(Players:GetPlayers()) do
+            if stringg:lower() == (v.Name:lower()):sub(1, #stringg) then
+                return v
+            end
+        end
+    end
+
+    local player = findPlayer(msg)
+    local CHAR = player.Character
+    
+      game:GetService("Workspace").CurrentCamera.CameraSubject = player.Character
+      
+end)
+
+BennettSection:NewButton("Unview", " ", function()
+
+     player = game:GetService("Players").LocalPlayer
+     game:GetService("Workspace").CurrentCamera.CameraSubject = player.Character
+
+end)
+
+BennettSection:NewTextBox("Teleport To Someone", "", function(txt)
+    local Players = game:GetService("Players")
+    local msg = txt
+    local function findPlayer(stringg)
+        for _, v in pairs(Players:GetPlayers()) do
+            if stringg:lower() == (v.Name:lower()):sub(1, #stringg) then
+                return v
+            end
+        end
+    end
+
+    local player = findPlayer(msg)
+    local CHAR = player.Character
+    
+      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = player.Character.HumanoidRootPart.CFrame
+      
+end)
+
+
+BennettSection:NewTextBox("Speed", "Speed Value", function(txt)
+	game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = txt
+end)
+BennettSection:NewTextBox("Jump", "Jump Value", function(txt)
+	game.Players.LocalPlayer.Character.Humanoid.JumpPower = txt
+end)
 Section:NewButton("Infinite Yield", "", function()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
 end)
