@@ -72,7 +72,7 @@ end
 
 BennettTab:AddBind({
 	Name = "Neck Snap",
-	Default = Enum.KeyCode.Three
+	Default = Enum.KeyCode.Three,
 	Hold = false,
 	Callback = function()
 		print("You just clicked the bind")
