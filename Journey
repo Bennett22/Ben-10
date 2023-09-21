@@ -41,8 +41,38 @@ end
 })
 
 BennettTab:AddBind({
-	Name = "Neck Snap",
+	Name = "Bolts",
 	Default = Enum.KeyCode.Two,
+	Hold = true,
+	Callback = function()
+
+    clicktpon = true                
+        plr = game.Players.LocalPlayer
+        hum = plr.Character.HumanoidRootPart
+        mouse = plr:GetMouse()
+        mouse.KeyDown:connect(function(key)
+        if key == '2' then
+        if mouse.Target then
+        if clicktpon then
+
+local args = {
+    [1] = "\0Scarlet Witch: Multiverse of Madness Bolts\0\0",
+    [2] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
+
+end
+end
+end
+end)
+end    
+})
+
+
+BennettTab:AddBind({
+	Name = "Neck Snap",
+	Default = Enum.KeyCode.Three
 	Hold = false,
 	Callback = function()
 		print("You just clicked the bind")
@@ -83,7 +113,7 @@ BennettTab:AddBind({
      end
  
      game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
-         if key == "2" then
+         if key == "3" then
              local player = getPlayer()
              if player then
 
@@ -310,9 +340,17 @@ game.ReplicatedStorage.Storage.Remotes.CharacterSelection:InvokeServer("Storm")
   	end    
 })
 local BennettTab = Window:MakeTab({
-	Name = "Admin",
+	Name = "Misc",
 	Icon = "rbxassetid://14458282849",
 	PremiumOnly = false
+})
+BennettTab:AddButton({
+	Name = "Teleport to lobby",
+	Callback = function()
+
+game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-33, -239, 5))
+
+  	end    
 })
 
 BennettTab:AddButton({
