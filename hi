@@ -328,6 +328,12 @@ wait(1.95)
      game:GetService("Workspace").CurrentCamera.CameraSubject = plr.Character
 
 
+local args = {
+    [1] = "shieldend",
+    [2] = Vector3.new(723.222412109375, 6.966768264770508, -953.3323364257812)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Witches"):WaitForChild("GoodWitches"):WaitForChild("Paige"):WaitForChild("PowerEvents"):WaitForChild("PaigeEvents"):FireServer(unpack(args))
 
 	end	  
 })
