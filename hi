@@ -328,12 +328,17 @@ wait(1.95)
      game:GetService("Workspace").CurrentCamera.CameraSubject = plr.Character
 
 
-local args = {
-    [1] = "shieldend",
-    [2] = Vector3.new(723.222412109375, 6.966768264770508, -953.3323364257812)
-}
+     local ohString1 = "field"
+    local ohVector32 = Vector3.new(-402.63726806640625, 7372.216796875, 947.439208984375)
 
-game:GetService("ReplicatedStorage"):WaitForChild("Witches"):WaitForChild("GoodWitches"):WaitForChild("Paige"):WaitForChild("PowerEvents"):WaitForChild("PaigeEvents"):FireServer(unpack(args))
+    game:GetService("ReplicatedStorage").Witches.EvilWitches.Neena.PowerEvents.NeenaEvents:FireServer(ohString1,
+        ohVector32)
+ 
+ local ohString1 = "stop"
+    local ohVector32 = Vector3.new(-403.1217956542969, 7377.94580078125, 944.2177124023438)
+
+    game:GetService("ReplicatedStorage").Witches.EvilWitches.Neena.PowerEvents.NeenaEvents:FireServer(ohString1,
+        ohVector32)
 
 	end	  
 })
