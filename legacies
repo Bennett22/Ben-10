@@ -221,6 +221,29 @@ local args = {
 
 game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
 
+local args = {
+    [1] = {
+        [1] = {
+            [1] = "\6",
+            [2] = player.Character,
+            [3] = "Fractus"
+        },
+        [2] = {
+            [1] = "\4",
+            [2] = game:GetService("Players").LocalPlayer,
+            [3] = game:GetService("SoundService"):WaitForChild("ShortCast")
+        },
+        [3] = {
+            [1] = "\4",
+            [2] = game:GetService("Players").LocalPlayer,
+            [3] = game:GetService("SoundService"):WaitForChild("ShortCast")
+        }
+    }
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
+
+
              end
             end
          end)
@@ -379,6 +402,73 @@ game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpa
 	end    
 
 })
+
+BennettTab:AddBind({
+	Name = "Throat Rip",
+	Default = Enum.KeyCode.Six,
+	Hold = false,
+	Callback = function()
+		print("You just clicked the bind")
+
+      local function getPlayer()
+         local userInput = game:GetService("UserInputService")
+         local cam = workspace.CurrentCamera
+         local mousePos = userInput:GetMouseLocation()
+         local mouseRay = cam:ViewportPointToRay(mousePos.X, mousePos.Y)
+         players = {}
+         for _, x in next, game:GetService('Players'):GetPlayers() do
+             players[#players + 1] = x.Character
+         end
+         local raycastParams = RaycastParams.new()
+         raycastParams.FilterType = Enum.RaycastFilterType.Whitelist
+         raycastParams.FilterDescendantsInstances = players
+         raycastParams.IgnoreWater = true
+         local raycastResult = workspace:Raycast(mouseRay.Origin, mouseRay.Direction * 1000, raycastParams)
+         if raycastResult then
+             for _, x in next, game:GetService('Players'):GetPlayers() do
+                 if not raycastResult.Instance:IsDescendantOf(x.Character) then
+                     continue
+                 end
+                 return x
+             end
+         end
+         return false
+     end
+ 
+     local function Set(list)
+         local set = {}
+         for _, l in ipairs(list) do
+             if l then
+                 set[l] = true
+             end
+         end
+         return set
+     end
+ 
+     game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
+         if key == "6" then
+             local player = getPlayer()
+             if player then
+             
+local args = {
+    [1] = {
+        [1] = {
+            [1] = "\6",
+            [2] = player.Character,
+            [3] = "Throat Rip"
+        }
+    }
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
+
+             end
+            end
+         end)
+	end    
+
+})
+
 
 local BennettTab = Window:MakeTab({
 	Name = "Original",
