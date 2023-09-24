@@ -1025,7 +1025,7 @@ plr.character.Abilities.Sprint:Destroy()
 BennettTab:AddParagraph("Type in target first letter of players nickname","click summon first, the nickname will be copied to your clipboard")
 
 BennettTab:AddButton({
-	Name = "Get Divination (T)",
+	Name = "Get Divination - "Show me, targets nickname" (T)",
 	Callback = function()
 
 local plr = game.Players.LocalPlayer
