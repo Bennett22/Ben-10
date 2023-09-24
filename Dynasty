@@ -9,11 +9,12 @@ local BennettTab = Window:MakeTab({
 	PremiumOnly = false
 })
 local Section = BennettTab:AddSection({
-	Name = "Child"
+	Name = "Jean Grey: Dark Phoenix"
 })
 
+
 BennettTab:AddBind({
-	Name = "Chaos Bolt",
+	Name = "Meteor",
 	Default = Enum.KeyCode.One,
 	Hold = true,
 	Callback = function()
@@ -28,7 +29,7 @@ BennettTab:AddBind({
         if clicktpon then
 
 local args = {
-    [1] = "\0Child Chaos Bolt\0\0",
+    [1] = "\0Jean Grey: Dark Phoenix Meteor\0\0",
     [2] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z)
 }
 
@@ -42,63 +43,32 @@ end
 })
 
 BennettTab:AddBind({
-	Name = "Disintegration",
+	Name = "Chaos Bolt",
 	Default = Enum.KeyCode.Two,
-	Hold = false,
+	Hold = true,
 	Callback = function()
-		print("You just clicked the bind")
 
-      local function getPlayer()
-         local userInput = game:GetService("UserInputService")
-         local cam = workspace.CurrentCamera
-         local mousePos = userInput:GetMouseLocation()
-         local mouseRay = cam:ViewportPointToRay(mousePos.X, mousePos.Y)
-         players = {}
-         for _, x in next, game:GetService('Players'):GetPlayers() do
-             players[#players + 1] = x.Character
-         end
-         local raycastParams = RaycastParams.new()
-         raycastParams.FilterType = Enum.RaycastFilterType.Whitelist
-         raycastParams.FilterDescendantsInstances = players
-         raycastParams.IgnoreWater = true
-         local raycastResult = workspace:Raycast(mouseRay.Origin, mouseRay.Direction * 1000, raycastParams)
-         if raycastResult then
-             for _, x in next, game:GetService('Players'):GetPlayers() do
-                 if not raycastResult.Instance:IsDescendantOf(x.Character) then
-                     continue
-                 end
-                 return x
-             end
-         end
-         return false
-     end
- 
-     local function Set(list)
-         local set = {}
-         for _, l in ipairs(list) do
-             if l then
-                 set[l] = true
-             end
-         end
-         return set
-     end
- 
-     game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
-         if key == "2" then
-             local player = getPlayer()
-             if player then
+    clicktpon = true                
+        plr = game.Players.LocalPlayer
+        hum = plr.Character.HumanoidRootPart
+        mouse = plr:GetMouse()
+        mouse.KeyDown:connect(function(key)
+        if key == '2' then
+        if mouse.Target then
+        if clicktpon then
 
 local args = {
-    [1] = "\0Disintegration\0\0",
-    [2] = player.Character.Head
+    [1] = "\0Jean Grey: Dark Phoenix Chaos Bolt\0\0",
+    [2] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z)
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
 
-             end
-            end
-         end)
-	end    
+end
+end
+end
+end)
+end    
 })
 
 
@@ -107,7 +77,7 @@ BennettTab:AddButton({
 	Callback = function()
 
 local args = {
-    [1] = "\0Child Start Shield\0\0"
+    [1] = "\0Jean Grey: Dark Phoenix Start Shield\0\0"
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
@@ -120,7 +90,7 @@ BennettTab:AddButton({
 	Callback = function()
 
 local args = {
-    [1] = "\0Child Stop Shield\0\0"
+    [1] = "\0Jean Grey: Dark Phoenix Stop Shield\0\0"
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
@@ -133,7 +103,7 @@ BennettTab:AddButton({
 	Callback = function()
 
 local args = {
-    [1] = "\0Child Telepathic Outburst\0\0"
+    [1] = "\0Jean Grey: Dark Phoenix Telepathic Outburst\0\0"
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
@@ -360,16 +330,6 @@ game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Child"
 })
 
 BennettTab:AddButton({
-	Name = "Dark Phoenix",
-	Callback = function()
-
-game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Dark Phoenix")
-
-  	end    
-})
-
-
-BennettTab:AddButton({
 	Name = "Dr. Strange",
 	Callback = function()
 
@@ -397,15 +357,6 @@ game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Emma: 
 })
 
 BennettTab:AddButton({
-	Name = "Gwen",
-	Callback = function()
-
-game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Gwen")
-
-  	end    
-})
-
-BennettTab:AddButton({
 	Name = "Iceman",
 	Callback = function()
 
@@ -425,6 +376,33 @@ game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Jean G
 
 
 BennettTab:AddButton({
+	Name = "Jean Grey: Dark Phoenix",
+	Callback = function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Jean Grey: Dark Phoenix")
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Jean Grey: Phoenix Force",
+	Callback = function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Jean Grey: Dark Phoenix")
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Lauren Strucker",
+	Callback = function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Lauren Strucker")
+
+  	end    
+})
+
+BennettTab:AddButton({
 	Name = "Quake",
 	Callback = function()
 
@@ -432,6 +410,7 @@ game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Quake"
 
   	end    
 })
+
 
 BennettTab:AddButton({
 	Name = "Raven",
@@ -512,16 +491,6 @@ game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Emma Frost")
 })
 
 
-BennettTab:AddParagraph("","")
-
-BennettTab:AddButton({
-	Name = "Gwen",
-	Callback = function()
-
-game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Gwen")
-
-  	end    
-})
 BennettTab:AddParagraph("","")
 
 BennettTab:AddButton({
