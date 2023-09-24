@@ -1021,6 +1021,46 @@ plr.character.Abilities.Sprint:Destroy()
 
   	end    
 })
+
+BennettTab:AddParagraph("Type in target first letter of players nickname","click summon first, the nickname will be copied to your clipboard")
+
+BennettTab:AddButton({
+	Name = "Get Divination (T)",
+	Callback = function()
+
+local plr = game.Players.LocalPlayer
+
+local backup = game.Lighting.Witches.Marie.Abilities.Divination:Clone()
+backup.Parent = plr.Character.Abilities
+
+  	end    
+})
+
+BennettTab:AddTextbox({
+	Name = "target",
+	Default = "",
+	TextDisappear = true,
+	Callback = function(txt)
+      local Players = game:GetService("Players")
+      local msg = txt
+      local function findPlayer(stringg)
+          for _, v in pairs(Players:GetPlayers()) do
+              if stringg:lower() == (v.Name:lower()):sub(1, #stringg) then
+                  return v
+              end
+          end
+      end
+  
+      local player = findPlayer(msg)
+      local CHAR = player.Character
+
+local plr = player.Character
+
+setclipboard(plr.Name.."")
+
+	end	  
+})
+
 local BennettTab = Window:MakeTab({
 	Name = "Characters",
 	Icon = "rbxassetid://14458282849",
