@@ -130,6 +130,81 @@ game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Remot
 	end    
 })
 
+BennettTab:AddBind({
+	Name = "Telekinetic Crush",
+	Default = Enum.KeyCode.Four,
+	Hold = false,
+	Callback = function()
+		print("You just clicked the bind")
+
+      local function getPlayer()
+         local userInput = game:GetService("UserInputService")
+         local cam = workspace.CurrentCamera
+         local mousePos = userInput:GetMouseLocation()
+         local mouseRay = cam:ViewportPointToRay(mousePos.X, mousePos.Y)
+         players = {}
+         for _, x in next, game:GetService('Players'):GetPlayers() do
+             players[#players + 1] = x.Character
+         end
+         local raycastParams = RaycastParams.new()
+         raycastParams.FilterType = Enum.RaycastFilterType.Whitelist
+         raycastParams.FilterDescendantsInstances = players
+         raycastParams.IgnoreWater = true
+         local raycastResult = workspace:Raycast(mouseRay.Origin, mouseRay.Direction * 1000, raycastParams)
+         if raycastResult then
+             for _, x in next, game:GetService('Players'):GetPlayers() do
+                 if not raycastResult.Instance:IsDescendantOf(x.Character) then
+                     continue
+                 end
+                 return x
+             end
+         end
+         return false
+     end
+ 
+     local function Set(list)
+         local set = {}
+         for _, l in ipairs(list) do
+             if l then
+                 set[l] = true
+             end
+         end
+         return set
+     end
+ 
+     game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
+         if key == "4" then
+             local player = getPlayer()
+             if player then
+
+local args = {
+    [1] = "\0Scarlet Witch: Multiverse of Madness Start Telekinetic Crush Corpses\0\0",
+    [2] = player.Character.Head
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
+
+             end
+            end
+         end)
+	end    
+})
+
+BennettTab:AddButton({
+	Name = "Stop Telekinetic Crush",
+	Callback = function()
+
+local args = {
+    [1] = "\0Scarlet Witch: Multiverse of Madness Stop Telekinetic Crush Corpses\0\0",
+    [2] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
+
+
+  	end    
+})
+
 BennettTab:AddButton({
 	Name = "Shield",
 	Callback = function()
