@@ -1,0 +1,782 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "Bennett Scripts | The Witches Prophecies", HidePremium = false, IntroText = "Bennett Scripts", SaveConfig = true, ConfigFolder = "OrionTest"})
+
+local BennettTab = Window:MakeTab({
+	Name = "Characters",
+	Icon = "rbxassetid://14458282849",
+	PremiumOnly = false
+})
+
+local Section = BennettTab:AddSection({
+	Name = "Witch"
+})
+
+BennettTab:AddButton({
+	Name = "Bonnie",
+	Callback = function()
+
+local args = {
+    [1] = "Bonnie",
+    [2] = "Outfit1"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Modules"):WaitForChild("CharacterConfig"):WaitForChild("GetCharacter"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Cleo",
+	Callback = function()
+
+local args = {
+    [1] = "Cleo",
+    [2] = "Outfit1"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Modules"):WaitForChild("CharacterConfig"):WaitForChild("GetCharacter"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Dahlia",
+	Callback = function()
+
+local args = {
+    [1] = "Dahlia",
+    [2] = "Outfit1"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Modules"):WaitForChild("CharacterConfig"):WaitForChild("GetCharacter"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Dark Josie",
+	Callback = function()
+
+local args = {
+    [1] = "Dark Josie",
+    [2] = "Outfit1"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Modules"):WaitForChild("CharacterConfig"):WaitForChild("GetCharacter"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Davina",
+	Callback = function()
+
+local args = {
+    [1] = "Davina",
+    [2] = "Outfit1"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Modules"):WaitForChild("CharacterConfig"):WaitForChild("GetCharacter"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Esther",
+	Callback = function()
+
+local args = {
+    [1] = "Esther",
+    [2] = "Outfit1"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Modules"):WaitForChild("CharacterConfig"):WaitForChild("GetCharacter"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Freya",
+	Callback = function()
+
+local args = {
+    [1] = "Freya",
+    [2] = "Outfit1"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Modules"):WaitForChild("CharacterConfig"):WaitForChild("GetCharacter"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Genevieve",
+	Callback = function()
+
+local args = {
+    [1] = "Genevieve",
+    [2] = "Outfit1"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Modules"):WaitForChild("CharacterConfig"):WaitForChild("GetCharacter"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Inadu",
+	Callback = function()
+
+local args = {
+    [1] = "Inadu",
+    [2] = "Outfit1"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Modules"):WaitForChild("CharacterConfig"):WaitForChild("GetCharacter"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Josie",
+	Callback = function()
+
+local args = {
+    [1] = "Josie",
+    [2] = "Outfit1"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Modules"):WaitForChild("CharacterConfig"):WaitForChild("GetCharacter"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Liv",
+	Callback = function()
+
+local args = {
+    [1] = "Liv",
+    [2] = "Outfit1"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Modules"):WaitForChild("CharacterConfig"):WaitForChild("GetCharacter"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Lizzie",
+	Callback = function()
+
+local args = {
+    [1] = "Lizzie",
+    [2] = "Outfit1"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Modules"):WaitForChild("CharacterConfig"):WaitForChild("GetCharacter"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Qetsiyah",
+	Callback = function()
+
+local args = {
+    [1] = "Qetsiyah",
+    [2] = "Outfit1"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Modules"):WaitForChild("CharacterConfig"):WaitForChild("GetCharacter"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Sheila",
+	Callback = function()
+
+local args = {
+    [1] = "Sheila",
+    [2] = "Outfit1"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Modules"):WaitForChild("CharacterConfig"):WaitForChild("GetCharacter"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+local Section = BennettTab:AddSection({
+	Name = "Vampire"
+})
+
+BennettTab:AddButton({
+	Name = "Caroline",
+	Callback = function()
+
+local args = {
+    [1] = "Caroline",
+    [2] = "Outfit1"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Modules"):WaitForChild("CharacterConfig"):WaitForChild("GetCharacter"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Damon",
+	Callback = function()
+
+local args = {
+    [1] = "Damon",
+    [2] = "Outfit1"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Modules"):WaitForChild("CharacterConfig"):WaitForChild("GetCharacter"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Elijah",
+	Callback = function()
+
+local args = {
+    [1] = "Elijah",
+    [2] = "Outfit1"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Modules"):WaitForChild("CharacterConfig"):WaitForChild("GetCharacter"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+
+BennettTab:AddButton({
+	Name = "Katherine",
+	Callback = function()
+
+local args = {
+    [1] = "Katherine",
+    [2] = "Outfit1"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Modules"):WaitForChild("CharacterConfig"):WaitForChild("GetCharacter"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Rebekah",
+	Callback = function()
+
+local args = {
+    [1] = "Rebekah",
+    [2] = "Outfit1"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Modules"):WaitForChild("CharacterConfig"):WaitForChild("GetCharacter"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Stefan",
+	Callback = function()
+
+local args = {
+    [1] = "Stefan",
+    [2] = "Outfit1"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Modules"):WaitForChild("CharacterConfig"):WaitForChild("GetCharacter"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+local Section = BennettTab:AddSection({
+	Name = "Hybrid"
+})
+
+BennettTab:AddButton({
+	Name = "Hayley",
+	Callback = function()
+
+local args = {
+    [1] = "Hayley",
+    [2] = "Outfit1"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Modules"):WaitForChild("CharacterConfig"):WaitForChild("GetCharacter"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+local Section = BennettTab:AddSection({
+	Name = "Werewitch"
+})
+
+BennettTab:AddButton({
+	Name = "Hope",
+	Callback = function()
+
+local args = {
+    [1] = "Hope",
+    [2] = "Outfit1"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Modules"):WaitForChild("CharacterConfig"):WaitForChild("GetCharacter"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+local Section = BennettTab:AddSection({
+	Name = "Heretic"
+})
+
+BennettTab:AddButton({
+	Name = "Mary",
+	Callback = function()
+
+local args = {
+    [1] = "Mary",
+    [2] = "Outfit1"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Modules"):WaitForChild("CharacterConfig"):WaitForChild("GetCharacter"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Nora",
+	Callback = function()
+
+local args = {
+    [1] = "Nora",
+    [2] = "Outfit1"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Modules"):WaitForChild("CharacterConfig"):WaitForChild("GetCharacter"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Valerie",
+	Callback = function()
+
+local args = {
+    [1] = "Valerie",
+    [2] = "Outfit1"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Modules"):WaitForChild("CharacterConfig"):WaitForChild("GetCharacter"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+local Section = BennettTab:AddSection({
+	Name = "Mortal"
+})
+
+BennettTab:AddButton({
+	Name = "Elena",
+	Callback = function()
+
+local args = {
+    [1] = "Elena",
+    [2] = "Outfit1"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Modules"):WaitForChild("CharacterConfig"):WaitForChild("GetCharacter"):FireServer(unpack(args))
+
+
+  	end    
+})
+
+local BennettTab = Window:MakeTab({
+	Name = "Combos",
+	Icon = "rbxassetid://14458282849",
+	PremiumOnly = false
+})
+
+BennettTab:AddBind({
+	Name = "Combo for Inadu",
+	Default = Enum.KeyCode.One,
+	Hold = false,
+	Callback = function()
+		print("You just clicked the bind")
+
+      local function getPlayer()
+         local userInput = game:GetService("UserInputService")
+         local cam = workspace.CurrentCamera
+         local mousePos = userInput:GetMouseLocation()
+         local mouseRay = cam:ViewportPointToRay(mousePos.X, mousePos.Y)
+         players = {}
+         for _, x in next, game:GetService('Players'):GetPlayers() do
+             players[#players + 1] = x.Character
+         end
+         local raycastParams = RaycastParams.new()
+         raycastParams.FilterType = Enum.RaycastFilterType.Whitelist
+         raycastParams.FilterDescendantsInstances = players
+         raycastParams.IgnoreWater = true
+         local raycastResult = workspace:Raycast(mouseRay.Origin, mouseRay.Direction * 1000, raycastParams)
+         if raycastResult then
+             for _, x in next, game:GetService('Players'):GetPlayers() do
+                 if not raycastResult.Instance:IsDescendantOf(x.Character) then
+                     continue
+                 end
+                 return x
+             end
+         end
+         return false
+     end
+ 
+     local function Set(list)
+         local set = {}
+         for _, l in ipairs(list) do
+             if l then
+                 set[l] = true
+             end
+         end
+         return set
+     end
+ 
+     game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
+         if key == "1" then
+             local player = getPlayer()
+             if player then
+             
+local args = {
+    [1] = Enum.KeyCode.K,
+    [2] = player.Character,
+    [3] = Vector3.new(-211.68008422851562, 140.02273559570312, 304.8441467285156)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("KeyBind"):FireServer(unpack(args))
+
+local args = {
+    [1] = Enum.KeyCode.T,
+    [3] = Vector3.new(-218.24594116210938, 135.63949584960938, 325.883544921875)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("KeyBind"):FireServer(unpack(args))
+
+local args = {
+    [1] = Enum.KeyCode.Z,
+    [2] = player.Character,
+    [3] = Vector3.new(-210.4119415283203, 139.3939208984375, 317.8594665527344)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Vampires"):WaitForChild("Keybind"):FireServer(unpack(args))
+
+local args = {
+    [1] = Enum.KeyCode.B,
+    [3] = Vector3.new(-210.1105499267578, 138.6713409423828, 318.3883056640625)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("KeyBind"):FireServer(unpack(args))
+
+local args = {
+    [1] = Enum.KeyCode.Y,
+    [2] = player.Character,
+    [3] = Vector3.new(-209.1733856201172, 139.30715942382812, 312.77496337890625)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("KeyBind"):FireServer(unpack(args))
+
+local args = {
+    [1] = Enum.KeyCode.H,
+    [2] = player.Character,
+    [3] = Vector3.new(-209.1398162841797, 139.6097869873047, 312.35107421875)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Vampires"):WaitForChild("Keybind"):FireServer(unpack(args))
+
+local args = {
+    [1] = Enum.KeyCode.R,
+    [2] = player.Character,
+    [3] = Vector3.new(-234.5853729248047, 139.8926544189453, 260.126708984375)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Vampires"):WaitForChild("Keybind"):FireServer(unpack(args))
+
+local args = {
+    [1] = Enum.KeyCode.X,
+    [2] = player.Character,
+    [3] = Vector3.new(-169.7886962890625, 138.0872344970703, 285.0528259277344)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("KeyBind"):FireServer(unpack(args))
+
+local args = {
+    [1] = {
+        ["IncantationText"] = "errox femus",
+        ["Target"] = player.Character
+    },
+    [2] = Vector3.new(-193.6123809814453, 138.473876953125, 313.7442626953125)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("WitchSpell"):FireServer(unpack(args))
+
+local args = {
+    [1] = {
+        ["IncantationText"] = "tardus",
+        ["Target"] = player.Character
+    },
+    [2] = Vector3.new(-193.39752197265625, 138.76109313964844, 309.9732971191406)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("WitchSpell"):FireServer(unpack(args))
+
+local args = {
+    [1] = {
+        ["IncantationText"] = "incendia",
+        ["Target"] = player.Character
+    },
+    [2] = Vector3.new(-194.79498291015625, 139.3096923828125, 307.05804443359375)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("WitchSpell"):FireServer(unpack(args))
+
+local args = {
+    [1] = {
+        ["IncantationText"] = "ad somnum",
+        ["Target"] = player.Character
+    },
+    [2] = Vector3.new(-195.7893524169922, 138.74803161621094, 310.9654235839844)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("WitchSpell"):FireServer(unpack(args))
+
+local args = {
+    [1] = {
+        ["IncantationText"] = "sanguis suffocat",
+        ["Target"] = player.Character
+    },
+    [2] = Vector3.new(-198.9434051513672, 139.98997497558594, 302.45465087890625)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("WitchSpell"):FireServer(unpack(args))
+
+local args = {
+    [1] = {
+        ["IncantationText"] = "silencio",
+        ["Target"] = player.Character
+    },
+    [2] = Vector3.new(-196.1102752685547, 140.96824645996094, 307.9104919433594)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("WitchSpell"):FireServer(unpack(args))
+
+local args = {
+    [1] = {
+        ["IncantationText"] = "suffoco",
+        ["Target"] = player.Character
+    },
+    [2] = Vector3.new(-198.65953063964844, 140.7849578857422, 309.68377685546875)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("WitchSpell"):FireServer(unpack(args))
+
+local args = {
+    [1] = {
+        ["IncantationText"] = "lecutio",
+        ["Target"] = player.Character
+    },
+    [2] = Vector3.new(-236.24258422851562, 138.90512084960938, 354.6885986328125)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("WitchSpell"):FireServer(unpack(args))
+
+local args = {
+    [1] = {
+        ["IncantationText"] = "corporis impetu",
+        ["Target"] = player.Character
+    },
+    [2] = Vector3.new(-232.5488739013672, 136.97145080566406, 399.79815673828125)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("WitchSpell"):FireServer(unpack(args))
+
+             end
+            end
+         end)
+	end    
+
+})
+
+BennettTab:AddBind({
+	Name = "Combo for Bonnie",
+	Default = Enum.KeyCode.Two,
+	Hold = false,
+	Callback = function()
+		print("You just clicked the bind")
+
+      local function getPlayer()
+         local userInput = game:GetService("UserInputService")
+         local cam = workspace.CurrentCamera
+         local mousePos = userInput:GetMouseLocation()
+         local mouseRay = cam:ViewportPointToRay(mousePos.X, mousePos.Y)
+         players = {}
+         for _, x in next, game:GetService('Players'):GetPlayers() do
+             players[#players + 1] = x.Character
+         end
+         local raycastParams = RaycastParams.new()
+         raycastParams.FilterType = Enum.RaycastFilterType.Whitelist
+         raycastParams.FilterDescendantsInstances = players
+         raycastParams.IgnoreWater = true
+         local raycastResult = workspace:Raycast(mouseRay.Origin, mouseRay.Direction * 1000, raycastParams)
+         if raycastResult then
+             for _, x in next, game:GetService('Players'):GetPlayers() do
+                 if not raycastResult.Instance:IsDescendantOf(x.Character) then
+                     continue
+                 end
+                 return x
+             end
+         end
+         return false
+     end
+ 
+     local function Set(list)
+         local set = {}
+         for _, l in ipairs(list) do
+             if l then
+                 set[l] = true
+             end
+         end
+         return set
+     end
+ 
+     game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
+         if key == "2" then
+             local player = getPlayer()
+             if player then
+             
+local args = {
+    [1] = Enum.KeyCode.X,
+    [2] = player.Character,
+    [3] = Vector3.new(-80.40019226074219, 140.45977783203125, 207.05255126953125)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("KeyBind"):FireServer(unpack(args))
+
+local args = {
+    [1] = Enum.KeyCode.R,
+    [2] = player.Character,
+    [3] = Vector3.new(-103.57189178466797, 140.18380737304688, 235.39784240722656)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("KeyBind"):FireServer(unpack(args))
+
+local args = {
+    [1] = Enum.KeyCode.Z,
+    [2] = player.Character,
+    [3] = Vector3.new(-140.8634796142578, 138.31695556640625, 124.84989166259766)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("KeyBind"):FireServer(unpack(args))
+
+local args = {
+    [1] = Enum.KeyCode.Y,
+    [3] = Vector3.new(62.278419494628906, 135.86599731445312, 278.0484924316406)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("KeyBind"):FireServer(unpack(args))
+
+local args = {
+    [1] = Enum.KeyCode.J,
+    [3] = Vector3.new(12.378541946411133, 135.34375, 322.2467956542969)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("KeyBind"):FireServer(unpack(args))
+
+local args = {
+    [1] = Enum.KeyCode.V,
+    [3] = Vector3.new(57.206886291503906, 137.35641479492188, 434.8869934082031)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Vampires"):WaitForChild("Keybind"):FireServer(unpack(args))
+
+local args = {
+    [1] = Enum.KeyCode.Q,
+    [2] = player.Character,
+    [3] = Vector3.new(-72.59432983398438, 140.65469360351562, 211.61338806152344)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("KeyBind"):FireServer(unpack(args))
+
+local args = {
+    [1] = {
+        ["IncantationText"] = "errox femus",
+        ["Target"] = player.Character
+    },
+    [2] = Vector3.new(-134.93528747558594, 139.190185546875, 179.99795532226562)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("WitchSpell"):FireServer(unpack(args))
+
+local args = {
+    [1] = {
+        ["IncantationText"] = "tardus",
+        ["Target"] = player.Character
+    },
+    [2] = Vector3.new(-176.6368408203125, 139.77377319335938, 132.11082458496094)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("WitchSpell"):FireServer(unpack(args))
+
+local args = {
+    [1] = {
+        ["IncantationText"] = "incendia",
+        ["Target"] = player.Character
+    },
+    [2] = Vector3.new(-176.32115173339844, 139.3899688720703, 132.30899047851562)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("WitchSpell"):FireServer(unpack(args))
+
+local args = {
+    [1] = {
+        ["IncantationText"] = "phasmatos incendia"
+    },
+    [2] = Vector3.new(-186.28662109375, 141.44430541992188, 142.08245849609375)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("WitchSpell"):FireServer(unpack(args))
+
+             end
+            end
+         end)
+	end    
+
+})
+
