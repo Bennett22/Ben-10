@@ -1653,7 +1653,7 @@ game:GetService("ReplicatedStorage"):WaitForChild("FireBallEvent1"):FireServer(u
         end)
         end)
 
-BennettSection:NewToggle("Take Down", "Keybind (T)", function()
+BennettSection:NewToggle("Take Down", "Keybind (N)", function()
     print("You just clicked the bind")
 
     local function getPlayer()
@@ -1692,7 +1692,7 @@ BennettSection:NewToggle("Take Down", "Keybind (T)", function()
     end
 
     game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
-        if key == "t" then
+        if key == "n" then
             local player = getPlayer()
             if player then
 
