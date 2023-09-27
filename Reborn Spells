@@ -1,5 +1,195 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 local Window = Library.CreateLib("Bennett Scripts | Every Witch Way: Reborn", "GrapeTheme")
+local Bennett = Window:NewTab("Characters")
+local BennettSection = Bennett:NewSection("Characters Section")
+
+BennettSection:NewButton("Mia", " ", function()
+
+local args = {
+    [1] = "Mia",
+    [2] = "Main Outfit"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("CharacterSpawn"):FireServer(unpack(args))
+
+end)
+
+BennettSection:NewButton("Andi", " ", function()
+
+local args = {
+    [1] = "Andi",
+    [2] = "Main Outfit"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("CharacterSpawn"):FireServer(unpack(args))
+
+end)
+
+BennettSection:NewButton("Sophie", " ", function()
+
+local args = {
+    [1] = "Sophie",
+    [2] = "Main Outfit"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("CharacterSpawn"):FireServer(unpack(args))
+
+end)
+
+BennettSection:NewButton("Desdemona", " ", function()
+
+local args = {
+    [1] = "Desdemona",
+    [2] = "Main Outfit"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("CharacterSpawn"):FireServer(unpack(args))
+
+end)
+
+BennettSection:NewButton("Maddie Vanpelt", " ", function()
+
+local args = {
+    [1] = "Desdemona",
+    [2] = "Main Outfit"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("CharacterSpawn"):FireServer(unpack(args))
+
+end)
+
+BennettSection:NewButton("The Chosen One", " ", function()
+
+local args = {
+    [1] = "The Chosen One",
+    [2] = "Main Outfit"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("CharacterSpawn"):FireServer(unpack(args))
+
+end)
+
+BennettSection:NewButton("Ursula Vanpelt", " ", function()
+
+local args = {
+    [1] = "Ursula Vanpelt",
+    [2] = "Main Outfit"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("CharacterSpawn"):FireServer(unpack(args))
+
+end)
+
+BennettSection:NewButton("Principle", " ", function()
+
+local args = {
+    [1] = "Principle",
+    [2] = "Main Outfit"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("CharacterSpawn"):FireServer(unpack(args))
+
+end)
+
+BennettSection:NewButton("Alex Russo", " ", function()
+
+local args = {
+    [1] = "Alex Russo",
+    [2] = "Main Outfit"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("CharacterSpawn"):FireServer(unpack(args))
+
+end)
+
+BennettSection:NewButton("Diego", " ", function()
+
+local args = {
+    [1] = "Diego",
+    [2] = "Main Outfit"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("CharacterSpawn"):FireServer(unpack(args))
+
+end)
+
+BennettSection:NewButton("Daniel", " ", function()
+
+local args = {
+    [1] = "Daniel",
+    [2] = "Main Outfit"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("CharacterSpawn"):FireServer(unpack(args))
+
+end)
+
+BennettSection:NewButton("Agamemnon", " ", function()
+
+local args = {
+    [1] = "Agamemnon",
+    [2] = "Main Outfit"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("CharacterSpawn"):FireServer(unpack(args))
+
+end)
+
+BennettSection:NewButton("Alex Fieldling", " ", function()
+
+local args = {
+    [1] = "Alex Fieldling",
+    [2] = "Main Outfit"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("CharacterSpawn"):FireServer(unpack(args))
+
+end)
+
+BennettSection:NewButton("Camyrn Barens", " ", function()
+
+local args = {
+    [1] = "Camyrn Barens",
+    [2] = "Main Outfit"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("CharacterSpawn"):FireServer(unpack(args))
+
+end)
+
+BennettSection:NewButton("Jax", " ", function()
+
+local args = {
+    [1] = "Jax",
+    [2] = "Main Outfit"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("CharacterSpawn"):FireServer(unpack(args))
+
+end)
+
+BennettSection:NewButton("Jax", " ", function()
+
+local args = {
+    [1] = "Jax",
+    [2] = "Main Outfit"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("CharacterSpawn"):FireServer(unpack(args))
+
+end)
+
+BennettSection:NewButton("Nurse Lily", " ", function()
+
+local args = {
+    [1] = "Nurse Lily",
+    [2] = "Main Outfit"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("CharacterSpawn"):FireServer(unpack(args))
+
+end)
+
 local Bennett = Window:NewTab("Powers")
 local BennettSection = Bennett:NewSection("Spells & Powers")
 
@@ -1293,6 +1483,67 @@ game:GetService("ReplicatedStorage"):WaitForChild("RainSummonEvent"):FireServer(
         end)
         end)
 
+BennettSection:NewToggle("Vodux", "Keybind (T)", function()
+    print("You just clicked the bind")
+
+    local function getPlayer()
+        local userInput = game:GetService("UserInputService")
+        local cam = workspace.CurrentCamera
+        local mousePos = userInput:GetMouseLocation()
+        local mouseRay = cam:ViewportPointToRay(mousePos.X, mousePos.Y)
+        players = {}
+        for _, x in next, game:GetService('Players'):GetPlayers() do
+            players[#players + 1] = x.Character
+        end
+        local raycastParams = RaycastParams.new()
+        raycastParams.FilterType = Enum.RaycastFilterType.Whitelist
+        raycastParams.FilterDescendantsInstances = players
+        raycastParams.IgnoreWater = true
+        local raycastResult = workspace:Raycast(mouseRay.Origin, mouseRay.Direction * 1000, raycastParams)
+        if raycastResult then
+            for _, x in next, game:GetService('Players'):GetPlayers() do
+                if not raycastResult.Instance:IsDescendantOf(x.Character) then
+                    continue
+                end
+                return x
+            end
+        end
+        return false
+    end
+
+    local function Set(list)
+        local set = {}
+        for _, l in ipairs(list) do
+            if l then
+                set[l] = true
+            end
+        end
+        return set
+    end
+
+    game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
+        if key == "t" then
+            local player = getPlayer()
+            if player then
+
+local args = {
+    [1] = "Vodux",
+    [2] = "All"
+}
+
+game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("Players").LocalPlayer.Character.TelekineticPush.PushEvent:FireServer(unpack(args))
+
+            end
+        end
+        end)
+        end)
+
 BennettSection:NewButton("Autem", " ", function()
 
 local args = {
@@ -1344,7 +1595,45 @@ game:GetService("ReplicatedStorage").SummonStormEvent:FireServer(unpack(args))
 
 end)
 
+BennettSection:NewButton("Invisique", " ", function()
+
+local args = {
+    [1] = "Invisique",
+    [2] = "All"
+}
+
+game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
+game:GetService("ReplicatedStorage"):WaitForChild("InvisibilitySpellEvent"):FireServer()
+
+end)
+
+BennettSection:NewButton("Astral Projection", " ", function()
+
+local args = {
+    [1] = "Phasmatos Astralius",
+    [2] = "All"
+}
+
+game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
+local args = {
+    [1] = Vector3.new(-129, 467, -44)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("AstralProjection"):FireServer(unpack(args))
+
+end)
+
 BennettSection:NewButton("Expression", " ", function()
+    print("Clicked")
+    local Plr = game.Players.LocalPlayer
+    for i, Player in pairs (game.Players:GetPlayers()) do
+
+        if Player.Character ~= nil and Player ~= Plr then
+            local mag = (Player.Character.UpperTorso.Position - Plr.Character.UpperTorso.Position).magnitude
+            if mag < 100000 then
+                local Target = Player.Character or Player.CharacterAdded:Wait()
 
 local args = {
     [1] = "I Have Every Magic!",
@@ -1377,7 +1666,17 @@ local args = {
 
 game:GetService("ReplicatedStorage").StormEvent:FireServer(unpack(args))
 
+wait(5)
 
+local args = {
+    [1] = Target
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("LifeDrainEvent"):FireServer(unpack(args))
+
+ end
+        end
+end   
 end)
 
 BennettSection:NewButton("Motus", " ", function()
@@ -1424,6 +1723,622 @@ local args = {
 
 game:GetService("ReplicatedStorage").BeamEvent:FireServer(unpack(args))
 
+end)
+
+local Bennett = Window:NewTab("Affect All")
+local BennettSection = Bennett:NewSection("Powers")
+
+BennettSection:NewButton("Summon All", " ", function()
+    print("Clicked")
+    local Plr = game.Players.LocalPlayer
+    for i, Player in pairs (game.Players:GetPlayers()) do
+
+        if Player.Character ~= nil and Player ~= Plr then
+            local mag = (Player.Character.UpperTorso.Position - Plr.Character.UpperTorso.Position).magnitude
+            if mag < 100000 then
+                local Target = Player.Character or Player.CharacterAdded:Wait()
+
+local args = {
+    [1] = "Summon",
+    [2] = Target
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Summon"):FireServer(unpack(args))
+
+
+ end
+        end
+end   
+end)
+
+
+BennettSection:NewButton("Kill All", " ", function()
+    print("Clicked")
+    local Plr = game.Players.LocalPlayer
+    for i, Player in pairs (game.Players:GetPlayers()) do
+
+        if Player.Character ~= nil and Player ~= Plr then
+            local mag = (Player.Character.UpperTorso.Position - Plr.Character.UpperTorso.Position).magnitude
+            if mag < 100000 then
+                local Target = Player.Character or Player.CharacterAdded:Wait()
+
+local args = {
+    [1] = "Start",
+    [2] = Target
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("TelekinesisEvent2"):FireServer(unpack(args))
+
+local args = {
+    [1] = "Throw",
+    [2] = Vector3.new(-119.96492004394531, 464.3100280761719, -48.233619689941406)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("TelekinesisEvent2"):FireServer(unpack(args))
+local args = {
+    [1] = "Start",
+    [2] = Target
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("TelekinesisEvent2"):FireServer(unpack(args))
+
+local args = {
+    [1] = "Throw",
+    [2] = Vector3.new(-119.96492004394531, 464.3100280761719, -48.233619689941406)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("TelekinesisEvent2"):FireServer(unpack(args))
+local args = {
+    [1] = "Start",
+    [2] = Target
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("TelekinesisEvent2"):FireServer(unpack(args))
+
+local args = {
+    [1] = "Throw",
+    [2] = Vector3.new(-119.96492004394531, 464.3100280761719, -48.233619689941406)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("TelekinesisEvent2"):FireServer(unpack(args))
+local args = {
+    [1] = "Start",
+    [2] = Target
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("TelekinesisEvent2"):FireServer(unpack(args))
+
+local args = {
+    [1] = "Throw",
+    [2] = Vector3.new(-119.96492004394531, 464.3100280761719, -48.233619689941406)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("TelekinesisEvent2"):FireServer(unpack(args))
+local args = {
+    [1] = "Start",
+    [2] = Target
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("TelekinesisEvent2"):FireServer(unpack(args))
+
+local args = {
+    [1] = "Throw",
+    [2] = Vector3.new(-119.96492004394531, 464.3100280761719, -48.233619689941406)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("TelekinesisEvent2"):FireServer(unpack(args))
+local args = {
+    [1] = "Start",
+    [2] = Target
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("TelekinesisEvent2"):FireServer(unpack(args))
+
+local args = {
+    [1] = "Throw",
+    [2] = Vector3.new(-119.96492004394531, 464.3100280761719, -48.233619689941406)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("TelekinesisEvent2"):FireServer(unpack(args))
+local args = {
+    [1] = "Start",
+    [2] = Target
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("TelekinesisEvent2"):FireServer(unpack(args))
+
+local args = {
+    [1] = "Throw",
+    [2] = Vector3.new(-119.96492004394531, 464.3100280761719, -48.233619689941406)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("TelekinesisEvent2"):FireServer(unpack(args))
+local args = {
+    [1] = "Start",
+    [2] = Target
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("TelekinesisEvent2"):FireServer(unpack(args))
+
+local args = {
+    [1] = "Throw",
+    [2] = Vector3.new(-119.96492004394531, 464.3100280761719, -48.233619689941406)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("TelekinesisEvent2"):FireServer(unpack(args))
+local args = {
+    [1] = "Start",
+    [2] = Target
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("TelekinesisEvent2"):FireServer(unpack(args))
+
+local args = {
+    [1] = "Throw",
+    [2] = Vector3.new(-119.96492004394531, 464.3100280761719, -48.233619689941406)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("TelekinesisEvent2"):FireServer(unpack(args))
+local args = {
+    [1] = "Start",
+    [2] = Target
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("TelekinesisEvent2"):FireServer(unpack(args))
+
+local args = {
+    [1] = "Throw",
+    [2] = Vector3.new(-119.96492004394531, 464.3100280761719, -48.233619689941406)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("TelekinesisEvent2"):FireServer(unpack(args))
+local args = {
+    [1] = "Start",
+    [2] = Target
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("TelekinesisEvent2"):FireServer(unpack(args))
+
+local args = {
+    [1] = "Throw",
+    [2] = Vector3.new(-119.96492004394531, 464.3100280761719, -48.233619689941406)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("TelekinesisEvent2"):FireServer(unpack(args))
+local args = {
+    [1] = "Start",
+    [2] = Target
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("TelekinesisEvent2"):FireServer(unpack(args))
+
+local args = {
+    [1] = "Throw",
+    [2] = Vector3.new(-119.96492004394531, 464.3100280761719, -48.233619689941406)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("TelekinesisEvent2"):FireServer(unpack(args))
+local args = {
+    [1] = "Start",
+    [2] = Target
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("TelekinesisEvent2"):FireServer(unpack(args))
+
+local args = {
+    [1] = "Throw",
+    [2] = Vector3.new(-119.96492004394531, 464.3100280761719, -48.233619689941406)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("TelekinesisEvent2"):FireServer(unpack(args))
+local args = {
+    [1] = "Start",
+    [2] = Target
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("TelekinesisEvent2"):FireServer(unpack(args))
+
+local args = {
+    [1] = "Throw",
+    [2] = Vector3.new(-119.96492004394531, 464.3100280761719, -48.233619689941406)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("TelekinesisEvent2"):FireServer(unpack(args))
+local args = {
+    [1] = "Start",
+    [2] = Target
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("TelekinesisEvent2"):FireServer(unpack(args))
+
+local args = {
+    [1] = "Throw",
+    [2] = Vector3.new(-119.96492004394531, 464.3100280761719, -48.233619689941406)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("TelekinesisEvent2"):FireServer(unpack(args))
+local args = {
+    [1] = "Start",
+    [2] = Target
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("TelekinesisEvent2"):FireServer(unpack(args))
+
+local args = {
+    [1] = "Throw",
+    [2] = Vector3.new(-119.96492004394531, 464.3100280761719, -48.233619689941406)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("TelekinesisEvent2"):FireServer(unpack(args))
+local args = {
+    [1] = "Start",
+    [2] = Target
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("TelekinesisEvent2"):FireServer(unpack(args))
+
+local args = {
+    [1] = "Throw",
+    [2] = Vector3.new(-119.96492004394531, 464.3100280761719, -48.233619689941406)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("TelekinesisEvent2"):FireServer(unpack(args))
+local args = {
+    [1] = "Start",
+    [2] = Target
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("TelekinesisEvent2"):FireServer(unpack(args))
+
+local args = {
+    [1] = "Throw",
+    [2] = Vector3.new(-119.96492004394531, 464.3100280761719, -48.233619689941406)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("TelekinesisEvent2"):FireServer(unpack(args))
+local args = {
+    [1] = "Start",
+    [2] = Target
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("TelekinesisEvent2"):FireServer(unpack(args))
+
+local args = {
+    [1] = "Throw",
+    [2] = Vector3.new(-119.96492004394531, 464.3100280761719, -48.233619689941406)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("TelekinesisEvent2"):FireServer(unpack(args))
+local args = {
+    [1] = "Start",
+    [2] = Target
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("TelekinesisEvent2"):FireServer(unpack(args))
+
+local args = {
+    [1] = "Throw",
+    [2] = Vector3.new(-119.96492004394531, 464.3100280761719, -48.233619689941406)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("TelekinesisEvent2"):FireServer(unpack(args))
+
+ end
+        end
+end   
+end)
+
+BennettSection:NewButton("Ah Sha Lana (Pain Inflicts All)", " ", function()
+    print("Clicked")
+    local Plr = game.Players.LocalPlayer
+    for i, Player in pairs (game.Players:GetPlayers()) do
+
+        if Player.Character ~= nil and Player ~= Plr then
+            local mag = (Player.Character.UpperTorso.Position - Plr.Character.UpperTorso.Position).magnitude
+            if mag < 100000 then
+                local Target = Player.Character or Player.CharacterAdded:Wait()
+
+local args = {
+    [1] = "Ah Sha Lana",
+    [2] = "All"
+}
+
+game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
+local args = {
+    [1] = "Start",
+    [2] = Target
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("PainInflictionEvent"):FireServer(unpack(args))
+
+wait(10)
+
+local args = {
+    [1] = "End"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("PainInflictionEvent"):FireServer(unpack(args))
+
+ end
+        end
+end   
+end)
+
+BennettSection:NewButton("Ascendo All", " ", function()
+    print("Clicked")
+    local Plr = game.Players.LocalPlayer
+    for i, Player in pairs (game.Players:GetPlayers()) do
+
+        if Player.Character ~= nil and Player ~= Plr then
+            local mag = (Player.Character.UpperTorso.Position - Plr.Character.UpperTorso.Position).magnitude
+            if mag < 100000 then
+                local Target = Player.Character or Player.CharacterAdded:Wait()
+
+local args = {
+    [1] = Target
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("TeleLiftEvent"):FireServer(unpack(args))
+
+ end
+        end
+end   
+end)
+
+BennettSection:NewButton("Ad Somnum All", " ", function()
+    print("Clicked")
+    local Plr = game.Players.LocalPlayer
+    for i, Player in pairs (game.Players:GetPlayers()) do
+
+        if Player.Character ~= nil and Player ~= Plr then
+            local mag = (Player.Character.UpperTorso.Position - Plr.Character.UpperTorso.Position).magnitude
+            if mag < 100000 then
+                local Target = Player.Character or Player.CharacterAdded:Wait()
+
+local args = {
+    [1] = Target
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("SleepSpellEvent"):FireServer(unpack(args))
+
+ end
+        end
+end   
+end)
+
+BennettSection:NewButton("Incendia All", " ", function()
+    print("Clicked")
+    local Plr = game.Players.LocalPlayer
+    for i, Player in pairs (game.Players:GetPlayers()) do
+
+        if Player.Character ~= nil and Player ~= Plr then
+            local mag = (Player.Character.UpperTorso.Position - Plr.Character.UpperTorso.Position).magnitude
+            if mag < 100000 then
+                local Target = Player.Character or Player.CharacterAdded:Wait()
+
+local args = {
+    [1] = Target
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("FireSpellEvent"):FireServer(unpack(args))
+
+ end
+        end
+end   
+end)
+
+BennettSection:NewButton("Channel All", " ", function()
+    print("Clicked")
+    local Plr = game.Players.LocalPlayer
+    for i, Player in pairs (game.Players:GetPlayers()) do
+
+        if Player.Character ~= nil and Player ~= Plr then
+            local mag = (Player.Character.UpperTorso.Position - Plr.Character.UpperTorso.Position).magnitude
+            if mag < 100000 then
+                local Target = Player.Character or Player.CharacterAdded:Wait()
+
+local args = {
+    [1] = Target
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("ChannelEvent"):FireServer(unpack(args))
+
+ end
+        end
+end   
+end)
+
+BennettSection:NewButton("Breath Freeze All", " ", function()
+    print("Clicked")
+    local Plr = game.Players.LocalPlayer
+    for i, Player in pairs (game.Players:GetPlayers()) do
+
+        if Player.Character ~= nil and Player ~= Plr then
+            local mag = (Player.Character.UpperTorso.Position - Plr.Character.UpperTorso.Position).magnitude
+            if mag < 100000 then
+                local Target = Player.Character or Player.CharacterAdded:Wait()
+
+
+local args = {
+    [1] = Target
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("BreathFreezeEvent"):FireServer(unpack(args))
+
+ end
+        end
+end   
+end)
+
+BennettSection:NewButton("Ignalusa All", " ", function()
+    print("Clicked")
+    local Plr = game.Players.LocalPlayer
+    for i, Player in pairs (game.Players:GetPlayers()) do
+
+        if Player.Character ~= nil and Player ~= Plr then
+            local mag = (Player.Character.UpperTorso.Position - Plr.Character.UpperTorso.Position).magnitude
+            if mag < 100000 then
+                local Target = Player.Character or Player.CharacterAdded:Wait()
+
+
+local args = {
+    [1] = Target
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("FireBreathEvent"):FireServer(unpack(args))
+
+ end
+        end
+end   
+end)
+
+BennettSection:NewButton("Fireball All", " ", function()
+    print("Clicked")
+    local Plr = game.Players.LocalPlayer
+    for i, Player in pairs (game.Players:GetPlayers()) do
+
+        if Player.Character ~= nil and Player ~= Plr then
+            local mag = (Player.Character.UpperTorso.Position - Plr.Character.UpperTorso.Position).magnitude
+            if mag < 100000 then
+                local Target = Player.Character or Player.CharacterAdded:Wait()
+
+
+local args = {
+    [1] = Target
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("FireBallEvent"):FireServer(unpack(args))
+
+ end
+        end
+end   
+end)
+
+BennettSection:NewButton("Trap in prison world All", " ", function()
+    print("Clicked")
+    local Plr = game.Players.LocalPlayer
+    for i, Player in pairs (game.Players:GetPlayers()) do
+
+        if Player.Character ~= nil and Player ~= Plr then
+            local mag = (Player.Character.UpperTorso.Position - Plr.Character.UpperTorso.Position).magnitude
+            if mag < 100000 then
+                local Target = Player.Character or Player.CharacterAdded:Wait()
+
+local args = {
+    [1] = Target
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("BanishLimboEvent"):FireServer(unpack(args))
+
+ end
+        end
+end   
+end)
+
+BennettSection:NewButton("Give Powers All", " ", function()
+    print("Clicked")
+    local Plr = game.Players.LocalPlayer
+    for i, Player in pairs (game.Players:GetPlayers()) do
+
+        if Player.Character ~= nil and Player ~= Plr then
+            local mag = (Player.Character.UpperTorso.Position - Plr.Character.UpperTorso.Position).magnitude
+            if mag < 100000 then
+                local Target = Player.Character or Player.CharacterAdded:Wait()
+
+local args = {
+    [1] = Target
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("GivePowersEvent"):FireServer(unpack(args))
+
+ end
+        end
+end   
+end)
+
+BennettSection:NewButton("Lecutio Maxima All", " ", function()
+    print("Clicked")
+    local Plr = game.Players.LocalPlayer
+    for i, Player in pairs (game.Players:GetPlayers()) do
+
+        if Player.Character ~= nil and Player ~= Plr then
+            local mag = (Player.Character.UpperTorso.Position - Plr.Character.UpperTorso.Position).magnitude
+            if mag < 100000 then
+                local Target = Player.Character or Player.CharacterAdded:Wait()
+
+local args = {
+    [1] = Target
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("GivePowersEvent"):FireServer(unpack(args))
+
+ end
+        end
+end   
+end)
+
+BennettSection:NewButton("Resurrect All", " ", function()
+    print("Clicked")
+    local Plr = game.Players.LocalPlayer
+    for i, Player in pairs (game.Players:GetPlayers()) do
+
+        if Player.Character ~= nil and Player ~= Plr then
+            local mag = (Player.Character.UpperTorso.Position - Plr.Character.UpperTorso.Position).magnitude
+            if mag < 100000 then
+                local Target = Player.Character or Player.CharacterAdded:Wait()
+
+local args = {
+    [1] = Target
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Ressurection"):FireServer(unpack(args))
+
+ end
+        end
+end   
+end)
+
+BennettSection:NewButton("Rain All", " ", function()
+    print("Clicked")
+    local Plr = game.Players.LocalPlayer
+    for i, Player in pairs (game.Players:GetPlayers()) do
+
+        if Player.Character ~= nil and Player ~= Plr then
+            local mag = (Player.Character.UpperTorso.Position - Plr.Character.UpperTorso.Position).magnitude
+            if mag < 100000 then
+                local Target = Player.Character or Player.CharacterAdded:Wait()
+
+local args = {
+    [1] = Target
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("RainSummonEvent"):FireServer(unpack(args))
+
+ end
+        end
+end   
+end)
+
+BennettSection:NewButton("Push All", " ", function()
+    print("Clicked")
+    local Plr = game.Players.LocalPlayer
+    for i, Player in pairs (game.Players:GetPlayers()) do
+
+        if Player.Character ~= nil and Player ~= Plr then
+            local mag = (Player.Character.UpperTorso.Position - Plr.Character.UpperTorso.Position).magnitude
+            if mag < 100000 then
+                local Target = Player.Character or Player.CharacterAdded:Wait()
+
+local args = {
+    [1] = Target
+}
+
+game:GetService("Players").LocalPlayer.Character.TelekineticPush.PushEvent:FireServer(unpack(args))
+
+ end
+        end
+end   
 end)
 
 local Bennett = Window:NewTab("Target")
@@ -2271,3 +3186,66 @@ local args = {
 game:GetService("ReplicatedStorage"):WaitForChild("RainSummonEvent"):FireServer(unpack(args))
 
 end)
+
+BennettSection:NewTextBox("Push", "", function(txt)
+    local Players = game:GetService("Players")
+    local msg = txt
+    local function findPlayer(stringg)
+        for _, v in pairs(Players:GetPlayers()) do
+            if stringg:lower() == (v.Name:lower()):sub(1, #stringg) then
+                return v
+            end
+        end
+    end
+
+    local player = findPlayer(msg)
+    local CHAR = player.Character
+
+local args = {
+    [1] = "Vodux",
+    [2] = "All"
+}
+
+game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
+local args = {
+    [1] = player.Character
+}
+
+game:GetService("Players").LocalPlayer.Character.TelekineticPush.PushEvent:FireServer(unpack(args))
+
+end)
+
+local BennettSection = Bennett:NewSection("Misc")
+BennettSection:NewButton("Teleport to the spawn", "", function()
+      game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-129, 467, -44))
+end)
+BennettSection:NewButton("Disable Character Selection", "", function()
+game.Players.LocalPlayer.PlayerGui.SelectionGui.Enabled = false
+end)
+BennettSection:NewButton("Infinite Yield", "", function()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Omg562/Scripts/main/INF'),true))()
+end)
+local Tab = Window:NewTab("Credits")
+local SettingsSection = Tab:NewSection("discord: bennettscripts")
+
+local SettingsSection = Tab:NewSection("Toggle UI")
+SettingsSection:NewKeybind("Toggle UI", "Toggle UI", Enum.KeyCode.M, function()
+    Library:ToggleUI()
+end)
+
+wait(1)
+
+game.StarterGui:SetCore("SendNotification", { 
+    Title = "⛤ Bennett Scripts ⛤";
+    Text = "Every Witch Way: Reborn";
+    Icon = "rbxthumb://type=Asset&id=14067496704&w=150&h=150";
+    Duration = "2";
+    Button1 = "Close";
+})
+
+if game:GetService("Players").LocalPlayer.UserId == 3185912033 then
+
+    game.Players.LocalPlayer:Kick("Blacklisted xoxoxo")
+
+end
