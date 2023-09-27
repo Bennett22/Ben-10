@@ -50,7 +50,7 @@ end)
 BennettSection:NewButton("Maddie Vanpelt", " ", function()
 
 local args = {
-    [1] = "Desdemona",
+    [1] = "Maddie Vanpelt",
     [2] = "Main Outfit"
 }
 
