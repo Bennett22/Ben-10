@@ -168,17 +168,6 @@ game:GetService("ReplicatedStorage"):WaitForChild("CharacterSpawn"):FireServer(u
 
 end)
 
-BennettSection:NewButton("Jax", " ", function()
-
-local args = {
-    [1] = "Jax",
-    [2] = "Main Outfit"
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("CharacterSpawn"):FireServer(unpack(args))
-
-end)
-
 BennettSection:NewButton("Nurse Lily", " ", function()
 
 local args = {
