@@ -2017,64 +2017,6 @@ game:GetService("ReplicatedStorage"):WaitForChild("TelekinesisEvent2"):FireServe
 end   
 end)
 
-BennettSection:NewButton("Ah Sha Lana (Pain Inflicts All)", " ", function()
-    print("Clicked")
-    local Plr = game.Players.LocalPlayer
-    for i, Player in pairs (game.Players:GetPlayers()) do
-
-        if Player.Character ~= nil and Player ~= Plr then
-            local mag = (Player.Character.UpperTorso.Position - Plr.Character.UpperTorso.Position).magnitude
-            if mag < 100000 then
-                local Target = Player.Character or Player.CharacterAdded:Wait()
-
-local args = {
-    [1] = "Ah Sha Lana",
-    [2] = "All"
-}
-
-game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
-
-local args = {
-    [1] = "Start",
-    [2] = Target
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("PainInflictionEvent"):FireServer(unpack(args))
-
-wait(10)
-
-local args = {
-    [1] = "End"
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("PainInflictionEvent"):FireServer(unpack(args))
-
- end
-        end
-end   
-end)
-
-BennettSection:NewButton("Ascendo All", " ", function()
-    print("Clicked")
-    local Plr = game.Players.LocalPlayer
-    for i, Player in pairs (game.Players:GetPlayers()) do
-
-        if Player.Character ~= nil and Player ~= Plr then
-            local mag = (Player.Character.UpperTorso.Position - Plr.Character.UpperTorso.Position).magnitude
-            if mag < 100000 then
-                local Target = Player.Character or Player.CharacterAdded:Wait()
-
-local args = {
-    [1] = Target
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("TeleLiftEvent"):FireServer(unpack(args))
-
- end
-        end
-end   
-end)
-
 BennettSection:NewButton("Ad Somnum All", " ", function()
     print("Clicked")
     local Plr = game.Players.LocalPlayer
