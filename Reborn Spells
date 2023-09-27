@@ -1731,10 +1731,10 @@ BennettSection:NewButton("Summon All", " ", function()
 
 local args = {
     [1] = "Summon",
-    [2] = Target
+    [2] = game:GetService("Players")[Target.name..""]
 }
 
-game:GetService("ReplicatedStorage"):WaitForChild("Summon"):FireServer(unpack(args))
+game:GetService("ReplicatedStorage").Summon:FireServer(unpack(args))
 
 
  end
@@ -2342,12 +2342,14 @@ local args = {
 
 game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
 
+   local plr = player.Character
+
 local args = {
     [1] = "Summon",
-    [2] = player.Character
+    [2] = game:GetService("Players")[plr.name..""]
 }
 
-game:GetService("ReplicatedStorage"):WaitForChild("Summon"):FireServer(unpack(args))
+game:GetService("ReplicatedStorage").Summon:FireServer(unpack(args))
 
 end)
 
