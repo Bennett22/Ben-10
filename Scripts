@@ -132,6 +132,7 @@ end)
 BennettSection:NewButton("Infinite Yield", "", function()
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/Omg562/Scripts/main/INF'),true))()
 end)
+
 BennettSection:NewTextBox("key", "", function(Value)
 
 if Value == "Bennett22" then
@@ -141,6 +142,14 @@ loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Ben-10/mai
 end
 end)
 
+BennettSection:NewTextBox("key 2", "", function(Value)
+
+if Value == "Bennett22" then
+
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Ben-10/main/Reborn%20Spells'),true))()
+
+end
+end)
 
 local Tab = Window:NewTab("Credits")
 local SettingsSection = Tab:NewSection("discord: bennettscripts")
