@@ -1616,13 +1616,6 @@ end)
 
 BennettSection:NewButton("Expression", " ", function()
     print("Clicked")
-    local Plr = game.Players.LocalPlayer
-    for i, Player in pairs (game.Players:GetPlayers()) do
-
-        if Player.Character ~= nil and Player ~= Plr then
-            local mag = (Player.Character.UpperTorso.Position - Plr.Character.UpperTorso.Position).magnitude
-            if mag < 100000 then
-                local Target = Player.Character or Player.CharacterAdded:Wait()
 
 local args = {
     [1] = "I Have Every Magic!",
@@ -1656,6 +1649,15 @@ local args = {
 game:GetService("ReplicatedStorage").StormEvent:FireServer(unpack(args))
 
 wait(5)
+
+    local Plr = game.Players.LocalPlayer
+    for i, Player in pairs (game.Players:GetPlayers()) do
+
+        if Player.Character ~= nil and Player ~= Plr then
+            local mag = (Player.Character.UpperTorso.Position - Plr.Character.UpperTorso.Position).magnitude
+            if mag < 100000 then
+                local Target = Player.Character or Player.CharacterAdded:Wait()
+
 
 local args = {
     [1] = Target
