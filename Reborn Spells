@@ -3215,7 +3215,7 @@ local args = {
 game:GetService("Players").LocalPlayer.Character.TelekineticPush.PushEvent:FireServer(unpack(args))
 
 end)
-
+local Bennett = Window:NewTab("Misc")
 local BennettSection = Bennett:NewSection("Misc")
 BennettSection:NewButton("Teleport to the spawn", "", function()
       game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-129, 467, -44))
