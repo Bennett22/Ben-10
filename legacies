@@ -404,8 +404,8 @@ game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpa
 })
 
 BennettTab:AddBind({
-	Name = "Throat Rip",
-	Default = Enum.KeyCode.Six,
+	Name = "Combo",
+	Default = Enum.KeyCode.Z,
 	Hold = false,
 	Callback = function()
 		print("You just clicked the bind")
@@ -446,7 +446,7 @@ BennettTab:AddBind({
      end
  
      game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
-         if key == "6" then
+         if key == "z" then
              local player = getPlayer()
              if player then
              
@@ -461,6 +461,31 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
+
+local args = {
+    [1] = {
+        [1] = {
+            [1] = "\6",
+            [2] = player.Character,
+            [3] = "Bite"
+        }
+    }
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
+
+local args = {
+    [1] = {
+        [1] = {
+            [1] = "\6",
+            [2] = player.Character,
+            [3] = "Neck Snap"
+        }
+    }
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
+
 
              end
             end
@@ -477,7 +502,7 @@ local BennettTab = Window:MakeTab({
 })
 
 BennettTab:AddBind({
-	Name = "Neck Snap",
+	Name = "Combo",
 	Default = Enum.KeyCode.One,
 	Hold = false,
 	Callback = function()
@@ -523,17 +548,80 @@ BennettTab:AddBind({
              local player = getPlayer()
              if player then
              
-local args = {
+             local args = {
     [1] = {
         [1] = {
             [1] = "\6",
             [2] = player.Character,
-            [3] = "Neck Snap"
+            [3] = "Choke",
+            [4] = true
         }
     }
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
+
+local args = {
+    [1] = {
+        [1] = {
+            [1] = "\6",
+            [2] = "null",
+            [3] = "Choke",
+            [4] = false
+        }
+    }
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
+
+local args = {
+    [1] = {
+        [1] = {
+            [1] = "\6",
+            [2] = player.Character,
+            [3] = "Compel"
+        }
+    }
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
+
+local args = {
+    [1] = {
+        [1] = {
+            [1] = "\6",
+            [2] = player.Character,
+            [3] = "Feed"
+        }
+    }
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
+
+local args = {
+    [1] = {
+        [1] = {
+            [1] = "\6",
+            [2] = player.Character,
+            [3] = "Head Slice"
+        }
+    }
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
+
+local args = {
+    [1] = {
+        [1] = {
+            [1] = "\6",
+            [2] = player.Character,
+            [3] = "Vampire Heart Rip"
+        }
+    }
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
+
 
              end
             end
@@ -543,7 +631,7 @@ game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpa
 })
 
 BennettTab:AddBind({
-	Name = "Heart Rip",
+	Name = "Neck Snap",
 	Default = Enum.KeyCode.Two,
 	Hold = false,
 	Callback = function()
@@ -594,7 +682,7 @@ local args = {
         [1] = {
             [1] = "\6",
             [2] = player.Character,
-            [3] = "Vampire Heart Rip"
+            [3] = "Neck Snap"
         }
     }
 }
@@ -604,12 +692,12 @@ game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpa
              end
             end
          end)
-	end
-	
-	})
-	
-	BennettTab:AddBind({
-	Name = "Limb Rip",
+	end    
+
+})
+
+BennettTab:AddBind({
+	Name = "Heart Rip",
 	Default = Enum.KeyCode.Three,
 	Hold = false,
 	Callback = function()
@@ -660,7 +748,7 @@ local args = {
         [1] = {
             [1] = "\6",
             [2] = player.Character,
-            [3] = "Limb Rip"
+            [3] = "Vampire Heart Rip"
         }
     }
 }
@@ -674,8 +762,8 @@ game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpa
 	
 	})
 	
-		BennettTab:AddBind({
-	Name = "Eye Gouge",
+	BennettTab:AddBind({
+	Name = "Limb Rip",
 	Default = Enum.KeyCode.Four,
 	Hold = false,
 	Callback = function()
@@ -726,6 +814,72 @@ local args = {
         [1] = {
             [1] = "\6",
             [2] = player.Character,
+            [3] = "Limb Rip"
+        }
+    }
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
+
+             end
+            end
+         end)
+	end
+	
+	})
+	
+		BennettTab:AddBind({
+	Name = "Eye Gouge",
+	Default = Enum.KeyCode.Five,
+	Hold = false,
+	Callback = function()
+		print("You just clicked the bind")
+
+      local function getPlayer()
+         local userInput = game:GetService("UserInputService")
+         local cam = workspace.CurrentCamera
+         local mousePos = userInput:GetMouseLocation()
+         local mouseRay = cam:ViewportPointToRay(mousePos.X, mousePos.Y)
+         players = {}
+         for _, x in next, game:GetService('Players'):GetPlayers() do
+             players[#players + 1] = x.Character
+         end
+         local raycastParams = RaycastParams.new()
+         raycastParams.FilterType = Enum.RaycastFilterType.Whitelist
+         raycastParams.FilterDescendantsInstances = players
+         raycastParams.IgnoreWater = true
+         local raycastResult = workspace:Raycast(mouseRay.Origin, mouseRay.Direction * 1000, raycastParams)
+         if raycastResult then
+             for _, x in next, game:GetService('Players'):GetPlayers() do
+                 if not raycastResult.Instance:IsDescendantOf(x.Character) then
+                     continue
+                 end
+                 return x
+             end
+         end
+         return false
+     end
+ 
+     local function Set(list)
+         local set = {}
+         for _, l in ipairs(list) do
+             if l then
+                 set[l] = true
+             end
+         end
+         return set
+     end
+ 
+     game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
+         if key == "5" then
+             local player = getPlayer()
+             if player then
+             
+local args = {
+    [1] = {
+        [1] = {
+            [1] = "\6",
+            [2] = player.Character,
             [3] = "Eye Gouge"
         }
     }
@@ -739,3 +893,153 @@ game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpa
 	end
 	
 	})
+	
+	local BennettTab = Window:MakeTab({
+	Name = "Misc",
+	Icon = "rbxassetid://14458282849",
+	PremiumOnly = false
+})
+
+BennettTab:AddTextbox({
+	Name = "View Someone",
+	Default = "",
+	TextDisappear = true,
+	Callback = function(txt)
+      local Players = game:GetService("Players")
+      local msg = txt
+      local function findPlayer(stringg)
+          for _, v in pairs(Players:GetPlayers()) do
+              if stringg:lower() == (v.Name:lower()):sub(1, #stringg) then
+                  return v
+              end
+          end
+      end
+  
+      local player = findPlayer(msg)
+      local CHAR = player.Character
+
+      game:GetService("Workspace").CurrentCamera.CameraSubject = player.Character
+
+	end	  
+})
+
+
+BennettTab:AddButton({
+	Name = "Unview",
+	Callback = function()
+
+     player = game:GetService("Players").LocalPlayer
+     game:GetService("Workspace").CurrentCamera.CameraSubject = player.Character
+
+
+  	end
+})
+
+BennettTab:AddTextbox({
+	Name = "Teleport To Someone",
+	Default = "",
+	TextDisappear = true,
+	Callback = function(txt)
+      local Players = game:GetService("Players")
+      local msg = txt
+      local function findPlayer(stringg)
+          for _, v in pairs(Players:GetPlayers()) do
+              if stringg:lower() == (v.Name:lower()):sub(1, #stringg) then
+                  return v
+              end
+          end
+      end
+  
+      local player = findPlayer(msg)
+      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = player.Character.HumanoidRootPart.CFrame
+	end	  
+})
+
+BennettTab:AddSlider({
+	Name = "Speed",
+	Min = 0,
+	Max = 200,
+	Default = 16,
+	Color = Color3.fromRGB(),
+	Increment = 1,
+	ValueName = "Speed Value",
+	Callback = function(Value)
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
+	end    
+})
+
+BennettTab:AddSlider({
+	Name = "Jump",
+	Min = 0,
+	Max = 200,
+	Default = 10,
+	Color = Color3.fromRGB(),
+	Increment = 1,
+	ValueName = "Jump Value",
+	Callback = function(Value)
+game.Players.LocalPlayer.Character.Humanoid.JumpPower = Value
+	end    
+})
+
+local Section = BennettTab:AddSection({
+	Name = "Other Scripts"
+})
+
+BennettTab:AddButton({
+	Name = "Animations",
+	Callback = function()
+
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Ben-10/main/Animation'),true))()
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Infinite Yield",
+	Callback = function()
+
+loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+
+  	end    
+})
+
+BennettTab:AddTextbox({
+	Name = "Key",
+	Default = "",
+	TextDisappear = true,
+	Callback = function(Value)
+
+
+if Value == "Bennett22" then
+
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Ben-10/main/Spy'),true))()
+
+end
+
+	end	  
+})
+
+local BennettTab = Window:MakeTab({
+	Name = "Credits",
+	Icon = "rbxassetid://14458282849",
+	PremiumOnly = false
+})
+
+local Section = BennettTab:AddSection({
+	Name = "discord: bennettscripts"
+})
+
+wait(1)
+game.StarterGui:SetCore("SendNotification", { 
+    Title = "⛤ Bennett Scripts ⛤";
+    Text = "TSL";
+    Icon = "rbxthumb://type=Asset&id=14067496704&w=150&h=150";
+    Duration = "2";
+    Button1 = "Close";
+})
+
+if game:GetService("Players").LocalPlayer.UserId == 3185912033 then
+
+    game.Players.LocalPlayer:Kick("Blacklisted xoxoxo")
+
+end
