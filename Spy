@@ -1,5 +1,5 @@
 --[[
-    SimpleSpy v2.2 SOURCE
+    Bennett Spy
 
     Credits:
         exx - basically everything
@@ -204,10 +204,11 @@ Simple.BackgroundTransparency = 1
 Simple.Position = UDim2.new(0, 5, 0, 0)
 Simple.Size = UDim2.new(0, 57, 0, 18)
 Simple.Font = Enum.Font.SourceSansBold
-Simple.Text = "SimpleSpy"
+Simple.Text = "Bennett Spy"
 Simple.TextColor3 = Color3.new(1, 1, 1)
 Simple.TextSize = 14
 Simple.TextXAlignment = Enum.TextXAlignment.Left
+
 
 CloseButton.Name = "CloseButton"
 CloseButton.Parent = TopBar
@@ -383,10 +384,10 @@ local useGetCallingScript = false
 --- @param method string
 --- @param args any[]
 --- @return string
-function SimpleSpy:ArgsToString(method, args)
+function SimpleSpy:ArgsToString(method, bennett)
     assert(typeof(method) == "string", "string expected, got " .. typeof(method))
-    assert(typeof(args) == "table", "table expected, got " .. typeof(args))
-    return v2v({args = args}) .. "\n\n" .. method .. "(unpack(args))"
+    assert(typeof(bennett) == "table", "table expected, got " .. typeof(bennett))
+    return v2v({bennett = bennett}) .. "\n\n" .. method .. "(unpack(bennett))"
 end
 
 --- Converts a value to variables with the specified index as the variable name (if nil/invalid then the name will be assigned automatically)
@@ -943,7 +944,7 @@ function makeToolTip(enable, text)
             ToolTip.Visible = false
             RunService:UnbindFromRenderStep("ToolTip")
         end
-        local first = true
+        first = true
         RunService:BindToRenderStep("ToolTip", 1, function()
             local topLeft = Vector2.new(Mouse.X + 20, Mouse.Y + 20)
             local bottomRight = topLeft + ToolTip.AbsoluteSize
@@ -1044,18 +1045,18 @@ end
 --- Generates a script from the provided arguments (first has to be remote path)
 function genScript(remote, ...)
     prevTables = {}
-    local gen = ""
-    local args = {...}
-    if #args > 0 then
+    gen = ""
+    bennettscripts = {...}
+    if #bennettscripts > 0 then
         if not pcall(function()
-                gen = v2v({args = args}) .. "\n"
+                gen = v2v({bennettscripts = bennettscripts}) .. "\n"
             end)
         then
-            gen = gen .. "-- TableToString failure! Reverting to legacy functionality (results may vary)\nlocal args = {"
+            gen = gen .. "-- TableToString failure! Reverting to legacy functionality (results may vary)\nbennettscripts = {"
             if
                 not pcall(
                     function()
-                        for i, v in pairs(args) do
+                        for i, v in pairs(bennettscripts) do
                             if type(i) ~= "Instance" and type(i) ~= "userdata" then
                                 gen = gen .. "\n    [" .. tostring(i) .. "] = "
                             elseif type(i) == "string" then
@@ -1086,9 +1087,9 @@ function genScript(remote, ...)
             gen = "function getNil(name,class) for _,v in pairs(getnilinstances())do if v.ClassName==class and v.Name==name then return v;end end end\n\n" .. gen
         end
         if remote:IsA("RemoteEvent") then
-            gen = gen .. v2s(remote) .. ":FireServer(unpack(args))"
+            gen = gen .. v2s(remote) .. ":FireServer(unpack(bennettscripts))"
         elseif remote:IsA("RemoteFunction") then
-            gen = gen .. v2s(remote) .. ":InvokeServer(unpack(args))"
+            gen = gen .. v2s(remote) .. ":InvokeServer(unpack(bennettscripts))"
         end
     else
         if remote:IsA("RemoteEvent") then
@@ -1126,7 +1127,7 @@ function v2s(v, l, p, n, vtv, i, pt, path, tables)
     elseif type(v) == "userdata" then
         return u2s(v)
     else
-        return "nil --[[" .. typeof(v) .. "]]"
+        return "Vector3.new() --[[" .. typeof(v) .. "]]"
     end
 end
 
@@ -1140,11 +1141,11 @@ function v2v(t)
     local count = 1
     for i, v in pairs(t) do
         if type(i) == "string" and i:match("^[%a_]+[%w_]*$") then
-            ret = ret .. "local " .. i .. " = " .. v2s(v, nil, nil, i, true) .. "\n"
+            ret = ret .. "" .. i .. " = " .. v2s(v, nil, nil, i, true) .. "\n"
         elseif tostring(i):match("^[%a_]+[%w_]*$") then
-            ret = ret .. "local " .. tostring(i):lower() .. "_" .. tostring(count) .. " = " .. v2s(v, nil, nil, tostring(i):lower() .. "_" .. tostring(count), true) .. "\n"
+            ret = ret .. "" .. tostring(i):lower() .. "_" .. tostring(count) .. " = " .. v2s(v, nil, nil, tostring(i):lower() .. "_" .. tostring(count), true) .. "\n"
         else
-            ret = ret .. "local " .. type(v) .. "_" .. tostring(count) .. " = " .. v2s(v, nil, nil, type(v) .. "_" .. tostring(count), true) .. "\n"
+            ret = ret .. "" .. type(v) .. "_" .. tostring(count) .. " = " .. v2s(v, nil, nil, type(v) .. "_" .. tostring(count), true) .. "\n"
         end
         count = count + 1
     end
