@@ -422,6 +422,16 @@ game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Raven"
 })
 
 BennettTab:AddButton({
+	Name = "Sabrina",
+	Callback = function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Sabrina")
+
+  	end    
+})
+
+
+BennettTab:AddButton({
 	Name = "Scarlet Wtich: Multiverse Of Madness",
 	Callback = function()
 
