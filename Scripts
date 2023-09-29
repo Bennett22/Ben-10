@@ -112,6 +112,12 @@ loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Ben-10/mai
 
 end)
 
+BennettSection:NewButton("Guardians Prophecy", " ", function()
+
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Ben-10/main/prophecy'),true))()
+
+end)
+
 BennettSection:NewButton("Witchcraft.v2", " ", function()
 
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Ben-10/main/witch'),true))()
