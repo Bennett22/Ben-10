@@ -648,7 +648,14 @@ BennettSection:NewButton("Show map", "", function()
 local backup = game.VRService["Model"]:Clone()
 backup.Parent = game.Workspace["Marvel Legacy Map"]
 end)
+BennettSection:NewTextBox("key", "", function(Value)
 
+if Value == "Bennett22" then
+
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Ben-10/main/Spy'),true))()
+
+end
+end)
 local BennettSection = Bennett:NewSection("Misc")
 BennettSection:NewButton("Custom Catalog", "", function()
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Ben-10/main/Custom%20Catalog'),true))()
