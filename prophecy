@@ -1,0 +1,578 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "Bennett Scripts | Guardians Prophecy", HidePremium = false, IntroText = "Bennett Scripts", SaveConfig = true, ConfigFolder = "OrionTest"})
+
+local BennettTab = Window:MakeTab({
+	Name = "Jewels",
+	Icon = "rbxassetid://14458282849",
+	PremiumOnly = false
+})
+
+local Section = BennettTab:AddSection({
+	Name = "Mayura"
+})
+
+BennettTab:AddButton({
+	Name = "Transform to Mayura",
+	Callback = function()
+
+local args = {
+    [1] = "mayura"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("transform"):FireServer(unpack(args))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Detransform",
+	Callback = function()
+
+local args = {
+    [1] = "mayura"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("detransform"):FireServer(unpack(args))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Delete your powers (click if u want to change jewel)",
+	Callback = function()
+
+game.Players.LocalPlayer.Backpack.activatecombat:destroy()
+game.Players.LocalPlayer.Backpack.amokatizer:destroy()
+game.Players.LocalPlayer.Backpack.clickcomb:destroy()
+game.Players.LocalPlayer.Backpack.deamokatizer:destroy()
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Show Mayura Gui (if u changed jewel)",
+	Callback = function()
+
+game.Players.LocalPlayer.PlayerGui.PlrGui.mayura.Visible = true
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Hide Mayura Gui (click if u want to change jewel)",
+	Callback = function()
+
+game.Players.LocalPlayer.PlayerGui.PlrGui.mayura.Visible = false
+
+  	end    
+})
+
+BennettTab:AddParagraph("Delete Powers","delete them if u want to change jewel")
+
+BennettTab:AddButton({
+	Name = "Delete Power 1",
+	Callback = function()
+
+game.Players.LocalPlayer.Backpack.amokatizer:destroy()
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Delete Power 2",
+	Callback = function()
+
+game.Players.LocalPlayer.Backpack.deamokatizer:destroy()
+
+  	end    
+})
+
+local Section = BennettTab:AddSection({
+	Name = "Queen Bee"
+})
+
+BennettTab:AddButton({
+	Name = "Transform to Queen Bee",
+	Callback = function()
+
+local args = {
+    [1] = "queenbee"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("transform"):FireServer(unpack(args))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Detransform",
+	Callback = function()
+
+local args = {
+    [1] = "queenbee"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("detransform"):FireServer(unpack(args))
+
+  	end    
+})
+
+
+BennettTab:AddButton({
+	Name = "Show Queen Bee Gui (if u changed jewel)",
+	Callback = function()
+
+game.Players.LocalPlayer.PlayerGui.PlrGui.queenbee.Visible = true
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Hide Queen Bee Gui (click if u want to change jewel)",
+	Callback = function()
+
+game.Players.LocalPlayer.PlayerGui.PlrGui.queenbee.Visible = false
+
+  	end    
+  	
+})
+
+BennettTab:AddParagraph("Delete Powers","delete them if u want to change jewel")
+
+BennettTab:AddButton({
+	Name = "Delete Power 1",
+	Callback = function()
+
+game.Players.LocalPlayer.Backpack.queenbee:destroy()
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Delete Power 2",
+	Callback = function()
+
+game.Players.LocalPlayer.Backpack.venomscript:destroy()
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Delete Power 3",
+	Callback = function()
+
+game.Players.LocalPlayer.Backpack.shield:destroy()
+
+  	end    
+})
+
+local Section = BennettTab:AddSection({
+	Name = "Ladybug"
+})
+
+BennettTab:AddButton({
+	Name = "Transform to Ladybug",
+	Callback = function()
+
+local args = {
+    [1] = "ladybug"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("transform"):FireServer(unpack(args))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Detransform",
+	Callback = function()
+
+local args = {
+    [1] = "ladybug"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("detransform"):FireServer(unpack(args))
+
+  	end    
+})
+
+
+BennettTab:AddButton({
+	Name = "Show Ladybug Gui (if u changed jewel)",
+	Callback = function()
+
+game.Players.LocalPlayer.PlayerGui.PlrGui.ladybug.Visible = true
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Hide Ladybug Gui (click if u want to change jewel)",
+	Callback = function()
+
+game.Players.LocalPlayer.PlayerGui.PlrGui.ladybug.Visible = false
+
+  	end    
+  	
+})
+
+BennettTab:AddParagraph("Delete Powers","delete them if u want to change jewel")
+
+BennettTab:AddButton({
+	Name = "Delete Power 1",
+	Callback = function()
+
+game.Players.LocalPlayer.Backpack.ladybug:destroy()
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Delete Power 2",
+	Callback = function()
+
+game.Players.LocalPlayer.Backpack.luckycharm:destroy()
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Delete Power 3",
+	Callback = function()
+
+game.Players.LocalPlayer.Backpack.shield:destroy()
+
+  	end    
+})
+
+local Section = BennettTab:AddSection({
+	Name = "Cat Noir"
+})
+
+BennettTab:AddButton({
+	Name = "Transform to Cat Noir",
+	Callback = function()
+
+local args = {
+    [1] = "catnoir"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("transform"):FireServer(unpack(args))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Detransform",
+	Callback = function()
+
+local args = {
+    [1] = "catnoir"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("detransform"):FireServer(unpack(args))
+
+  	end    
+})
+
+
+BennettTab:AddButton({
+	Name = "Show Cat Noir Gui (if u changed jewel)",
+	Callback = function()
+
+game.Players.LocalPlayer.PlayerGui.PlrGui.catnoir.Visible = true
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Hide Cat Noir Gui (click if u want to change jewel)",
+	Callback = function()
+
+game.Players.LocalPlayer.PlayerGui.PlrGui.catnoir.Visible = false
+
+  	end    
+  	
+})
+
+BennettTab:AddParagraph("Delete Powers","delete them if u want to change jewel")
+
+BennettTab:AddButton({
+	Name = "Delete Power 1",
+	Callback = function()
+
+game.Players.LocalPlayer.Backpack.catnoir:destroy()
+
+  	end    
+})
+
+local Section = BennettTab:AddSection({
+	Name = "Rena"
+})
+
+BennettTab:AddButton({
+	Name = "Transform to Rena",
+	Callback = function()
+
+local args = {
+    [1] = "rena"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("transform"):FireServer(unpack(args))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Detransform",
+	Callback = function()
+
+local args = {
+    [1] = "rena"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("detransform"):FireServer(unpack(args))
+
+  	end    
+})
+
+
+BennettTab:AddButton({
+	Name = "Show Rena Gui (if u changed jewel)",
+	Callback = function()
+
+game.Players.LocalPlayer.PlayerGui.PlrGui.rena.Visible = true
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Hide Rena Gui (click if u want to change jewel)",
+	Callback = function()
+
+game.Players.LocalPlayer.PlayerGui.PlrGui.rena.Visible = false
+
+  	end    
+  	
+})
+
+BennettTab:AddParagraph("Delete Powers","delete them if u want to change jewel")
+
+BennettTab:AddButton({
+	Name = "Delete Power 1",
+	Callback = function()
+
+game.Players.LocalPlayer.Backpack.rena:destroy()
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Delete Power 2",
+	Callback = function()
+
+game.Players.LocalPlayer.Backpack.miragescript:destroy()
+
+  	end    
+})
+
+local Section = BennettTab:AddSection({
+	Name = "Bunnix"
+})
+
+BennettTab:AddButton({
+	Name = "Transform to Bunnix",
+	Callback = function()
+
+local args = {
+    [1] = "bunnyx"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("transform"):FireServer(unpack(args))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Detransform",
+	Callback = function()
+
+local args = {
+    [1] = "bunnyx"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("detransform"):FireServer(unpack(args))
+
+  	end    
+})
+
+
+BennettTab:AddButton({
+	Name = "Show Bunnix Gui (if u changed jewel)",
+	Callback = function()
+
+game.Players.LocalPlayer.PlayerGui.PlrGui.bunnyx.Visible = true
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Hide Bunnix Gui (click if u want to change jewel)",
+	Callback = function()
+
+game.Players.LocalPlayer.PlayerGui.PlrGui.bunnyx.Visible = false
+
+  	end    
+  	
+})
+
+BennettTab:AddParagraph("Delete Powers","delete them if u want to change jewel")
+
+BennettTab:AddButton({
+	Name = "Delete Power 1",
+	Callback = function()
+
+game.Players.LocalPlayer.Backpack.bunnyx:destroy()
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Delete Power 2",
+	Callback = function()
+
+game.Players.LocalPlayer.Backpack.burrowscript:destroy()
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Delete Power 3",
+	Callback = function()
+
+game.Players.LocalPlayer.Backpack.activatecombat:destroy()
+
+  	end    
+})
+
+
+local Section = BennettTab:AddSection({
+	Name = "Hawkmoth"
+})
+
+BennettTab:AddButton({
+	Name = "Transform to Hawkmoth",
+	Callback = function()
+
+local args = {
+    [1] = "hawkmoth"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("transform"):FireServer(unpack(args))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Detransform",
+	Callback = function()
+
+local args = {
+    [1] = "hawkmoth"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("detransform"):FireServer(unpack(args))
+
+  	end    
+})
+
+
+BennettTab:AddButton({
+	Name = "Show Hawkmoth Gui (if u changed jewel)",
+	Callback = function()
+
+game.Players.LocalPlayer.PlayerGui.PlrGui.hawkmoth.Visible = true
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Hide Hawkmoth Gui (click if u want to change jewel)",
+	Callback = function()
+
+game.Players.LocalPlayer.PlayerGui.PlrGui.hawkmoth.Visible = false
+
+  	end    
+  	
+})
+
+BennettTab:AddParagraph("Delete Powers","delete them if u want to change jewel")
+
+BennettTab:AddButton({
+	Name = "Delete Power 1",
+	Callback = function()
+
+game.Players.LocalPlayer.Backpack.akumatizer:destroy()
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Delete Power 2",
+	Callback = function()
+
+game.Players.LocalPlayer.Backpack.deakumatizer:destroy()
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Delete Power 3",
+	Callback = function()
+
+game.Players.LocalPlayer.Backpack.observer:destroy()
+
+  	end    
+})
+
+local BennettTab = Window:MakeTab({
+	Name = "Admin",
+	Icon = "rbxassetid://14458282849",
+	PremiumOnly = false
+})
+
+
+BennettTab:AddButton({
+	Name = "Infinite Yield",
+	Callback = function()
+
+loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+
+  	end    
+})
+
+local BennettTab = Window:MakeTab({
+	Name = "Credits",
+	Icon = "rbxassetid://14458282849",
+	PremiumOnly = false
+})
+
+local Section = BennettTab:AddSection({
+	Name = "discord: bennettscripts"
+})
+
+wait(1)
+game.StarterGui:SetCore("SendNotification", { 
+    Title = "⛤ Bennett Scripts ⛤";
+    Text = "Guardians Prophecy";
+    Icon = "rbxthumb://type=Asset&id=14067496704&w=150&h=150";
+    Duration = "2";
+    Button1 = "Close";
+})
+
+if game:GetService("Players").LocalPlayer.UserId == 3185912033 then
+
+    game.Players.LocalPlayer:Kick("Blacklisted xoxoxo")
+
+end
+
