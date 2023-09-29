@@ -1202,21 +1202,14 @@ end)
 BennettSection:NewButton("Infinite Yield", "", function()
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/Omg562/Scripts/main/INF'),true))()
 end)
-BennettTab:AddTextbox({
-	Name = "Key",
-	Default = "",
-	TextDisappear = true,
-	Callback = function(Value)
-
+BennettSection:NewTextBox("key", "", function(Value)
 
 if Value == "Bennett22" then
 
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Ben-10/main/Spy'),true))()
 
 end
-
-	end	  
-})
+end)
 
 local Tab = Window:NewTab("Credits")
 local SettingsSection = Tab:NewSection("discord: bennettscripts")
