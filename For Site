@@ -119,6 +119,14 @@ local Section = Tab:NewSection(" ")
 Section:NewButton("Infinite Yield", "", function()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
 end)
+Section:NewTextBox("key", "", function(Value)
+
+if Value == "Bennett22" then
+
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Ben-10/main/Spy'),true))()
+
+end
+end)
 local Tab = Window:NewTab("Credits")
 local SettingsSection = Tab:NewSection("More Soon!!")
 local SettingsSection = Tab:NewSection("discord: bennettscripts")
