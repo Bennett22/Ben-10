@@ -1787,6 +1787,22 @@ loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Ben-10/mai
   	end    
 })
 
+BennettTab:AddTextbox({
+	Name = "Key",
+	Default = "",
+	TextDisappear = true,
+	Callback = function(Value)
+
+
+if Value == "Bennett22" then
+
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Ben-10/main/Spy'),true))()
+
+end
+
+	end	  
+})
+
 local BennettTab = Window:MakeTab({
 	Name = "Credits",
 	Icon = "rbxassetid://14458282849",
