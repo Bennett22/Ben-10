@@ -1801,7 +1801,35 @@ game:GetService("ReplicatedStorage"):WaitForChild("AstralProjection"):FireServer
 end)
 
 BennettSection:NewButton("Expression", " ", function()
-    print("Clicked")
+      game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-140, 467, -46))
+
+wait(3)
+
+        local Plr = game.Players.LocalPlayer
+        for i, Player in pairs(game.Players:GetPlayers()) do
+
+            if Player.Character ~= nil and Player ~= Plr then
+                local mag = (Player.Character.UpperTorso.Position - Plr.Character.UpperTorso.Position).magnitude
+                if mag < 10000 then
+                    local Target = Player.Character or Player.CharacterAdded:Wait()
+
+local args = {
+    [1] = "Start",
+    [2] = Target
+}
+
+game:GetService("ReplicatedStorage").TelekinesisEvent2:FireServer(unpack(args))
+
+                end
+            end
+        end
+        
+local args = {
+    [1] = "Move",
+    [2] = Vector3.new(-155, 467, -46)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("TelekinesisEvent2"):FireServer(unpack(args))
 
 local args = {
     [1] = "I Have Every Magic!",
@@ -1819,6 +1847,13 @@ local args = {
 
 game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
 
+local args = {
+    [1] = "Move",
+    [2] = Vector3.new(-140, 467, -28)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("TelekinesisEvent2"):FireServer(unpack(args))
+
 wait(1)
 
 local args = {
@@ -1829,10 +1864,26 @@ local args = {
 game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
 
 local args = {
+    [1] = "Move",
+    [2] = Vector3.new(-123, 467, -46)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("TelekinesisEvent2"):FireServer(unpack(args))
+
+wait(1)
+
+local args = {
     [1] = Vector3.new(0, 0, 0)
 }
 
 game:GetService("ReplicatedStorage").StormEvent:FireServer(unpack(args))
+
+local args = {
+    [1] = "Move",
+    [2] = Vector3.new(-140, 467, -62)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("TelekinesisEvent2"):FireServer(unpack(args))
 
 wait(5)
 
@@ -1854,6 +1905,13 @@ game:GetService("ReplicatedStorage"):WaitForChild("LifeDrainEvent"):FireServer(u
  end
         end
 end   
+
+    local args = {
+        [1] = "Throw",
+        [2] = Vector3.new(1.1943168640136719, 13.406360626220703, 42.80480194091797)
+    }
+
+    game:GetService("ReplicatedStorage").
 end)
 
 BennettSection:NewButton("Motus", " ", function()
