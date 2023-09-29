@@ -1127,7 +1127,7 @@ function v2s(v, l, p, n, vtv, i, pt, path, tables)
     elseif type(v) == "userdata" then
         return u2s(v)
     else
-        return "Vector3.new() --[[" .. typeof(v) .. "]]"
+        return "Vector3.new()"
     end
 end
 
