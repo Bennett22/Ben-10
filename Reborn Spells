@@ -1911,7 +1911,7 @@ end
         [2] = Vector3.new(1.1943168640136719, 13.406360626220703, 42.80480194091797)
     }
 
-    game:GetService("ReplicatedStorage").
+    game:GetService("ReplicatedStorage"):WaitForChild("TelekinesisEvent2"):FireServer(unpack(args))
 end)
 
 BennettSection:NewButton("Motus", " ", function()
