@@ -38,18 +38,6 @@ game:GetService("ReplicatedStorage"):WaitForChild("detransform"):FireServer(unpa
 })
 
 BennettTab:AddButton({
-	Name = "Delete your powers (click if u want to change jewel)",
-	Callback = function()
-
-game.Players.LocalPlayer.Backpack.activatecombat:destroy()
-game.Players.LocalPlayer.Backpack.amokatizer:destroy()
-game.Players.LocalPlayer.Backpack.clickcomb:destroy()
-game.Players.LocalPlayer.Backpack.deamokatizer:destroy()
-
-  	end    
-})
-
-BennettTab:AddButton({
 	Name = "Show Mayura Gui (if u changed jewel)",
 	Callback = function()
 
