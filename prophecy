@@ -294,6 +294,15 @@ game.Players.LocalPlayer.Backpack.catnoir:destroy()
   	end    
 })
 
+BennettTab:AddButton({
+	Name = "Delete Power 2",
+	Callback = function()
+
+game.Players.LocalPlayer.Backpack.cataclysmscript:destroy()
+
+  	end    
+})
+
 local Section = BennettTab:AddSection({
 	Name = "Rena"
 })
@@ -519,6 +528,67 @@ BennettTab:AddButton({
 	Callback = function()
 
 game.Players.LocalPlayer.Backpack.observer:destroy()
+
+  	end    
+})
+
+local Section = BennettTab:AddSection({
+	Name = "Carapace"
+})
+
+BennettTab:AddButton({
+	Name = "Transform to Carapace",
+	Callback = function()
+
+local args = {
+    [1] = "carapace"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("transform"):FireServer(unpack(args))
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Detransform",
+	Callback = function()
+
+local args = {
+    [1] = "carapace"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("detransform"):FireServer(unpack(args))
+
+  	end    
+})
+
+
+BennettTab:AddButton({
+	Name = "Show Carapace Gui (if u changed jewel)",
+	Callback = function()
+
+game.Players.LocalPlayer.PlayerGui.PlrGui.carapace.Visible = true
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Hide Carapace Gui (click if u want to change jewel)",
+	Callback = function()
+
+game.Players.LocalPlayer.PlayerGui.PlrGui.carapace.Visible = false
+
+  	end    
+  	
+})
+
+BennettTab:AddParagraph("Delete Powers","delete them if u want to change jewel")
+
+BennettTab:AddButton({
+	Name = "Delete Power 1",
+	Callback = function()
+
+game.Players.LocalPlayer.Backpack.carapace:destroy()
 
   	end    
 })
