@@ -27,6 +27,12 @@ if game:GetService("Players").LocalPlayer.UserId == 4635600398 then
     game.Players:Chat("!hat 12139995872")
 end
 
+if game:GetService("Players").LocalPlayer.UserId == 5081150543 then
+    game.Players:Chat("!hat 13875301530")
+    game.Players:Chat("!hat 13875286481")
+    game.Players:Chat("!hat 12139995872")
+end
+
 end)
 
 local Section = Tab:NewSection("White Raven")
@@ -95,6 +101,22 @@ game.Players:Chat("!hat 1018554245")
 game.Players:Chat("!hat 1018554668")
 end
 
+if game:GetService("Players").LocalPlayer.UserId == 5081150543 then
+    game.Players:Chat("!hat 13702880788")
+    game.Players:Chat("!hat 13979152252")
+    game.Players:Chat("!hat 9573637022")
+    game.Players:Chat("!hat 9573635366")
+    game.Players:Chat("!hat 13085090528")
+wait(1)
+game.Players:Chat("!hat 1018548665")
+game.Players:Chat("!hat 1018549681")
+game.Players:Chat("!hat 1018552770")
+game.Players:Chat("!hat 1018553240")
+game.Players:Chat("!hat 1018553897")
+game.Players:Chat("!hat 1018554245")
+game.Players:Chat("!hat 1018554668")
+end
+
 end)
 
 Section:NewButton("Just Clothes", " ", function()
@@ -124,6 +146,14 @@ if game:GetService("Players").LocalPlayer.UserId == 4334482090 then
 end
 
 if game:GetService("Players").LocalPlayer.UserId == 4635600398 then
+    game.Players:Chat("!hat 13702880788")
+    game.Players:Chat("!hat 13979152252")
+    game.Players:Chat("!hat 9573637022")
+    game.Players:Chat("!hat 9573635366")
+    game.Players:Chat("!hat 13085090528")
+end
+
+if game:GetService("Players").LocalPlayer.UserId == 5081150543 then
     game.Players:Chat("!hat 13702880788")
     game.Players:Chat("!hat 13979152252")
     game.Players:Chat("!hat 9573637022")
@@ -204,6 +234,23 @@ game.Players:Chat("!hat 973767371")
 game.Players:Chat("!hat 973766674")
 end
 
+if game:GetService("Players").LocalPlayer.UserId == 5081150543 then
+    game.Players:Chat("!hat 10472561260")
+    game.Players:Chat("!hat 8496651597")
+    game.Players:Chat("!hat 13999950872")
+    game.Players:Chat("!hat 134082579")
+    game.Players:Chat("!hat 9801091948")
+    game.Players:Chat("!hat 7128126908")
+wait(1)
+game.Players:Chat("!hat 973773170")
+game.Players:Chat("!hat 973772659")
+game.Players:Chat("!hat 973771666")
+game.Players:Chat("!hat 973770652")
+game.Players:Chat("!hat 973768058")
+game.Players:Chat("!hat 973767371")
+game.Players:Chat("!hat 973766674")
+end
+
 end)
 Section:NewButton("Blocky", " ", function()
 if game:GetService("Players").LocalPlayer.UserId == 4831686579 then
@@ -231,6 +278,14 @@ game.Players:Chat("!hat 14525065380")
 end
 
 if game:GetService("Players").LocalPlayer.UserId == 4635600398 then
+game.Players:Chat("!hat 48474356")
+game.Players:Chat("!hat 14525065342")
+game.Players:Chat("!hat 14525065362")
+game.Players:Chat("!hat 14525065223")
+game.Players:Chat("!hat 14525065380")
+end
+
+if game:GetService("Players").LocalPlayer.UserId == 5081150543 then
 game.Players:Chat("!hat 48474356")
 game.Players:Chat("!hat 14525065342")
 game.Players:Chat("!hat 14525065362")
@@ -277,6 +332,15 @@ if game:GetService("Players").LocalPlayer.UserId == 463560039 then
     game.Players:Chat("!hat 6340213")
 end
 
+if game:GetService("Players").LocalPlayer.UserId == 5081150543 then
+    game.Players:Chat("!hat 4908013767")
+    game.Players:Chat("!hat 301823492")
+    game.Players:Chat("!hat 301823806")
+    game.Players:Chat("!hat 376530220")
+    game.Players:Chat("!hat 376531012")
+    game.Players:Chat("!hat 6340213")
+end
+
 end)
 Section:NewButton("others", " ", function()
 if game:GetService("Players").LocalPlayer.UserId == 4831686579 then
@@ -292,6 +356,9 @@ if game:GetService("Players").LocalPlayer.UserId == 4334482090 then
 end
 
 if game:GetService("Players").LocalPlayer.UserId == 463560039 then
+    game.Players:Chat("!hat 14160138520")
+end
+if game:GetService("Players").LocalPlayer.UserId == 5081150543 then
     game.Players:Chat("!hat 14160138520")
 end
 end)
@@ -315,6 +382,12 @@ if game:GetService("Players").LocalPlayer.UserId == 4334482090 then
 end
 
 if game:GetService("Players").LocalPlayer.UserId == 4635600398 then
+    game.Players:Chat("!hat 9179722814")
+    game.Players:Chat("!hat 9248044793")
+    game.Players:Chat("!hat 13398598800")
+end
+
+if game:GetService("Players").LocalPlayer.UserId == 5081150543 then
     game.Players:Chat("!hat 9179722814")
     game.Players:Chat("!hat 9248044793")
     game.Players:Chat("!hat 13398598800")
@@ -348,6 +421,12 @@ if game:GetService("Players").LocalPlayer.UserId == 4635600398 then
 
 end
 
+if game:GetService("Players").LocalPlayer.UserId == 5081150543 then
+    game.Players:Chat("!hat 10261282626")
+    game.Players:Chat("!hat 8359661126")
+
+end
+
 end)
 
 Section:NewButton("Peaches", " ", function()
@@ -370,6 +449,11 @@ if game:GetService("Players").LocalPlayer.UserId == 4334482090 then
 end
 
 if game:GetService("Players").LocalPlayer.UserId == 4635600398 then
+    game.Players:Chat("!hat 14612126668")
+    game.Players:Chat("!hat 14612122292")
+end
+
+if game:GetService("Players").LocalPlayer.UserId == 5081150543 then
     game.Players:Chat("!hat 14612126668")
     game.Players:Chat("!hat 14612122292")
 end
@@ -400,81 +484,12 @@ if game:GetService("Players").LocalPlayer.UserId == 4635600398 then
     game.Players:Chat("!hat 14611993335")
 end
 
-end)
-
-local Section = Tab:NewSection("Rapunzel")
-Section:NewButton("Custom", " ", function()
-if game:GetService("Players").LocalPlayer.UserId == 4831686579 then
-    game.Players:Chat("!hat 2528319611")
-    game.Players:Chat("!hat 2222561889")
-    game.Players:Chat("!hat 7864129663")
-    game.Players:Chat("!hat 7902022756")
-    game.Players:Chat("!hat 139607718")
-wait(1)
-game.Players:Chat("!hat 1018548665")
-game.Players:Chat("!hat 1018549681")
-game.Players:Chat("!hat 1018552770")
-game.Players:Chat("!hat 1018553240")
-game.Players:Chat("!hat 1018553897")
-game.Players:Chat("!hat 1018554245")
-game.Players:Chat("!hat 1018554668")
-
-end
-
-if game:GetService("Players").LocalPlayer.UserId == 736533499 then
-
-    game.Players:Chat("!hat 2528319611")
-    game.Players:Chat("!hat 2222561889")
-    game.Players:Chat("!hat 7864129663")
-    game.Players:Chat("!hat 7902022756")
-    game.Players:Chat("!hat 139607718")
-wait(1)
-game.Players:Chat("!hat 1018548665")
-game.Players:Chat("!hat 1018549681")
-game.Players:Chat("!hat 1018552770")
-game.Players:Chat("!hat 1018553240")
-game.Players:Chat("!hat 1018553897")
-game.Players:Chat("!hat 1018554245")
-game.Players:Chat("!hat 1018554668")
-end
-
-if game:GetService("Players").LocalPlayer.UserId == 4334482090 then
-
-    game.Players:Chat("!hat 2528319611")
-    game.Players:Chat("!hat 2222561889")
-    game.Players:Chat("!hat 7864129663")
-    game.Players:Chat("!hat 7902022756")
-    game.Players:Chat("!hat 139607718")
-wait(1)
-game.Players:Chat("!hat 1018548665")
-game.Players:Chat("!hat 1018549681")
-game.Players:Chat("!hat 1018552770")
-game.Players:Chat("!hat 1018553240")
-game.Players:Chat("!hat 1018553897")
-game.Players:Chat("!hat 1018554245")
-game.Players:Chat("!hat 1018554668")
-end
-
 if game:GetService("Players").LocalPlayer.UserId == 4635600398 then
-
-    game.Players:Chat("!hat 2528319611")
-    game.Players:Chat("!hat 2222561889")
-    game.Players:Chat("!hat 7864129663")
-    game.Players:Chat("!hat 7902022756")
-    game.Players:Chat("!hat 139607718")
-wait(1)
-game.Players:Chat("!hat 1018548665")
-game.Players:Chat("!hat 1018549681")
-game.Players:Chat("!hat 1018552770")
-game.Players:Chat("!hat 1018553240")
-game.Players:Chat("!hat 1018553897")
-game.Players:Chat("!hat 1018554245")
-game.Players:Chat("!hat 1018554668")
-
+    game.Players:Chat("!hat 14611988670")
+    game.Players:Chat("!hat 14611993335")
 end
 
 end)
-
 
 local Section = Tab:NewSection("Catalog With Wigs")
 Section:NewButton("Wigs", " ", function()
@@ -501,7 +516,11 @@ if game:GetService("Players").LocalPlayer.UserId == 4635600398 then
     loadstring(game:HttpGet('https://raw.githubusercontent.com/Bennett22/Ben-10/main/wigs'))()
 
 end
+if game:GetService("Players").LocalPlayer.UserId == 5081150543 then
 
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/Bennett22/Ben-10/main/wigs'))()
+
+end
 end)
 
 local Tab = Window:NewTab("ava <3")
