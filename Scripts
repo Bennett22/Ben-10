@@ -4,12 +4,6 @@ local Window = Library.CreateLib("Bennett Scripts | Scripts", "Serpent")
 local Bennett = Window:NewTab("Scripts")
 local BennettSection = Bennett:NewSection("Scripts")
 
-BennettSection:NewButton("Heroes Online World - Animations", " ", function()
-
-loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Ben-10/main/Animations'),true))()
-
-end)
-
 BennettSection:NewButton("Lucky Blocks Battlegrounds", " ", function()
 
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Ben-10/main/Battlegrounds'),true))()
