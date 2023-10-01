@@ -46,8 +46,8 @@ Section:NewButton("Blonde Pigtails with Pink Ties", " ", function()
     game.Players:Chat("!hat 212971294")
 
 end)
-Section:NewButton("Starshine Sparkle Warrior", " ", function()
-    game.Players:Chat("!hat 745793544")
+Section:NewButton("Kara Lye Hair", " ", function()
+    game.Players:Chat("!hat 3343203038")
 
 end)
 
