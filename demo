@@ -1,0 +1,243 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "Bennett Scripts | Four Elements Demo", HidePremium = false, IntroText = "Bennett Scripts", SaveConfig = true, ConfigFolder = "OrionTest"})
+
+
+local BennettTab = Window:MakeTab({
+	Name = "Main",
+	Icon = "rbxassetid://14458282849",
+	PremiumOnly = false
+})
+
+local Section = BennettTab:AddSection({
+	Name = "Earth"
+})
+
+--auto things
+
+_G.Less = true
+
+function Less()
+
+while _G.Less == true do
+game.Players.LocalPlayer.Backpack.Earth.Cooldown.EarthBarrage.Value = 0
+game.Players.LocalPlayer.Backpack.Earth.Cooldown.EarthCrush.Value = 0
+game.Players.LocalPlayer.Backpack.Earth.Cooldown.EarthKick.Value = 0
+game.Players.LocalPlayer.Backpack.Earth.Cooldown.EarthLaunch.Value = 0
+game.Players.LocalPlayer.Backpack.Earth.Cooldown.EarthPunch.Value = 0
+game.Players.LocalPlayer.Backpack.Earth.Cooldown.EarthQuake.Value = 0
+game.Players.LocalPlayer.Backpack.Earth.Cooldown.EarthRise.Value = 0
+game.Players.LocalPlayer.Backpack.Earth.Cooldown.EarthWall.Value = 0
+game.Players.LocalPlayer.Backpack.Earth.Cooldown.LavaCrush.Value = 0
+game.Players.LocalPlayer.Backpack.Earth.Cooldown.LavaPool.Value = 0
+game.Players.LocalPlayer.Backpack.Earth.Cooldown.Reflect.Value = 0
+game.Players.LocalPlayer.Backpack.Earth.Cooldown.RocksThrow.Value = 0
+game.Players.LocalPlayer.Backpack.Earth.Cooldown.TripleRockBlast.Value = 0
+wait(.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001)
+end
+end
+
+BennettTab:AddToggle({
+	Name = "Less Cooldown",
+	Default = false,
+	Callback = function(Value)
+		_G.Less = Value
+                Less()
+	end    
+})
+
+BennettTab:AddButton({
+	Name = "Inf Stamina",
+	Callback = function()
+
+game.Players.LocalPlayer.Backpack.Earth.Stamina.EarthBarrage.Value = 0
+game.Players.LocalPlayer.Backpack.Earth.Stamina.EarthCrush.Value = 0
+game.Players.LocalPlayer.Backpack.Earth.Stamina.EarthKick.Value = 0
+game.Players.LocalPlayer.Backpack.Earth.Stamina.EarthLaunch.Value = 0
+game.Players.LocalPlayer.Backpack.Earth.Stamina.EarthPunch.Value = 0
+game.Players.LocalPlayer.Backpack.Earth.Stamina.EarthQuake.Value = 0
+game.Players.LocalPlayer.Backpack.Earth.Stamina.EarthRise.Value = 0
+game.Players.LocalPlayer.Backpack.Earth.Stamina.EarthWall.Value = 0
+game.Players.LocalPlayer.Backpack.Earth.Stamina.LavaCrush.Value = 0
+game.Players.LocalPlayer.Backpack.Earth.Stamina.LavaPool.Value = 0
+game.Players.LocalPlayer.Backpack.Earth.Stamina.Reflect.Value = 0
+game.Players.LocalPlayer.Backpack.Earth.Stamina.RocksThrow.Value = 0
+game.Players.LocalPlayer.Backpack.Earth.Stamina.TripleRockBlast.Value = 0
+
+  	end    
+})
+
+local Section = BennettTab:AddSection({
+	Name = "Fire"
+})
+
+--auto things
+
+_G.Less = true
+
+function Less()
+
+while _G.Less == true do
+game.Players.LocalPlayer.Backpack.Fire.Cooldown.Combustion.Value = 0
+game.Players.LocalPlayer.Backpack.Fire.Cooldown.DragonsBreathe.Value = 0
+game.Players.LocalPlayer.Backpack.Fire.Cooldown.FireBall.Value = 0
+game.Players.LocalPlayer.Backpack.Fire.Cooldown.FireBlock.Value = 0
+game.Players.LocalPlayer.Backpack.Fire.Cooldown.FireComet.Value = 0
+game.Players.LocalPlayer.Backpack.Fire.Cooldown.FireJet.Value = 0
+game.Players.LocalPlayer.Backpack.Fire.Cooldown.FireSlash.Value = 0
+game.Players.LocalPlayer.Backpack.Fire.Cooldown.FireSpin.Value = 0
+game.Players.LocalPlayer.Backpack.Fire.Cooldown.FireStomp.Value = 0
+game.Players.LocalPlayer.Backpack.Fire.Cooldown.FireStream.Value = 0
+game.Players.LocalPlayer.Backpack.Fire.Cooldown.Lightning.Value = 0
+game.Players.LocalPlayer.Backpack.Fire.Cooldown.LightningStrike.Value = 0
+game.Players.LocalPlayer.Backpack.Fire.Cooldown.ROAR.Value = 0
+game.Players.LocalPlayer.Backpack.Fire.Cooldown.Reflect.Value = 0
+game.Players.LocalPlayer.Backpack.Fire.Cooldown.WallOfFire.Value = 0
+wait(.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001)
+end
+end
+
+BennettTab:AddToggle({
+	Name = "Less Cooldown",
+	Default = false,
+	Callback = function(Value)
+		_G.Less = Value
+                Less()
+	end    
+})
+
+BennettTab:AddButton({
+	Name = "Inf Stamina",
+	Callback = function()
+
+game.Players.LocalPlayer.Backpack.Fire.Stamina.Combustion.Value = 0
+game.Players.LocalPlayer.Backpack.Fire.Stamina.DragonsBreathe.Value = 0
+game.Players.LocalPlayer.Backpack.Fire.Stamina.FireBall.Value = 0
+game.Players.LocalPlayer.Backpack.Fire.Stamina.FireBlock.Value = 0
+game.Players.LocalPlayer.Backpack.Fire.Stamina.FireComet.Value = 0
+game.Players.LocalPlayer.Backpack.Fire.Stamina.FireJet.Value = 0
+game.Players.LocalPlayer.Backpack.Fire.Stamina.FireSlash.Value = 0
+game.Players.LocalPlayer.Backpack.Fire.Stamina.FireSpin.Value = 0
+game.Players.LocalPlayer.Backpack.Fire.Stamina.FireStomp.Value = 0
+game.Players.LocalPlayer.Backpack.Fire.Stamina.FireStream.Value = 0
+game.Players.LocalPlayer.Backpack.Fire.Stamina.Lightning.Value = 0
+game.Players.LocalPlayer.Backpack.Fire.Stamina.LightningStrike.Value = 0
+game.Players.LocalPlayer.Backpack.Fire.Stamina.ROAR.Value = 0
+game.Players.LocalPlayer.Backpack.Fire.Stamina.Reflect.Value = 0
+game.Players.LocalPlayer.Backpack.Fire.Stamina.WallOfFire.Value = 0
+
+  	end    
+})
+
+
+
+
+local Section = BennettTab:AddSection({
+	Name = "Air"
+})
+
+--auto things
+
+_G.Less = true
+
+function Less()
+
+while _G.Less == true do
+game.Players.LocalPlayer.Backpack.Air.Cooldown.AirBlast.Value = 0
+game.Players.LocalPlayer.Backpack.Air.Cooldown.AirBlow.Value = 0
+game.Players.LocalPlayer.Backpack.Air.Cooldown.AirFlip.Value = 0
+game.Players.LocalPlayer.Backpack.Air.Cooldown.AirGlider.Value = 0
+game.Players.LocalPlayer.Backpack.Air.Cooldown.AirJump.Value = 0
+game.Players.LocalPlayer.Backpack.Air.Cooldown.AirPalm.Value = 0
+game.Players.LocalPlayer.Backpack.Air.Cooldown.AirRepulsion.Value = 0
+game.Players.LocalPlayer.Backpack.Air.Cooldown.AirScooter.Value = 0
+game.Players.LocalPlayer.Backpack.Air.Cooldown.AirSlice.Value = 0
+game.Players.LocalPlayer.Backpack.Air.Cooldown.AirSpout.Value = 0
+game.Players.LocalPlayer.Backpack.Air.Cooldown.AirStorm.Value = 0
+game.Players.LocalPlayer.Backpack.Air.Cooldown.AirSweep.Value = 0
+wait(.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001)
+end
+end
+
+BennettTab:AddToggle({
+	Name = "Less Cooldown",
+	Default = false,
+	Callback = function(Value)
+		_G.Less = Value
+                Less()
+	end    
+})
+
+BennettTab:AddButton({
+	Name = "Inf Stamina",
+	Callback = function()
+
+game.Players.LocalPlayer.Backpack.Air.Stamina.AirBlast.Value = 0
+game.Players.LocalPlayer.Backpack.Air.Stamina.AirBlow.Value = 0
+game.Players.LocalPlayer.Backpack.Air.Stamina.AirFlip.Value = 0
+game.Players.LocalPlayer.Backpack.Air.Stamina.AirJump.Value = 0
+game.Players.LocalPlayer.Backpack.Air.Stamina.AirPalm.Value = 0
+game.Players.LocalPlayer.Backpack.Air.Stamina.AirRepulsion.Value = 0
+game.Players.LocalPlayer.Backpack.Air.Stamina.AirScooter.Value = 0
+game.Players.LocalPlayer.Backpack.Air.Stamina.AirSlice.Value = 0
+game.Players.LocalPlayer.Backpack.Air.Stamina.AirStorm.Value = 0
+game.Players.LocalPlayer.Backpack.Air.Stamina.AirSweep.Value = 0
+  	end    
+})
+
+
+
+local Section = BennettTab:AddSection({
+	Name = "Water"
+})
+
+--auto things
+
+_G.Less = true
+
+function Less()
+
+while _G.Less == true do
+game.Players.LocalPlayer.Backpack.Water.Cooldown.Bloodbending.Value = 0
+game.Players.LocalPlayer.Backpack.Water.Cooldown.IceDiscs.Value = 0
+game.Players.LocalPlayer.Backpack.Water.Cooldown.IceGlide.Value = 0
+game.Players.LocalPlayer.Backpack.Water.Cooldown.IceOutspikes.Value = 0
+game.Players.LocalPlayer.Backpack.Water.Cooldown.IceSpears.Value = 0
+game.Players.LocalPlayer.Backpack.Water.Cooldown.IceSpikes.Value = 0
+game.Players.LocalPlayer.Backpack.Water.Cooldown.IceWall.Value = 0
+game.Players.LocalPlayer.Backpack.Water.Cooldown.Reflect.Value = 0
+game.Players.LocalPlayer.Backpack.Water.Cooldown.WaterBird.Value = 0
+game.Players.LocalPlayer.Backpack.Water.Cooldown.WaterOctopus.Value = 0
+game.Players.LocalPlayer.Backpack.Water.Cooldown.WaterTsunami.Value = 0
+game.Players.LocalPlayer.Backpack.Water.Cooldown.WaterWhip.Value = 0
+wait(.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001)
+end
+end
+
+BennettTab:AddToggle({
+	Name = "Less Cooldown",
+	Default = false,
+	Callback = function(Value)
+		_G.Less = Value
+                Less()
+	end    
+})
+
+BennettTab:AddButton({
+	Name = "Inf Stamina",
+	Callback = function()
+
+game.Players.LocalPlayer.Backpack.Water.Stamina.Bloodbending.Value = 0
+game.Players.LocalPlayer.Backpack.Water.Stamina.IceDiscs.Value = 0
+game.Players.LocalPlayer.Backpack.Water.Stamina.IceGlide.Value = 0
+game.Players.LocalPlayer.Backpack.Water.Stamina.IceOutspikes.Value = 0
+game.Players.LocalPlayer.Backpack.Water.Stamina.IceSpears.Value = 0
+game.Players.LocalPlayer.Backpack.Water.Stamina.IceSpikes.Value = 0
+game.Players.LocalPlayer.Backpack.Water.Stamina.IceWall.Value = 0
+game.Players.LocalPlayer.Backpack.Water.Stamina.Reflect.Value = 0
+game.Players.LocalPlayer.Backpack.Water.Stamina.WaterBird.Value = 0
+game.Players.LocalPlayer.Backpack.Water.Stamina.WaterOctopus.Value = 0
+game.Players.LocalPlayer.Backpack.Water.Stamina.WaterTsunami.Value = 0
+game.Players.LocalPlayer.Backpack.Water.Stamina.WaterWhip.Value = 0
+
+  	end    
+})
