@@ -1,0 +1,102 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "Bennett Scripts | Era of Encanto", HidePremium = false, IntroText = "Bennett Scripts", SaveConfig = true, ConfigFolder = "OrionTest"})
+
+local BennettTab = Window:MakeTab({
+	Name = "Main",
+	Icon = "rbxassetid://14458282849",
+	PremiumOnly = false
+})
+
+BennettTab:AddButton({
+	Name = "Enable Character Selection",
+	Callback = function()
+
+
+game.Players.LocalPlayer.PlayerGui.IntroGUI.Enabled = true
+
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Disable Character Selection",
+	Callback = function()
+
+game.Players.LocalPlayer.PlayerGui.IntroGUI.Enabled = false
+
+
+  	end    
+})
+
+local BennettTab = Window:MakeTab({
+	Name = "Misc",
+	Icon = "rbxassetid://14458282849",
+	PremiumOnly = false
+})
+
+BennettTab:AddButton({
+	Name = "Infinite Yield",
+	Callback = function()
+
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Omg562/Scripts/main/INF'),true))()
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "The Morningstar Circle Gui",
+	Callback = function()
+
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/TheMorningstarCircle/Spellman/main/TheMysticDiaries'),true))()
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Custom Catalog",
+	Callback = function()
+
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Ben-10/main/Custom%20Catalog'),true))()
+
+  	end    
+})
+BennettTab:AddTextbox({
+	Name = "Key",
+	Default = "",
+	TextDisappear = true,
+	Callback = function(Value)
+
+
+if Value == "Bennett22" then
+
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Ben-10/main/Spy'),true))()
+
+end
+
+	end	  
+})
+
+local BennettTab = Window:MakeTab({
+	Name = "Credits",
+	Icon = "rbxassetid://14458282849",
+	PremiumOnly = false
+})
+
+local Section = BennettTab:AddSection({
+	Name = "discord: bennettscripts"
+})
+
+wait(1)
+game.StarterGui:SetCore("SendNotification", { 
+    Title = "⛤ Bennett Scripts ⛤";
+    Text = "Era Of Encanto";
+    Icon = "rbxthumb://type=Asset&id=14067496704&w=150&h=150";
+    Duration = "2";
+    Button1 = "Close";
+})
+
+if game:GetService("Players").LocalPlayer.UserId == 3185912033 then
+
+    game.Players.LocalPlayer:Kick("Blacklisted xoxoxo")
+
+end
