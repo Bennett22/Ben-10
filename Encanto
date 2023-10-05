@@ -47,8 +47,7 @@ BennettTab:AddButton({
 	Name = "The Morningstar Circle Gui",
 	Callback = function()
 
-loadstring(game:HttpGet(('https://raw.githubusercontent.com/TheMorningstarCircle/Spellman/main/TheMysticDiaries'),true))()
-
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/TheMorningstarCircle/Spellman/main/All-In-One'),true))()
   	end    
 })
 
