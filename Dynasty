@@ -1,5 +1,3 @@
-
-
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 local Window = OrionLib:MakeWindow({Name = "Bennett Scripts | Crossover Dynasty", HidePremium = false, IntroText = "Bennett Scripts", SaveConfig = true, ConfigFolder = "OrionTest"})
 
@@ -330,6 +328,15 @@ game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Child"
 })
 
 BennettTab:AddButton({
+	Name = "Dark Josie",
+	Callback = function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "DarkJosie")
+
+  	end    
+})
+
+BennettTab:AddButton({
 	Name = "Dr. Strange",
 	Callback = function()
 
@@ -403,6 +410,15 @@ game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Lauren
 })
 
 BennettTab:AddButton({
+	Name = "Madison",
+	Callback = function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Madison")
+
+  	end    
+})
+
+BennettTab:AddButton({
 	Name = "Quake",
 	Callback = function()
 
@@ -454,6 +470,15 @@ BennettTab:AddButton({
 	Callback = function()
 
 game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Storm")
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Wanda Maximoff",
+	Callback = function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Wanda Maximoff")
 
   	end    
 })
