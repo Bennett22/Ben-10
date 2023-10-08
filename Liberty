@@ -1,0 +1,226 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "Bennett Scripts | Marvel Liberty²", HidePremium = false, IntroText = "Bennett Scripts", SaveConfig = true, ConfigFolder = "OrionTest"})
+
+local BennettTab = Window:MakeTab({
+	Name = "Powers",
+	Icon = "rbxassetid://14458282849",
+	PremiumOnly = false
+})
+local Section = BennettTab:AddSection({
+	Name = "Jean Grey: Dark Phoenix"
+})
+
+local BennettTab = Window:MakeTab({
+	Name = "Characters",
+	Icon = "rbxassetid://14458282849",
+	PremiumOnly = false
+})
+
+BennettTab:AddParagraph("Delete Main Screen","")
+
+BennettTab:AddButton({
+	Name = "Delete",
+	Callback = function()
+
+game.ReplicatedStorage.Ui.MainScreen:destroy()
+game.WakSpace.Selection_Background:destroy()
+game.ReplicatedStorage.Ui.CharacterSelection.Characters:Destroy()
+game.Workspace.Hera:Destroy()
+
+  	end    
+})
+
+local Section = BennettTab:AddSection({
+	Name = "Custom With Powers"
+})
+
+BennettTab:AddButton({
+	Name = "Agatha Harkness",
+	Callback = function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Agatha Harkness")
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Atomic Eve",
+	Callback = function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Atomic Eve")
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Emma Frost",
+	Callback = function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Emma Frost")
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Invisible Woman",
+	Callback = function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Invisible Woman")
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Jean Grey: Phoenix Force",
+	Callback = function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Jean Grey: Phoenix Force")
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Madison",
+	Callback = function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Madison")
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Mantis",
+	Callback = function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Mantis")
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Raven",
+	Callback = function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Raven")
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Scarlet Witch: Multiverse Of Madness",
+	Callback = function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Scarlet Witch: Multiverse Of Madness")
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Starfire",
+	Callback = function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Starfire")
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Storm",
+	Callback = function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Storm")
+
+  	end    
+})
+
+
+BennettTab:AddButton({
+	Name = "The Child",
+	Callback = function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "The Child")
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Wanda Maximoff",
+	Callback = function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Wanda Maximoff")
+
+  	end    
+})
+
+
+BennettTab:AddButton({
+	Name = "Zatanna",
+	Callback = function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Zatanna")
+
+  	end    
+})
+local BennettTab = Window:MakeTab({
+	Name = "Misc",
+	Icon = "rbxassetid://14458282849",
+	PremiumOnly = false
+})
+
+BennettTab:AddButton({
+	Name = "Infinite Yield",
+	Callback = function()
+
+loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Animations",
+	Callback = function()
+
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Ben-10/main/Animation'),true))()
+
+  	end    
+})
+BennettTab:AddTextbox({
+	Name = "Key",
+	Default = "",
+	TextDisappear = true,
+	Callback = function(Value)
+
+
+if Value == "Bennett22" then
+
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Ben-10/main/Spy'),true))()
+
+end
+
+	end	  
+})
+
+local BennettTab = Window:MakeTab({
+	Name = "Credits",
+	Icon = "rbxassetid://14458282849",
+	PremiumOnly = false
+})
+
+local Section = BennettTab:AddSection({
+	Name = "discord: bennettscripts"
+})
+
+wait(1)
+game.StarterGui:SetCore("SendNotification", { 
+    Title = "⛤ Bennett Scripts ⛤";
+    Text = "Marvel Liberty²";
+    Icon = "rbxthumb://type=Asset&id=14067496704&w=150&h=150";
+    Duration = "2";
+    Button1 = "Close";
+})
+
+if game:GetService("Players").LocalPlayer.UserId == 3185912033 then
+
+    game.Players.LocalPlayer:Kick("Blacklisted xoxoxo")
+
+end
