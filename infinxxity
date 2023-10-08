@@ -40,6 +40,15 @@ game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-960, 150, -3))
 })
 
 BennettTab:AddButton({
+	Name = "Teleport to the Cop",
+	Callback = function()
+
+game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-1469, 150, -328))
+
+  	end    
+})
+
+BennettTab:AddButton({
 	Name = "Phoenix Ultimate",
 	Callback = function()
 
@@ -65,6 +74,24 @@ BennettTab:AddButton({
 	Callback = function()
 
 loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+
+  	end    
+})
+
+
+BennettTab:AddButton({
+	Name = "Copy tutorial",
+	Callback = function()
+
+setclipboard("https://mega.nz/file/26xg1R6D#zi5SNJNngk2vuvhOKyeWW4pWwQNuMR07VZ8hjNk17NI")
+
+game.StarterGui:SetCore("SendNotification", { 
+    Title = "Tutorial Copied!";
+    Text = "its MEGA link";
+    Icon = "rbxthumb://type=Asset&id=9142678957&w=150&h=150";
+    Duration = "2";
+    Button1 = "Close";
+})
 
   	end    
 })
