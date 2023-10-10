@@ -46,6 +46,11 @@ loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Ben-10/mai
 
 end)
 
+BennettSection:NewButton("Heróis Beta 4.0", " ", function()
+
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Ben-10/main/4.0'),true))()
+
+end)
 local Bennett = Window:NewTab("Misc")
 local BennettSection = Bennett:NewSection("Misc")
 BennettSection:NewButton("All Scripts I Made", "", function()
