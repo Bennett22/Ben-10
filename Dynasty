@@ -283,19 +283,6 @@ game:GetService("ReplicatedStorage").Network.RemoteEvent:FireServer(unpack(benne
   	end    
 })
 
-BennettTab:AddButton({
-	Name = "Telepathic Outburst",
-	Callback = function()
-
-local args = {
-    [1] = "\0Jean Grey: Dark Phoenix Telepathic Outburst\0\0"
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
-
-  	end    
-})
-
 local Section = BennettTab:AddSection({
 	Name = "Barbie"
 })
