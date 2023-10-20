@@ -417,15 +417,6 @@ game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Atomic
 })
 
 BennettTab:AddButton({
-	Name = "Charmcaster",
-	Callback = function()
-
-game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Charmcaster")
-
-  	end    
-})
-
-BennettTab:AddButton({
 	Name = "Emma Frost: Phoenix Five",
 	Callback = function()
 
@@ -435,28 +426,19 @@ game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Emma F
 })
 
 BennettTab:AddButton({
+	Name = "Freya Mikaelson",
+	Callback = function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Freya Mikaelson")
+
+  	end    
+})
+
+BennettTab:AddButton({
 	Name = "Gwen",
 	Callback = function()
 
 game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Gwen")
-
-  	end    
-})
-
-BennettTab:AddButton({
-	Name = "Invisible Woman",
-	Callback = function()
-
-game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Invisible Woman")
-
-  	end    
-})
-
-BennettTab:AddButton({
-	Name = "Jean Grey",
-	Callback = function()
-
-game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Jean Grey")
 
   	end    
 })
@@ -489,37 +471,10 @@ game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Madiso
 })
 
 BennettTab:AddButton({
-	Name = "Monica Rambeau",
-	Callback = function()
-
-game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Monica Rambeau")
-
-  	end    
-})
-
-BennettTab:AddButton({
-	Name = "Prom Gwen",
-	Callback = function()
-
-game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Prom Gwen")
-
-  	end    
-})
-
-BennettTab:AddButton({
 	Name = "Psylocke",
 	Callback = function()
 
 game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Psylocke")
-
-  	end    
-})
-
-BennettTab:AddButton({
-	Name = "Raven",
-	Callback = function()
-
-game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Raven")
 
   	end    
 })
@@ -568,6 +523,65 @@ game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Wanda 
 
   	end    
 })
+
+local Section = BennettTab:AddSection({
+	Name = "Not In Game"
+})
+
+BennettTab:AddButton({
+	Name = "Charmcaster",
+	Callback = function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Charmcaster")
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Invisible Woman",
+	Callback = function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Invisible Woman")
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Jean Grey",
+	Callback = function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Jean Grey")
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Monica Rambeau",
+	Callback = function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Monica Rambeau")
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Prom Gwen",
+	Callback = function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Prom Gwen")
+
+  	end    
+})
+
+BennettTab:AddButton({
+	Name = "Raven",
+	Callback = function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Raven")
+
+  	end    
+})
+
 local BennettTab = Window:MakeTab({
 	Name = "Admin",
 	Icon = "rbxassetid://14458282849",
