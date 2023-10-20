@@ -538,10 +538,19 @@ game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Emma: 
 })
 
 BennettTab:AddButton({
+	Name = "Freya",
+	Callback = function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Freya")
+
+  	end    
+})
+
+BennettTab:AddButton({
 	Name = "Iceman",
 	Callback = function()
 
-game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Iceman")
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Jean Grey")
 
   	end    
 })
@@ -677,157 +686,19 @@ game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "WandaC
 })
 
 BennettTab:AddButton({
+	Name = "White Raven",
+	Callback = function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "White Raven")
+
+  	end    
+})
+
+BennettTab:AddButton({
 	Name = "Zatanna",
 	Callback = function()
 
 game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Zatanna")
-
-  	end    
-})
-
-
-local Section = BennettTab:AddSection({
-	Name = "Characters"
-})
-
-BennettTab:AddButton({
-	Name = "Emma Frost",
-	Callback = function()
-
-game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Emma Frost")
-
-  	end    
-})
-
-
-BennettTab:AddParagraph("","")
-
-BennettTab:AddButton({
-	Name = "Iceman",
-	Callback = function()
-
-game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Iceman")
-
-  	end    
-})
-
-BennettTab:AddParagraph("","")
-
-BennettTab:AddButton({
-	Name = "Jean Grey",
-	Callback = function()
-
-game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Jean Grey")
-
-  	end    
-})
-
-BennettTab:AddParagraph("","")
-
-BennettTab:AddButton({
-	Name = "Quake",
-	Callback = function()
-
-game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Quake")
-
-  	end    
-})
-
-BennettTab:AddButton({
-	Name = "Quake: Ariana Grande",
-	Callback = function()
-
-game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Quake", "Ariana Grande")
-
-  	end    
-})
-
-BennettTab:AddButton({
-	Name = "Quake: Sindel Mk",
-	Callback = function()
-
-game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Quake", "Sindel Mk")
-
-
-  	end    
-})
-
-BennettTab:AddParagraph("","")
-
-BennettTab:AddButton({
-	Name = "Starlight",
-	Callback = function()
-
-game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Starlight")
-
-  	end    
-})
-
-BennettTab:AddButton({
-	Name = "Starlight: Lana Del Rey",
-	Callback = function()
-
-game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Starlight", "Lana Del Rey")
-
-  	end    
-})
-
-BennettTab:AddParagraph("","")
-
-BennettTab:AddButton({
-	Name = "Storm",
-	Callback = function()
-
-game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Storm")
-
-  	end    
-})
-
-BennettTab:AddButton({
-	Name = "Storm: Prom Storm",
-	Callback = function()
-
-game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Storm", "Prom Storm")
-
-  	end    
-})
-
-BennettTab:AddButton({
-	Name = "Storm: Casual Storm",
-	Callback = function()
-
-game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Storm", "Casual Storm")
-
-  	end    
-})
-
-
-local BennettTab = Window:MakeTab({
-	Name = "Animations",
-	Icon = "rbxassetid://14458282849",
-	PremiumOnly = false
-})
-
-BennettTab:AddButton({
-	Name = "Delete Your Animations",
-	Callback = function()
-
-local plr = game.Players.LocalPlayer
-
-plr.Character.Animate:Destroy()
-
-  	end    
-})
-
-BennettTab:AddButton({
-	Name = "Get Random Animations",
-	Callback = function()
-
-
-local plr = game.Players.LocalPlayer
-
-local backup = game.Workspace:FindFirstChild("Animate",true):Clone()
-backup.Parent = plr.Character
 
   	end    
 })
