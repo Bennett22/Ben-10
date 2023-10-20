@@ -10,8 +10,9 @@ local Section = BennettTab:AddSection({
 	Name = "Madison Montgomery"
 })
 
+
 BennettTab:AddBind({
-	Name = "Tk Push",
+	Name = "Telepathic Pain",
 	Default = Enum.KeyCode.One,
 	Hold = false,
 	Callback = function()
@@ -57,27 +58,13 @@ BennettTab:AddBind({
              local player = getPlayer()
              if player then
 
-
 bennettscripts = {
-    [1] = "\0Madison Montgomery Start Telekinesis\0\0",
-    [2] = player.Character.UpperTorso
+    [1] = "\0Madison Montgomery Telepathic Start\0\0",
+    [2] = player.Character
 }
 
 game:GetService("ReplicatedStorage").Network.RemoteEvent:FireServer(unpack(bennettscripts))
 
-bennettscripts = {
-    [1] = "\0Madison Montgomery Stop Telekinesis\0\0",
-    [2] = player.Character.UpperTorso
-}
-
-game:GetService("ReplicatedStorage").Network.RemoteEvent:FireServer(unpack(bennettscripts))
-
-bennettscripts = {
-    [1] = "\0Madison Montgomery TK Throw\0\0",
-    [2] = player.Character.UpperTorso
-}
-
-game:GetService("ReplicatedStorage").Network.RemoteEvent:FireServer(unpack(bennettscripts))
 
              end
             end
@@ -85,10 +72,38 @@ game:GetService("ReplicatedStorage").Network.RemoteEvent:FireServer(unpack(benne
 	end    
 })
 
+BennettTab:AddBind({
+	Name = "Probability Explosion",
+	Default = Enum.KeyCode.Two,
+	Hold = true,
+	Callback = function()
+
+    clicktpon = true                
+        plr = game.Players.LocalPlayer
+        hum = plr.Character.HumanoidRootPart
+        mouse = plr:GetMouse()
+        mouse.KeyDown:connect(function(key)
+        if key == '2' then
+        if mouse.Target then
+        if clicktpon then
+
+bennettscripts = {
+    [1] = "\0Madison Montgomery Probability Explosion\0\0",
+    [2] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z)
+}
+
+game:GetService("ReplicatedStorage").Network.RemoteEvent:FireServer(unpack(bennettscripts))
+
+end
+end
+end
+end)
+end    
+})
 
 BennettTab:AddBind({
-	Name = "Telepathic Pain",
-	Default = Enum.KeyCode.Two,
+	Name = "Head Decap",
+	Default = Enum.KeyCode.Three,
 	Hold = false,
 	Callback = function()
 		print("You just clicked the bind")
@@ -129,17 +144,16 @@ BennettTab:AddBind({
      end
  
      game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
-         if key == "2" then
+         if key == "3" then
              local player = getPlayer()
              if player then
 
 bennettscripts = {
-    [1] = "\0Madison Montgomery Telepathic Start\0\0",
-    [2] = player.Character
+    [1] = "\0Head Decap Madison Montgomery\0\0",
+    [2] = player.Character.UpperTorso
 }
 
 game:GetService("ReplicatedStorage").Network.RemoteEvent:FireServer(unpack(bennettscripts))
-
 
              end
             end
@@ -148,36 +162,7 @@ game:GetService("ReplicatedStorage").Network.RemoteEvent:FireServer(unpack(benne
 })
 
 BennettTab:AddBind({
-	Name = "Probability Explosion",
-	Default = Enum.KeyCode.Three,
-	Hold = true,
-	Callback = function()
-
-    clicktpon = true                
-        plr = game.Players.LocalPlayer
-        hum = plr.Character.HumanoidRootPart
-        mouse = plr:GetMouse()
-        mouse.KeyDown:connect(function(key)
-        if key == '3' then
-        if mouse.Target then
-        if clicktpon then
-
-bennettscripts = {
-    [1] = "\0Madison Montgomery Probability Explosion\0\0",
-    [2] = Vector3.new(mouse.Hit.x, mouse.Hit.y + 0.1, mouse.Hit.z)
-}
-
-game:GetService("ReplicatedStorage").Network.RemoteEvent:FireServer(unpack(bennettscripts))
-
-end
-end
-end
-end)
-end    
-})
-
-BennettTab:AddBind({
-	Name = "Head Decap",
+	Name = "Ressurection",
 	Default = Enum.KeyCode.Four,
 	Hold = false,
 	Callback = function()
@@ -224,7 +209,7 @@ BennettTab:AddBind({
              if player then
 
 bennettscripts = {
-    [1] = "\0Head Decap Madison Montgomery\0\0",
+    [1] = "\0Madison Montgomery Ressurection\0\0",
     [2] = player.Character.UpperTorso
 }
 
@@ -236,28 +221,9 @@ game:GetService("ReplicatedStorage").Network.RemoteEvent:FireServer(unpack(benne
 	end    
 })
 
-BennettTab:AddButton({
-	Name = "Telepathic Outburst",
-	Callback = function()
-
-bennettscripts = {
-    [1] = "\0Madison Montgomery Telepathic Outburst\0\0"
-}
-
-game:GetService("ReplicatedStorage").Network.RemoteEvent:FireServer(unpack(bennettscripts))
-
-  	end    
-})
-
-
-local Section = BennettTab:AddSection({
-	Name = "Evanora Harkness: Salem Witch"
-})
-
-
 BennettTab:AddBind({
-	Name = "Tk Push",
-	Default = Enum.KeyCode.C,
+	Name = "Immortality Link",
+	Default = Enum.KeyCode.Five,
 	Hold = false,
 	Callback = function()
 		print("You just clicked the bind")
@@ -298,26 +264,12 @@ BennettTab:AddBind({
      end
  
      game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
-         if key == "c" then
+         if key == "5" then
              local player = getPlayer()
              if player then
 
 bennettscripts = {
-    [1] = "\0Evanora Harkness: Salem Witch Start Telekinesis\0\0",
-    [2] = player.Character.UpperTorso
-}
-
-game:GetService("ReplicatedStorage").Network.RemoteEvent:FireServer(unpack(bennettscripts))
-
-bennettscripts = {
-    [1] = "\0Evanora Harkness: Salem Witch Stop Telekinesis\0\0",
-    [2] = player.Character.UpperTorso
-}
-
-game:GetService("ReplicatedStorage").Network.RemoteEvent:FireServer(unpack(bennettscripts))
-
-bennettscripts = {
-    [1] = "\0Evanora Harkness: Salem Witch TK Throw\0\0",
+    [1] = "\0Madison Montgomery ImmortalityLink\0\0",
     [2] = player.Character.UpperTorso
 }
 
@@ -327,6 +279,24 @@ game:GetService("ReplicatedStorage").Network.RemoteEvent:FireServer(unpack(benne
             end
          end)
 	end    
+})
+
+BennettTab:AddButton({
+	Name = "Telepathic Outburst",
+	Callback = function()
+
+bennettscripts = {
+    [1] = "\0Madison Montgomery Telepathic Outburst\0\0"
+}
+
+game:GetService("ReplicatedStorage").Network.RemoteEvent:FireServer(unpack(bennettscripts))
+
+  	end    
+})
+
+
+local Section = BennettTab:AddSection({
+	Name = "Evanora Harkness: Salem Witch"
 })
 
 BennettTab:AddBind({
@@ -637,25 +607,6 @@ game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Captai
 })
 
 
-
-BennettTab:AddButton({
-	Name = "Cyclops",
-	Callback = function()
-
-game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Cyclops")
-
-  	end    
-})
-
-BennettTab:AddButton({
-	Name = "Dark Phoenix",
-	Callback = function()
-
-game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Dark Phoenix")
-
-  	end    
-})
-
 BennettTab:AddButton({
 	Name = "Emma Frost",
 	Callback = function()
@@ -685,10 +636,10 @@ game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Evanor
 })
 
 BennettTab:AddButton({
-	Name = "Jean Grey",
+	Name = "Freya Mikaelson",
 	Callback = function()
 
-game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Jean Grey")
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Freya Mikaelson")
 
   	end    
 })
@@ -732,24 +683,6 @@ game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Quicks
 
 
 BennettTab:AddButton({
-	Name = "Raven",
-	Callback = function()
-
-game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Raven")
-
-  	end    
-})
-
-BennettTab:AddButton({
-	Name = "Rogue",
-	Callback = function()
-
-game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Rogue")
-
-  	end    
-})
-
-BennettTab:AddButton({
 	Name = "Scarlet Witch: Multiverse Of Madness",
 	Callback = function()
 
@@ -764,33 +697,6 @@ BennettTab:AddButton({
 	Callback = function()
 
 game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Speed")
-
-  	end    
-})
-
-BennettTab:AddButton({
-	Name = "Stella",
-	Callback = function()
-
-game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Stella")
-
-  	end    
-})
-
-BennettTab:AddButton({
-	Name = "Ultron",
-	Callback = function()
-
-game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Ultron")
-
-  	end    
-})
-
-BennettTab:AddButton({
-	Name = "Vision",
-	Callback = function()
-
-game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Vision")
 
   	end    
 })
@@ -815,10 +721,10 @@ game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Wanda 
 })
 
 BennettTab:AddButton({
-	Name = "Wiccan",
+	Name = "Wanda: Age of Ultron",
 	Callback = function()
 
-game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Wiccan")
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Wanda: Age of Ultron")
 
   	end    
 })
