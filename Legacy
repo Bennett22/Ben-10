@@ -865,9 +865,9 @@ game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Barbie
 
 end)
 
-BennettSection:NewButton("Black Panther", " ", function()
+BennettSection:NewButton("Black Widow", " ", function()
 
-game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Black Panther")
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Black Widow")
 
 end)
 
@@ -895,21 +895,9 @@ game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Emma F
 
 end)
 
-BennettSection:NewButton("Enchantress", " ", function()
-
-game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Enchantress")
-
-end)
-
 BennettSection:NewButton("Gwen", " ", function()
 
 game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Gwen")
-
-end)
-
-BennettSection:NewButton("Inadu Labonair", " ", function()
-
-game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Inadu Labonair")
 
 end)
 
@@ -919,21 +907,15 @@ game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Jean G
 
 end)
 
-BennettSection:NewButton("Lillian Veraux", " ", function()
-
-game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Lillian Veraux")
-
-end)
-
 BennettSection:NewButton("Madison", " ", function()
 
 game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Madison")
 
 end)
 
-BennettSection:NewButton("Monica", " ", function()
+BennettSection:NewButton("Maleficent", " ", function()
 
-game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Monica")
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Maleficent")
 
 end)
 
@@ -955,21 +937,9 @@ game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Sabrin
 
 end)
 
-BennettSection:NewButton("Scarlet Witch", " ", function()
-
-game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Scarlet Witch")
-
-end)
-
 BennettSection:NewButton("Scarlet Witch: Multiverse Of Madness", " ", function()
 
 game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Scarlet Witch: Multiverse Of Madness")
-
-end)
-
-BennettSection:NewButton("Speed", " ", function()
-
-game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Speed")
 
 end)
 
@@ -979,9 +949,9 @@ game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Starfi
 
 end)
 
-BennettSection:NewButton("Starlight", " ", function()
+BennettSection:NewButton("Stella", " ", function()
 
-game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Starlight")
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Stella")
 
 end)
 
@@ -991,27 +961,15 @@ game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Storm"
 
 end)
 
-BennettSection:NewButton("Sue", " ", function()
+BennettSection:NewButton("Violet", " ", function()
 
-game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Sue")
-
-end)
-
-BennettSection:NewButton("Supergirl", " ", function()
-
-game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Supergirl")
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Violet")
 
 end)
 
 BennettSection:NewButton("Wanda Maximoff", " ", function()
 
 game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Wanda Maximoff")
-
-end)
-
-BennettSection:NewButton("Wandavision Wanda", " ", function()
-
-game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Wandavision Wanda")
 
 end)
 
@@ -1027,15 +985,89 @@ game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "White 
 
 end)
 
-BennettSection:NewButton("Zatanna", " ", function()
+local BennettSection = Bennett:NewSection("Not In Game")
 
-game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Zatanna")
+BennettSection:NewButton("Black Panther", " ", function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Black Panther")
 
 end)
 
-BennettSection:NewButton("Stella", " ", function()
+BennettSection:NewButton("Enchantress", " ", function()
 
-game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Stella")
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Enchantress")
+
+end)
+
+BennettSection:NewButton("Inadu Labonair", " ", function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Inadu Labonair")
+
+end)
+
+BennettSection:NewButton("Lillian Veraux", " ", function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Lillian Veraux")
+
+end)
+
+BennettSection:NewButton("Monet", " ", function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Monet")
+
+end)
+
+BennettSection:NewButton("Scarlet Witch", " ", function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Scarlet Witch")
+
+end)
+
+BennettSection:NewButton("Speed", " ", function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Speed")
+
+end)
+
+BennettSection:NewButton("Starlight", " ", function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Starlight")
+
+end)
+
+BennettSection:NewButton("Sue", " ", function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Sue")
+
+end)
+
+BennettSection:NewButton("Supergirl", " ", function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Supergirl")
+
+end)
+
+BennettSection:NewButton("Sydney Veraux", " ", function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Sydney Veraux")
+
+end)
+
+BennettSection:NewButton("Talia Veraux", " ", function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Talia Veraux")
+
+end)
+
+BennettSection:NewButton("Wandavision Wanda", " ", function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Wandavision Wanda")
+
+end)
+
+BennettSection:NewButton("Zatanna", " ", function()
+
+game.ReplicatedStorage.Remotes.CharacterSelection:InvokeServer("Custom", "Zatanna")
 
 end)
 
