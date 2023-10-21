@@ -1,0 +1,10 @@
+game.ReplicatedStorage.Misc:Destroy()
+game.ReplicatedStorage.Events.SPINSVALUE:Destroy()
+game.ReplicatedStorage.Events.EXPSVALUE:Destroy()
+game.ReplicatedStorage.Events.HasOrNot:Destroy()
+game.ReplicatedStorage.baba:Destroy()
+game.ReplicatedStorage.Modules.CharactersLog:Destroy()
+
+   local plr = game.Players.LocalPlayer
+
+game.ReplicatedStorage.COOLDOWNS[plr.name].Cooldowns:Destroy()
