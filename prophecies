@@ -780,3 +780,123 @@ game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("WitchS
 
 })
 
+BennettTab:AddBind({
+	Name = "Phasmatos sanguinem (for Bonnie)",
+	Default = Enum.KeyCode.Eight,
+	Hold = false,
+	Callback = function()
+		print("You just clicked the bind")
+
+      local function getPlayer()
+         local userInput = game:GetService("UserInputService")
+         local cam = workspace.CurrentCamera
+         local mousePos = userInput:GetMouseLocation()
+         local mouseRay = cam:ViewportPointToRay(mousePos.X, mousePos.Y)
+         players = {}
+         for _, x in next, game:GetService('Players'):GetPlayers() do
+             players[#players + 1] = x.Character
+         end
+         local raycastParams = RaycastParams.new()
+         raycastParams.FilterType = Enum.RaycastFilterType.Whitelist
+         raycastParams.FilterDescendantsInstances = players
+         raycastParams.IgnoreWater = true
+         local raycastResult = workspace:Raycast(mouseRay.Origin, mouseRay.Direction * 1000, raycastParams)
+         if raycastResult then
+             for _, x in next, game:GetService('Players'):GetPlayers() do
+                 if not raycastResult.Instance:IsDescendantOf(x.Character) then
+                     continue
+                 end
+                 return x
+             end
+         end
+         return false
+     end
+ 
+     local function Set(list)
+         local set = {}
+         for _, l in ipairs(list) do
+             if l then
+                 set[l] = true
+             end
+         end
+         return set
+     end
+ 
+     game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
+         if key == "8" then
+             local player = getPlayer()
+             if player then
+             
+             local args = {
+    [1] = {
+        ["IncantationText"] = "phasmatos sanguinem",
+        ["Target"] = player.Character
+    },
+    [2] = Vector3.new(-42.52691650390625, 137.0355987548828, 152.2272186279297)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("WitchSpell"):FireServer(unpack(args))
+
+
+             end
+            end
+         end)
+	end    
+
+})
+
+local BennettTab = Window:MakeTab({
+	Name = "Admin",
+	Icon = "rbxassetid://14458282849",
+	PremiumOnly = false
+})
+
+BennettTab:AddButton({
+	Name = "Infinite Yield",
+	Callback = function()
+
+loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+
+  	end    
+})
+
+BennettTab:AddTextbox({
+	Name = "Key",
+	Default = "",
+	TextDisappear = true,
+	Callback = function(Value)
+
+
+if Value == "Bennett22" then
+
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Ben-10/main/Spy'),true))()
+
+end
+
+	end	  
+})
+
+local BennettTab = Window:MakeTab({
+	Name = "Credits",
+	Icon = "rbxassetid://14458282849",
+	PremiumOnly = false
+})
+
+local Section = BennettTab:AddSection({
+	Name = "discord: bennettscripts"
+})
+
+wait(1)
+game.StarterGui:SetCore("SendNotification", { 
+    Title = "⛤ Bennett Scripts ⛤";
+    Text = "The Witches Prophecies";
+    Icon = "rbxthumb://type=Asset&id=14067496704&w=150&h=150";
+    Duration = "2";
+    Button1 = "Close";
+})
+
+if game:GetService("Players").LocalPlayer.UserId == 3185912033 then
+
+    game.Players.LocalPlayer:Kick("Blacklisted xoxoxo")
+
+end
