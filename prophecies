@@ -845,6 +845,41 @@ game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("WitchS
 
 })
 
+--auto things
+
+_G.AutoPunch = true
+
+function AutoPunch()
+
+while _G.AutoPunch == true do
+local args = {
+    [1] = "Refresh"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("StatCheck"):FireServer(unpack(args))
+local args = {
+    [1] = "Refresh"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("StatCheck"):FireServer(unpack(args))
+local args = {
+    [1] = "Refresh"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("StatCheck"):FireServer(unpack(args))
+wait(.0000000000000000000000000000000000000000000000000001)
+end
+end
+
+BennettTab:AddToggle({
+	Name = "Auto Restore Magic",
+	Default = false,
+	Callback = function(Value)
+		_G.AutoPunch = Value
+                AutoPunch()
+	end    
+})
+
 local BennettTab = Window:MakeTab({
 	Name = "Admin",
 	Icon = "rbxassetid://14458282849",
