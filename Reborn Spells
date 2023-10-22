@@ -3569,30 +3569,6 @@ end)
 BennettSection:NewButton("Disable Character Selection", "", function()
 game.Players.LocalPlayer.PlayerGui.SelectionGui.Enabled = false
 end)
-BennettSection:NewButton("Get Spells From Powers", "", function()
-
-local plr = game.Players.LocalPlayer
-
-local backup = game.ReplicatedStorage.CharactersPlace.Agamemnon.Outfits["Main Outfit"].SleepSpell:Clone()
-local backup2 = game.ReplicatedStorage.CharactersPlace["Camyrn Barens"].Outfits["Main Outfit"].FireSpell:Clone()
-local backup3 = game.ReplicatedStorage.CharactersPlace["Camyrn Barens"].Outfits["Main Outfit"].ChannelSpell:Clone()
-local backup4 = game.ReplicatedStorage.CharactersPlace["The Chosen One"].Outfits["Main Outfit"].LifeDrainSpell:Clone()
-local backup5 = game.ReplicatedStorage.CharactersPlace["The Chosen One"].Outfits["Main Outfit"].BanishLimboSpell:Clone()
-local backup6 = game.ReplicatedStorage.CharactersPlace["The Chosen One"].Outfits["Main Outfit"].GivePowersSpell:Clone()
-local backup7 = game.ReplicatedStorage.CharactersPlace["Desdemona"].Outfits["Main Outfit"].Ressurection:Clone()
-local backup8 = game.ReplicatedStorage.CharactersPlace["Desdemona"].Outfits["Main Outfit"].RainSummonSpell:Clone()
-local backup9 = game.ReplicatedStorage.CharactersPlace["Camyrn Barens"].Outfits["Main Outfit"].BanishSpell:Clone()
-local backup10 = game.ReplicatedStorage.CharactersPlace["The Chosen One"].Outfits["Main Outfit"].BanishSpell:Clone()
-local backup11 = game.ReplicatedStorage.CharactersPlace["Maddie Vanpelt"].Outfits["Main Outfit"].FreezeSpell:Clone()
-local backup12 = game.ReplicatedStorage.CharactersPlace["Desdemona"].Outfits["Main Outfit"].StormSummonSpell:Clone()
-local backup13 = game.ReplicatedStorage.CharactersPlace["Desdemona"].Outfits["Main Outfit"].InvisibilitySpell:Clone()
-local backup14 = game.ReplicatedStorage.CharactersPlace["The Chosen One"].Outfits["Main Outfit"].AstralProjection:Clone()
-local backup15 = game.ReplicatedStorage.CharactersPlace["Maddie Vanpelt"].Outfits["Main Outfit"].StormSpell:Clone()
-local backup16 = game.ReplicatedStorage.CharactersPlace["Principle"].Outfits["Main Outfit"].Summon:Clone()
-local backup100 = game.ReplicatedStorage.CharactersPlace["The Chosen One"].Outfits["Main Outfit"].MagicValues:Clone()
-backup.Parent, backup2.Parent, backup3.Parent, backup4.Parent, backup5.Parent, backup6.Parent, backup7.Parent, backup8.Parent, backup9.Parent, backup10.Parent, backup11.Parent, backup12.Parent, backup13.Parent, backup14.Parent, backup15.Parent, backup16.Parent, backup100.Parent = plr.Character, plr.Character, plr.Character, plr.Character, plr.Character, plr.Character, plr.Character, plr.Character, plr.Character, plr.Character, plr.Character, plr.Character, plr.Character, plr.Character, plr.Character, plr.Character, plr.Character
-
-end)
 BennettSection:NewButton("Infinite Yield", "", function()
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/Omg562/Scripts/main/INF'),true))()
 end)
