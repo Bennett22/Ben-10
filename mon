@@ -39,6 +39,22 @@ end
 	end	  
 })
 
+BennettTab:AddTextbox({
+	Name = "Every Witch Way Reborn",
+	Default = "",
+	TextDisappear = true,
+	Callback = function(Value)
+
+
+if Value == "PeFcVsRRehHkD" then
+
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Ben-10/main/Reborn%20Spells'),true))()
+
+end
+
+	end	  
+})
+
 local BennettTab = Window:MakeTab({
 	Name = "Admin",
 	Icon = "rbxassetid://14458282849",
