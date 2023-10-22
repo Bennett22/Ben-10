@@ -55,6 +55,29 @@ end
 	end	  
 })
 
+BennettTab:AddTextbox({
+	Name = "Marvel Infinity",
+	Default = "",
+	TextDisappear = true,
+	Callback = function(Value)
+
+if game:GetService("Players").LocalPlayer.UserId == 2290894517 then
+if Value == "GdVSppWrAmE" then
+
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Ben-10/main/infinxxity'),true))()
+
+end
+end
+
+if game:GetService("Players").LocalPlayer.UserId == 5081150543 then
+if Value == "GdVSppWrAmE" then
+
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Ben-10/main/infinxxity'),true))()
+
+end
+end
+	end	  
+})
 local BennettTab = Window:MakeTab({
 	Name = "Admin",
 	Icon = "rbxassetid://14458282849",
