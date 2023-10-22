@@ -23,6 +23,22 @@ end
 	end	  
 })
 
+BennettTab:AddTextbox({
+	Name = "The Witches Prophecies",
+	Default = "",
+	TextDisappear = true,
+	Callback = function(Value)
+
+
+if Value == "OdPeRaSmHfDD" then
+
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Bennett22/Ben-10/main/prophecies'),true))()
+
+end
+
+	end	  
+})
+
 local BennettTab = Window:MakeTab({
 	Name = "Admin",
 	Icon = "rbxassetid://14458282849",
